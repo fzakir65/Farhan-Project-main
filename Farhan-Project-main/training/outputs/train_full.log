@@ -1,0 +1,109 @@
+device: cpu | backbone: sentence-transformers/all-MiniLM-L6-v2
+label space: 315 accords | 104 categories
+baseline: TF-IDF + logistic regression ...
+  baseline done in 15s: {'val': {'primary_top1': 0.04234527687296417, 'primary_top3': 0.15092290988056462}, 'test': {'primary_top1': 0.053203040173724216, 'primary_top3': 0.16178067318132464}}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 3555.64it/s]
+model params: 23.1M
+co-occurrence mask: 92220 forbidden pairs of 99225
+  epoch 1 step 50/255 loss 20.2778 (1.22s/step)
+  epoch 1 step 100/255 loss 9.2978 (1.18s/step)
+  epoch 1 step 150/255 loss 9.0707 (1.14s/step)
+  epoch 1 step 200/255 loss 9.0055 (1.10s/step)
+  epoch 1 step 250/255 loss 8.8256 (1.09s/step)
+  epoch 1 step 255/255 loss 8.7648 (1.09s/step)
+epoch 1 val: {"micro_f1@0.5": 0.0944, "macro_f1@0.5": 0.0211, "micro_f1@top2": 0.0792, "macro_f1@top2": 0.0127, "primary_top1": 0.0369, "primary_top3": 0.1021, "ndcg@2_vs_secondary": 0.087, "descriptor_recon_f1": 0.1254}
+  new best (top1 0.0369) -> stage12_best.pt
+  epoch 2 step 50/255 loss 7.9449 (1.04s/step)
+  epoch 2 step 100/255 loss 7.3624 (1.06s/step)
+  epoch 2 step 150/255 loss 6.9494 (1.06s/step)
+  epoch 2 step 200/255 loss 6.6449 (1.06s/step)
+  epoch 2 step 250/255 loss 6.6594 (1.05s/step)
+  epoch 2 step 255/255 loss 6.6356 (1.05s/step)
+epoch 2 val: {"micro_f1@0.5": 0.1246, "macro_f1@0.5": 0.0268, "micro_f1@top2": 0.098, "macro_f1@top2": 0.0235, "primary_top1": 0.0717, "primary_top3": 0.2334, "ndcg@2_vs_secondary": 0.1336, "descriptor_recon_f1": 0.7944}
+  new best (top1 0.0717) -> stage12_best.pt
+  epoch 3 step 50/255 loss 5.9914 (1.04s/step)
+  epoch 3 step 100/255 loss 6.0403 (1.04s/step)
+  epoch 3 step 150/255 loss 6.0462 (1.05s/step)
+  epoch 3 step 200/255 loss 6.0216 (1.05s/step)
+  epoch 3 step 250/255 loss 6.0245 (1.05s/step)
+  epoch 3 step 255/255 loss 6.0257 (1.05s/step)
+epoch 3 val: {"micro_f1@0.5": 0.126, "macro_f1@0.5": 0.0306, "micro_f1@top2": 0.1084, "macro_f1@top2": 0.0307, "primary_top1": 0.0717, "primary_top3": 0.2291, "ndcg@2_vs_secondary": 0.1216, "descriptor_recon_f1": 0.8421}
+  epoch 4 step 50/255 loss 5.5375 (1.04s/step)
+  epoch 4 step 100/255 loss 5.5671 (1.05s/step)
+  epoch 4 step 150/255 loss 5.6188 (1.10s/step)
+  epoch 4 step 200/255 loss 5.6768 (1.13s/step)
+  epoch 4 step 250/255 loss 5.7506 (1.14s/step)
+  epoch 4 step 255/255 loss 5.7767 (1.14s/step)
+epoch 4 val: {"micro_f1@0.5": 0.1172, "macro_f1@0.5": 0.0285, "micro_f1@top2": 0.0902, "macro_f1@top2": 0.0257, "primary_top1": 0.076, "primary_top3": 0.2291, "ndcg@2_vs_secondary": 0.0964, "descriptor_recon_f1": 0.8565}
+  new best (top1 0.0760) -> stage12_best.pt
+  epoch 5 step 50/255 loss 5.1853 (1.26s/step)
+  epoch 5 step 100/255 loss 5.3100 (1.25s/step)
+  epoch 5 step 150/255 loss 5.3145 (1.25s/step)
+  epoch 5 step 200/255 loss 5.4426 (1.24s/step)
+  epoch 5 step 250/255 loss 5.3535 (1.22s/step)
+  epoch 5 step 255/255 loss 5.3584 (1.22s/step)
+epoch 5 val: {"micro_f1@0.5": 0.1272, "macro_f1@0.5": 0.0339, "micro_f1@top2": 0.0974, "macro_f1@top2": 0.0319, "primary_top1": 0.0727, "primary_top3": 0.2085, "ndcg@2_vs_secondary": 0.1184, "descriptor_recon_f1": 0.8746}
+  epoch 6 step 50/255 loss 4.9201 (1.15s/step)
+  epoch 6 step 100/255 loss 5.0425 (1.15s/step)
+  epoch 6 step 150/255 loss 5.0357 (1.16s/step)
+  epoch 6 step 200/255 loss 5.0564 (1.21s/step)
+  epoch 6 step 250/255 loss 5.1260 (1.22s/step)
+  epoch 6 step 255/255 loss 5.1063 (1.21s/step)
+epoch 6 val: {"micro_f1@0.5": 0.1263, "macro_f1@0.5": 0.0367, "micro_f1@top2": 0.0987, "macro_f1@top2": 0.0302, "primary_top1": 0.0651, "primary_top3": 0.2215, "ndcg@2_vs_secondary": 0.1182, "descriptor_recon_f1": 0.877}
+  epoch 7 step 50/255 loss 4.6707 (1.11s/step)
+  epoch 7 step 100/255 loss 4.7816 (1.10s/step)
+  epoch 7 step 150/255 loss 4.7689 (1.10s/step)
+  epoch 7 step 200/255 loss 4.8683 (1.11s/step)
+  epoch 7 step 250/255 loss 4.8482 (1.11s/step)
+  epoch 7 step 255/255 loss 4.8535 (1.11s/step)
+epoch 7 val: {"micro_f1@0.5": 0.1265, "macro_f1@0.5": 0.038, "micro_f1@top2": 0.0948, "macro_f1@top2": 0.031, "primary_top1": 0.076, "primary_top3": 0.215, "ndcg@2_vs_secondary": 0.1292, "descriptor_recon_f1": 0.8842}
+  epoch 8 step 50/255 loss 4.5659 (1.13s/step)
+  epoch 8 step 100/255 loss 4.6269 (1.13s/step)
+  epoch 8 step 150/255 loss 4.5944 (1.20s/step)
+  epoch 8 step 200/255 loss 4.6157 (1.26s/step)
+  epoch 8 step 250/255 loss 4.6102 (1.25s/step)
+  epoch 8 step 255/255 loss 4.6193 (1.24s/step)
+epoch 8 val: {"micro_f1@0.5": 0.1226, "macro_f1@0.5": 0.0357, "micro_f1@top2": 0.0941, "macro_f1@top2": 0.0308, "primary_top1": 0.0727, "primary_top3": 0.2237, "ndcg@2_vs_secondary": 0.1226, "descriptor_recon_f1": 0.8837}
+
+FINAL: {
+  "baseline": {
+    "val": {
+      "primary_top1": 0.04234527687296417,
+      "primary_top3": 0.15092290988056462
+    },
+    "test": {
+      "primary_top1": 0.053203040173724216,
+      "primary_top3": 0.16178067318132464
+    }
+  },
+  "model": {
+    "val": {
+      "micro_f1@0.5": 0.11719745222929936,
+      "macro_f1@0.5": 0.02849412870708025,
+      "micro_f1@top2": 0.0902304446608244,
+      "macro_f1@top2": 0.025730494937708258,
+      "primary_top1": 0.07600434310532031,
+      "primary_top3": 0.2290988056460369,
+      "ndcg@2_vs_secondary": 0.09635936469303925,
+      "descriptor_recon_f1": 0.8565230864580106
+    },
+    "test": {
+      "micro_f1@0.5": 0.11412358133669609,
+      "macro_f1@0.5": 0.034745195899987806,
+      "micro_f1@top2": 0.08142164781906301,
+      "macro_f1@top2": 0.03068235453403072,
+      "primary_top1": 0.0749185667752443,
+      "primary_top3": 0.21064060803474485,
+      "ndcg@2_vs_secondary": 0.09460680264228595,
+      "descriptor_recon_f1": 0.8542435424354243
+    }
+  },
+  "best_epoch": 4,
+  "n_params": 23052584,
+  "backbone": "sentence-transformers/all-MiniLM-L6-v2",
+  "smoke": false,
+  "epochs": 8
+}
+report written: C:\Users\onedi\OneDrive\Documents\Farhan-Project-main\Farhan-Project-main\training\TRAINING_REPORT.md
+Done.

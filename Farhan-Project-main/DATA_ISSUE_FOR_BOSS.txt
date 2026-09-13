@@ -1,0 +1,172 @@
+SUBJECT: Data status check before we build the perfume AI
+
+Hi,
+
+Before we go further on the perfume AI project, I need to flag something
+about the dataset we were given. I want to be straight with you so we
+don't waste time training a model on the wrong foundation.
+
+================================================================
+THE SHORT VERSION
+================================================================
+
+The spreadsheets we have are well-organised, but most of the content
+inside them looks AI-generated rather than collected from real customers
+or real perfumers. The structure is fine. The substance is thin.
+
+If we train a model on this as-is, the model will look great in our own
+tests and then fail the moment a real customer types a real sentence.
+
+================================================================
+WHAT WE ACTUALLY HAVE
+================================================================
+
+Four Excel files containing:
+
+  1. A list of 315 fragrance "accords" (e.g. amber, citrus, woody).
+     Catalogue: clean and useful.
+
+  2. A list of 883 individual notes (e.g. bergamot, sandalwood, oud).
+     About half of them have full chemistry data; the other half are
+     name-only stubs.
+
+  3. A table of 1,656 rows that says "for each accord, here is how
+     much of each note to use."
+     Looks like data. Is actually a formula. The numbers were generated
+     by multiplying three columns together (importance x presence x
+     compatibility) and then forcing the layers to add up to a fixed
+     ratio. There is no perfumer behind these numbers.
+
+  4. A table of 10,000 customer requests, each one paired with the
+     "right" accord that the system should return.
+     Looks like data. Is actually templated. The customer text reads
+     like fill-in-the-blank: "I'm 32 and Looking for something that
+     fits night_out." The descriptors and occasions are usually
+     written verbatim into the sentence, so any model can guess them
+     by keyword matching.
+
+  5. A list of 450 real perfumes (Dior Sauvage, Bleu de Chanel, etc.).
+     This part is real and useful, but it lives in a different
+     vocabulary from the rule tables (see "Issue 3" below).
+
+================================================================
+WHAT WE ARE LACKING
+================================================================
+
+Issue 1: No real customer language.
+  All 10,000 customer requests read like they came from a script.
+  Real customers say things like "I want something that smells like a
+  hotel lobby in winter" or "remind me of my grandfather's leather
+  jacket." None of that variety is in the data. We have no way to
+  learn how real people describe scents.
+
+Issue 2: No real perfumer recipes.
+  The dosage table is a single auto-generated version (literally
+  labelled "v0.1-auto"). It is not the work of a perfumer. It is a
+  formula a script ran. Training a model to copy this formula adds
+  nothing - the formula is already in the spreadsheet.
+
+Issue 3: Two parallel worlds that don't meet.
+  The "rule" side and the "real perfume" side use different ingredient
+  lists. Out of 883 ingredients, only 50 appear on both sides. So when
+  the system suggests a recipe, that recipe will use ingredients that
+  no real perfume on record actually uses. Same for accords: only 32
+  out of 315 are used on both sides.
+  This is why the "reference perfume" tag in the training data only
+  matches the labelled accord 1.9% of the time. The two halves of the
+  spreadsheet weren't built to talk to each other.
+
+Issue 4: No safety / regulatory data.
+  The handoff document talks about IFRA limits, allergen lists, and
+  reactivity rules. None of that data exists in the spreadsheets. If
+  we ever want to ship a real product, we need this. For now we can
+  proceed without it as long as we are clearly building a prototype,
+  not something that will go on a shelf.
+
+Issue 5: Customer feedback is mostly missing.
+  Out of 10,000 example requests, only 1,731 have a rating and 1,508
+  have an "accepted/rejected" flag. Real recommendation systems learn
+  from feedback. Ours can't yet.
+
+================================================================
+IS THERE A WORKAROUND, OR DO WE NEED REAL DATA?
+================================================================
+
+Honest answer: a mix. Some of the gaps we can paper over with
+engineering. The most important ones we cannot.
+
+What we CAN work around right now:
+
+  - The templated-text problem can be partly fixed by scraping public
+    perfume reviews from sites like Fragrantica or Basenotes. Those
+    reviews are real customer language. Doing this would give the
+    text-understanding part of the model a fighting chance.
+
+  - The two-vocabulary problem can be fixed by us, manually, by
+    matching the rule ingredient list to the real-perfume ingredient
+    list. It's a few hours of careful work, not a research project.
+
+  - The auto-generated dosage formula can be used as a "starting
+    point" rather than a "ground truth." The model nudges the formula
+    based on user preferences instead of trying to invent dosages from
+    scratch.
+
+  - Safety data can be skipped while we are in prototype mode, as long
+    as we are clear with everyone that the prototype is not for
+    public/commercial use.
+
+What we CANNOT work around:
+
+  - We cannot make a model good at "real perfumer judgment" without a
+    real perfumer. At some point, someone with a trained nose has to
+    look at the dosage tables and tell us where the auto-formula gets
+    it wrong. A weekend with one good perfumer would dramatically
+    improve the data quality.
+
+  - We cannot validate that the system "smells right" without a panel
+    of real noses to evaluate the outputs. No amount of math fixes
+    this. If the project is heading anywhere serious, we need a small
+    panel (even five trained noses) to score outputs.
+
+  - We cannot ship a product without IFRA / regulatory data. That data
+    has to be entered from official sources. It's curation work, not
+    AI work.
+
+================================================================
+WHAT I RECOMMEND
+================================================================
+
+Three options, in order of cost:
+
+  Option A - Prototype only, no new data.
+  Build the system on what we have. Be very clear it's a research
+  prototype. It will demo well on the templated examples and probably
+  underperform on real user input. Cost: zero new data. Timeline:
+  weeks. Risk: false confidence.
+
+  Option B (recommended) - Prototype plus targeted data top-up.
+  Build the system AND in parallel:
+    - Scrape ~20,000 real perfume reviews for natural language.
+    - Pay one perfumer for two days to review and correct the dosage
+      table on the top 50 most-used accords.
+    - Bridge the two ingredient vocabularies (us, internally, ~1 day).
+  This is the cheapest path to a system that works on real users.
+  Cost: small. Timeline: same overall, runs in parallel.
+
+  Option C - Real data foundation.
+  Hold off on heavy modelling. First, commission proper data:
+    - Real customer briefs paired with real perfumer formulas.
+    - IFRA-mapped ingredient list with safety limits.
+    - A small evaluation panel.
+  Cost: real budget and time. Timeline: months. Outcome: actually
+  shippable.
+
+I think Option B is the right call. We get a working demo on the
+current timeline, while quietly fixing the two biggest data gaps with
+modest investment. Option A risks looking good in our slides and
+falling apart in front of a real user. Option C is the right answer
+for a final product, but we don't need it yet to prove the idea.
+
+Happy to walk through any of this in person.
+
+Thanks.

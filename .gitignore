@@ -1,0 +1,25 @@
+# Claude Code local session/project data - not part of the codebase
+.claude/
+
+# Scratch text extraction used during the 2026-09-11/12 IFRA audit (derived from
+# PDFs in Downloads/, not checked in; regenerate with pypdf if ever needed)
+.ifra_text/
+
+# Office lock files
+~$*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python (top-level catch-all; each subproject also has its own .gitignore)
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,33 @@
+{
+  "text": {
+    "column": "user_text",
+    "tokenizer": "encoder-native",
+    "max_len": 64,
+    "note": "99th percentile length ≈ 140 chars (EDA §4)"
+  },
+  "ordinal": {
+    "age_bucket": [
+      "13-17",
+      "18-24",
+      "25-34",
+      "35-44",
+      "45+"
+    ]
+  },
+  "categorical_embeddings": {
+    "gender": 4,
+    "region": 9,
+    "background_tag": 9,
+    "occasion_tag": 41
+  },
+  "multi_hot": {
+    "descriptors": 98,
+    "avoid_tokens": 11
+  },
+  "targets": {
+    "primary": "target_accord_id_primary (200 active classes)",
+    "secondary": "target_accord_id_secondary (34% present)",
+    "reference": "target_perfume_id_reference — SOFT retrieval signal only (checkpoint L.5; 1.9% accord-match rate)",
+    "preference": "user_rating_1_5 (17%), accepted_flag (15%)"
+  }
+}

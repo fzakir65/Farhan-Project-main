@@ -1,0 +1,11 @@
+raw_accord_token,normalized_token,best_accord_id,best_accord_name,score,proposed_decision
+Creamy,creamy,ACC-0300,creamy,1.0,map_to_accord
+Exotic,exotic,ACC-0301,exotic,1.0,map_to_accord
+Medicinal,medicinal,ACC-0302,medicinal,1.0,map_to_accord
+Modern,modern,ACC-0303,modern,1.0,map_to_accord
+Ozone,ozone,ACC-0304,ozone,1.0,map_to_accord
+Resin,resin,ACC-0305,resin,1.0,map_to_accord
+Romantic,romantic,ACC-0306,romantic,1.0,map_to_accord
+Smoke,smoke,ACC-0307,smoke,1.0,map_to_accord
+Soft Floral,soft_floral,ACC-0308,soft_floral,1.0,map_to_accord
+Soft Gourmand,soft_gourmand,ACC-0309,soft_gourmand,1.0,map_to_accord

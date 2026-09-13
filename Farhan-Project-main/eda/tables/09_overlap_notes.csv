@@ -1,0 +1,51 @@
+note_id,note_name,normalized_note_name,chemical_family,odor_family
+NOTE-0003,Agarwood (Oud),agarwood_oud,Sesquiterpene,Woody / Animalic
+NOTE-0005,Aldehydes,aldehydes,,
+NOTE-0012,Amber Accord,amber_accord,,
+NOTE-0016,Amberwood,amberwood,,
+NOTE-0021,Ambroxan,ambroxan,Amberoid,Amber / Woody
+NOTE-0027,Apple,apple,Ester,Fruity / Fresh
+NOTE-0039,Benzoin,benzoin,Resin / Balsam,Amber / Sweet
+NOTE-0040,Bergamot,bergamot,Terpene Hydrocarbon,Citrus
+NOTE-0046,Birch Tar,birch_tar,Phenol / Tar,Leather / Smoky
+NOTE-0075,Cade Oil,cade_oil,Phenol / Tar,Smoky / Leather
+NOTE-0087,Cashmeran,cashmeran,Polycyclic Ketone,Woody / Musky
+NOTE-0094,Cedarwood,cedarwood,Sesquiterpene Alcohol,Woody / Dry
+NOTE-0116,Clary Sage,clary_sage,Terpenoid Ester,Aromatic / Herbal
+NOTE-0134,Coumarin,coumarin,Benzopyrone,Sweet / Hay
+NOTE-0140,Cypriol,cypriol,,
+NOTE-0155,Eucalyptus,eucalyptus,Oxide,Aromatic / Camphor
+NOTE-0166,Freesia,freesia,,
+NOTE-0169,Galbanum,galbanum,Resin / Terpenoid,Green / Resinous
+NOTE-0175,Grapefruit,grapefruit,Terpenoid Ketone,Citrus / Bitter
+NOTE-0180,Green Apple,green_apple,,
+NOTE-0187,Guaiac Wood,guaiac_wood,,
+NOTE-0193,Hedione,hedione,Ester,Floral / Jasmine
+NOTE-0194,Heliotrope,heliotrope,Aromatic Aldehyde,Powdery / Floral
+NOTE-0204,Iris,iris,,
+NOTE-0205,Iso E Super,iso_e_super,Aromatic Ether,Woody / Amber
+NOTE-0209,Jasmine,jasmine,,
+NOTE-0220,Labdanum,labdanum,Resin / Terpenoid,Amber / Resinous
+NOTE-0222,Lavender,lavender,Terpenoid Ester,Aromatic / Floral
+NOTE-0225,Lemon,lemon,,
+NOTE-0233,Lily-of-the-Valley,lily_of_the_valley,,
+NOTE-0269,Musk,musk,,
+NOTE-0284,Opoponax,opoponax,Resin,Sweet / Balsamic
+NOTE-0296,Oud Accord,oud_accord,,
+NOTE-0303,Pear,pear,Ester,Fruity / Sweet
+NOTE-0306,Peony,peony,,
+NOTE-0309,Peru Balsam,peru_balsam,Resin,Sweet / Resinous
+NOTE-0319,Pink Pepper,pink_pepper,Terpene,Spicy / Fresh
+NOTE-0327,Raspberry,raspberry,Ketone,Fruity / Sweet
+NOTE-0338,Rose,rose,Aromatic Alcohol,Floral / Rose
+NOTE-0344,Rosemary,rosemary,Terpenoid Oxide,Aromatic / Herbal
+NOTE-0349,Saffron,saffron,Aldehyde,Spicy / Leather
+NOTE-0354,Sandalwood,sandalwood,Sesquiterpene Alcohol,Woody / Creamy
+NOTE-0375,Strawberry,strawberry,,
+NOTE-0395,Tolu Balsam,tolu_balsam,Resin,Sweet / Resinous
+NOTE-0399,Tonka Bean,tonka_bean,Benzopyrone,Sweet / Gourmand
+NOTE-0407,Vanilla,vanilla,Phenolic Aldehyde,Sweet / Gourmand
+NOTE-0408,Vanilla Absolute,vanilla_absolute,,
+NOTE-0418,Violet,violet,,
+NOTE-0420,Violet Leaf,violet_leaf,Ketone,Green / Floral
+NOTE-0434,White Musk,white_musk,,

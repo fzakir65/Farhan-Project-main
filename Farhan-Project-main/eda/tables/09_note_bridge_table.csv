@@ -1,0 +1,884 @@
+note_id,note_name,normalized_note_name,in_rule,in_real,rule_volume,real_volume,status
+NOTE-0003,Agarwood (Oud),agarwood_oud,True,True,8,8,BOTH
+NOTE-0005,Aldehydes,aldehydes,True,True,5,12,BOTH
+NOTE-0012,Amber Accord,amber_accord,True,True,1,1,BOTH
+NOTE-0016,Amberwood,amberwood,True,True,1,9,BOTH
+NOTE-0021,Ambroxan,ambroxan,True,True,61,16,BOTH
+NOTE-0027,Apple,apple,True,True,1,16,BOTH
+NOTE-0039,Benzoin,benzoin,True,True,11,35,BOTH
+NOTE-0040,Bergamot,bergamot,True,True,9,160,BOTH
+NOTE-0046,Birch Tar,birch_tar,True,True,5,2,BOTH
+NOTE-0075,Cade Oil,cade_oil,True,True,6,1,BOTH
+NOTE-0087,Cashmeran,cashmeran,True,True,14,8,BOTH
+NOTE-0094,Cedarwood,cedarwood,True,True,2,13,BOTH
+NOTE-0116,Clary Sage,clary_sage,True,True,1,14,BOTH
+NOTE-0134,Coumarin,coumarin,True,True,14,3,BOTH
+NOTE-0140,Cypriol,cypriol,True,True,1,1,BOTH
+NOTE-0155,Eucalyptus,eucalyptus,True,True,1,2,BOTH
+NOTE-0166,Freesia,freesia,True,True,1,7,BOTH
+NOTE-0169,Galbanum,galbanum,True,True,2,9,BOTH
+NOTE-0175,Grapefruit,grapefruit,True,True,1,43,BOTH
+NOTE-0180,Green Apple,green_apple,True,True,1,1,BOTH
+NOTE-0187,Guaiac Wood,guaiac_wood,True,True,5,12,BOTH
+NOTE-0193,Hedione,hedione,True,True,10,1,BOTH
+NOTE-0194,Heliotrope,heliotrope,True,True,1,2,BOTH
+NOTE-0204,Iris,iris,True,True,1,29,BOTH
+NOTE-0205,Iso E Super,iso_e_super,True,True,166,5,BOTH
+NOTE-0209,Jasmine,jasmine,True,True,1,80,BOTH
+NOTE-0220,Labdanum,labdanum,True,True,1,26,BOTH
+NOTE-0222,Lavender,lavender,True,True,2,54,BOTH
+NOTE-0225,Lemon,lemon,True,True,2,47,BOTH
+NOTE-0233,Lily-of-the-Valley,lily_of_the_valley,True,True,2,22,BOTH
+NOTE-0269,Musk,musk,True,True,7,144,BOTH
+NOTE-0284,Opoponax,opoponax,True,True,2,8,BOTH
+NOTE-0296,Oud Accord,oud_accord,True,True,1,1,BOTH
+NOTE-0303,Pear,pear,True,True,2,18,BOTH
+NOTE-0306,Peony,peony,True,True,1,9,BOTH
+NOTE-0309,Peru Balsam,peru_balsam,True,True,3,4,BOTH
+NOTE-0319,Pink Pepper,pink_pepper,True,True,4,37,BOTH
+NOTE-0327,Raspberry,raspberry,True,True,1,4,BOTH
+NOTE-0338,Rose,rose,True,True,2,73,BOTH
+NOTE-0344,Rosemary,rosemary,True,True,1,14,BOTH
+NOTE-0349,Saffron,saffron,True,True,11,41,BOTH
+NOTE-0354,Sandalwood,sandalwood,True,True,4,113,BOTH
+NOTE-0375,Strawberry,strawberry,True,True,1,2,BOTH
+NOTE-0395,Tolu Balsam,tolu_balsam,True,True,3,3,BOTH
+NOTE-0399,Tonka Bean,tonka_bean,True,True,8,55,BOTH
+NOTE-0407,Vanilla,vanilla,True,True,4,105,BOTH
+NOTE-0408,Vanilla Absolute,vanilla_absolute,True,True,15,1,BOTH
+NOTE-0418,Violet,violet,True,True,1,14,BOTH
+NOTE-0420,Violet Leaf,violet_leaf,True,True,1,16,BOTH
+NOTE-0434,White Musk,white_musk,True,True,7,19,BOTH
+NOTE-0668,Aldehyde C10,aldehyde_c10,False,False,0,0,ORPHAN_CATALOG
+NOTE-0669,Aldehyde C11,aldehyde_c11,False,False,0,0,ORPHAN_CATALOG
+NOTE-0670,Aldehyde C12 Lauric,aldehyde_c12_lauric,False,False,0,0,ORPHAN_CATALOG
+NOTE-0671,Aldehyde C12 MNA,aldehyde_c12_mna,False,False,0,0,ORPHAN_CATALOG
+NOTE-0672,Aldehyde C13,aldehyde_c13,False,False,0,0,ORPHAN_CATALOG
+NOTE-0673,Aldehyde C14,aldehyde_c14,False,False,0,0,ORPHAN_CATALOG
+NOTE-0674,Aldehyde C14 Peach,aldehyde_c14_peach,False,False,0,0,ORPHAN_CATALOG
+NOTE-0675,Aldehyde C16 Strawberry,aldehyde_c16_strawberry,False,False,0,0,ORPHAN_CATALOG
+NOTE-0676,Aldehyde C18,aldehyde_c18,False,False,0,0,ORPHAN_CATALOG
+NOTE-0677,Aldehyde C18 Coconut,aldehyde_c18_coconut,False,False,0,0,ORPHAN_CATALOG
+NOTE-0678,Aldehyde C-7,aldehyde_c_7,False,False,0,0,ORPHAN_CATALOG
+NOTE-0679,Aldehyde C-8,aldehyde_c_8,False,False,0,0,ORPHAN_CATALOG
+NOTE-0680,Aldehyde C-9,aldehyde_c_9,False,False,0,0,ORPHAN_CATALOG
+NOTE-0681,Aldehydes (C10),aldehydes_c10,False,False,0,0,ORPHAN_CATALOG
+NOTE-0682,Aldehydes (C11),aldehydes_c11,False,False,0,0,ORPHAN_CATALOG
+NOTE-0683,Aldehydes (C12 MNA),aldehydes_c12_mna,False,False,0,0,ORPHAN_CATALOG
+NOTE-0684,Allspice Oil,allspice_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0685,Allyl Amyl Glycolate,allyl_amyl_glycolate,False,False,0,0,ORPHAN_CATALOG
+NOTE-0686,Alpha-Ionone,alpha_ionone,False,False,0,0,ORPHAN_CATALOG
+NOTE-0687,Amber Seed,amber_seed,False,False,0,0,ORPHAN_CATALOG
+NOTE-0688,Amber Xtreme,amber_xtreme,False,False,0,0,ORPHAN_CATALOG
+NOTE-0689,Ambergris Replacer,ambergris_replacer,False,False,0,0,ORPHAN_CATALOG
+NOTE-0690,Ambergris Tincture,ambergris_tincture,False,False,0,0,ORPHAN_CATALOG
+NOTE-0691,Amberlyn,amberlyn,False,False,0,0,ORPHAN_CATALOG
+NOTE-0692,Ambermarine Base,ambermarine_base,False,False,0,0,ORPHAN_CATALOG
+NOTE-0693,Ambermax,ambermax,False,False,0,0,ORPHAN_CATALOG
+NOTE-0694,Ambrein,ambrein,False,False,0,0,ORPHAN_CATALOG
+NOTE-0695,Amyris Oil,amyris_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0696,Anethole,anethole,False,False,0,0,ORPHAN_CATALOG
+NOTE-0697,Angelica Root,angelica_root,False,False,0,0,ORPHAN_CATALOG
+NOTE-0698,Anisyl Alcohol,anisyl_alcohol,False,False,0,0,ORPHAN_CATALOG
+NOTE-0699,Apricot Lactone,apricot_lactone,False,False,0,0,ORPHAN_CATALOG
+NOTE-0700,Artemisia Oil,artemisia_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0701,Atlas Cedrol,atlas_cedrol,False,False,0,0,ORPHAN_CATALOG
+NOTE-0702,Australian Sandalwood,australian_sandalwood,False,False,0,0,ORPHAN_CATALOG
+NOTE-0703,Bay Leaf Oil,bay_leaf_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0704,Bay Oil,bay_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0705,Benzoin Sumatra,benzoin_sumatra,False,False,0,0,ORPHAN_CATALOG
+NOTE-0706,Benzyl Benzoate,benzyl_benzoate,False,False,0,0,ORPHAN_CATALOG
+NOTE-0707,Bergamot Oil FCF,bergamot_oil_fcf,False,False,0,0,ORPHAN_CATALOG
+NOTE-0708,Beta-Ionone,beta_ionone,False,False,0,0,ORPHAN_CATALOG
+NOTE-0709,Bitter Orange Oil,bitter_orange_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0710,Blood Orange Oil,blood_orange_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0711,Bois de Rose,bois_de_rose,False,False,0,0,ORPHAN_CATALOG
+NOTE-0712,Boisambrene Forte,boisambrene_forte,False,False,0,0,ORPHAN_CATALOG
+NOTE-0713,Boisiris,boisiris,False,False,0,0,ORPHAN_CATALOG
+NOTE-0714,Bourgeonal,bourgeonal,False,False,0,0,ORPHAN_CATALOG
+NOTE-0715,Bulgarian Rose Otto,bulgarian_rose_otto,False,False,0,0,ORPHAN_CATALOG
+NOTE-0716,Calamansi Oil,calamansi_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0717,Camphor,camphor,False,False,0,0,ORPHAN_CATALOG
+NOTE-0718,Carrot Seed,carrot_seed,False,False,0,0,ORPHAN_CATALOG
+NOTE-0719,Cashmeran (High Purity),cashmeran_high_purity,False,False,0,0,ORPHAN_CATALOG
+NOTE-0720,Cassis Absolute,cassis_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0721,Cedramber,cedramber,False,False,0,0,ORPHAN_CATALOG
+NOTE-0722,Champaca Absolute,champaca_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0723,Cherry,cherry,False,False,0,0,ORPHAN_CATALOG
+NOTE-0724,Cinnamaldehyde,cinnamaldehyde,False,False,0,0,ORPHAN_CATALOG
+NOTE-0725,Cis-3-Hexenyl Acetate,cis_3_hexenyl_acetate,False,False,0,0,ORPHAN_CATALOG
+NOTE-0726,Cis-3-Hexenyl Butyrate,cis_3_hexenyl_butyrate,False,False,0,0,ORPHAN_CATALOG
+NOTE-0727,Cis-Jasmone,cis_jasmone,False,False,0,0,ORPHAN_CATALOG
+NOTE-0728,Cistus Oil,cistus_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0729,Citral,citral,False,False,0,0,ORPHAN_CATALOG
+NOTE-0730,Citron Oil,citron_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0731,Citronella,citronella,False,False,0,0,ORPHAN_CATALOG
+NOTE-0732,Citronellyl Acetate,citronellyl_acetate,False,False,0,0,ORPHAN_CATALOG
+NOTE-0733,Civet Absolute,civet_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0734,Civet (Synthetic),civet_synthetic,False,False,0,0,ORPHAN_CATALOG
+NOTE-0735,Civettone,civettone,False,False,0,0,ORPHAN_CATALOG
+NOTE-0736,Clearwood,clearwood,False,False,0,0,ORPHAN_CATALOG
+NOTE-0737,Clementine Oil,clementine_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0738,Costus,costus,False,False,0,0,ORPHAN_CATALOG
+NOTE-0739,Coumarin (Refined),coumarin_refined,False,False,0,0,ORPHAN_CATALOG
+NOTE-0740,Coumarone,coumarone,False,False,0,0,ORPHAN_CATALOG
+NOTE-0741,Cyclamen Aldehyde,cyclamen_aldehyde,False,False,0,0,ORPHAN_CATALOG
+NOTE-0742,Cyclotene,cyclotene,False,False,0,0,ORPHAN_CATALOG
+NOTE-0743,Cypress Oil,cypress_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0744,Cypriol Oil (Nagarmotha),cypriol_oil_nagarmotha,False,False,0,0,ORPHAN_CATALOG
+NOTE-0745,Damascenol,damascenol,False,False,0,0,ORPHAN_CATALOG
+NOTE-0746,Damask Rose Oil,damask_rose_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0747,Deertongue,deertongue,False,False,0,0,ORPHAN_CATALOG
+NOTE-0748,Ebanol,ebanol,False,False,0,0,ORPHAN_CATALOG
+NOTE-0749,Elemi Oil,elemi_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0750,Estragole,estragole,False,False,0,0,ORPHAN_CATALOG
+NOTE-0751,Eucalyptus Oil,eucalyptus_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0752,Eugenyl Acetate,eugenyl_acetate,False,False,0,0,ORPHAN_CATALOG
+NOTE-0753,Fenugreek,fenugreek,False,False,0,0,ORPHAN_CATALOG
+NOTE-0754,Fenugreek Absolute,fenugreek_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0755,Finger Lime Oil,finger_lime_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0756,Fir Balsam,fir_balsam,False,False,0,0,ORPHAN_CATALOG
+NOTE-0757,Fir Balsam Absolute,fir_balsam_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0758,Fir Needle Oil,fir_needle_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0759,Fixolide,fixolide,False,False,0,0,ORPHAN_CATALOG
+NOTE-0760,Florhydral,florhydral,False,False,0,0,ORPHAN_CATALOG
+NOTE-0761,Florol,florol,False,False,0,0,ORPHAN_CATALOG
+NOTE-0762,Frangipani Absolute,frangipani_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0763,Furaneol,furaneol,False,False,0,0,ORPHAN_CATALOG
+NOTE-0764,Galbanol,galbanol,False,False,0,0,ORPHAN_CATALOG
+NOTE-0765,Gardenia Absolute,gardenia_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0766,Geranyl Acetate,geranyl_acetate,False,False,0,0,ORPHAN_CATALOG
+NOTE-0767,Guaiacwood,guaiacwood,False,False,0,0,ORPHAN_CATALOG
+NOTE-0768,Hay Lactone,hay_lactone,False,False,0,0,ORPHAN_CATALOG
+NOTE-0769,Hedione HC,hedione_hc,False,False,0,0,ORPHAN_CATALOG
+NOTE-0770,Heliotrope Absolute,heliotrope_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0771,Hinoki,hinoki,False,False,0,0,ORPHAN_CATALOG
+NOTE-0772,Hydroxycitronellal,hydroxycitronellal,False,False,0,0,ORPHAN_CATALOG
+NOTE-0773,Hyssop Oil,hyssop_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0774,Iris (Orris),iris_orris,False,False,0,0,ORPHAN_CATALOG
+NOTE-0775,Irone Alpha,irone_alpha,False,False,0,0,ORPHAN_CATALOG
+NOTE-0776,Irone Beta,irone_beta,False,False,0,0,ORPHAN_CATALOG
+NOTE-0777,Iso E Super Plus,iso_e_super_plus,False,False,0,0,ORPHAN_CATALOG
+NOTE-0778,Isoamyl Acetate,isoamyl_acetate,False,False,0,0,ORPHAN_CATALOG
+NOTE-0779,Isoeugenol,isoeugenol,False,False,0,0,ORPHAN_CATALOG
+NOTE-0780,Isopropyl Cresol,isopropyl_cresol,False,False,0,0,ORPHAN_CATALOG
+NOTE-0781,Jasmine Lactone,jasmine_lactone,False,False,0,0,ORPHAN_CATALOG
+NOTE-0782,Java Vetiver,java_vetiver,False,False,0,0,ORPHAN_CATALOG
+NOTE-0783,Juniper Berry,juniper_berry,False,False,0,0,ORPHAN_CATALOG
+NOTE-0784,Juniper Berry Oil,juniper_berry_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0785,Juniper Tar,juniper_tar,False,False,0,0,ORPHAN_CATALOG
+NOTE-0786,Kaffir Lime Leaf Oil,kaffir_lime_leaf_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0787,Kiwi Accord Base,kiwi_accord_base,False,False,0,0,ORPHAN_CATALOG
+NOTE-0788,Labdanum Resin,labdanum_resin,False,False,0,0,ORPHAN_CATALOG
+NOTE-0789,Lactonic Aldehyde,lactonic_aldehyde,False,False,0,0,ORPHAN_CATALOG
+NOTE-0790,Lemon Oil Expressed,lemon_oil_expressed,False,False,0,0,ORPHAN_CATALOG
+NOTE-0791,Lemongrass,lemongrass,False,False,0,0,ORPHAN_CATALOG
+NOTE-0792,Lemongrass Oil,lemongrass_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0793,Lilial,lilial,False,False,0,0,ORPHAN_CATALOG
+NOTE-0794,Lilial (Butylphenyl Methylpropional),lilial_butylphenyl_methylpropional,False,False,0,0,ORPHAN_CATALOG
+NOTE-0795,Lime Oil,lime_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0796,Lime Oil Distilled,lime_oil_distilled,False,False,0,0,ORPHAN_CATALOG
+NOTE-0797,Limonene,limonene,False,False,0,0,ORPHAN_CATALOG
+NOTE-0798,Litsea Cubeba Oil,litsea_cubeba_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0799,Lotus Absolute,lotus_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0800,Lyral,lyral,False,False,0,0,ORPHAN_CATALOG
+NOTE-0801,Magnolia Absolute,magnolia_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0802,Mango Lactone,mango_lactone,False,False,0,0,ORPHAN_CATALOG
+NOTE-0803,Methyl Anthranilate,methyl_anthranilate,False,False,0,0,ORPHAN_CATALOG
+NOTE-0804,Methyl Anthranilate (Natural),methyl_anthranilate_natural,False,False,0,0,ORPHAN_CATALOG
+NOTE-0805,Methyleugenol,methyleugenol,False,False,0,0,ORPHAN_CATALOG
+NOTE-0806,Mint Oil,mint_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0807,Musk (Synthetic),musk_synthetic,False,False,0,0,ORPHAN_CATALOG
+NOTE-0808,Musk Xylene,musk_xylene,False,False,0,0,ORPHAN_CATALOG
+NOTE-0809,Myristicin,myristicin,False,False,0,0,ORPHAN_CATALOG
+NOTE-0810,Myrrh Oil,myrrh_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0811,Myrrh Resin,myrrh_resin,False,False,0,0,ORPHAN_CATALOG
+NOTE-0812,Nagarmotha,nagarmotha,False,False,0,0,ORPHAN_CATALOG
+NOTE-0813,Narcissus Absolute,narcissus_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0814,Nerol,nerol,False,False,0,0,ORPHAN_CATALOG
+NOTE-0815,Nerol Acetate,nerol_acetate,False,False,0,0,ORPHAN_CATALOG
+NOTE-0816,Nirvanolide,nirvanolide,False,False,0,0,ORPHAN_CATALOG
+NOTE-0817,Norlimbanol,norlimbanol,False,False,0,0,ORPHAN_CATALOG
+NOTE-0818,Oakwood Absolute,oakwood_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0819,Okoumal,okoumal,False,False,0,0,ORPHAN_CATALOG
+NOTE-0820,Olibanum Oil,olibanum_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0821,Olibanum Resinoid,olibanum_resinoid,False,False,0,0,ORPHAN_CATALOG
+NOTE-0822,Oolong Tea Absolute,oolong_tea_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0823,Opoponax Resin,opoponax_resin,False,False,0,0,ORPHAN_CATALOG
+NOTE-0824,Orange Oil Sweet,orange_oil_sweet,False,False,0,0,ORPHAN_CATALOG
+NOTE-0825,Orcanox,orcanox,False,False,0,0,ORPHAN_CATALOG
+NOTE-0826,Orris Absolute,orris_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0827,Osmanthus Absolute,osmanthus_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0828,Palo Santo,palo_santo,False,False,0,0,ORPHAN_CATALOG
+NOTE-0829,Palo Santo Oil,palo_santo_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0830,Papyrus Oil,papyrus_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0831,Passionfruit Sulfide,passionfruit_sulfide,False,False,0,0,ORPHAN_CATALOG
+NOTE-0832,Patchouli Light,patchouli_light,False,False,0,0,ORPHAN_CATALOG
+NOTE-0833,Peach Aldehyde,peach_aldehyde,False,False,0,0,ORPHAN_CATALOG
+NOTE-0834,Petitgrain Bigarade,petitgrain_bigarade,False,False,0,0,ORPHAN_CATALOG
+NOTE-0835,Phantolide,phantolide,False,False,0,0,ORPHAN_CATALOG
+NOTE-0836,Phenethyl Acetate,phenethyl_acetate,False,False,0,0,ORPHAN_CATALOG
+NOTE-0837,Phenyl Ethyl Acetate,phenyl_ethyl_acetate,False,False,0,0,ORPHAN_CATALOG
+NOTE-0838,Pine Needle Oil,pine_needle_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0839,Pine Tar,pine_tar,False,False,0,0,ORPHAN_CATALOG
+NOTE-0840,Piperonal,piperonal,False,False,0,0,ORPHAN_CATALOG
+NOTE-0841,Polysantol,polysantol,False,False,0,0,ORPHAN_CATALOG
+NOTE-0842,Pomelo Oil,pomelo_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0843,Rice Steam Note,rice_steam_note,False,False,0,0,ORPHAN_CATALOG
+NOTE-0844,Roasted Barley,roasted_barley,False,False,0,0,ORPHAN_CATALOG
+NOTE-0845,Safflower,safflower,False,False,0,0,ORPHAN_CATALOG
+NOTE-0846,Safranal,safranal,False,False,0,0,ORPHAN_CATALOG
+NOTE-0847,Safrole,safrole,False,False,0,0,ORPHAN_CATALOG
+NOTE-0848,Sambac Jasmine,sambac_jasmine,False,False,0,0,ORPHAN_CATALOG
+NOTE-0849,Serenolide,serenolide,False,False,0,0,ORPHAN_CATALOG
+NOTE-0850,Skatole,skatole,False,False,0,0,ORPHAN_CATALOG
+NOTE-0851,Sotolone,sotolone,False,False,0,0,ORPHAN_CATALOG
+NOTE-0852,Spearmint Oil,spearmint_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0853,Spruce Oil,spruce_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0854,Stemone,stemone,False,False,0,0,ORPHAN_CATALOG
+NOTE-0855,Strawberry Furanone,strawberry_furanone,False,False,0,0,ORPHAN_CATALOG
+NOTE-0856,Sudachi Oil,sudachi_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0857,Sweet Orange Oil,sweet_orange_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0858,Sylkolide,sylkolide,False,False,0,0,ORPHAN_CATALOG
+NOTE-0859,Tarragon Oil,tarragon_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0860,Tea Absolute,tea_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0861,Tea Tree,tea_tree,False,False,0,0,ORPHAN_CATALOG
+NOTE-0862,Texas Cedarwood,texas_cedarwood,False,False,0,0,ORPHAN_CATALOG
+NOTE-0863,Timber Silk,timber_silk,False,False,0,0,ORPHAN_CATALOG
+NOTE-0864,Timberone,timberone,False,False,0,0,ORPHAN_CATALOG
+NOTE-0865,Toasted Sugar,toasted_sugar,False,False,0,0,ORPHAN_CATALOG
+NOTE-0866,Tonalide,tonalide,False,False,0,0,ORPHAN_CATALOG
+NOTE-0867,Tree Moss,tree_moss,False,False,0,0,ORPHAN_CATALOG
+NOTE-0868,Turkish Rose Absolute,turkish_rose_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0869,Undecavertol,undecavertol,False,False,0,0,ORPHAN_CATALOG
+NOTE-0870,Vanillyl Acetate,vanillyl_acetate,False,False,0,0,ORPHAN_CATALOG
+NOTE-0871,Vanitrope,vanitrope,False,False,0,0,ORPHAN_CATALOG
+NOTE-0872,Velvione,velvione,False,False,0,0,ORPHAN_CATALOG
+NOTE-0873,Veratraldehyde,veratraldehyde,False,False,0,0,ORPHAN_CATALOG
+NOTE-0874,Vertofix,vertofix,False,False,0,0,ORPHAN_CATALOG
+NOTE-0875,Vertofix Coeur,vertofix_coeur,False,False,0,0,ORPHAN_CATALOG
+NOTE-0876,Vertoflor,vertoflor,False,False,0,0,ORPHAN_CATALOG
+NOTE-0877,Vetiver Oil,vetiver_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0878,Violet Leaf Alcohol,violet_leaf_alcohol,False,False,0,0,ORPHAN_CATALOG
+NOTE-0879,Water Lily Absolute,water_lily_absolute,False,False,0,0,ORPHAN_CATALOG
+NOTE-0880,Wintergreen Oil,wintergreen_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0881,Yuzu Oil,yuzu_oil,False,False,0,0,ORPHAN_CATALOG
+NOTE-0882,Z11 Musk,z11_musk,False,False,0,0,ORPHAN_CATALOG
+NOTE-0883,Zenolide,zenolide,False,False,0,0,ORPHAN_CATALOG
+NOTE-0001,African Geranium,african_geranium,False,True,0,2,REAL_ONLY
+NOTE-0002,African Orange Flower,african_orange_flower,False,True,0,2,REAL_ONLY
+NOTE-0004,Akigalawood,akigalawood,False,True,0,4,REAL_ONLY
+NOTE-0006,Almond,almond,False,True,0,6,REAL_ONLY
+NOTE-0007,Almond Blossom,almond_blossom,False,True,0,1,REAL_ONLY
+NOTE-0008,Almond Milk,almond_milk,False,True,0,1,REAL_ONLY
+NOTE-0009,Amalfi Lemon,amalfi_lemon,False,True,0,2,REAL_ONLY
+NOTE-0010,Amalfi Lemon Mandarin Orange,amalfi_lemon_mandarin_orange,False,True,0,1,REAL_ONLY
+NOTE-0011,Amber,amber,False,True,0,142,REAL_ONLY
+NOTE-0013,Amber‑like Woods,amber_like_woods,False,True,0,1,REAL_ONLY
+NOTE-0014,Amber Notes,amber_notes,False,True,0,1,REAL_ONLY
+NOTE-0015,Ambergris,ambergris,False,True,0,21,REAL_ONLY
+NOTE-0017,Ambrette,ambrette,False,True,0,1,REAL_ONLY
+NOTE-0018,Ambrette (Musk Mallow),ambrette_musk_mallow,False,True,0,2,REAL_ONLY
+NOTE-0019,Ambrette Seed,ambrette_seed,False,True,0,2,REAL_ONLY
+NOTE-0020,Ambrox,ambrox,False,True,0,1,REAL_ONLY
+NOTE-0022,Amyl Salicylate,amyl_salicylate,False,True,0,1,REAL_ONLY
+NOTE-0023,Amyris,amyris,False,True,0,2,REAL_ONLY
+NOTE-0024,Angelica,angelica,False,True,0,10,REAL_ONLY
+NOTE-0025,Animal notes,animal_notes,False,True,0,2,REAL_ONLY
+NOTE-0026,Anise,anise,False,True,0,1,REAL_ONLY
+NOTE-0028,Apricot,apricot,False,True,0,3,REAL_ONLY
+NOTE-0029,Aromatic Citrus,aromatic_citrus,False,True,0,1,REAL_ONLY
+NOTE-0030,Aromatic Herbs,aromatic_herbs,False,True,0,3,REAL_ONLY
+NOTE-0031,Aromatic Spices,aromatic_spices,False,True,0,1,REAL_ONLY
+NOTE-0032,Artemisia,artemisia,False,True,0,4,REAL_ONLY
+NOTE-0033,Balsamic Resins,balsamic_resins,False,True,0,1,REAL_ONLY
+NOTE-0034,Balsamic Woods,balsamic_woods,False,True,0,1,REAL_ONLY
+NOTE-0035,Banana,banana,False,True,0,2,REAL_ONLY
+NOTE-0036,Basil,basil,False,True,0,16,REAL_ONLY
+NOTE-0037,Bay Leaf,bay_leaf,False,True,0,3,REAL_ONLY
+NOTE-0038,Beeswax,beeswax,False,True,0,3,REAL_ONLY
+NOTE-0041,Berries,berries,False,True,0,1,REAL_ONLY
+NOTE-0042,Bigarade (Bitter Orange),bigarade_bitter_orange,False,True,0,1,REAL_ONLY
+NOTE-0043,Birch,birch,False,True,0,5,REAL_ONLY
+NOTE-0044,Birch Leaf,birch_leaf,False,True,0,1,REAL_ONLY
+NOTE-0045,Birch Leaves,birch_leaves,False,True,0,1,REAL_ONLY
+NOTE-0047,Bitter Almond,bitter_almond,False,True,0,2,REAL_ONLY
+NOTE-0048,Bitter Orange,bitter_orange,False,True,0,15,REAL_ONLY
+NOTE-0049,Black Amber,black_amber,False,True,0,1,REAL_ONLY
+NOTE-0050,Black Currant,black_currant,False,True,0,11,REAL_ONLY
+NOTE-0051,Black Ink,black_ink,False,True,0,1,REAL_ONLY
+NOTE-0052,Black Licorice,black_licorice,False,True,0,1,REAL_ONLY
+NOTE-0053,Black Pepper,black_pepper,False,True,0,32,REAL_ONLY
+NOTE-0054,Black Tea,black_tea,False,True,0,3,REAL_ONLY
+NOTE-0055,Black Vanilla Husk,black_vanilla_husk,False,True,0,1,REAL_ONLY
+NOTE-0056,Blackberry,blackberry,False,True,0,4,REAL_ONLY
+NOTE-0057,Blackcurrant,blackcurrant,False,True,0,7,REAL_ONLY
+NOTE-0058,Blood Grapefruit,blood_grapefruit,False,True,0,1,REAL_ONLY
+NOTE-0059,Blood Mandarin,blood_mandarin,False,True,0,2,REAL_ONLY
+NOTE-0060,Blood Orange,blood_orange,False,True,0,3,REAL_ONLY
+NOTE-0061,Blue Ginger,blue_ginger,False,True,0,1,REAL_ONLY
+NOTE-0062,Blue Lotus,blue_lotus,False,True,0,1,REAL_ONLY
+NOTE-0063,Blue Sage,blue_sage,False,True,0,1,REAL_ONLY
+NOTE-0064,Bourbon Geranium,bourbon_geranium,False,True,0,1,REAL_ONLY
+NOTE-0065,Bourbon Vanilla,bourbon_vanilla,False,True,0,2,REAL_ONLY
+NOTE-0066,Bourbon Vetiver,bourbon_vetiver,False,True,0,1,REAL_ONLY
+NOTE-0067,Bourbon Whiskey,bourbon_whiskey,False,True,0,1,REAL_ONLY
+NOTE-0068,Brazilian Rosewood,brazilian_rosewood,False,True,0,3,REAL_ONLY
+NOTE-0069,Brown sugar,brown_sugar,False,True,0,2,REAL_ONLY
+NOTE-0070,Bulgarian Rose,bulgarian_rose,False,True,0,7,REAL_ONLY
+NOTE-0071,Bulrush,bulrush,False,True,0,2,REAL_ONLY
+NOTE-0072,Burnt Match,burnt_match,False,True,0,1,REAL_ONLY
+NOTE-0073,Cacao,cacao,False,True,0,9,REAL_ONLY
+NOTE-0074,Cacao Pod,cacao_pod,False,True,0,4,REAL_ONLY
+NOTE-0076,Calabrian Bergamot,calabrian_bergamot,False,True,0,9,REAL_ONLY
+NOTE-0077,Calamansi,calamansi,False,True,0,1,REAL_ONLY
+NOTE-0078,Cappuccino,cappuccino,False,True,0,1,REAL_ONLY
+NOTE-0079,Caramel,caramel,False,True,0,9,REAL_ONLY
+NOTE-0080,Caraway,caraway,False,True,0,9,REAL_ONLY
+NOTE-0081,Cardamom,cardamom,False,True,0,63,REAL_ONLY
+NOTE-0082,Cardamon,cardamon,False,True,0,3,REAL_ONLY
+NOTE-0083,Carnation,carnation,False,True,0,10,REAL_ONLY
+NOTE-0084,Carrot,carrot,False,True,0,2,REAL_ONLY
+NOTE-0085,Carrot Seeds,carrot_seeds,False,True,0,1,REAL_ONLY
+NOTE-0086,Cascarilla,cascarilla,False,True,0,1,REAL_ONLY
+NOTE-0088,Cashmere Wood,cashmere_wood,False,True,0,6,REAL_ONLY
+NOTE-0089,Cassis,cassis,False,True,0,3,REAL_ONLY
+NOTE-0090,Castoreum,castoreum,False,True,0,5,REAL_ONLY
+NOTE-0091,Cedar,cedar,False,True,0,105,REAL_ONLY
+NOTE-0092,Cedar Leaf,cedar_leaf,False,True,0,1,REAL_ONLY
+NOTE-0093,Cedar Shavings,cedar_shavings,False,True,0,1,REAL_ONLY
+NOTE-0095,Celery Seeds,celery_seeds,False,True,0,1,REAL_ONLY
+NOTE-0096,Ceylon Cinnamon,ceylon_cinnamon,False,True,0,1,REAL_ONLY
+NOTE-0097,Chamomile,chamomile,False,True,0,2,REAL_ONLY
+NOTE-0098,Champagne,champagne,False,True,0,1,REAL_ONLY
+NOTE-0099,Chestnut,chestnut,False,True,0,3,REAL_ONLY
+NOTE-0100,Chilli,chilli,False,True,0,1,REAL_ONLY
+NOTE-0101,Chilli Accord,chilli_accord,False,True,0,1,REAL_ONLY
+NOTE-0102,Chinotto,chinotto,False,True,0,1,REAL_ONLY
+NOTE-0103,Chocolate,chocolate,False,True,0,1,REAL_ONLY
+NOTE-0104,Cinnamon,cinnamon,False,True,0,56,REAL_ONLY
+NOTE-0105,Cinnamon Leaf,cinnamon_leaf,False,True,0,2,REAL_ONLY
+NOTE-0106,Cistus,cistus,False,True,0,1,REAL_ONLY
+NOTE-0107,Cistus Labdanum,cistus_labdanum,False,True,0,1,REAL_ONLY
+NOTE-0108,Citron,citron,False,True,0,3,REAL_ONLY
+NOTE-0109,Citrus,citrus,False,True,0,2,REAL_ONLY
+NOTE-0110,Citrus Notes,citrus_notes,False,True,0,2,REAL_ONLY
+NOTE-0111,Citrus Nuances,citrus_nuances,False,True,0,1,REAL_ONLY
+NOTE-0112,Citruses,citruses,False,True,0,4,REAL_ONLY
+NOTE-0113,citruses with sugar,citruses_with_sugar,False,True,0,2,REAL_ONLY
+NOTE-0114,Citrusy Sparkles,citrusy_sparkles,False,True,0,1,REAL_ONLY
+NOTE-0115,Civet,civet,False,True,0,6,REAL_ONLY
+NOTE-0117,Clean Musk,clean_musk,False,True,0,1,REAL_ONLY
+NOTE-0118,Clementine,clementine,False,True,0,2,REAL_ONLY
+NOTE-0119,Clove,clove,False,True,0,11,REAL_ONLY
+NOTE-0120,Clover,clover,False,True,0,1,REAL_ONLY
+NOTE-0121,Cloves,cloves,False,True,0,4,REAL_ONLY
+NOTE-0122,Coal,coal,False,True,0,1,REAL_ONLY
+NOTE-0123,Cocoa,cocoa,False,True,0,2,REAL_ONLY
+NOTE-0124,Coconut,coconut,False,True,0,6,REAL_ONLY
+NOTE-0125,Coconut Blossom,coconut_blossom,False,True,0,1,REAL_ONLY
+NOTE-0126,Coconut Milk,coconut_milk,False,True,0,1,REAL_ONLY
+NOTE-0127,Coffee,coffee,False,True,0,11,REAL_ONLY
+NOTE-0128,Cognac,cognac,False,True,0,1,REAL_ONLY
+NOTE-0129,Cool Mint,cool_mint,False,True,0,1,REAL_ONLY
+NOTE-0130,Coriander,coriander,False,True,0,26,REAL_ONLY
+NOTE-0131,Coriander Leaf,coriander_leaf,False,True,0,2,REAL_ONLY
+NOTE-0132,Cotton Candy,cotton_candy,False,True,0,1,REAL_ONLY
+NOTE-0133,Cotton Flower,cotton_flower,False,True,0,1,REAL_ONLY
+NOTE-0135,Cranberry,cranberry,False,True,0,1,REAL_ONLY
+NOTE-0136,Cucumber,cucumber,False,True,0,1,REAL_ONLY
+NOTE-0137,Cumin,cumin,False,True,0,11,REAL_ONLY
+NOTE-0138,Cyclamen,cyclamen,False,True,0,2,REAL_ONLY
+NOTE-0139,Cypress,cypress,False,True,0,21,REAL_ONLY
+NOTE-0141,Cypriol Oil or Nagarmotha,cypriol_oil_or_nagarmotha,False,True,0,3,REAL_ONLY
+NOTE-0142,Damask Rose,damask_rose,False,True,0,1,REAL_ONLY
+NOTE-0143,Darjeeling Tea,darjeeling_tea,False,True,0,1,REAL_ONLY
+NOTE-0144,Dark Berries,dark_berries,False,True,0,1,REAL_ONLY
+NOTE-0145,Dates,dates,False,True,0,1,REAL_ONLY
+NOTE-0146,Dried Fruits,dried_fruits,False,True,0,5,REAL_ONLY
+NOTE-0147,Dried Plum,dried_plum,False,True,0,1,REAL_ONLY
+NOTE-0148,Driftwood,driftwood,False,True,0,2,REAL_ONLY
+NOTE-0149,Dry Woods,dry_woods,False,True,0,1,REAL_ONLY
+NOTE-0150,Ebony,ebony,False,True,0,1,REAL_ONLY
+NOTE-0151,Ebony Wood,ebony_wood,False,True,0,1,REAL_ONLY
+NOTE-0152,Egyptian Jasmine,egyptian_jasmine,False,True,0,3,REAL_ONLY
+NOTE-0153,Egyptian Pelargonium,egyptian_pelargonium,False,True,0,1,REAL_ONLY
+NOTE-0154,Elemi,elemi,False,True,0,2,REAL_ONLY
+NOTE-0156,Fennel,fennel,False,True,0,1,REAL_ONLY
+NOTE-0157,Fig,fig,False,True,0,4,REAL_ONLY
+NOTE-0158,Fig Leaf,fig_leaf,False,True,0,4,REAL_ONLY
+NOTE-0159,Fir,fir,False,True,0,6,REAL_ONLY
+NOTE-0160,Fir Needles,fir_needles,False,True,0,1,REAL_ONLY
+NOTE-0161,Flax,flax,False,True,0,1,REAL_ONLY
+NOTE-0162,Flint,flint,False,True,0,1,REAL_ONLY
+NOTE-0163,Floral Notes,floral_notes,False,True,0,5,REAL_ONLY
+NOTE-0164,Frangipani,frangipani,False,True,0,2,REAL_ONLY
+NOTE-0165,Frankincense,frankincense,False,True,0,9,REAL_ONLY
+NOTE-0167,Fruit,fruit,False,True,0,1,REAL_ONLY
+NOTE-0168,Fruity Notes,fruity_notes,False,True,0,4,REAL_ONLY
+NOTE-0170,Gardenia,gardenia,False,True,0,5,REAL_ONLY
+NOTE-0171,Geranium,geranium,False,True,0,33,REAL_ONLY
+NOTE-0172,Ginger,ginger,False,True,0,31,REAL_ONLY
+NOTE-0173,Goldenwood,goldenwood,False,True,0,1,REAL_ONLY
+NOTE-0174,Grape,grape,False,True,0,1,REAL_ONLY
+NOTE-0176,Grapefruit Blossom,grapefruit_blossom,False,True,0,1,REAL_ONLY
+NOTE-0177,Grass,grass,False,True,0,2,REAL_ONLY
+NOTE-0178,Grasse Rose,grasse_rose,False,True,0,1,REAL_ONLY
+NOTE-0179,Green Accord,green_accord,False,True,0,1,REAL_ONLY
+NOTE-0181,Green Leaves,green_leaves,False,True,0,4,REAL_ONLY
+NOTE-0182,Green Mandarin,green_mandarin,False,True,0,4,REAL_ONLY
+NOTE-0183,Green Mango,green_mango,False,True,0,3,REAL_ONLY
+NOTE-0184,Green Notes,green_notes,False,True,0,13,REAL_ONLY
+NOTE-0185,Green Tea,green_tea,False,True,0,6,REAL_ONLY
+NOTE-0186,Grey Amber,grey_amber,False,True,0,2,REAL_ONLY
+NOTE-0188,Haitian Vetiver,haitian_vetiver,False,True,0,6,REAL_ONLY
+NOTE-0189,Hawthorn,hawthorn,False,True,0,1,REAL_ONLY
+NOTE-0190,Hay,hay,False,True,0,1,REAL_ONLY
+NOTE-0191,Hazelnut,hazelnut,False,True,0,1,REAL_ONLY
+NOTE-0192,Hedgerow Florals,hedgerow_florals,False,True,0,1,REAL_ONLY
+NOTE-0195,Herbs,herbs,False,True,0,5,REAL_ONLY
+NOTE-0196,Hiacynth,hiacynth,False,True,0,2,REAL_ONLY
+NOTE-0197,Honey,honey,False,True,0,10,REAL_ONLY
+NOTE-0198,Honeysuckle,honeysuckle,False,True,0,2,REAL_ONLY
+NOTE-0199,Hyacinth,hyacinth,False,True,0,1,REAL_ONLY
+NOTE-0200,Immortelle,immortelle,False,True,0,3,REAL_ONLY
+NOTE-0201,Incense,incense,False,True,0,58,REAL_ONLY
+NOTE-0202,Indian Tuberose,indian_tuberose,False,True,0,1,REAL_ONLY
+NOTE-0203,Indonesian Patchouli Leaf,indonesian_patchouli_leaf,False,True,0,3,REAL_ONLY
+NOTE-0206,Italian Mandarin,italian_mandarin,False,True,0,1,REAL_ONLY
+NOTE-0207,Italian Orange,italian_orange,False,True,0,1,REAL_ONLY
+NOTE-0208,Ivy,ivy,False,True,0,2,REAL_ONLY
+NOTE-0210,Jasmine Egypt Infusion,jasmine_egypt_infusion,False,True,0,1,REAL_ONLY
+NOTE-0211,Jasmine Sambac,jasmine_sambac,False,True,0,8,REAL_ONLY
+NOTE-0212,Jasmine Tea,jasmine_tea,False,True,0,1,REAL_ONLY
+NOTE-0213,Java vetiver oil,java_vetiver_oil,False,True,0,1,REAL_ONLY
+NOTE-0214,Juniper,juniper,False,True,0,11,REAL_ONLY
+NOTE-0215,Juniper Berries,juniper_berries,False,True,0,9,REAL_ONLY
+NOTE-0216,Kiwi,kiwi,False,True,0,1,REAL_ONLY
+NOTE-0217,Kulfi,kulfi,False,True,0,2,REAL_ONLY
+NOTE-0218,Kulfi Accord,kulfi_accord,False,True,0,1,REAL_ONLY
+NOTE-0219,Kumquat,kumquat,False,True,0,1,REAL_ONLY
+NOTE-0221,Lavandin,lavandin,False,True,0,1,REAL_ONLY
+NOTE-0223,Leather,leather,False,True,0,87,REAL_ONLY
+NOTE-0224,Leather Accord,leather_accord,False,True,0,2,REAL_ONLY
+NOTE-0226,Lemon Verbena,lemon_verbena,False,True,0,3,REAL_ONLY
+NOTE-0227,Lemon Zest,lemon_zest,False,True,0,2,REAL_ONLY
+NOTE-0228,Lentisque,lentisque,False,True,0,1,REAL_ONLY
+NOTE-0229,Licorice,licorice,False,True,0,3,REAL_ONLY
+NOTE-0230,Light Woods,light_woods,False,True,0,1,REAL_ONLY
+NOTE-0231,Lilac,lilac,False,True,0,1,REAL_ONLY
+NOTE-0232,Lily,lily,False,True,0,2,REAL_ONLY
+NOTE-0234,Lime,lime,False,True,0,11,REAL_ONLY
+NOTE-0235,Limoncello,limoncello,False,True,0,1,REAL_ONLY
+NOTE-0236,Liquor,liquor,False,True,0,1,REAL_ONLY
+NOTE-0237,Liquor Accord,liquor_accord,False,True,0,1,REAL_ONLY
+NOTE-0238,Litchi,litchi,False,True,0,5,REAL_ONLY
+NOTE-0239,Lorenox,lorenox,False,True,0,1,REAL_ONLY
+NOTE-0240,Lotus,lotus,False,True,0,4,REAL_ONLY
+NOTE-0241,Lotus Wood,lotus_wood,False,True,0,1,REAL_ONLY
+NOTE-0242,Mace,mace,False,True,0,2,REAL_ONLY
+NOTE-0243,Madagascar Pepper,madagascar_pepper,False,True,0,2,REAL_ONLY
+NOTE-0244,Madagascar Vanilla,madagascar_vanilla,False,True,0,2,REAL_ONLY
+NOTE-0245,Magnolia,magnolia,False,True,0,4,REAL_ONLY
+NOTE-0246,Mandarin,mandarin,False,True,0,9,REAL_ONLY
+NOTE-0247,Mandarin Leaf,mandarin_leaf,False,True,0,2,REAL_ONLY
+NOTE-0248,Mandarin Orange,mandarin_orange,False,True,0,24,REAL_ONLY
+NOTE-0249,Marine Notes,marine_notes,False,True,0,2,REAL_ONLY
+NOTE-0250,Marjoram,marjoram,False,True,0,1,REAL_ONLY
+NOTE-0251,Marshmallow,marshmallow,False,True,0,1,REAL_ONLY
+NOTE-0252,Mastic,mastic,False,True,0,2,REAL_ONLY
+NOTE-0253,Mastic or Lentisque,mastic_or_lentisque,False,True,0,2,REAL_ONLY
+NOTE-0254,Mate,mate,False,True,0,2,REAL_ONLY
+NOTE-0255,May Rose,may_rose,False,True,0,2,REAL_ONLY
+NOTE-0256,Melon,melon,False,True,0,6,REAL_ONLY
+NOTE-0257,Metallic notes,metallic_notes,False,True,0,2,REAL_ONLY
+NOTE-0258,Mexican chocolate,mexican_chocolate,False,True,0,1,REAL_ONLY
+NOTE-0259,Mignonette,mignonette,False,True,0,1,REAL_ONLY
+NOTE-0260,Milk,milk,False,True,0,2,REAL_ONLY
+NOTE-0261,Milk Chocolate,milk_chocolate,False,True,0,1,REAL_ONLY
+NOTE-0262,Mimosa,mimosa,False,True,0,7,REAL_ONLY
+NOTE-0263,Mineral Notes,mineral_notes,False,True,0,1,REAL_ONLY
+NOTE-0264,Mint,mint,False,True,0,24,REAL_ONLY
+NOTE-0265,Mixed Spices,mixed_spices,False,True,0,1,REAL_ONLY
+NOTE-0266,Mojito,mojito,False,True,0,1,REAL_ONLY
+NOTE-0267,Moroccan Jasmine,moroccan_jasmine,False,True,0,1,REAL_ONLY
+NOTE-0268,Moss,moss,False,True,0,16,REAL_ONLY
+NOTE-0270,Myrhh,myrhh,False,True,0,2,REAL_ONLY
+NOTE-0271,Myrrh,myrrh,False,True,0,24,REAL_ONLY
+NOTE-0272,Myrtle,myrtle,False,True,0,5,REAL_ONLY
+NOTE-0273,Mysore Sandalwood,mysore_sandalwood,False,True,0,1,REAL_ONLY
+NOTE-0274,Narcissus,narcissus,False,True,0,5,REAL_ONLY
+NOTE-0275,Neroli,neroli,False,True,0,34,REAL_ONLY
+NOTE-0276,Night blooming Cereus,night_blooming_cereus,False,True,0,1,REAL_ONLY
+NOTE-0277,Nutmeg,nutmeg,False,True,0,35,REAL_ONLY
+NOTE-0278,Oak,oak,False,True,0,1,REAL_ONLY
+NOTE-0279,oak moss,oak_moss,False,True,0,2,REAL_ONLY
+NOTE-0280,Oakmoss,oakmoss,False,True,0,47,REAL_ONLY
+NOTE-0281,Olibanum,olibanum,False,True,0,10,REAL_ONLY
+NOTE-0282,Olive Tree,olive_tree,False,True,0,4,REAL_ONLY
+NOTE-0283,Opopanax,opopanax,False,True,0,3,REAL_ONLY
+NOTE-0285,Orange,orange,False,True,0,14,REAL_ONLY
+NOTE-0286,Orange Blossom,orange_blossom,False,True,0,36,REAL_ONLY
+NOTE-0287,Orange Flower,orange_flower,False,True,0,1,REAL_ONLY
+NOTE-0288,Orange Honey,orange_honey,False,True,0,1,REAL_ONLY
+NOTE-0289,Orange Peel,orange_peel,False,True,0,2,REAL_ONLY
+NOTE-0290,Orchid,orchid,False,True,0,6,REAL_ONLY
+NOTE-0291,Oregano,oregano,False,True,0,4,REAL_ONLY
+NOTE-0292,Orris,orris,False,True,0,3,REAL_ONLY
+NOTE-0293,Orris Root,orris_root,False,True,0,5,REAL_ONLY
+NOTE-0294,Osmanthus,osmanthus,False,True,0,6,REAL_ONLY
+NOTE-0295,Oud,oud,False,True,0,57,REAL_ONLY
+NOTE-0297,Ozonic Notes,ozonic_notes,False,True,0,1,REAL_ONLY
+NOTE-0298,Papaya,papaya,False,True,0,1,REAL_ONLY
+NOTE-0299,Paprika,paprika,False,True,0,1,REAL_ONLY
+NOTE-0300,Papyrus,papyrus,False,True,0,6,REAL_ONLY
+NOTE-0301,Patchouli,patchouli,False,True,0,157,REAL_ONLY
+NOTE-0302,Peach,peach,False,True,0,7,REAL_ONLY
+NOTE-0304,Pear Blossom,pear_blossom,False,True,0,1,REAL_ONLY
+NOTE-0305,Pelargonium,pelargonium,False,True,0,2,REAL_ONLY
+NOTE-0307,Pepper,pepper,False,True,0,23,REAL_ONLY
+NOTE-0308,Pepperwood,pepperwood,False,True,0,1,REAL_ONLY
+NOTE-0310,Petalia,petalia,False,True,0,1,REAL_ONLY
+NOTE-0311,Petitgrain,petitgrain,False,True,0,11,REAL_ONLY
+NOTE-0312,Pimento,pimento,False,True,0,7,REAL_ONLY
+NOTE-0313,Pimento Berry,pimento_berry,False,True,0,1,REAL_ONLY
+NOTE-0314,Pine,pine,False,True,0,4,REAL_ONLY
+NOTE-0315,Pine Needles,pine_needles,False,True,0,1,REAL_ONLY
+NOTE-0316,Pine Resin,pine_resin,False,True,0,2,REAL_ONLY
+NOTE-0317,Pine Tree,pine_tree,False,True,0,1,REAL_ONLY
+NOTE-0318,Pineapple,pineapple,False,True,0,7,REAL_ONLY
+NOTE-0320,Plum,plum,False,True,0,6,REAL_ONLY
+NOTE-0321,Pomegranate,pomegranate,False,True,0,1,REAL_ONLY
+NOTE-0322,Powdery Notes,powdery_notes,False,True,0,1,REAL_ONLY
+NOTE-0323,Praline,praline,False,True,0,1,REAL_ONLY
+NOTE-0324,Precious Woods,precious_woods,False,True,0,1,REAL_ONLY
+NOTE-0325,Pure Oud,pure_oud,False,True,0,2,REAL_ONLY
+NOTE-0326,Rangoon Creeper,rangoon_creeper,False,True,0,1,REAL_ONLY
+NOTE-0328,Red Apple,red_apple,False,True,0,1,REAL_ONLY
+NOTE-0329,Red Berries,red_berries,False,True,0,2,REAL_ONLY
+NOTE-0330,Red Fruits,red_fruits,False,True,0,1,REAL_ONLY
+NOTE-0331,Red Lily,red_lily,False,True,0,1,REAL_ONLY
+NOTE-0332,Red Pepper,red_pepper,False,True,0,1,REAL_ONLY
+NOTE-0333,Red Pepper Berries,red_pepper_berries,False,True,0,1,REAL_ONLY
+NOTE-0334,Resin,resin,False,True,0,1,REAL_ONLY
+NOTE-0335,Resins,resins,False,True,0,7,REAL_ONLY
+NOTE-0336,Rhubarb,rhubarb,False,True,0,3,REAL_ONLY
+NOTE-0337,Rhuburb,rhuburb,False,True,0,1,REAL_ONLY
+NOTE-0339,Rose Centifolia,rose_centifolia,False,True,0,1,REAL_ONLY
+NOTE-0340,Rose de Mai,rose_de_mai,False,True,0,2,REAL_ONLY
+NOTE-0341,Rose Geranium Leaf,rose_geranium_leaf,False,True,0,1,REAL_ONLY
+NOTE-0342,Rose Oil,rose_oil,False,True,0,1,REAL_ONLY
+NOTE-0343,Rose Petals,rose_petals,False,True,0,1,REAL_ONLY
+NOTE-0345,Rosewood,rosewood,False,True,0,4,REAL_ONLY
+NOTE-0346,Rum,rum,False,True,0,12,REAL_ONLY
+NOTE-0347,Rum Accord,rum_accord,False,True,0,1,REAL_ONLY
+NOTE-0348,Russian Tea,russian_tea,False,True,0,1,REAL_ONLY
+NOTE-0350,Sage,sage,False,True,0,25,REAL_ONLY
+NOTE-0351,Salt,salt,False,True,0,4,REAL_ONLY
+NOTE-0352,Sand,sand,False,True,0,3,REAL_ONLY
+NOTE-0353,Sandalowood,sandalowood,False,True,0,1,REAL_ONLY
+NOTE-0355,Sea Notes,sea_notes,False,True,0,4,REAL_ONLY
+NOTE-0356,Sea Salt,sea_salt,False,True,0,5,REAL_ONLY
+NOTE-0357,Sea Salt Accord,sea_salt_accord,False,True,0,1,REAL_ONLY
+NOTE-0358,Sea Spray Accord,sea_spray_accord,False,True,0,1,REAL_ONLY
+NOTE-0359,Sea water,sea_water,False,True,0,3,REAL_ONLY
+NOTE-0360,Seaweed,seaweed,False,True,0,6,REAL_ONLY
+NOTE-0361,Seaweed Accord,seaweed_accord,False,True,0,1,REAL_ONLY
+NOTE-0362,Sesame,sesame,False,True,0,1,REAL_ONLY
+NOTE-0363,Siam Benzoin,siam_benzoin,False,True,0,1,REAL_ONLY
+NOTE-0364,Sichuan Pepper,sichuan_pepper,False,True,0,3,REAL_ONLY
+NOTE-0365,Sicilian Lemon,sicilian_lemon,False,True,0,3,REAL_ONLY
+NOTE-0366,Sicilian Orange,sicilian_orange,False,True,0,1,REAL_ONLY
+NOTE-0367,Silk Tree blossom,silk_tree_blossom,False,True,0,1,REAL_ONLY
+NOTE-0368,Smoke,smoke,False,True,0,1,REAL_ONLY
+NOTE-0369,Soft Woods,soft_woods,False,True,0,5,REAL_ONLY
+NOTE-0370,Soil Tincture,soil_tincture,False,True,0,3,REAL_ONLY
+NOTE-0371,Spice,spice,False,True,0,1,REAL_ONLY
+NOTE-0372,Spices,spices,False,True,0,33,REAL_ONLY
+NOTE-0373,Spicy Notes,spicy_notes,False,True,0,3,REAL_ONLY
+NOTE-0374,Star Anise,star_anise,False,True,0,7,REAL_ONLY
+NOTE-0376,Styrax,styrax,False,True,0,3,REAL_ONLY
+NOTE-0377,Suede,suede,False,True,0,10,REAL_ONLY
+NOTE-0378,Suede Accord,suede_accord,False,True,0,1,REAL_ONLY
+NOTE-0379,Sugar,sugar,False,True,0,4,REAL_ONLY
+NOTE-0380,Sweet Orange,sweet_orange,False,True,0,1,REAL_ONLY
+NOTE-0381,Sweet Pea,sweet_pea,False,True,0,1,REAL_ONLY
+NOTE-0382,Tahitian Vetiver,tahitian_vetiver,False,True,0,1,REAL_ONLY
+NOTE-0383,Tangerine,tangerine,False,True,0,5,REAL_ONLY
+NOTE-0384,Tarragon,tarragon,False,True,0,7,REAL_ONLY
+NOTE-0385,Tea,tea,False,True,0,7,REAL_ONLY
+NOTE-0386,Terrae Accord,terrae_accord,False,True,0,1,REAL_ONLY
+NOTE-0387,Texas Cedar,texas_cedar,False,True,0,1,REAL_ONLY
+NOTE-0388,Thyme,thyme,False,True,0,7,REAL_ONLY
+NOTE-0389,Tiare Flower,tiare_flower,False,True,0,1,REAL_ONLY
+NOTE-0390,Tobacco,tobacco,False,True,0,28,REAL_ONLY
+NOTE-0391,Tobacco Blossom,tobacco_blossom,False,True,0,3,REAL_ONLY
+NOTE-0392,Tobacco Leaf,tobacco_leaf,False,True,0,8,REAL_ONLY
+NOTE-0393,Toffee,toffee,False,True,0,4,REAL_ONLY
+NOTE-0394,Toffee Accord,toffee_accord,False,True,0,1,REAL_ONLY
+NOTE-0396,Tomato,tomato,False,True,0,2,REAL_ONLY
+NOTE-0397,Tomato Leaf,tomato_leaf,False,True,0,3,REAL_ONLY
+NOTE-0398,Tonka,tonka,False,True,0,6,REAL_ONLY
+NOTE-0400,Tropical Fruits,tropical_fruits,False,True,0,1,REAL_ONLY
+NOTE-0401,Truffle,truffle,False,True,0,2,REAL_ONLY
+NOTE-0402,Tuberose,tuberose,False,True,0,15,REAL_ONLY
+NOTE-0403,Tunisian Neroli,tunisian_neroli,False,True,0,1,REAL_ONLY
+NOTE-0404,Tunisian Orange Blossom,tunisian_orange_blossom,False,True,0,1,REAL_ONLY
+NOTE-0405,Turkish Coffee Accord,turkish_coffee_accord,False,True,0,1,REAL_ONLY
+NOTE-0406,Turkish Rose,turkish_rose,False,True,0,6,REAL_ONLY
+NOTE-0409,Vanilla Bean,vanilla_bean,False,True,0,2,REAL_ONLY
+NOTE-0410,Vanilla Flower,vanilla_flower,False,True,0,1,REAL_ONLY
+NOTE-0411,Vanilla‑like Woods,vanilla_like_woods,False,True,0,1,REAL_ONLY
+NOTE-0412,Vanilla Orchid,vanilla_orchid,False,True,0,1,REAL_ONLY
+NOTE-0413,Vanille,vanille,False,True,0,3,REAL_ONLY
+NOTE-0414,Verbena,verbena,False,True,0,3,REAL_ONLY
+NOTE-0415,Vervain,vervain,False,True,0,1,REAL_ONLY
+NOTE-0416,Vetiver,vetiver,False,True,0,142,REAL_ONLY
+NOTE-0417,Vetyver,vetyver,False,True,0,1,REAL_ONLY
+NOTE-0419,Violet Accord,violet_accord,False,True,0,1,REAL_ONLY
+NOTE-0421,Violet Leaves,violet_leaves,False,True,0,1,REAL_ONLY
+NOTE-0422,Virginia Cedar,virginia_cedar,False,True,0,8,REAL_ONLY
+NOTE-0423,Vodka,vodka,False,True,0,1,REAL_ONLY
+NOTE-0424,Water Lily,water_lily,False,True,0,1,REAL_ONLY
+NOTE-0425,Water Notes,water_notes,False,True,0,3,REAL_ONLY
+NOTE-0426,Watery Notes,watery_notes,False,True,0,3,REAL_ONLY
+NOTE-0427,Whiskey,whiskey,False,True,0,2,REAL_ONLY
+NOTE-0428,Whiskey Accord,whiskey_accord,False,True,0,2,REAL_ONLY
+NOTE-0429,Whisky Accord,whisky_accord,False,True,0,1,REAL_ONLY
+NOTE-0430,White Amber,white_amber,False,True,0,1,REAL_ONLY
+NOTE-0431,White Florals,white_florals,False,True,0,1,REAL_ONLY
+NOTE-0432,White Flowers,white_flowers,False,True,0,1,REAL_ONLY
+NOTE-0433,White Honey,white_honey,False,True,0,2,REAL_ONLY
+NOTE-0435,White Musks,white_musks,False,True,0,1,REAL_ONLY
+NOTE-0436,White Pepper,white_pepper,False,True,0,3,REAL_ONLY
+NOTE-0437,White Woods,white_woods,False,True,0,1,REAL_ONLY
+NOTE-0438,Wild Herbs,wild_herbs,False,True,0,1,REAL_ONLY
+NOTE-0439,Wildflowers,wildflowers,False,True,0,1,REAL_ONLY
+NOTE-0440,Wood,wood,False,True,0,1,REAL_ONLY
+NOTE-0441,Woods,woods,False,True,0,21,REAL_ONLY
+NOTE-0442,Woodsy Notes,woodsy_notes,False,True,0,5,REAL_ONLY
+NOTE-0443,Woody Notes,woody_notes,False,True,0,23,REAL_ONLY
+NOTE-0444,Wormwood,wormwood,False,True,0,1,REAL_ONLY
+NOTE-0445,Ylang-Ylang,ylang_ylang,False,True,0,13,REAL_ONLY
+NOTE-0446,Yuzu,yuzu,False,True,0,1,REAL_ONLY
+NOTE-0447,Lavender Absolute,lavender_absolute,True,False,4,0,RULE_ONLY
+NOTE-0448,Lavandin Oil,lavandin_oil,True,False,2,0,RULE_ONLY
+NOTE-0449,Bergamot Oil,bergamot_oil,True,False,21,0,RULE_ONLY
+NOTE-0450,Geranium Oil,geranium_oil,True,False,7,0,RULE_ONLY
+NOTE-0451,Clary Sage Oil,clary_sage_oil,True,False,5,0,RULE_ONLY
+NOTE-0452,Oakmoss Absolute,oakmoss_absolute,True,False,19,0,RULE_ONLY
+NOTE-0453,Vetiver Haiti,vetiver_haiti,True,False,28,0,RULE_ONLY
+NOTE-0454,Cedarwood Atlas,cedarwood_atlas,True,False,14,0,RULE_ONLY
+NOTE-0455,Labdanum Absolute,labdanum_absolute,True,False,73,0,RULE_ONLY
+NOTE-0456,Vanillin,vanillin,True,False,47,0,RULE_ONLY
+NOTE-0457,Benzoin Siam,benzoin_siam,True,False,20,0,RULE_ONLY
+NOTE-0458,Patchouli Alcohol,patchouli_alcohol,True,False,15,0,RULE_ONLY
+NOTE-0459,Cedarwood Virginia,cedarwood_virginia,True,False,9,0,RULE_ONLY
+NOTE-0460,Vetiveryl Acetate,vetiveryl_acetate,True,False,5,0,RULE_ONLY
+NOTE-0461,Sandalore,sandalore,True,False,2,0,RULE_ONLY
+NOTE-0462,Patchouli Coeur,patchouli_coeur,True,False,4,0,RULE_ONLY
+NOTE-0463,Evernyl,evernyl,True,False,2,0,RULE_ONLY
+NOTE-0464,Aldehyde C-12 MNA,aldehyde_c_12_mna,True,False,8,0,RULE_ONLY
+NOTE-0465,Musk Ketone,musk_ketone,True,False,105,0,RULE_ONLY
+NOTE-0466,Black Tea Absolute,black_tea_absolute,True,False,3,0,RULE_ONLY
+NOTE-0467,Mate Absolute,mate_absolute,True,False,4,0,RULE_ONLY
+NOTE-0468,Hay Absolute,hay_absolute,True,False,3,0,RULE_ONLY
+NOTE-0469,Frankincense CO₂,frankincense_co2,True,False,5,0,RULE_ONLY
+NOTE-0470,Myrrh Absolute,myrrh_absolute,True,False,6,0,RULE_ONLY
+NOTE-0471,Birch Tar Rectified,birch_tar_rectified,True,False,16,0,RULE_ONLY
+NOTE-0472,Guaiac Wood Oil,guaiac_wood_oil,True,False,7,0,RULE_ONLY
+NOTE-0473,Ambergris Accord,ambergris_accord,True,False,4,0,RULE_ONLY
+NOTE-0474,Aldehyde C-11,aldehyde_c_11,True,False,4,0,RULE_ONLY
+NOTE-0475,Seaweed Absolute,seaweed_absolute,True,False,3,0,RULE_ONLY
+NOTE-0476,Habanolide,habanolide,True,False,47,0,RULE_ONLY
+NOTE-0477,Galbanum Resin,galbanum_resin,True,False,7,0,RULE_ONLY
+NOTE-0478,Elemi Resin,elemi_resin,True,False,6,0,RULE_ONLY
+NOTE-0479,Lentisque Absolute,lentisque_absolute,True,False,1,0,RULE_ONLY
+NOTE-0480,Violet Leaf Absolute,violet_leaf_absolute,True,False,4,0,RULE_ONLY
+NOTE-0481,Orris Concrete,orris_concrete,True,False,3,0,RULE_ONLY
+NOTE-0482,Rice Powder Accord,rice_powder_accord,True,False,1,0,RULE_ONLY
+NOTE-0483,Mimosa Absolute,mimosa_absolute,True,False,1,0,RULE_ONLY
+NOTE-0484,Heliotropin,heliotropin,True,False,16,0,RULE_ONLY
+NOTE-0485,IsoButyl Quinoline,isobutyl_quinoline,True,False,10,0,RULE_ONLY
+NOTE-0486,Geosmin Trace,geosmin_trace,True,False,1,0,RULE_ONLY
+NOTE-0487,Cardamom CO₂,cardamom_co2,True,False,1,0,RULE_ONLY
+NOTE-0488,Pink Pepper CO₂,pink_pepper_co2,True,False,5,0,RULE_ONLY
+NOTE-0489,Aldehyde C-10,aldehyde_c_10,True,False,6,0,RULE_ONLY
+NOTE-0490,Lemon Oil,lemon_oil,True,False,4,0,RULE_ONLY
+NOTE-0491,Petitgrain Oil,petitgrain_oil,True,False,6,0,RULE_ONLY
+NOTE-0492,Jasmine Absolute,jasmine_absolute,True,False,9,0,RULE_ONLY
+NOTE-0493,Orange Blossom Absolute,orange_blossom_absolute,True,False,6,0,RULE_ONLY
+NOTE-0494,Ylang-Ylang Extra,ylang_ylang_extra,True,False,4,0,RULE_ONLY
+NOTE-0495,Ethyl Maltol,ethyl_maltol,True,False,4,0,RULE_ONLY
+NOTE-0496,Tonka Bean Absolute,tonka_bean_absolute,True,False,21,0,RULE_ONLY
+NOTE-0497,Calone,calone,True,False,5,0,RULE_ONLY
+NOTE-0498,Dihydromyrcenol,dihydromyrcenol,True,False,3,0,RULE_ONLY
+NOTE-0499,Lavender Oil,lavender_oil,True,False,11,0,RULE_ONLY
+NOTE-0500,Phenyl Ethyl Alcohol,phenyl_ethyl_alcohol,True,False,2,0,RULE_ONLY
+NOTE-0501,Rose Absolute,rose_absolute,True,False,23,0,RULE_ONLY
+NOTE-0502,Geraniol,geraniol,True,False,3,0,RULE_ONLY
+NOTE-0503,Citronellol,citronellol,True,False,3,0,RULE_ONLY
+NOTE-0504,Damascenone,damascenone,True,False,7,0,RULE_ONLY
+NOTE-0505,Galaxolide,galaxolide,True,False,10,0,RULE_ONLY
+NOTE-0506,Helvetolide,helvetolide,True,False,3,0,RULE_ONLY
+NOTE-0507,Ambrettolide,ambrettolide,True,False,7,0,RULE_ONLY
+NOTE-0508,Ethylene Brassylate,ethylene_brassylate,True,False,2,0,RULE_ONLY
+NOTE-0509,Linalool,linalool,True,False,8,0,RULE_ONLY
+NOTE-0510,Linalyl Acetate,linalyl_acetate,True,False,4,0,RULE_ONLY
+NOTE-0511,Gamma-Undecalactone,gamma_undecalactone,True,False,4,0,RULE_ONLY
+NOTE-0512,Cinnamon Bark Oil,cinnamon_bark_oil,True,False,6,0,RULE_ONLY
+NOTE-0513,Clove Bud Oil,clove_bud_oil,True,False,8,0,RULE_ONLY
+NOTE-0514,Nutmeg Oil,nutmeg_oil,True,False,8,0,RULE_ONLY
+NOTE-0515,Patchouli Heart,patchouli_heart,True,False,4,0,RULE_ONLY
+NOTE-0516,Castoreum Replacer,castoreum_replacer,True,False,10,0,RULE_ONLY
+NOTE-0517,Fig Leaf Accord,fig_leaf_accord,True,False,2,0,RULE_ONLY
+NOTE-0518,Coconut Lactone,coconut_lactone,True,False,3,0,RULE_ONLY
+NOTE-0519,Tobacco Absolute,tobacco_absolute,True,False,7,0,RULE_ONLY
+NOTE-0520,Honey Accord,honey_accord,True,False,3,0,RULE_ONLY
+NOTE-0521,Peppermint Oil,peppermint_oil,True,False,1,0,RULE_ONLY
+NOTE-0522,Menthol Crystals,menthol_crystals,True,False,1,0,RULE_ONLY
+NOTE-0523,Eucalyptol,eucalyptol,True,False,2,0,RULE_ONLY
+NOTE-0524,Benzyl Salicylate,benzyl_salicylate,True,False,4,0,RULE_ONLY
+NOTE-0525,Cypriol Oil,cypriol_oil,True,False,9,0,RULE_ONLY
+NOTE-0526,Grapefruit Oil,grapefruit_oil,True,False,2,0,RULE_ONLY
+NOTE-0527,Orris Butter,orris_butter,True,False,8,0,RULE_ONLY
+NOTE-0528,Iris Aldehyde,iris_aldehyde,True,False,1,0,RULE_ONLY
+NOTE-0529,Carrot Seed Oil,carrot_seed_oil,True,False,1,0,RULE_ONLY
+NOTE-0530,Neroli Oil,neroli_oil,True,False,3,0,RULE_ONLY
+NOTE-0531,Hexyl Acetate,hexyl_acetate,True,False,1,0,RULE_ONLY
+NOTE-0532,cis-3-Hexenol,cis_3_hexenol,True,False,4,0,RULE_ONLY
+NOTE-0533,Aldehyde C-6,aldehyde_c_6,True,False,2,0,RULE_ONLY
+NOTE-0534,Ionone Alpha,ionone_alpha,True,False,2,0,RULE_ONLY
+NOTE-0535,Rosemary Oil,rosemary_oil,True,False,3,0,RULE_ONLY
+NOTE-0536,Benzaldehyde,benzaldehyde,True,False,2,0,RULE_ONLY
+NOTE-0537,Pepper Black,pepper_black,True,False,1,0,RULE_ONLY
+NOTE-0538,Ethyl Vanillin,ethyl_vanillin,True,False,2,0,RULE_ONLY
+NOTE-0539,Frankincense Resin,frankincense_resin,True,False,7,0,RULE_ONLY
+NOTE-0540,Aldehyde C-12 Lauric,aldehyde_c_12_lauric,True,False,1,0,RULE_ONLY
+NOTE-0541,Rose Oxide,rose_oxide,True,False,2,0,RULE_ONLY
+NOTE-0542,Coffee Absolute,coffee_absolute,True,False,1,0,RULE_ONLY
+NOTE-0543,Pyrazine Accord,pyrazine_accord,True,False,1,0,RULE_ONLY
+NOTE-0544,Cocoa Absolute,cocoa_absolute,True,False,4,0,RULE_ONLY
+NOTE-0545,Benzyl Alcohol,benzyl_alcohol,True,False,1,0,RULE_ONLY
+NOTE-0546,Cinnamon Leaf Oil,cinnamon_leaf_oil,True,False,3,0,RULE_ONLY
+NOTE-0547,Cinnamyl Alcohol,cinnamyl_alcohol,True,False,1,0,RULE_ONLY
+NOTE-0548,Clove Oil,clove_oil,True,False,2,0,RULE_ONLY
+NOTE-0549,Ginger CO₂,ginger_co2,True,False,4,0,RULE_ONLY
+NOTE-0550,Cardamom Oil,cardamom_oil,True,False,9,0,RULE_ONLY
+NOTE-0551,Ethyl Butyrate,ethyl_butyrate,True,False,2,0,RULE_ONLY
+NOTE-0552,Eugenol,eugenol,True,False,1,0,RULE_ONLY
+NOTE-0553,Mace Oil,mace_oil,True,False,1,0,RULE_ONLY
+NOTE-0554,Black Pepper Oil,black_pepper_oil,True,False,4,0,RULE_ONLY
+NOTE-0555,Saffron Accord,saffron_accord,True,False,3,0,RULE_ONLY
+NOTE-0556,Suederal,suederal,True,False,8,0,RULE_ONLY
+NOTE-0557,Basil Oil,basil_oil,True,False,4,0,RULE_ONLY
+NOTE-0558,Thyme Oil,thyme_oil,True,False,2,0,RULE_ONLY
+NOTE-0559,Cumin Seed Oil,cumin_seed_oil,True,False,5,0,RULE_ONLY
+NOTE-0560,Coriander Seed Oil,coriander_seed_oil,True,False,1,0,RULE_ONLY
+NOTE-0561,Ozonic Accord,ozonic_accord,True,False,1,0,RULE_ONLY
+NOTE-0562,Green Tea Absolute,green_tea_absolute,True,False,1,0,RULE_ONLY
+NOTE-0563,Milk Lactone,milk_lactone,True,False,4,0,RULE_ONLY
+NOTE-0564,Rice Accord,rice_accord,True,False,1,0,RULE_ONLY
+NOTE-0565,Violet Ionone,violet_ionone,True,False,2,0,RULE_ONLY
+NOTE-0566,Rum CO₂ Extract,rum_co2_extract,True,False,1,0,RULE_ONLY
+NOTE-0567,Oakwood Extract,oakwood_extract,True,False,1,0,RULE_ONLY
+NOTE-0568,Tomato Leaf Accord,tomato_leaf_accord,True,False,1,0,RULE_ONLY
+NOTE-0569,Civet Replacer,civet_replacer,True,False,8,0,RULE_ONLY
+NOTE-0570,Costus Root,costus_root,True,False,8,0,RULE_ONLY
+NOTE-0571,Olibanum CO₂,olibanum_co2,True,False,1,0,RULE_ONLY
+NOTE-0572,Guaiacol,guaiacol,True,False,3,0,RULE_ONLY
+NOTE-0573,Styrax Resin,styrax_resin,True,False,3,0,RULE_ONLY
+NOTE-0574,Honey Absolute,honey_absolute,True,False,5,0,RULE_ONLY
+NOTE-0575,Beeswax Absolute,beeswax_absolute,True,False,2,0,RULE_ONLY
+NOTE-0576,Ash Accord,ash_accord,True,False,2,0,RULE_ONLY
+NOTE-0577,Wormwood Accord,wormwood_accord,True,False,2,0,RULE_ONLY
+NOTE-0578,Sandalwood Mysore,sandalwood_mysore,True,False,1,0,RULE_ONLY
+NOTE-0579,Birch Tar (Low),birch_tar_low,True,False,3,0,RULE_ONLY
+NOTE-0580,Cinnamon Bark,cinnamon_bark,True,False,4,0,RULE_ONLY
+NOTE-0581,Iris Butter,iris_butter,True,False,3,0,RULE_ONLY
+NOTE-0582,Aldehyde C-12,aldehyde_c_12,True,False,1,0,RULE_ONLY
+NOTE-0583,Cade Oil (Low),cade_oil_low,True,False,4,0,RULE_ONLY
+NOTE-0584,Apple Accord,apple_accord,True,False,2,0,RULE_ONLY
+NOTE-0585,Patchouli Absolute,patchouli_absolute,True,False,14,0,RULE_ONLY
+NOTE-0586,Vetiver Java,vetiver_java,True,False,6,0,RULE_ONLY
+NOTE-0587,Cannabis Accord,cannabis_accord,True,False,9,0,RULE_ONLY
+NOTE-0588,Blackcurrant Bud,blackcurrant_bud,True,False,4,0,RULE_ONLY
+NOTE-0589,Hemp Accord,hemp_accord,True,False,3,0,RULE_ONLY
+NOTE-0590,Mushroom Accord,mushroom_accord,True,False,1,0,RULE_ONLY
+NOTE-0591,Geosmin Accord,geosmin_accord,True,False,5,0,RULE_ONLY
+NOTE-0592,Pear Accord,pear_accord,True,False,2,0,RULE_ONLY
+NOTE-0593,Ethyl Maltol (Low),ethyl_maltol_low,True,False,2,0,RULE_ONLY
+NOTE-0594,Green Mango Accord,green_mango_accord,True,False,1,0,RULE_ONLY
+NOTE-0595,Plum Accord,plum_accord,True,False,1,0,RULE_ONLY
+NOTE-0596,Davana Oil,davana_oil,True,False,1,0,RULE_ONLY
+NOTE-0597,Peach Lactone,peach_lactone,True,False,1,0,RULE_ONLY
+NOTE-0598,Apricot Accord,apricot_accord,True,False,1,0,RULE_ONLY
+NOTE-0599,Raspberry Ketone,raspberry_ketone,True,False,2,0,RULE_ONLY
+NOTE-0600,Passionfruit Accord,passionfruit_accord,True,False,1,0,RULE_ONLY
+NOTE-0601,Pineapple Accord,pineapple_accord,True,False,1,0,RULE_ONLY
+NOTE-0602,Mango Accord,mango_accord,True,False,1,0,RULE_ONLY
+NOTE-0603,Fig Accord,fig_accord,True,False,1,0,RULE_ONLY
+NOTE-0604,Patchouli Oil,patchouli_oil,True,False,15,0,RULE_ONLY
+NOTE-0605,Safraleine,safraleine,True,False,3,0,RULE_ONLY
+NOTE-0606,Styrax Resinoid,styrax_resinoid,True,False,9,0,RULE_ONLY
+NOTE-0607,Oud Synthetic,oud_synthetic,True,False,1,0,RULE_ONLY
+NOTE-0608,Tonalid,tonalid,True,False,3,0,RULE_ONLY
+NOTE-0609,Muscone,muscone,True,False,4,0,RULE_ONLY
+NOTE-0610,Civetone,civetone,True,False,2,0,RULE_ONLY
+NOTE-0611,Castoreum Absolute,castoreum_absolute,True,False,2,0,RULE_ONLY
+NOTE-0612,Cinnamon Oil,cinnamon_oil,True,False,4,0,RULE_ONLY
+NOTE-0613,Frankincense Oil,frankincense_oil,True,False,2,0,RULE_ONLY
+NOTE-0614,Myrrh Resinoid,myrrh_resinoid,True,False,2,0,RULE_ONLY
+NOTE-0615,Costus Oil,costus_oil,True,False,2,0,RULE_ONLY
+NOTE-0616,Ambrette Seed Oil,ambrette_seed_oil,True,False,1,0,RULE_ONLY
+NOTE-0617,Muscenone,muscenone,True,False,2,0,RULE_ONLY
+NOTE-0618,Egg Accord,egg_accord,True,False,1,0,RULE_ONLY
+NOTE-0619,Caramel Accord,caramel_accord,True,False,1,0,RULE_ONLY
+NOTE-0620,Almond Accord,almond_accord,True,False,1,0,RULE_ONLY
+NOTE-0621,Butter Accord,butter_accord,True,False,1,0,RULE_ONLY
+NOTE-0622,Burnt Sugar Accord,burnt_sugar_accord,True,False,1,0,RULE_ONLY
+NOTE-0623,Cypriol (Nagarmotha),cypriol_nagarmotha,True,False,1,0,RULE_ONLY
+NOTE-0624,Castoreum Accord,castoreum_accord,True,False,1,0,RULE_ONLY
+NOTE-0625,Violet Ionones,violet_ionones,True,False,1,0,RULE_ONLY
+NOTE-0626,Oakmoss (Low),oakmoss_low,True,False,2,0,RULE_ONLY
+NOTE-0627,Orris Resinoid,orris_resinoid,True,False,1,0,RULE_ONLY
+NOTE-0628,Sugar Accord,sugar_accord,True,False,1,0,RULE_ONLY
+NOTE-0629,Powdery Musk,powdery_musk,True,False,1,0,RULE_ONLY
+NOTE-0630,Timberol,timberol,True,False,1,0,RULE_ONLY
+NOTE-0631,Cetalox,cetalox,True,False,2,0,RULE_ONLY
+NOTE-0632,Sandalwood Oil,sandalwood_oil,True,False,3,0,RULE_ONLY
+NOTE-0633,Georgywood,georgywood,True,False,1,0,RULE_ONLY
+NOTE-0634,Pink Pepper Oil,pink_pepper_oil,True,False,1,0,RULE_ONLY
+NOTE-0635,Ginger Oil,ginger_oil,True,False,1,0,RULE_ONLY
+NOTE-0636,Sage Oil,sage_oil,True,False,1,0,RULE_ONLY
+NOTE-0637,Galbanum Oil,galbanum_oil,True,False,2,0,RULE_ONLY
+NOTE-0638,Fig Leaf Base,fig_leaf_base,True,False,1,0,RULE_ONLY
+NOTE-0639,Helional,helional,True,False,2,0,RULE_ONLY
+NOTE-0640,Melonal,melonal,True,False,1,0,RULE_ONLY
+NOTE-0641,Ambrocenide,ambrocenide,True,False,1,0,RULE_ONLY
+NOTE-0642,Caramel Note,caramel_note,True,False,1,0,RULE_ONLY
+NOTE-0643,Iris Absolute,iris_absolute,True,False,1,0,RULE_ONLY
+NOTE-0644,Veramoss,veramoss,True,False,1,0,RULE_ONLY
+NOTE-0645,Tuberose Absolute,tuberose_absolute,True,False,2,0,RULE_ONLY
+NOTE-0646,Gardenia Accord,gardenia_accord,True,False,1,0,RULE_ONLY
+NOTE-0647,Phenethyl Alcohol,phenethyl_alcohol,True,False,1,0,RULE_ONLY
+NOTE-0648,Ionone Beta,ionone_beta,True,False,1,0,RULE_ONLY
+NOTE-0649,Methyl Ionone,methyl_ionone,True,False,1,0,RULE_ONLY
+NOTE-0650,Kephalis,kephalis,True,False,1,0,RULE_ONLY
+NOTE-0651,Floralozone,floralozone,True,False,1,0,RULE_ONLY
+NOTE-0652,Aquozone,aquozone,True,False,1,0,RULE_ONLY
+NOTE-0653,Indole,indole,True,False,1,0,RULE_ONLY
+NOTE-0654,Mandarin Oil,mandarin_oil,True,False,1,0,RULE_ONLY
+NOTE-0655,Aldehyde C-14,aldehyde_c_14,True,False,2,0,RULE_ONLY
+NOTE-0656,Apple Lactone,apple_lactone,True,False,1,0,RULE_ONLY
+NOTE-0657,Maltol,maltol,True,False,1,0,RULE_ONLY
+NOTE-0658,Maple Lactone,maple_lactone,True,False,1,0,RULE_ONLY
+NOTE-0659,Javanol,javanol,True,False,1,0,RULE_ONLY
+NOTE-0660,Bacdanol,bacdanol,True,False,1,0,RULE_ONLY
+NOTE-0661,Romandolide,romandolide,True,False,1,0,RULE_ONLY
+NOTE-0662,Anisaldehyde,anisaldehyde,True,False,1,0,RULE_ONLY
+NOTE-0663,Aldehyde C-18,aldehyde_c_18,True,False,2,0,RULE_ONLY
+NOTE-0664,Gamma-Nonalactone,gamma_nonalactone,True,False,1,0,RULE_ONLY
+NOTE-0665,Benzyl Acetate,benzyl_acetate,True,False,1,0,RULE_ONLY
+NOTE-0666,Exaltolide,exaltolide,True,False,1,0,RULE_ONLY
+NOTE-0667,Phenylacetic Acid,phenylacetic_acid,True,False,1,0,RULE_ONLY

@@ -1,0 +1,1401 @@
+accord_id,accord_name,accord_category,note_id,note_name,default_pct,min_pct,max_pct,layers,roles
+ACC-0002,Aldehydic,Fresh,NOTE-0464,Aldehyde C-12 MNA,9.645192903858076,5.787115742314846,13.504270085401707,top,support
+ACC-0002,Aldehydic,Fresh,NOTE-0474,Aldehyde C-11,9.679193583871678,5.807116142322847,13.551271025420508,top,driver
+ACC-0002,Aldehydic,Fresh,NOTE-0489,Aldehyde C-10,12.810256205124102,7.686153723074461,17.935358707174142,top,driver
+ACC-0002,Aldehydic,Fresh,NOTE-0492,Jasmine Absolute,16.480329606592132,9.888197763955278,23.073461469229382,heart,modifier
+ACC-0002,Aldehydic,Fresh,NOTE-0501,Rose Absolute,30.53761075221504,18.322366447328946,42.752855057101144,heart,support
+ACC-0002,Aldehydic,Fresh,NOTE-0509,Linalool,20.847416948338964,12.509250185003701,29.186583731674634,heart|top,support
+ACC-0003,Almond,Gourmand,NOTE-0134,Coumarin,5.987,3.592,8.382,base,support
+ACC-0003,Almond,Gourmand,NOTE-0456,Vanillin,6.771,4.063,9.479,base,support
+ACC-0003,Almond,Gourmand,NOTE-0484,Heliotropin,13.542,8.125,18.959,base,driver
+ACC-0003,Almond,Gourmand,NOTE-0496,Tonka Bean Absolute,9.123,5.474,12.772,base,support
+ACC-0003,Almond,Gourmand,NOTE-0536,Benzaldehyde,39.748999999999995,23.849,55.649,base|heart,driver
+ACC-0003,Almond,Gourmand,NOTE-0662,Anisaldehyde,24.828,14.897,34.759,heart,modifier
+ACC-0004,Amber,Amber,NOTE-0021,Ambroxan,7.065858682826343,4.238915221695566,9.89180216395672,base,modifier
+ACC-0004,Amber,Amber,NOTE-0455,Labdanum Absolute,34.17231655366893,20.503589928201436,47.84004319913602,base,driver
+ACC-0004,Amber,Amber,NOTE-0456,Vanillin,26.296474070518588,15.777684446311074,36.814263714725705,base,driver
+ACC-0004,Amber,Amber,NOTE-0457,Benzoin Siam,16.734665306693866,10.04079918401632,23.42753144937101,base,support
+ACC-0004,Amber,Amber,NOTE-0458,Patchouli Alcohol,7.48785024299514,4.492910141797164,10.482790344193116,base,modifier|support
+ACC-0004,Amber,Amber,NOTE-0631,Cetalox,8.242835143297135,4.94590108197836,11.540769184616309,base,modifier
+ACC-0005,Animalic,Animalic,NOTE-0455,Labdanum Absolute,4.98,2.988,6.973,base,modifier
+ACC-0005,Animalic,Animalic,NOTE-0609,Muscone,13.34,8.004,18.676,base,driver
+ACC-0005,Animalic,Animalic,NOTE-0610,Civetone,9.375,5.625,13.125,base,driver
+ACC-0005,Animalic,Animalic,NOTE-0611,Castoreum Absolute,6.592,3.955,9.228,base,support
+ACC-0005,Animalic,Animalic,NOTE-0615,Costus Oil,5.713,3.428,7.998,base,support
+ACC-0005,Animalic,Animalic,NOTE-0653,Indole,60.0,36.0,84.0,heart,support
+ACC-0007,Aquatic,Fresh,NOTE-0193,Hedione,8.249,4.95,11.549,heart,modifier
+ACC-0007,Aquatic,Fresh,NOTE-0475,Seaweed Absolute,8.197,4.918,11.475,base,support
+ACC-0007,Aquatic,Fresh,NOTE-0497,Calone,27.089,16.253,37.924,heart|top,driver
+ACC-0007,Aquatic,Fresh,NOTE-0639,Helional,22.143,13.286,31.0,heart,driver
+ACC-0007,Aquatic,Fresh,NOTE-0640,Melonal,12.519,7.512,17.527,top,support
+ACC-0007,Aquatic,Fresh,NOTE-0641,Ambrocenide,21.803,13.082,30.525,base,support
+ACC-0008,Aromatic,Aromatic,NOTE-0451,Clary Sage Oil,17.97782022179778,10.78689213107869,25.168748312516875,heart,modifier
+ACC-0008,Aromatic,Aromatic,NOTE-0499,Lavender Oil,17.31982680173198,10.391896081039189,24.247757522424777,top,driver
+ACC-0008,Aromatic,Aromatic,NOTE-0535,Rosemary Oil,11.053889461105388,6.6319336806631926,15.475845241547585,top,driver
+ACC-0008,Aromatic,Aromatic,NOTE-0557,Basil Oil,3.914960850391496,2.348976510234898,5.480945190548094,top,support
+ACC-0008,Aromatic,Aromatic,NOTE-0558,Thyme Oil,30.09969900300997,18.059819401805978,42.13957860421396,heart,support
+ACC-0008,Aromatic,Aromatic,NOTE-0636,Sage Oil,19.63380366196338,11.779882201177987,27.48672513274867,heart|top,support
+ACC-0017,Caramel,Gourmand,NOTE-0309,Peru Balsam,7.922,4.753,11.091,base,modifier
+ACC-0017,Caramel,Gourmand,NOTE-0456,Vanillin,16.127,9.676,22.578,base,support
+ACC-0017,Caramel,Gourmand,NOTE-0495,Ethyl Maltol,26.878,16.127,37.63,base,driver
+ACC-0017,Caramel,Gourmand,NOTE-0496,Tonka Bean Absolute,12.732,7.639,17.825,base,support
+ACC-0017,Caramel,Gourmand,NOTE-0657,Maltol,19.239,11.544,26.935,base,driver
+ACC-0017,Caramel,Gourmand,NOTE-0658,Maple Lactone,17.102,10.261,23.942,base,support
+ACC-0020,Chypre,Mossy,NOTE-0449,Bergamot Oil,25.0,15.0,35.0,top,driver
+ACC-0020,Chypre,Mossy,NOTE-0452,Oakmoss Absolute,12.5,7.5,17.5,base,driver
+ACC-0020,Chypre,Mossy,NOTE-0453,Vetiver Haiti,3.158,1.895,4.421,base,modifier
+ACC-0020,Chypre,Mossy,NOTE-0455,Labdanum Absolute,5.921,3.553,8.289,base,support
+ACC-0020,Chypre,Mossy,NOTE-0492,Jasmine Absolute,14.859,8.916,20.803,heart,support
+ACC-0020,Chypre,Mossy,NOTE-0501,Rose Absolute,30.141,18.084,42.197,heart,support
+ACC-0020,Chypre,Mossy,NOTE-0604,Patchouli Oil,8.421,5.053,11.789,base,driver
+ACC-0022,Citrus,Fresh,NOTE-0449,Bergamot Oil,11.444,6.866,16.022,top,driver
+ACC-0022,Citrus,Fresh,NOTE-0490,Lemon Oil,8.673,5.204,12.143,top,driver
+ACC-0022,Citrus,Fresh,NOTE-0491,Petitgrain Oil,3.195,1.917,4.474,top,support
+ACC-0022,Citrus,Fresh,NOTE-0526,Grapefruit Oil,5.136,3.081,7.19,top,support
+ACC-0022,Citrus,Fresh,NOTE-0530,Neroli Oil,65.77,39.461,92.077,heart|top,modifier
+ACC-0022,Citrus,Fresh,NOTE-0654,Mandarin Oil,5.782,3.469,8.095,top,support
+ACC-0024,Coconut,Gourmand,NOTE-0456,Vanillin,18.117,10.87,25.364,base,support
+ACC-0024,Coconut,Gourmand,NOTE-0484,Heliotropin,9.297,5.578,13.015,base,modifier
+ACC-0024,Coconut,Gourmand,NOTE-0496,Tonka Bean Absolute,10.012,6.007,14.017,base,support
+ACC-0024,Coconut,Gourmand,NOTE-0663,Aldehyde C-18,32.181,19.309,45.054,base,driver
+ACC-0024,Coconut,Gourmand,NOTE-0664,Gamma-Nonalactone,30.393,18.236,42.551,base,driver
+ACC-0028,Earthy,Woody,NOTE-0452,Oakmoss Absolute,16.241837581624182,9.744902550974489,22.738772612273877,base,support
+ACC-0028,Earthy,Woody,NOTE-0453,Vetiver Haiti,23.009769902300977,13.805861941380584,32.21267787322127,base,driver
+ACC-0028,Earthy,Woody,NOTE-0455,Labdanum Absolute,9.47490525094749,5.684943150568493,13.263867361326385,base,support
+ACC-0028,Earthy,Woody,NOTE-0525,Cypriol Oil,14.330856691433084,8.598914010859891,20.063799362006378,base,support
+ACC-0028,Earthy,Woody,NOTE-0604,Patchouli Oil,30.254697453025468,18.15281847181528,42.356576434235656,base,driver
+ACC-0028,Earthy,Woody,NOTE-0615,Costus Oil,6.687933120668792,4.012959870401295,9.36290637093629,base,modifier
+ACC-0033,Fresh Spicy,Fresh Spicy,NOTE-0021,Ambroxan,14.365856341436585,8.61991380086199,20.111798882011175,base,modifier
+ACC-0033,Fresh Spicy,Fresh Spicy,NOTE-0205,Iso E Super,15.633843661563384,9.379906200937992,21.887781122188777,base,modifier
+ACC-0033,Fresh Spicy,Fresh Spicy,NOTE-0319,Pink Pepper,2.2519774802251975,1.3509864901350985,3.1519684803151966,top,support
+ACC-0033,Fresh Spicy,Fresh Spicy,NOTE-0449,Bergamot Oil,4.401955980440196,2.640973590264097,6.161938380616194,top,modifier|support
+ACC-0033,Fresh Spicy,Fresh Spicy,NOTE-0450,Geranium Oil,21.521784782152174,12.912870871291286,30.129698703012966,heart,modifier
+ACC-0033,Fresh Spicy,Fresh Spicy,NOTE-0549,Ginger CO₂,4.241957580424195,2.5449745502544974,5.938940610593894,top,driver
+ACC-0033,Fresh Spicy,Fresh Spicy,NOTE-0550,Cardamom Oil,28.00271997280027,16.801831981680184,39.20460795392046,heart|top,support
+ACC-0033,Fresh Spicy,Fresh Spicy,NOTE-0557,Basil Oil,1.2019879801201987,0.7209927900720993,1.6829831701682982,top,support
+ACC-0033,Fresh Spicy,Fresh Spicy,NOTE-0634,Pink Pepper Oil,4.771952280477195,2.862971370286297,6.680933190668093,top,driver
+ACC-0033,Fresh Spicy,Fresh Spicy,NOTE-0635,Ginger Oil,3.605963940360596,2.1629783702162975,5.047949520504795,top,driver
+ACC-0036,Fruity,Fruity,NOTE-0456,Vanillin,30.000300003000028,18.000180001800018,42.00042000420004,base,modifier
+ACC-0036,Fruity,Fruity,NOTE-0504,Damascenone,10.733107331073311,6.440064400644006,15.027150271502714,heart,support
+ACC-0036,Fruity,Fruity,NOTE-0551,Ethyl Butyrate,7.040070400704007,4.2240422404224045,9.857098570985709,top,support
+ACC-0036,Fruity,Fruity,NOTE-0599,Raspberry Ketone,22.369223692236922,13.422134221342214,31.317313173131726,heart|top,driver
+ACC-0036,Fruity,Fruity,NOTE-0655,Aldehyde C-14,17.31817318173182,10.39110391103911,24.245242452424524,heart,driver
+ACC-0036,Fruity,Fruity,NOTE-0656,Apple Lactone,12.539125391253911,7.524075240752407,17.555175551755518,heart|top,support
+ACC-0037,Gourmand,Gourmand,NOTE-0134,Coumarin,18.716,11.23,26.203,base,support
+ACC-0037,Gourmand,Gourmand,NOTE-0456,Vanillin,29.326,17.595,41.056,base,driver
+ACC-0037,Gourmand,Gourmand,NOTE-0457,Benzoin Siam,12.283,7.37,17.196,base,support
+ACC-0037,Gourmand,Gourmand,NOTE-0495,Ethyl Maltol,19.886,11.932,27.841,base,driver
+ACC-0037,Gourmand,Gourmand,NOTE-0496,Tonka Bean Absolute,13.16,7.896,18.424,base,support
+ACC-0037,Gourmand,Gourmand,NOTE-0642,Caramel Note,6.629,3.977,9.28,base,modifier
+ACC-0039,Green,Green,NOTE-0453,Vetiver Haiti,30.0,18.0,42.0,base,modifier
+ACC-0039,Green,Green,NOTE-0480,Violet Leaf Absolute,22.776,13.665,31.886,heart,driver
+ACC-0039,Green,Green,NOTE-0491,Petitgrain Oil,7.55,4.53,10.57,top,support
+ACC-0039,Green,Green,NOTE-0532,cis-3-Hexenol,10.738,6.443,15.034,top,support
+ACC-0039,Green,Green,NOTE-0637,Galbanum Oil,20.897,12.538,29.256,heart|top,driver
+ACC-0039,Green,Green,NOTE-0638,Fig Leaf Base,8.039,4.823,11.254,heart,support
+ACC-0041,Honey,Gourmand,NOTE-0456,Vanillin,7.704,4.623,10.786,base,support
+ACC-0041,Honey,Gourmand,NOTE-0493,Orange Blossom Absolute,60.0,36.0,84.0,heart,modifier
+ACC-0041,Honey,Gourmand,NOTE-0496,Tonka Bean Absolute,4.258,2.555,5.961,base,support
+ACC-0041,Honey,Gourmand,NOTE-0574,Honey Absolute,12.925,7.755,18.095,base,driver
+ACC-0041,Honey,Gourmand,NOTE-0575,Beeswax Absolute,6.463,3.878,9.048,base,support
+ACC-0041,Honey,Gourmand,NOTE-0667,Phenylacetic Acid,8.65,5.19,12.111,base,driver
+ACC-0043,Incense,Resinous,NOTE-0454,Cedarwood Atlas,3.3369666303336967,2.001979980200198,4.671953280467195,base,modifier
+ACC-0043,Incense,Resinous,NOTE-0455,Labdanum Absolute,7.757922420775792,4.654953450465495,10.860891391086088,base,support
+ACC-0043,Incense,Resinous,NOTE-0478,Elemi Resin,39.46360536394636,23.678763212367876,55.24944750552494,heart|top,support
+ACC-0043,Incense,Resinous,NOTE-0606,Styrax Resinoid,5.389946100538994,3.2339676603233967,7.5469245307546915,base,support
+ACC-0043,Incense,Resinous,NOTE-0613,Frankincense Oil,36.29363706362936,21.77578224217758,50.81049189508105,base|heart,driver
+ACC-0043,Incense,Resinous,NOTE-0614,Myrrh Resinoid,7.757922420775792,4.654953450465495,10.860891391086088,base,driver
+ACC-0050,Leather,Leather,NOTE-0046,Birch Tar,11.688,7.013,16.364,base,driver
+ACC-0050,Leather,Leather,NOTE-0349,Saffron,60.0,36.0,84.0,heart,modifier
+ACC-0050,Leather,Leather,NOTE-0453,Vetiver Haiti,6.182,3.709,8.655,base,support
+ACC-0050,Leather,Leather,NOTE-0455,Labdanum Absolute,7.065,4.239,9.891,base,support
+ACC-0050,Leather,Leather,NOTE-0485,IsoButyl Quinoline,8.831,5.299,12.364,base,driver
+ACC-0050,Leather,Leather,NOTE-0606,Styrax Resinoid,6.234,3.74,8.727,base,support
+ACC-0054,Milky,Gourmand,NOTE-0087,Cashmeran,7.79,4.674,10.905,base,modifier
+ACC-0054,Milky,Gourmand,NOTE-0456,Vanillin,21.505,12.903,30.107,base,support
+ACC-0054,Milky,Gourmand,NOTE-0484,Heliotropin,12.583,7.55,17.617,base,support
+ACC-0054,Milky,Gourmand,NOTE-0507,Ambrettolide,13.482,8.089,18.875,base,support
+ACC-0054,Milky,Gourmand,NOTE-0632,Sandalwood Oil,25.466,15.28,35.652,base,driver
+ACC-0054,Milky,Gourmand,NOTE-0663,Aldehyde C-18,19.174,11.505,26.844,base,driver
+ACC-0057,Mossy,Mossy,NOTE-0452,Oakmoss Absolute,9.644,5.786,13.501,base,driver
+ACC-0057,Mossy,Mossy,NOTE-0453,Vetiver Haiti,4.568,2.741,6.395,base,support
+ACC-0057,Mossy,Mossy,NOTE-0463,Evernyl,3.654,2.193,5.116,base,support
+ACC-0057,Mossy,Mossy,NOTE-0604,Patchouli Oil,6.115,3.669,8.561,base,support
+ACC-0057,Mossy,Mossy,NOTE-0637,Galbanum Oil,70.0,42.0,98.0,heart|top,modifier
+ACC-0057,Mossy,Mossy,NOTE-0644,Veramoss,6.019,3.611,8.427,base,driver
+ACC-0062,Oud,Woody,NOTE-0003,Agarwood (Oud),12.385123851238511,7.431074310743107,17.339173391733915,base,driver
+ACC-0062,Oud,Woody,NOTE-0021,Ambroxan,4.183041830418304,2.5100251002510023,5.857058570585706,base,modifier
+ACC-0062,Oud,Woody,NOTE-0349,Saffron,30.126301263012632,18.075180751807515,42.17642176421764,heart,support
+ACC-0062,Oud,Woody,NOTE-0455,Labdanum Absolute,4.055040550405503,2.433024330243302,5.677056770567705,base,support
+ACC-0062,Oud,Woody,NOTE-0501,Rose Absolute,29.874298742987428,17.925179251792517,41.82441824418244,heart,support
+ACC-0062,Oud,Woody,NOTE-0525,Cypriol Oil,9.98209982099821,5.989059890598906,13.974139741397414,base,driver
+ACC-0062,Oud,Woody,NOTE-0604,Patchouli Oil,9.39409394093941,5.637056370563705,13.152131521315212,base,support
+ACC-0063,Ozonic,Fresh,NOTE-0021,Ambroxan,30.0,18.0,42.0,base,modifier
+ACC-0063,Ozonic,Fresh,NOTE-0474,Aldehyde C-11,5.615,3.369,7.861,top,support
+ACC-0063,Ozonic,Fresh,NOTE-0497,Calone,16.451,9.871,23.031000000000002,heart|top,support
+ACC-0063,Ozonic,Fresh,NOTE-0639,Helional,15.709,9.425,21.992,heart,support
+ACC-0063,Ozonic,Fresh,NOTE-0651,Floralozone,23.134,13.881,32.388000000000005,heart|top,driver
+ACC-0063,Ozonic,Fresh,NOTE-0652,Aquozone,9.091,5.455,12.727,top,driver
+ACC-0066,Powdery,Floral,NOTE-0456,Vanillin,3.4179658203417964,2.050979490205098,4.784952150478495,base,modifier
+ACC-0066,Powdery,Floral,NOTE-0484,Heliotropin,9.17390826091739,5.503944960550394,12.842871571284286,base,driver
+ACC-0066,Powdery,Floral,NOTE-0524,Benzyl Salicylate,62.630373696263035,37.577624223757766,87.68212317876821,base|heart,support
+ACC-0066,Powdery,Floral,NOTE-0527,Orris Butter,11.466885331146688,6.8799312006879925,16.05383946160538,base,driver
+ACC-0066,Powdery,Floral,NOTE-0608,Tonalid,5.665943340566594,3.3999660003399965,7.932920670793291,base,support
+ACC-0066,Powdery,Floral,NOTE-0643,Iris Absolute,7.644923550764491,4.586954130458695,10.702892971070288,base,support
+ACC-0068,Rose,Floral,NOTE-0501,Rose Absolute,19.078,11.447,26.709,heart,driver
+ACC-0068,Rose,Floral,NOTE-0502,Geraniol,13.656,8.194,19.118,heart,support
+ACC-0068,Rose,Floral,NOTE-0503,Citronellol,9.64,5.784,13.495,heart,support
+ACC-0068,Rose,Floral,NOTE-0504,Damascenone,5.311,3.186,7.435,heart,modifier
+ACC-0068,Rose,Floral,NOTE-0541,Rose Oxide,37.856,22.714,52.999,heart|top,support
+ACC-0068,Rose,Floral,NOTE-0647,Phenethyl Alcohol,14.459,8.676,20.243,heart,driver
+ACC-0075,Smoky,Woody,NOTE-0046,Birch Tar,28.57128571285713,17.14317143171432,40.00040000400004,base,driver
+ACC-0075,Smoky,Woody,NOTE-0075,Cade Oil,21.58721587215872,12.952129521295213,30.22230222302223,base,driver
+ACC-0075,Smoky,Woody,NOTE-0453,Vetiver Haiti,17.270172701727017,10.36210362103621,24.178241782417825,base,support
+ACC-0075,Smoky,Woody,NOTE-0572,Guaiacol,14.286142861428614,8.571085710857108,20.00020000200002,base,support
+ACC-0075,Smoky,Woody,NOTE-0604,Patchouli Oil,8.804088040880409,5.283052830528305,12.326123261232611,base,modifier
+ACC-0075,Smoky,Woody,NOTE-0606,Styrax Resinoid,9.48109481094811,5.689056890568906,13.274132741327412,base,support
+ACC-0080,Suede,Leather,NOTE-0087,Cashmeran,8.852,5.311,12.393,base,support
+ACC-0080,Suede,Leather,NOTE-0476,Habanolide,4.426,2.656,6.197,base,modifier
+ACC-0080,Suede,Leather,NOTE-0485,IsoButyl Quinoline,13.832,8.299,19.365,base,driver
+ACC-0080,Suede,Leather,NOTE-0527,Orris Butter,7.316,4.389,10.242,base,support
+ACC-0080,Suede,Leather,NOTE-0605,Safraleine,65.574,39.344,91.803,base|heart,driver
+ACC-0084,Tobacco,Gourmand,NOTE-0134,Coumarin,19.30319303193032,11.582115821158212,27.02427024270243,base,support
+ACC-0084,Tobacco,Gourmand,NOTE-0456,Vanillin,14.326143261432614,8.59608596085961,20.05720057200572,base,support
+ACC-0084,Tobacco,Gourmand,NOTE-0496,Tonka Bean Absolute,20.50920509205092,12.306123061230611,28.71328713287133,base,driver
+ACC-0084,Tobacco,Gourmand,NOTE-0519,Tobacco Absolute,27.061270612706124,16.237162371623715,37.88537885378854,base,driver
+ACC-0084,Tobacco,Gourmand,NOTE-0574,Honey Absolute,6.836068360683607,4.102041020410204,9.57109571095711,base,modifier
+ACC-0084,Tobacco,Gourmand,NOTE-0650,Kephalis,11.964119641196412,7.178071780717807,16.749167491674914,base,support
+ACC-0087,Vanilla,Gourmand,NOTE-0134,Coumarin,12.053879461205387,7.231927680723192,16.874831251687482,base,support
+ACC-0087,Vanilla,Gourmand,NOTE-0456,Vanillin,29.687703122968767,17.81182188178118,41.561584384156156,base,driver
+ACC-0087,Vanilla,Gourmand,NOTE-0457,Benzoin Siam,12.914870851291486,7.748922510774891,18.07981920180798,base,support
+ACC-0087,Vanilla,Gourmand,NOTE-0484,Heliotropin,7.461925380746192,4.476955230447696,10.445895541044589,base,modifier
+ACC-0087,Vanilla,Gourmand,NOTE-0496,Tonka Bean Absolute,18.36681633183668,11.019889801101987,25.713742862571372,base,support
+ACC-0087,Vanilla,Gourmand,NOTE-0538,Ethyl Vanillin,19.51480485195148,11.708882911170887,27.320726792732074,base,driver
+ACC-0090,Violet,Floral,NOTE-0480,Violet Leaf Absolute,7.376,4.426,10.326,heart,support
+ACC-0090,Violet,Floral,NOTE-0527,Orris Butter,29.595,17.757,41.434,base,support
+ACC-0090,Violet,Floral,NOTE-0534,Ionone Alpha,19.291,11.574,27.007,heart,driver
+ACC-0090,Violet,Floral,NOTE-0648,Ionone Beta,26.95,16.17,37.73,heart,driver
+ACC-0090,Violet,Floral,NOTE-0649,Methyl Ionone,16.788,10.073,23.502000000000002,base|heart,support
+ACC-0092,Warm Spicy,Spicy,NOTE-0205,Iso E Super,11.621116211162112,6.972069720697207,16.269162691626914,base,modifier
+ACC-0092,Warm Spicy,Spicy,NOTE-0455,Labdanum Absolute,18.217182171821715,10.93010930109301,25.504255042550426,base,modifier
+ACC-0092,Warm Spicy,Spicy,NOTE-0456,Vanillin,10.16210162101621,6.097060970609706,14.227142271422714,base,modifier
+ACC-0092,Warm Spicy,Spicy,NOTE-0512,Cinnamon Bark Oil,26.590265902659027,15.954159541595416,37.22637226372264,heart,driver
+ACC-0092,Warm Spicy,Spicy,NOTE-0513,Clove Bud Oil,13.192131921319213,7.915079150791508,18.46918469184692,heart,support
+ACC-0092,Warm Spicy,Spicy,NOTE-0514,Nutmeg Oil,20.217202172021718,12.130121301213013,28.304283042830427,heart,support
+ACC-0094,White Floral,Floral,NOTE-0193,Hedione,13.187868121318786,7.912920870791291,18.462815371846283,heart,driver|modifier
+ACC-0094,White Floral,Floral,NOTE-0205,Iso E Super,18.56681433185668,11.139888601113988,25.992740072599272,base,modifier
+ACC-0094,White Floral,Floral,NOTE-0465,Musk Ketone,21.43278567214328,12.859871401285986,30.006699933000668,base,modifier
+ACC-0094,White Floral,Floral,NOTE-0492,Jasmine Absolute,16.007839921600784,9.604903950960491,22.410775892241077,heart,driver
+ACC-0094,White Floral,Floral,NOTE-0493,Orange Blossom Absolute,11.338886611133889,6.8039319606803925,15.874841251587483,heart,support
+ACC-0094,White Floral,Floral,NOTE-0494,Ylang-Ylang Extra,6.783932160678392,4.069959300406996,9.495905040949589,heart,modifier|support
+ACC-0094,White Floral,Floral,NOTE-0645,Tuberose Absolute,8.477915220847791,5.086949130508694,11.868881311186888,heart,driver
+ACC-0094,White Floral,Floral,NOTE-0646,Gardenia Accord,4.203957960420396,2.5219747802521972,5.884941150588493,heart,support
+ACC-0095,Woody,Woody,NOTE-0205,Iso E Super,7.600076000760007,4.560045600456004,10.640106401064012,base,modifier
+ACC-0095,Woody,Woody,NOTE-0453,Vetiver Haiti,12.554125541255413,7.532075320753207,17.575175751757516,base,driver
+ACC-0095,Woody,Woody,NOTE-0459,Cedarwood Virginia,33.75333753337533,20.252202522025218,47.25647256472564,base,driver
+ACC-0095,Woody,Woody,NOTE-0460,Vetiveryl Acetate,11.20011200112001,6.720067200672006,15.680156801568014,base,support
+ACC-0095,Woody,Woody,NOTE-0461,Sandalore,6.646066460664606,3.9880398803988037,9.305093050930509,base,support
+ACC-0095,Woody,Woody,NOTE-0462,Patchouli Coeur,10.933109331093311,6.5600656006560065,15.306153061530615,base,modifier|support
+ACC-0095,Woody,Woody,NOTE-0632,Sandalwood Oil,11.07711077110771,6.646066460664606,15.508155081550814,base,support
+ACC-0095,Woody,Woody,NOTE-0633,Georgywood,6.236062360623606,3.7420374203742037,8.73008730087301,base,modifier
+ACC-0097,Fougère,Aromatic,NOTE-0134,Coumarin,8.858027825733728,5.315070579872042,12.40098507159541,base,driver
+ACC-0097,Fougère,Aromatic,NOTE-0205,Iso E Super,2.2963846856910735,1.377323042551031,3.2154463288311166,base,modifier
+ACC-0097,Fougère,Aromatic,NOTE-0447,Lavender Absolute,12.310856098304052,7.386767543414239,17.234944653193867,top,driver
+ACC-0097,Fougère,Aromatic,NOTE-0448,Lavandin Oil,3.7219457702853664,2.232913577739413,5.21097796283132,top,support
+ACC-0097,Fougère,Aromatic,NOTE-0449,Bergamot Oil,9.810094445008634,5.885041129277953,13.735147760739313,top,modifier|support
+ACC-0097,Fougère,Aromatic,NOTE-0450,Geranium Oil,30.03072001624861,18.018178125317355,42.043261907179854,heart,support
+ACC-0097,Fougère,Aromatic,NOTE-0451,Clary Sage Oil,14.302579465827158,8.581293795064486,20.022595714430793,heart,support
+ACC-0097,Fougère,Aromatic,NOTE-0452,Oakmoss Absolute,7.935157916116584,4.761602518533564,11.109982735858638,base,driver
+ACC-0097,Fougère,Aromatic,NOTE-0453,Vetiver Haiti,4.639737991266376,2.783842794759826,6.498172032090992,base,modifier|support
+ACC-0097,Fougère,Aromatic,NOTE-0454,Cedarwood Atlas,4.676551233878339,2.8066923936224235,6.547679496293288,base,modifier|support
+ACC-0097,Fougère,Aromatic,NOTE-0463,Evernyl,0.3897126028231949,0.2335736772621103,0.5458515283842795,base,modifier
+ACC-0097,Fougère,Aromatic,NOTE-0630,Timberol,1.0282319488168987,0.6169391692901391,1.439524728343658,base,modifier
+ACC-0098,nk,Abstract,NOTE-0205,Iso E Super,100.0,60.0,140.0,base,driver
+ACC-0099,Ink,Abstract,NOTE-0021,Ambroxan,10.066598818004891,6.0403163890228,14.092881246986982,base,modifier
+ACC-0099,Ink,Abstract,NOTE-0087,Cashmeran,13.346545967468352,8.007927580481011,18.683378863356367,base,support
+ACC-0099,Ink,Abstract,NOTE-0205,Iso E Super,21.45267555841234,12.871605335047404,30.03196029067795,base,driver
+ACC-0099,Ink,Abstract,NOTE-0460,Vetiveryl Acetate,11.961004874390701,7.1776742192940155,16.74612102058671,base,support
+ACC-0099,Ink,Abstract,NOTE-0464,Aldehyde C-12 MNA,40.57885621440177,24.346956630421197,56.810755798382345,top,modifier
+ACC-0099,Ink,Abstract,NOTE-0465,Musk Ketone,2.5943185673219418,1.5569482386130304,3.6334743871301804,base,modifier
+ACC-0100,Dry Tea,Aromatic,NOTE-0205,Iso E Super,8.205835883282335,4.923901521969561,11.487770244595108,base,modifier
+ACC-0100,Dry Tea,Aromatic,NOTE-0451,Clary Sage Oil,7.325853482930341,4.395912081758365,10.255794884102318,heart,modifier
+ACC-0100,Dry Tea,Aromatic,NOTE-0453,Vetiver Haiti,11.39177216455671,6.833863322733545,15.947681046379072,base,modifier
+ACC-0100,Dry Tea,Aromatic,NOTE-0466,Black Tea Absolute,32.479350412991735,19.487610247795043,45.47109057818844,heart,driver
+ACC-0100,Dry Tea,Aromatic,NOTE-0467,Mate Absolute,20.193596128077438,12.115757684846303,28.27143457130857,heart,support
+ACC-0100,Dry Tea,Aromatic,NOTE-0468,Hay Absolute,20.403591928161436,12.241755164896704,28.56542869142617,base,support
+ACC-0101,Dry Incense,Resinous,NOTE-0205,Iso E Super,2.728,1.636,3.82,base,modifier
+ACC-0101,Dry Incense,Resinous,NOTE-0455,Labdanum Absolute,3.788,2.272,5.302,base,modifier
+ACC-0101,Dry Incense,Resinous,NOTE-0469,Frankincense CO₂,68.9,41.34,96.46000000000001,base|heart,driver
+ACC-0101,Dry Incense,Resinous,NOTE-0470,Myrrh Absolute,11.32,6.792,15.848,base,support
+ACC-0101,Dry Incense,Resinous,NOTE-0471,Birch Tar Rectified,6.24,3.744,8.736,base,support
+ACC-0101,Dry Incense,Resinous,NOTE-0472,Guaiac Wood Oil,7.024,4.214,9.834,base,support
+ACC-0102,Saline Mineral,Mineral,NOTE-0021,Ambroxan,11.013,6.608,15.419,base,driver
+ACC-0102,Saline Mineral,Mineral,NOTE-0205,Iso E Super,1.834,1.1,2.567,base,modifier
+ACC-0102,Saline Mineral,Mineral,NOTE-0473,Ambergris Accord,12.772,7.663,17.881,base,driver
+ACC-0102,Saline Mineral,Mineral,NOTE-0474,Aldehyde C-11,25.0,15.0,35.0,top,support
+ACC-0102,Saline Mineral,Mineral,NOTE-0475,Seaweed Absolute,45.0,27.0,63.0,heart,modifier
+ACC-0102,Saline Mineral,Mineral,NOTE-0476,Habanolide,4.381,2.629,6.133,base,modifier
+ACC-0103,Cold Metallic Wood,Abstract,NOTE-0021,Ambroxan,9.348,5.609,13.088,base,modifier
+ACC-0103,Cold Metallic Wood,Abstract,NOTE-0087,Cashmeran,12.393,7.436,17.351,base,support
+ACC-0103,Cold Metallic Wood,Abstract,NOTE-0205,Iso E Super,21.803,13.082,30.524,base,driver
+ACC-0103,Cold Metallic Wood,Abstract,NOTE-0460,Vetiveryl Acetate,6.732,4.039,9.425,base,modifier
+ACC-0103,Cold Metallic Wood,Abstract,NOTE-0464,Aldehyde C-12 MNA,45.455,27.273,63.636,top,support
+ACC-0103,Cold Metallic Wood,Abstract,NOTE-0476,Habanolide,4.269,2.561,5.976,base,modifier
+ACC-0104,Bitter Sap,Green Resinous,NOTE-0021,Ambroxan,14.267,8.56,19.974,base,modifier
+ACC-0104,Bitter Sap,Green Resinous,NOTE-0205,Iso E Super,15.733,9.44,22.026,base,modifier
+ACC-0104,Bitter Sap,Green Resinous,NOTE-0477,Galbanum Resin,36.882,22.128999999999998,51.635000000000005,heart|top,driver
+ACC-0104,Bitter Sap,Green Resinous,NOTE-0478,Elemi Resin,16.851,10.11,23.591,heart,support
+ACC-0104,Bitter Sap,Green Resinous,NOTE-0479,Lentisque Absolute,10.218,6.131,14.306,heart,support
+ACC-0104,Bitter Sap,Green Resinous,NOTE-0480,Violet Leaf Absolute,6.049,3.629,8.469,heart,modifier
+ACC-0105,Dusty Powder,Abstract Powdery,NOTE-0087,Cashmeran,5.127,3.076,7.178,base,modifier
+ACC-0105,Dusty Powder,Abstract Powdery,NOTE-0465,Musk Ketone,5.615,3.369,7.861,base,modifier
+ACC-0105,Dusty Powder,Abstract Powdery,NOTE-0481,Orris Concrete,29.258,17.555,40.961,base,driver
+ACC-0105,Dusty Powder,Abstract Powdery,NOTE-0482,Rice Powder Accord,28.925,17.355,40.495,heart,support
+ACC-0105,Dusty Powder,Abstract Powdery,NOTE-0483,Mimosa Absolute,19.434,11.66,27.207,heart,support
+ACC-0105,Dusty Powder,Abstract Powdery,NOTE-0484,Heliotropin,11.641,6.985,16.298,heart,modifier
+ACC-0106,Smoked Tea Leather,Hybrid,NOTE-0455,Labdanum Absolute,6.557,3.934,9.18,base,modifier
+ACC-0106,Smoked Tea Leather,Hybrid,NOTE-0466,Black Tea Absolute,42.288,25.373,59.204,heart,driver
+ACC-0106,Smoked Tea Leather,Hybrid,NOTE-0467,Mate Absolute,17.712,10.627,24.796,heart,support
+ACC-0106,Smoked Tea Leather,Hybrid,NOTE-0471,Birch Tar Rectified,16.889,10.133,23.645,base,driver
+ACC-0106,Smoked Tea Leather,Hybrid,NOTE-0476,Habanolide,4.669,2.802,6.537,base,modifier
+ACC-0106,Smoked Tea Leather,Hybrid,NOTE-0485,IsoButyl Quinoline,11.885,7.131,16.638,base,support
+ACC-0107,Wet Stone,Mineral,NOTE-0021,Ambroxan,8.372,5.023,11.721,base,modifier
+ACC-0107,Wet Stone,Mineral,NOTE-0205,Iso E Super,7.692,4.615,10.769,base,modifier
+ACC-0107,Wet Stone,Mineral,NOTE-0464,Aldehyde C-12 MNA,25.0,15.0,35.0,top,support
+ACC-0107,Wet Stone,Mineral,NOTE-0473,Ambergris Accord,10.424,6.254,14.593,base,support
+ACC-0107,Wet Stone,Mineral,NOTE-0476,Habanolide,3.512,2.107,4.917,base,modifier
+ACC-0107,Wet Stone,Mineral,NOTE-0486,Geosmin Trace,45.0,27.0,63.0,heart,driver
+ACC-0108,Cold Spice,Abstract Spicy,NOTE-0021,Ambroxan,13.314,7.989,18.64,base,modifier
+ACC-0108,Cold Spice,Abstract Spicy,NOTE-0205,Iso E Super,29.158,17.495,40.821,base,modifier
+ACC-0108,Cold Spice,Abstract Spicy,NOTE-0476,Habanolide,12.073,7.244,16.903,base,modifier
+ACC-0108,Cold Spice,Abstract Spicy,NOTE-0487,Cardamom CO₂,21.282,12.769,29.794,top,driver
+ACC-0108,Cold Spice,Abstract Spicy,NOTE-0488,Pink Pepper CO₂,15.537,9.322,21.752,top,support
+ACC-0108,Cold Spice,Abstract Spicy,NOTE-0489,Aldehyde C-10,8.636,5.181,12.09,top,support
+ACC-0109,Fresh Citrus,Citrus,NOTE-0205,Iso E Super,28.716712832871668,17.229827701722982,40.20359796402036,base,modifier
+ACC-0109,Fresh Citrus,Citrus,NOTE-0449,Bergamot Oil,19.40280597194028,11.641883581164187,27.163728362716373,top,driver
+ACC-0109,Fresh Citrus,Citrus,NOTE-0476,Habanolide,25.82874171258287,15.496845031549684,36.15963840361596,base,modifier
+ACC-0109,Fresh Citrus,Citrus,NOTE-0489,Aldehyde C-10,7.787922120778792,4.672953270467295,10.903890961090388,top,support
+ACC-0109,Fresh Citrus,Citrus,NOTE-0490,Lemon Oil,13.361866381336187,8.01691983080169,18.70581294187058,top,support
+ACC-0109,Fresh Citrus,Citrus,NOTE-0491,Petitgrain Oil,4.901950980490195,2.940970590294097,6.861931380686193,top,modifier
+ACC-0110,Vanilla Gourmand,Gourmand,NOTE-0087,Cashmeran,4.687046870468705,2.8120281202812025,6.562065620656207,base,modifier
+ACC-0110,Vanilla Gourmand,Gourmand,NOTE-0456,Vanillin,38.763387633876334,23.25823258232582,54.26854268542685,base,driver
+ACC-0110,Vanilla Gourmand,Gourmand,NOTE-0457,Benzoin Siam,10.007100071000709,6.004060040600406,14.010140101401014,base,modifier
+ACC-0110,Vanilla Gourmand,Gourmand,NOTE-0465,Musk Ketone,5.168051680516805,3.101031010310103,7.236072360723607,base,modifier
+ACC-0110,Vanilla Gourmand,Gourmand,NOTE-0495,Ethyl Maltol,25.292252922529226,15.175151751517514,35.409354093540934,base,support
+ACC-0110,Vanilla Gourmand,Gourmand,NOTE-0496,Tonka Bean Absolute,16.082160821608216,9.649096490964908,22.51522515225152,base,support
+ACC-0111,Woody Amber,Woody/Amber,NOTE-0016,Amberwood,8.856,5.314,12.399,base,driver
+ACC-0111,Woody Amber,Woody/Amber,NOTE-0021,Ambroxan,23.61,14.166,33.054,base,driver|modifier
+ACC-0111,Woody Amber,Woody/Amber,NOTE-0087,Cashmeran,3.154,1.892,4.415,base,modifier
+ACC-0111,Woody Amber,Woody/Amber,NOTE-0094,Cedarwood,6.511,3.907,9.116,base,support
+ACC-0111,Woody Amber,Woody/Amber,NOTE-0205,Iso E Super,19.95,11.969999999999999,27.93,base,driver|support
+ACC-0111,Woody Amber,Woody/Amber,NOTE-0269,Musk,1.771,1.063,2.48,base,modifier
+ACC-0111,Woody Amber,Woody/Amber,NOTE-0354,Sandalwood,4.508,2.705,6.311,base,support
+ACC-0111,Woody Amber,Woody/Amber,NOTE-0453,Vetiver Haiti,2.883,1.73,4.036,base,modifier
+ACC-0111,Woody Amber,Woody/Amber,NOTE-0455,Labdanum Absolute,4.989,2.993,6.985,base,support
+ACC-0111,Woody Amber,Woody/Amber,NOTE-0456,Vanillin,3.47,2.082,4.857,base,support
+ACC-0111,Woody Amber,Woody/Amber,NOTE-0459,Cedarwood Virginia,13.826,8.296,19.355999999999998,base,driver|support
+ACC-0111,Woody Amber,Woody/Amber,NOTE-0460,Vetiveryl Acetate,4.985,2.991,6.979,base,support
+ACC-0111,Woody Amber,Woody/Amber,NOTE-0476,Habanolide,1.487,0.892,2.082,base,modifier
+ACC-0112,Aquatic Fresh,Fresh Aquatic,NOTE-0021,Ambroxan,16.075,9.645,22.505,base,modifier
+ACC-0112,Aquatic Fresh,Fresh Aquatic,NOTE-0205,Iso E Super,13.925,8.355,19.495,base,modifier
+ACC-0112,Aquatic Fresh,Fresh Aquatic,NOTE-0464,Aldehyde C-12 MNA,7.573,4.544,10.602,top,support
+ACC-0112,Aquatic Fresh,Fresh Aquatic,NOTE-0497,Calone,11.065,6.639,15.491,top,driver
+ACC-0112,Aquatic Fresh,Fresh Aquatic,NOTE-0498,Dihydromyrcenol,6.362,3.817,8.907,top,support
+ACC-0112,Aquatic Fresh,Fresh Aquatic,NOTE-0499,Lavender Oil,45.0,27.0,63.0,heart,modifier
+ACC-0113,Rose Floral,Floral,NOTE-0465,Musk Ketone,40.0,24.0,56.0,base,modifier
+ACC-0113,Rose Floral,Floral,NOTE-0500,Phenyl Ethyl Alcohol,21.99,13.194,30.788,heart,driver
+ACC-0113,Rose Floral,Floral,NOTE-0501,Rose Absolute,14.198,8.518,19.876,heart,driver
+ACC-0113,Rose Floral,Floral,NOTE-0502,Geraniol,9.722,5.834,13.612,heart,support
+ACC-0113,Rose Floral,Floral,NOTE-0503,Citronellol,8.828,5.296,12.358,heart,support
+ACC-0113,Rose Floral,Floral,NOTE-0504,Damascenone,5.262,3.158,7.368,heart,modifier
+ACC-0114,Clean Musk,Musk,NOTE-0205,Iso E Super,10.504,6.302,14.706,base,modifier
+ACC-0114,Clean Musk,Musk,NOTE-0476,Habanolide,23.808,14.284,33.332,base,driver
+ACC-0114,Clean Musk,Musk,NOTE-0505,Galaxolide,33.608,20.164,47.052,base,driver
+ACC-0114,Clean Musk,Musk,NOTE-0506,Helvetolide,14.552,8.732,20.372,base,support
+ACC-0114,Clean Musk,Musk,NOTE-0507,Ambrettolide,13.37,8.022,18.718,base,support
+ACC-0114,Clean Musk,Musk,NOTE-0508,Ethylene Brassylate,4.158,2.494,5.82,base,modifier
+ACC-0115,Fruity Floral,Fruity/Floral,NOTE-0027,Apple,5.774778893600921,3.4651826394034466,8.084375147798395,top,support
+ACC-0115,Fruity Floral,Fruity/Floral,NOTE-0193,Hedione,6.764831076287621,4.05952925225836,9.47170941653135,heart,modifier
+ACC-0115,Fruity Floral,Fruity/Floral,NOTE-0209,Jasmine,7.363907237785941,4.418974949157352,10.310416042628999,heart,support
+ACC-0115,Fruity Floral,Fruity/Floral,NOTE-0269,Musk,16.892371238038184,10.135422742822911,23.65089624946793,base,modifier
+ACC-0115,Fruity Floral,Fruity/Floral,NOTE-0303,Pear,7.90307578313443,4.742160773123552,11.065567309359778,top,driver
+ACC-0115,Fruity Floral,Fruity/Floral,NOTE-0338,Rose,4.415821916728414,2.650123756522836,6.183096593148461,heart,modifier
+ACC-0115,Fruity Floral,Fruity/Floral,NOTE-0465,Musk Ketone,15.20076933991266,9.120146300704704,21.28139237912062,base,modifier
+ACC-0115,Fruity Floral,Fruity/Floral,NOTE-0504,Damascenone,5.186738345603885,3.112043007362331,7.261433683845438,heart,modifier
+ACC-0115,Fruity Floral,Fruity/Floral,NOTE-0509,Linalool,14.552821175765795,8.732323311945265,20.373319039586324,heart|top,driver
+ACC-0115,Fruity Floral,Fruity/Floral,NOTE-0510,Linalyl Acetate,7.699705191467896,4.619192508394949,10.778641358326372,top,support
+ACC-0115,Fruity Floral,Fruity/Floral,NOTE-0511,Gamma-Undecalactone,8.245179801674261,4.947107881004556,11.543251722343966,heart,support
+ACC-0116,Spicy Oriental,Oriental Spicy,NOTE-0455,Labdanum Absolute,15.82063282531301,9.492379695187807,22.148885955438214,base,support
+ACC-0116,Spicy Oriental,Oriental Spicy,NOTE-0456,Vanillin,9.88239529581183,5.930237209488379,13.836553462138484,base,modifier
+ACC-0116,Spicy Oriental,Oriental Spicy,NOTE-0458,Patchouli Alcohol,4.296171846873875,2.5781031241249646,6.016240649625985,base,modifier
+ACC-0116,Spicy Oriental,Oriental Spicy,NOTE-0512,Cinnamon Bark Oil,37.99151966078642,22.794911796471855,53.1901276051042,heart|top,driver
+ACC-0116,Spicy Oriental,Oriental Spicy,NOTE-0513,Clove Bud Oil,18.95875835033401,11.376455058202326,26.5430617224689,heart,support
+ACC-0116,Spicy Oriental,Oriental Spicy,NOTE-0514,Nutmeg Oil,13.050522020880834,7.8303132125285,18.270730829233166,heart,support
+ACC-0117,Soft Chypre,Chypre,NOTE-0205,Iso E Super,3.01,1.806,4.216,base,modifier
+ACC-0117,Soft Chypre,Chypre,NOTE-0449,Bergamot Oil,25.0,15.0,35.0,top,driver
+ACC-0117,Soft Chypre,Chypre,NOTE-0452,Oakmoss Absolute,11.79,7.074,16.506,base,driver
+ACC-0117,Soft Chypre,Chypre,NOTE-0455,Labdanum Absolute,7.946,4.768,11.124,base,support
+ACC-0117,Soft Chypre,Chypre,NOTE-0501,Rose Absolute,45.0,27.0,63.0,heart,modifier
+ACC-0117,Soft Chypre,Chypre,NOTE-0515,Patchouli Heart,7.254,4.352,10.154,base,support
+ACC-0118,Ozonic Fresh,Fresh,NOTE-0021,Ambroxan,14.404,8.642,20.165,base,modifier
+ACC-0118,Ozonic Fresh,Fresh,NOTE-0205,Iso E Super,15.596,9.358,21.835,base,modifier
+ACC-0118,Ozonic Fresh,Fresh,NOTE-0464,Aldehyde C-12 MNA,10.422,6.253,14.591,top,driver
+ACC-0118,Ozonic Fresh,Fresh,NOTE-0497,Calone,7.605,4.563,10.647,top,support
+ACC-0118,Ozonic Fresh,Fresh,NOTE-0498,Dihydromyrcenol,6.973,4.184,9.763,top,support
+ACC-0118,Ozonic Fresh,Fresh,NOTE-0499,Lavender Oil,45.0,27.0,63.0,heart,modifier
+ACC-0119,Mossy Forest,Mossy,NOTE-0205,Iso E Super,2.934,1.76,4.107,base,modifier
+ACC-0119,Mossy Forest,Mossy,NOTE-0452,Oakmoss Absolute,15.386,9.232,21.541,base,driver
+ACC-0119,Mossy Forest,Mossy,NOTE-0453,Vetiver Haiti,7.743,4.646,10.84,base,support
+ACC-0119,Mossy Forest,Mossy,NOTE-0476,Habanolide,2.696,1.617,3.774,base,modifier
+ACC-0119,Mossy Forest,Mossy,NOTE-0477,Galbanum Resin,60.0,36.0,84.0,heart,modifier
+ACC-0119,Mossy Forest,Mossy,NOTE-0515,Patchouli Heart,11.241,6.745,15.738,base,support
+ACC-0120,Leather Smoke,Leather,NOTE-0087,Cashmeran,6.616933830661693,3.969960300396996,9.26290737092629,base,modifier
+ACC-0120,Leather Smoke,Leather,NOTE-0455,Labdanum Absolute,10.42889571104289,6.256937430625693,14.599854001459985,base,modifier
+ACC-0120,Leather Smoke,Leather,NOTE-0471,Birch Tar Rectified,33.502664973350264,20.10179898201018,46.903530964690354,base,driver
+ACC-0120,Leather Smoke,Leather,NOTE-0476,Habanolide,7.323926760732392,4.393956060439396,10.253897461025389,base,modifier
+ACC-0120,Leather Smoke,Leather,NOTE-0485,IsoButyl Quinoline,25.31574684253157,15.189848101518983,35.44264557354426,base,support
+ACC-0120,Leather Smoke,Leather,NOTE-0516,Castoreum Replacer,16.811831881681183,10.086899131008689,23.535764642353577,base,support
+ACC-0121,Milky Fig,Fruity Green,NOTE-0169,Galbanum,25.0,15.0,35.0,top,support
+ACC-0121,Milky Fig,Fruity Green,NOTE-0205,Iso E Super,8.235,4.941,11.529,base,modifier
+ACC-0121,Milky Fig,Fruity Green,NOTE-0459,Cedarwood Virginia,14.243,8.546,19.94,base,modifier
+ACC-0121,Milky Fig,Fruity Green,NOTE-0465,Musk Ketone,7.522,4.513,10.53,base,modifier
+ACC-0121,Milky Fig,Fruity Green,NOTE-0517,Fig Leaf Accord,26.067,15.64,36.493,heart,driver
+ACC-0121,Milky Fig,Fruity Green,NOTE-0518,Coconut Lactone,18.933,11.36,26.507,heart,support
+ACC-0122,Clean Laundry,Clean,NOTE-0193,Hedione,16.286,9.771,22.8,heart,support
+ACC-0122,Clean Laundry,Clean,NOTE-0205,Iso E Super,13.985,8.391,19.579,base,modifier
+ACC-0122,Clean Laundry,Clean,NOTE-0474,Aldehyde C-11,25.0,15.0,35.0,top,driver
+ACC-0122,Clean Laundry,Clean,NOTE-0499,Lavender Oil,9.0,5.4,12.6,heart,modifier
+ACC-0122,Clean Laundry,Clean,NOTE-0505,Galaxolide,16.015,9.609,22.421,base,modifier
+ACC-0122,Clean Laundry,Clean,NOTE-0509,Linalool,19.714,11.829,27.6,heart,support
+ACC-0123,Sweet Tobacco,Tobacco,NOTE-0456,Vanillin,11.131,6.678,15.583,base,modifier
+ACC-0123,Sweet Tobacco,Tobacco,NOTE-0458,Patchouli Alcohol,4.839,2.904,6.775,base,modifier
+ACC-0123,Sweet Tobacco,Tobacco,NOTE-0465,Musk Ketone,6.203,3.722,8.685,base,modifier
+ACC-0123,Sweet Tobacco,Tobacco,NOTE-0496,Tonka Bean Absolute,18.016,10.81,25.222,base,support
+ACC-0123,Sweet Tobacco,Tobacco,NOTE-0519,Tobacco Absolute,34.646,20.788,48.504,base,driver
+ACC-0123,Sweet Tobacco,Tobacco,NOTE-0520,Honey Accord,25.165,15.099,35.231,base,support
+ACC-0124,Icy Mint,Fresh,NOTE-0021,Ambroxan,14.320856791432085,8.591914080859192,20.048799512004877,base,modifier
+ACC-0124,Icy Mint,Fresh,NOTE-0205,Iso E Super,15.678843211567884,9.40790592094079,21.950780492195076,base,modifier
+ACC-0124,Icy Mint,Fresh,NOTE-0499,Lavender Oil,44.99955000449995,26.999730002699973,62.999370006299934,heart,modifier
+ACC-0124,Icy Mint,Fresh,NOTE-0521,Peppermint Oil,11.249887501124988,6.749932500674993,15.749842501574983,top,driver
+ACC-0124,Icy Mint,Fresh,NOTE-0522,Menthol Crystals,7.524924750752493,4.5149548504514945,10.53389466105339,top,support
+ACC-0124,Icy Mint,Fresh,NOTE-0523,Eucalyptol,6.2259377406225935,3.734962650373496,8.71591284087159,top,support
+ACC-0125,Honeyed Floral,Floral Sweet,NOTE-0205,Iso E Super,10.448895511044888,6.268937310626893,14.628853711462884,base,modifier
+ACC-0125,Honeyed Floral,Floral Sweet,NOTE-0465,Musk Ketone,11.200887991120089,6.719932800671993,15.680843191568083,base,modifier
+ACC-0125,Honeyed Floral,Floral Sweet,NOTE-0493,Orange Blossom Absolute,28.07171928280717,16.842831571684282,39.29960700392996,heart,driver
+ACC-0125,Honeyed Floral,Floral Sweet,NOTE-0494,Ylang-Ylang Extra,12.888871111288886,7.732922670773291,18.04381956180438,heart,support
+ACC-0125,Honeyed Floral,Floral Sweet,NOTE-0520,Honey Accord,19.03980960190398,11.423885761142387,26.65573344266557,heart,support
+ACC-0125,Honeyed Floral,Floral Sweet,NOTE-0524,Benzyl Salicylate,18.349816501834983,11.009889901100989,25.689743102568976,base,modifier
+ACC-0126,Earthy Root,Earthy,NOTE-0021,Ambroxan,5.809,3.486,8.133,base,modifier
+ACC-0126,Earthy Root,Earthy,NOTE-0205,Iso E Super,6.323,3.794,8.852,base,modifier
+ACC-0126,Earthy Root,Earthy,NOTE-0453,Vetiver Haiti,35.37,21.222,49.517,base,driver
+ACC-0126,Earthy Root,Earthy,NOTE-0458,Patchouli Alcohol,25.957,15.574,36.339,base,support
+ACC-0126,Earthy Root,Earthy,NOTE-0472,Guaiac Wood Oil,10.04,6.024,14.057,base,modifier
+ACC-0126,Earthy Root,Earthy,NOTE-0525,Cypriol Oil,16.501,9.901,23.101,base,support
+ACC-0127,Fizzy Citrus,Citrus,NOTE-0205,Iso E Super,28.602286022860227,17.161171611716117,40.04340043400434,base,modifier
+ACC-0127,Fizzy Citrus,Citrus,NOTE-0449,Bergamot Oil,13.629136291362913,8.17808178081781,19.08119081190812,top,support
+ACC-0127,Fizzy Citrus,Citrus,NOTE-0476,Habanolide,25.943259432594328,15.566155661556616,36.320363203632034,base,modifier
+ACC-0127,Fizzy Citrus,Citrus,NOTE-0489,Aldehyde C-10,8.56008560085601,5.136051360513605,11.984119841198412,top,support
+ACC-0127,Fizzy Citrus,Citrus,NOTE-0491,Petitgrain Oil,5.358053580535805,3.215032150321503,7.502075020750207,top,modifier
+ACC-0127,Fizzy Citrus,Citrus,NOTE-0526,Grapefruit Oil,17.90717907179072,10.74410744107441,25.070250702507025,top,driver
+ACC-0128,Creamy Iris,Powdery,NOTE-0205,Iso E Super,5.553,3.332,7.774,base,modifier
+ACC-0128,Creamy Iris,Powdery,NOTE-0465,Musk Ketone,5.952,3.571,8.333,base,modifier
+ACC-0128,Creamy Iris,Powdery,NOTE-0484,Heliotropin,11.707,7.024,16.39,heart,modifier
+ACC-0128,Creamy Iris,Powdery,NOTE-0527,Orris Butter,28.495,17.097,39.893,base,driver
+ACC-0128,Creamy Iris,Powdery,NOTE-0528,Iris Aldehyde,28.751,17.251,40.251,heart,support
+ACC-0128,Creamy Iris,Powdery,NOTE-0529,Carrot Seed Oil,19.542,11.725,27.358,heart,support
+ACC-0129,Classic Lavender,Aromatic,NOTE-0134,Coumarin,26.459,15.875,37.042,base,modifier
+ACC-0129,Classic Lavender,Aromatic,NOTE-0205,Iso E Super,15.197,9.118,21.275,base,modifier
+ACC-0129,Classic Lavender,Aromatic,NOTE-0448,Lavandin Oil,9.624,5.775,13.474,top,support
+ACC-0129,Classic Lavender,Aromatic,NOTE-0465,Musk Ketone,12.89,7.734,18.046,base,modifier
+ACC-0129,Classic Lavender,Aromatic,NOTE-0499,Lavender Oil,20.974,12.584,29.363,top,driver
+ACC-0129,Classic Lavender,Aromatic,NOTE-0510,Linalyl Acetate,14.856,8.914,20.799,top,support
+ACC-0130,Bright Neroli,Citrus Floral,NOTE-0193,Hedione,12.900129001290013,7.740077400774008,18.060180601806017,heart,modifier
+ACC-0130,Bright Neroli,Citrus Floral,NOTE-0205,Iso E Super,30.000300003000028,18.000180001800018,42.00042000420004,base,modifier
+ACC-0130,Bright Neroli,Citrus Floral,NOTE-0449,Bergamot Oil,4.639046390463904,2.7830278302783027,6.495064950649506,top,modifier
+ACC-0130,Bright Neroli,Citrus Floral,NOTE-0491,Petitgrain Oil,8.638086380863808,5.183051830518305,12.094120941209411,top,support
+ACC-0130,Bright Neroli,Citrus Floral,NOTE-0493,Orange Blossom Absolute,32.100321003210034,19.26019260192602,44.94044940449404,heart,support
+ACC-0130,Bright Neroli,Citrus Floral,NOTE-0530,Neroli Oil,11.72211722117221,7.033070330703307,16.411164111641117,top,driver
+ACC-0131,Fresh Green Apple,Fruity Fresh,NOTE-0205,Iso E Super,15.679,9.408,21.951,base,modifier
+ACC-0131,Fresh Green Apple,Fruity Fresh,NOTE-0465,Musk Ketone,14.321,8.592,20.049,base,modifier
+ACC-0131,Fresh Green Apple,Fruity Fresh,NOTE-0509,Linalool,45.0,27.0,63.0,heart,modifier
+ACC-0131,Fresh Green Apple,Fruity Fresh,NOTE-0531,Hexyl Acetate,11.396,6.838,15.954,top,driver
+ACC-0131,Fresh Green Apple,Fruity Fresh,NOTE-0532,cis-3-Hexenol,8.357,5.014,11.7,top,support
+ACC-0131,Fresh Green Apple,Fruity Fresh,NOTE-0533,Aldehyde C-6,5.247,3.148,7.346,top,support
+ACC-0132,Soft Violet,Floral Powdery,NOTE-0205,Iso E Super,9.243,5.546,12.94,base,modifier
+ACC-0132,Soft Violet,Floral Powdery,NOTE-0465,Musk Ketone,8.492,5.095,11.889,base,modifier
+ACC-0132,Soft Violet,Floral Powdery,NOTE-0480,Violet Leaf Absolute,20.737,12.442,29.032,heart,support
+ACC-0132,Soft Violet,Floral Powdery,NOTE-0481,Orris Concrete,22.265,13.359,31.172,base,support
+ACC-0132,Soft Violet,Floral Powdery,NOTE-0484,Heliotropin,8.674,5.204,12.143,heart,modifier
+ACC-0132,Soft Violet,Floral Powdery,NOTE-0534,Ionone Alpha,30.589,18.353,42.825,heart,driver
+ACC-0133,Warm Cashmere,Woody Musk,NOTE-0021,Ambroxan,18.077,10.846,25.308,base,support
+ACC-0133,Warm Cashmere,Woody Musk,NOTE-0087,Cashmeran,32.011,19.207,44.816,base,driver
+ACC-0133,Warm Cashmere,Woody Musk,NOTE-0205,Iso E Super,27.398,16.439,38.357,base,support
+ACC-0133,Warm Cashmere,Woody Musk,NOTE-0459,Cedarwood Virginia,10.827,6.496,15.158,base,modifier
+ACC-0133,Warm Cashmere,Woody Musk,NOTE-0465,Musk Ketone,5.218,3.131,7.305,base,modifier
+ACC-0133,Warm Cashmere,Woody Musk,NOTE-0476,Habanolide,6.469,3.881,9.057,base,modifier
+ACC-0134,Herbal Cologne,Aromatic Citrus,NOTE-0205,Iso E Super,54.545,32.727,76.364,base,modifier
+ACC-0134,Herbal Cologne,Aromatic Citrus,NOTE-0449,Bergamot Oil,16.682,10.009,23.354,top,driver
+ACC-0134,Herbal Cologne,Aromatic Citrus,NOTE-0491,Petitgrain Oil,5.805,3.483,8.127,top,modifier
+ACC-0134,Herbal Cologne,Aromatic Citrus,NOTE-0499,Lavender Oil,12.47,7.482,17.458,top,support
+ACC-0134,Herbal Cologne,Aromatic Citrus,NOTE-0530,Neroli Oil,2.512,1.507,3.517,top,modifier
+ACC-0134,Herbal Cologne,Aromatic Citrus,NOTE-0535,Rosemary Oil,7.986,4.792,11.18,top,support
+ACC-0135,Sweet Almond,Gourmand Nutty,NOTE-0205,Iso E Super,4.507045070450704,2.704027040270403,6.310063100631005,base,modifier
+ACC-0135,Sweet Almond,Gourmand Nutty,NOTE-0456,Vanillin,14.031140311403114,8.418084180841808,19.64319643196432,base,support
+ACC-0135,Sweet Almond,Gourmand Nutty,NOTE-0465,Musk Ketone,4.141041410414104,2.4850248502485024,5.798057980579806,base,modifier
+ACC-0135,Sweet Almond,Gourmand Nutty,NOTE-0484,Heliotropin,45.000450004500046,27.000270002700027,63.000630006300064,heart,support
+ACC-0135,Sweet Almond,Gourmand Nutty,NOTE-0496,Tonka Bean Absolute,7.320073200732008,4.392043920439205,10.24910249102491,base,modifier
+ACC-0135,Sweet Almond,Gourmand Nutty,NOTE-0536,Benzaldehyde,25.000250002500024,15.000150001500014,35.00035000350003,top,driver
+ACC-0136,Dry Hay,Dry Herbal,NOTE-0134,Coumarin,16.079,9.647,22.511,base,support
+ACC-0136,Dry Hay,Dry Herbal,NOTE-0205,Iso E Super,4.243,2.546,5.94,base,modifier
+ACC-0136,Dry Hay,Dry Herbal,NOTE-0453,Vetiver Haiti,6.814,4.089,9.54,base,modifier
+ACC-0136,Dry Hay,Dry Herbal,NOTE-0465,Musk Ketone,3.599,2.159,5.038,base,modifier
+ACC-0136,Dry Hay,Dry Herbal,NOTE-0468,Hay Absolute,60.0,36.0,84.0,heart,driver
+ACC-0136,Dry Hay,Dry Herbal,NOTE-0519,Tobacco Absolute,9.265,5.559,12.97,base,support
+ACC-0137,Classic Fougere,Fougere,NOTE-0134,Coumarin,15.821,9.493,22.149,base,support
+ACC-0137,Classic Fougere,Fougere,NOTE-0205,Iso E Super,5.138,3.083,7.194,base,modifier
+ACC-0137,Classic Fougere,Fougere,NOTE-0449,Bergamot Oil,10.65,6.39,14.909,top,support
+ACC-0137,Classic Fougere,Fougere,NOTE-0450,Geranium Oil,45.0,27.0,63.0,heart,support
+ACC-0137,Classic Fougere,Fougere,NOTE-0452,Oakmoss Absolute,9.041,5.424,12.657,base,modifier
+ACC-0137,Classic Fougere,Fougere,NOTE-0499,Lavender Oil,14.35,8.61,20.091,top,driver
+ACC-0138,Modern Blue,Fresh Woody,NOTE-0021,Ambroxan,31.531,18.919,44.143,base,driver
+ACC-0138,Modern Blue,Fresh Woody,NOTE-0205,Iso E Super,17.868,10.721,25.015,base,support
+ACC-0138,Modern Blue,Fresh Woody,NOTE-0449,Bergamot Oil,15.202,9.121,21.283,top,support
+ACC-0138,Modern Blue,Fresh Woody,NOTE-0465,Musk Ketone,5.147,3.088,7.206,base,modifier
+ACC-0138,Modern Blue,Fresh Woody,NOTE-0498,Dihydromyrcenol,21.77,13.062,30.478,top,support
+ACC-0138,Modern Blue,Fresh Woody,NOTE-0537,Pepper Black,8.482,5.089,11.875,top,modifier
+ACC-0139,Sweet Vanilla,Gourmand,NOTE-0205,Iso E Super,5.451054510545105,3.271032710327103,7.632076320763207,base,modifier
+ACC-0139,Sweet Vanilla,Gourmand,NOTE-0456,Vanillin,35.268352683526835,21.161211612116123,49.375493754937544,base,driver
+ACC-0139,Sweet Vanilla,Gourmand,NOTE-0457,Benzoin Siam,16.870168701687017,10.12210122101221,23.61923619236192,base,support
+ACC-0139,Sweet Vanilla,Gourmand,NOTE-0465,Musk Ketone,5.809058090580906,3.4850348503485034,8.132081320813208,base,modifier
+ACC-0139,Sweet Vanilla,Gourmand,NOTE-0496,Tonka Bean Absolute,10.32910329103291,6.197061970619706,14.460144601446014,base,modifier
+ACC-0139,Sweet Vanilla,Gourmand,NOTE-0538,Ethyl Vanillin,26.272262722627225,15.763157631576314,36.78136781367814,base,support
+ACC-0140,Green Fig Leaf,Green,NOTE-0169,Galbanum,9.713,5.828,13.598,top,support
+ACC-0140,Green Fig Leaf,Green,NOTE-0205,Iso E Super,15.679,9.408,21.951,base,modifier
+ACC-0140,Green Fig Leaf,Green,NOTE-0465,Musk Ketone,14.321,8.592,20.049,base,modifier
+ACC-0140,Green Fig Leaf,Green,NOTE-0517,Fig Leaf Accord,34.966,20.98,48.953,heart,driver
+ACC-0140,Green Fig Leaf,Green,NOTE-0518,Coconut Lactone,10.034,6.02,14.047,heart,modifier
+ACC-0140,Green Fig Leaf,Green,NOTE-0532,cis-3-Hexenol,15.287,9.172,21.402,top,support
+ACC-0141,Smoky Incense,Incense,NOTE-0205,Iso E Super,6.658,3.995,9.321,base,modifier
+ACC-0141,Smoky Incense,Incense,NOTE-0455,Labdanum Absolute,11.257,6.754,15.759,base,modifier
+ACC-0141,Smoky Incense,Incense,NOTE-0470,Myrrh Absolute,24.67,14.802,34.538,base,support
+ACC-0141,Smoky Incense,Incense,NOTE-0471,Birch Tar Rectified,14.944,8.967,20.922,base,support
+ACC-0141,Smoky Incense,Incense,NOTE-0476,Habanolide,6.081,3.649,8.514,base,modifier
+ACC-0141,Smoky Incense,Incense,NOTE-0539,Frankincense Resin,36.39,21.834,50.946,base,driver
+ACC-0142,Clean Cotton,Clean,NOTE-0193,Hedione,20.193,12.116,28.27,heart,support
+ACC-0142,Clean Cotton,Clean,NOTE-0205,Iso E Super,13.483,8.09,18.876,base,modifier
+ACC-0142,Clean Cotton,Clean,NOTE-0505,Galaxolide,16.517,9.91,23.124,base,modifier
+ACC-0142,Clean Cotton,Clean,NOTE-0509,Linalool,24.807,14.884,34.73,heart,support
+ACC-0142,Clean Cotton,Clean,NOTE-0540,Aldehyde C-12 Lauric,18.857,11.314,26.4,top,driver
+ACC-0142,Clean Cotton,Clean,NOTE-0541,Rose Oxide,6.143,3.686,8.6,top,modifier
+ACC-0143,Roasted Coffee,Gourmand Dark,NOTE-0456,Vanillin,7.132,4.279,9.984,base,modifier
+ACC-0143,Roasted Coffee,Gourmand Dark,NOTE-0458,Patchouli Alcohol,2.709,1.626,3.793,base,modifier
+ACC-0143,Roasted Coffee,Gourmand Dark,NOTE-0465,Musk Ketone,3.42,2.052,4.788,base,modifier
+ACC-0143,Roasted Coffee,Gourmand Dark,NOTE-0542,Coffee Absolute,17.242,10.345,24.138,base,driver
+ACC-0143,Roasted Coffee,Gourmand Dark,NOTE-0543,Pyrazine Accord,60.0,36.0,84.0,heart,support
+ACC-0143,Roasted Coffee,Gourmand Dark,NOTE-0544,Cocoa Absolute,9.497,5.698,13.296,base,support
+ACC-0144,Metallic Mineral,Mineral,NOTE-0021,Ambroxan,8.113,4.868,11.358,base,modifier
+ACC-0144,Metallic Mineral,Mineral,NOTE-0205,Iso E Super,17.568,10.541,24.595,base,modifier
+ACC-0144,Metallic Mineral,Mineral,NOTE-0473,Ambergris Accord,21.411,12.846,29.975,base,support
+ACC-0144,Metallic Mineral,Mineral,NOTE-0476,Habanolide,7.454,4.472,10.436,base,modifier
+ACC-0144,Metallic Mineral,Mineral,NOTE-0488,Pink Pepper CO₂,19.687,11.812,27.562,top,support
+ACC-0144,Metallic Mineral,Mineral,NOTE-0489,Aldehyde C-10,25.767,15.46,36.074,top,driver
+ACC-0145,Generic Sweet,Sweet,NOTE-0205,Iso E Super,3.86,2.316,5.403,base,modifier
+ACC-0145,Generic Sweet,Sweet,NOTE-0456,Vanillin,24.71,14.826,34.594,base,driver
+ACC-0145,Generic Sweet,Sweet,NOTE-0465,Musk Ketone,4.113,2.468,5.758,base,modifier
+ACC-0145,Generic Sweet,Sweet,NOTE-0495,Ethyl Maltol,35.456,21.274,49.639,heart,support
+ACC-0145,Generic Sweet,Sweet,NOTE-0496,Tonka Bean Absolute,7.317,4.39,10.244,base,modifier
+ACC-0145,Generic Sweet,Sweet,NOTE-0545,Benzyl Alcohol,24.544,14.726,34.361,heart,support
+ACC-0146,Cinnamon Spice,Spicy,NOTE-0457,Benzoin Siam,18.333,11.0,25.667,base,modifier
+ACC-0146,Cinnamon Spice,Spicy,NOTE-0465,Musk Ketone,11.442,6.865,16.019,base,modifier
+ACC-0146,Cinnamon Spice,Spicy,NOTE-0496,Tonka Bean Absolute,10.225,6.135,14.315,base,modifier
+ACC-0146,Cinnamon Spice,Spicy,NOTE-0546,Cinnamon Leaf Oil,26.692,16.015,37.369,heart,driver
+ACC-0146,Cinnamon Spice,Spicy,NOTE-0547,Cinnamyl Alcohol,20.65,12.39,28.91,heart,support
+ACC-0146,Cinnamon Spice,Spicy,NOTE-0548,Clove Oil,12.658,7.595,17.721,heart,support
+ACC-0147,Classic Amber,Amber,NOTE-0408,Vanilla Absolute,18.136,10.882,25.39,base,support
+ACC-0147,Classic Amber,Amber,NOTE-0455,Labdanum Absolute,34.118,20.471,47.766,base,driver
+ACC-0147,Classic Amber,Amber,NOTE-0457,Benzoin Siam,25.758,15.455,36.061,base,support
+ACC-0147,Classic Amber,Amber,NOTE-0458,Patchouli Alcohol,4.893,2.936,6.85,base,modifier
+ACC-0147,Classic Amber,Amber,NOTE-0465,Musk Ketone,6.177,3.706,8.647,base,modifier
+ACC-0147,Classic Amber,Amber,NOTE-0496,Tonka Bean Absolute,10.918,6.551,15.285,base,modifier
+ACC-0148,Modern Amberwood,Amber Woody,NOTE-0021,Ambroxan,34.227,20.536,47.918,base,driver
+ACC-0148,Modern Amberwood,Amber Woody,NOTE-0087,Cashmeran,18.066,10.84,25.293,base,support
+ACC-0148,Modern Amberwood,Amber Woody,NOTE-0205,Iso E Super,25.861,15.516,36.205,base,support
+ACC-0148,Modern Amberwood,Amber Woody,NOTE-0454,Cedarwood Atlas,10.1,6.06,14.139,base,modifier
+ACC-0148,Modern Amberwood,Amber Woody,NOTE-0465,Musk Ketone,5.214,3.129,7.3,base,modifier
+ACC-0148,Modern Amberwood,Amber Woody,NOTE-0476,Habanolide,6.532,3.919,9.145,base,modifier
+ACC-0149,Sweet Fruity,Fruity Sweet,NOTE-0205,Iso E Super,6.552,3.931,9.173,base,modifier
+ACC-0149,Sweet Fruity,Fruity Sweet,NOTE-0456,Vanillin,17.491,10.495,24.487,base,support
+ACC-0149,Sweet Fruity,Fruity Sweet,NOTE-0465,Musk Ketone,5.957,3.574,8.34,base,modifier
+ACC-0149,Sweet Fruity,Fruity Sweet,NOTE-0509,Linalool,16.267,9.76,22.774,heart,modifier
+ACC-0149,Sweet Fruity,Fruity Sweet,NOTE-0511,Gamma-Undecalactone,28.733,17.24,40.226,heart,support
+ACC-0149,Sweet Fruity,Fruity Sweet,NOTE-0551,Ethyl Butyrate,25.0,15.0,35.0,top,driver
+ACC-0150,Cardamom Spice,Spicy Aromatic,NOTE-0205,Iso E Super,15.634,9.38,21.888,base,modifier
+ACC-0150,Cardamom Spice,Spicy Aromatic,NOTE-0449,Bergamot Oil,7.016,4.21,9.823,top,support
+ACC-0150,Cardamom Spice,Spicy Aromatic,NOTE-0465,Musk Ketone,14.366,8.62,20.112,base,modifier
+ACC-0150,Cardamom Spice,Spicy Aromatic,NOTE-0499,Lavender Oil,45.0,27.0,63.0,heart,modifier
+ACC-0150,Cardamom Spice,Spicy Aromatic,NOTE-0523,Eucalyptol,7.212,4.327,10.097,top,support
+ACC-0150,Cardamom Spice,Spicy Aromatic,NOTE-0550,Cardamom Oil,10.772,6.463,15.08,top,driver
+ACC-0151,Clove Spice,Spicy,NOTE-0205,Iso E Super,10.142101421014209,6.085060850608506,14.199141991419914,base,modifier
+ACC-0151,Clove Spice,Spicy,NOTE-0456,Vanillin,10.64110641106411,6.384063840638406,14.897148971489715,base,modifier
+ACC-0151,Clove Spice,Spicy,NOTE-0457,Benzoin Siam,19.217192171921717,11.53011530115301,26.904269042690427,base,modifier
+ACC-0151,Clove Spice,Spicy,NOTE-0512,Cinnamon Bark Oil,13.564135641356414,8.139081390813907,18.990189901899015,heart,support
+ACC-0151,Clove Spice,Spicy,NOTE-0513,Clove Bud Oil,26.721267212672124,16.033160331603316,37.410374103741034,heart,driver
+ACC-0151,Clove Spice,Spicy,NOTE-0552,Eugenol,19.714197141971418,11.829118291182912,27.60027600276003,heart,support
+ACC-0152,Nutmeg Spice,Spicy Warm,NOTE-0455,Labdanum Absolute,8.826,5.296,12.357,base,modifier
+ACC-0152,Nutmeg Spice,Spicy Warm,NOTE-0465,Musk Ketone,11.314,6.788,15.84,base,modifier
+ACC-0152,Nutmeg Spice,Spicy Warm,NOTE-0496,Tonka Bean Absolute,19.86,11.916,27.803,base,modifier
+ACC-0152,Nutmeg Spice,Spicy Warm,NOTE-0514,Nutmeg Oil,28.099,16.859,39.338,heart,driver
+ACC-0152,Nutmeg Spice,Spicy Warm,NOTE-0546,Cinnamon Leaf Oil,12.867,7.72,18.014,heart,support
+ACC-0152,Nutmeg Spice,Spicy Warm,NOTE-0553,Mace Oil,19.034,11.42,26.648,heart,support
+ACC-0153,Ginger Spice,Fresh Spicy,NOTE-0021,Ambroxan,26.12,15.672,36.568,base,modifier
+ACC-0153,Ginger Spice,Fresh Spicy,NOTE-0205,Iso E Super,28.425,17.055,39.796,base,modifier
+ACC-0153,Ginger Spice,Fresh Spicy,NOTE-0319,Pink Pepper,9.187,5.512,12.862,top,support
+ACC-0153,Ginger Spice,Fresh Spicy,NOTE-0490,Lemon Oil,14.08,8.448,19.712,top,support
+ACC-0153,Ginger Spice,Fresh Spicy,NOTE-0549,Ginger CO₂,16.446,9.867,23.024,top,driver
+ACC-0153,Ginger Spice,Fresh Spicy,NOTE-0550,Cardamom Oil,5.742,3.445,8.039,top,modifier
+ACC-0154,Peppery Spice,Spicy Dry,NOTE-0205,Iso E Super,8.595,5.157,12.033,base,modifier
+ACC-0154,Peppery Spice,Spicy Dry,NOTE-0453,Vetiver Haiti,13.507,8.104,18.909,base,modifier
+ACC-0154,Peppery Spice,Spicy Dry,NOTE-0465,Musk Ketone,7.898,4.739,11.057,base,modifier
+ACC-0154,Peppery Spice,Spicy Dry,NOTE-0478,Elemi Resin,45.0,27.0,63.0,heart,support
+ACC-0154,Peppery Spice,Spicy Dry,NOTE-0488,Pink Pepper CO₂,10.781,6.469,15.094,top,support
+ACC-0154,Peppery Spice,Spicy Dry,NOTE-0554,Black Pepper Oil,14.219,8.531,19.906,top,driver
+ACC-0155,Saffron Spice,Spicy Leather,NOTE-0021,Ambroxan,4.460044600446004,2.676026760267603,6.2450624506245065,base,modifier
+ACC-0155,Saffron Spice,Spicy Leather,NOTE-0455,Labdanum Absolute,7.083070830708307,4.250042500425004,9.91609916099161,base,modifier
+ACC-0155,Saffron Spice,Spicy Leather,NOTE-0476,Habanolide,4.098040980409804,2.4590245902459023,5.738057380573806,base,modifier
+ACC-0155,Saffron Spice,Spicy Leather,NOTE-0485,IsoButyl Quinoline,9.186091860918609,5.512055120551205,12.860128601286013,base,support
+ACC-0155,Saffron Spice,Spicy Leather,NOTE-0555,Saffron Accord,60.000600006000056,36.000360003600036,84.00084000840008,heart,driver
+ACC-0155,Saffron Spice,Spicy Leather,NOTE-0556,Suederal,15.172151721517215,9.103091030910308,21.24121241212412,base,support
+ACC-0156,Sweet Cardamom,Sweet Spicy,NOTE-0205,Iso E Super,5.455,3.273,7.636,base,modifier
+ACC-0156,Sweet Cardamom,Sweet Spicy,NOTE-0456,Vanillin,20.909,12.545,29.273,base,support
+ACC-0156,Sweet Cardamom,Sweet Spicy,NOTE-0457,Benzoin Siam,8.766,5.26,12.273,base,modifier
+ACC-0156,Sweet Cardamom,Sweet Spicy,NOTE-0465,Musk Ketone,5.012,3.007,7.017,base,modifier
+ACC-0156,Sweet Cardamom,Sweet Spicy,NOTE-0496,Tonka Bean Absolute,14.403,8.642,20.165,base,support
+ACC-0156,Sweet Cardamom,Sweet Spicy,NOTE-0550,Cardamom Oil,45.455,27.273,63.636,top,driver
+ACC-0157,Woody Cinnamon,Woody Spicy,NOTE-0021,Ambroxan,3.941960580394196,2.3649763502364975,5.517944820551794,base,modifier
+ACC-0157,Woody Cinnamon,Woody Spicy,NOTE-0205,Iso E Super,4.267957320426795,2.560974390256097,5.974940250597493,base,modifier
+ACC-0157,Woody Cinnamon,Woody Spicy,NOTE-0454,Cedarwood Atlas,15.102848971510284,9.06190938090619,21.143788562114377,base,support
+ACC-0157,Woody Cinnamon,Woody Spicy,NOTE-0455,Labdanum Absolute,6.400935990640093,3.8409615903840963,8.96191038089619,base,modifier
+ACC-0157,Woody Cinnamon,Woody Spicy,NOTE-0458,Patchouli Alcohol,10.28689713102869,6.171938280617193,14.400855991440084,base,support
+ACC-0157,Woody Cinnamon,Woody Spicy,NOTE-0512,Cinnamon Bark Oil,59.99940000599994,35.999640003599964,83.99916000839991,heart,driver
+ACC-0158,Resinous Spice,Resinous Spicy,NOTE-0205,Iso E Super,4.303,2.582,6.024,base,modifier
+ACC-0158,Resinous Spice,Resinous Spicy,NOTE-0455,Labdanum Absolute,6.761,4.057,9.466,base,modifier
+ACC-0158,Resinous Spice,Resinous Spicy,NOTE-0465,Musk Ketone,3.954,2.372,5.535,base,modifier
+ACC-0158,Resinous Spice,Resinous Spicy,NOTE-0478,Elemi Resin,45.0,27.0,63.0,heart,driver
+ACC-0158,Resinous Spice,Resinous Spicy,NOTE-0539,Frankincense Resin,14.982,8.989,20.975,base,support
+ACC-0158,Resinous Spice,Resinous Spicy,NOTE-0554,Black Pepper Oil,25.0,15.0,35.0,top,support
+ACC-0159,Fresh Herbal Spice,Aromatic Spicy,NOTE-0205,Iso E Super,28.425,17.055,39.796,base,modifier
+ACC-0159,Fresh Herbal Spice,Aromatic Spicy,NOTE-0449,Bergamot Oil,7.394,4.436,10.351,top,modifier
+ACC-0159,Fresh Herbal Spice,Aromatic Spicy,NOTE-0465,Musk Ketone,26.12,15.672,36.568,base,modifier
+ACC-0159,Fresh Herbal Spice,Aromatic Spicy,NOTE-0535,Rosemary Oil,9.439,5.663,13.214,top,support
+ACC-0159,Fresh Herbal Spice,Aromatic Spicy,NOTE-0557,Basil Oil,17.086,10.252,23.92,top,driver
+ACC-0159,Fresh Herbal Spice,Aromatic Spicy,NOTE-0558,Thyme Oil,11.536,6.922,16.151,top,support
+ACC-0160,Dark Cumin Spice,Animalic Spicy,NOTE-0205,Iso E Super,5.07,3.042,7.099,base,modifier
+ACC-0160,Dark Cumin Spice,Animalic Spicy,NOTE-0455,Labdanum Absolute,7.866,4.719,11.012,base,modifier
+ACC-0160,Dark Cumin Spice,Animalic Spicy,NOTE-0465,Musk Ketone,4.632,2.779,6.484,base,modifier
+ACC-0160,Dark Cumin Spice,Animalic Spicy,NOTE-0525,Cypriol Oil,12.432,7.459,17.405,base,support
+ACC-0160,Dark Cumin Spice,Animalic Spicy,NOTE-0559,Cumin Seed Oil,45.0,27.0,63.0,heart,driver
+ACC-0160,Dark Cumin Spice,Animalic Spicy,NOTE-0560,Coriander Seed Oil,25.0,15.0,35.0,top,support
+ACC-0161,Sweet Saffron,Sweet Leather Spicy,NOTE-0021,Ambroxan,4.261042610426104,2.5570255702557025,5.966059660596606,base,modifier
+ACC-0161,Sweet Saffron,Sweet Leather Spicy,NOTE-0456,Vanillin,15.328153281532813,9.197091970919708,21.46021460214602,base,support
+ACC-0161,Sweet Saffron,Sweet Leather Spicy,NOTE-0457,Benzoin Siam,6.3440634406344065,3.8060380603806037,8.882088820888209,base,modifier
+ACC-0161,Sweet Saffron,Sweet Leather Spicy,NOTE-0476,Habanolide,3.915039150391504,2.3490234902349023,5.482054820548205,base,modifier
+ACC-0161,Sweet Saffron,Sweet Leather Spicy,NOTE-0555,Saffron Accord,60.000600006000056,36.000360003600036,84.00084000840008,heart,driver
+ACC-0161,Sweet Saffron,Sweet Leather Spicy,NOTE-0556,Suederal,10.15110151101511,6.090060900609005,14.211142111421115,base,support
+ACC-0162,Dry Spice Woods,Dry Woody Spicy,NOTE-0021,Ambroxan,5.209,3.125,7.293,base,modifier
+ACC-0162,Dry Spice Woods,Dry Woody Spicy,NOTE-0205,Iso E Super,11.228,6.737,15.719,base,modifier
+ACC-0162,Dry Spice Woods,Dry Woody Spicy,NOTE-0453,Vetiver Haiti,13.673,8.204,19.143,base,support
+ACC-0162,Dry Spice Woods,Dry Woody Spicy,NOTE-0459,Cedarwood Virginia,19.968,11.981,27.955,base,support
+ACC-0162,Dry Spice Woods,Dry Woody Spicy,NOTE-0465,Musk Ketone,4.467,2.68,6.254,base,modifier
+ACC-0162,Dry Spice Woods,Dry Woody Spicy,NOTE-0554,Black Pepper Oil,45.455,27.273,63.636,top,driver
+ACC-0163,Oriental Amber Spice,Amber Spicy,NOTE-0455,Labdanum Absolute,18.807,11.284,26.33,base,driver
+ACC-0163,Oriental Amber Spice,Amber Spicy,NOTE-0456,Vanillin,3.331,1.999,4.664,base,modifier
+ACC-0163,Oriental Amber Spice,Amber Spicy,NOTE-0457,Benzoin Siam,14.197,8.518,19.875,base,support
+ACC-0163,Oriental Amber Spice,Amber Spicy,NOTE-0465,Musk Ketone,3.665,2.199,5.131,base,modifier
+ACC-0163,Oriental Amber Spice,Amber Spicy,NOTE-0512,Cinnamon Bark Oil,37.475,22.485,52.465,heart,support
+ACC-0163,Oriental Amber Spice,Amber Spicy,NOTE-0513,Clove Bud Oil,22.525,13.515,31.535,heart,modifier
+ACC-0164,Floral Cardamom,Floral Spicy,NOTE-0193,Hedione,22.05,13.23,30.869,heart,support
+ACC-0164,Floral Cardamom,Floral Spicy,NOTE-0205,Iso E Super,15.634,9.38,21.888,base,modifier
+ACC-0164,Floral Cardamom,Floral Spicy,NOTE-0449,Bergamot Oil,7.816,4.69,10.942,top,modifier
+ACC-0164,Floral Cardamom,Floral Spicy,NOTE-0465,Musk Ketone,14.366,8.62,20.112,base,modifier
+ACC-0164,Floral Cardamom,Floral Spicy,NOTE-0493,Orange Blossom Absolute,22.95,13.77,32.131,heart,support
+ACC-0164,Floral Cardamom,Floral Spicy,NOTE-0550,Cardamom Oil,17.184,10.31,24.058,top,driver
+ACC-0165,Spiced Rose,Floral Spicy,NOTE-0205,Iso E Super,8.197,4.918,11.476,base,modifier
+ACC-0165,Spiced Rose,Floral Spicy,NOTE-0458,Patchouli Alcohol,14.271,8.563,19.98,base,modifier
+ACC-0165,Spiced Rose,Floral Spicy,NOTE-0465,Musk Ketone,7.532,4.519,10.545,base,modifier
+ACC-0165,Spiced Rose,Floral Spicy,NOTE-0488,Pink Pepper CO₂,25.0,15.0,35.0,top,support
+ACC-0165,Spiced Rose,Floral Spicy,NOTE-0501,Rose Absolute,31.175,18.705,43.645,heart,driver
+ACC-0165,Spiced Rose,Floral Spicy,NOTE-0548,Clove Oil,13.825,8.295,19.355,heart,support
+ACC-0166,Ginger Citrus Spice,Fresh Spicy,NOTE-0021,Ambroxan,26.12,15.672,36.568,base,modifier
+ACC-0166,Ginger Citrus Spice,Fresh Spicy,NOTE-0205,Iso E Super,28.425,17.055,39.796,base,modifier
+ACC-0166,Ginger Citrus Spice,Fresh Spicy,NOTE-0449,Bergamot Oil,10.073,6.044,14.102,top,support
+ACC-0166,Ginger Citrus Spice,Fresh Spicy,NOTE-0490,Lemon Oil,13.736,8.242,19.231,top,support
+ACC-0166,Ginger Citrus Spice,Fresh Spicy,NOTE-0549,Ginger CO₂,16.044,9.626,22.461,top,driver
+ACC-0166,Ginger Citrus Spice,Fresh Spicy,NOTE-0550,Cardamom Oil,5.602,3.361,7.842,top,modifier
+ACC-0167,Sweet Amber Vanilla,Sweet Amber,NOTE-0039,Benzoin,11.47211472114721,6.883068830688306,16.061160611606116,base,support
+ACC-0167,Sweet Amber Vanilla,Sweet Amber,NOTE-0205,Iso E Super,6.712067120671206,4.028040280402804,9.397093970939709,base,modifier
+ACC-0167,Sweet Amber Vanilla,Sweet Amber,NOTE-0399,Tonka Bean,4.906049060490605,2.9440294402944027,6.869068690686906,base,modifier
+ACC-0167,Sweet Amber Vanilla,Sweet Amber,NOTE-0455,Labdanum Absolute,16.935169351693517,10.161101611016111,23.710237102371025,base,support
+ACC-0167,Sweet Amber Vanilla,Sweet Amber,NOTE-0456,Vanillin,34.94034940349404,20.96420964209642,48.91648916489165,base,driver
+ACC-0167,Sweet Amber Vanilla,Sweet Amber,NOTE-0457,Benzoin Siam,13.237132371323712,7.942079420794208,18.532185321853216,base,support
+ACC-0167,Sweet Amber Vanilla,Sweet Amber,NOTE-0465,Musk Ketone,2.962029620296203,1.7770177701777017,4.146041460414604,base,modifier
+ACC-0167,Sweet Amber Vanilla,Sweet Amber,NOTE-0476,Habanolide,3.223032230322303,1.9340193401934018,4.512045120451204,base,modifier
+ACC-0167,Sweet Amber Vanilla,Sweet Amber,NOTE-0496,Tonka Bean Absolute,5.612056120561205,3.367033670336703,7.856078560785607,base,modifier
+ACC-0168,Aromatic Pepper,Aromatic Spicy,NOTE-0205,Iso E Super,8.316,4.989,11.642,base,modifier
+ACC-0168,Aromatic Pepper,Aromatic Spicy,NOTE-0450,Geranium Oil,45.0,27.0,63.0,heart,support
+ACC-0168,Aromatic Pepper,Aromatic Spicy,NOTE-0453,Vetiver Haiti,14.552,8.731,20.373,base,modifier
+ACC-0168,Aromatic Pepper,Aromatic Spicy,NOTE-0465,Musk Ketone,7.132,4.279,9.985,base,modifier
+ACC-0168,Aromatic Pepper,Aromatic Spicy,NOTE-0499,Lavender Oil,11.622,6.973,16.27,top,support
+ACC-0168,Aromatic Pepper,Aromatic Spicy,NOTE-0554,Black Pepper Oil,13.378,8.027,18.73,top,driver
+ACC-0169,Exotic Spice Market,Oriental Spicy,NOTE-0455,Labdanum Absolute,8.875088750887508,5.3250532505325054,12.426124261242611,base,modifier
+ACC-0169,Exotic Spice Market,Oriental Spicy,NOTE-0457,Benzoin Siam,19.74819748197482,11.849118491184912,27.647276472764727,base,modifier
+ACC-0169,Exotic Spice Market,Oriental Spicy,NOTE-0465,Musk Ketone,11.377113771137711,6.826068260682606,15.927159271592714,base,modifier
+ACC-0169,Exotic Spice Market,Oriental Spicy,NOTE-0513,Clove Bud Oil,13.277132771327713,7.966079660796608,18.58818588185882,heart,support
+ACC-0169,Exotic Spice Market,Oriental Spicy,NOTE-0514,Nutmeg Oil,27.076270762707626,16.246162461624614,37.907379073790736,heart,driver
+ACC-0169,Exotic Spice Market,Oriental Spicy,NOTE-0546,Cinnamon Leaf Oil,19.64619646196462,11.788117881178811,27.505275052750527,heart,support
+ACC-0170,Salty Marine,Marine,NOTE-0205,Iso E Super,6.341,3.804,8.877,base,modifier
+ACC-0170,Salty Marine,Marine,NOTE-0449,Bergamot Oil,7.748,4.649,10.848,top,modifier
+ACC-0170,Salty Marine,Marine,NOTE-0473,Ambergris Accord,17.833,10.7,24.966,base,support
+ACC-0170,Salty Marine,Marine,NOTE-0475,Seaweed Absolute,45.0,27.0,63.0,heart,support
+ACC-0170,Salty Marine,Marine,NOTE-0476,Habanolide,5.826,3.496,8.157,base,modifier
+ACC-0170,Salty Marine,Marine,NOTE-0497,Calone,17.252,10.351,24.152,top,driver
+ACC-0171,Mineral Ozone,Mineral,NOTE-0021,Ambroxan,27.578,16.547,38.609,base,modifier
+ACC-0171,Mineral Ozone,Mineral,NOTE-0205,Iso E Super,15.018,9.011,21.025,base,modifier
+ACC-0171,Mineral Ozone,Mineral,NOTE-0464,Aldehyde C-12 MNA,19.613,11.768,27.459,top,driver
+ACC-0171,Mineral Ozone,Mineral,NOTE-0465,Musk Ketone,11.95,7.17,16.73,base,modifier
+ACC-0171,Mineral Ozone,Mineral,NOTE-0488,Pink Pepper CO₂,11.367,6.82,15.913,top,support
+ACC-0171,Mineral Ozone,Mineral,NOTE-0561,Ozonic Accord,14.474,8.685,20.264,top,support
+ACC-0172,Green Tea Steam,Tea,NOTE-0193,Hedione,9.86190138098619,5.9169408305916935,13.805861941380584,heart,modifier
+ACC-0172,Green Tea Steam,Tea,NOTE-0205,Iso E Super,15.633843661563384,9.379906200937992,21.887781122188777,base,modifier
+ACC-0172,Green Tea Steam,Tea,NOTE-0449,Bergamot Oil,24.999750002499972,14.999850001499984,34.999650003499966,top,support
+ACC-0172,Green Tea Steam,Tea,NOTE-0465,Musk Ketone,14.365856341436585,8.61991380086199,20.111798882011175,base,modifier
+ACC-0172,Green Tea Steam,Tea,NOTE-0467,Mate Absolute,14.689853101468984,8.81391186088139,20.565794342056577,heart,support
+ACC-0172,Green Tea Steam,Tea,NOTE-0562,Green Tea Absolute,20.44879551204488,12.268877311226888,28.62771372286277,heart,driver
+ACC-0173,Milky Cereal,Lactonic,NOTE-0205,Iso E Super,6.232,3.739,8.724,base,modifier
+ACC-0173,Milky Cereal,Lactonic,NOTE-0408,Vanilla Absolute,17.916,10.75,25.082,base,support
+ACC-0173,Milky Cereal,Lactonic,NOTE-0465,Musk Ketone,5.726,3.436,8.017,base,modifier
+ACC-0173,Milky Cereal,Lactonic,NOTE-0496,Tonka Bean Absolute,10.126,6.076,14.177,base,modifier
+ACC-0173,Milky Cereal,Lactonic,NOTE-0563,Milk Lactone,34.763,20.858,48.668,heart,driver
+ACC-0173,Milky Cereal,Lactonic,NOTE-0564,Rice Accord,25.237,15.142,35.332,heart,support
+ACC-0174,Powdery Makeup,Powdery,NOTE-0205,Iso E Super,5.923,3.554,8.292,base,modifier
+ACC-0174,Powdery Makeup,Powdery,NOTE-0465,Musk Ketone,6.312,3.787,8.837,base,modifier
+ACC-0174,Powdery Makeup,Powdery,NOTE-0484,Heliotropin,25.654,15.393,35.916,heart,support
+ACC-0174,Powdery Makeup,Powdery,NOTE-0501,Rose Absolute,13.265,7.959,18.57,heart,modifier
+ACC-0174,Powdery Makeup,Powdery,NOTE-0527,Orris Butter,27.765,16.659,38.87,base,driver
+ACC-0174,Powdery Makeup,Powdery,NOTE-0565,Violet Ionone,21.081,12.649,29.514,heart,support
+ACC-0175,Suede Soft Leather,Leather,NOTE-0205,Iso E Super,4.436044360443605,2.6620266202662024,6.2100621006210055,base,modifier
+ACC-0175,Suede Soft Leather,Leather,NOTE-0476,Habanolide,3.8040380403804033,2.283022830228302,5.326053260532604,base,modifier
+ACC-0175,Suede Soft Leather,Leather,NOTE-0481,Orris Concrete,22.54022540225402,13.524135241352413,31.556315563155632,heart,modifier
+ACC-0175,Suede Soft Leather,Leather,NOTE-0485,IsoButyl Quinoline,12.568125681256811,7.541075410754107,17.596175961759617,base,support
+ACC-0175,Suede Soft Leather,Leather,NOTE-0555,Saffron Accord,37.46037460374604,22.47622476224762,52.444524445244454,heart,support
+ACC-0175,Suede Soft Leather,Leather,NOTE-0556,Suederal,19.191191911919116,11.515115151151512,26.868268682686825,base,driver
+ACC-0176,Boozy Vanilla,Boozy,NOTE-0205,Iso E Super,3.8899611003889962,2.3339766602333976,5.445945540544594,base,modifier
+ACC-0176,Boozy Vanilla,Boozy,NOTE-0408,Vanilla Absolute,16.150838491615083,9.689903100968989,22.610773892261076,base,support
+ACC-0176,Boozy Vanilla,Boozy,NOTE-0457,Benzoin Siam,10.27189728102719,6.162938370616294,14.380856191438085,base,support
+ACC-0176,Boozy Vanilla,Boozy,NOTE-0465,Musk Ketone,3.5749642503574965,2.1449785502144976,5.003949960500394,base,modifier
+ACC-0176,Boozy Vanilla,Boozy,NOTE-0566,Rum CO₂ Extract,59.99940000599994,35.999640003599964,83.99916000839991,heart,driver
+ACC-0176,Boozy Vanilla,Boozy,NOTE-0567,Oakwood Extract,6.112938870611294,3.667963320366796,8.557914420855791,base,modifier
+ACC-0177,Green Vegetal,Green,NOTE-0205,Iso E Super,28.425,17.055,39.796,base,modifier
+ACC-0177,Green Vegetal,Green,NOTE-0465,Musk Ketone,26.12,15.672,36.568,base,modifier
+ACC-0177,Green Vegetal,Green,NOTE-0477,Galbanum Resin,16.866,10.12,23.613,top,driver
+ACC-0177,Green Vegetal,Green,NOTE-0532,cis-3-Hexenol,9.554,5.732,13.375,top,support
+ACC-0177,Green Vegetal,Green,NOTE-0557,Basil Oil,7.61,4.566,10.654,top,modifier
+ACC-0177,Green Vegetal,Green,NOTE-0568,Tomato Leaf Accord,11.425,6.855,15.995,top,support
+ACC-0178,Dirty Leather,Animalic Leather,NOTE-0205,Iso E Super,8.177918220817793,4.906950930490694,11.448885511144887,base,modifier
+ACC-0178,Dirty Leather,Animalic Leather,NOTE-0455,Labdanum Absolute,12.850871491285087,7.709922900770992,17.99082009179908,base,modifier
+ACC-0178,Dirty Leather,Animalic Leather,NOTE-0471,Birch Tar Rectified,23.364766352336474,14.018859811401885,32.71067289327107,base,support
+ACC-0178,Dirty Leather,Animalic Leather,NOTE-0476,Habanolide,7.513924860751392,4.508954910450895,10.519894801051988,base,modifier
+ACC-0178,Dirty Leather,Animalic Leather,NOTE-0485,IsoButyl Quinoline,32.43067569324306,19.45780542194578,45.40254597454025,base,driver
+ACC-0178,Dirty Leather,Animalic Leather,NOTE-0516,Castoreum Replacer,15.661843381566184,9.39690603093969,21.925780742192575,base,support
+ACC-0179,Smoky Church Incense,Resinous Smoky,NOTE-0205,Iso E Super,7.144,4.286,10.002,base,modifier
+ACC-0179,Smoky Church Incense,Resinous Smoky,NOTE-0455,Labdanum Absolute,11.354,6.812,15.895,base,modifier
+ACC-0179,Smoky Church Incense,Resinous Smoky,NOTE-0465,Musk Ketone,6.565,3.939,9.19,base,modifier
+ACC-0179,Smoky Church Incense,Resinous Smoky,NOTE-0470,Myrrh Absolute,24.324,14.594,34.053,base,support
+ACC-0179,Smoky Church Incense,Resinous Smoky,NOTE-0471,Birch Tar Rectified,14.734,8.841,20.628,base,support
+ACC-0179,Smoky Church Incense,Resinous Smoky,NOTE-0539,Frankincense Resin,35.879,21.528,50.231,base,driver
+ACC-0180,Animalic Musk,Animalic,NOTE-0205,Iso E Super,10.065,6.039,14.091,base,modifier
+ACC-0180,Animalic Musk,Animalic,NOTE-0455,Labdanum Absolute,14.61,8.766,20.454,base,modifier
+ACC-0180,Animalic Musk,Animalic,NOTE-0476,Habanolide,9.297,5.578,13.016,base,modifier
+ACC-0180,Animalic Musk,Animalic,NOTE-0516,Castoreum Replacer,21.583,12.95,30.216,base,support
+ACC-0180,Animalic Musk,Animalic,NOTE-0569,Civet Replacer,30.437,18.262,42.612,base,driver
+ACC-0180,Animalic Musk,Animalic,NOTE-0570,Costus Root,14.008,8.405,19.611,base,support
+ACC-0181,Burnt Wood Smoke,Smoky Woody,NOTE-0021,Ambroxan,7.5189248107518925,4.510954890451095,10.52589474105259,base,modifier
+ACC-0181,Burnt Wood Smoke,Smoky Woody,NOTE-0075,Cade Oil,22.019779802201978,13.211867881321187,30.82669173308267,base,support
+ACC-0181,Burnt Wood Smoke,Smoky Woody,NOTE-0205,Iso E Super,8.139918600813992,4.883951160488396,11.395886041139589,base,modifier
+ACC-0181,Burnt Wood Smoke,Smoky Woody,NOTE-0453,Vetiver Haiti,13.090869091309086,7.8549214507854925,18.326816731832682,base,modifier
+ACC-0181,Burnt Wood Smoke,Smoky Woody,NOTE-0471,Birch Tar Rectified,14.768852311476884,8.861911380886191,20.676793232067677,base,support
+ACC-0181,Burnt Wood Smoke,Smoky Woody,NOTE-0472,Guaiac Wood Oil,34.461655383446164,20.676793232067677,48.24551754482455,base,driver
+ACC-0182,Dark Resin Amber,Resinous Amber,NOTE-0309,Peru Balsam,17.504,10.502,24.505,base,support
+ACC-0182,Dark Resin Amber,Resinous Amber,NOTE-0408,Vanilla Absolute,10.893,6.536,15.25,base,modifier
+ACC-0182,Dark Resin Amber,Resinous Amber,NOTE-0455,Labdanum Absolute,34.796,20.877,48.714,base,driver
+ACC-0182,Dark Resin Amber,Resinous Amber,NOTE-0457,Benzoin Siam,25.698,15.419,35.978,base,support
+ACC-0182,Dark Resin Amber,Resinous Amber,NOTE-0458,Patchouli Alcohol,4.881,2.929,6.834,base,modifier
+ACC-0182,Dark Resin Amber,Resinous Amber,NOTE-0465,Musk Ketone,6.228,3.737,8.719,base,modifier
+ACC-0183,Incense Leather,Resinous Leather,NOTE-0205,Iso E Super,7.331926680733192,4.398956010439895,10.26489735102649,base,modifier
+ACC-0183,Incense Leather,Resinous Leather,NOTE-0455,Labdanum Absolute,11.652883471165287,6.991930080699192,16.313836861631383,base,modifier
+ACC-0183,Incense Leather,Resinous Leather,NOTE-0476,Habanolide,6.737932620673793,4.042959570404296,9.43290567094329,base,modifier
+ACC-0183,Incense Leather,Resinous Leather,NOTE-0485,IsoButyl Quinoline,14.942850571494283,8.96591034089659,20.91979080209198,base,support
+ACC-0183,Incense Leather,Resinous Leather,NOTE-0556,Suederal,24.964750352496473,14.978850211497884,34.949650503494965,base,support
+ACC-0183,Incense Leather,Resinous Leather,NOTE-0571,Olibanum CO₂,34.36965630343696,20.621793782062177,48.117518824811754,base,driver
+ACC-0184,Dark Oud Smoke,Smoky Oud,NOTE-0021,Ambroxan,7.423,4.454,10.393,base,modifier
+ACC-0184,Dark Oud Smoke,Smoky Oud,NOTE-0296,Oud Accord,24.988,14.993,34.983,base,support
+ACC-0184,Dark Oud Smoke,Smoky Oud,NOTE-0458,Patchouli Alcohol,11.798,7.079,16.517,base,modifier
+ACC-0184,Dark Oud Smoke,Smoky Oud,NOTE-0465,Musk Ketone,6.821,4.093,9.55,base,modifier
+ACC-0184,Dark Oud Smoke,Smoky Oud,NOTE-0471,Birch Tar Rectified,14.946,8.968,20.925,base,support
+ACC-0184,Dark Oud Smoke,Smoky Oud,NOTE-0525,Cypriol Oil,34.024,20.414,47.633,base,driver
+ACC-0185,Ashy Fireplace,Smoky,NOTE-0075,Cade Oil,32.167,19.3,45.033,base,driver
+ACC-0185,Ashy Fireplace,Smoky,NOTE-0205,Iso E Super,8.781,5.269,12.293,base,modifier
+ACC-0185,Ashy Fireplace,Smoky,NOTE-0455,Labdanum Absolute,12.891,7.734,18.047,base,modifier
+ACC-0185,Ashy Fireplace,Smoky,NOTE-0465,Musk Ketone,7.453,4.472,10.435,base,modifier
+ACC-0185,Ashy Fireplace,Smoky,NOTE-0471,Birch Tar Rectified,15.534,9.32,21.748,base,support
+ACC-0185,Ashy Fireplace,Smoky,NOTE-0572,Guaiacol,23.174,13.905,32.444,base,support
+ACC-0186,Dark Animalic Amber,Animalic Amber,NOTE-0205,Iso E Super,8.118,4.871,11.365,base,modifier
+ACC-0186,Dark Animalic Amber,Animalic Amber,NOTE-0455,Labdanum Absolute,28.119,16.871,39.366,base,support
+ACC-0186,Dark Animalic Amber,Animalic Amber,NOTE-0457,Benzoin Siam,19.8,11.88,27.72,base,support
+ACC-0186,Dark Animalic Amber,Animalic Amber,NOTE-0458,Patchouli Alcohol,11.917,7.15,16.684,base,modifier
+ACC-0186,Dark Animalic Amber,Animalic Amber,NOTE-0476,Habanolide,7.498,4.499,10.498,base,modifier
+ACC-0186,Dark Animalic Amber,Animalic Amber,NOTE-0516,Castoreum Replacer,24.548,14.729,34.367,base,driver
+ACC-0187,Resinous Balsamic Smoke,Balsamic Smoky,NOTE-0205,Iso E Super,7.287072870728707,4.372043720437204,10.20210202102021,base,modifier
+ACC-0187,Resinous Balsamic Smoke,Balsamic Smoky,NOTE-0309,Peru Balsam,34.15934159341593,20.496204962049617,47.82347823478235,base,driver
+ACC-0187,Resinous Balsamic Smoke,Balsamic Smoky,NOTE-0395,Tolu Balsam,25.094250942509426,15.056150561505614,35.131351313513136,base,support
+ACC-0187,Resinous Balsamic Smoke,Balsamic Smoky,NOTE-0465,Musk Ketone,6.696066960669606,4.018040180401804,9.37509375093751,base,modifier
+ACC-0187,Resinous Balsamic Smoke,Balsamic Smoky,NOTE-0471,Birch Tar Rectified,9.78109781097811,5.869058690586906,13.694136941369415,base,modifier
+ACC-0187,Resinous Balsamic Smoke,Balsamic Smoky,NOTE-0573,Styrax Resin,16.982169821698214,10.18910189101891,23.77523775237752,base,support
+ACC-0188,Feral Skin,Animalic,NOTE-0205,Iso E Super,5.072,3.043,7.101,base,modifier
+ACC-0188,Feral Skin,Animalic,NOTE-0455,Labdanum Absolute,7.362,4.417,10.307,base,modifier
+ACC-0188,Feral Skin,Animalic,NOTE-0476,Habanolide,4.685,2.811,6.559,base,modifier
+ACC-0188,Feral Skin,Animalic,NOTE-0559,Cumin Seed Oil,60.0,36.0,84.0,heart,support
+ACC-0188,Feral Skin,Animalic,NOTE-0569,Civet Replacer,13.595,8.157,19.033,base,driver
+ACC-0188,Feral Skin,Animalic,NOTE-0570,Costus Root,9.286,5.572,13.001,base,support
+ACC-0189,Dark Honey Resin,Animalic Resin,NOTE-0205,Iso E Super,7.348,4.409,10.287,base,modifier
+ACC-0189,Dark Honey Resin,Animalic Resin,NOTE-0455,Labdanum Absolute,27.555,16.533,38.576,base,support
+ACC-0189,Dark Honey Resin,Animalic Resin,NOTE-0465,Musk Ketone,6.752,4.051,9.453,base,modifier
+ACC-0189,Dark Honey Resin,Animalic Resin,NOTE-0519,Tobacco Absolute,10.464,6.278,14.65,base,modifier
+ACC-0189,Dark Honey Resin,Animalic Resin,NOTE-0574,Honey Absolute,30.561,18.337,42.786,base,driver
+ACC-0189,Dark Honey Resin,Animalic Resin,NOTE-0575,Beeswax Absolute,17.32,10.392,24.248,base,support
+ACC-0190,Tarred Timber,Industrial Smoky,NOTE-0021,Ambroxan,7.558924410755893,4.535954640453594,10.582894171058289,base,modifier
+ACC-0190,Tarred Timber,Industrial Smoky,NOTE-0075,Cade Oil,29.24770752292477,17.54882451175488,40.94659053409466,base,driver
+ACC-0190,Tarred Timber,Industrial Smoky,NOTE-0205,Iso E Super,8.18391816081839,4.909950900490995,11.456885431145688,base,modifier
+ACC-0190,Tarred Timber,Industrial Smoky,NOTE-0453,Vetiver Haiti,13.161868381316188,7.8969210307896915,18.42581574184258,base,modifier
+ACC-0190,Tarred Timber,Industrial Smoky,NOTE-0471,Birch Tar Rectified,21.058789412105877,12.634873651263486,29.48170518294817,base,support
+ACC-0190,Tarred Timber,Industrial Smoky,NOTE-0472,Guaiac Wood Oil,20.78879211207888,12.472875271247288,29.103708962910368,base,support
+ACC-0191,Cold Ash Incense,Smoky Incense,NOTE-0205,Iso E Super,7.904,4.743,11.066,base,modifier
+ACC-0191,Cold Ash Incense,Smoky Incense,NOTE-0455,Labdanum Absolute,11.604,6.962,16.245,base,modifier
+ACC-0191,Cold Ash Incense,Smoky Incense,NOTE-0465,Musk Ketone,6.709,4.025,9.393,base,modifier
+ACC-0191,Cold Ash Incense,Smoky Incense,NOTE-0469,Frankincense CO₂,34.224,20.535,47.914,base,driver
+ACC-0191,Cold Ash Incense,Smoky Incense,NOTE-0470,Myrrh Absolute,24.859,14.915,34.802,base,support
+ACC-0191,Cold Ash Incense,Smoky Incense,NOTE-0576,Ash Accord,14.7,8.82,20.58,base,support
+ACC-0192,Bitter Apothecary,Resinous Bitter,NOTE-0205,Iso E Super,9.23890761092389,5.542944570554294,12.933870661293385,base,modifier
+ACC-0192,Bitter Apothecary,Resinous Bitter,NOTE-0465,Musk Ketone,8.488915110848891,5.093949060509395,11.884881151188488,base,modifier
+ACC-0192,Bitter Apothecary,Resinous Bitter,NOTE-0477,Galbanum Resin,28.95371046289537,17.37182628173718,40.53459465405346,heart,driver
+ACC-0192,Bitter Apothecary,Resinous Bitter,NOTE-0478,Elemi Resin,22.267777322226777,13.360866391336087,31.174688253117466,heart,support
+ACC-0192,Bitter Apothecary,Resinous Bitter,NOTE-0539,Frankincense Resin,22.271777282227173,13.362866371336285,31.18068819311807,base,support
+ACC-0192,Bitter Apothecary,Resinous Bitter,NOTE-0577,Wormwood Accord,8.778912210877891,5.266947330526695,12.289877101228987,heart,modifier
+ACC-0193,Shadowy Rose Fur,Floral Animalic,NOTE-0205,Iso E Super,5.774,3.464,8.083,base,modifier
+ACC-0193,Shadowy Rose Fur,Floral Animalic,NOTE-0458,Patchouli Alcohol,8.476,5.086,11.867,base,modifier
+ACC-0193,Shadowy Rose Fur,Floral Animalic,NOTE-0476,Habanolide,5.333,3.2,7.467,base,modifier
+ACC-0193,Shadowy Rose Fur,Floral Animalic,NOTE-0501,Rose Absolute,60.0,36.0,84.0,heart,driver
+ACC-0193,Shadowy Rose Fur,Floral Animalic,NOTE-0569,Civet Replacer,12.381,7.429,17.333,base,support
+ACC-0193,Shadowy Rose Fur,Floral Animalic,NOTE-0570,Costus Root,8.036,4.821,11.25,base,support
+ACC-0194,Charred Resin Smoke,Resinous Smoky,NOTE-0205,Iso E Super,7.932079320793208,4.759047590475905,11.10411104111041,base,modifier
+ACC-0194,Charred Resin Smoke,Resinous Smoky,NOTE-0395,Tolu Balsam,25.229252292522922,15.137151371513715,35.321353213532134,base,support
+ACC-0194,Charred Resin Smoke,Resinous Smoky,NOTE-0455,Labdanum Absolute,11.775117751177511,7.065070650706507,16.485164851648516,base,modifier
+ACC-0194,Charred Resin Smoke,Resinous Smoky,NOTE-0465,Musk Ketone,6.732067320673207,4.039040390403904,9.425094250942509,base,modifier
+ACC-0194,Charred Resin Smoke,Resinous Smoky,NOTE-0471,Birch Tar Rectified,14.751147511475114,8.85108851088511,20.65220652206522,base,support
+ACC-0194,Charred Resin Smoke,Resinous Smoky,NOTE-0573,Styrax Resin,33.58033580335803,20.14820148201482,47.01347013470134,base,driver
+ACC-0195,Dark Temple Woods,Sacred Smoky,NOTE-0205,Iso E Super,7.612076120761207,4.567045670456705,10.657106571065711,base,modifier
+ACC-0195,Dark Temple Woods,Sacred Smoky,NOTE-0455,Labdanum Absolute,10.24310243102431,6.146061460614606,14.341143411434112,base,modifier
+ACC-0195,Dark Temple Woods,Sacred Smoky,NOTE-0472,Guaiac Wood Oil,16.573165731657316,9.94409944099441,23.203232032320322,base,support
+ACC-0195,Dark Temple Woods,Sacred Smoky,NOTE-0476,Habanolide,7.0310703107031065,4.219042190421904,9.844098440984409,base,modifier
+ACC-0195,Dark Temple Woods,Sacred Smoky,NOTE-0539,Frankincense Resin,24.483244832448325,14.690146901469014,34.27734277342773,base,support
+ACC-0195,Dark Temple Woods,Sacred Smoky,NOTE-0578,Sandalwood Mysore,34.05734057340573,20.434204342043422,47.68047680476805,base,driver
+ACC-0196,Ambered Woods,Bridge,NOTE-0021,Ambroxan,26.716,16.029,37.402,base,support
+ACC-0196,Ambered Woods,Bridge,NOTE-0205,Iso E Super,36.153,21.692,50.614,base,driver
+ACC-0196,Ambered Woods,Bridge,NOTE-0454,Cedarwood Atlas,11.887,7.132,16.642,base,modifier
+ACC-0196,Ambered Woods,Bridge,NOTE-0455,Labdanum Absolute,14.759,8.856,20.663,base,support
+ACC-0196,Ambered Woods,Bridge,NOTE-0456,Vanillin,3.737,2.242,5.232,base,modifier
+ACC-0196,Ambered Woods,Bridge,NOTE-0476,Habanolide,6.748,4.049,9.448,base,modifier
+ACC-0197,Clean Leather,Bridge,NOTE-0021,Ambroxan,3.61,2.166,5.054,base,modifier
+ACC-0197,Clean Leather,Bridge,NOTE-0205,Iso E Super,16.835,10.101,23.57,base,support
+ACC-0197,Clean Leather,Bridge,NOTE-0465,Musk Ketone,3.298,1.979,4.617,base,modifier
+ACC-0197,Clean Leather,Bridge,NOTE-0556,Suederal,14.001,8.4,19.601,base,driver
+ACC-0197,Clean Leather,Bridge,NOTE-0565,Violet Ionone,60.0,36.0,84.0,heart,modifier
+ACC-0197,Clean Leather,Bridge,NOTE-0579,Birch Tar (Low),2.256,1.354,3.159,base,support
+ACC-0198,Smoked Vanilla,Bridge,NOTE-0205,Iso E Super,8.948,5.369,12.527,base,modifier
+ACC-0198,Smoked Vanilla,Bridge,NOTE-0399,Tonka Bean,13.726,8.236,19.217,base,modifier
+ACC-0198,Smoked Vanilla,Bridge,NOTE-0455,Labdanum Absolute,18.265,10.959,25.57,base,support
+ACC-0198,Smoked Vanilla,Bridge,NOTE-0456,Vanillin,40.465,24.279,56.651,base,driver
+ACC-0198,Smoked Vanilla,Bridge,NOTE-0476,Habanolide,8.265,4.959,11.571,base,modifier
+ACC-0198,Smoked Vanilla,Bridge,NOTE-0572,Guaiacol,10.331,6.199,14.464,base,support
+ACC-0199,Sweet Tobacco Woods,Bridge,NOTE-0205,Iso E Super,8.032,4.819,11.245,base,modifier
+ACC-0199,Sweet Tobacco Woods,Bridge,NOTE-0408,Vanilla Absolute,24.378,14.627,34.129,base,support
+ACC-0199,Sweet Tobacco Woods,Bridge,NOTE-0459,Cedarwood Virginia,19.591,11.755,27.428,base,support
+ACC-0199,Sweet Tobacco Woods,Bridge,NOTE-0465,Musk Ketone,6.818,4.091,9.545,base,modifier
+ACC-0199,Sweet Tobacco Woods,Bridge,NOTE-0519,Tobacco Absolute,31.576,18.946,44.206,base,driver
+ACC-0199,Sweet Tobacco Woods,Bridge,NOTE-0520,Honey Accord,9.605,5.763,13.447,base,modifier
+ACC-0200,Spiced Amber Musk,Bridge,NOTE-0021,Ambroxan,14.567854321456783,8.74091259087409,20.394796052039478,base,driver
+ACC-0200,Spiced Amber Musk,Bridge,NOTE-0205,Iso E Super,3.153968460315397,1.8919810801891979,4.415955840441596,base,modifier
+ACC-0200,Spiced Amber Musk,Bridge,NOTE-0319,Pink Pepper,24.999750002499972,14.999850001499984,34.999650003499966,top,modifier
+ACC-0200,Spiced Amber Musk,Bridge,NOTE-0455,Labdanum Absolute,9.36490635093649,5.618943810561894,13.110868891311087,base,support
+ACC-0200,Spiced Amber Musk,Bridge,NOTE-0476,Habanolide,2.913970860291397,1.747982520174798,4.078959210407896,base,modifier
+ACC-0200,Spiced Amber Musk,Bridge,NOTE-0580,Cinnamon Bark,44.99955000449995,26.999730002699973,62.999370006299934,heart,support
+ACC-0201,Powdered Incense,Bridge,NOTE-0039,Benzoin,8.338,5.003,11.673,base,support
+ACC-0201,Powdered Incense,Bridge,NOTE-0205,Iso E Super,3.663,2.198,5.128,base,modifier
+ACC-0201,Powdered Incense,Bridge,NOTE-0465,Musk Ketone,3.109,1.865,4.353,base,modifier
+ACC-0201,Powdered Incense,Bridge,NOTE-0469,Frankincense CO₂,14.89,8.934,20.847,base,driver
+ACC-0201,Powdered Incense,Bridge,NOTE-0581,Iris Butter,45.0,27.0,63.0,heart,support
+ACC-0201,Powdered Incense,Bridge,NOTE-0582,Aldehyde C-12,25.0,15.0,35.0,top,modifier
+ACC-0202,Soft Amber Skin,Bridge,NOTE-0021,Ambroxan,25.976259762597625,15.585155851558516,36.36636366363663,base,support
+ACC-0202,Soft Amber Skin,Bridge,NOTE-0205,Iso E Super,7.571075710757107,4.543045430454304,10.599105991059911,base,modifier
+ACC-0202,Soft Amber Skin,Bridge,NOTE-0408,Vanilla Absolute,10.646106461064612,6.388063880638806,14.905149051490513,base,modifier
+ACC-0202,Soft Amber Skin,Bridge,NOTE-0455,Labdanum Absolute,14.049140491404913,8.430084300843008,19.66919669196692,base,support
+ACC-0202,Soft Amber Skin,Bridge,NOTE-0465,Musk Ketone,6.426064260642606,3.8560385603856036,8.997089970899708,base,modifier
+ACC-0202,Soft Amber Skin,Bridge,NOTE-0507,Ambrettolide,35.331353313533135,21.19921199211992,49.46449464494645,base,driver
+ACC-0203,Creamy Smoke Woods,Bridge,NOTE-0039,Benzoin,17.13,10.278,23.982,base,support
+ACC-0203,Creamy Smoke Woods,Bridge,NOTE-0187,Guaiac Wood,32.274,19.365,45.184,base,driver
+ACC-0203,Creamy Smoke Woods,Bridge,NOTE-0205,Iso E Super,8.21,4.926,11.494,base,modifier
+ACC-0203,Creamy Smoke Woods,Bridge,NOTE-0354,Sandalwood,29.386,17.631,41.14,base,support
+ACC-0203,Creamy Smoke Woods,Bridge,NOTE-0476,Habanolide,7.583,4.55,10.617,base,modifier
+ACC-0203,Creamy Smoke Woods,Bridge,NOTE-0583,Cade Oil (Low),5.417,3.25,7.583,base,modifier
+ACC-0204,Spiced Cocoa Amber,Bridge,NOTE-0205,Iso E Super,3.938960610393896,2.3629763702362974,5.513944860551394,base,modifier
+ACC-0204,Spiced Cocoa Amber,Bridge,NOTE-0408,Vanilla Absolute,5.5389446105538935,3.3229667703322963,7.753922460775391,base,modifier
+ACC-0204,Spiced Cocoa Amber,Bridge,NOTE-0455,Labdanum Absolute,11.694883051169487,7.0169298307016925,16.371836281637183,base,support
+ACC-0204,Spiced Cocoa Amber,Bridge,NOTE-0465,Musk Ketone,3.3429665703342963,2.0059799402005978,4.680953190468095,base,modifier
+ACC-0204,Spiced Cocoa Amber,Bridge,NOTE-0544,Cocoa Absolute,15.484845151548484,9.29090709092909,21.67778322216778,base,driver
+ACC-0204,Spiced Cocoa Amber,Bridge,NOTE-0580,Cinnamon Bark,59.99940000599994,35.999640003599964,83.99916000839991,heart,support
+ACC-0205,Warm Resin Musk,Bridge,NOTE-0021,Ambroxan,27.73572264277357,16.64083359166408,38.82961170388296,base,support
+ACC-0205,Warm Resin Musk,Bridge,NOTE-0039,Benzoin,17.086829131708683,10.251897481025189,23.921760782392177,base,support
+ACC-0205,Warm Resin Musk,Bridge,NOTE-0205,Iso E Super,7.506924930750691,4.503954960450395,10.50889491105089,base,modifier
+ACC-0205,Warm Resin Musk,Bridge,NOTE-0399,Tonka Bean,10.555894441055589,6.332936670633294,14.777852221477785,base,modifier
+ACC-0205,Warm Resin Musk,Bridge,NOTE-0455,Labdanum Absolute,30.18069819301807,18.108818911810882,42.25357746422535,base,driver
+ACC-0205,Warm Resin Musk,Bridge,NOTE-0476,Habanolide,6.933930660693393,4.159958400415996,9.70690293097069,base,modifier
+ACC-0206,Clean Smoke Citrus,Bridge,NOTE-0021,Ambroxan,9.018,5.411,12.626,base,modifier
+ACC-0206,Clean Smoke Citrus,Bridge,NOTE-0040,Bergamot,28.377,17.026,39.727,top,driver
+ACC-0206,Clean Smoke Citrus,Bridge,NOTE-0205,Iso E Super,19.526,11.716,27.336,base,modifier
+ACC-0206,Clean Smoke Citrus,Bridge,NOTE-0465,Musk Ketone,8.287,4.972,11.602,base,modifier
+ACC-0206,Clean Smoke Citrus,Bridge,NOTE-0469,Frankincense CO₂,17.714,10.629,24.8,base,support
+ACC-0206,Clean Smoke Citrus,Bridge,NOTE-0489,Aldehyde C-10,17.078,10.247,23.909,top,support
+ACC-0207,Floral Leather Amber,Bridge,NOTE-0021,Ambroxan,4.438,2.663,6.213,base,modifier
+ACC-0207,Floral Leather Amber,Bridge,NOTE-0205,Iso E Super,4.804,2.883,6.726,base,modifier
+ACC-0207,Floral Leather Amber,Bridge,NOTE-0455,Labdanum Absolute,10.698,6.419,14.978,base,support
+ACC-0207,Floral Leather Amber,Bridge,NOTE-0465,Musk Ketone,4.078,2.447,5.709,base,modifier
+ACC-0207,Floral Leather Amber,Bridge,NOTE-0501,Rose Absolute,60.0,36.0,84.0,heart,support
+ACC-0207,Floral Leather Amber,Bridge,NOTE-0556,Suederal,15.982,9.589,22.374,base,driver
+ACC-0208,Warm Spiced Woods,Bridge,NOTE-0021,Ambroxan,8.588,5.153,12.023,base,modifier
+ACC-0208,Warm Spiced Woods,Bridge,NOTE-0205,Iso E Super,5.006,3.004,7.008,base,modifier
+ACC-0208,Warm Spiced Woods,Bridge,NOTE-0459,Cedarwood Virginia,22.157,13.294,31.02,base,driver
+ACC-0208,Warm Spiced Woods,Bridge,NOTE-0465,Musk Ketone,4.249,2.549,5.949,base,modifier
+ACC-0208,Warm Spiced Woods,Bridge,NOTE-0514,Nutmeg Oil,24.346,14.608,34.085,heart,support
+ACC-0208,Warm Spiced Woods,Bridge,NOTE-0580,Cinnamon Bark,35.654,21.392,49.915,heart,support
+ACC-0209,Fresh Spiced Citrus,Bridge,NOTE-0021,Ambroxan,26.252,15.751,36.753,base,modifier
+ACC-0209,Fresh Spiced Citrus,Bridge,NOTE-0040,Bergamot,22.198,13.319,31.078,top,driver
+ACC-0209,Fresh Spiced Citrus,Bridge,NOTE-0205,Iso E Super,15.303,9.182,21.425,base,modifier
+ACC-0209,Fresh Spiced Citrus,Bridge,NOTE-0319,Pink Pepper,13.905,8.343,19.466,top,support
+ACC-0209,Fresh Spiced Citrus,Bridge,NOTE-0465,Musk Ketone,12.99,7.794,18.185,base,modifier
+ACC-0209,Fresh Spiced Citrus,Bridge,NOTE-0549,Ginger CO₂,9.352,5.611,13.092,top,support
+ACC-0210,Fruity Amber Woods,Bridge,NOTE-0021,Ambroxan,14.836851631483684,8.90191098089019,20.771792282077175,base,support
+ACC-0210,Fruity Amber Woods,Bridge,NOTE-0205,Iso E Super,21.415785842141577,12.849871501284985,29.982700172998268,base,support
+ACC-0210,Fruity Amber Woods,Bridge,NOTE-0454,Cedarwood Atlas,8.80191198088019,5.280947190528094,12.322876771232288,base,modifier
+ACC-0210,Fruity Amber Woods,Bridge,NOTE-0465,Musk Ketone,4.544954550454495,2.726972730272697,6.361936380636194,base,modifier
+ACC-0210,Fruity Amber Woods,Bridge,NOTE-0476,Habanolide,4.945950540494595,2.966970330296697,6.923930760692393,base,modifier
+ACC-0210,Fruity Amber Woods,Bridge,NOTE-0584,Apple Accord,45.45454545454545,27.27272727272727,63.63536364636354,top,driver
+ACC-0211,Aromatic Fougere Soft,Bridge,NOTE-0021,Ambroxan,6.355063550635506,3.8130381303813037,8.898088980889808,base,modifier
+ACC-0211,Aromatic Fougere Soft,Bridge,NOTE-0134,Coumarin,14.044140441404414,8.427084270842707,19.662196621966217,base,support
+ACC-0211,Aromatic Fougere Soft,Bridge,NOTE-0205,Iso E Super,13.760137601376012,8.256082560825607,19.26519265192652,base,modifier
+ACC-0211,Aromatic Fougere Soft,Bridge,NOTE-0450,Geranium Oil,24.093240932409323,14.456144561445614,33.73033730337303,heart,support
+ACC-0211,Aromatic Fougere Soft,Bridge,NOTE-0465,Musk Ketone,5.840058400584005,3.5040350403504035,8.176081760817608,base,modifier
+ACC-0211,Aromatic Fougere Soft,Bridge,NOTE-0499,Lavender Oil,35.90735907359073,21.54421544215442,50.27050270502705,heart,driver
+ACC-0212,Clean Woody Musk,Bridge,NOTE-0021,Ambroxan,17.972,10.783,25.161,base,support
+ACC-0212,Clean Woody Musk,Bridge,NOTE-0205,Iso E Super,34.945,20.967,48.924,base,driver
+ACC-0212,Clean Woody Musk,Bridge,NOTE-0354,Sandalwood,4.974,2.985,6.964,base,modifier
+ACC-0212,Clean Woody Musk,Bridge,NOTE-0454,Cedarwood Atlas,10.662,6.397,14.927,base,modifier
+ACC-0212,Clean Woody Musk,Bridge,NOTE-0465,Musk Ketone,5.505,3.303,7.707,base,modifier
+ACC-0212,Clean Woody Musk,Bridge,NOTE-0476,Habanolide,25.942,15.565,36.318,base,support
+ACC-0213,Smoky Sweet Resin,Bridge,NOTE-0039,Benzoin,33.645336453364536,20.187201872018722,47.103471034710346,base,driver
+ACC-0213,Smoky Sweet Resin,Bridge,NOTE-0187,Guaiac Wood,16.338163381633816,9.80309803098031,22.87422874228742,base,support
+ACC-0213,Smoky Sweet Resin,Bridge,NOTE-0205,Iso E Super,8.186081860818607,4.912049120491204,11.461114611146112,base,modifier
+ACC-0213,Smoky Sweet Resin,Bridge,NOTE-0455,Labdanum Absolute,24.305243052430523,14.583145831458314,34.027340273402736,base,support
+ACC-0213,Smoky Sweet Resin,Bridge,NOTE-0456,Vanillin,10.57710577105771,6.346063460634606,14.808148081480814,base,modifier
+ACC-0213,Smoky Sweet Resin,Bridge,NOTE-0465,Musk Ketone,6.948069480694807,4.169041690416903,9.72809728097281,base,modifier
+ACC-0214,Black Leather Smoke,Dark,NOTE-0075,Cade Oil,22.120778792212075,13.271867281327186,30.968690313096868,base,support
+ACC-0214,Black Leather Smoke,Dark,NOTE-0205,Iso E Super,8.982910170898291,5.389946100538994,12.576874231257687,base,modifier
+ACC-0214,Black Leather Smoke,Dark,NOTE-0455,Labdanum Absolute,20.95679043209568,12.573874261257387,29.33870661293387,base,support
+ACC-0214,Black Leather Smoke,Dark,NOTE-0465,Musk Ketone,8.169918300816992,4.901950980490195,11.436885631143687,base,modifier
+ACC-0214,Black Leather Smoke,Dark,NOTE-0471,Birch Tar Rectified,30.958690413095866,18.57481425185748,43.34156658433415,base,driver
+ACC-0214,Black Leather Smoke,Dark,NOTE-0516,Castoreum Replacer,8.81091189088109,5.286947130528694,12.335876641233588,base,modifier
+ACC-0215,Ashen Incense,Dark,NOTE-0205,Iso E Super,7.904,4.743,11.066,base,modifier
+ACC-0215,Ashen Incense,Dark,NOTE-0455,Labdanum Absolute,11.604,6.962,16.245,base,modifier
+ACC-0215,Ashen Incense,Dark,NOTE-0465,Musk Ketone,6.709,4.025,9.393,base,modifier
+ACC-0215,Ashen Incense,Dark,NOTE-0470,Myrrh Absolute,24.859,14.915,34.802,base,support
+ACC-0215,Ashen Incense,Dark,NOTE-0539,Frankincense Resin,34.224,20.535,47.914,base,driver
+ACC-0215,Ashen Incense,Dark,NOTE-0576,Ash Accord,14.7,8.82,20.58,base,support
+ACC-0216,Feral Animal Skin,Dark,NOTE-0205,Iso E Super,5.011949880501194,3.006969930300697,7.0169298307016925,base,modifier
+ACC-0216,Feral Animal Skin,Dark,NOTE-0455,Labdanum Absolute,7.794922050779491,4.676953230467695,10.912890871091289,base,modifier
+ACC-0216,Feral Animal Skin,Dark,NOTE-0476,Habanolide,4.605953940460595,2.763972360276397,6.447935520644793,base,modifier
+ACC-0216,Feral Animal Skin,Dark,NOTE-0559,Cumin Seed Oil,59.99940000599994,35.999640003599964,83.99916000839991,heart,support
+ACC-0216,Feral Animal Skin,Dark,NOTE-0569,Civet Replacer,13.286867131328687,7.971920280797192,18.60081399186008,base,driver
+ACC-0216,Feral Animal Skin,Dark,NOTE-0570,Costus Root,9.300906990930091,5.5799442005579944,13.020869791302086,base,support
+ACC-0217,Tarred Wood Ash,Dark,NOTE-0021,Ambroxan,7.933,4.76,11.107,base,modifier
+ACC-0217,Tarred Wood Ash,Dark,NOTE-0075,Cade Oil,14.804,8.883,20.726,base,support
+ACC-0217,Tarred Wood Ash,Dark,NOTE-0205,Iso E Super,8.589,5.153,12.024,base,modifier
+ACC-0217,Tarred Wood Ash,Dark,NOTE-0453,Vetiver Haiti,13.813,8.288,19.338,base,modifier
+ACC-0217,Tarred Wood Ash,Dark,NOTE-0471,Birch Tar Rectified,29.927,17.956,41.898,base,driver
+ACC-0217,Tarred Wood Ash,Dark,NOTE-0472,Guaiac Wood Oil,24.934,14.96,34.907,base,support
+ACC-0218,Bitter Church Resin,Dark,NOTE-0205,Iso E Super,9.814803703925921,5.888882222355553,13.73972520549589,base,modifier
+ACC-0218,Bitter Church Resin,Dark,NOTE-0465,Musk Ketone,8.330833383332333,4.99790004199916,11.662766744665108,base,modifier
+ACC-0218,Bitter Church Resin,Dark,NOTE-0477,Galbanum Resin,28.95342093158137,17.37165256694866,40.53418931621367,heart,driver
+ACC-0218,Bitter Church Resin,Dark,NOTE-0478,Elemi Resin,22.267554648907023,13.360732785344293,31.174376512469752,heart,support
+ACC-0218,Bitter Church Resin,Dark,NOTE-0539,Frankincense Resin,21.854562908741826,13.112737745245095,30.596388072238557,base,support
+ACC-0218,Bitter Church Resin,Dark,NOTE-0577,Wormwood Accord,8.77882442351153,5.2668946621067585,12.289754204915901,heart,modifier
+ACC-0219,Blood Honey Resin,Dark,NOTE-0205,Iso E Super,7.939079390793908,4.763047630476304,11.115111151111511,base,modifier
+ACC-0219,Blood Honey Resin,Dark,NOTE-0455,Labdanum Absolute,27.500275002750026,16.500165001650014,38.50138501385013,base,support
+ACC-0219,Blood Honey Resin,Dark,NOTE-0465,Musk Ketone,6.739067390673906,4.043040430404304,9.434094340943409,base,modifier
+ACC-0219,Blood Honey Resin,Dark,NOTE-0519,Tobacco Absolute,15.665156651566514,9.399093990939908,21.93221932219322,base,support
+ACC-0219,Blood Honey Resin,Dark,NOTE-0574,Honey Absolute,30.501305013050132,18.301183011830116,42.702427024270236,base,driver
+ACC-0219,Blood Honey Resin,Dark,NOTE-0585,Patchouli Absolute,11.655116551165511,6.993069930699307,16.317163171631716,base,modifier
+ACC-0220,Shadow Patchouli,Dark,NOTE-0205,Iso E Super,8.054080540805408,4.8330483304833045,11.27611276112761,base,modifier
+ACC-0220,Shadow Patchouli,Dark,NOTE-0455,Labdanum Absolute,25.906259062590625,15.544155441554416,36.26936269362693,base,support
+ACC-0220,Shadow Patchouli,Dark,NOTE-0476,Habanolide,7.440074400744008,4.464044640446405,10.416104161041611,base,modifier
+ACC-0220,Shadow Patchouli,Dark,NOTE-0516,Castoreum Replacer,11.060110601106011,6.636066360663606,15.484154841548415,base,support
+ACC-0220,Shadow Patchouli,Dark,NOTE-0585,Patchouli Absolute,34.87434874348744,20.92420924209242,48.824488244882446,base,driver
+ACC-0220,Shadow Patchouli,Dark,NOTE-0586,Vetiver Java,12.665126651266512,7.599075990759908,17.732177321773218,base,modifier
+ACC-0221,Burnt Resin Smoke,Dark,NOTE-0205,Iso E Super,7.932079320793208,4.759047590475905,11.10411104111041,base,modifier
+ACC-0221,Burnt Resin Smoke,Dark,NOTE-0395,Tolu Balsam,25.229252292522922,15.137151371513715,35.321353213532134,base,support
+ACC-0221,Burnt Resin Smoke,Dark,NOTE-0455,Labdanum Absolute,11.775117751177511,7.065070650706507,16.485164851648516,base,modifier
+ACC-0221,Burnt Resin Smoke,Dark,NOTE-0465,Musk Ketone,6.732067320673207,4.039040390403904,9.425094250942509,base,modifier
+ACC-0221,Burnt Resin Smoke,Dark,NOTE-0471,Birch Tar Rectified,14.751147511475114,8.85108851088511,20.65220652206522,base,support
+ACC-0221,Burnt Resin Smoke,Dark,NOTE-0573,Styrax Resin,33.58033580335803,20.14820148201482,47.01347013470134,base,driver
+ACC-0222,Cannabis Green Resin,Earthy / Green,NOTE-0205,Iso E Super,9.08990910090899,5.453945460545394,12.725872741272587,base,modifier
+ACC-0222,Cannabis Green Resin,Earthy / Green,NOTE-0465,Musk Ketone,7.715922840771592,4.628953710462895,10.801891981080189,base,modifier
+ACC-0222,Cannabis Green Resin,Earthy / Green,NOTE-0477,Galbanum Resin,19.51080489195108,11.70688293117069,27.31572684273157,heart,support
+ACC-0222,Cannabis Green Resin,Earthy / Green,NOTE-0585,Patchouli Absolute,13.194868051319487,7.916920830791692,18.47181528184718,base,modifier
+ACC-0222,Cannabis Green Resin,Earthy / Green,NOTE-0587,Cannabis Accord,25.488745112548873,15.292847071529284,35.68364316356836,heart,driver
+ACC-0222,Cannabis Green Resin,Earthy / Green,NOTE-0588,Blackcurrant Bud,24.999750002499972,14.999850001499984,34.999650003499966,top,support
+ACC-0223,Dry Hemp Earth,Earthy,NOTE-0205,Iso E Super,4.442,2.665,6.219,base,modifier
+ACC-0223,Dry Hemp Earth,Earthy,NOTE-0452,Oakmoss Absolute,8.765,5.259,12.271,base,support
+ACC-0223,Dry Hemp Earth,Earthy,NOTE-0453,Vetiver Haiti,15.387,9.232,21.542,base,support
+ACC-0223,Dry Hemp Earth,Earthy,NOTE-0454,Cedarwood Atlas,7.303,4.382,10.224,base,modifier
+ACC-0223,Dry Hemp Earth,Earthy,NOTE-0476,Habanolide,4.103,2.462,5.744,base,modifier
+ACC-0223,Dry Hemp Earth,Earthy,NOTE-0589,Hemp Accord,60.0,36.0,84.0,heart,driver
+ACC-0224,Dank Herbal Soil,Earthy / Herbal,NOTE-0116,Clary Sage,20.84679153208468,12.507874921250785,29.185708142918568,heart,support
+ACC-0224,Dank Herbal Soil,Earthy / Herbal,NOTE-0205,Iso E Super,5.949940500594994,3.569964300356996,8.32991670083299,base,modifier
+ACC-0224,Dank Herbal Soil,Earthy / Herbal,NOTE-0465,Musk Ketone,5.049949500504995,3.0299697003029964,7.069929300706993,base,modifier
+ACC-0224,Dank Herbal Soil,Earthy / Herbal,NOTE-0585,Patchouli Absolute,18.92481075189248,11.354886451135489,26.49373506264937,base,support
+ACC-0224,Dank Herbal Soil,Earthy / Herbal,NOTE-0586,Vetiver Java,10.07589924100759,6.044939550604494,14.105858941410585,base,modifier
+ACC-0224,Dank Herbal Soil,Earthy / Herbal,NOTE-0587,Cannabis Accord,39.15260847391526,23.491765082349175,54.81345186548134,heart,driver
+ACC-0225,Forest Floor,Earthy,NOTE-0205,Iso E Super,3.3809661903380963,2.027979720202798,4.732952670473295,base,modifier
+ACC-0225,Forest Floor,Earthy,NOTE-0452,Oakmoss Absolute,13.591864081359185,8.15491845081549,19.02880971190288,base,driver
+ACC-0225,Forest Floor,Earthy,NOTE-0453,Vetiver Haiti,11.839881601183988,7.103928960710393,16.57583424165758,base,support
+ACC-0225,Forest Floor,Earthy,NOTE-0476,Habanolide,3.122968770312297,1.8739812601873982,4.371956280437195,base,modifier
+ACC-0225,Forest Floor,Earthy,NOTE-0585,Patchouli Absolute,8.064919350806491,4.838951610483895,11.289887101128988,base,support
+ACC-0225,Forest Floor,Earthy,NOTE-0590,Mushroom Accord,59.99940000599994,35.999640003599964,83.99916000839991,heart,modifier
+ACC-0226,Wet Soil Resin,Earthy,NOTE-0205,Iso E Super,4.478955210447896,2.6869731302686968,6.270937290627093,base,modifier
+ACC-0226,Wet Soil Resin,Earthy,NOTE-0455,Labdanum Absolute,6.094939050609494,3.656963430365696,8.532914670853291,base,modifier
+ACC-0226,Wet Soil Resin,Earthy,NOTE-0465,Musk Ketone,3.801961980380196,2.2809771902280978,5.321946780532194,base,modifier
+ACC-0226,Wet Soil Resin,Earthy,NOTE-0585,Patchouli Absolute,14.246857531424684,8.54791452085479,19.94480055199448,base,support
+ACC-0226,Wet Soil Resin,Earthy,NOTE-0586,Vetiver Java,11.377886221137787,6.826931730682693,15.928840711592883,base,support
+ACC-0226,Wet Soil Resin,Earthy,NOTE-0591,Geosmin Accord,59.99940000599994,35.999640003599964,83.99916000839991,heart,driver
+ACC-0227,Herbal Ganja Smoke,Earthy / Smoky,NOTE-0187,Guaiac Wood,8.151,4.89,11.411,base,modifier
+ACC-0227,Herbal Ganja Smoke,Earthy / Smoky,NOTE-0205,Iso E Super,6.126,3.675,8.576,base,modifier
+ACC-0227,Herbal Ganja Smoke,Earthy / Smoky,NOTE-0465,Musk Ketone,5.199,3.12,7.279,base,modifier
+ACC-0227,Herbal Ganja Smoke,Earthy / Smoky,NOTE-0583,Cade Oil (Low),5.911,3.547,8.275,base,support
+ACC-0227,Herbal Ganja Smoke,Earthy / Smoky,NOTE-0585,Patchouli Absolute,14.613,8.768,20.458,base,support
+ACC-0227,Herbal Ganja Smoke,Earthy / Smoky,NOTE-0587,Cannabis Accord,60.0,36.0,84.0,heart,driver
+ACC-0228,Feral Ganja Skin,Earthy / Animalic,NOTE-0205,Iso E Super,6.734,4.04,9.428,base,modifier
+ACC-0228,Feral Ganja Skin,Earthy / Animalic,NOTE-0465,Musk Ketone,5.716,3.43,8.002,base,modifier
+ACC-0228,Feral Ganja Skin,Earthy / Animalic,NOTE-0559,Cumin Seed Oil,15.462,9.276,21.646,heart,modifier
+ACC-0228,Feral Ganja Skin,Earthy / Animalic,NOTE-0569,Civet Replacer,11.664,6.998,16.33,base,support
+ACC-0228,Feral Ganja Skin,Earthy / Animalic,NOTE-0585,Patchouli Absolute,15.886,9.532,22.24,base,support
+ACC-0228,Feral Ganja Skin,Earthy / Animalic,NOTE-0587,Cannabis Accord,44.538,26.724,62.354,heart,driver
+ACC-0229,Dirty Hemp Leather,Earthy / Animalic,NOTE-0205,Iso E Super,5.84,3.504,8.174,base,modifier
+ACC-0229,Dirty Hemp Leather,Earthy / Animalic,NOTE-0455,Labdanum Absolute,7.946,4.768,11.124,base,modifier
+ACC-0229,Dirty Hemp Leather,Earthy / Animalic,NOTE-0476,Habanolide,5.394,3.236,7.552,base,modifier
+ACC-0229,Dirty Hemp Leather,Earthy / Animalic,NOTE-0556,Suederal,15.186,9.112,21.26,base,support
+ACC-0229,Dirty Hemp Leather,Earthy / Animalic,NOTE-0579,Birch Tar (Low),5.634,3.38,7.888,base,support
+ACC-0229,Dirty Hemp Leather,Earthy / Animalic,NOTE-0589,Hemp Accord,60.0,36.0,84.0,heart,driver
+ACC-0230,Ganja Barnyard,Earthy / Animalic,NOTE-0205,Iso E Super,5.836,3.502,8.17,base,modifier
+ACC-0230,Ganja Barnyard,Earthy / Animalic,NOTE-0465,Musk Ketone,4.952,2.972,6.934,base,modifier
+ACC-0230,Ganja Barnyard,Earthy / Animalic,NOTE-0516,Castoreum Replacer,5.342,3.206,7.478,base,modifier
+ACC-0230,Ganja Barnyard,Earthy / Animalic,NOTE-0570,Costus Root,10.106,6.064,14.148,base,support
+ACC-0230,Ganja Barnyard,Earthy / Animalic,NOTE-0585,Patchouli Absolute,13.764,8.258,19.27,base,support
+ACC-0230,Ganja Barnyard,Earthy / Animalic,NOTE-0587,Cannabis Accord,60.0,36.0,84.0,heart,driver
+ACC-0231,Wet Fur Soil,Earthy / Animalic,NOTE-0205,Iso E Super,5.426108522170445,3.2560651213024263,7.596151923038462,base,modifier
+ACC-0231,Wet Fur Soil,Earthy / Animalic,NOTE-0452,Oakmoss Absolute,10.706214124282488,6.424128482569653,14.990299805996122,base,support
+ACC-0231,Wet Fur Soil,Earthy / Animalic,NOTE-0476,Habanolide,5.01210024200484,3.0080601612032245,7.016140322806457,base,modifier
+ACC-0231,Wet Fur Soil,Earthy / Animalic,NOTE-0569,Civet Replacer,9.666193323866478,5.800116002320047,13.532270645412911,base,support
+ACC-0231,Wet Fur Soil,Earthy / Animalic,NOTE-0586,Vetiver Java,9.188183763675276,5.514110282205645,12.864257285145706,base,modifier
+ACC-0231,Wet Fur Soil,Earthy / Animalic,NOTE-0591,Geosmin Accord,60.00120002400049,36.000720014400294,84.00168003360068,heart,driver
+ACC-0232,Smoked Ganja Fur,Earthy / Animalic,NOTE-0187,Guaiac Wood,9.645807083858323,5.787884242315154,13.50372992540149,base,modifier
+ACC-0232,Smoked Ganja Fur,Earthy / Animalic,NOTE-0205,Iso E Super,7.249855002899942,4.3499130017399645,10.149797004059918,base,modifier
+ACC-0232,Smoked Ganja Fur,Earthy / Animalic,NOTE-0465,Musk Ketone,6.15387692246155,3.69192616147677,8.613827723445532,base,modifier
+ACC-0232,Smoked Ganja Fur,Earthy / Animalic,NOTE-0516,Castoreum Replacer,9.955800883982318,5.9738805223895515,13.937721245575087,base,support
+ACC-0232,Smoked Ganja Fur,Earthy / Animalic,NOTE-0583,Cade Oil (Low),6.995860082798344,4.197916041679166,9.793804123917521,base,support
+ACC-0232,Smoked Ganja Fur,Earthy / Animalic,NOTE-0587,Cannabis Accord,59.998800023999515,35.99928001439971,83.99832003359933,heart,driver
+ACC-0233,Dark Soil Musk,Earthy / Animalic,NOTE-0205,Iso E Super,4.602,2.762,6.444,base,modifier
+ACC-0233,Dark Soil Musk,Earthy / Animalic,NOTE-0465,Musk Ketone,3.906,2.344,5.468,base,modifier
+ACC-0233,Dark Soil Musk,Earthy / Animalic,NOTE-0476,Habanolide,12.754,7.652,17.854,base,support
+ACC-0233,Dark Soil Musk,Earthy / Animalic,NOTE-0570,Costus Root,4.1,2.46,5.74,base,modifier
+ACC-0233,Dark Soil Musk,Earthy / Animalic,NOTE-0585,Patchouli Absolute,14.638,8.784,20.494,base,support
+ACC-0233,Dark Soil Musk,Earthy / Animalic,NOTE-0591,Geosmin Accord,60.0,36.0,84.0,heart,driver
+ACC-0234,uicy Pear Skin,Fruity,NOTE-0592,Pear Accord,100.0,60.0,140.0,top,driver
+ACC-0235,Juicy Pear Skin,Fruity,NOTE-0021,Ambroxan,9.794,5.876,13.712,base,modifier
+ACC-0235,Juicy Pear Skin,Fruity,NOTE-0205,Iso E Super,21.206,12.724,29.688,base,modifier
+ACC-0235,Juicy Pear Skin,Fruity,NOTE-0465,Musk Ketone,9.0,5.4,12.6,base,modifier
+ACC-0235,Juicy Pear Skin,Fruity,NOTE-0593,Ethyl Maltol (Low),60.0,36.0,84.0,heart,support
+ACC-0236,Crisp Green Mango,Fruity / Green,NOTE-0205,Iso E Super,21.062,12.637,29.486,base,modifier
+ACC-0236,Crisp Green Mango,Fruity / Green,NOTE-0465,Musk Ketone,8.938,5.363,12.514,base,modifier
+ACC-0236,Crisp Green Mango,Fruity / Green,NOTE-0477,Galbanum Resin,45.0,27.0,63.0,heart,support
+ACC-0236,Crisp Green Mango,Fruity / Green,NOTE-0588,Blackcurrant Bud,7.389,4.433,10.345,top,support
+ACC-0236,Crisp Green Mango,Fruity / Green,NOTE-0594,Green Mango Accord,17.611,10.567,24.655,top,driver
+ACC-0237,Dark Plum Wine,Fruity / Dark,NOTE-0205,Iso E Super,15.284,9.17,21.397,base,modifier
+ACC-0237,Dark Plum Wine,Fruity / Dark,NOTE-0465,Musk Ketone,6.486,3.892,9.081,base,modifier
+ACC-0237,Dark Plum Wine,Fruity / Dark,NOTE-0585,Patchouli Absolute,18.23,10.938,25.522,base,support
+ACC-0237,Dark Plum Wine,Fruity / Dark,NOTE-0595,Plum Accord,36.104,21.662,50.545,heart,driver
+ACC-0237,Dark Plum Wine,Fruity / Dark,NOTE-0596,Davana Oil,23.896,14.338,33.455,heart,support
+ACC-0238,Peach Nectar,Fruity,NOTE-0205,Iso E Super,16.135,9.681,22.589,base,modifier
+ACC-0238,Peach Nectar,Fruity,NOTE-0408,Vanilla Absolute,17.017,10.21,23.824,base,support
+ACC-0238,Peach Nectar,Fruity,NOTE-0465,Musk Ketone,6.848,4.109,9.587,base,modifier
+ACC-0238,Peach Nectar,Fruity,NOTE-0597,Peach Lactone,34.835,20.901,48.769,heart,driver
+ACC-0238,Peach Nectar,Fruity,NOTE-0598,Apricot Accord,25.165,15.099,35.231,heart,support
+ACC-0239,Citrus Berry Splash,Fruity,NOTE-0175,Grapefruit,17.096,10.258,23.935,top,support
+ACC-0239,Citrus Berry Splash,Fruity,NOTE-0205,Iso E Super,38.294,22.976,53.611,base,modifier
+ACC-0239,Citrus Berry Splash,Fruity,NOTE-0465,Musk Ketone,16.252,9.751,22.752,base,modifier
+ACC-0239,Citrus Berry Splash,Fruity,NOTE-0588,Blackcurrant Bud,8.955,5.373,12.537,top,support
+ACC-0239,Citrus Berry Splash,Fruity,NOTE-0599,Raspberry Ketone,19.403,11.642,27.164,top,driver
+ACC-0240,Tropical Passion Fruit,Fruity,NOTE-0205,Iso E Super,21.062,12.637,29.486,base,modifier
+ACC-0240,Tropical Passion Fruit,Fruity,NOTE-0465,Musk Ketone,8.938,5.363,12.514,base,modifier
+ACC-0240,Tropical Passion Fruit,Fruity,NOTE-0600,Passionfruit Accord,14.45,8.67,20.23,top,driver
+ACC-0240,Tropical Passion Fruit,Fruity,NOTE-0601,Pineapple Accord,10.55,6.33,14.77,top,support
+ACC-0240,Tropical Passion Fruit,Fruity,NOTE-0602,Mango Accord,45.0,27.0,63.0,heart,support
+ACC-0241,Red Apple Juice,Fruity,NOTE-0205,Iso E Super,38.29361706382936,22.97577024229758,53.61046389536104,base,modifier
+ACC-0241,Red Apple Juice,Fruity,NOTE-0465,Musk Ketone,16.251837481625184,9.75090249097509,22.75177248227518,base,modifier
+ACC-0241,Red Apple Juice,Fruity,NOTE-0533,Aldehyde C-6,13.122868771312287,7.873921260787392,18.371816281837184,top,support
+ACC-0241,Red Apple Juice,Fruity,NOTE-0584,Apple Accord,21.35078649213508,12.810871891281089,29.891701082989172,top,driver
+ACC-0241,Red Apple Juice,Fruity,NOTE-0592,Pear Accord,10.980890191098089,6.587934120658794,15.372846271537284,top,support
+ACC-0242,Fig Milk Fruit,Fruity / Creamy,NOTE-0205,Iso E Super,14.902,8.941,20.863,base,modifier
+ACC-0242,Fig Milk Fruit,Fruity / Creamy,NOTE-0354,Sandalwood,18.774,11.264,26.283,base,support
+ACC-0242,Fig Milk Fruit,Fruity / Creamy,NOTE-0465,Musk Ketone,6.324,3.795,8.854,base,modifier
+ACC-0242,Fig Milk Fruit,Fruity / Creamy,NOTE-0518,Coconut Lactone,25.063,15.038,35.089,heart,support
+ACC-0242,Fig Milk Fruit,Fruity / Creamy,NOTE-0603,Fig Accord,34.937,20.962,48.911,heart,driver
+ACC-0243,Saffron,Spicy,NOTE-0021,Ambroxan,9.321093210932109,5.593055930559306,13.049130491304911,base,support
+ACC-0243,Saffron,Spicy,NOTE-0349,Saffron,31.66731667316673,19.00019000190002,44.33344333443334,heart,driver
+ACC-0243,Saffron,Spicy,NOTE-0455,Labdanum Absolute,13.403134031340313,8.042080420804208,18.76518765187652,base,support
+ACC-0243,Saffron,Spicy,NOTE-0458,Patchouli Alcohol,7.744077440774407,4.647046470464705,10.84210842108421,base,modifier
+ACC-0243,Saffron,Spicy,NOTE-0501,Rose Absolute,17.000170001700017,10.200102001020008,23.800238002380024,heart,support
+ACC-0243,Saffron,Spicy,NOTE-0605,Safraleine,20.86420864208642,12.519125191251913,29.21129211292113,base|heart,driver
+ACC-0244,Dark Rose,Floral,NOTE-0349,Saffron,16.927169271692716,10.15610156101561,23.698236982369824,heart,support
+ACC-0244,Dark Rose,Floral,NOTE-0455,Labdanum Absolute,6.774067740677406,4.064040640406404,9.484094840948408,base,support
+ACC-0244,Dark Rose,Floral,NOTE-0501,Rose Absolute,43.073430734307344,25.844258442584426,60.302603026030255,heart,driver
+ACC-0244,Dark Rose,Floral,NOTE-0525,Cypriol Oil,11.03411034110341,6.621066210662107,15.448154481544815,base,support
+ACC-0244,Dark Rose,Floral,NOTE-0604,Patchouli Oil,16.674166741667417,10.005100051000511,23.344233442334424,base,driver
+ACC-0244,Dark Rose,Floral,NOTE-0607,Oud Synthetic,5.517055170551705,3.3100331003310033,7.724077240772408,base,modifier
+ACC-0245,Oud Rose,Floral,NOTE-0003,Agarwood (Oud),17.74,10.644,24.836,base,driver
+ACC-0245,Oud Rose,Floral,NOTE-0021,Ambroxan,6.991,4.194,9.787,base,modifier
+ACC-0245,Oud Rose,Floral,NOTE-0349,Saffron,18.596,11.157,26.034,heart,support
+ACC-0245,Oud Rose,Floral,NOTE-0455,Labdanum Absolute,5.808,3.485,8.131,base,modifier
+ACC-0245,Oud Rose,Floral,NOTE-0501,Rose Absolute,41.404,24.843,57.966,heart,driver
+ACC-0245,Oud Rose,Floral,NOTE-0604,Patchouli Oil,9.461,5.677,13.246,base,support
+ACC-0246,Saffron Leather,Leather,NOTE-0021,Ambroxan,6.307063070630706,3.7840378403784034,8.830088300883009,base,modifier
+ACC-0246,Saffron Leather,Leather,NOTE-0349,Saffron,36.106361063610635,21.664216642166423,50.54950549505495,heart,driver
+ACC-0246,Saffron Leather,Leather,NOTE-0455,Labdanum Absolute,6.077060770607706,3.6460364603646034,8.508085080850808,base,support
+ACC-0246,Saffron Leather,Leather,NOTE-0485,IsoButyl Quinoline,8.618086180861809,5.171051710517105,12.065120651206511,base,support
+ACC-0246,Saffron Leather,Leather,NOTE-0605,Safraleine,33.08633086330863,19.851198511985118,46.32046320463204,base|heart,driver
+ACC-0246,Saffron Leather,Leather,NOTE-0606,Styrax Resinoid,9.80509805098051,5.883058830588306,13.727137271372714,base,support
+ACC-0247,Patchouli Dark,Woody,NOTE-0452,Oakmoss Absolute,8.308,4.985,11.631,base,modifier
+ACC-0247,Patchouli Dark,Woody,NOTE-0453,Vetiver Haiti,15.577,9.346,21.808,base,support
+ACC-0247,Patchouli Dark,Woody,NOTE-0455,Labdanum Absolute,14.539,8.723,20.354,base,support
+ACC-0247,Patchouli Dark,Woody,NOTE-0515,Patchouli Heart,22.154,13.293,31.016,base,support
+ACC-0247,Patchouli Dark,Woody,NOTE-0525,Cypriol Oil,8.471,5.082,11.859,base,support
+ACC-0247,Patchouli Dark,Woody,NOTE-0604,Patchouli Oil,30.951,18.571,43.331,base,driver
+ACC-0248,Vetiver Smoky,Woody,NOTE-0021,Ambroxan,9.631807363852722,5.778884422311553,13.483730325393493,base,modifier
+ACC-0248,Vetiver Smoky,Woody,NOTE-0205,Iso E Super,8.89082218355633,5.333893322133557,12.4467510649787,base,modifier
+ACC-0248,Vetiver Smoky,Woody,NOTE-0453,Vetiver Haiti,31.48737025259495,18.89262214755705,44.082118357632844,base,driver
+ACC-0248,Vetiver Smoky,Woody,NOTE-0454,Cedarwood Atlas,14.739705205895882,8.843823123537529,20.635587288254236,base,support
+ACC-0248,Vetiver Smoky,Woody,NOTE-0525,Cypriol Oil,14.037719245615088,8.422831543369133,19.65260694786104,base,support
+ACC-0248,Vetiver Smoky,Woody,NOTE-0586,Vetiver Java,21.212575748485033,12.727745445091099,29.697406051878964,base,support
+ACC-0249,Musky Amber,Amber,NOTE-0021,Ambroxan,31.44631446314463,18.868188681886817,44.02444024440244,base,driver
+ACC-0249,Musky Amber,Amber,NOTE-0087,Cashmeran,8.780087800878007,5.268052680526805,12.29312293122931,base,support
+ACC-0249,Musky Amber,Amber,NOTE-0455,Labdanum Absolute,14.216142161421613,8.530085300853008,19.90219902199022,base,support
+ACC-0249,Musky Amber,Amber,NOTE-0456,Vanillin,14.895148951489514,8.937089370893707,20.85420854208542,base,support
+ACC-0249,Musky Amber,Amber,NOTE-0505,Galaxolide,22.509225092250922,13.505135051350514,31.512315123151232,base,driver
+ACC-0249,Musky Amber,Amber,NOTE-0608,Tonalid,8.153081530815308,4.892048920489205,11.41511415114151,base,modifier
+ACC-0250,Animalic Leather,Leather,NOTE-0046,Birch Tar,6.4319356806431935,3.858961410385896,9.00490995090049,base,support
+ACC-0250,Animalic Leather,Leather,NOTE-0349,Saffron,59.99940000599994,35.999640003599964,83.99916000839991,heart,modifier
+ACC-0250,Animalic Leather,Leather,NOTE-0455,Labdanum Absolute,4.512954870451295,2.707972920270797,6.317936820631793,base,support
+ACC-0250,Animalic Leather,Leather,NOTE-0609,Muscone,13.016869831301685,7.809921900780991,18.22381776182238,base,driver
+ACC-0250,Animalic Leather,Leather,NOTE-0610,Civetone,9.14790852091479,5.488945110548894,12.806871931280687,base,driver
+ACC-0250,Animalic Leather,Leather,NOTE-0611,Castoreum Absolute,6.890931090689093,4.134958650413496,9.647903520964789,base,support
+ACC-0251,Resinous Amber,Amber,NOTE-0021,Ambroxan,9.463,5.678,13.248,base,modifier
+ACC-0251,Resinous Amber,Amber,NOTE-0284,Opoponax,13.607,8.164,19.05,base,support
+ACC-0251,Resinous Amber,Amber,NOTE-0455,Labdanum Absolute,28.726,17.236,40.217,base,driver
+ACC-0251,Resinous Amber,Amber,NOTE-0456,Vanillin,11.491,6.894,16.087,base,support
+ACC-0251,Resinous Amber,Amber,NOTE-0457,Benzoin Siam,23.052,13.831,32.273,base,driver
+ACC-0251,Resinous Amber,Amber,NOTE-0606,Styrax Resinoid,13.661,8.196,19.125,base,support
+ACC-0252,Oriental Amber,Amber,NOTE-0455,Labdanum Absolute,13.411,8.047,18.775,base,driver
+ACC-0252,Oriental Amber,Amber,NOTE-0456,Vanillin,11.36,6.816,15.904,base,driver
+ACC-0252,Oriental Amber,Amber,NOTE-0457,Benzoin Siam,7.623,4.574,10.672,base,support
+ACC-0252,Oriental Amber,Amber,NOTE-0496,Tonka Bean Absolute,3.886,2.332,5.441,base,modifier
+ACC-0252,Oriental Amber,Amber,NOTE-0604,Patchouli Oil,3.72,2.232,5.208,base,support
+ACC-0252,Oriental Amber,Amber,NOTE-0612,Cinnamon Oil,60.0,36.0,84.0,heart,support
+ACC-0253,Spicy Leather,Leather,NOTE-0349,Saffron,19.13980860191398,11.483885161148388,26.79573204267957,heart,driver
+ACC-0253,Spicy Leather,Leather,NOTE-0455,Labdanum Absolute,19.91580084199158,11.949880501194986,27.88272117278827,base,support
+ACC-0253,Spicy Leather,Leather,NOTE-0513,Clove Bud Oil,7.177928220717792,4.306956930430696,10.048899511004889,heart,modifier
+ACC-0253,Spicy Leather,Leather,NOTE-0514,Nutmeg Oil,8.261917380826192,4.956950430495694,11.565884341156588,heart,support
+ACC-0253,Spicy Leather,Leather,NOTE-0606,Styrax Resinoid,20.08379916200838,12.049879501204988,28.11671883281167,base,support
+ACC-0253,Spicy Leather,Leather,NOTE-0612,Cinnamon Oil,25.42074579254207,15.251847481525184,35.588644113558864,heart,driver
+ACC-0254,Tobacco Leather,Leather,NOTE-0046,Birch Tar,18.419184191841918,11.051110511105112,25.787257872578724,base,driver
+ACC-0254,Tobacco Leather,Leather,NOTE-0455,Labdanum Absolute,9.133091330913308,5.480054800548006,12.786127861278612,base,modifier
+ACC-0254,Tobacco Leather,Leather,NOTE-0456,Vanillin,11.66511665116651,6.9990699906999065,16.332163321633217,base,support
+ACC-0254,Tobacco Leather,Leather,NOTE-0496,Tonka Bean Absolute,17.613176131761318,10.56810568105681,24.658246582465825,base,support
+ACC-0254,Tobacco Leather,Leather,NOTE-0519,Tobacco Absolute,29.355293552935528,17.613176131761318,41.09741097410974,base,driver
+ACC-0254,Tobacco Leather,Leather,NOTE-0606,Styrax Resinoid,13.814138141381413,8.289082890828908,19.34019340193402,base,support
+ACC-0255,Incense Smoke,Resinous,NOTE-0453,Vetiver Haiti,4.039,2.423,5.654,base,modifier
+ACC-0255,Incense Smoke,Resinous,NOTE-0454,Cedarwood Atlas,4.605,2.763,6.448,base,support
+ACC-0255,Incense Smoke,Resinous,NOTE-0455,Labdanum Absolute,7.456,4.474,10.439,base,support
+ACC-0255,Incense Smoke,Resinous,NOTE-0606,Styrax Resinoid,6.579,3.947,9.211,base,support
+ACC-0255,Incense Smoke,Resinous,NOTE-0613,Frankincense Oil,67.379,40.427,94.33,base|heart,driver
+ACC-0255,Incense Smoke,Resinous,NOTE-0614,Myrrh Resinoid,9.942,5.965,13.918,base,driver
+ACC-0256,Dry Woody,Woody,NOTE-0021,Ambroxan,14.830148301483014,8.898088980889808,20.76220762207622,base,support
+ACC-0256,Dry Woody,Woody,NOTE-0205,Iso E Super,9.180091800918008,5.508055080550806,12.853128531285313,base,modifier
+ACC-0256,Dry Woody,Woody,NOTE-0453,Vetiver Haiti,21.48321483214832,12.890128901289012,30.07630076300763,base,driver
+ACC-0256,Dry Woody,Woody,NOTE-0454,Cedarwood Atlas,33.54433544335443,20.12620126201262,46.96246962469625,base,driver
+ACC-0256,Dry Woody,Woody,NOTE-0462,Patchouli Coeur,7.582075820758207,4.549045490454905,10.61510615106151,base,modifier
+ACC-0256,Dry Woody,Woody,NOTE-0525,Cypriol Oil,13.380133801338014,8.028080280802808,18.733187331873317,base,support
+ACC-0257,Amber Oud,Amber,NOTE-0003,Agarwood (Oud),11.563,6.938,16.188,base,driver
+ACC-0257,Amber Oud,Amber,NOTE-0021,Ambroxan,7.812,4.687,10.936,base,support
+ACC-0257,Amber Oud,Amber,NOTE-0349,Saffron,60.0,36.0,84.0,heart,modifier
+ACC-0257,Amber Oud,Amber,NOTE-0455,Labdanum Absolute,9.901,5.941,13.862,base,driver
+ACC-0257,Amber Oud,Amber,NOTE-0456,Vanillin,4.557,2.734,6.379,base,support
+ACC-0257,Amber Oud,Amber,NOTE-0604,Patchouli Oil,6.167,3.7,8.634,base,support
+ACC-0258,Spicy Oud,Woody,NOTE-0003,Agarwood (Oud),19.564804351956482,11.738882611173889,27.39072609273907,base,driver
+ACC-0258,Spicy Oud,Woody,NOTE-0349,Saffron,20.382796172038276,12.229877701222987,28.53571464285357,heart,driver
+ACC-0258,Spicy Oud,Woody,NOTE-0501,Rose Absolute,7.643923560764392,4.585954140458595,10.70089299107009,heart,modifier
+ACC-0258,Spicy Oud,Woody,NOTE-0550,Cardamom Oil,29.383706162938367,17.62982370176298,41.13658863411366,heart|top,support
+ACC-0258,Spicy Oud,Woody,NOTE-0604,Patchouli Oil,10.43489565104349,6.2609373906260934,14.608853911460885,base,support
+ACC-0258,Spicy Oud,Woody,NOTE-0612,Cinnamon Oil,12.589874101258987,7.553924460755392,17.62482375176248,heart,support
+ACC-0259,Floral Oud,Floral,NOTE-0003,Agarwood (Oud),23.754237542375424,14.252142521425215,33.256332563325635,base,driver
+ACC-0259,Floral Oud,Floral,NOTE-0021,Ambroxan,8.49608496084961,5.097050970509705,11.894118941189411,base,modifier
+ACC-0259,Floral Oud,Floral,NOTE-0349,Saffron,12.812128121281212,7.687076870768708,17.937179371793718,heart,support
+ACC-0259,Floral Oud,Floral,NOTE-0492,Jasmine Absolute,14.585145851458515,8.751087510875108,20.41920419204192,heart,support
+ACC-0259,Floral Oud,Floral,NOTE-0501,Rose Absolute,32.602326023260225,19.56119561195612,45.64345643456434,heart,driver
+ACC-0259,Floral Oud,Floral,NOTE-0604,Patchouli Oil,7.750077500775007,4.650046500465005,10.85010850108501,base,support
+ACC-0260,Chypre Classic,Chypre,NOTE-0040,Bergamot,25.000250002500024,15.000150001500014,35.00035000350003,top,driver
+ACC-0260,Chypre Classic,Chypre,NOTE-0205,Iso E Super,3.861038610386104,2.3170231702317023,5.406054060540605,base,modifier
+ACC-0260,Chypre Classic,Chypre,NOTE-0452,Oakmoss Absolute,11.256112561125612,6.754067540675406,15.758157581575814,base,driver
+ACC-0260,Chypre Classic,Chypre,NOTE-0455,Labdanum Absolute,6.378063780637806,3.8270382703827037,8.930089300893009,base,support
+ACC-0260,Chypre Classic,Chypre,NOTE-0492,Jasmine Absolute,17.26017260172602,10.35610356103561,24.164241642416425,heart,support
+ACC-0260,Chypre Classic,Chypre,NOTE-0501,Rose Absolute,27.740277402774026,16.644166441664414,38.836388363883636,heart,support
+ACC-0260,Chypre Classic,Chypre,NOTE-0604,Patchouli Oil,8.504085040850407,5.103051030510304,11.906119061190612,base,support
+ACC-0261,Chypre Fruity,Chypre,NOTE-0021,Ambroxan,6.139061390613906,3.6840368403684036,8.59508595085951,base,modifier
+ACC-0261,Chypre Fruity,Chypre,NOTE-0040,Bergamot,25.000250002500024,15.000150001500014,35.00035000350003,top,driver
+ACC-0261,Chypre Fruity,Chypre,NOTE-0452,Oakmoss Absolute,14.316143161431615,8.590085900859009,20.04320043200432,base,driver
+ACC-0261,Chypre Fruity,Chypre,NOTE-0501,Rose Absolute,18.57818578185782,11.14711147111471,26.009260092600925,heart,support
+ACC-0261,Chypre Fruity,Chypre,NOTE-0588,Blackcurrant Bud,26.422264222642227,15.853158531585315,36.99136991369914,heart,driver
+ACC-0261,Chypre Fruity,Chypre,NOTE-0604,Patchouli Oil,9.54409544095441,5.727057270572706,13.362133621336213,base,support
+ACC-0262,Chypre Leather,Chypre,NOTE-0040,Bergamot,45.455,27.273,63.636,top,driver
+ACC-0262,Chypre Leather,Chypre,NOTE-0452,Oakmoss Absolute,17.635,10.581,24.689,base,driver
+ACC-0262,Chypre Leather,Chypre,NOTE-0455,Labdanum Absolute,9.993,5.996,13.99,base,support
+ACC-0262,Chypre Leather,Chypre,NOTE-0485,IsoButyl Quinoline,4.776,2.866,6.687,base,modifier
+ACC-0262,Chypre Leather,Chypre,NOTE-0604,Patchouli Oil,13.324,7.994,18.654,base,support
+ACC-0262,Chypre Leather,Chypre,NOTE-0606,Styrax Resinoid,8.817,5.29,12.344,base,support
+ACC-0263,Chypre Floral,Chypre,NOTE-0021,Ambroxan,6.019060190601906,3.6120361203612035,8.427084270842707,base,modifier
+ACC-0263,Chypre Floral,Chypre,NOTE-0040,Bergamot,25.000250002500024,15.000150001500014,35.00035000350003,top,driver
+ACC-0263,Chypre Floral,Chypre,NOTE-0452,Oakmoss Absolute,14.037140371403714,8.422084220842208,19.65219652196522,base,driver
+ACC-0263,Chypre Floral,Chypre,NOTE-0462,Patchouli Coeur,9.943099430994309,5.966059660596606,13.920139201392013,base,support
+ACC-0263,Chypre Floral,Chypre,NOTE-0492,Jasmine Absolute,17.386173861738616,10.43210432104321,24.341243412434125,heart,support
+ACC-0263,Chypre Floral,Chypre,NOTE-0501,Rose Absolute,27.614276142761426,16.56816568165682,38.65938659386594,heart,driver
+ACC-0264,Oudh Powdery,Oriental,NOTE-0003,Agarwood (Oud),13.997,8.398,19.595,base,driver
+ACC-0264,Oudh Powdery,Oriental,NOTE-0456,Vanillin,13.297,7.978,18.615,base,support
+ACC-0264,Oudh Powdery,Oriental,NOTE-0501,Rose Absolute,20.14,12.084,28.196,heart,support
+ACC-0264,Oudh Powdery,Oriental,NOTE-0527,Orris Butter,39.86,23.916,55.804,heart,driver
+ACC-0264,Oudh Powdery,Oriental,NOTE-0609,Muscone,5.708,3.425,7.992,base,modifier
+ACC-0264,Oudh Powdery,Oriental,NOTE-0616,Ambrette Seed Oil,6.998,4.199,9.798,base,support
+ACC-0265,Powder Soft,Floral,NOTE-0021,Ambroxan,8.491915080849193,5.094949050509494,11.887881121188787,base,modifier
+ACC-0265,Powder Soft,Floral,NOTE-0456,Vanillin,16.65683343166568,9.993900060999389,23.318766812331873,base,support
+ACC-0265,Powder Soft,Floral,NOTE-0484,Heliotropin,22.729772702272978,13.637863621363785,31.821681783182164,heart,driver
+ACC-0265,Powder Soft,Floral,NOTE-0501,Rose Absolute,8.944910550894491,5.3669463305366945,12.522874771252287,heart,support
+ACC-0265,Powder Soft,Floral,NOTE-0527,Orris Butter,28.32471675283247,16.994830051699484,39.65460345396546,heart,driver
+ACC-0265,Powder Soft,Floral,NOTE-0617,Muscenone,14.851851481485184,8.91091089089109,20.79179208207918,base,support
+ACC-0266,Musky Skin,Musky,NOTE-0087,Cashmeran,14.436,8.662,20.211,base,support
+ACC-0266,Musky Skin,Musky,NOTE-0205,Iso E Super,9.524,5.714,13.333,base,support
+ACC-0266,Musky Skin,Musky,NOTE-0456,Vanillin,8.889,5.333,12.444,base,modifier
+ACC-0266,Musky Skin,Musky,NOTE-0505,Galaxolide,30.159,18.095,42.222,base,driver
+ACC-0266,Musky Skin,Musky,NOTE-0507,Ambrettolide,21.654,12.992,30.316,base,driver
+ACC-0266,Musky Skin,Musky,NOTE-0617,Muscenone,15.338,9.203,21.474,base,support
+ACC-0267,Musky Floral,Musky,NOTE-0021,Ambroxan,12.241877581224188,7.344926550734492,17.137828621713783,base,support
+ACC-0267,Musky Floral,Musky,NOTE-0456,Vanillin,7.1409285907140925,4.284957150428496,9.99690003099969,base,modifier
+ACC-0267,Musky Floral,Musky,NOTE-0492,Jasmine Absolute,25.030749692503072,15.017849821501784,35.042649573504264,heart,driver
+ACC-0267,Musky Floral,Musky,NOTE-0501,Rose Absolute,34.968650313496866,20.981790182098177,48.95651043489565,heart,driver
+ACC-0267,Musky Floral,Musky,NOTE-0505,Galaxolide,13.771862281377185,8.26291737082629,19.28080719192808,base,support
+ACC-0267,Musky Floral,Musky,NOTE-0609,Muscone,6.845931540684592,4.106958930410696,9.58390416095839,base,support
+ACC-0268,Vanilla Custard,Gourmand,NOTE-0039,Benzoin,7.168071680716807,4.301043010430105,10.036100361003609,base,modifier
+ACC-0268,Vanilla Custard,Gourmand,NOTE-0205,Iso E Super,5.153051530515304,3.092030920309203,7.214072140721408,base,modifier
+ACC-0268,Vanilla Custard,Gourmand,NOTE-0408,Vanilla Absolute,23.30423304233042,13.983139831398313,32.62632626326263,base,driver
+ACC-0268,Vanilla Custard,Gourmand,NOTE-0465,Musk Ketone,4.374043740437404,2.6240262402624026,6.124061240612406,base,modifier
+ACC-0268,Vanilla Custard,Gourmand,NOTE-0563,Milk Lactone,37.729377293772934,22.638226382263824,52.82152821528215,heart,support
+ACC-0268,Vanilla Custard,Gourmand,NOTE-0618,Egg Accord,22.27122271222712,13.362133621336213,31.17931179311793,heart,support
+ACC-0269,Caramel Flan,Gourmand,NOTE-0205,Iso E Super,4.138,2.483,5.794,base,modifier
+ACC-0269,Caramel Flan,Gourmand,NOTE-0399,Tonka Bean,5.819,3.491,8.147,base,modifier
+ACC-0269,Caramel Flan,Gourmand,NOTE-0408,Vanilla Absolute,9.522,5.713,13.331,base,support
+ACC-0269,Caramel Flan,Gourmand,NOTE-0465,Musk Ketone,3.513,2.108,4.918,base,modifier
+ACC-0269,Caramel Flan,Gourmand,NOTE-0593,Ethyl Maltol (Low),60.0,36.0,84.0,heart,support
+ACC-0269,Caramel Flan,Gourmand,NOTE-0619,Caramel Accord,17.008,10.205,23.811,base,driver
+ACC-0270,Chocolate Fudge,Gourmand,NOTE-0039,Benzoin,11.265,6.759,15.771,base,modifier
+ACC-0270,Chocolate Fudge,Gourmand,NOTE-0205,Iso E Super,8.098,4.859,11.337,base,modifier
+ACC-0270,Chocolate Fudge,Gourmand,NOTE-0399,Tonka Bean,17.081,10.249,23.914,base,support
+ACC-0270,Chocolate Fudge,Gourmand,NOTE-0408,Vanilla Absolute,24.846,14.907,34.784,base,support
+ACC-0270,Chocolate Fudge,Gourmand,NOTE-0465,Musk Ketone,6.874,4.124,9.623,base,modifier
+ACC-0270,Chocolate Fudge,Gourmand,NOTE-0544,Cocoa Absolute,31.836,19.102,44.571,base,driver
+ACC-0271,Almond Croissant,Gourmand,NOTE-0039,Benzoin,10.042,6.025,14.059,base,modifier
+ACC-0271,Almond Croissant,Gourmand,NOTE-0205,Iso E Super,7.219,4.331,10.107,base,modifier
+ACC-0271,Almond Croissant,Gourmand,NOTE-0408,Vanilla Absolute,16.611,9.967,23.256,base,support
+ACC-0271,Almond Croissant,Gourmand,NOTE-0465,Musk Ketone,6.128,3.677,8.579,base,modifier
+ACC-0271,Almond Croissant,Gourmand,NOTE-0620,Almond Accord,36.104,21.662,50.545,heart,driver
+ACC-0271,Almond Croissant,Gourmand,NOTE-0621,Butter Accord,23.896,14.338,33.455,heart,support
+ACC-0272,Honey Cake,Gourmand,NOTE-0205,Iso E Super,3.9350393503935037,2.3610236102361024,5.5090550905509055,base,modifier
+ACC-0272,Honey Cake,Gourmand,NOTE-0399,Tonka Bean,5.533055330553306,3.320033200332003,7.747077470774707,base,modifier
+ACC-0272,Honey Cake,Gourmand,NOTE-0408,Vanilla Absolute,12.073120731207313,7.244072440724406,16.902169021690217,base,support
+ACC-0272,Honey Cake,Gourmand,NOTE-0465,Musk Ketone,3.340033400334003,2.004020040200402,4.676046760467605,base,modifier
+ACC-0272,Honey Cake,Gourmand,NOTE-0574,Honey Absolute,15.118151181511815,9.071090710907109,21.16621166211662,base,driver
+ACC-0272,Honey Cake,Gourmand,NOTE-0580,Cinnamon Bark,60.000600006000056,36.000360003600036,84.00084000840008,heart,support
+ACC-0273,Milk Chocolate Truffle,Gourmand,NOTE-0039,Benzoin,5.874058740587405,3.525035250352503,8.224082240822408,base,modifier
+ACC-0273,Milk Chocolate Truffle,Gourmand,NOTE-0205,Iso E Super,4.223042230422304,2.534025340253402,5.912059120591206,base,modifier
+ACC-0273,Milk Chocolate Truffle,Gourmand,NOTE-0408,Vanilla Absolute,9.71709717097171,5.830058300583006,13.604136041360412,base,support
+ACC-0273,Milk Chocolate Truffle,Gourmand,NOTE-0465,Musk Ketone,3.5840358403584034,2.151021510215102,5.018050180501804,base,modifier
+ACC-0273,Milk Chocolate Truffle,Gourmand,NOTE-0544,Cocoa Absolute,16.601166011660116,9.96109961099611,23.242232422324225,base,driver
+ACC-0273,Milk Chocolate Truffle,Gourmand,NOTE-0563,Milk Lactone,60.000600006000056,36.000360003600036,84.00084000840008,heart,support
+ACC-0274,Burnt Sugar Crème,Gourmand,NOTE-0205,Iso E Super,3.867038670386704,2.320023200232002,5.414054140541405,base,modifier
+ACC-0274,Burnt Sugar Crème,Gourmand,NOTE-0399,Tonka Bean,5.438054380543805,3.263032630326303,7.613076130761308,base,modifier
+ACC-0274,Burnt Sugar Crème,Gourmand,NOTE-0408,Vanilla Absolute,11.864118641186412,7.119071190711907,16.610166101661015,base,support
+ACC-0274,Burnt Sugar Crème,Gourmand,NOTE-0465,Musk Ketone,3.282032820328203,1.969019690196902,4.595045950459504,base,modifier
+ACC-0274,Burnt Sugar Crème,Gourmand,NOTE-0563,Milk Lactone,60.000600006000056,36.000360003600036,84.00084000840008,heart,support
+ACC-0274,Burnt Sugar Crème,Gourmand,NOTE-0622,Burnt Sugar Accord,15.548155481554815,9.32909329093291,21.76721767217672,base,driver
+ACC-0275,Oudh Accord (Clean),Oud/Woody,NOTE-0003,Agarwood (Oud),33.372333723337235,20.02320023200232,46.72146721467214,base,driver
+ACC-0275,Oudh Accord (Clean),Oud/Woody,NOTE-0205,Iso E Super,10.03210032100321,6.019060190601906,14.045140451404514,base,modifier
+ACC-0275,Oudh Accord (Clean),Oud/Woody,NOTE-0220,Labdanum,12.411124111241111,7.447074470744707,17.37617376173762,base,modifier
+ACC-0275,Oudh Accord (Clean),Oud/Woody,NOTE-0454,Cedarwood Atlas,22.83722837228372,13.702137021370213,31.97131971319713,base,support
+ACC-0275,Oudh Accord (Clean),Oud/Woody,NOTE-0623,Cypriol (Nagarmotha),21.347213472134722,12.808128081280811,29.886298862988628,base,support
+ACC-0276,Oudh Accord (Dark Animalic),Oud/Animalic,NOTE-0003,Agarwood (Oud),45.199548004519954,27.119728802711972,63.27936720632793,base,driver
+ACC-0276,Oudh Accord (Dark Animalic),Oud/Animalic,NOTE-0046,Birch Tar,6.430935690643094,3.858961410385896,9.00290997090029,base,modifier
+ACC-0276,Oudh Accord (Dark Animalic),Oud/Animalic,NOTE-0140,Cypriol,21.083789162108378,12.649873501264986,29.51770482295177,base,support
+ACC-0276,Oudh Accord (Dark Animalic),Oud/Animalic,NOTE-0465,Musk Ketone,10.748892511074889,6.448935510644893,15.047849521504784,base,modifier
+ACC-0276,Oudh Accord (Dark Animalic),Oud/Animalic,NOTE-0624,Castoreum Accord,16.536834631653683,9.92190078099219,23.150768492315077,base,support
+ACC-0277,Powdery Accord (Cosmetic),Powdery,NOTE-0039,Benzoin,5.311,3.187,7.435,base,modifier
+ACC-0277,Powdery Accord (Cosmetic),Powdery,NOTE-0465,Musk Ketone,12.962,7.777,18.147,base,modifier
+ACC-0277,Powdery Accord (Cosmetic),Powdery,NOTE-0484,Heliotropin,24.0,14.4,33.6,heart,support
+ACC-0277,Powdery Accord (Cosmetic),Powdery,NOTE-0581,Iris Butter,21.727,13.036,30.417,base,driver
+ACC-0277,Powdery Accord (Cosmetic),Powdery,NOTE-0625,Violet Ionones,36.0,21.6,50.4,heart,support
+ACC-0278,Musky Skin Accord,Musky,NOTE-0087,Cashmeran,5.276052760527605,3.166031660316603,7.387073870738707,base,modifier
+ACC-0278,Musky Skin Accord,Musky,NOTE-0205,Iso E Super,14.693146931469315,8.816088160881609,20.57120571205712,base,modifier
+ACC-0278,Musky Skin Accord,Musky,NOTE-0476,Habanolide,25.468254682546824,15.281152811528115,35.65635656356563,base,support
+ACC-0278,Musky Skin Accord,Musky,NOTE-0505,Galaxolide,37.112371123711235,22.267222672226723,51.957519575195754,base,driver
+ACC-0278,Musky Skin Accord,Musky,NOTE-0507,Ambrettolide,17.450174501745018,10.47010470104701,24.430244302443022,base,support
+ACC-0279,Lavender Aromatic Accord,Aromatic,NOTE-0134,Coumarin,22.351,13.411,31.291,base,modifier
+ACC-0279,Lavender Aromatic Accord,Aromatic,NOTE-0447,Lavender Absolute,45.0,27.0,63.0,heart,driver
+ACC-0279,Lavender Aromatic Accord,Aromatic,NOTE-0509,Linalool,14.737,8.842,20.632,top,support
+ACC-0279,Lavender Aromatic Accord,Aromatic,NOTE-0510,Linalyl Acetate,10.263,6.158,14.368,top,support
+ACC-0279,Lavender Aromatic Accord,Aromatic,NOTE-0626,Oakmoss (Low),7.649,4.589,10.709,base,modifier
+ACC-0280,Iris Powder Accord,Floral/Powdery,NOTE-0420,Violet Leaf,34.468,20.681,48.255,heart,support
+ACC-0280,Iris Powder Accord,Floral/Powdery,NOTE-0465,Musk Ketone,5.984,3.591,8.378,base,modifier
+ACC-0280,Iris Powder Accord,Floral/Powdery,NOTE-0484,Heliotropin,25.532,15.319,35.745,heart,modifier
+ACC-0280,Iris Powder Accord,Floral/Powdery,NOTE-0581,Iris Butter,20.061,12.036,28.085,base,driver
+ACC-0280,Iris Powder Accord,Floral/Powdery,NOTE-0627,Orris Resinoid,13.955,8.373,19.537,base,support
+ACC-0281,Sweet Vanilla Amber,Sweet/Amber,NOTE-0012,Amber Accord,27.128,16.277,37.979,base,support
+ACC-0281,Sweet Vanilla Amber,Sweet/Amber,NOTE-0039,Benzoin,17.035,10.221,23.848,base,support
+ACC-0281,Sweet Vanilla Amber,Sweet/Amber,NOTE-0269,Musk,7.457,4.474,10.44,base,modifier
+ACC-0281,Sweet Vanilla Amber,Sweet/Amber,NOTE-0399,Tonka Bean,11.477,6.886,16.068,base,modifier
+ACC-0281,Sweet Vanilla Amber,Sweet/Amber,NOTE-0407,Vanilla,36.903,22.142,51.664,base,driver
+ACC-0282,Clean White Musk,Musky/Clean,NOTE-0005,Aldehydes,45.455,27.273,63.636,top,modifier
+ACC-0282,Clean White Musk,Musky/Clean,NOTE-0021,Ambroxan,3.486,2.091,4.88,base,modifier
+ACC-0282,Clean White Musk,Musky/Clean,NOTE-0205,Iso E Super,13.135,7.881,18.389,base,support
+ACC-0282,Clean White Musk,Musky/Clean,NOTE-0434,White Musk,21.671,13.003,30.34,base,driver
+ACC-0282,Clean White Musk,Musky/Clean,NOTE-0505,Galaxolide,16.253,9.752,22.755,base,support
+ACC-0283,Fresh Citrus Woody,Fresh/Woody,NOTE-0040,Bergamot,26.197738022619774,15.718842811571882,36.67663323366766,top,driver
+ACC-0283,Fresh Citrus Woody,Fresh/Woody,NOTE-0094,Cedarwood,24.076759232407678,14.445855541444585,33.706662933370666,base,support
+ACC-0283,Fresh Citrus Woody,Fresh/Woody,NOTE-0205,Iso E Super,20.908790912090875,12.544874551254487,29.271707282927167,base,modifier
+ACC-0283,Fresh Citrus Woody,Fresh/Woody,NOTE-0225,Lemon,19.25680743192568,11.553884461155388,26.95873041269587,top,support
+ACC-0283,Fresh Citrus Woody,Fresh/Woody,NOTE-0269,Musk,9.55990440095599,5.735942640573594,13.383866161338386,base,modifier
+ACC-0284,Lavender Fougere,Aromatic/Fougere,NOTE-0040,Bergamot,25.0,15.0,35.0,top,support
+ACC-0284,Lavender Fougere,Aromatic/Fougere,NOTE-0134,Coumarin,16.073,9.644,22.502,base,support
+ACC-0284,Lavender Fougere,Aromatic/Fougere,NOTE-0222,Lavender,45.0,27.0,63.0,heart,driver
+ACC-0284,Lavender Fougere,Aromatic/Fougere,NOTE-0269,Musk,6.466,3.88,9.053,base,modifier
+ACC-0284,Lavender Fougere,Aromatic/Fougere,NOTE-0626,Oakmoss (Low),7.461,4.477,10.446,base,modifier
+ACC-0285,Powdery Floral,Powdery,NOTE-0194,Heliotrope,24.168,14.501,33.835,heart,support
+ACC-0285,Powdery Floral,Powdery,NOTE-0204,Iris,21.806,13.083,30.528,base,driver
+ACC-0285,Powdery Floral,Powdery,NOTE-0269,Musk,12.864,7.718,18.01,base,modifier
+ACC-0285,Powdery Floral,Powdery,NOTE-0407,Vanilla,5.33,3.198,7.462,base,modifier
+ACC-0285,Powdery Floral,Powdery,NOTE-0418,Violet,35.832,21.499,50.165,heart,support
+ACC-0286,Sweet Fruity Candy,Sweet/Fruity,NOTE-0269,Musk,10.589894101058988,6.353936460635393,14.825851741482586,base,modifier
+ACC-0286,Sweet Fruity Candy,Sweet/Fruity,NOTE-0327,Raspberry,19.230807691923083,11.537884621153788,26.92273077269227,top,support
+ACC-0286,Sweet Fruity Candy,Sweet/Fruity,NOTE-0375,Strawberry,26.223737762622374,15.733842661573384,36.71263287367126,top,driver
+ACC-0286,Sweet Fruity Candy,Sweet/Fruity,NOTE-0407,Vanilla,29.02070979290207,17.41182588174118,40.62859371406285,base,support
+ACC-0286,Sweet Fruity Candy,Sweet/Fruity,NOTE-0628,Sugar Accord,14.934850651493484,8.96091039089609,20.908790912090875,base,modifier
+ACC-0287,Fresh Linen Clean,Laundry/Clean,NOTE-0005,Aldehydes,45.455,27.273,63.636,top,driver
+ACC-0287,Fresh Linen Clean,Laundry/Clean,NOTE-0021,Ambroxan,4.612,2.767,6.457,base,modifier
+ACC-0287,Fresh Linen Clean,Laundry/Clean,NOTE-0205,Iso E Super,10.863,6.518,15.208,base,modifier
+ACC-0287,Fresh Linen Clean,Laundry/Clean,NOTE-0434,White Musk,22.94,13.764,32.116,base,support
+ACC-0287,Fresh Linen Clean,Laundry/Clean,NOTE-0505,Galaxolide,16.13,9.678,22.582,base,support
+ACC-0288,Cotton Clean,Laundry/Clean,NOTE-0005,Aldehydes,25.0,15.0,35.0,top,driver
+ACC-0288,Cotton Clean,Laundry/Clean,NOTE-0205,Iso E Super,10.311,6.187,14.436,base,modifier
+ACC-0288,Cotton Clean,Laundry/Clean,NOTE-0233,Lily-of-the-Valley,45.0,27.0,63.0,heart,support
+ACC-0288,Cotton Clean,Laundry/Clean,NOTE-0434,White Musk,15.311,9.186,21.435,base,support
+ACC-0288,Cotton Clean,Laundry/Clean,NOTE-0507,Ambrettolide,4.378,2.627,6.129,base,modifier
+ACC-0289,Clean Shampoo Fresh,Shampoo/Clean,NOTE-0166,Freesia,45.0,27.0,63.0,heart,support
+ACC-0289,Clean Shampoo Fresh,Shampoo/Clean,NOTE-0180,Green Apple,14.381,8.628,20.133,top,driver
+ACC-0289,Clean Shampoo Fresh,Shampoo/Clean,NOTE-0205,Iso E Super,10.068,6.041,14.095,base,modifier
+ACC-0289,Clean Shampoo Fresh,Shampoo/Clean,NOTE-0303,Pear,10.619,6.372,14.867,top,support
+ACC-0289,Clean Shampoo Fresh,Shampoo/Clean,NOTE-0434,White Musk,19.932,11.959,27.905,base,modifier
+ACC-0290,Herbal Shampoo Clean,Shampoo/Herbal,NOTE-0155,Eucalyptus,8.212,4.927,11.496,top,support
+ACC-0290,Herbal Shampoo Clean,Shampoo/Herbal,NOTE-0205,Iso E Super,10.068,6.041,14.095,base,modifier
+ACC-0290,Herbal Shampoo Clean,Shampoo/Herbal,NOTE-0222,Lavender,45.0,27.0,63.0,heart,support
+ACC-0290,Herbal Shampoo Clean,Shampoo/Herbal,NOTE-0344,Rosemary,16.788,10.073,23.504,top,driver
+ACC-0290,Herbal Shampoo Clean,Shampoo/Herbal,NOTE-0434,White Musk,19.932,11.959,27.905,base,modifier
+ACC-0291,Floral Shampoo Soft,Shampoo/Floral,NOTE-0205,Iso E Super,13.424,8.054,18.793,base,modifier
+ACC-0291,Floral Shampoo Soft,Shampoo/Floral,NOTE-0233,Lily-of-the-Valley,16.0,9.6,22.4,heart,support
+ACC-0291,Floral Shampoo Soft,Shampoo/Floral,NOTE-0306,Peony,19.556,11.733,27.378,heart,support
+ACC-0291,Floral Shampoo Soft,Shampoo/Floral,NOTE-0338,Rose,24.444,14.667,34.222,heart,driver
+ACC-0291,Floral Shampoo Soft,Shampoo/Floral,NOTE-0434,White Musk,26.576,15.946,37.207,base,modifier
+ACC-0292,Baby Clean,Laundry/Clean,NOTE-0005,Aldehydes,25.0,15.0,35.0,top,driver
+ACC-0292,Baby Clean,Laundry/Clean,NOTE-0205,Iso E Super,4.712,2.827,6.597,base,modifier
+ACC-0292,Baby Clean,Laundry/Clean,NOTE-0407,Vanilla,6.631,3.979,9.284,base,modifier
+ACC-0292,Baby Clean,Laundry/Clean,NOTE-0484,Heliotropin,45.0,27.0,63.0,heart,support
+ACC-0292,Baby Clean,Laundry/Clean,NOTE-0629,Powdery Musk,18.657,11.194,26.12,base,support
+ACC-0293,Fresh Citrus Laundry,Laundry/Citrus,NOTE-0005,Aldehydes,8.417,5.05,11.783,top,support
+ACC-0293,Fresh Citrus Laundry,Laundry/Citrus,NOTE-0040,Bergamot,16.558,9.935,23.181,top,support
+ACC-0293,Fresh Citrus Laundry,Laundry/Citrus,NOTE-0205,Iso E Super,18.305,10.983,25.627,base,modifier
+ACC-0293,Fresh Citrus Laundry,Laundry/Citrus,NOTE-0225,Lemon,20.48,12.288,28.672,top,driver
+ACC-0293,Fresh Citrus Laundry,Laundry/Citrus,NOTE-0434,White Musk,36.24,21.744,50.737,base,modifier
+ACC-0294,Oriental Spicy,Spicy,NOTE-0284,Opoponax,11.887,7.132,16.642,base,modifier
+ACC-0294,Oriental Spicy,Spicy,NOTE-0456,Vanillin,18.113,10.868,25.358,base,support
+ACC-0294,Oriental Spicy,Spicy,NOTE-0513,Clove Bud Oil,13.059,7.836,18.283,heart,driver
+ACC-0294,Oriental Spicy,Spicy,NOTE-0514,Nutmeg Oil,9.795,5.877,13.712,heart,support
+ACC-0294,Oriental Spicy,Spicy,NOTE-0550,Cardamom Oil,29.861,17.917,41.806,heart|top,support
+ACC-0294,Oriental Spicy,Spicy,NOTE-0612,Cinnamon Oil,17.285,10.371,24.198,heart,driver
+ACC-0295,Powdery Musk,Floral,NOTE-0456,Vanillin,3.4529654703452963,2.0719792802071977,4.833951660483394,base,modifier
+ACC-0295,Powdery Musk,Floral,NOTE-0484,Heliotropin,8.051919480805191,4.830951690483095,11.271887281127189,base,support
+ACC-0295,Powdery Musk,Floral,NOTE-0506,Helvetolide,11.951880481195188,7.170928290717093,16.731832681673183,base,driver
+ACC-0295,Powdery Musk,Floral,NOTE-0524,Benzyl Salicylate,62.64137358626414,37.58462415375846,87.6981230187698,base|heart,support
+ACC-0295,Powdery Musk,Floral,NOTE-0527,Orris Butter,5.346946530534694,3.207967920320797,7.485925140748592,base,support
+ACC-0295,Powdery Musk,Floral,NOTE-0608,Tonalid,8.55491445085549,5.1329486705132945,11.976880231197688,base,driver
+ACC-0296,Creamy Sandalwood,Woody,NOTE-0456,Vanillin,14.256857431425685,8.553914460855392,19.95980040199598,base,support
+ACC-0296,Creamy Sandalwood,Woody,NOTE-0461,Sandalore,19.209807901920982,11.525884741152588,26.892731072689273,base,support
+ACC-0296,Creamy Sandalwood,Woody,NOTE-0632,Sandalwood Oil,27.01372986270137,16.207837921620783,37.81862181378186,base,driver
+ACC-0296,Creamy Sandalwood,Woody,NOTE-0659,Javanol,20.40979590204098,12.245877541224587,28.573714262857372,base,driver
+ACC-0296,Creamy Sandalwood,Woody,NOTE-0660,Bacdanol,11.905880941190588,7.143928560714393,16.66783332166678,base,support
+ACC-0296,Creamy Sandalwood,Woody,NOTE-0661,Romandolide,7.203927960720392,4.321956780432195,10.08489915100849,base,modifier
+ACC-0297,Tonka,Gourmand,NOTE-0134,Coumarin,24.244,14.547,33.942,base,driver
+ACC-0297,Tonka,Gourmand,NOTE-0456,Vanillin,19.336,11.601,27.07,base,support
+ACC-0297,Tonka,Gourmand,NOTE-0457,Benzoin Siam,12.122,7.273,16.971,base,support
+ACC-0297,Tonka,Gourmand,NOTE-0484,Heliotropin,11.314,6.788,15.84,base,support
+ACC-0297,Tonka,Gourmand,NOTE-0496,Tonka Bean Absolute,25.591,15.355,35.828,base,driver
+ACC-0297,Tonka,Gourmand,NOTE-0631,Cetalox,7.393,4.436,10.35,base,modifier
+ACC-0298,Peach,Fruity,NOTE-0456,Vanillin,40.0,24.0,56.0,base,support
+ACC-0298,Peach,Fruity,NOTE-0504,Damascenone,10.059,6.036,14.083,heart,support
+ACC-0298,Peach,Fruity,NOTE-0511,Gamma-Undecalactone,21.302,12.781,29.822,heart,driver
+ACC-0298,Peach,Fruity,NOTE-0655,Aldehyde C-14,22.485,13.491,31.479,heart,driver
+ACC-0298,Peach,Fruity,NOTE-0665,Benzyl Acetate,6.154,3.692,8.615,heart,modifier
+ACC-0299,Creamy Floral,Floral,NOTE-0456,Vanillin,20.10620106201062,12.063120631206312,28.148281482814827,base,support
+ACC-0299,Creamy Floral,Floral,NOTE-0492,Jasmine Absolute,16.071160711607117,9.64309643096431,22.49922499224992,heart,support
+ACC-0299,Creamy Floral,Floral,NOTE-0494,Ylang-Ylang Extra,17.075170751707514,10.24510245102451,23.905239052390524,heart,driver
+ACC-0299,Creamy Floral,Floral,NOTE-0524,Benzyl Salicylate,14.472144721447215,8.683086830868309,20.261202612026118,base|heart,support
+ACC-0299,Creamy Floral,Floral,NOTE-0645,Tuberose Absolute,21.27021270212702,12.762127621276212,29.778297782977827,heart,driver
+ACC-0299,Creamy Floral,Floral,NOTE-0666,Exaltolide,11.00511005110051,6.603066030660306,15.407154071540715,base,modifier

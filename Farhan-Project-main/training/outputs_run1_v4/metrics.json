@@ -1,0 +1,39 @@
+{
+  "baseline": {
+    "val": {
+      "primary_top1": 0.04234527687296417,
+      "primary_top3": 0.15092290988056462
+    },
+    "test": {
+      "primary_top1": 0.053203040173724216,
+      "primary_top3": 0.16178067318132464
+    }
+  },
+  "model": {
+    "val": {
+      "micro_f1@0.5": 0.11719745222929936,
+      "macro_f1@0.5": 0.02849412870708025,
+      "micro_f1@top2": 0.0902304446608244,
+      "macro_f1@top2": 0.025730494937708258,
+      "primary_top1": 0.07600434310532031,
+      "primary_top3": 0.2290988056460369,
+      "ndcg@2_vs_secondary": 0.09635936469303925,
+      "descriptor_recon_f1": 0.8565230864580106
+    },
+    "test": {
+      "micro_f1@0.5": 0.11412358133669609,
+      "macro_f1@0.5": 0.034745195899987806,
+      "micro_f1@top2": 0.08142164781906301,
+      "macro_f1@top2": 0.03068235453403072,
+      "primary_top1": 0.0749185667752443,
+      "primary_top3": 0.21064060803474485,
+      "ndcg@2_vs_secondary": 0.09460680264228595,
+      "descriptor_recon_f1": 0.8542435424354243
+    }
+  },
+  "best_epoch": 4,
+  "n_params": 23052584,
+  "backbone": "sentence-transformers/all-MiniLM-L6-v2",
+  "smoke": false,
+  "epochs": 8
+}

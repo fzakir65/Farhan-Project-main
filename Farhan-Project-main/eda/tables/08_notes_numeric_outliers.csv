@@ -1,0 +1,11 @@
+col,note_id,note_name,value
+molecular_weight,NOTE-0015,Ambergris,428.7
+odor_threshold_mg_L,NOTE-0797,Limonene,1.0
+tenacity_min_hrs,NOTE-0611,Castoreum Absolute,72.0
+tenacity_min_hrs,NOTE-0690,Ambergris Tincture,72.0
+tenacity_min_hrs,NOTE-0694,Ambrein,72.0
+tenacity_min_hrs,NOTE-0733,Civet Absolute,72.0
+tenacity_max_hrs,NOTE-0611,Castoreum Absolute,72.0
+tenacity_max_hrs,NOTE-0690,Ambergris Tincture,72.0
+tenacity_max_hrs,NOTE-0694,Ambrein,72.0
+tenacity_max_hrs,NOTE-0733,Civet Absolute,72.0

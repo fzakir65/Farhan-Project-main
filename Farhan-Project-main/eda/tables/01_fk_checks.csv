@@ -1,0 +1,12 @@
+check,n_orphans,examples
+accord_note.accord_id ⊆ accords.accord_id,0,
+accord_note.note_id ⊆ notes_master.note_id,0,
+accord_recipe_default.accord_id ⊆ accords.accord_id,0,
+accord_recipe_default.note_id ⊆ notes_master.note_id,0,
+training.target_accord_id_primary ⊆ accords.accord_id,0,
+training.target_accord_id_secondary ⊆ accords.accord_id,0,
+training.target_perfume_id_reference ⊆ perfumes.perfume_id,0,
+perfume_accord.accord_id ⊆ accords.accord_id,0,
+perfume_accord.perfume_id ⊆ perfumes.perfume_id,0,
+perfume_note.note_id ⊆ notes_master.note_id,0,
+perfume_note.perfume_id ⊆ perfumes.perfume_id,0,

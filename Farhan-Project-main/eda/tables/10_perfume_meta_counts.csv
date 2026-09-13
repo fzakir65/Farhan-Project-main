@@ -1,0 +1,54 @@
+field,value,n
+gender,Unisex,245
+gender,Men,102
+gender,Male,46
+gender,Female,39
+gender,"Spring, Summer, Day",7
+gender,female,2
+gender,male,2
+gender,men,1
+gender,women,1
+gender,unisex,1
+gender,"Spring, Fall, Day",1
+gender,"Spring, Summer, Day, Evening",1
+gender,"All Seasons, Day, Evening",1
+gender,Women,1
+longevity,moderate,126
+longevity,long lasting,89
+longevity,Long lasting,84
+longevity,Eternal,76
+longevity,Long Lasting,31
+longevity,Moderate,17
+longevity,eternal,7
+longevity,Very Long Lasting,6
+longevity,very long lasting,4
+longevity,weak,2
+longevity,Moderate to long lasting,2
+longevity,strong,2
+longevity,Very weak,1
+longevity,very weak,1
+longevity,11K long lasting,1
+longevity,Very long lasting,1
+sillage,moderate,151
+sillage,Strong,121
+sillage,Moderate,52
+sillage,strong,42
+sillage,Enormous,37
+sillage,intimate,9
+sillage,enormous,9
+sillage,soft,7
+sillage,Intimate,4
+sillage,heavy,3
+sillage,Heavy,3
+sillage,Moderate to strong,1
+sillage,Very strong,1
+sillage,Clean powdery iris with soft woods and fresh spices.,1
+sillage,Deep aquatic freshness with aromatic herbs and mineral woods.,1
+sillage,Crisp marine citrus blended with light florals and woody amber.,1
+sillage,Fresh spicy aromatic blend with aldehydes and woody amber.,1
+sillage,Bright citrus cologne with soft musk and airy freshness.,1
+sillage,Clean citrus–aromatic scent with florals and warm woods.,1
+sillage,Clean woody–citrus freshness with incense and aromatic spices.,1
+sillage,Clean citrus–herbal scent with soft woods and florals.,1
+sillage,Fresh aquatic green scent with fruity apple and soft woods.,1
+sillage,Fresh herbal citrus scent with clean aromatic woods.,1

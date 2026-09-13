@@ -1,0 +1,6 @@
+Material_A,CAS_A,Material_B,CAS_B,Rule_Type,Issue,Action,Limit_Basis
+Methyl heptine carbonate,111-12-6,Methyl octine carbonate,111-80-8,ifra,Combined MHC + MOC must not exceed the MHC limit; MOC must also respect its own limit,Sum both and cap at the MHC Cat 4 limit; cap MOC at its own Cat 4 limit (see group_rules mhc_moc),IFRA_STD_062 / IFRA_STD_064
+Oakmoss Absolute,90028-68-5,Treemoss,90028-67-4,ifra,Combined total must not exceed the category limit,Sum both and cap at the oakmoss Cat 4 limit (see group_rules oakmoss_treemoss),IFRA_STD_067 / IFRA_STD_080
+Birch Tar,8001-88-5,Cade Oil,8013-10-3,ifra_spec,Both are pyrolysis oils: crude grades prohibited; PAH markers from rectified oils (with styrax/opoponax oils) must total <=1 ppb in the final product,Allow only documented rectified grades; FLAG for supplier CoA check; keep combined level low (see group_rules pah_pyrolysis_oils),IFRA_STD_114 / IFRA_STD_119
+Indole,120-72-9,Skatole,83-34-1,olfactory,Combined animalic intensity overwhelming,Flag - reduce both,none (olfactory judgement)
+Vanillin,121-33-5,Ethyl Vanillin,121-32-4,olfactory,Combined vanilla dominates formula,Flag - cap combined,none (olfactory judgement)

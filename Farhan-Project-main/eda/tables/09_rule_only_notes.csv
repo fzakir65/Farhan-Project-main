@@ -1,0 +1,222 @@
+note_id,note_name,normalized_note_name,chemical_family,odor_family
+NOTE-0447,Lavender Absolute,lavender_absolute,Terpenoid,Floral / Herbal
+NOTE-0448,Lavandin Oil,lavandin_oil,Floral Oil,Aromatic / Fresh
+NOTE-0449,Bergamot Oil,bergamot_oil,Terpenoid Ester,Citrus / Fresh
+NOTE-0450,Geranium Oil,geranium_oil,,
+NOTE-0451,Clary Sage Oil,clary_sage_oil,Terpenoid,Aromatic / Herbal
+NOTE-0452,Oakmoss Absolute,oakmoss_absolute,Lichen Extract,Mossy / Woody
+NOTE-0453,Vetiver Haiti,vetiver_haiti,Sesquiterpene Alcohol,Woody / Rooty
+NOTE-0454,Cedarwood Atlas,cedarwood_atlas,Sesquiterpene Alcohol,Woody / Dry
+NOTE-0455,Labdanum Absolute,labdanum_absolute,Resin,Amber / Resinous
+NOTE-0456,Vanillin,vanillin,Aromatic Aldehyde,Sweet / Vanilla
+NOTE-0457,Benzoin Siam,benzoin_siam,Resin,Sweet / Balsamic
+NOTE-0458,Patchouli Alcohol,patchouli_alcohol,Sesquiterpene,Woody / Earthy
+NOTE-0459,Cedarwood Virginia,cedarwood_virginia,Sesquiterpene Alcohol,Woody / Sweet
+NOTE-0460,Vetiveryl Acetate,vetiveryl_acetate,Ester,Woody / Soft
+NOTE-0461,Sandalore,sandalore,Terpene Alcohol,Woody / Creamy
+NOTE-0462,Patchouli Coeur,patchouli_coeur,Terpene Fraction,Woody / Clean
+NOTE-0463,Evernyl,evernyl,Aromatic Ether,Mossy / Woody
+NOTE-0464,Aldehyde C-12 MNA,aldehyde_c_12_mna,Aldehyde,Aldehydic / Soapy
+NOTE-0465,Musk Ketone,musk_ketone,Nitro Musk,Musky / Sweet
+NOTE-0466,Black Tea Absolute,black_tea_absolute,Polyphenolic,Smoky / Dry
+NOTE-0467,Mate Absolute,mate_absolute,Alkaloid Extract,Green / Smoky
+NOTE-0468,Hay Absolute,hay_absolute,Aromatic Extract,Dry / Sweet
+NOTE-0469,Frankincense CO₂,frankincense_co2,Resin Extract,Resinous / Citrus
+NOTE-0470,Myrrh Absolute,myrrh_absolute,,
+NOTE-0471,Birch Tar Rectified,birch_tar_rectified,Phenolic,Smoky / Leather
+NOTE-0472,Guaiac Wood Oil,guaiac_wood_oil,Sesquiterpene Alcohol,Woody / Smoky
+NOTE-0473,Ambergris Accord,ambergris_accord,,
+NOTE-0474,Aldehyde C-11,aldehyde_c_11,Aldehyde,Aldehydic / Green
+NOTE-0475,Seaweed Absolute,seaweed_absolute,Marine Extract,Marine / Salty
+NOTE-0476,Habanolide,habanolide,Macrocyclic Musk,Musky / Metallic
+NOTE-0477,Galbanum Resin,galbanum_resin,Resin,Green / Bitter
+NOTE-0478,Elemi Resin,elemi_resin,Resin,Resinous / Fresh
+NOTE-0479,Lentisque Absolute,lentisque_absolute,,
+NOTE-0480,Violet Leaf Absolute,violet_leaf_absolute,Aromatic Extract,Green / Floral
+NOTE-0481,Orris Concrete,orris_concrete,,
+NOTE-0482,Rice Powder Accord,rice_powder_accord,,
+NOTE-0483,Mimosa Absolute,mimosa_absolute,Aromatic Extract,Floral / Powdery
+NOTE-0484,Heliotropin,heliotropin,Aromatic Aldehyde,Powdery / Sweet
+NOTE-0485,IsoButyl Quinoline,isobutyl_quinoline,Nitrogen Heterocycle,Leather / Bitter
+NOTE-0486,Geosmin Trace,geosmin_trace,,
+NOTE-0487,Cardamom CO₂,cardamom_co2,,
+NOTE-0488,Pink Pepper CO₂,pink_pepper_co2,,
+NOTE-0489,Aldehyde C-10,aldehyde_c_10,Aliphatic Aldehyde,Aldehydic / Citrus
+NOTE-0490,Lemon Oil,lemon_oil,Monoterpene,Citrus / Sharp
+NOTE-0491,Petitgrain Oil,petitgrain_oil,Terpenoid,Citrus / Green
+NOTE-0492,Jasmine Absolute,jasmine_absolute,Aromatic Ester,White Floral
+NOTE-0493,Orange Blossom Absolute,orange_blossom_absolute,Aromatic Extract,Floral / Citrus
+NOTE-0494,Ylang-Ylang Extra,ylang_ylang_extra,Terpenoid,Floral / Sweet
+NOTE-0495,Ethyl Maltol,ethyl_maltol,Lactone,Sweet / Caramel
+NOTE-0496,Tonka Bean Absolute,tonka_bean_absolute,Lactone,Sweet / Powdery
+NOTE-0497,Calone,calone,Ketone,Marine / Ozonic
+NOTE-0498,Dihydromyrcenol,dihydromyrcenol,Terpenoid Alcohol,Fresh / Citrus
+NOTE-0499,Lavender Oil,lavender_oil,Terpenoid Alcohol,Aromatic / Floral
+NOTE-0500,Phenyl Ethyl Alcohol,phenyl_ethyl_alcohol,,
+NOTE-0501,Rose Absolute,rose_absolute,Aromatic Extract,Floral / Rosy
+NOTE-0502,Geraniol,geraniol,Terpenoid Alcohol,Floral / Sweet
+NOTE-0503,Citronellol,citronellol,Terpenoid Alcohol,Floral / Fresh
+NOTE-0504,Damascenone,damascenone,Ketone,Fruity / Floral
+NOTE-0505,Galaxolide,galaxolide,Polycyclic Musk,Musky / Clean
+NOTE-0506,Helvetolide,helvetolide,Macrocyclic Ester,Musky / Fruity
+NOTE-0507,Ambrettolide,ambrettolide,Macrocyclic Lactone,Musky / Sweet
+NOTE-0508,Ethylene Brassylate,ethylene_brassylate,Macrocyclic Musk,Musky / Sweet
+NOTE-0509,Linalool,linalool,Terpenoid Alcohol,Floral / Fresh
+NOTE-0510,Linalyl Acetate,linalyl_acetate,Terpenoid Ester,Floral / Fresh
+NOTE-0511,Gamma-Undecalactone,gamma_undecalactone,,
+NOTE-0512,Cinnamon Bark Oil,cinnamon_bark_oil,,
+NOTE-0513,Clove Bud Oil,clove_bud_oil,Phenolic,Spicy / Sweet
+NOTE-0514,Nutmeg Oil,nutmeg_oil,Terpenoid,Spicy / Warm
+NOTE-0515,Patchouli Heart,patchouli_heart,Sesquiterpene Alcohol,Woody / Earthy
+NOTE-0516,Castoreum Replacer,castoreum_replacer,Animalic Base,Leather / Animalic
+NOTE-0517,Fig Leaf Accord,fig_leaf_accord,,
+NOTE-0518,Coconut Lactone,coconut_lactone,Lactone,Creamy / Coconut
+NOTE-0519,Tobacco Absolute,tobacco_absolute,Alkaloid Extract,Warm / Sweet
+NOTE-0520,Honey Accord,honey_accord,,
+NOTE-0521,Peppermint Oil,peppermint_oil,,
+NOTE-0522,Menthol Crystals,menthol_crystals,,
+NOTE-0523,Eucalyptol,eucalyptol,,
+NOTE-0524,Benzyl Salicylate,benzyl_salicylate,Aromatic Ester,Floral / Balsamic
+NOTE-0525,Cypriol Oil,cypriol_oil,Root Oil,Woody / Smoky
+NOTE-0526,Grapefruit Oil,grapefruit_oil,Sesquiterpene,Citrus / Bitter
+NOTE-0527,Orris Butter,orris_butter,Rhizome Butter,Powdery / Floral
+NOTE-0528,Iris Aldehyde,iris_aldehyde,,
+NOTE-0529,Carrot Seed Oil,carrot_seed_oil,,
+NOTE-0530,Neroli Oil,neroli_oil,Terpenoid,Floral / Citrus
+NOTE-0531,Hexyl Acetate,hexyl_acetate,,
+NOTE-0532,cis-3-Hexenol,cis_3_hexenol,Alcohol,Green / Fresh
+NOTE-0533,Aldehyde C-6,aldehyde_c_6,Aldehyde,Green / Fresh
+NOTE-0534,Ionone Alpha,ionone_alpha,Ketone,Floral / Woody
+NOTE-0535,Rosemary Oil,rosemary_oil,Terpenoid,Herbal / Fresh
+NOTE-0536,Benzaldehyde,benzaldehyde,,
+NOTE-0537,Pepper Black,pepper_black,,
+NOTE-0538,Ethyl Vanillin,ethyl_vanillin,Phenolic Aldehyde,Sweet / Vanilla
+NOTE-0539,Frankincense Resin,frankincense_resin,,
+NOTE-0540,Aldehyde C-12 Lauric,aldehyde_c_12_lauric,,
+NOTE-0541,Rose Oxide,rose_oxide,Terpene Oxide,Floral / Green
+NOTE-0542,Coffee Absolute,coffee_absolute,Alkaloid Extract,Roasted / Bitter
+NOTE-0543,Pyrazine Accord,pyrazine_accord,,
+NOTE-0544,Cocoa Absolute,cocoa_absolute,Alkaloid Extract,Gourmand / Bitter
+NOTE-0545,Benzyl Alcohol,benzyl_alcohol,Aromatic Alcohol,Floral / Sweet
+NOTE-0546,Cinnamon Leaf Oil,cinnamon_leaf_oil,Phenolic,Spicy / Warm
+NOTE-0547,Cinnamyl Alcohol,cinnamyl_alcohol,Aromatic Alcohol,Spicy / Sweet
+NOTE-0548,Clove Oil,clove_oil,,
+NOTE-0549,Ginger CO₂,ginger_co2,,
+NOTE-0550,Cardamom Oil,cardamom_oil,Terpenoid,Spicy / Fresh
+NOTE-0551,Ethyl Butyrate,ethyl_butyrate,Ester,Fruity / Pineapple
+NOTE-0552,Eugenol,eugenol,Phenolic,Spicy / Clove
+NOTE-0553,Mace Oil,mace_oil,,
+NOTE-0554,Black Pepper Oil,black_pepper_oil,Sesquiterpene,Spicy / Dry
+NOTE-0555,Saffron Accord,saffron_accord,,
+NOTE-0556,Suederal,suederal,Aromatic Ketone,Leather / Suede
+NOTE-0557,Basil Oil,basil_oil,Phenylpropene,Aromatic / Green
+NOTE-0558,Thyme Oil,thyme_oil,Phenolic,Herbal / Spicy
+NOTE-0559,Cumin Seed Oil,cumin_seed_oil,Aldehyde,Spicy / Animalic
+NOTE-0560,Coriander Seed Oil,coriander_seed_oil,Terpenoid,Spicy / Citrus
+NOTE-0561,Ozonic Accord,ozonic_accord,,
+NOTE-0562,Green Tea Absolute,green_tea_absolute,,
+NOTE-0563,Milk Lactone,milk_lactone,,
+NOTE-0564,Rice Accord,rice_accord,,
+NOTE-0565,Violet Ionone,violet_ionone,,
+NOTE-0566,Rum CO₂ Extract,rum_co2_extract,,
+NOTE-0567,Oakwood Extract,oakwood_extract,,
+NOTE-0568,Tomato Leaf Accord,tomato_leaf_accord,,
+NOTE-0569,Civet Replacer,civet_replacer,,
+NOTE-0570,Costus Root,costus_root,,
+NOTE-0571,Olibanum CO₂,olibanum_co2,,
+NOTE-0572,Guaiacol,guaiacol,Phenol,Smoky / Medicinal
+NOTE-0573,Styrax Resin,styrax_resin,Balsamic Resin,Amber / Leather
+NOTE-0574,Honey Absolute,honey_absolute,Animalic Absolute,Sweet / Animalic
+NOTE-0575,Beeswax Absolute,beeswax_absolute,Wax Absolute,Honey / Waxy
+NOTE-0576,Ash Accord,ash_accord,,
+NOTE-0577,Wormwood Accord,wormwood_accord,,
+NOTE-0578,Sandalwood Mysore,sandalwood_mysore,,
+NOTE-0579,Birch Tar (Low),birch_tar_low,,
+NOTE-0580,Cinnamon Bark,cinnamon_bark,,
+NOTE-0581,Iris Butter,iris_butter,Aromatic Ketone,Powdery / Floral
+NOTE-0582,Aldehyde C-12,aldehyde_c_12,,
+NOTE-0583,Cade Oil (Low),cade_oil_low,,
+NOTE-0584,Apple Accord,apple_accord,,
+NOTE-0585,Patchouli Absolute,patchouli_absolute,,
+NOTE-0586,Vetiver Java,vetiver_java,Sesquiterpene Alcohol,Woody / Smoky
+NOTE-0587,Cannabis Accord,cannabis_accord,,
+NOTE-0588,Blackcurrant Bud,blackcurrant_bud,Sulfurous,Fruity / Green
+NOTE-0589,Hemp Accord,hemp_accord,,
+NOTE-0590,Mushroom Accord,mushroom_accord,,
+NOTE-0591,Geosmin Accord,geosmin_accord,,
+NOTE-0592,Pear Accord,pear_accord,,
+NOTE-0593,Ethyl Maltol (Low),ethyl_maltol_low,,
+NOTE-0594,Green Mango Accord,green_mango_accord,,
+NOTE-0595,Plum Accord,plum_accord,,
+NOTE-0596,Davana Oil,davana_oil,,
+NOTE-0597,Peach Lactone,peach_lactone,,
+NOTE-0598,Apricot Accord,apricot_accord,,
+NOTE-0599,Raspberry Ketone,raspberry_ketone,Aromatic Ketone,Fruity / Sweet
+NOTE-0600,Passionfruit Accord,passionfruit_accord,,
+NOTE-0601,Pineapple Accord,pineapple_accord,,
+NOTE-0602,Mango Accord,mango_accord,,
+NOTE-0603,Fig Accord,fig_accord,,
+NOTE-0604,Patchouli Oil,patchouli_oil,Sesquiterpene Alcohol,Woody / Earthy
+NOTE-0605,Safraleine,safraleine,Aromatic Aldehyde,Leather / Spicy
+NOTE-0606,Styrax Resinoid,styrax_resinoid,Resin,Balsamic / Leathery
+NOTE-0607,Oud Synthetic,oud_synthetic,Aromatic Blend,Woody / Amber
+NOTE-0608,Tonalid,tonalid,Polycyclic Musk,Musky / Sweet
+NOTE-0609,Muscone,muscone,Macrocyclic Ketone,Musky / Animalic
+NOTE-0610,Civetone,civetone,Macrocyclic Ketone,Animalic / Musky
+NOTE-0611,Castoreum Absolute,castoreum_absolute,Animalic Absolute,Animalic / Leathery
+NOTE-0612,Cinnamon Oil,cinnamon_oil,,
+NOTE-0613,Frankincense Oil,frankincense_oil,Terpenoid Resin,Resinous / Fresh
+NOTE-0614,Myrrh Resinoid,myrrh_resinoid,Resin,Balsamic / Bitter
+NOTE-0615,Costus Oil,costus_oil,,
+NOTE-0616,Ambrette Seed Oil,ambrette_seed_oil,,
+NOTE-0617,Muscenone,muscenone,Macrocyclic Ketone,Musky / Animalic
+NOTE-0618,Egg Accord,egg_accord,,
+NOTE-0619,Caramel Accord,caramel_accord,,
+NOTE-0620,Almond Accord,almond_accord,,
+NOTE-0621,Butter Accord,butter_accord,,
+NOTE-0622,Burnt Sugar Accord,burnt_sugar_accord,,
+NOTE-0623,Cypriol (Nagarmotha),cypriol_nagarmotha,Sesquiterpene,Woody / Smoky
+NOTE-0624,Castoreum Accord,castoreum_accord,,
+NOTE-0625,Violet Ionones,violet_ionones,,
+NOTE-0626,Oakmoss (Low),oakmoss_low,,
+NOTE-0627,Orris Resinoid,orris_resinoid,,
+NOTE-0628,Sugar Accord,sugar_accord,,
+NOTE-0629,Powdery Musk,powdery_musk,,
+NOTE-0630,Timberol,timberol,Terpene Alcohol,Woody / Dry
+NOTE-0631,Cetalox,cetalox,Amberoid,Amber / Dry
+NOTE-0632,Sandalwood Oil,sandalwood_oil,Sesquiterpene Alcohol,Woody / Creamy
+NOTE-0633,Georgywood,georgywood,Polycyclic Alcohol,Woody / Amber
+NOTE-0634,Pink Pepper Oil,pink_pepper_oil,Terpenoid,Spicy / Fresh
+NOTE-0635,Ginger Oil,ginger_oil,Sesquiterpene,Spicy / Fresh
+NOTE-0636,Sage Oil,sage_oil,Terpenoid,Herbal / Dry
+NOTE-0637,Galbanum Oil,galbanum_oil,Terpenoid,Green / Bitter
+NOTE-0638,Fig Leaf Base,fig_leaf_base,Green Alcohol Blend,Green / Milky
+NOTE-0639,Helional,helional,Aldehyde,Fresh / Aquatic
+NOTE-0640,Melonal,melonal,Aldehyde,Marine / Green
+NOTE-0641,Ambrocenide,ambrocenide,Amberoid,Amber / Woody
+NOTE-0642,Caramel Note,caramel_note,,
+NOTE-0643,Iris Absolute,iris_absolute,,
+NOTE-0644,Veramoss,veramoss,Aromatic Ether,Mossy / Green
+NOTE-0645,Tuberose Absolute,tuberose_absolute,Aromatic Extract,Floral / Creamy
+NOTE-0646,Gardenia Accord,gardenia_accord,,
+NOTE-0647,Phenethyl Alcohol,phenethyl_alcohol,Aromatic Alcohol,Floral / Rose
+NOTE-0648,Ionone Beta,ionone_beta,Ketone,Floral / Fruity
+NOTE-0649,Methyl Ionone,methyl_ionone,Ketone,Floral / Woody
+NOTE-0650,Kephalis,kephalis,Ketone,Amber / Woody
+NOTE-0651,Floralozone,floralozone,Ketone,Ozonic / Floral
+NOTE-0652,Aquozone,aquozone,Ketone,Marine / Fresh
+NOTE-0653,Indole,indole,Heterocyclic,Animalic / Floral
+NOTE-0654,Mandarin Oil,mandarin_oil,Monoterpene,Citrus / Sweet
+NOTE-0655,Aldehyde C-14,aldehyde_c_14,Lactone,Fruity / Peach
+NOTE-0656,Apple Lactone,apple_lactone,Lactone,Fruity / Creamy
+NOTE-0657,Maltol,maltol,Lactone,Sweet / Caramel
+NOTE-0658,Maple Lactone,maple_lactone,Lactone,Sweet / Maple
+NOTE-0659,Javanol,javanol,Terpene Alcohol,Woody / Creamy
+NOTE-0660,Bacdanol,bacdanol,Terpene Alcohol,Woody / Creamy
+NOTE-0661,Romandolide,romandolide,Macrocyclic Musk,Musky / Creamy
+NOTE-0662,Anisaldehyde,anisaldehyde,Aromatic Aldehyde,Sweet / Spicy
+NOTE-0663,Aldehyde C-18,aldehyde_c_18,Lactone,Creamy / Coconut
+NOTE-0664,Gamma-Nonalactone,gamma_nonalactone,,
+NOTE-0665,Benzyl Acetate,benzyl_acetate,Ester,Floral / Fruity
+NOTE-0666,Exaltolide,exaltolide,Macrocyclic Lactone,Musky / Clean
+NOTE-0667,Phenylacetic Acid,phenylacetic_acid,Aromatic Acid,Honey / Animalic

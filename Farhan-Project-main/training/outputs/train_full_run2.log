@@ -1,0 +1,129 @@
+===== detached run via Task Scheduler, started 2026-09-11 02:06:50 =====
+device: cpu | backbone: sentence-transformers/all-MiniLM-L6-v2
+label space: 315 accords | 104 categories
+baseline: TF-IDF + logistic regression ...
+  baseline done in 36s: {'val': {'primary_top1': 0.04451682953311618, 'primary_top3': 0.1444082519001086}, 'test': {'primary_top1': 0.05211726384364821, 'primary_top3': 0.1563517915309446}}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights:  83%|########2 | 85/103 [00:00<00:00, 843.38it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 914.98it/s]
+model params: 23.1M
+train sampler: inverse-sqrt oversampling, class counts 24-317
+co-occurrence mask: 92184 forbidden pairs of 99225
+  epoch 1 step 50/281 loss 22.0624 (2.38s/step)
+  epoch 1 step 100/281 loss 9.5145 (2.36s/step)
+  epoch 1 step 150/281 loss 9.0442 (2.35s/step)
+  epoch 1 step 200/281 loss 8.9453 (2.33s/step)
+  epoch 1 step 250/281 loss 8.6434 (2.35s/step)
+  epoch 1 step 281/281 loss 8.2522 (2.36s/step)
+epoch 1 val: {"micro_f1@0.5": 0.0651, "macro_f1@0.5": 0.0132, "macro_f1@0.5_active": 0.0208, "micro_f1@top2": 0.0604, "macro_f1@top2": 0.0155, "macro_f1@top2_active": 0.0245, "primary_top1": 0.0282, "primary_top3": 0.0793, "ndcg@2_vs_secondary": 0.0608, "descriptor_recon_f1": 0.234}
+  new best (select 0.0750 = top1 0.0282 + 0.2 * desc_f1 0.2340) -> stage12_best.pt
+  epoch 2 step 50/281 loss 7.6776 (2.55s/step)
+  epoch 2 step 100/281 loss 6.8566 (2.42s/step)
+  epoch 2 step 150/281 loss 6.5529 (2.44s/step)
+  epoch 2 step 200/281 loss 6.3058 (2.41s/step)
+  epoch 2 step 250/281 loss 5.9962 (2.39s/step)
+  epoch 2 step 281/281 loss 6.0075 (2.37s/step)
+epoch 2 val: {"micro_f1@0.5": 0.0964, "macro_f1@0.5": 0.0318, "macro_f1@0.5_active": 0.05, "micro_f1@top2": 0.0863, "macro_f1@top2": 0.0287, "macro_f1@top2_active": 0.0452, "primary_top1": 0.0803, "primary_top3": 0.2052, "ndcg@2_vs_secondary": 0.107, "descriptor_recon_f1": 0.8341}
+  new best (select 0.2472 = top1 0.0803 + 0.2 * desc_f1 0.8341) -> stage12_best.pt
+  epoch 3 step 50/281 loss 5.8766 (2.26s/step)
+  epoch 3 step 100/281 loss 5.7772 (2.27s/step)
+  epoch 3 step 150/281 loss 5.6922 (2.28s/step)
+  epoch 3 step 200/281 loss 5.5076 (2.29s/step)
+  epoch 3 step 250/281 loss 5.4307 (2.32s/step)
+  epoch 3 step 281/281 loss 5.4573 (2.31s/step)
+epoch 3 val: {"micro_f1@0.5": 0.0921, "macro_f1@0.5": 0.034, "macro_f1@0.5_active": 0.0535, "micro_f1@top2": 0.0779, "macro_f1@top2": 0.0319, "macro_f1@top2_active": 0.0503, "primary_top1": 0.0706, "primary_top3": 0.1933, "ndcg@2_vs_secondary": 0.1129, "descriptor_recon_f1": 0.8755}
+  epoch 4 step 50/281 loss 5.2345 (2.19s/step)
+  epoch 4 step 100/281 loss 5.2577 (2.27s/step)
+  epoch 4 step 150/281 loss 5.0936 (2.30s/step)
+  epoch 4 step 200/281 loss 4.9655 (2.27s/step)
+  epoch 4 step 250/281 loss 5.0304 (2.27s/step)
+  epoch 4 step 281/281 loss 5.0166 (2.27s/step)
+epoch 4 val: {"micro_f1@0.5": 0.1013, "macro_f1@0.5": 0.0343, "macro_f1@0.5_active": 0.054, "micro_f1@top2": 0.0909, "macro_f1@top2": 0.0318, "macro_f1@top2_active": 0.0501, "primary_top1": 0.063, "primary_top3": 0.1933, "ndcg@2_vs_secondary": 0.1108, "descriptor_recon_f1": 0.909}
+  epoch 5 step 50/281 loss 4.7904 (2.55s/step)
+  epoch 5 step 100/281 loss 4.7674 (2.41s/step)
+  epoch 5 step 150/281 loss 4.6282 (2.37s/step)
+  epoch 5 step 200/281 loss 4.6082 (2.33s/step)
+  epoch 5 step 250/281 loss 4.4537 (2.31s/step)
+  epoch 5 step 281/281 loss 4.4469 (2.31s/step)
+epoch 5 val: {"micro_f1@0.5": 0.096, "macro_f1@0.5": 0.0355, "macro_f1@0.5_active": 0.0559, "micro_f1@top2": 0.0798, "macro_f1@top2": 0.0272, "macro_f1@top2_active": 0.0428, "primary_top1": 0.0662, "primary_top3": 0.1868, "ndcg@2_vs_secondary": 0.1157, "descriptor_recon_f1": 0.9051}
+  new best (select 0.2473 = top1 0.0662 + 0.2 * desc_f1 0.9051) -> stage12_best.pt
+  epoch 6 step 50/281 loss 4.4941 (2.33s/step)
+  epoch 6 step 100/281 loss 4.3289 (2.27s/step)
+  epoch 6 step 150/281 loss 4.2899 (2.26s/step)
+  epoch 6 step 200/281 loss 4.2612 (2.25s/step)
+  epoch 6 step 250/281 loss 4.2828 (2.23s/step)
+  epoch 6 step 281/281 loss 4.2309 (2.23s/step)
+epoch 6 val: {"micro_f1@0.5": 0.0934, "macro_f1@0.5": 0.0326, "macro_f1@0.5_active": 0.0514, "micro_f1@top2": 0.0831, "macro_f1@top2": 0.0293, "macro_f1@top2_active": 0.0461, "primary_top1": 0.0521, "primary_top3": 0.1922, "ndcg@2_vs_secondary": 0.1078, "descriptor_recon_f1": 0.9245}
+  epoch 7 step 50/281 loss 4.1356 (1696.55s/step)
+  epoch 7 step 100/281 loss 4.0336 (849.68s/step)
+  epoch 7 step 150/281 loss 4.0569 (568.43s/step)
+  epoch 7 step 200/281 loss 4.0247 (427.04s/step)
+  epoch 7 step 250/281 loss 3.8668 (342.07s/step)
+  epoch 7 step 281/281 loss 3.8934 (304.58s/step)
+epoch 7 val: {"micro_f1@0.5": 0.0972, "macro_f1@0.5": 0.0363, "macro_f1@0.5_active": 0.0572, "micro_f1@top2": 0.087, "macro_f1@top2": 0.0317, "macro_f1@top2_active": 0.05, "primary_top1": 0.0575, "primary_top3": 0.1922, "ndcg@2_vs_secondary": 0.1207, "descriptor_recon_f1": 0.9264}
+  epoch 8 step 50/281 loss 3.8576 (2.11s/step)
+  epoch 8 step 100/281 loss 3.7632 (1.73s/step)
+  epoch 8 step 150/281 loss 3.7435 (1.57s/step)
+  epoch 8 step 200/281 loss 3.6616 (1.55s/step)
+  epoch 8 step 250/281 loss 3.6686 (1.50s/step)
+  epoch 8 step 281/281 loss 3.6398 (1.48s/step)
+epoch 8 val: {"micro_f1@0.5": 0.1019, "macro_f1@0.5": 0.0397, "macro_f1@0.5_active": 0.0626, "micro_f1@top2": 0.0837, "macro_f1@top2": 0.0326, "macro_f1@top2_active": 0.0514, "primary_top1": 0.0586, "primary_top3": 0.1933, "ndcg@2_vs_secondary": 0.122, "descriptor_recon_f1": 0.9341}
+  epoch 9 step 50/281 loss 3.6820 (1.27s/step)
+  epoch 9 step 100/281 loss 3.6614 (1.27s/step)
+  epoch 9 step 150/281 loss 3.6958 (1.29s/step)
+  epoch 9 step 200/281 loss 3.5487 (1.29s/step)
+  epoch 9 step 250/281 loss 3.5667 (1.30s/step)
+  epoch 9 step 281/281 loss 3.5714 (1.31s/step)
+epoch 9 val: {"micro_f1@0.5": 0.0943, "macro_f1@0.5": 0.0353, "macro_f1@0.5_active": 0.0556, "micro_f1@top2": 0.087, "macro_f1@top2": 0.0335, "macro_f1@top2_active": 0.0528, "primary_top1": 0.0597, "primary_top3": 0.1965, "ndcg@2_vs_secondary": 0.1206, "descriptor_recon_f1": 0.9273}
+  epoch 10 step 50/281 loss 3.4701 (1.37s/step)
+  epoch 10 step 100/281 loss 3.5204 (1.40s/step)
+  epoch 10 step 150/281 loss 3.4064 (1.39s/step)
+  epoch 10 step 200/281 loss 3.4966 (1.42s/step)
+  epoch 10 step 250/281 loss 3.4825 (1.40s/step)
+  epoch 10 step 281/281 loss 3.4632 (1.40s/step)
+epoch 10 val: {"micro_f1@0.5": 0.0949, "macro_f1@0.5": 0.0344, "macro_f1@0.5_active": 0.0542, "micro_f1@top2": 0.087, "macro_f1@top2": 0.0335, "macro_f1@top2_active": 0.0528, "primary_top1": 0.0597, "primary_top3": 0.1987, "ndcg@2_vs_secondary": 0.1255, "descriptor_recon_f1": 0.9311}
+
+FINAL: {
+  "baseline": {
+    "val": {
+      "primary_top1": 0.04451682953311618,
+      "primary_top3": 0.1444082519001086
+    },
+    "test": {
+      "primary_top1": 0.05211726384364821,
+      "primary_top3": 0.1563517915309446
+    }
+  },
+  "model": {
+    "val": {
+      "micro_f1@0.5": 0.09601396566773349,
+      "macro_f1@0.5": 0.03547328433333928,
+      "macro_f1@0.5_active": 0.05587042282500937,
+      "micro_f1@top2": 0.0798442064264849,
+      "macro_f1@top2": 0.02715565467306586,
+      "macro_f1@top2_active": 0.04277015611007872,
+      "primary_top1": 0.06623235613463627,
+      "primary_top3": 0.18675352877307275,
+      "ndcg@2_vs_secondary": 0.1157022341730617,
+      "descriptor_recon_f1": 0.9051138043156961
+    },
+    "test": {
+      "micro_f1@0.5": 0.1120715350223547,
+      "macro_f1@0.5": 0.04343413947934405,
+      "macro_f1@0.5_active": 0.06840876967996687,
+      "micro_f1@top2": 0.09563812600969306,
+      "macro_f1@top2": 0.037924758234314994,
+      "macro_f1@top2_active": 0.05973149421904612,
+      "primary_top1": 0.0727470141150923,
+      "primary_top3": 0.20304017372421282,
+      "ndcg@2_vs_secondary": 0.10880837065581035,
+      "descriptor_recon_f1": 0.9026392961876832
+    }
+  },
+  "best_epoch": 5,
+  "n_params": 23052584,
+  "backbone": "sentence-transformers/all-MiniLM-L6-v2",
+  "smoke": false,
+  "epochs": 10
+}
+report written: C:\Users\onedi\OneDrive\Documents\Farhan-Project-main\Farhan-Project-main\training\TRAINING_REPORT.md
+Done.

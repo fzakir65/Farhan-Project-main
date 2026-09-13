@@ -1,0 +1,43 @@
+{
+  "baseline": {
+    "val": {
+      "primary_top1": 0.04451682953311618,
+      "primary_top3": 0.1444082519001086
+    },
+    "test": {
+      "primary_top1": 0.05211726384364821,
+      "primary_top3": 0.1563517915309446
+    }
+  },
+  "model": {
+    "val": {
+      "micro_f1@0.5": 0.09601396566773349,
+      "macro_f1@0.5": 0.03547328433333928,
+      "macro_f1@0.5_active": 0.05587042282500937,
+      "micro_f1@top2": 0.0798442064264849,
+      "macro_f1@top2": 0.02715565467306586,
+      "macro_f1@top2_active": 0.04277015611007872,
+      "primary_top1": 0.06623235613463627,
+      "primary_top3": 0.18675352877307275,
+      "ndcg@2_vs_secondary": 0.1157022341730617,
+      "descriptor_recon_f1": 0.9051138043156961
+    },
+    "test": {
+      "micro_f1@0.5": 0.1120715350223547,
+      "macro_f1@0.5": 0.04343413947934405,
+      "macro_f1@0.5_active": 0.06840876967996687,
+      "micro_f1@top2": 0.09563812600969306,
+      "macro_f1@top2": 0.037924758234314994,
+      "macro_f1@top2_active": 0.05973149421904612,
+      "primary_top1": 0.0727470141150923,
+      "primary_top3": 0.20304017372421282,
+      "ndcg@2_vs_secondary": 0.10880837065581035,
+      "descriptor_recon_f1": 0.9026392961876832
+    }
+  },
+  "best_epoch": 5,
+  "n_params": 23052584,
+  "backbone": "sentence-transformers/all-MiniLM-L6-v2",
+  "smoke": false,
+  "epochs": 10
+}

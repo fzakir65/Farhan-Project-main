@@ -1,0 +1,8 @@
+# Python dependencies for the AI Perfume Formulation System (Python 3.12)
+pandas>=2.0.0
+openpyxl>=3.1.0          # data/build_datasets.py reads the source workbooks
+streamlit>=1.28.0        # Task 7 UI
+anthropic>=0.40.0        # Zone A only (Claude API)
+openai>=1.0.0            # Zone A only (alternative provider)
+python-dotenv>=1.0.0
+pytest>=8.0.0            # tests/, incl. the deliberate-breach tests required by CLAUDE.md

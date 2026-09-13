@@ -1,0 +1,52 @@
+===== detached run via Task Scheduler, started 2026-07-24 16:50:45 =====
+device: cpu | backbone: sentence-transformers/all-MiniLM-L6-v2
+label space: 315 accords | 104 categories
+baseline: TF-IDF + logistic regression ...
+  baseline done in 24s: {'val': {'primary_top1': 0.04451682953311618, 'primary_top3': 0.1444082519001086}, 'test': {'primary_top1': 0.05211726384364821, 'primary_top3': 0.1563517915309446}}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 1592.91it/s]
+model params: 23.1M
+train sampler: inverse-sqrt oversampling, class counts 24-317
+co-occurrence mask: 92184 forbidden pairs of 99225
+  epoch 1 step 50/281 loss 22.0624 (2.11s/step)
+  epoch 1 step 100/281 loss 9.5145 (2.08s/step)
+  epoch 1 step 150/281 loss 9.0442 (2.04s/step)
+  epoch 1 step 200/281 loss 8.9453 (2.03s/step)
+  epoch 1 step 250/281 loss 8.6434 (2.03s/step)
+  epoch 1 step 281/281 loss 8.2522 (2.02s/step)
+epoch 1 val: {"micro_f1@0.5": 0.0651, "macro_f1@0.5": 0.0132, "macro_f1@0.5_active": 0.0208, "micro_f1@top2": 0.0604, "macro_f1@top2": 0.0155, "macro_f1@top2_active": 0.0245, "primary_top1": 0.0282, "primary_top3": 0.0793, "ndcg@2_vs_secondary": 0.0608, "descriptor_recon_f1": 0.234}
+  new best (select 0.0750 = top1 0.0282 + 0.2 * desc_f1 0.2340) -> stage12_best.pt
+  epoch 2 step 50/281 loss 7.6776 (2.04s/step)
+  epoch 2 step 100/281 loss 6.8566 (3521.85s/step)
+  epoch 2 step 150/281 loss 6.5529 (2348.83s/step)
+  epoch 2 step 200/281 loss 6.3058 (1762.33s/step)
+  epoch 2 step 250/281 loss 5.9962 (1410.34s/step)
+  epoch 2 step 281/281 loss 6.0075 (1255.01s/step)
+epoch 2 val: {"micro_f1@0.5": 0.0964, "macro_f1@0.5": 0.0318, "macro_f1@0.5_active": 0.05, "micro_f1@top2": 0.0863, "macro_f1@top2": 0.0287, "macro_f1@top2_active": 0.0452, "primary_top1": 0.0803, "primary_top3": 0.2052, "ndcg@2_vs_secondary": 0.107, "descriptor_recon_f1": 0.8341}
+  new best (select 0.2472 = top1 0.0803 + 0.2 * desc_f1 0.8341) -> stage12_best.pt
+  epoch 3 step 50/281 loss 5.8766 (2.33s/step)
+  epoch 3 step 100/281 loss 5.7772 (2.30s/step)
+  epoch 3 step 150/281 loss 5.6922 (2.34s/step)
+  epoch 3 step 200/281 loss 5.5076 (2.36s/step)
+  epoch 3 step 250/281 loss 5.4307 (2.32s/step)
+  epoch 3 step 281/281 loss 5.4573 (2.30s/step)
+epoch 3 val: {"micro_f1@0.5": 0.0921, "macro_f1@0.5": 0.034, "macro_f1@0.5_active": 0.0535, "micro_f1@top2": 0.0779, "macro_f1@top2": 0.0319, "macro_f1@top2_active": 0.0503, "primary_top1": 0.0706, "primary_top3": 0.1933, "ndcg@2_vs_secondary": 0.1129, "descriptor_recon_f1": 0.8755}
+  epoch 4 step 50/281 loss 5.2345 (2.28s/step)
+  epoch 4 step 100/281 loss 5.2577 (23420.14s/step)
+  epoch 4 step 150/281 loss 5.0936 (15615.65s/step)
+  epoch 4 step 200/281 loss 4.9655 (11712.29s/step)
+  epoch 4 step 250/281 loss 5.0304 (9370.34s/step)
+  epoch 4 step 281/281 loss 5.0166 (8336.83s/step)
+epoch 4 val: {"micro_f1@0.5": 0.1013, "macro_f1@0.5": 0.0343, "macro_f1@0.5_active": 0.054, "micro_f1@top2": 0.0909, "macro_f1@top2": 0.0318, "macro_f1@top2_active": 0.0501, "primary_top1": 0.063, "primary_top3": 0.1933, "ndcg@2_vs_secondary": 0.1108, "descriptor_recon_f1": 0.909}
+  epoch 5 step 50/281 loss 4.7904 (1.45s/step)
+  epoch 5 step 100/281 loss 4.7674 (1.39s/step)
+  epoch 5 step 150/281 loss 4.6282 (1.33s/step)
+  epoch 5 step 200/281 loss 4.6082 (1633.76s/step)
+  epoch 5 step 250/281 loss 4.4537 (1307.28s/step)
+  epoch 5 step 281/281 loss 4.4469 (1163.21s/step)
+epoch 5 val: {"micro_f1@0.5": 0.096, "macro_f1@0.5": 0.0355, "macro_f1@0.5_active": 0.0559, "micro_f1@top2": 0.0798, "macro_f1@top2": 0.0272, "macro_f1@top2_active": 0.0428, "primary_top1": 0.0662, "primary_top3": 0.1868, "ndcg@2_vs_secondary": 0.1157, "descriptor_recon_f1": 0.9051}
+  new best (select 0.2473 = top1 0.0662 + 0.2 * desc_f1 0.9051) -> stage12_best.pt
+  epoch 6 step 50/281 loss 4.4941 (2.85s/step)
+  epoch 6 step 100/281 loss 4.3289 (2.33s/step)
+  epoch 6 step 150/281 loss 4.2899 (2.08s/step)
+  epoch 6 step 200/281 loss 4.2612 (1.90s/step)

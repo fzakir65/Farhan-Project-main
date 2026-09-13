@@ -1,0 +1,53 @@
+Material_Name,CAS,Jurisdiction,Status,Fine_Fragrance_Limit_Pct,Legal_Basis,Note,Confidence
+Butylphenyl methylpropional (Lilial / BMHCA),80-54-6,GB+EU,BANNED,,"GB: UK Cosmetics Regulation Annex II - placing on market banned from 2022-10-15, making available from 2022-12-15 (CMR 1B under GB CLP); EU: Reg 1223/2009 Annex II entry 1666 via Reg (EU) 2021/1902 (from 2022-03-01)",CMR 1B. IFRA 51 still lists a 1.4% Cat 4 limit - the ban overrides it,high
+HICC / Lyral (Hydroxyisohexyl 3-cyclohexene carboxaldehyde),31906-04-4,GB+EU,BANNED,,Annex II via Reg (EU) 2017/1410 (retained in GB); new products from 2019-08-23 / all from 2021-08-23,IFRA 51 restricts HMPCC at 0.2% - the ban overrides it,high
+HICC / Lyral (isomer),51414-25-6,GB+EU,BANNED,,Annex II via Reg (EU) 2017/1410 (retained in GB),Second CAS in the IFRA HMPCC Standard,high
+Atranol,526-37-4,GB+EU,BANNED,,Annex II via Reg (EU) 2017/1410 (retained in GB),Oakmoss/treemoss constituent; use low-atranol qualities (<100 ppm per IFRA) and treat residual as technically unavoidable trace,high
+Chloroatranol,57074-21-2,GB+EU,BANNED,,Annex II via Reg (EU) 2017/1410 (retained in GB),Oakmoss/treemoss constituent; as above,high
+Musk ambrette,83-66-9,GB+EU,BANNED,,Annex II entry 414 (retained EU Reg 1223/2009; verified legislation.gov.uk 2026-09-12),Also IFRA-prohibited,high
+Musk tibetene,145-39-1,GB+EU,BANNED,,Annex II entry 422 (retained EU Reg 1223/2009; verified legislation.gov.uk 2026-09-12),Also IFRA-prohibited,high
+Musk moskene,116-66-5,GB+EU,BANNED,,Annex II entry 421 (retained EU Reg 1223/2009; verified legislation.gov.uk 2026-09-12),Also IFRA-prohibited,high
+Musk xylene,81-15-2,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009; vPvB),Also IFRA-prohibited; may occur as impurity in musk ketone (<0.1% spec),high
+Costus root oil / absolute / concrete (Saussurea lappa),8023-88-9,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited. safety_caps.csv row removed 2026-09-11,high
+Verbena essential oil (Lippia citriodora),8024-12-2,GB+EU,BANNED,,Annex II entry 450 (retained EU Reg 1223/2009; verified legislation.gov.uk 2026-09-12),Oil banned; verbena ABSOLUTE is allowed (IFRA 0.69% Cat 4),high
+Fig leaf absolute (Ficus carica),68916-52-9,GB+EU,BANNED,,Annex II entry 436 (retained EU Reg 1223/2009; verified legislation.gov.uk 2026-09-12),Also IFRA-prohibited,high
+Alanroot oil (Inula helenium),97676-35-2,GB+EU,BANNED,,Annex II entry 423 (retained EU Reg 1223/2009; verified legislation.gov.uk 2026-09-12),Also IFRA-prohibited,high
+Peru balsam crude (Myroxylon pereirae exudation),8007-00-9,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Crude only; extracts/distillates allowed (IFRA 0.41% Cat 4),high
+Safrole,94-59-7,GB+EU,BANNED,,Annex II entry 360 (retained EU Reg 1223/2009; verified legislation.gov.uk 2026-09-12): banned as an ingredient; natural content tolerated up to 100 ppm (0.01%) in finished product (50 ppm oral),Direct addition -> REJECT. The 0.01% natural-contribution ceiling is enforced via the constituent roll-up using IFRA_STD_179 (ifra_limits.csv Prohibition_Scope=as_such),high
+Cyclamen alcohol,4756-19-8,GB+EU,BANNED,,Annex II entry 425 (retained EU Reg 1223/2009; verified legislation.gov.uk 2026-09-12),Also IFRA-prohibited; IFRA cyclamen aldehyde spec <=1.5% cyclamen alcohol,high
+Dihydrocoumarin,119-84-6,GB+EU,BANNED,,Annex II entry 427 (retained EU Reg 1223/2009; verified legislation.gov.uk 2026-09-12),IFRA 51 restricts at 0.21% - the ban overrides it,high
+7-Methoxycoumarin,531-59-9,GB+EU,BANNED,,Annex II entry 442 (retained EU Reg 1223/2009; verified legislation.gov.uk 2026-09-12),Also IFRA-prohibited as such,high
+6-Methylcoumarin,92-48-8,GB+EU,BANNED,,Annex III (not Annex II): permitted ONLY in oral hygiene products at 0.003% -> not allowed in fine fragrance,Also IFRA-prohibited (IFRA_STD_160). BANNED here means: no permitted use in fine fragrance,high
+7-Methylcoumarin,2445-83-2,GB+EU,BANNED,,Annex II entry 446 (retained EU Reg 1223/2009; verified legislation.gov.uk 2026-09-12),Also IFRA-prohibited,high
+4-Methyl-7-ethoxycoumarin,87-05-8,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+"4,6-Dimethyl-8-tert-butylcoumarin",17874-34-9,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+Hexahydrocoumarin,700-82-3,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+Acetyl ethyl tetramethyl tetralin (AETT),88-29-9,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+"5-Methyl-2,3-hexanedione (Acetyl isovaleryl)",13706-86-0,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+Anisylidene acetone,943-88-4,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+alpha-Methyl anisylidene acetone,104-27-8,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+Benzyl cyanide,140-29-4,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),IFRA: prohibited as such / natural traces see Standard,high
+Diethyl maleate,141-05-9,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+Dimethyl citraconate,617-54-9,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+"2,4-Dihydroxy-3-methylbenzaldehyde",6248-20-0,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+"3,7-Dimethyl-2-octen-1-ol",40607-48-5,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+Diphenylamine,122-39-4,GB+EU,BANNED,,Annex II entry 434 (retained EU Reg 1223/2009; verified legislation.gov.uk 2026-09-12),Also IFRA-prohibited,high
+Ethyl acrylate,140-88-5,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+trans-2-Heptenal,18829-55-5,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+trans-2-Hexenal diethyl acetal,67746-30-9,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+trans-2-Hexenal dimethyl acetal,18318-83-7,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+Hydroabietyl alcohol,13393-93-6,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+6-Isopropyl-2-decahydronaphthalenol,34131-99-2,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+Methyl trans-2-butenoate (Methyl crotonate),623-43-8,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+2-Pentylidenecyclohexanone,25677-40-1,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+"Pseudoionone (6,10-Dimethyl-3,5,9-undecatrien-2-one)",141-10-6,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+"Pseudo-methylionone (7,11-Dimethyl-4,6,10-dodecatrien-3-one)",26651-96-7,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited; <=2% impurity in methyl ionone accepted by IFRA,high
+"Pseudo-isomethylionone (3,6,10-Trimethyl-3,5,9-undecatrien-2-one)",1117-41-5,GB+EU,BANNED,,Annex II (retained EU Reg 1223/2009),Also IFRA-prohibited,high
+Allyl isothiocyanate,57-06-7,GB+EU,BANNED,,Annex II entry 18 (retained EU Reg 1223/2009; verified legislation.gov.uk 2026-09-12),Also IFRA-prohibited,high
+Tagetes erecta flower extract / oil,90131-43-4,GB+EU,BANNED,,Annex II via Reg (EU) 2018/978 (retained in GB),Also IFRA-prohibited,high
+Tagetes minuta / Tagetes patula extracts and oils,91722-29-1,GB+EU,RESTRICTED,0.01,Annex III via Reg (EU) 2018/978 (retained in GB): 0.01% leave-on (not in sunscreen/UV-exposed products); 0.1% rinse-off; alpha-terthienyl <=0.35%,Matches IFRA_STD_097 Cat 4 0.01%,high
+Methyl eugenol,93-15-2,GB+EU,RESTRICTED,0.01,UK Cosmetics Regulation (retained Reg 1223/2009) Annex III entry 102: fine fragrance 0.01%; EDT 0.004%; fragrance cream 0.002%; other leave-on and oral 0.0002%; rinse-off 0.001% (verified legislation.gov.uk 2026-09-12),Stricter than IFRA 51 Cat 4 (0.011%). Natural sources: rose; basil; bay; pimento; nutmeg,high
+Musk ketone,81-14-1,GB+EU,RESTRICTED,1.4,UK Cosmetics Regulation (retained Reg 1223/2009) Annex III entry 97: fine fragrance 1.4%; EDT 0.56%; other products 0.042%; not in oral products (verified legislation.gov.uk 2026-09-12),IFRA has a specification only (musk xylene <0.1%) - this cap is the binding numeric limit,high
+Hydroxycitronellal,107-75-5,GB+EU,RESTRICTED,1.0,UK Cosmetics Regulation (retained Reg 1223/2009) Annex III entry 72: 1.0% in products other than oral products (verified legislation.gov.uk 2026-09-12),Stricter than IFRA 51 Cat 4 (2.1%),high
+Isoeugenol,97-54-1,GB+EU,RESTRICTED,0.02,UK Cosmetics Regulation (retained Reg 1223/2009) Annex III entry 73: 0.02% in products other than oral products (verified legislation.gov.uk 2026-09-12),Stricter than IFRA 51 Cat 4 (0.11%),high
+Methyl salicylate,119-36-8,EU,RESTRICTED,0.6,EU Annex III via Reg (EU) 2022/1531 (from 2022-12-17); hydroalcoholic fragrances 0.6%,EU-only (post-Brexit divergence) - not adopted in GB as of this file's date; applies to Northern Ireland,medium

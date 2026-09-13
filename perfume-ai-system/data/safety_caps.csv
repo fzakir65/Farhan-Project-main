@@ -1,0 +1,31 @@
+Material_Name,CAS,Max_Safe_Percent,Reason,Grade_Note,Provisional
+Vanillin,121-33-5,4,Dominates and overpowers formula,,No
+IsoButyl Quinoline,93-19-6,1,Extremely powerful leather material,,No
+Birch Tar,8001-88-5,2,Strong smoky - overwhelms,RECTIFIED ONLY - crude birch tar is IFRA-prohibited; PAH markers <=1 ppb (supplier CoA; group_rules pah_pyrolysis_oils),No
+Indole,120-72-9,0.5,Animalic and fecal at higher levels,,No
+Aldehyde C-12 MNA,110-41-8,1,Soapy overload,,No
+Aldehyde C-10,112-31-2,1,Waxy citrus - potent,,No
+Aldehyde C-11,112-45-8,1,Metallic green - potent,Undecylenic aldehyde (10-undecenal) assumed; if undecanal (112-44-7) is meant update CAS,No
+Ethyl Maltol,4940-11-8,3,Cotton candy - dominates if high,,No
+Safraleine,54440-17-4,3,Warm saffron leather - strong,Synthetic - no IFRA Standard (unlike natural saffron / safranal),No
+Cade Oil,8013-10-3,2,Ashy smoky phenolic,RECTIFIED ONLY - crude cade oil is IFRA-prohibited; PAH markers <=1 ppb (supplier CoA; group_rules pah_pyrolysis_oils),No
+Guaiacol,90-05-1,1.5,Burnt phenolic - harsh at high levels,,No
+Civetone,542-46-1,1,Animalic musk - use sparingly,,No
+Muscone,541-91-3,2,Warm animalic musk,,No
+Castoreum Absolute,8023-83-4,2,Leathery animalic - concentrated,,No
+Nutmeg Oil,8008-45-5,0.3,Warm nutty spice - can dominate. Cap lowered from 3 on 2026-09-11: nutmeg oil carries safrole (IFRA/UK natural-contribution limit 0.01%) and methyl eugenol (IFRA 0.011% / UK 0.01%),Recompute from supplier CoA safrole + methyl eugenol content,Yes
+Clove Bud Oil,8000-34-8,2,Hot spicy - harsh if high. ~80-90% eugenol -> counts toward the eugenol 2.5% limit together with any other eugenol source,Eugenol contribution must be summed (IFRA_STD_035),No
+Cinnamon Leaf Oil,8015-91-6,2,Sweet spicy heat - use with care. Leaf oil is eugenol-rich (counts toward eugenol 2.5%) with low cinnamic aldehyde,Was 'Cinnamon Oil 2' - split into leaf/bark on 2026-09-11 because the IFRA outcome differs by 6x,No
+Cinnamon Bark Oil,8015-91-6,0.3,Sweet spicy heat. Bark oil is ~65-75% cinnamic aldehyde (IFRA Cat 4 limit 0.25%) -> 0.3% oil is the ceiling,Recompute from supplier CoA cinnamic aldehyde content,Yes
+Saffron,84604-17-1,0.1,Dry spicy leather - potent. Cap lowered from 3 on 2026-09-11: saffron extracts are safranal-rich and safranal is IFRA-restricted to 0.012%,Recompute from supplier CoA safranal content,Yes
+Pink Pepper Oil,68917-52-2,4,Fresh rosy pepper,,No
+Agarwood Oud,,3,Dark resinous - very concentrated,CAS not assigned (natural; varies by species),No
+Cypriol Oil,,3,Smoky earthy - strong,CAS not assigned,No
+Fenugreek Absolute,,2,Curry maple - dominates,CAS not assigned,No
+Cocoa Absolute,,4,Bitter dark chocolate,CAS not assigned,No
+Coffee Absolute,,3,Roasted bitter - potent,CAS not assigned,No
+Honey Absolute,,3,Sweet waxy animalic,CAS not assigned,No
+Frankincense Oil,8016-36-2,4,Resinous incense,,No
+Myrrh Resinoid,8016-37-3,3,Bitter medicinal resin,,No
+Styrax Resinoid,8046-19-3,0.6,Smoky balsamic resin. Cap lowered from 3 on 2026-09-11: IFRA Cat 4 limit for styrax extracts is 0.64%,Crude gum is IFRA-prohibited; pyrolysis oil must be rectified (PAH <=1 ppb),No
+Labdanum Absolute,8016-26-0,5,Resinous amber base,,No

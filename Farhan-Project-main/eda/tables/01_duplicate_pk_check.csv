@@ -1,0 +1,16 @@
+table,primary_key_candidate,duplicate_pk_rows
+training_examples,request_id,0
+accords,accord_id,6
+accord_note,accord_id,1283
+accord_recipe_default,accord_id,1421
+perfumes,perfume_id,0
+perfume_accord,perfume_id,2143
+perfume_note,perfume_id,3334
+notes_master,note_id,0
+notes_v1,note_id,0
+accord_dictionary_master,accord_id,39
+note_dictionary_master,note_id,16
+note_accord_usage,note_id,583
+accord_v2_accords,accord_id,0
+accord_v2_accord_note,accord_id,1283
+accord_v2_accord_flat,accord_id,1283

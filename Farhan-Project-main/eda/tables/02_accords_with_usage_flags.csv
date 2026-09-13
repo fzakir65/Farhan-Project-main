@@ -1,0 +1,316 @@
+accord_id,accord_name,accord_category,normalized_accord_name,used_as_primary,used_as_secondary,used_in_training
+ACC-0001,Alcohol,Uncategorized,alcohol,False,False,False
+ACC-0002,Aldehydic,Fresh,aldehydic,True,True,True
+ACC-0003,Almond,Gourmand,almond,False,False,False
+ACC-0004,Amber,Amber,amber,True,True,True
+ACC-0005,Animalic,Animalic,animalic,True,False,True
+ACC-0006,Anis,Uncategorized,anis,False,False,False
+ACC-0007,Aquatic,Fresh,aquatic,True,True,True
+ACC-0008,Aromatic,Aromatic,aromatic,True,True,True
+ACC-0009,Balsamic,Uncategorized,balsamic,False,False,False
+ACC-0010,Beeswax,Uncategorized,beeswax,False,False,False
+ACC-0011,Bergamot,Uncategorized,bergamot,False,False,False
+ACC-0012,Boozy,Uncategorized,boozy,False,False,False
+ACC-0013,Bourbon,Uncategorized,bourbon,False,False,False
+ACC-0014,Cacao,Uncategorized,cacao,False,False,False
+ACC-0015,Camphor,Uncategorized,camphor,False,False,False
+ACC-0016,Captivating,Uncategorized,captivating,False,False,False
+ACC-0017,Caramel,Gourmand,caramel,False,False,False
+ACC-0018,Cardamom,Uncategorized,cardamom,False,False,False
+ACC-0019,Chocolate,Uncategorized,chocolate,False,False,False
+ACC-0020,Chypre,Mossy,chypre,False,False,False
+ACC-0021,Cinnamon,Uncategorized,cinnamon,False,False,False
+ACC-0022,Citrus,Fresh,citrus,True,True,True
+ACC-0023,Clean,Uncategorized,clean,True,True,True
+ACC-0024,Coconut,Gourmand,coconut,False,False,False
+ACC-0025,Coffee,Uncategorized,coffee,False,False,False
+ACC-0026,Coniferous,Uncategorized,coniferous,False,False,False
+ACC-0027,Damp,Uncategorized,damp,False,False,False
+ACC-0028,Earthy,Woody,earthy,True,True,True
+ACC-0029,Fig,Uncategorized,fig,False,False,False
+ACC-0030,Flora,Uncategorized,flora,False,False,False
+ACC-0031,Floral,Uncategorized,floral,True,True,True
+ACC-0032,Fresh,Uncategorized,fresh,True,True,True
+ACC-0033,Fresh Spicy,Fresh Spicy,fresh_spicy,True,True,True
+ACC-0033,Fresh Spicy,Spicy,fresh_spicy,True,True,True
+ACC-0034,Fresh Sweet,Uncategorized,fresh_sweet,True,True,True
+ACC-0035,Fruit,Uncategorized,fruit,False,False,False
+ACC-0036,Fruity,Fruity,fruity,False,False,False
+ACC-0037,Gourmand,Gourmand,gourmand,False,False,False
+ACC-0038,Grassy,Uncategorized,grassy,False,False,False
+ACC-0039,Green,Green,green,True,True,True
+ACC-0040,Herbal,Uncategorized,herbal,False,False,False
+ACC-0041,Honey,Gourmand,honey,False,False,False
+ACC-0042,Honeyed,Uncategorized,honeyed,False,False,False
+ACC-0043,Incense,Resinous,incense,True,True,True
+ACC-0044,Inky,Uncategorized,inky,False,False,False
+ACC-0045,Intense,Uncategorized,intense,False,False,False
+ACC-0046,Iris,Uncategorized,iris,False,False,False
+ACC-0047,Jasmine,Uncategorized,jasmine,False,False,False
+ACC-0048,Lactonic,Uncategorized,lactonic,False,False,False
+ACC-0049,Lavender,Uncategorized,lavender,False,False,False
+ACC-0050,Leather,Leather,leather,True,True,True
+ACC-0051,Leathery,Uncategorized,leathery,True,True,True
+ACC-0052,Marine,Uncategorized,marine,False,False,False
+ACC-0053,Metallic,Uncategorized,metallic,False,False,False
+ACC-0054,Milky,Gourmand,milky,False,False,False
+ACC-0055,Mineral,Uncategorized,mineral,True,True,True
+ACC-0056,Minty,Uncategorized,minty,False,False,False
+ACC-0057,Mossy,Mossy,mossy,False,False,False
+ACC-0058,Musk,Uncategorized,musk,True,True,True
+ACC-0059,Musky,Uncategorized,musky,True,True,True
+ACC-0060,Nutty,Uncategorized,nutty,False,False,False
+ACC-0061,Oriental,Uncategorized,oriental,False,False,False
+ACC-0062,Oud,Woody,oud,True,True,True
+ACC-0063,Ozonic,Fresh,ozonic,True,True,True
+ACC-0064,Patchouli,Uncategorized,patchouli,False,False,False
+ACC-0065,Pear,Uncategorized,pear,False,False,False
+ACC-0066,Powdery,Floral,powdery,True,True,True
+ACC-0067,Resinous,Uncategorized,resinous,False,False,False
+ACC-0068,Rose,Floral,rose,True,True,True
+ACC-0069,Rosy,Uncategorized,rosy,False,False,False
+ACC-0070,Rum,Uncategorized,rum,False,False,False
+ACC-0071,Salty,Uncategorized,salty,False,False,False
+ACC-0072,Sand,Uncategorized,sand,False,False,False
+ACC-0073,Sandalwood,Uncategorized,sandalwood,False,False,False
+ACC-0074,Sensual,Uncategorized,sensual,False,False,False
+ACC-0075,Smoky,Woody,smoky,True,True,True
+ACC-0076,Soapy,Uncategorized,soapy,False,False,False
+ACC-0077,Soft Spicy,Uncategorized,soft_spicy,True,True,True
+ACC-0078,Spices,Uncategorized,spices,False,False,False
+ACC-0079,Spicy,Uncategorized,spicy,True,True,True
+ACC-0080,Suede,Leather,suede,True,True,True
+ACC-0081,Swe,Uncategorized,swe,False,False,False
+ACC-0082,Sweet,Uncategorized,sweet,True,True,True
+ACC-0083,Tea,Uncategorized,tea,False,False,False
+ACC-0084,Tobacco,Gourmand,tobacco,False,False,False
+ACC-0085,Tropical,Uncategorized,tropical,False,False,False
+ACC-0086,Tuberose,Uncategorized,tuberose,False,False,False
+ACC-0087,Vanilla,Gourmand,vanilla,False,False,False
+ACC-0088,Vetiver,Uncategorized,vetiver,False,False,False
+ACC-0089,Vibrant,Uncategorized,vibrant,False,False,False
+ACC-0090,Violet,Floral,violet,True,True,True
+ACC-0091,Warm,Uncategorized,warm,False,False,False
+ACC-0092,Warm Spicy,Spicy,warm_spicy,True,True,True
+ACC-0093,Whisky,Uncategorized,whisky,False,False,False
+ACC-0094,White Floral,Floral,white_floral,True,True,True
+ACC-0095,Woody,Woody,woody,True,True,True
+ACC-0096,Yellow Floral,Uncategorized,yellow_floral,True,True,True
+ACC-0097,Fougère,Aromatic,fougere,True,True,True
+ACC-0097,Fougere,Aromatic,fougere,True,True,True
+ACC-0098,nk,Abstract,nk,False,False,False
+ACC-0099,Ink,Abstract,ink,False,False,False
+ACC-0100,Dry Tea,Aromatic,dry_tea,True,True,True
+ACC-0101,Dry Incense,Resinous,dry_incense,True,True,True
+ACC-0102,Saline Mineral,Mineral,saline_mineral,True,True,True
+ACC-0103,Cold Metallic Wood,Abstract,cold_metallic_wood,False,False,False
+ACC-0104,Bitter Sap,Green Resinous,bitter_sap,True,True,True
+ACC-0105,Dusty Powder,Abstract Powdery,dusty_powder,True,True,True
+ACC-0106,Smoked Tea Leather,Hybrid,smoked_tea_leather,True,True,True
+ACC-0107,Wet Stone,Mineral,wet_stone,True,True,True
+ACC-0108,Cold Spice,Abstract Spicy,cold_spice,True,True,True
+ACC-0109,Fresh Citrus,Citrus,fresh_citrus,True,True,True
+ACC-0110,Vanilla Gourmand,Gourmand,vanilla_gourmand,False,False,False
+ACC-0111,Woody Amber,Woody/Amber,woody_amber,True,True,True
+ACC-0111,Woody Amber,Amber,woody_amber,True,True,True
+ACC-0111,Woody Amber,Woody Amber,woody_amber,True,True,True
+ACC-0112,Aquatic Fresh,Fresh Aquatic,aquatic_fresh,True,True,True
+ACC-0113,Rose Floral,Floral,rose_floral,True,True,True
+ACC-0114,Clean Musk,Musk,clean_musk,True,True,True
+ACC-0115,Fruity Floral,Fruity/Floral,fruity_floral,True,True,True
+ACC-0115,Fruity Floral,Fruity Floral,fruity_floral,True,True,True
+ACC-0116,Spicy Oriental,Oriental Spicy,spicy_oriental,True,True,True
+ACC-0117,Soft Chypre,Chypre,soft_chypre,False,False,False
+ACC-0118,Ozonic Fresh,Fresh,ozonic_fresh,True,True,True
+ACC-0119,Mossy Forest,Mossy,mossy_forest,False,False,False
+ACC-0120,Leather Smoke,Leather,leather_smoke,True,True,True
+ACC-0121,Milky Fig,Fruity Green,milky_fig,True,True,True
+ACC-0122,Clean Laundry,Clean,clean_laundry,True,True,True
+ACC-0123,Sweet Tobacco,Tobacco,sweet_tobacco,True,True,True
+ACC-0124,Icy Mint,Fresh,icy_mint,True,True,True
+ACC-0125,Honeyed Floral,Floral Sweet,honeyed_floral,True,True,True
+ACC-0126,Earthy Root,Earthy,earthy_root,False,False,False
+ACC-0127,Fizzy Citrus,Citrus,fizzy_citrus,True,True,True
+ACC-0128,Creamy Iris,Powdery,creamy_iris,True,True,True
+ACC-0129,Classic Lavender,Aromatic,classic_lavender,True,True,True
+ACC-0130,Bright Neroli,Citrus Floral,bright_neroli,True,True,True
+ACC-0131,Fresh Green Apple,Fruity Fresh,fresh_green_apple,True,True,True
+ACC-0132,Soft Violet,Floral Powdery,soft_violet,True,True,True
+ACC-0133,Warm Cashmere,Woody Musk,warm_cashmere,True,True,True
+ACC-0134,Herbal Cologne,Aromatic Citrus,herbal_cologne,True,True,True
+ACC-0135,Sweet Almond,Gourmand Nutty,sweet_almond,True,True,True
+ACC-0136,Dry Hay,Dry Herbal,dry_hay,False,False,False
+ACC-0137,Classic Fougere,Fougere,classic_fougere,False,False,False
+ACC-0138,Modern Blue,Fresh Woody,modern_blue,True,True,True
+ACC-0139,Sweet Vanilla,Gourmand,sweet_vanilla,True,True,True
+ACC-0140,Green Fig Leaf,Green,green_fig_leaf,True,True,True
+ACC-0141,Smoky Incense,Incense,smoky_incense,True,True,True
+ACC-0142,Clean Cotton,Clean,clean_cotton,True,True,True
+ACC-0143,Roasted Coffee,Gourmand Dark,roasted_coffee,True,True,True
+ACC-0144,Metallic Mineral,Mineral,metallic_mineral,True,True,True
+ACC-0145,Generic Sweet,Sweet,generic_sweet,True,True,True
+ACC-0146,Cinnamon Spice,Spicy,cinnamon_spice,True,True,True
+ACC-0147,Classic Amber,Amber,classic_amber,True,True,True
+ACC-0148,Modern Amberwood,Amber Woody,modern_amberwood,True,True,True
+ACC-0149,Sweet Fruity,Fruity Sweet,sweet_fruity,True,True,True
+ACC-0150,Cardamom Spice,Spicy Aromatic,cardamom_spice,True,True,True
+ACC-0151,Clove Spice,Spicy,clove_spice,True,True,True
+ACC-0152,Nutmeg Spice,Spicy Warm,nutmeg_spice,True,True,True
+ACC-0153,Ginger Spice,Fresh Spicy,ginger_spice,True,True,True
+ACC-0154,Peppery Spice,Spicy Dry,peppery_spice,True,True,True
+ACC-0155,Saffron Spice,Spicy Leather,saffron_spice,True,True,True
+ACC-0156,Sweet Cardamom,Sweet Spicy,sweet_cardamom,True,True,True
+ACC-0157,Woody Cinnamon,Woody Spicy,woody_cinnamon,True,True,True
+ACC-0158,Resinous Spice,Resinous Spicy,resinous_spice,True,True,True
+ACC-0159,Fresh Herbal Spice,Aromatic Spicy,fresh_herbal_spice,True,True,True
+ACC-0160,Dark Cumin Spice,Animalic Spicy,dark_cumin_spice,True,True,True
+ACC-0161,Sweet Saffron,Sweet Leather Spicy,sweet_saffron,True,True,True
+ACC-0162,Dry Spice Woods,Dry Woody Spicy,dry_spice_woods,True,True,True
+ACC-0163,Oriental Amber Spice,Amber Spicy,oriental_amber_spice,True,True,True
+ACC-0164,Floral Cardamom,Floral Spicy,floral_cardamom,True,True,True
+ACC-0165,Spiced Rose,Floral Spicy,spiced_rose,True,True,True
+ACC-0166,Ginger Citrus Spice,Fresh Spicy,ginger_citrus_spice,True,True,True
+ACC-0167,Sweet Amber Vanilla,Sweet Amber,sweet_amber_vanilla,True,True,True
+ACC-0167,Sweet Amber Vanilla,Bridge,sweet_amber_vanilla,True,True,True
+ACC-0168,Aromatic Pepper,Aromatic Spicy,aromatic_pepper,True,True,True
+ACC-0169,Exotic Spice Market,Oriental Spicy,exotic_spice_market,True,True,True
+ACC-0170,Salty Marine,Marine,salty_marine,True,True,True
+ACC-0171,Mineral Ozone,Mineral,mineral_ozone,True,True,True
+ACC-0172,Green Tea Steam,Tea,green_tea_steam,True,True,True
+ACC-0173,Milky Cereal,Lactonic,milky_cereal,False,False,False
+ACC-0174,Powdery Makeup,Powdery,powdery_makeup,True,True,True
+ACC-0175,Suede Soft Leather,Leather,suede_soft_leather,True,True,True
+ACC-0176,Boozy Vanilla,Boozy,boozy_vanilla,False,False,False
+ACC-0177,Green Vegetal,Green,green_vegetal,True,True,True
+ACC-0178,Dirty Leather,Animalic Leather,dirty_leather,True,True,True
+ACC-0179,Smoky Church Incense,Resinous Smoky,smoky_church_incense,True,True,True
+ACC-0180,Animalic Musk,Animalic,animalic_musk,True,True,True
+ACC-0181,Burnt Wood Smoke,Smoky Woody,burnt_wood_smoke,True,True,True
+ACC-0182,Dark Resin Amber,Resinous Amber,dark_resin_amber,True,True,True
+ACC-0183,Incense Leather,Resinous Leather,incense_leather,True,True,True
+ACC-0184,Dark Oud Smoke,Smoky Oud,dark_oud_smoke,True,True,True
+ACC-0185,Ashy Fireplace,Smoky,ashy_fireplace,True,True,True
+ACC-0186,Dark Animalic Amber,Animalic Amber,dark_animalic_amber,True,True,True
+ACC-0187,Resinous Balsamic Smoke,Balsamic Smoky,resinous_balsamic_smoke,True,True,True
+ACC-0188,Feral Skin,Animalic,feral_skin,True,True,True
+ACC-0189,Dark Honey Resin,Animalic Resin,dark_honey_resin,True,True,True
+ACC-0190,Tarred Timber,Industrial Smoky,tarred_timber,True,True,True
+ACC-0191,Cold Ash Incense,Smoky Incense,cold_ash_incense,True,True,True
+ACC-0192,Bitter Apothecary,Resinous Bitter,bitter_apothecary,True,True,True
+ACC-0193,Shadowy Rose Fur,Floral Animalic,shadowy_rose_fur,True,True,True
+ACC-0194,Charred Resin Smoke,Resinous Smoky,charred_resin_smoke,True,True,True
+ACC-0195,Dark Temple Woods,Sacred Smoky,dark_temple_woods,True,True,True
+ACC-0196,Ambered Woods,Bridge,ambered_woods,True,True,True
+ACC-0197,Clean Leather,Bridge,clean_leather,True,True,True
+ACC-0198,Smoked Vanilla,Bridge,smoked_vanilla,False,False,False
+ACC-0199,Sweet Tobacco Woods,Bridge,sweet_tobacco_woods,True,True,True
+ACC-0200,Spiced Amber Musk,Bridge,spiced_amber_musk,True,True,True
+ACC-0201,Powdered Incense,Bridge,powdered_incense,False,False,False
+ACC-0202,Soft Amber Skin,Bridge,soft_amber_skin,True,True,True
+ACC-0203,Creamy Smoke Woods,Bridge,creamy_smoke_woods,False,False,False
+ACC-0204,Spiced Cocoa Amber,Bridge,spiced_cocoa_amber,True,True,True
+ACC-0205,Warm Resin Musk,Bridge,warm_resin_musk,True,True,True
+ACC-0206,Clean Smoke Citrus,Bridge,clean_smoke_citrus,True,True,True
+ACC-0207,Floral Leather Amber,Bridge,floral_leather_amber,True,True,True
+ACC-0208,Warm Spiced Woods,Bridge,warm_spiced_woods,False,False,False
+ACC-0209,Fresh Spiced Citrus,Bridge,fresh_spiced_citrus,True,True,True
+ACC-0210,Fruity Amber Woods,Bridge,fruity_amber_woods,True,True,True
+ACC-0211,Aromatic Fougere Soft,Bridge,aromatic_fougere_soft,False,False,False
+ACC-0212,Clean Woody Musk,Bridge,clean_woody_musk,True,True,True
+ACC-0213,Smoky Sweet Resin,Bridge,smoky_sweet_resin,True,True,True
+ACC-0214,Black Leather Smoke,Dark,black_leather_smoke,True,True,True
+ACC-0215,Ashen Incense,Dark,ashen_incense,True,True,True
+ACC-0216,Feral Animal Skin,Dark,feral_animal_skin,True,True,True
+ACC-0217,Tarred Wood Ash,Dark,tarred_wood_ash,True,True,True
+ACC-0218,Bitter Church Resin,Dark,bitter_church_resin,True,True,True
+ACC-0219,Blood Honey Resin,Dark,blood_honey_resin,True,True,True
+ACC-0220,Shadow Patchouli,Dark,shadow_patchouli,True,True,True
+ACC-0221,Burnt Resin Smoke,Dark,burnt_resin_smoke,True,True,True
+ACC-0222,Cannabis Green Resin,Earthy / Green,cannabis_green_resin,True,True,True
+ACC-0223,Dry Hemp Earth,Earthy,dry_hemp_earth,False,False,False
+ACC-0224,Dank Herbal Soil,Earthy / Herbal,dank_herbal_soil,False,False,False
+ACC-0225,Forest Floor,Earthy,forest_floor,False,False,False
+ACC-0226,Wet Soil Resin,Earthy,wet_soil_resin,False,False,False
+ACC-0227,Herbal Ganja Smoke,Earthy / Smoky,herbal_ganja_smoke,True,True,True
+ACC-0228,Feral Ganja Skin,Earthy / Animalic,feral_ganja_skin,True,True,True
+ACC-0229,Dirty Hemp Leather,Earthy / Animalic,dirty_hemp_leather,True,True,True
+ACC-0230,Ganja Barnyard,Earthy / Animalic,ganja_barnyard,True,True,True
+ACC-0231,Wet Fur Soil,Earthy / Animalic,wet_fur_soil,True,True,True
+ACC-0232,Smoked Ganja Fur,Earthy / Animalic,smoked_ganja_fur,True,True,True
+ACC-0233,Dark Soil Musk,Earthy / Animalic,dark_soil_musk,True,True,True
+ACC-0234,uicy Pear Skin,Fruity,uicy_pear_skin,False,False,False
+ACC-0235,Juicy Pear Skin,Fruity,juicy_pear_skin,False,False,False
+ACC-0236,Crisp Green Mango,Fruity / Green,crisp_green_mango,True,True,True
+ACC-0237,Dark Plum Wine,Fruity / Dark,dark_plum_wine,True,False,True
+ACC-0238,Peach Nectar,Fruity,peach_nectar,False,False,False
+ACC-0239,Citrus Berry Splash,Fruity,citrus_berry_splash,True,True,True
+ACC-0240,Tropical Passion Fruit,Fruity,tropical_passion_fruit,False,False,False
+ACC-0241,Red Apple Juice,Fruity,red_apple_juice,False,False,False
+ACC-0242,Fig Milk Fruit,Fruity / Creamy,fig_milk_fruit,False,False,False
+ACC-0243,Saffron,Spicy,saffron,True,True,True
+ACC-0244,Dark Rose,Floral,dark_rose,True,True,True
+ACC-0245,Oud Rose,Floral,oud_rose,True,True,True
+ACC-0246,Saffron Leather,Leather,saffron_leather,True,True,True
+ACC-0247,Patchouli Dark,Woody,patchouli_dark,True,True,True
+ACC-0248,Vetiver Smoky,Woody,vetiver_smoky,True,True,True
+ACC-0249,Musky Amber,Amber,musky_amber,True,True,True
+ACC-0250,Animalic Leather,Leather,animalic_leather,True,True,True
+ACC-0251,Resinous Amber,Amber,resinous_amber,True,True,True
+ACC-0252,Oriental Amber,Amber,oriental_amber,True,True,True
+ACC-0253,Spicy Leather,Leather,spicy_leather,True,True,True
+ACC-0254,Tobacco Leather,Leather,tobacco_leather,True,True,True
+ACC-0255,Incense Smoke,Resinous,incense_smoke,True,True,True
+ACC-0256,Dry Woody,Woody,dry_woody,True,True,True
+ACC-0257,Amber Oud,Amber,amber_oud,True,True,True
+ACC-0258,Spicy Oud,Woody,spicy_oud,True,True,True
+ACC-0259,Floral Oud,Floral,floral_oud,True,True,True
+ACC-0260,Chypre Classic,Chypre,chypre_classic,False,False,False
+ACC-0261,Chypre Fruity,Chypre,chypre_fruity,False,False,False
+ACC-0262,Chypre Leather,Chypre,chypre_leather,True,True,True
+ACC-0263,Chypre Floral,Chypre,chypre_floral,True,True,True
+ACC-0264,Oudh Powdery,Oriental,oudh_powdery,True,True,True
+ACC-0265,Powder Soft,Floral,powder_soft,True,True,True
+ACC-0266,Musky Skin,Musky,musky_skin,True,True,True
+ACC-0267,Musky Floral,Musky,musky_floral,True,True,True
+ACC-0268,Vanilla Custard,Gourmand,vanilla_custard,False,False,False
+ACC-0269,Caramel Flan,Gourmand,caramel_flan,False,False,False
+ACC-0270,Chocolate Fudge,Gourmand,chocolate_fudge,False,False,False
+ACC-0271,Almond Croissant,Gourmand,almond_croissant,False,False,False
+ACC-0272,Honey Cake,Gourmand,honey_cake,False,False,False
+ACC-0273,Milk Chocolate Truffle,Gourmand,milk_chocolate_truffle,False,False,False
+ACC-0274,Burnt Sugar Crème,Gourmand,burnt_sugar_creme,False,False,False
+ACC-0275,Oudh Accord (Clean),Oud/Woody,oudh_accord_clean,True,True,True
+ACC-0276,Oudh Accord (Dark Animalic),Oud/Animalic,oudh_accord_dark_animalic,True,True,True
+ACC-0277,Powdery Accord (Cosmetic),Powdery,powdery_accord_cosmetic,True,True,True
+ACC-0278,Musky Skin Accord,Musky,musky_skin_accord,True,True,True
+ACC-0279,Lavender Aromatic Accord,Aromatic,lavender_aromatic_accord,True,True,True
+ACC-0280,Iris Powder Accord,Floral/Powdery,iris_powder_accord,True,True,True
+ACC-0281,Sweet Vanilla Amber,Sweet/Amber,sweet_vanilla_amber,True,True,True
+ACC-0282,Clean White Musk,Musky/Clean,clean_white_musk,True,True,True
+ACC-0283,Fresh Citrus Woody,Fresh/Woody,fresh_citrus_woody,True,True,True
+ACC-0284,Lavender Fougere,Aromatic/Fougere,lavender_fougere,True,True,True
+ACC-0285,Powdery Floral,Powdery,powdery_floral,True,True,True
+ACC-0286,Sweet Fruity Candy,Sweet/Fruity,sweet_fruity_candy,True,True,True
+ACC-0287,Fresh Linen Clean,Laundry/Clean,fresh_linen_clean,True,True,True
+ACC-0288,Cotton Clean,Laundry/Clean,cotton_clean,True,True,True
+ACC-0289,Clean Shampoo Fresh,Shampoo/Clean,clean_shampoo_fresh,True,True,True
+ACC-0290,Herbal Shampoo Clean,Shampoo/Herbal,herbal_shampoo_clean,True,True,True
+ACC-0291,Floral Shampoo Soft,Shampoo/Floral,floral_shampoo_soft,True,True,True
+ACC-0292,Baby Clean,Laundry/Clean,baby_clean,True,True,True
+ACC-0293,Fresh Citrus Laundry,Laundry/Citrus,fresh_citrus_laundry,True,True,True
+ACC-0294,Oriental Spicy,Spicy,oriental_spicy,True,True,True
+ACC-0295,Powdery Musk,Floral,powdery_musk,True,True,True
+ACC-0296,Creamy Sandalwood,Woody,creamy_sandalwood,True,True,True
+ACC-0297,Tonka,Gourmand,tonka,False,False,False
+ACC-0298,Peach,Fruity,peach,False,False,False
+ACC-0299,Creamy Floral,Floral,creamy_floral,True,True,True
+ACC-0300,Creamy,Uncategorized,creamy,False,False,False
+ACC-0301,Exotic,Uncategorized,exotic,False,False,False
+ACC-0302,Medicinal,Uncategorized,medicinal,False,False,False
+ACC-0303,Modern,Uncategorized,modern,False,False,False
+ACC-0304,Ozone,Uncategorized,ozone,False,False,False
+ACC-0305,Resin,Uncategorized,resin,False,False,False
+ACC-0306,Romantic,Uncategorized,romantic,False,False,False
+ACC-0307,Smoke,Uncategorized,smoke,False,False,False
+ACC-0308,Soft Floral,Uncategorized,soft_floral,True,True,True
+ACC-0309,Soft Gourmand,Uncategorized,soft_gourmand,False,False,False
