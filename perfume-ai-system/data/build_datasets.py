@@ -5,7 +5,9 @@ Run from anywhere:  python data/build_datasets.py
 Sources (all local, see DATA_PROVENANCE.md):
   dataset1_perfumes.csv  <- ../Farhan-Project-main/perfume_system_master_with_recipes.xlsx :: perfumes
   dataset2_notes.csv     <- ../Farhan-Project-main/notes_dataset_normalized.xlsx           :: notes_raw
+                            + cas_corrections.csv (Apply=Yes rows replace checksum-failing CAS; Source_CAS kept)
   dataset3_accords.csv   <- ../Farhan-Project-main/accord_dataset_normalized_v2.xlsx       :: accord_raw
+                            + note_name_aliases.csv (Apply=Yes rows rename accord notes to dataset2 names)
   ifra_limits.csv        <- reference/ifra_51st_standards_overview.csv (official IFRA table)
                             + the material selection in IFRA_MATERIALS below
 
@@ -15,6 +17,7 @@ Standard key; nothing is typed by hand. Deterministic: same inputs -> same files
 from __future__ import annotations
 
 import re
+import sys
 from pathlib import Path
 
 import pandas as pd
@@ -22,6 +25,10 @@ import pandas as pd
 HERE = Path(__file__).resolve().parent
 ML_PROJECT = HERE.parents[1] / "Farhan-Project-main"
 OFFICIAL = HERE / "reference" / "ifra_51st_standards_overview.csv"
+CAS_FIXES = HERE / "cas_corrections.csv"     # written by verify_cas.py; humans edit Apply / Decided_By
+
+sys.path.insert(0, str(HERE.parent))
+from load_data import is_valid_cas  # noqa: E402  (single definition of the CAS checksum)
 
 # ----------------------------------------------------------------------------
 # dataset1 — perfumes (CLAUDE.md schema; Mood_Vibe / Occasion have no source yet)
@@ -86,14 +93,64 @@ def build_notes() -> pd.DataFrame:
         "Natural_Source": src["Natural Source"],
         "Short_Description": src["Short Description"],
     })
+    return apply_cas_corrections(out)
+
+
+def apply_cas_corrections(notes: pd.DataFrame) -> pd.DataFrame:
+    """Replace CAS numbers per `cas_corrections.csv` (Apply=Yes rows only), matched on (Note_ID, Bad_CAS).
+    The workbook value is kept in Source_CAS. A correction that fails the checksum, or that no longer
+    matches a row, fails the build — a stale or wrong CAS must never slip into the safety join key."""
+    out = notes.copy()
+    out["CAS"] = out["CAS"].fillna("").astype(str).str.strip()
+    out["Source_CAS"] = out["CAS"]
+    if not CAS_FIXES.exists():
+        return out
+    fx = pd.read_csv(CAS_FIXES, dtype=str, keep_default_na=False)
+    fx = fx[fx["Apply"].str.strip().str.lower() == "yes"]
+    for r in fx.itertuples(index=False):
+        if not is_valid_cas(r.Corrected_CAS):
+            raise ValueError(f"cas_corrections.csv: {r.Note_Name} -> {r.Corrected_CAS!r} fails the CAS checksum")
+        mask = (out["Note_ID"] == r.Note_ID) & (out["CAS"] == r.Bad_CAS)
+        if not mask.any():
+            raise ValueError(f"cas_corrections.csv: no row {r.Note_ID} with CAS {r.Bad_CAS!r} (stale correction)")
+        out.loc[mask, "CAS"] = r.Corrected_CAS
     return out
 
 
 # ----------------------------------------------------------------------------
-# dataset3 — accords (exact CLAUDE.md columns)
+# dataset3 — accords (CLAUDE.md columns + Source_Note_Name / Source_Note_ID for traceability)
 # ----------------------------------------------------------------------------
 
-def build_accords() -> pd.DataFrame:
+ALIASES = HERE / "note_name_aliases.csv"       # written by reconcile_notes.py; humans edit Apply / Decided_By
+
+
+def apply_note_aliases(accords: pd.DataFrame, notes: pd.DataFrame) -> pd.DataFrame:
+    """Rule 10: accord note names must match dataset2 exactly. Rename per `note_name_aliases.csv`
+    (only rows with Apply=Yes) and take dataset2's Note_ID for the renamed rows. The source workbook's
+    name/ID are kept in Source_Note_Name / Source_Note_ID so every rename is traceable. Fails loudly if
+    an alias points at a name that is not in dataset2 — never silently drops or invents a note."""
+    out = accords.copy()
+    out["Source_Note_Name"] = out["Note_Name"]
+    out["Source_Note_ID"] = out["Note_ID"]
+    if not ALIASES.exists():
+        return out
+    al = pd.read_csv(ALIASES, dtype=str, keep_default_na=False)
+    al = al[al["Apply"].str.strip().str.lower() == "yes"]
+    name_to_id = dict(zip(notes["Note_Name"], notes["Note_ID"]))
+    missing = sorted(set(al["Dataset2_Name"]) - set(name_to_id))
+    if missing:
+        raise ValueError(f"note_name_aliases.csv: Apply=Yes targets not in dataset2: {missing}")
+    dup = al[al["Dataset3_Name"].duplicated()]
+    if len(dup):
+        raise ValueError(f"note_name_aliases.csv: duplicate Dataset3_Name rows: {sorted(dup['Dataset3_Name'])}")
+    mapping = dict(zip(al["Dataset3_Name"], al["Dataset2_Name"]))
+    hit = out["Note_Name"].isin(mapping)
+    out.loc[hit, "Note_Name"] = out.loc[hit, "Note_Name"].map(mapping)
+    out.loc[hit, "Note_ID"] = out.loc[hit, "Note_Name"].map(name_to_id)
+    return out
+
+
+def build_accords(notes: pd.DataFrame | None = None) -> pd.DataFrame:
     src = pd.read_excel(ML_PROJECT / "accord_dataset_normalized_v2.xlsx", sheet_name="accord_raw")
     out = pd.DataFrame({
         "Accord_ID": src["accord_id"],
@@ -108,7 +165,7 @@ def build_accords() -> pd.DataFrame:
         "Blend_Compatibility": src["Blend Compatibility"],
         "Stability_Class": src["Stability Class"].astype(str).str.strip(),
     })
-    return out
+    return apply_note_aliases(out, build_notes() if notes is None else notes)
 
 
 # ----------------------------------------------------------------------------
@@ -207,10 +264,21 @@ IFRA_MATERIALS = [
     ("Dihydrocoumarin", "119-84-6", "IFRA_STD_029", "No", "IFRA restricts but BANNED in UK/EU Annex II -> regulatory_uk.csv REJECTS it"),
     ("Methyl 2-(formylamino)benzoate", "41270-80-8", "IFRA_STD_101", "Yes",
      "Phototoxic (own, Guidance Table 2) - NOT part of furocoumarin sum"),
+    # Added 2026-09-15 after the RSC 'Chemistry of Fragrances' (Ch 10) review exposed the fig-leaf gap:
+    ("Fig leaf absolute", "68916-52-9", "IFRA_STD_142", "Yes",
+     "PROHIBITED (photoallergic even at 0.001%); Ficus carica. dataset2 'Fig Leaf' is a cis-3-hexenol stand-in, not this"),
+    ("6-Methylcoumarin", "92-48-8", "IFRA_STD_160", "No", "PROHIBITED - photosensitiser"),
+    ("7-Methylcoumarin", "2445-83-2", "IFRA_STD_161", "No", "PROHIBITED - sensitiser / photosensitiser"),
+    ("7-Methoxycoumarin", "531-59-9", "IFRA_STD_158", "No",
+     "As such PROHIBITED; natural contribution (e.g. lavender absolute, tonka) <=0.01% (100 ppm) in finished product"),
+    ("2-Hexenal", "6728-26-3", "IFRA_STD_039", "No", "trans-2-hexenal, green note; strong sensitiser - tiny Cat 4 limit"),
 ]
 
 # 'See Notebox' Standards whose numeric limit lives in the notes text
-NOTEBOX_LIMITS = {"IFRA_STD_179": "0.01"}   # safrole natural contribution, % in finished product
+NOTEBOX_LIMITS = {
+    "IFRA_STD_179": "0.01",   # safrole natural contribution, % in finished product
+    "IFRA_STD_158": "0.01",   # 7-methoxycoumarin natural contribution: 0.01% (100 ppm) in finished product
+}
 
 # What the 'Prohibition' part of a combined IFRA type applies to (CLAUDE.md step 2):
 #   grade    - one grade/species banned, another restricted (unknown grade -> REJECT)
@@ -226,6 +294,7 @@ PROHIBITION_SCOPE = {
     "IFRA_STD_078": "grade",      # Styrax: crude gum banned, extracts restricted
     "IFRA_STD_083": "grade",      # Verbena: oil banned, absolute restricted
     "IFRA_STD_179": "as_such",    # Safrole: banned as such, natural contribution <= 0.01%
+    "IFRA_STD_158": "as_such",    # 7-Methoxycoumarin: banned as such, natural contribution capped at Cat 4 value
 }
 
 
@@ -335,8 +404,9 @@ def build_group_rules() -> pd.DataFrame:
 
 
 def main() -> None:
-    for fn, builder in [("dataset1_perfumes.csv", build_perfumes), ("dataset2_notes.csv", build_notes),
-                        ("dataset3_accords.csv", build_accords), ("ifra_limits.csv", build_ifra_limits),
+    notes = build_notes()
+    for fn, builder in [("dataset1_perfumes.csv", build_perfumes), ("dataset2_notes.csv", lambda: notes),
+                        ("dataset3_accords.csv", lambda: build_accords(notes)), ("ifra_limits.csv", build_ifra_limits),
                         ("group_rules.csv", build_group_rules)]:
         df = builder()
         df.to_csv(HERE / fn, index=False, encoding="utf-8")

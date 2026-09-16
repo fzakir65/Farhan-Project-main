@@ -46,7 +46,7 @@ def test_expected_row_counts(data):
     assert len(data.perfumes) == 450
     assert len(data.notes) == 720          # exact duplicates are only *reported* at this stage
     assert len(data.accords) == 1518
-    assert len(data.ifra_limits) == 76
+    assert len(data.ifra_limits) == 81
     assert len(data.group_rules) == 8
     assert len(data.regulatory) >= 50
     assert len(data.safety_caps) == 30
@@ -102,7 +102,7 @@ def test_every_ifra_row_matches_the_official_standard(data, official):
         official_cas = re.findall(r"\d{2,7}-\d{2}-\d", o["CAS numbers"])
         assert r["All_CAS_List"] == official_cas, r["Material_Name"]
         raw = o["Category 4 (%)"].strip().replace(",", ".")
-        if r["IFRA_Key"] in {"IFRA_STD_179"}:          # 'See Notebox' -> limit taken from the Standard's notes
+        if r["IFRA_Key"] in {"IFRA_STD_179", "IFRA_STD_158"}:   # 'See Notebox' -> limit taken from the Standard's notes (safrole, 7-methoxycoumarin)
             assert r["Category_4_Limit"] == 0.01
             assert "0.01%" in o["Restricted ingredients: notes"]
         elif re.fullmatch(r"[0-9.]+", raw):
@@ -118,8 +118,9 @@ def test_own_phototoxic_materials_are_table_2_plus_verbena(data):
                            & ~data.ifra_limits["Notes"].str.contains("Furocoumarin")]
     table_2 = {"15323-35-0", "85-91-6", "93-08-3", "91722-29-1", "41270-80-8"}
     verbena = {"85116-63-8"}    # phototoxicity drives the OIL prohibition; absolute restricted
-    assert set(own["CAS"]) == table_2 | verbena
-    assert own["Notes"].str.contains("NOT part of furocoumarin sum").all()
+    fig_leaf = {"68916-52-9"}   # IFRA_STD_142: prohibited outright (photoallergic at 0.001%) — added 2026-09-15
+    assert set(own["CAS"]) == table_2 | verbena | fig_leaf
+    assert own[own["IFRA_Type"] != "Prohibition"]["Notes"].str.contains("NOT part of furocoumarin sum").all()
     furo = data.ifra_limits[data.ifra_limits["Notes"] == "Furocoumarin"]
     assert len(furo) == 8 and (furo["Phototoxic"] == "Yes").all()
 

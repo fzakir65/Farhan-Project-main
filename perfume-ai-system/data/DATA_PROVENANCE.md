@@ -18,6 +18,11 @@ python load_data.py          # validation report; exit 2 while ERROR-level defec
 | `reaction_rules.csv` | hand-maintained | IFRA Standards notes (ifra / ifra_spec rows); olfactory judgement (olfactory rows) | |
 | `dataset1_perfumes.csv` | generated | `../Farhan-Project-main/perfume_system_master_with_recipes.xlsx :: perfumes` | 450 perfumes. `Mood_Vibe`, `Occasion` have no source and are empty. Rows P000291–P000300 are column-shifted in the source; `load_data` repairs them. |
 | `dataset2_notes.csv` | generated | `../Farhan-Project-main/notes_dataset_normalized.xlsx :: notes_raw` | 720 rows / 437 unique names. **Known defects:** 72 exact duplicate rows; 50 name groups with conflicting CAS or volatility; 50 CAS numbers fail the CAS checksum (e.g. Norlimbanol listed as 66355-00-4, real CAS 70788-30-6). |
+| `note_name_aliases.csv` | hand-maintained (auto-seeded) | `reconcile_notes.py` | 2026-09-15. dataset3 → dataset2 note-name reconciliation. Tiers: AUTO (exact after normalisation, or chemical identity confirmed by dataset2's own Chemical_Name/CAS) → `Apply=Yes`; REVIEW / NO_MATCH → `Apply=No` until a human decides (`Decided_By=human` rows survive re-runs). 35/44/25 today. |
+| `cas_corrections.csv` | hand-maintained (auto-seeded) | `verify_cas.py` (+ `reference/pubchem_cas_cache.json`) | 2026-09-15. FIX only when two independent sources agree (official IFRA table / project tables / PubChem / same-note / check-digit / sibling). 6 FIX, 44 FLAG. PubChem is queried only for synthetics and defined molecules. |
+| `product_types.csv` | hand-maintained | Pybus & Sell, *The Chemistry of Fragrances* (RSC 1999), Appendix Table A2 p.260 | dilution ranges → `CONCENTRATE_FRACTION` presets |
+| `reference/carles_*.csv` | hand-maintained | Jean Carles, *A Method of Creation in Perfumery* (Downloads/ifra rules/A-Method-of-Creation-Perfumery.pdf), pages cited per row | volatility table p.3; worked chypre pp.5–7; family signatures p.17; chypre compatibility pp.16–17; 35 student base accords pp.18–20. Columns re-extracted in pypdf layout mode 2026-09-16 (the plain extraction interleaves table columns). |
+| `reference/rsc_physical_properties.csv` | hand-maintained | RSC Table 11.1 p.190 | 9 reference materials (RMM, BP, VP, sp, logP) |
 | `dataset3_accords.csv` | generated | `../Farhan-Project-main/accord_dataset_normalized_v2.xlsx :: accord_raw` | 1518 rows / 236 accords. **Known defect:** 102 note names (245 rows) have no match in dataset2. |
 
 ## Changes made in the 2026-09-11 audit (vs the original PDFs in `Downloads/ifra rules/`)
@@ -44,8 +49,18 @@ python load_data.py          # validation report; exit 2 while ERROR-level defec
 `reaction_rules.csv`
 - `Rule_Type` and `Limit_Basis` added; MHC/MOC and oakmoss/treemoss rules now point at real limits
 
+## Changes made 2026-09-15/16 (data cleanup + book review)
+
+- `ifra_limits.csv`: **Fig leaf absolute** (IFRA_STD_142, prohibited, phototoxic), 6-/7-methylcoumarin (prohibited),
+  7-methoxycoumarin (as-such prohibition, natural contribution ≤ 0.01 %), 2-hexenal (restriction) added → 81 materials.
+  Gap exposed by RSC Ch 10; numbers taken from the official table as always.
+- `dataset2_notes.csv`: 6 CAS corrected (`Source_CAS` keeps the original); `load_data` now WARNs on 25 checksum-valid CAS
+  shared by unrelated notes, on Volatility_Class contradicting BP/tenacity (17), and on disagreement with Carles' table (11).
+- `dataset3_accords.csv`: 98 rows renamed to dataset2 names (`Source_Note_Name`/`Source_Note_ID` keep the originals).
+- NOT applied, deliberately: the 1999 RSC IFRA numbers (superseded) and IFRA "quenching" (withdrawn).
+
 ## Still open
 - `constituents.csv` (natural → constituent → typical %) from the IFRA *Annex on contributions from other sources*
 - `Grade` field on notes (crude vs rectified; oil vs absolute) so combined IFRA types can be resolved
-- Fix the 50 bad CAS numbers and the 102 unmatched accord notes in the source workbooks
+- 44 bad CAS (flagged in `cas_corrections.csv`) and 69 unmatched accord notes (`note_name_aliases.csv` REVIEW/NO_MATCH) await human decisions; 25 shared-CAS hazards need verified CAS (Cade Oil first)
 - Sources for `Mood_Vibe` and `Occasion`

@@ -75,3 +75,8 @@ Safrole,94-59-7,Prohibition_Restriction,0.01,No,"As such PROHIBITED; natural con
 HICC (Lyral),31906-04-4,Restriction,0.2,No,IFRA restricts (HMPCC) but BANNED in UK/EU since 2021 -> regulatory_uk.csv REJECTS it,IFRA_STD_044,3 and 4-(4-Hydroxy-4-methylpentyl)-3-cyclohexene-1-carboxaldehyde (HMPCC),31906-04-4|51414-25-6,49,
 Dihydrocoumarin,119-84-6,Restriction,0.21,No,IFRA restricts but BANNED in UK/EU Annex II -> regulatory_uk.csv REJECTS it,IFRA_STD_029,Dihydrocoumarin,119-84-6,51,
 Methyl 2-(formylamino)benzoate,41270-80-8,Restriction_Specification,0.1,Yes,"Phototoxic (own, Guidance Table 2) - NOT part of furocoumarin sum",IFRA_STD_101,Methyl N-formylanthranilate,41270-80-8,49,
+Fig leaf absolute,68916-52-9,Prohibition,,Yes,"PROHIBITED (photoallergic even at 0.001%); Ficus carica. dataset2 'Fig Leaf' is a cis-3-hexenol stand-in, not this",IFRA_STD_142,Fig leaf absolute,68916-52-9|90028-74-3,40,all
+6-Methylcoumarin,92-48-8,Prohibition,,No,PROHIBITED - photosensitiser,IFRA_STD_160,6-Methylcoumarin,92-48-8,40,all
+7-Methylcoumarin,2445-83-2,Prohibition,,No,PROHIBITED - sensitiser / photosensitiser,IFRA_STD_161,7-Methylcoumarin,2445-83-2,40,all
+7-Methoxycoumarin,531-59-9,Prohibition_Restriction,0.01,No,"As such PROHIBITED; natural contribution (e.g. lavender absolute, tonka) <=0.01% (100 ppm) in finished product",IFRA_STD_158,7-Methoxycoumarin,531-59-9,43,as_such
+2-Hexenal,6728-26-3,Restriction,0.0077,No,"trans-2-hexenal, green note; strong sensitiser - tiny Cat 4 limit",IFRA_STD_039,2-Hexenal,505-57-7|6728-26-3|16635-54-4,51,

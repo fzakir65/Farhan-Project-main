@@ -17,6 +17,7 @@ Design notes
 """
 from __future__ import annotations
 
+import difflib
 import re
 import sys
 from dataclasses import dataclass, field
@@ -35,6 +36,7 @@ FILES = {
     "regulatory": "regulatory_uk.csv",
     "safety_caps": "safety_caps.csv",
     "reaction_rules": "reaction_rules.csv",
+    "product_types": "product_types.csv",
 }
 
 REQUIRED_COLUMNS = {
@@ -43,6 +45,7 @@ REQUIRED_COLUMNS = {
                  "Mood_Vibe", "Occasion"],
     "notes": ["Note_ID", "Note_Name", "Chemical_Name", "CAS", "Volatility_Class", "Odor_Strength",
               "Accords_Used_In"],
+    "product_types": ["Product_Type", "Concentrate_Min_Pct", "Concentrate_Max_Pct", "Alcohol_Pct_Range", "Source"],
     "accords": ["Accord_ID", "Accord_Name", "Accord_Category", "Note_ID", "Note_Name", "Note_Role", "Layer",
                 "Importance_Weight", "Typical_Presence", "Blend_Compatibility", "Stability_Class"],
     "ifra_limits": ["Material_Name", "CAS", "IFRA_Type", "Category_4_Limit", "Phototoxic", "Notes", "IFRA_Key",
@@ -69,6 +72,17 @@ REG_STATUS = {"BANNED", "RESTRICTED"}
 REG_JURISDICTIONS = {"GB+EU", "GB", "EU"}
 SEASON_WORDS = re.compile(r"\b(?:spring|summer|fall|autumn|winter|all seasons|day|evening|night)\b", re.I)
 CAS_PLACEHOLDERS = {"-", "n/a", "na", "none", "nan", "unknown", "tbd", "?"}
+CARLES_TABLE = "reference/carles_volatility_table.csv"
+# Physical plausibility of Volatility_Class (Pybus & Sell, Chemistry of Fragrances: Ch 7 p.141 gives top ~15 min,
+# heart 3-4 h, base 5-8 h+; Ch 11 p.190 boiling point / RMM as the first approximation to volatility).
+# Thresholds are deliberately loose: they catch gross contradictions, not olfactory judgement calls.
+PHYSICS_LIMITS = {"Top": {"max_bp": 260.0, "max_tenacity_h": 8.0}, "Base": {"min_bp": 190.0, "min_tenacity_h": 2.0}}
+# Carles' class -> dataset2 classes that agree with it (a two-layer tag straddling the class is fine)
+CARLES_AGREES = {"Top": {"Top", "Top/Heart"}, "Modifier": {"Heart", "Top/Heart", "Heart/Base"}, "Base": {"Base", "Heart/Base"}}
+_GRADE_WORDS = {"oil", "essential", "absolute", "abs", "co2", "extract", "resin", "resinoid", "concrete", "butter",
+                "tincture", "crystals", "rectified", "expressed", "distilled", "extra", "high", "purity", "plus", "rich"}
+_GREEK = {"α": "alpha", "β": "beta", "γ": "gamma", "δ": "delta", "ε": "epsilon"}
+_NAME_SYNONYMS = {"olibanum": "frankincense", "iris": "orris", "jasmin": "jasmine"}   # trade synonyms (Boswellia; orris root)
 OFFICIAL_IFRA = "reference/ifra_51st_standards_overview.csv"
 
 # Source text -> 1..5 (CLAUDE.md schema: Longevity(1-5), Sillage(1-5))
@@ -108,11 +122,14 @@ class Data:
     regulatory: pd.DataFrame
     safety_caps: pd.DataFrame
     reaction_rules: pd.DataFrame
+    product_types: pd.DataFrame
     issues: list[Issue] = field(default_factory=list)
     # convenience frames produced by cross-validation
     unmatched_accord_notes: pd.DataFrame = field(default_factory=pd.DataFrame)
     regulatory_overrides: pd.DataFrame = field(default_factory=pd.DataFrame)
     notes_regulated: pd.DataFrame = field(default_factory=pd.DataFrame)
+    carles_disagreements: pd.DataFrame = field(default_factory=pd.DataFrame)
+    shared_cas: dict = field(default_factory=dict)
 
     def errors(self) -> list[Issue]:
         return [i for i in self.issues if i.severity == "ERROR"]
@@ -161,6 +178,67 @@ def split_multi(s, sep: str = ";") -> list[str]:
 
 def split_cas_list(s) -> list[str]:
     return split_multi(s, sep="|")
+
+
+def _first_number(x) -> float:
+    """'2–4' -> 3.0 (midpoint of a range), '24+' -> 24.0, '' -> NaN. For Boiling_Point_C / Tenacity_hrs."""
+    parts = [float(v) for v in re.findall(r"\d+(?:\.\d+)?", str(x or ""))]
+    return sum(parts) / len(parts) if parts else float("nan")
+
+
+def _material_words(name) -> set[str]:
+    """Content words of a note or chemical name: Greek letters spelt out, grade words dropped, plurals folded."""
+    t = str(name or "")
+    for g, latin in _GREEK.items():
+        t = t.replace(g, latin)
+    words = set(re.findall(r"[a-z0-9]+", t.lower()))
+    words = {w[:-1] if w.endswith("s") and len(w) > 3 else w for w in words} - _GRADE_WORDS
+    return {_NAME_SYNONYMS.get(w, w) for w in words}
+
+
+def same_material(name_a, chem_a, name_b, chem_b) -> bool:
+    """Two dataset2 rows describe the same material when they share a content word (Cedarwood / Cedarwood Atlas),
+    are spelling variants (Civetone / Civettone, Guaiac Wood / Guaiacwood), have the same Chemical_Name, or one's
+    Chemical_Name is the other's name (Toasted Sugar = Cyclotene). Used to tell a legitimate shared CAS from a
+    paste error the checksum cannot see."""
+    wa, wb = _material_words(name_a), _material_words(name_b)
+    if wa & wb:
+        return True
+    ka, kb = "".join(sorted(wa)), "".join(sorted(wb))
+    if ka and kb and (ka in kb or kb in ka or difflib.SequenceMatcher(None, ka, kb).ratio() >= 0.9):
+        return True
+    ca, cb = _material_words(chem_a), _material_words(chem_b)
+    if ca and ca == cb:
+        return True
+    return bool(ca and ca == wb) or bool(cb and cb == wa)
+
+
+def shared_cas_conflicts(notes: pd.DataFrame) -> dict[str, list[str]]:
+    """Checksum-valid CAS numbers carried by notes that are NOT the same material — e.g. cedarwood's 8000-27-9 on
+    Cade Oil, Iso E Super's 54464-57-2 on Safraleine. Notes sharing a CAS are clustered with `same_material`;
+    more than one cluster means the CAS is wrong for at least one of them. Returns {CAS: [note names]}."""
+    valid = notes[(notes["CAS"] != "") & notes["CAS"].map(is_valid_cas)]
+    out: dict[str, list[str]] = {}
+    for cas, g in valid.groupby("CAS"):
+        items = sorted({(n, c) for n, c in zip(g["Note_Name"], g["Chemical_Name"])})
+        names = sorted({n for n, _ in items})
+        if len(names) < 2:
+            continue
+        parent = list(range(len(items)))
+
+        def find(i):
+            while parent[i] != i:
+                parent[i] = parent[parent[i]]
+                i = parent[i]
+            return i
+
+        for i in range(len(items)):
+            for j in range(i + 1, len(items)):
+                if items[i][0] == items[j][0] or same_material(*items[i], *items[j]):
+                    parent[find(i)] = find(j)
+        if len({find(i) for i in range(len(items))}) > 1:
+            out[cas] = names
+    return out
 
 
 def _to_float(x) -> float:
@@ -273,12 +351,40 @@ def load_notes(path: Path) -> tuple[pd.DataFrame, list[Issue]]:
     if len(bad_cas):
         issues.append(Issue("ERROR", "notes", "", f"{len(bad_cas)} notes carry a CAS that fails the checksum — "
                                                   "fix in source before Zone B can trust CAS joins"))
+    if "Source_CAS" in df.columns:
+        src = df["Source_CAS"].map(lambda c: "" if c.lower() in CAS_PLACEHOLDERS else c)
+        n_fix = int((src != df["CAS"]).sum())
+        if n_fix:
+            issues.append(Issue("INFO", "notes", "", f"{n_fix} CAS numbers corrected via cas_corrections.csv (Source_CAS keeps the original)"))
     n_nocas = int((df["CAS"] == "").sum())
     if n_nocas:
         issues.append(Issue("WARNING", "notes", "", f"{n_nocas} notes have no CAS — safety lookups will miss them (accords/bases are expected here)"))
 
     df["Note_Name_Norm"] = df["Note_Name"].map(normalize_name)
     df["Accords_Used_In_List"] = df["Accords_Used_In"].map(split_multi)
+
+    # A CAS shared by notes that are not the same material is a paste error the checksum cannot catch — and the
+    # safety engine joins on CAS, so the wrong material's limits would apply. Reported per CAS, never fixed here.
+    shared = shared_cas_conflicts(df)
+    for cas, names in sorted(shared.items(), key=lambda kv: (-len(kv[1]), kv[0])):
+        issues.append(Issue("WARNING", "notes", cas, f"CAS shared by unrelated notes — wrong for at least one: {'; '.join(names)}"))
+    if shared:
+        issues.append(Issue("WARNING", "notes", "", f"{len(shared)} checksum-valid CAS numbers are shared by unrelated notes "
+                                                    "(see data.shared_cas) — verify before trusting CAS joins for those notes"))
+
+    # Volatility_Class must be physically plausible (boiling point / tenacity), see PHYSICS_LIMITS.
+    if "Boiling_Point_C" in df.columns and "Tenacity_hrs" in df.columns:
+        bp = df["Boiling_Point_C"].map(_first_number)
+        ten = df["Tenacity_hrs"].map(_first_number)
+        top, base = PHYSICS_LIMITS["Top"], PHYSICS_LIMITS["Base"]
+        odd = ((df["Volatility_Class"] == "Top") & ((bp >= top["max_bp"]) | (ten >= top["max_tenacity_h"]))) | \
+              ((df["Volatility_Class"] == "Base") & ((bp <= base["min_bp"]) | (ten <= base["min_tenacity_h"])))
+        for idx in df.index[odd]:
+            r = df.loc[idx]
+            issues.append(Issue("WARNING", "notes", r["Note_ID"],
+                                f"Volatility_Class {r['Volatility_Class']!r} for {r['Note_Name']!r} contradicts its physics "
+                                f"(BP {r['Boiling_Point_C'] or '?'} °C, tenacity {r['Tenacity_hrs'] or '?'} h) — "
+                                "Carles/RSC Ch 7: top ≈ 15 min, base ≥ 5-8 h"))
 
     # Same name, different chemistry: cannot be resolved automatically.
     grp = df.groupby("Note_Name_Norm")
@@ -299,6 +405,11 @@ def load_accords(path: Path) -> tuple[pd.DataFrame, list[Issue]]:
     df["Stability_Class"] = df["Stability_Class"].str.capitalize()
     df["Note_Name_Norm"] = df["Note_Name"].map(normalize_name)
     df["Accord_Name_Norm"] = df["Accord_Name"].map(normalize_name)
+    if "Source_Note_Name" in df.columns:
+        n_alias = int((df["Source_Note_Name"] != df["Note_Name"]).sum())
+        if n_alias:
+            issues.append(Issue("INFO", "accords", "", f"{n_alias} rows renamed to dataset2 names via "
+                                                       "note_name_aliases.csv (Source_Note_Name keeps the original)"))
 
     for col, vocab in (("Layer", LAYERS), ("Note_Role", NOTE_ROLES), ("Stability_Class", STABILITY)):
         for _, r in df[~df[col].isin(vocab)].iterrows():
@@ -549,20 +660,69 @@ def cross_validate(d: Data, data_dir: Path = DATA_DIR) -> list[Issue]:
 # entry points
 # ----------------------------------------------------------------------------
 
+def load_product_types(path: Path) -> tuple[pd.DataFrame, list[Issue]]:
+    """Fine-fragrance dilution ranges (RSC Table A2). Zone C picks one; the safety engine's CONCENTRATE_FRACTION
+    must then lie inside [Concentrate_Min_Pct, Concentrate_Max_Pct] / 100 for that product type."""
+    df = _read(path, "product_types")
+    issues: list[Issue] = []
+    for col in ("Concentrate_Min_Pct", "Concentrate_Max_Pct"):
+        df[col] = df[col].map(_to_float)
+    for _, r in df.iterrows():
+        lo, hi = r["Concentrate_Min_Pct"], r["Concentrate_Max_Pct"]
+        if not (0 < lo <= hi <= 100):
+            issues.append(Issue("ERROR", "product_types", r["Product_Type"], f"concentrate range {lo}-{hi} % is not 0 < min <= max <= 100"))
+        if not r["Source"]:
+            issues.append(Issue("ERROR", "product_types", r["Product_Type"], "no Source citation"))
+    df["Concentrate_Fraction_Min"] = df["Concentrate_Min_Pct"] / 100.0
+    df["Concentrate_Fraction_Max"] = df["Concentrate_Max_Pct"] / 100.0
+    return df, issues
+
+
 def load_all(data_dir: Path | str = DATA_DIR) -> Data:
     data_dir = Path(data_dir)
     loaders = {
         "perfumes": load_perfumes, "notes": load_notes, "accords": load_accords,
         "ifra_limits": load_ifra_limits, "group_rules": load_group_rules, "regulatory": load_regulatory,
-        "safety_caps": load_safety_caps, "reaction_rules": load_reaction_rules,
+        "safety_caps": load_safety_caps, "reaction_rules": load_reaction_rules, "product_types": load_product_types,
     }
     frames, issues = {}, []
     for table, fn in loaders.items():
         df, iss = fn(data_dir / FILES[table])
         frames[table], issues = df, issues + iss
     data = Data(**frames, issues=issues)
+    data.shared_cas = shared_cas_conflicts(data.notes)
     data.issues += cross_validate(data, data_dir)
+    data.issues += carles_cross_check(data, data_dir)
     return data
+
+
+def carles_cross_check(d: Data, data_dir: Path) -> list[Issue]:
+    """Compare dataset2 Volatility_Class with Jean Carles' own Top / Modifier / Base classification
+    (data/reference/carles_volatility_table.csv, transcribed from 'A Method of Creation in Perfumery' p.3).
+    A disagreement is a WARNING: Carles is the authority for the layer model, but a two-layer dataset2 tag that
+    straddles his class counts as agreement (CARLES_AGREES)."""
+    path = Path(data_dir) / CARLES_TABLE
+    issues: list[Issue] = []
+    if not path.exists():
+        return issues
+    carles = pd.read_csv(path, dtype=str, keep_default_na=False)
+    carles = carles[carles["Dataset2_Name"] != ""]
+    rows = []
+    for _, c in carles.iterrows():
+        classes = sorted(set(d.notes.loc[d.notes["Note_Name"] == c["Dataset2_Name"], "Volatility_Class"]) - {""})
+        if not classes:
+            continue
+        agree = [v for v in classes if v in CARLES_AGREES[c["Carles_Class"]]]
+        if not agree:
+            rows.append({"Material": c["Material"], "Dataset2_Name": c["Dataset2_Name"], "Carles_Class": c["Carles_Class"],
+                         "Dataset2_Classes": "/".join(classes), "Source": c["Source"]})
+            issues.append(Issue("WARNING", "notes", c["Dataset2_Name"],
+                                f"Volatility_Class {'/'.join(classes)} disagrees with Carles ({c['Carles_Class']}) — {c['Source']}"))
+    d.carles_disagreements = pd.DataFrame(rows)
+    if rows:
+        issues.append(Issue("WARNING", "notes", "", f"{len(rows)} notes contradict Carles' volatility classification "
+                                                    "(see data.carles_disagreements)"))
+    return issues
 
 
 def report(d: Data) -> str:
