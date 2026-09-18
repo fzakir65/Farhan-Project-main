@@ -40,7 +40,7 @@ ROLE_WEIGHT = {"Driver": (4, 5), "Support": (2, 4), "Modifier": (1, 3)}   # Impo
 # Odour-power damping (CLAUDE.md: "Powerful materials (low odor threshold) get SMALLER %", e.g. IBQ ~0.5-1 %, not 15 %).
 # Categorical on purpose: dataset2's Odor_Threshold_mg_L differs between duplicate rows of the same note today, so a
 # continuous rule would inject noise. `threshold_damping` below is available once those fields are verified.
-ODOR_DAMPING = {"Strong": 0.5, "Medium": 1.0, "Low": 1.0, "": 1.0}
+ODOR_DAMPING = {"Very strong": 0.25, "Strong": 0.5, "Medium": 1.0, "Low": 1.0, "": 1.0}   # trace / powerful / normal / bulk
 THRESHOLD_REF_MG_L = 0.01          # dataset2 median; materials >= 20x more potent than this are halved again
 THRESHOLD_POTENT_FACTOR = 0.5
 LOW_COMPATIBILITY = 0.7            # Blend_Compatibility below this scales the share by the compatibility itself

@@ -132,6 +132,7 @@ perfume-ai-system/
 │   ├── constituents.csv             # natural -> restricted constituent -> fraction (safety step 0), provisional    [rev4]
 │   ├── note_additions.csv           # new dataset2 rows the accords need (Vanilla Absolute, Cade Oil Rectified…)   [rev4]
 │   ├── accord_edits.csv             # substitutions for banned / wrong-grade notes inside accords (AI, sign-off)    [rev4]
+│   ├── note_field_overrides.csv     # coarse relabels, e.g. Odor_Strength potency class (Very strong/Strong/Low), AI  [rev4]
 │   ├── product_bases.csv            # bottle auxiliaries: ethanol, water, DPG, BHT, UV absorber… with legal basis  [rev4]
 │   ├── allergens_uk.csv             # the 26 declarable allergens (UK/EU), leave-on threshold 0.001 %              [rev4]
 │   ├── reference/ifra_51st_standards_overview.csv   # official IFRA table (source of truth)
@@ -273,8 +274,11 @@ Carles' own table (`data.carles_disagreements`) — reported, never silently ove
    `NOTE_CONFLICT` says which alternatives existed.
 2. **Place** by `Volatility_Class`. A two-layer tag takes the accord's own `Layer` if allowed, else the allowed layer furthest below
    its target. Accord `Layer` that contradicts dataset2 → dataset2 wins, `LAYER_OVERRIDDEN` says so.
-3. **Weigh**: `Importance_Weight × Typical_Presence × accord weight`; a `Strong` Odor_Strength halves the share (`ODOR_DAMPED`;
-   Carles' accessory products, RSC Ch 8 p.149 Stevens' law); `Blend_Compatibility < 0.7` scales by itself (`LOW_COMPATIBILITY`).
+3. **Weigh**: `Importance_Weight × Typical_Presence × accord weight`; Odor_Strength damps the share — `Very strong` ×0.25
+   (trace materials: indole, skatole, aldehydes, damascones, calone…), `Strong` ×0.5, `Medium`/`Low` ×1 (`ODOR_DAMPED`;
+   Carles' accessory products, RSC Ch 8 p.149). The classes come from `note_field_overrides.csv` (216 AI relabels from
+   general usage-level knowledge — olfactory balance only, never a safety input) on top of the workbook's labels.
+   `Blend_Compatibility < 0.7` scales by itself (`LOW_COMPATIBILITY`).
    Duplicate accord rows: exact repeats ignored, differing repeats keep the strongest statement and WARN — never summed.
 4. **Layers**: 25/20/55 defaults; an empty layer's share is redistributed (`EMPTY_LAYER`), Heart is then re-capped at 25 with the
    excess to Base, Base must stay the largest; anything outside the Carles ranges → `LAYER_OUT_OF_RANGE`. Within a layer, notes

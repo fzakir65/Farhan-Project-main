@@ -98,7 +98,29 @@ def build_notes() -> pd.DataFrame:
         "Short_Description": src["Short Description"],
     })
     out = apply_cas_corrections(out)
-    return append_note_additions(out)
+    return apply_field_overrides(append_note_additions(out))
+
+
+FIELD_OVERRIDES = HERE / "note_field_overrides.csv"   # coarse, reviewable relabels (e.g. Odor_Strength potency class)
+
+
+def apply_field_overrides(notes: pd.DataFrame) -> pd.DataFrame:
+    """Set single fields per note from note_field_overrides.csv (Note_Name, Field, Value). Only existing notes and
+    existing columns; used for low-risk classifications such as Odor_Strength, never for CAS or limits."""
+    if not FIELD_OVERRIDES.exists():
+        return notes
+    ov = pd.read_csv(FIELD_OVERRIDES, dtype=str, keep_default_na=False)
+    out = notes.copy()
+    for r in ov.itertuples(index=False):
+        if r.Field in ("CAS", "Note_Name", "Note_ID"):
+            raise ValueError(f"note_field_overrides.csv may not set {r.Field}")
+        if r.Field not in out.columns:
+            raise ValueError(f"note_field_overrides.csv: unknown field {r.Field!r}")
+        mask = out["Note_Name"] == r.Note_Name
+        if not mask.any():
+            raise ValueError(f"note_field_overrides.csv: no note {r.Note_Name!r}")
+        out.loc[mask, r.Field] = r.Value
+    return out
 
 
 def append_note_additions(notes: pd.DataFrame) -> pd.DataFrame:
