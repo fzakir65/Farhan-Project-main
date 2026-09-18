@@ -40,15 +40,16 @@ changes made in the 2026-09-11 IFRA audit.
 
 ## Status (2026-09-18)
 
-All seven build tasks exist and are tested (`python -m pytest -q`, 185 tests). Read **CLAUDE.md → ⏩ RESUME HERE** for
+All seven build tasks plus the product-formulation and invention layers exist and are tested (`python -m pytest -q`, 199 tests). Read **CLAUDE.md → ⏩ RESUME HERE** for
 what is done, what is open, and the next step.
 
 ```
 python load_data.py                          # data report (exit 2 while the two decision lists are open)
-python app.py "fresh woody for summer"       # Zone A -> Zone B in the terminal, no API key needed
+python app.py "fresh woody for summer"       # match -> formula -> safety -> bottle formulation, no API key needed
+python app.py --invent "citrus, mossy, rose" --family Chypre   # invent a new composition (Carles method)
 streamlit run app.py                         # the UI (pip install streamlit)
 python data/build_datasets.py                # regenerate data after editing a decision CSV
 python data/reconcile_notes.py | python data/verify_cas.py --offline | python data/reconcile_accords.py
 ```
 
-Safety results are **provisional** until `constituents.csv` (IFRA natural-constituent contributions) exists.
+Safety results are **provisional** until the literature fractions in `constituents.csv` are replaced by supplier CoA values.

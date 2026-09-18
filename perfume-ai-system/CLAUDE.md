@@ -11,39 +11,37 @@ This file is the primary guidance for Claude Code. Read it fully before writing 
 
 ## ⏩ RESUME HERE (read this first in a new session)
 
-**State on 2026-09-18:** all seven build tasks exist and are tested (`python -m pytest -q` → 185 passing, ~1 min).
-The engine is complete end to end: `python app.py "fresh woody for summer"` runs Zone A → Zone B in the terminal
-without any API key; `streamlit run app.py` is the UI (install streamlit first). Every commit is on `main`.
+**State on 2026-09-18 (evening):** everything requested is built and tested — `python -m pytest -q` → 199 passing (~70 s).
+`python app.py "fresh woody for summer"` runs match → formula → safety → rebalance → **product formulation**
+(ethanol / water / additives / allergen label); `python app.py --invent "citrus, mossy, rose" --family Chypre` **invents**
+a new composition the Carles way; `streamlit run app.py` is the UI (Buttons / Free text / Invent). All on `main`.
 
-What is DONE: data cleanup tooling (`data/reconcile_notes.py`, `data/verify_cas.py`, `data/reconcile_accords.py`, all
-applied at build time by `data/build_datasets.py`); Task 2 `formula_builder.py` + `accord_study.py`; Task 3
-`safety_engine.py`; Task 4 `optimizer.py`; `pipeline.py` (`run_zone_b`, `run_zone_b_for_perfume`); Tasks 5–6
-`zone_a_llm/{llm_client,input_handler,matcher,describer}.py`; Task 7 `app.py`. Books read and cited: Carles, RSC 1999.
+Numbers that describe the data state (`python load_data.py`): 1 ERROR (13 accord note names with no dataset2
+equivalent — Cannabis/Hemp/Egg/Mushroom accords etc., an honest floor), 0 checksum-failing CAS (fixed or blanked),
+3 legitimately shared CAS, 2582/2593 perfume-accord slots resolve, **444/450 catalogue perfumes PASS Zone B**,
+235/236 accords PASS. Safety step 0 (constituent roll-up) IS implemented on `constituents.csv` (86 literature rows) and
+every verdict stays **PROVISIONAL** until those fractions are replaced by supplier CoA values.
 
-What is NOT done — the honest gaps, in priority order (these are decisions/data, not code):
-1. **Safety step 0 (constituent roll-up) — `constituents.csv` does not exist.** Every safety result is marked
-   PROVISIONAL. Needed before any formula can be called safe for real use.
-2. **Accords that reject as written:** `Earthy` (111 perfumes) and `Animalic` (27) contain *Costus* (UK/EU banned);
-   `Smoky` (89) and `Leather` (36) contain Birch Tar / Cade Oil with no rectified grade in the note name. A perfumer
-   must re-author those accords (or rename the notes to their rectified grade). This is why 261/450 catalogue perfumes
-   currently REJECT — the engine is right, the recipes are not legal as written.
-3. **Decision lists awaiting a human** (set `Apply=Yes`, `Decided_By=human`, then `python data/build_datasets.py`):
-   `note_name_aliases.csv` (44 REVIEW + 25 NO_MATCH notes, e.g. Vanilla Absolute, Cinnamon Bark Oil need new dataset2
-   rows), `cas_corrections.csv` (44 FLAG), `accord_name_aliases.csv` (29 REVIEW incl. musky/spicy/fresh/floral,
-   31 NO_MATCH). 25 checksum-valid CAS are still shared by unrelated notes (`data.shared_cas`).
-4. dataset2 chemistry fields (thresholds, BP…) are unverified and differ between duplicate rows → the builder's odour
-   damping is categorical on purpose; PubChem enrichment would let `threshold_damping` be switched on.
-5. UK/EU allergen-declaration CSV (v2, labelling), Zone C stock solutions / pump mapping.
-6. The ML project (`../Farhan-Project-main/`): Stage 1+2 trained twice (top-1 ~7 %, data-capped); Stage 3/4 untrained;
-   the N=200 real-prompt held-out set unwritten; needs real customer language before another run is worth it.
+What was decided by AI, not a human (all traceable, `Decided_By=ai` in the CSV, sign-off needed before shipping):
+- `accord_edits.csv`: Costus → Carrot Seed (earthy accords) / Skatole trace (animalic accords); Birch Tar → Birch Tar
+  Rectified; Cade Oil → Cade Oil Rectified (new note); Styrax Resin → Styrax Resinoid; Peru Balsam → Tolu Balsam.
+- `note_additions.csv`: 7 new dataset2 rows (Vanilla Absolute, Cinnamon Bark Oil, Cade Oil Rectified, Geosmin, Davana,
+  Mace, Lentisque). `note_name_aliases.csv` 91/104 applied; `accord_name_aliases.csv` 88/96 applied.
+- `cas_corrections.csv`: 90 rows — 6 auto + 2 human + AI single-source fixes; 36 hopeless CAS **blanked** (missing beats wrong).
+- `constituents.csv`: upper-bound literature fractions (Tisserand & Young 2e; ISO; RSC Ch 10).
 
-**Next step when resuming:** pick from the gaps above in order — (1) obtain/author `constituents.csv` and implement
-step 0 in `safety_engine.check_formula`; (2) hand the four accords to a perfumer; (3) work the decision lists.
-Then the ML/data pass. Never build Zone C before step 0 exists.
+What is still open, in order:
+1. **Supplier CoA values** for constituents.csv (turns PROVISIONAL into real), and a perfumer's smell-test of the
+   AI substitutions above. 2. dataset2 chemistry columns: 53 MW/logP disagreements with PubChem
+   (`data.pubchem_mismatches`) — replace from `reference/pubchem_properties.csv` when a human confirms the identities.
+3. The 13 accord notes with no material (author them or drop the accords). 4. EU allergen list expansion
+   (Reg 2023/1545) in `allergens_uk.csv`. 5. Zone C (stock solutions, pumps) — only after 1.
+6. ML: `../Farhan-Project-main/preprocessing/build_real_reviews.py` builds a REAL customer-language corpus (Amazon
+   Reviews 2023, research licence) weak-labelled by catalogue perfume mentions; `training/evaluate_on_real_reviews.py`
+   measures the real-world gap of the trained checkpoint; retraining with those rows (plan F.5) is the next ML step.
 
-How to check where things stand: `python load_data.py` (data report; ERRORs = the two decision lists),
-`python app.py --report`, `python data/verify_cas.py --offline`, `python data/reconcile_notes.py`,
-`python data/reconcile_accords.py`. Memory for Claude sessions: `~/.claude/projects/.../memory/`.
+How to check where things stand: `python load_data.py`, `python app.py --report`, the three reconcile/verify scripts
+(`data/reconcile_notes.py`, `data/verify_cas.py --offline`, `data/reconcile_accords.py`), `data/enrich_pubchem.py --offline`.
 
 ## PROJECT OVERVIEW
 
@@ -131,10 +129,17 @@ perfume-ai-system/
 │   ├── note_name_aliases.csv        # dataset3 -> dataset2 note-name reconciliation (Rule 10); Apply/Decided_By  [rev2]
 │   ├── cas_corrections.csv          # checksum-failing CAS -> verified corrections; Apply/Decided_By            [rev2]
 │   ├── accord_name_aliases.csv      # dataset1 Main_Accords term -> dataset3 accord (the Zone A -> B bridge)     [rev3]
+│   ├── constituents.csv             # natural -> restricted constituent -> fraction (safety step 0), provisional    [rev4]
+│   ├── note_additions.csv           # new dataset2 rows the accords need (Vanilla Absolute, Cade Oil Rectified…)   [rev4]
+│   ├── accord_edits.csv             # substitutions for banned / wrong-grade notes inside accords (AI, sign-off)    [rev4]
+│   ├── product_bases.csv            # bottle auxiliaries: ethanol, water, DPG, BHT, UV absorber… with legal basis  [rev4]
+│   ├── allergens_uk.csv             # the 26 declarable allergens (UK/EU), leave-on threshold 0.001 %              [rev4]
 │   ├── reference/ifra_51st_standards_overview.csv   # official IFRA table (source of truth)
 │   ├── reference/carles_*.csv       # Carles' volatility table, worked chypre, family signatures, 35 base accords [rev2]
 │   ├── reference/rsc_physical_properties.csv        # RSC Table 11.1                                          [rev2]
 │   ├── reference/pubchem_cas_cache.json             # cached PubChem answers so the CAS audit reproduces offline [rev2]
+│   ├── reference/pubchem_properties.csv             # PubChem MW / XLogP / IUPAC for 137 defined molecules      [rev4]
+│   ├── enrich_pubchem.py            # fetches the above; load_data WARNs on MW/logP disagreement                  [rev4]
 │   ├── build_datasets.py            # regenerates dataset1/2/3 (+ applies aliases & CAS fixes), ifra_limits, group_rules
 │   ├── reconcile_notes.py           # Step 1 tool: proposes note-name aliases, tiers AUTO / REVIEW / NO_MATCH   [rev2]
 │   ├── verify_cas.py                # Step 2 tool: audits bad CAS against IFRA table / project tables / PubChem [rev2]
@@ -149,8 +154,10 @@ perfume-ai-system/
 │   ├── formula_builder.py           # Task 2 — DONE 2026-09-16
 │   ├── accord_study.py              # Carles' ratio-study method as a deterministic variation generator [rev2]
 │   ├── safety_engine.py             # Task 3 — DONE 2026-09-18 (step 0 NOT IMPLEMENTED -> provisional)
-│   ├── optimizer.py                 # Task 4 — DONE 2026-09-18
-│   └── pipeline.py                  # run_zone_b / run_zone_b_for_perfume: build -> safety -> rebalance [rev3]
+│   ├── optimizer.py                 # Task 4 — DONE 2026-09-18 (fills an all-pinned remainder with DPG diluent)
+│   ├── pipeline.py                  # run_zone_b / run_zone_b_for_perfume: build -> safety -> rebalance [rev3]
+│   ├── product_formulation.py       # concentrate -> bottle (RSC Fig 9.1), safety at product %, allergen label [rev4]
+│   └── invention.py                 # new compositions from terms: family signature + Carles ratio series      [rev4]
 ├── zone_c_machine/                  # future
 │   ├── stock_solutions.csv
 │   ├── pump_mapping.csv
@@ -194,6 +201,19 @@ match after normalisation (names) or two independent sources agreeing (CAS) — 
 **product_types.csv** **[rev2]** — `Product_Type, Concentrate_Min_Pct, Concentrate_Max_Pct, Alcohol_Pct_Range, Source`
 (RSC Appendix Table A2: extrait 15–30 %, EdP 8–15, EdT 4–15, cologne 3–5, splash 2–3). Zone C picks one; `CONCENTRATE_FRACTION`
 must lie in that range.
+
+**constituents.csv** **[rev4]** — `Natural_Name, Natural_CAS, Grade_Word, Constituent_Name, Constituent_CAS, Typical_Min_Pct,
+Typical_Max_Pct, Fraction_Used, Basis, Source, Note, Provisional`. `Grade_Word` (leaf/bark/absolute/oil…) picks the profile
+from the note name; no grade word → worst case of every grade. `Fraction_Used` = upper bound of the literature range.
+
+**note_additions.csv / accord_edits.csv** **[rev4]** — hand-maintained; applied by `build_datasets.py` (additions appended to
+dataset2 after CAS corrections; edits applied to dataset3 after the aliases, matched on the workbook or current note name).
+
+**product_bases.csv** **[rev4]** — `Component, INCI, CAS, Role, Default_Pct, Min_Pct, Max_Pct, Phase, When_To_Use, Legal_Basis,
+Source, Note`: ethanol (DEB), water, DPG, BHT (SCCS ≤ 0.8 %), tocopherol, benzophenone-3 (Annex VI ≤ 0.5 % product protection),
+PPG-20 methyl glucose ether, polysorbate 20, magnesium carbonate (filter aid). Baseline = RSC Fig 9.1 EdP.
+
+**allergens_uk.csv** **[rev4]** — the 26 Annex III allergens with `All_CAS`; leave-on 0.001 % / rinse-off 0.01 %.
 
 **data/reference/carles_*.csv** **[rev2]** — transcribed from Jean Carles, *A Method of Creation in Perfumery*, every row cited
 by page: `carles_volatility_table` (his Top/Modifier/Base labels, cross-checked against dataset2 by `load_data`),
@@ -385,6 +405,16 @@ rebuilds without it); group rules scale members (sum, sum-of-fractions) and pin 
 are flags; a note without CAS is UNVERIFIED (warning). `optimizer.optimize()` then redistributes the removed mass across
 unpinned notes (same layer first, Heart ≤ 25), renormalises to 100 and re-runs `check_formula` until nothing changes;
 if nothing unpinned can absorb the mass → REJECT. `pipeline.run_zone_b()` chains build → safety → optimize.
+
+### Product layer and invention **[rev4]**
+`product_formulation.formulate_product(concentrate, data, product_type, concentrate_pct)` turns the 100 % concentrate into a
+bottle: alcohol share of the solvent from `product_types.csv` (RSC Table A2, upper bound), water the rest, auxiliaries from
+`product_bases.csv`; re-runs `check_formula` with `concentrate_fraction = concentrate %`; emits the allergen declaration
+(direct materials + constituent contributions) and the maturation / chill / filter process (RSC Fig 9.1).
+`invention.invent(terms, data, family=…)` maps terms → accords, enforces a Carles family signature, varies the two
+strongest base materials through 9:1 … 5:5, runs every variant through safety + rebalance and ranks them — Zone A or the
+user chooses. Odour-active "fixatives" (musks, Ambroxan, resinoids) live inside the concentrate; DPG is a diluent, not a
+fixative (perfumery_chat_transcript.pdf, RSC Ch 9).
 
 ### Safety principles
 - All safety checks are deterministic (table lookups, never LLM)

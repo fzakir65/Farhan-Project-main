@@ -21,6 +21,12 @@ python load_data.py          # validation report; exit 2 while ERROR-level defec
 | `note_name_aliases.csv` | hand-maintained (auto-seeded) | `reconcile_notes.py` | 2026-09-15. dataset3 → dataset2 note-name reconciliation. Tiers: AUTO (exact after normalisation, or chemical identity confirmed by dataset2's own Chemical_Name/CAS) → `Apply=Yes`; REVIEW / NO_MATCH → `Apply=No` until a human decides (`Decided_By=human` rows survive re-runs). 35/44/25 today. |
 | `cas_corrections.csv` | hand-maintained (auto-seeded) | `verify_cas.py` (+ `reference/pubchem_cas_cache.json`) | 2026-09-15. FIX only when two independent sources agree (official IFRA table / project tables / PubChem / same-note / check-digit / sibling). 6 FIX, 44 FLAG. PubChem is queried only for synthetics and defined molecules. |
 | `accord_name_aliases.csv` | hand-maintained (auto-seeded) | `reconcile_accords.py` | 2026-09-18. dataset1 `Main_Accords` term → dataset3 accord. 36 AUTO / 29 REVIEW / 31 NO_MATCH. |
+| `constituents.csv` | hand-maintained | Tisserand & Young, *Essential Oil Safety* 2e (2014); ISO oil standards; RSC Ch 10 p.185 | 2026-09-18. 86 rows, 45 naturals; upper bound of the typical range; ALL Provisional=Yes until supplier CoA values replace them. |
+| `note_additions.csv` | hand-maintained (AI 2026-09-18) | CAS cited per row (PubChem for geosmin) | 7 new dataset2 rows the accords need. |
+| `accord_edits.csv` | hand-maintained (AI 2026-09-18, perfumer sign-off required) | IFRA_STD_071/078/114/119, UK Annex II | Costus / Peru balsam / crude tars replaced by legal materials of the same olfactive role. |
+| `product_bases.csv` | hand-maintained | RSC Fig 9.1 p.160; SCCS/1636/21 (BHT); UK/EU Annex VI entry 4 (benzophenone-3); perfumery_chat_transcript.pdf | bottle auxiliaries with legal basis. |
+| `allergens_uk.csv` | hand-maintained | UK Cosmetics Regulation Annex III entries 67–92 (retained Reg 1223/2009) | 26 allergens; EU 2023/1545 expansion not yet encoded. |
+| `reference/pubchem_properties.csv` | generated | `enrich_pubchem.py` (PubChem PUG REST) | MW / XLogP / IUPAC for 137 defined molecules; 53 disagree with dataset2 → reported, not overwritten. |
 | `product_types.csv` | hand-maintained | Pybus & Sell, *The Chemistry of Fragrances* (RSC 1999), Appendix Table A2 p.260 | dilution ranges → `CONCENTRATE_FRACTION` presets |
 | `reference/carles_*.csv` | hand-maintained | Jean Carles, *A Method of Creation in Perfumery* (Downloads/ifra rules/A-Method-of-Creation-Perfumery.pdf), pages cited per row | volatility table p.3; worked chypre pp.5–7; family signatures p.17; chypre compatibility pp.16–17; 35 student base accords pp.18–20. Columns re-extracted in pypdf layout mode 2026-09-16 (the plain extraction interleaves table columns). |
 | `reference/rsc_physical_properties.csv` | hand-maintained | RSC Table 11.1 p.190 | 9 reference materials (RMM, BP, VP, sp, logP) |
@@ -67,6 +73,13 @@ python load_data.py          # validation report; exit 2 while ERROR-level defec
 - `reaction_rules.csv`: `Equivalence_B` / `Sum_Limit_Pct` on the vanillin + ethyl vanillin row (3, 4 %; RSC Ch 7 p.141).
 - `cas_corrections.csv`: two human-decided rows — Cade Oil and Juniper Tar 8000-27-9 (cedarwood) → 8013-10-3 (IFRA_STD_119).
 - `load_data`: leading-zero CAS stripped for joining (14 rows, e.g. anisaldehyde 0123-11-5 → 123-11-5).
+
+## Changes made 2026-09-18 (evening): step 0, data decisions, product layer
+
+- Safety step 0 implemented on `constituents.csv`; the optimizer fills an all-pinned remainder with dipropylene glycol.
+- All 50 checksum-failing CAS resolved: 8 FIX, 36 blanked (`Action=BLANK`); shared-CAS paste errors fixed or blanked
+  (Bitter Orange Oil → 68916-04-1, Opoponax → 8021-36-1, Green Tea → 84650-60-2, Pink Pepper → 68917-52-2, Fixolide → 1506-02-1 …).
+- Accords re-authored (`accord_edits.csv`), 7 notes added, aliases decided → 444/450 perfumes PASS Zone B.
 
 ## Still open
 - `constituents.csv` (natural → constituent → typical %) from the IFRA *Annex on contributions from other sources*
