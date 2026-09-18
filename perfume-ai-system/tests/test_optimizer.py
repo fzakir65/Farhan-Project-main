@@ -112,6 +112,22 @@ def test_pipeline_unknown_accord_is_incomplete_not_ignored(data):
     assert out.verdict == "INCOMPLETE" and out.lookup_flags[0].code == "UNKNOWN_ACCORD"
 
 
+def test_grades_come_from_the_formula_notes_never_from_a_sibling(data):
+    from zone_b_chemistry.pipeline import grades_from_formula
+    g = grades_from_formula(pd.DataFrame({"Note_Name": ["Birch Tar Rectified", "Styrax Resinoid"], "CAS": ["8001-88-5", "8046-19-3"]}))
+    assert g["8001-88-5"].startswith("rectified") and g["8046-19-3"].startswith("resinoid")
+    plain = grades_from_formula(pd.DataFrame({"Note_Name": ["Birch Tar"], "CAS": ["8001-88-5"]}))
+    assert "8001-88-5" not in plain                                      # crude/unknown stays unknown -> REJECT
+    both = grades_from_formula(pd.DataFrame({"Note_Name": ["Birch Tar", "Birch Tar Rectified"], "CAS": ["8001-88-5", "8001-88-5"]}))
+    assert "8001-88-5" not in both                                       # disagreement -> unknown
+    acc = data.accords[data.accords["Note_Name"] == "Styrax Resinoid"]["Accord_Name"].iloc[0]
+    out = run_zone_b([acc], data, require_complete=False)
+    assert out.safety is None or "Styrax Resinoid" not in set(out.safety.rejections["Note_Name"])
+    plain_acc = data.accords[data.accords["Note_Name"] == "Birch Tar"]["Accord_Name"].iloc[0]
+    out2 = run_zone_b([plain_acc], data, require_complete=False)
+    assert out2.verdict == "REJECT" and "Birch Tar" in set(out2.safety.rejections["Note_Name"])
+
+
 def test_pipeline_over_all_accords_never_crashes(data):
     verdicts = {}
     for name in sorted(set(data.accords["Accord_Name"])):
