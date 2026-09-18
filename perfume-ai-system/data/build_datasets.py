@@ -298,6 +298,18 @@ PROHIBITION_SCOPE = {
 }
 
 
+# For Prohibition_Scope == grade: which grade words are banned and which are the restricted (allowed) ones.
+# Matched case-insensitively against the grade text Zone B is given for a material. Unknown grade -> REJECT.
+GRADE_RULES = {
+    "IFRA_STD_071": ("crude|exudation|raw", "extract|distillate|absolute|resinoid|oil"),   # Peru balsam
+    "IFRA_STD_097": ("erecta", "minuta|patula"),                                            # Tagetes species
+    "IFRA_STD_119": ("crude", "rectified"),                                                 # Cade oil
+    "IFRA_STD_114": ("crude", "rectified"),                                                 # Birch tar
+    "IFRA_STD_078": ("crude|gum", "extract|resinoid|absolute|oil|rectified"),               # Styrax
+    "IFRA_STD_083": ("oil", "absolute"),                                                    # Verbena
+}
+
+
 def build_ifra_limits() -> pd.DataFrame:
     off = pd.read_csv(OFFICIAL, skiprows=2).set_index("Key")
     cas2key: dict[str, str] = {}
@@ -334,7 +346,11 @@ def build_ifra_limits() -> pd.DataFrame:
             "IFRA_Standard_Name": off.loc[key, "Name of the IFRA Standard"],
             "All_CAS": all_cas, "Amendment": int(off.loc[key, "Amendment number"]),
             "Prohibition_Scope": scope,
+            "Prohibited_Grades": GRADE_RULES.get(key, ("", ""))[0] if scope == "grade" else "",
+            "Allowed_Grades": GRADE_RULES.get(key, ("", ""))[1] if scope == "grade" else "",
         })
+        if scope == "grade":
+            assert key in GRADE_RULES, f"{name}: Prohibition_Scope=grade needs a GRADE_RULES entry"
     return pd.DataFrame(rows)
 
 

@@ -49,12 +49,13 @@ REQUIRED_COLUMNS = {
     "accords": ["Accord_ID", "Accord_Name", "Accord_Category", "Note_ID", "Note_Name", "Note_Role", "Layer",
                 "Importance_Weight", "Typical_Presence", "Blend_Compatibility", "Stability_Class"],
     "ifra_limits": ["Material_Name", "CAS", "IFRA_Type", "Category_4_Limit", "Phototoxic", "Notes", "IFRA_Key",
-                    "IFRA_Standard_Name", "All_CAS", "Amendment", "Prohibition_Scope"],
+                    "IFRA_Standard_Name", "All_CAS", "Amendment", "Prohibition_Scope", "Prohibited_Grades", "Allowed_Grades"],
     "group_rules": ["Group_Name", "Rule_Type", "Members_CAS", "Members_Names", "Rule", "Limit", "Limit_Basis"],
     "regulatory": ["Material_Name", "CAS", "Jurisdiction", "Status", "Fine_Fragrance_Limit_Pct", "Legal_Basis",
                    "Note", "Confidence"],
     "safety_caps": ["Material_Name", "CAS", "Max_Safe_Percent", "Reason", "Grade_Note", "Provisional"],
-    "reaction_rules": ["Material_A", "CAS_A", "Material_B", "CAS_B", "Rule_Type", "Issue", "Action", "Limit_Basis"],
+    "reaction_rules": ["Material_A", "CAS_A", "Material_B", "CAS_B", "Rule_Type", "Issue", "Action", "Limit_Basis",
+                       "Equivalence_B", "Sum_Limit_Pct"],
 }
 
 # --- controlled vocabularies -------------------------------------------------
@@ -463,6 +464,8 @@ def load_ifra_limits(path: Path) -> tuple[pd.DataFrame, list[Issue]]:
             issues.append(Issue("ERROR", "ifra_limits", rid, "Prohibition_Scope set on a row without a Prohibition"))
         if r["Is_Prohibited_As_Such"] and r["Prohibition_Scope"] != "all":
             issues.append(Issue("ERROR", "ifra_limits", rid, "pure Prohibition must have Prohibition_Scope=all"))
+        if r["Prohibition_Scope"] == "grade" and not (r["Prohibited_Grades"] and r["Allowed_Grades"]):
+            issues.append(Issue("ERROR", "ifra_limits", rid, "Prohibition_Scope=grade needs Prohibited_Grades and Allowed_Grades"))
         if not re.fullmatch(r"IFRA_STD_\d{3}", r["IFRA_Key"]):
             issues.append(Issue("ERROR", "ifra_limits", rid, f"bad IFRA_Key {r['IFRA_Key']!r}"))
     dup = df["IFRA_Key"].duplicated(keep=False)
@@ -532,7 +535,11 @@ def load_safety_caps(path: Path) -> tuple[pd.DataFrame, list[Issue]]:
 
 
 def load_reaction_rules(path: Path) -> tuple[pd.DataFrame, list[Issue]]:
+    """Equivalence_B / Sum_Limit_Pct (optional, olfactory rows): A + Equivalence_B x B must not exceed Sum_Limit_Pct —
+    e.g. vanillin + 3 x ethyl vanillin <= 4 (ethyl vanillin is ~3x as intense, Pybus & Sell Ch 7 p.141)."""
     df = _read(path, "reaction_rules")
+    for col in ("Equivalence_B", "Sum_Limit_Pct"):
+        df[col] = df[col].map(_to_float)
     issues: list[Issue] = []
     for _, r in df.iterrows():
         rid = f"{r['Material_A']} + {r['Material_B']}"

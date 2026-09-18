@@ -125,7 +125,7 @@ NOTE-0666,Exaltolide,Exaltolide,0106-02-5,Base,Medium,"Musky, Floral",Macrocycli
 NOTE-0610,Civetone,Civetone,542-46-1,Base,Strong,"Animalic, Musky",Macrocyclic Ketone,Animalic / Musky,"Animalic, warm",250.4,330,Very Low,4.5,0.0001,24+,96.0,160.0,Alcohol,Synthetic,Animalic musk base,542-46-1
 NOTE-0090,Castoreum,Phenolic compounds,8023-83-4,Base,Strong,"Leather, Animalic",Animalic Extract,Animalic / Leathery,"Leathery, smoky",300+,300,Low,3.9,0.001,24+,90.0,120.0,Alcohol,Castor sacs,Leathery animalic,8023-83-4
 NOTE-0224,Leather Accord,Isoquinoline blend,-,Base,Medium,"Leather, Woody",Aromatic Blend,Leather / Smoky,"Dry, leathery",—,—,Low,4.0,0.001,12–24,80.0,110.0,Alcohol,Synthetic blend,Dry leather accord,-
-NOTE-0075,Cade Oil,Phenolic compounds,8000-27-9,Base,Strong,"Leather, Smoky",Phenol / Tar,Smoky / Leather,"Ashy, smoky, burnt",94–200,280,Low,3.6,0.001,12–24,85.0,105.0,Alcohol,Juniper wood,Burnt smoky leather,8000-27-9
+NOTE-0075,Cade Oil,Phenolic compounds,8013-10-3,Base,Strong,"Leather, Smoky",Phenol / Tar,Smoky / Leather,"Ashy, smoky, burnt",94–200,280,Low,3.6,0.001,12–24,85.0,105.0,Alcohol,Juniper wood,Burnt smoky leather,8000-27-9
 NOTE-0572,Guaiacol,Guaiacol,90-05-1,Heart / Base,Strong,"Smoky, Medicinal",Phenol,Smoky / Medicinal,"Burnt, phenolic",124.14,205,Medium,1.3,0.01,6–10,60.0,81.0,Alcohol,Wood tar,Sharp smoke molecule,90-05-1
 NOTE-0667,Phenylacetic Acid,Phenylacetic acid,103-82-2,Base,Medium,"Honey, Animalic",Aromatic Acid,Honey / Animalic,"Honeyed, urinous",136.15,265,Low,1.3,0.005,8–12,65.0,93.0,Alcohol,Natural / synthetic,Honey-animalic warmth,103-82-2
 NOTE-0657,Maltol,Maltol,118-71-8,Heart,Medium,Gourmand,Lactone,Sweet / Gourmand,"Caramel, cotton candy",126.11,161,Medium,0.0,0.01,4–6,40.0,93.0,Alcohol,Larch bark,Sweet caramel sugar,118-71-8
@@ -302,7 +302,7 @@ NOTE-0376,Styrax,Styrene derivatives,8046-19-3,Base,Medium,"Leather, Amber",Resi
 NOTE-0309,Peru Balsam,Benzyl cinnamate,8007-00-9,Base,Medium,Amber,Resin,Sweet / Resinous,Warm vanilla,300+,300,Low,4.9,0.005,24+,90.0,150.0,Alcohol,Myroxylon tree,Sweet balsam,8007-00-9
 NOTE-0395,Tolu Balsam,Benzoic esters,9000-64-0,Base,Medium,Amber,Resin,Sweet / Resinous,Cinnamon vanilla,300+,300,Low,4.8,0.005,24+,90.0,150.0,Alcohol,Myroxylon balsamum,Warm balsam,9000-64-2
 NOTE-0284,Opoponax,Sesquiterpene resin,8016-37-3,Base,Medium,Amber,Resin,Sweet / Spicy,Sweet myrrh,300+,300,Low,4.7,0.005,24+,90.0,150.0,Alcohol,Commiphora resin,Sweet resin,8016-37-3
-NOTE-0075,Cade Oil,Phenolic tar,8000-27-9,Base,Strong,"Leather, Smoke",Phenolic Tar,Smoky / Leathery,"Burnt, tarry",300+,300,Low,4.3,0.005,24+,95.0,160.0,Alcohol,Juniper wood,Smoky leather tar,8000-27-9
+NOTE-0075,Cade Oil,Phenolic tar,8013-10-3,Base,Strong,"Leather, Smoke",Phenolic Tar,Smoky / Leathery,"Burnt, tarry",300+,300,Low,4.3,0.005,24+,95.0,160.0,Alcohol,Juniper wood,Smoky leather tar,8000-27-9
 NOTE-0762,Fir Balsam Absolute,Bornyl acetate rich,8021-27-2,Heart/Base,Medium,"Green, Woody",Terpenoid Resin,Green / Balsamic,"Pine, resin",196.29,230,Medium,4.1,0.02,8–12,55.0,75.0,Alcohol,Abies balsamea,Green balsamic pine,8021-27-2
 NOTE-0763,Pine Needle Oil,α-Pinene rich,8002-09-3,Top,Medium,"Green, Fresh",Monoterpene,Green / Fresh,Sharp pine,136.24,156,High,2.8,0.02,1–2,18.0,45.0,Alcohol,Pine needles,Crisp pine freshness,8002-09-3
 NOTE-0764,Cypress Oil,α-Pinene rich,8013-86-3,Top/Heart,Medium,"Woody, Green",Monoterpene,Woody / Green,Dry conifer,136.24,156,Medium,3.0,0.02,2–3,22.0,45.0,Alcohol,Cypress,Dry green wood,8013-86-3
@@ -437,7 +437,7 @@ NOTE-0823,Oakwood Absolute,Whiskey lactone rich,91770-28-4,Base,Medium,Woody,Lac
 NOTE-0472,Guaiac Wood Oil,Guaiol rich,8016-23-7,Base,Medium,Smoky,Sesquiterpene Alcohol,Woody / Smoky,"Tar, smoke",222.37,285,Low,4.4,0.005,18–24,85.0,125.0,Alcohol,Guaiac wood,Smoky wood,8016-23-7
 NOTE-0824,Palo Santo Oil,Limonene rich,959130-05-5,Base,Medium,Woody,Terpenoid,Woody / Citrus,Citrus wood,136.24,176,Medium,2.8,0.01,12–18,70.0,65.0,Alcohol,Palo santo,Sacred wood,959130-05-5
 NOTE-0471,Birch Tar Rectified,Phenolic blend,8001-88-5,Base,Strong,"Leather, Smoky",Phenolic,Smoky / Leather,"Tar, smoke",200+,300,Low,4.0,0.0005,24+,90.0,140.0,Alcohol,Birch bark,Smoky leather,8001-88-5
-NOTE-0075,Cade Oil,Phenolic rich,8000-27-9,Base,Strong,Leather,Phenolic,Smoky / Tar,Burnt wood,200+,300,Low,4.2,0.0005,24+,90.0,140.0,Alcohol,Juniper wood,Burnt tar,8000-27-9
+NOTE-0075,Cade Oil,Phenolic rich,8013-10-3,Base,Strong,Leather,Phenolic,Smoky / Tar,Burnt wood,200+,300,Low,4.2,0.0005,24+,90.0,140.0,Alcohol,Juniper wood,Burnt tar,8000-27-9
 NOTE-0825,Cypriol Oil (Nagarmotha),Cypriol rich,91745-46-9,Base,Medium,Woody,Sesquiterpene,Woody / Earthy,Dark root,220+,300,Low,4.4,0.005,24+,85.0,130.0,Alcohol,Cypriol root,Dark woody,91745-46-9
 NOTE-0826,Papyrus Oil,Cypriol rich,91745-46-9,Base,Medium,Woody,Sesquiterpene,Woody / Dry,Papery wood,220+,300,Low,4.3,0.005,18–24,80.0,125.0,Alcohol,Papyrus root,Dry woody,91745-46-9
 NOTE-0087,Cashmeran,Cashmeran,33704-61-9,Base,Medium,"Woody, Musk",Polycyclic Musk,Woody / Musky,Warm fabric,206.33,280,Low,4.0,0.005,24+,85.0,110.0,Alcohol,Synthetic,Musky wood,33704-61-9
@@ -577,7 +577,7 @@ NOTE-0586,Vetiver Java,Vetiver oil,8016-96-4,Base,Medium,Woody,Root Oil,Woody / 
 NOTE-0572,Guaiacol,Guaiacol,90-05-1,Base,Strong,Smoky,Phenol,Smoky / Medicinal,Smoke phenolic,124.1,205,Medium,1.3,0.01,6–10,50.0,85.0,Alcohol,Guaiac wood,Phenolic smoke,90-05-1
 NOTE-0472,Guaiac Wood Oil,Bulnesia sarmientoi,8016-23-7,Base,Medium,Woody,Wood Oil,Woody / Smoky,Sweet smoke,220+,280,Low,4.2,0.001,24+,90.0,135.0,Alcohol,Guaiac,Sweet smoke wood,8016-23-7
 NOTE-0046,Birch Tar,Betula tar,8001-88-5,Base,Strong,Leather,Tar Distillate,Smoky / Leather,Burnt tar,300+,300,Low,4.6,0.001,24+,95.0,145.0,Alcohol,Birch,Smoky leather,8001-88-5
-NOTE-0075,Cade Oil,Juniperus oxycedrus,8000-27-9,Base,Strong,Smoky,Tar Oil,Smoky / Medicinal,Burnt wood,300+,300,Low,4.5,0.001,24+,95.0,145.0,Alcohol,Cade,Burnt smoke,8000-27-9
+NOTE-0075,Cade Oil,Juniperus oxycedrus,8013-10-3,Base,Strong,Smoky,Tar Oil,Smoky / Medicinal,Burnt wood,300+,300,Low,4.5,0.001,24+,95.0,145.0,Alcohol,Cade,Burnt smoke,8000-27-9
 NOTE-0859,Isopropyl Cresol,Isopropyl cresol,3228-02-2,Base,Strong,Smoky,Phenol,Smoky / Medicinal,Medicinal smoke,150.2,210,Medium,2.5,0.01,8–12,55.0,90.0,Alcohol,Synthetic,Medicinal smoke,3228-02-2
 NOTE-0455,Labdanum Absolute,Cistus ladanifer,8016-26-0,Base,Medium,Amber,Resin,Amber / Sweet,Resinous amber,300+,300,Low,4.7,0.001,24+,95.0,145.0,Alcohol,Labdanum,Sweet amber resin,8016-26-0
 NOTE-0860,Cistus Oil,Cistus ladaniferus,89997-74-0,Base,Medium,Amber,Resin Oil,Amber / Leathery,Dry resin,280+,300,Low,4.6,0.001,24+,95.0,145.0,Alcohol,Cistus,Dry resin,89997-74-0
@@ -618,7 +618,7 @@ NOTE-0865,Fir Needle Oil,Abies sibirica,8021-29-7,Top,Medium,Aromatic,Needle Oil
 NOTE-0763,Pine Needle Oil,Pinus sylvestris,8002-09-3,Top,Medium,Aromatic,Needle Oil,Green / Terpene,Forest pine,136.2,155,High,2.4,0.05,2–4,45.0,85.0,Alcohol,Pine,Crisp pine,8002-09-3
 NOTE-0766,Spruce Oil,Picea abies,8021-48-1,Top,Medium,Aromatic,Needle Oil,Green / Resinous,Resin pine,136.2,155,High,2.6,0.05,2–4,45.0,85.0,Alcohol,Spruce,Fresh forest,8021-48-1
 NOTE-0765,Juniper Berry Oil,Juniperus communis,8002-68-4,Top,Medium,Aromatic,Berry Oil,Aromatic / Fresh,Gin-like,136.2,175,High,2.8,0.05,3–5,50.0,90.0,Alcohol,Juniper,Crisp aromatic,8002-68-4
-NOTE-0866,Juniper Tar,Juniperus oxycedrus,8000-27-9,Base,Strong,Smoky,Tar Oil,Smoky / Woody,Dry smoke,300+,300,Low,4.6,0.001,24+,95.0,145.0,Alcohol,Juniper,Smoky wood,8000-27-9
+NOTE-0866,Juniper Tar,Juniperus oxycedrus,8013-10-3,Base,Strong,Smoky,Tar Oil,Smoky / Woody,Dry smoke,300+,300,Low,4.6,0.001,24+,95.0,145.0,Alcohol,Juniper,Smoky wood,8000-27-9
 NOTE-0867,Pine Tar,Pinus species,8002-09-3,Base,Strong,Leather,Tar Distillate,Smoky / Resinous,Burnt pine,300+,300,Low,4.7,0.001,24+,95.0,145.0,Alcohol,Pine,Tar leather,8002-09-3
 NOTE-0447,Lavender Absolute,Lavandula angustifolia,8000-28-0,Top/Heart,Medium,Fougere,Floral Absolute,Aromatic / Floral,Sweet herbal,154.2,198,Medium,2.9,0.01,6–10,60.0,70.0,Alcohol,Lavender,Core fougère note,8000-28-0
 NOTE-0448,Lavandin Oil,Lavandula hybrida,91722-69-9,Top,Medium,Fougere,Floral Oil,Aromatic / Fresh,Camphoraceous,154.2,198,High,2.7,0.02,4–6,55.0,70.0,Alcohol,Lavandin,Brighter lavender,91722-69-9
