@@ -140,8 +140,13 @@ def test_apply_cas_corrections_refuses_bad_or_stale_rows(monkeypatch, tmp_path, 
 def test_dataset2_on_disk_reflects_the_corrections_file(corrections):
     notes = pd.read_csv(vc.NOTES_CSV, dtype=str, keep_default_na=False)
     applied = corrections[corrections["Apply"] == "Yes"]
+    chain = {(r.Note_ID, r.Bad_CAS): r.Corrected_CAS for r in applied.itertuples(index=False)}
+
+    def final(note_id, cas, hops=0):                     # corrections may chain: bad -> corrected -> later blanked
+        return final(note_id, chain[(note_id, cas)], hops + 1) if (note_id, cas) in chain and hops < 5 else cas
+
     for r in applied.itertuples(index=False):
         rows = notes[(notes["Note_ID"] == r.Note_ID) & (notes["Source_CAS"] == r.Bad_CAS)]
-        assert len(rows) >= 1 and (rows["CAS"] == r.Corrected_CAS).all(), r.Note_Name
+        assert len(rows) >= 1 and (rows["CAS"] == final(r.Note_ID, r.Bad_CAS)).all(), r.Note_Name
     changed = notes[notes["Source_CAS"] != notes["CAS"]]
-    assert set(zip(changed["Note_ID"], changed["Source_CAS"])) == set(zip(applied["Note_ID"], applied["Bad_CAS"]))
+    assert set(zip(changed["Note_ID"], changed["Source_CAS"])) <= set(zip(applied["Note_ID"], applied["Bad_CAS"]))

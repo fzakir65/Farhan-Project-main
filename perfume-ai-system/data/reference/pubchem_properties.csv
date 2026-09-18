@@ -1,0 +1,138 @@
+CAS,CID,PubChem_MW,PubChem_XLogP,IUPAC_Name,Formula,Status,Fetched
+78-70-6,6549,154.25,2.7,"3,7-dimethylocta-1,6-dien-3-ol",C10H18O,ok,2026-09-18
+138-86-3,22311,136.23,3.4,1-methyl-4-prop-1-en-2-ylcyclohexene,C10H16,ok,2026-09-18
+5392-40-5,638011,152.23,3,"(2E)-3,7-dimethylocta-2,6-dienal",C10H16O,ok,2026-09-18
+121-33-5,1183,152.15,1.2,4-hydroxy-3-methoxybenzaldehyde,C8H8O3,ok,2026-09-18
+4940-11-8,21059,140.14,0.8,2-ethyl-3-hydroxypyran-4-one,C7H8O3,ok,2026-09-18
+91-64-5,323,146.14,1.4,chromen-2-one,C9H6O2,ok,2026-09-18
+0140-11-4,,,,,,HTTP 404,2026-09-18
+6790-58-5,10857465,236.39,4.7,"(3aR,5aS,9aS,9bR)-3a,6,6,9a-tetramethyl-2,4,5,5a,7,8,9,9b-octahydro-1H-benzo[e][1]benzofuran",C16H28O,ok,2026-09-18
+1222-05-5,91497,258.4,4.8,"4,6,6,7,8,8-hexamethyl-1,3,4,7-tetrahydrocyclopenta[g]isochromene",C18H26O,ok,2026-09-18
+54464-57-2,108242,234.38,3.6,"1-(2,3,8,8-tetramethyl-1,3,4,5,6,7-hexahydronaphthalen-2-yl)ethanone",C16H26O,ok,2026-09-18
+112-31-2,8175,156.26,3.8,decanal,C10H20O,ok,2026-09-18
+112-44-7,8186,170.29,4.3,undecanal,C11H22O,ok,2026-09-18
+110-41-8,61031,184.32,4.9,2-methylundecanal,C12H24O,ok,2026-09-18
+106-72-9,61016,140.22,2.5,"2,6-dimethylhept-5-enal",C9H16O,ok,2026-09-18
+106-25-2,643820,154.25,2.9,"(2Z)-3,7-dimethylocta-2,6-dien-1-ol",C10H18O,ok,2026-09-18
+5471-51-2,21648,164.20,1.5,4-(4-hydroxyphenyl)butan-2-one,C10H12O2,ok,2026-09-18
+104-61-0,7710,156.22,2.2,5-pentyloxolan-2-one,C9H16O2,ok,2026-09-18
+33704-61-9,92292,206.32,3.3,"1,1,2,3,3-pentamethyl-2,5,6,7-tetrahydroinden-4-one",C14H22O,ok,2026-09-18
+70788-30-6,116699,226.40,5.2,"1-(2,2,6-trimethylcyclohexyl)hexan-3-ol",C15H30O,ok,2026-09-18
+1506-02-1,89440,258.4,5.3,"1-(3,5,5,6,8,8-hexamethyl-6,7-dihydronaphthalen-2-yl)ethanone",C18H26O,ok,2026-09-18
+541-91-3,10947,238.41,6.2,3-methylcyclopentadecan-1-one,C16H30O,ok,2026-09-18
+0106-02-5,,,,,,HTTP 404,2026-09-18
+542-46-1,5315941,250.4,6.1,(9Z)-cycloheptadec-9-en-1-one,C17H30O,ok,2026-09-18
+90-05-1,460,124.14,1.3,2-methoxyphenol,C7H8O2,ok,2026-09-18
+103-82-2,999,136.15,1.4,2-phenylacetic acid,C8H8O2,ok,2026-09-18
+118-71-8,8369,126.11,0.4,3-hydroxy-2-methylpyran-4-one,C6H6O3,ok,2026-09-18
+1205-17-0,64805,192.21,2.2,"3-(1,3-benzodioxol-5-yl)-2-methylpropanal",C11H12O3,ok,2026-09-18
+67634-15-5,105513,190.28,3.3,"3-(4-ethylphenyl)-2,2-dimethylpropanal",C13H18O,ok,2026-09-18
+24851-98-7,102861,226.31,2.7,methyl 2-(3-oxo-2-pentylcyclopentyl)acetate,C13H22O3,ok,2026-09-18
+18479-58-8,29096,156.26,2.9,"2,6-dimethyloct-7-en-2-ol",C10H20O,ok,2026-09-18
+80-54-6,228987,204.31,3.9,3-(4-tert-butylphenyl)-2-methylpropanal,C14H20O,ok,2026-09-18
+107-75-5,7888,172.26,1.6,"7-hydroxy-3,7-dimethyloctanal",C10H20O2,ok,2026-09-18
+127-41-3,5282108,192.30,3,"(E)-4-(2,6,6-trimethylcyclohex-2-en-1-yl)but-3-en-2-one",C13H20O,ok,2026-09-18
+116-26-7,61041,150.22,2.1,"2,6,6-trimethylcyclohexa-1,3-diene-1-carbaldehyde",C10H14O,ok,2026-09-18
+4707-47-5,78435,196.20,2.3,"methyl 2,4-dihydroxy-3,6-dimethylbenzoate",C10H12O4,ok,2026-09-18
+68901-15-5,111727,198.26,2.5,prop-2-enyl 2-cyclohexyloxyacetate,C11H18O3,ok,2026-09-18
+141773-73-1,16063567,284.4,4.5,"[2-[1-(3,3-dimethylcyclohexyl)ethoxy]-2-methylpropyl] propanoate",C17H32O3,ok,2026-09-18
+111879-80-2,9856149,238.37,5.2,(12E)-1-oxacyclohexadec-12-en-2-one,C15H26O2,ok,2026-09-18
+236391-76-7,21933618,270.36,4,"[2-[1-(3,3-dimethylcyclohexyl)ethoxy]-2-oxoethyl] propanoate",C15H26O4,ok,2026-09-18
+28645-51-4,5355293,252.39,5.5,(10Z)-1-oxacycloheptadec-10-en-2-one,C16H28O2,ok,2026-09-18
+3391-83-1,18826,256.38,4,"1,7-dioxacycloheptadecan-8-one",C15H28O3,ok,2026-09-18
+2550-26-7,17355,148.20,1.8,4-phenylbutan-2-one,C10H12O,ok,2026-09-18
+153898-62-5,,,,,,HTTP 404,2026-09-18
+40366-39-0,,,,,,HTTP 404,2026-09-18
+198404-98-7,,,,,,HTTP 404,2026-09-18
+107898-54-4,15984303,222.37,3.8,"(E)-3,3-dimethyl-5-(2,2,3-trimethylcyclopent-3-en-1-yl)pent-4-en-2-ol",C15H26O,ok,2026-09-18
+28219-61-6,,,,,,HTTP 404,2026-09-18
+65113-99-7,103212,210.36,3.9,"3-methyl-5-(2,2,3-trimethylcyclopent-3-en-1-yl)pentan-2-ol",C14H26O,ok,2026-09-18
+131812-67-4,3034278,288.4,5.1,"2,4-dimethyl-2-(5,5,8,8-tetramethyl-6,7-dihydronaphthalen-2-yl)-1,3-dioxolane",C19H28O2,ok,2026-09-18
+84696-25-3,,,,,,HTTP 404,2026-09-18
+67801-20-1,6437266,208.34,3.3,"(Z)-3-methyl-5-(2,2,3-trimethylcyclopent-3-en-1-yl)pent-4-en-2-ol",C14H24O,ok,2026-09-18
+120-14-9,8419,166.17,1.5,"3,4-dimethoxybenzaldehyde",C9H10O3,ok,2026-09-18
+104-46-1,637563,148.20,3.3,1-methoxy-4-[(E)-prop-1-enyl]benzene,C10H12O,ok,2026-09-18
+140-67-0,8815,148.20,3.4,1-methoxy-4-prop-2-enylbenzene,C10H12O,ok,2026-09-18
+94-59-7,5144,162.18,3,"5-prop-2-enyl-1,3-benzodioxole",C10H10O2,ok,2026-09-18
+93-28-7,7136,206.24,2.3,(2-methoxy-4-prop-2-enylphenyl) acetate,C12H14O3,ok,2026-09-18
+93-15-2,7127,178.23,2.5,"1,2-dimethoxy-4-prop-2-enylbenzene",C11H14O2,ok,2026-09-18
+881-68-5,61229,194.18,0.8,(4-formyl-2-methoxyphenyl) acetate,C10H10O4,ok,2026-09-18
+121-32-4,8467,166.17,1.6,3-ethoxy-4-hydroxybenzaldehyde,C9H10O3,ok,2026-09-18
+120-57-0,8438,150.13,1.1,"1,3-benzodioxole-5-carbaldehyde",C8H6O3,ok,2026-09-18
+80-71-7,6660,112.13,0.3,2-hydroxy-3-methylcyclopent-2-en-1-one,C6H8O2,ok,2026-09-18
+3658-77-3,19309,128.13,0.7,"4-hydroxy-2,5-dimethylfuran-3-one",C6H8O3,ok,2026-09-18
+28664-35-9,62835,128.13,0.4,"4-hydroxy-2,3-dimethyl-2H-furan-5-one",C6H8O3,ok,2026-09-18
+100-51-6,244,108.14,1.1,phenylmethanol,C7H8O,ok,2026-09-18
+118-58-1,8363,228.24,3.2,benzyl 2-hydroxybenzoate,C14H12O3,ok,2026-09-18
+60-12-8,6054,122.16,1.4,2-phenylethanol,C8H10O,ok,2026-09-18
+103-45-7,7654,164.20,2.3,2-phenylethyl acetate,C10H12O2,ok,2026-09-18
+115-95-7,8294,196.29,3.3,"3,7-dimethylocta-1,6-dien-3-yl acetate",C12H20O2,ok,2026-09-18
+105-87-3,1549026,196.29,3.5,"[(2E)-3,7-dimethylocta-2,6-dienyl] acetate",C12H20O2,ok,2026-09-18
+0141-12-8,,,,,,HTTP 404,2026-09-18
+150-84-5,9017,198.30,3.8,"3,7-dimethyloct-6-enyl acetate",C12H22O2,ok,2026-09-18
+134-20-3,8635,151.16,1.9,methyl 2-aminobenzoate,C8H9NO2,ok,2026-09-18
+120-72-9,798,117.15,2.1,1H-indole,C8H7N,ok,2026-09-18
+83-34-1,6736,131.17,2.6,3-methyl-1H-indole,C9H9N,ok,2026-09-18
+127-51-5,5372174,206.32,3.3,"(E)-3-methyl-4-(2,6,6-trimethylcyclohex-2-en-1-yl)but-3-en-2-one",C14H22O,ok,2026-09-18
+16409-43-1,27866,154.25,2.9,4-methyl-2-(2-methylprop-1-enyl)oxane,C10H18O,ok,2026-09-18
+104-67-6,7714,184.27,3.3,5-heptyloxolan-2-one,C11H20O2,ok,2026-09-18
+3681-71-8,5363388,142.20,1.9,[(Z)-hex-3-enyl] acetate,C8H14O2,ok,2026-09-18
+928-96-1,5281167,100.16,1.3,(Z)-hex-3-en-1-ol,C6H12O,ok,2026-09-18
+36306-87-3,118292,224.34,3.1,"4-(1-ethoxyethenyl)-3,3,5,5-tetramethylcyclohexan-1-one",C14H24O2,ok,2026-09-18
+32388-55-9,16220111,246.4,4,"1-[(1R,2R,5S,7R)-2,6,6,8-tetramethyl-9-tricyclo[5.3.1.01,5]undec-8-enyl]ethanone",C17H26O,ok,2026-09-18
+19870-74-7,88288,236.39,4.4,"(1S,2R,5S,7R,8S)-8-methoxy-2,6,6,8-tetramethyltricyclo[5.3.1.01,5]undecane",C16H28O,ok,2026-09-18
+34902-57-3,12410118,238.37,5.7,(3E)-1-oxacyclohexadec-3-en-2-one,C15H26O2,ok,2026-09-18
+21145-77-7,89440,258.4,5.3,"1-(3,5,5,6,8,8-hexamethyl-6,7-dihydronaphthalen-2-yl)ethanone",C18H26O,ok,2026-09-18
+81-14-1,6669,294.30,3.7,"1-(4-tert-butyl-2,6-dimethyl-3,5-dinitrophenyl)ethanone",C14H18N2O5,ok,2026-09-18
+81-15-2,62329,297.26,3.8,"1-tert-butyl-3,5-dimethyl-2,4,6-trinitrobenzene",C12H15N3O6,ok,2026-09-18
+57378-68-4,5365916,192.30,3.4,"(E)-1-(2,6,6-trimethylcyclohex-3-en-1-yl)but-2-en-1-one",C13H20O,ok,2026-09-18
+300371-33-9,,,,,,HTTP 404,2026-09-18
+82356-51-2,57353762,236.39,6.1,2-methylcyclopentadec-2-en-1-one,C16H28O,ok,2026-09-18
+54982-83-1,41270,256.34,3.6,"1,4-dioxacyclohexadecane-5,16-dione",C14H24O4,ok,2026-09-18
+112-54-9,8194,184.32,4.9,dodecanal,C12H24O,ok,2026-09-18
+10486-19-8,25311,198.34,5.4,tridecanal,C13H26O,ok,2026-09-18
+77-83-8,6501,206.24,1.9,ethyl 3-methyl-3-phenyloxirane-2-carboxylate,C12H14O3,ok,2026-09-18
+68555-66-8,23668716,456.11,,"sodium 1,1,2,2,3,3,4,4,5,5,6,6,7,7,7-pentadecafluoroheptane-1-sulfinate",C7F15NaO2S,ok,2026-09-18
+103-95-7,517827,190.28,3.3,2-methyl-3-(4-propan-2-ylphenyl)propanal,C13H18O,ok,2026-09-18
+125109-85-5,86209,190.28,3.1,3-(3-propan-2-ylphenyl)butanal,C13H18O,ok,2026-09-18
+18127-01-0,64832,190.28,3.3,3-(4-tert-butylphenyl)propanal,C13H18O,ok,2026-09-18
+63500-71-0,3017432,172.26,1.9,4-methyl-2-(2-methylpropyl)oxan-4-ol,C10H20O2,ok,2026-09-18
+76-22-2,2537,152.23,2.2,"1,7,7-trimethylbicyclo[2.2.1]heptan-2-one",C10H16O,ok,2026-09-18
+705-86-2,12810,170.25,2.5,6-pentyloxan-2-one,C10H18O2,ok,2026-09-18
+81782-77-6,163336,170.29,3.8,4-methyldec-3-en-5-ol,C11H22O,ok,2026-09-18
+67634-00-8,106729,186.25,2.3,prop-2-enyl 2-(3-methylbutoxy)acetate,C10H18O3,ok,2026-09-18
+123-92-2,31276,130.18,2,3-methylbutyl acetate,C7H14O2,ok,2026-09-18
+105-54-4,7762,116.16,1.3,ethyl butanoate,C6H12O2,ok,2026-09-18
+16491-54-6,27892,198.30,4,oct-1-en-3-yl butanoate,C12H22O2,ok,2026-09-18
+104-50-7,7704,142.20,1.6,5-butyloxolan-2-one,C8H14O2,ok,2026-09-18
+3738-00-9,107166,236.39,4.7,"3a,6,6,9a-tetramethyl-2,4,5,5a,7,8,9,9b-octahydro-1H-benzo[e][1]benzofuran",C16H28O,ok,2026-09-18
+61788-89-4,,,,,,HTTP 404,2026-09-18
+65442-31-1,103401,185.26,3.9,6-butan-2-ylquinoline,C13H15N,ok,2026-09-18
+54440-17-4,10149036,174.24,3.1,"2,3,3-trimethyl-2H-inden-1-one",C12H14O,ok,2026-09-18
+120-51-4,2345,212.24,4,benzyl benzoate,C14H12O2,ok,2026-09-18
+105-13-5,7738,138.16,1.1,(4-methoxyphenyl)methanol,C8H10O2,ok,2026-09-18
+104-54-1,5315892,134.17,1.9,(E)-3-phenylprop-2-en-1-ol,C9H10O,ok,2026-09-18
+97-53-0,3314,164.20,2,2-methoxy-4-prop-2-enylphenol,C10H12O2,ok,2026-09-18
+97-54-1,853433,164.20,2.6,2-methoxy-4-[(E)-prop-1-enyl]phenol,C10H12O2,ok,2026-09-18
+607-91-0,4276,192.21,2.9,"4-methoxy-6-prop-2-enyl-1,3-benzodioxole",C11H12O3,ok,2026-09-18
+15323-35-0,47167,244.37,4.8,"1-(1,1,2,3,3,6-hexamethyl-2H-inden-5-yl)ethanone",C17H24O,ok,2026-09-18
+2305-05-7,16821,198.30,3.8,5-octyloxolan-2-one,C12H22O2,ok,2026-09-18
+123-86-4,31272,116.16,1.8,butyl acetate,C6H12O2,ok,2026-09-18
+106-24-1,637566,154.25,2.9,"(2E)-3,7-dimethylocta-2,6-dien-1-ol",C10H18O,ok,2026-09-18
+106-22-9,8842,156.26,3.2,"3,7-dimethyloct-6-en-1-ol",C10H20O,ok,2026-09-18
+22451-73-6,90785,222.37,2.9,"2-(3,8-dimethyl-1,2,3,3a,4,5,6,7-octahydroazulen-5-yl)propan-2-ol",C15H26O,ok,2026-09-18
+1335-46-2,5371084,206.32,3.4,"(E)-1-(2,6,6-trimethylcyclohex-2-en-1-yl)pent-1-en-3-one",C14H22O,ok,2026-09-18
+68155-66-8,109193,234.38,3.8,"1-(2,3,8,8-tetramethyl-1,3,5,6,7,8a-hexahydronaphthalen-2-yl)ethanone",C16H26O,ok,2026-09-18
+105-95-3,61014,270.36,4.2,"1,4-dioxacycloheptadecane-5,17-dione",C15H26O4,ok,2026-09-18
+21944-95-6,5362736,236.39,5.6,(5Z)-cyclohexadec-5-en-1-one,C16H28O,ok,2026-09-18
+93-19-6,,,,,,HTTP 503,2026-09-18
+141-16-2,8835,226.35,4.6,"3,7-dimethyloct-6-enyl butanoate",C14H26O2,ok,2026-09-18
+3228-02-2,18597,150.22,3,3-methyl-4-propan-2-ylphenol,C10H14O,ok,2026-09-18
+105102-19-0,,,,,,HTTP 503,2026-09-18
+112-38-9,,,,,,HTTP 503,2026-09-18
+124-13-0,,,,,,HTTP 503,2026-09-18
+124-19-6,,,,,,HTTP 503,2026-09-18
+0488-10-8,,,,,,HTTP 503,2026-09-18
+119-92-6,,,,,,HTTP 404,2026-09-18
+473-03-0,12305858,428.7,9.6,"(1R,2R,4aS,8aS)-1-[(E)-6-[(1S)-2,2-dimethyl-6-methylidenecyclohexyl]-4-methylhex-3-enyl]-2,5,5,8a-tetramethyl-3,4,4a,6,7,8-hexahydro-1H-naphthalen-2-ol",C30H52O,ok,2026-09-18
+19700-21-1,,,,,,HTTP 503,2026-09-18

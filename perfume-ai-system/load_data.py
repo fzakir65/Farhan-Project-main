@@ -79,6 +79,7 @@ REG_JURISDICTIONS = {"GB+EU", "GB", "EU"}
 SEASON_WORDS = re.compile(r"\b(?:spring|summer|fall|autumn|winter|all seasons|day|evening|night)\b", re.I)
 CAS_PLACEHOLDERS = {"-", "n/a", "na", "none", "nan", "unknown", "tbd", "?"}
 CARLES_TABLE = "reference/carles_volatility_table.csv"
+PUBCHEM_TABLE = "reference/pubchem_properties.csv"      # data/enrich_pubchem.py
 # Physical plausibility of Volatility_Class (Pybus & Sell, Chemistry of Fragrances: Ch 7 p.141 gives top ~15 min,
 # heart 3-4 h, base 5-8 h+; Ch 11 p.190 boiling point / RMM as the first approximation to volatility).
 # Thresholds are deliberately loose: they catch gross contradictions, not olfactory judgement calls.
@@ -138,6 +139,7 @@ class Data:
     regulatory_overrides: pd.DataFrame = field(default_factory=pd.DataFrame)
     notes_regulated: pd.DataFrame = field(default_factory=pd.DataFrame)
     carles_disagreements: pd.DataFrame = field(default_factory=pd.DataFrame)
+    pubchem_mismatches: pd.DataFrame = field(default_factory=pd.DataFrame)
     shared_cas: dict = field(default_factory=dict)
 
     def errors(self) -> list[Issue]:
@@ -761,7 +763,39 @@ def load_all(data_dir: Path | str = DATA_DIR) -> Data:
     data.shared_cas = shared_cas_conflicts(data.notes)
     data.issues += cross_validate(data, data_dir)
     data.issues += carles_cross_check(data, data_dir)
+    data.issues += pubchem_cross_check(data, data_dir)
     return data
+
+
+def pubchem_cross_check(d: Data, data_dir: Path) -> list[Issue]:
+    """Compare dataset2 Molecular_Weight / LogP with PubChem (reference/pubchem_properties.csv, fetched by
+    data/enrich_pubchem.py). A disagreement is a WARNING and lands in data.pubchem_mismatches — the chemistry
+    fields are not corrected automatically, but the builder's threshold damping stays off while they are unverified."""
+    path = Path(data_dir) / PUBCHEM_TABLE
+    issues: list[Issue] = []
+    if not path.exists():
+        return issues
+    pc = pd.read_csv(path, dtype=str, keep_default_na=False)
+    pc = pc[pc["Status"] == "ok"].drop_duplicates("CAS")
+    m = d.notes.drop_duplicates(["Note_Name", "CAS"]).merge(pc, on="CAS", how="inner")
+    m["ds_mw"], m["pc_mw"] = pd.to_numeric(m["Molecular_Weight"], errors="coerce"), pd.to_numeric(m["PubChem_MW"], errors="coerce")
+    m["ds_lp"], m["pc_lp"] = pd.to_numeric(m["LogP"], errors="coerce"), pd.to_numeric(m["PubChem_XLogP"], errors="coerce")
+    mw_bad = m["ds_mw"].notna() & ((m["ds_mw"] - m["pc_mw"]).abs() / m["pc_mw"] > 0.05)
+    lp_bad = m["ds_lp"].notna() & m["pc_lp"].notna() & ((m["ds_lp"] - m["pc_lp"]).abs() > 1.0)
+    bad = m[mw_bad | lp_bad]
+    rows = []
+    for r in bad.itertuples(index=False):
+        what = []
+        if r.ds_mw == r.ds_mw and abs(r.ds_mw - r.pc_mw) / r.pc_mw > 0.05:
+            what.append(f"MW {r.ds_mw:g} vs PubChem {r.pc_mw:g}")
+        if r.ds_lp == r.ds_lp and r.pc_lp == r.pc_lp and abs(r.ds_lp - r.pc_lp) > 1.0:
+            what.append(f"logP {r.ds_lp:g} vs PubChem {r.pc_lp:g}")
+        rows.append({"Note_Name": r.Note_Name, "CAS": r.CAS, "Issue": "; ".join(what), "PubChem_IUPAC": r.IUPAC_Name})
+        issues.append(Issue("WARNING", "notes", r.Note_ID, f"chemistry fields for {r.Note_Name!r} disagree with PubChem ({'; '.join(what)}; PubChem: {r.IUPAC_Name[:50]})"))
+    d.pubchem_mismatches = pd.DataFrame(rows)
+    issues.append(Issue("INFO", "notes", "", f"PubChem check: {len(m)} defined molecules compared, {len(rows)} disagree on MW/logP "
+                                             "(see data.pubchem_mismatches); chemistry fields remain unverified -> threshold damping off"))
+    return issues
 
 
 def carles_cross_check(d: Data, data_dir: Path) -> list[Issue]:

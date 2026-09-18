@@ -87,3 +87,5 @@ NOTE-0821,Australian Sandalwood,,90106-38-0,,,BLANK,,shared-CAS audit,rose absol
 NOTE-0651,Floralozone,,67634-00-8,,,BLANK,,shared-CAS audit,allyl amyl glycolate's CAS pasted onto a Floralozone row; Floralozone keeps 67634-15-5,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
 NOTE-0651,Floralozone,,67634-14-4,,,BLANK,,shared-CAS audit,unverified third CAS on Floralozone; removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
 NOTE-0402,Tuberose,,8014-17-3,,,BLANK,,shared-CAS audit,petitgrain oil's CAS pasted; removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0689,Amber Xtreme,,68901-15-5,,,BLANK,,pubchem,"PubChem resolves 68901-15-5 to allyl cyclohexyloxyacetate, not Amber Xtreme; removed",Yes,ai,AI-decided 2026-09-18 (PubChem identity check)
+NOTE-0617,Muscenone,,2550-26-7,,,BLANK,,pubchem,PubChem resolves 2550-26-7 to benzylacetone; Muscenone keeps 82356-51-2,Yes,ai,AI-decided 2026-09-18 (PubChem identity check)

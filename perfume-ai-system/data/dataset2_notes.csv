@@ -143,7 +143,7 @@ NOTE-0504,Damascenone,β-Damascenone,23726-91-2,Heart,Strong,"Floral, Fruity",Ke
 NOTE-0688,Safranal,Safranal,116-26-7,Heart,Medium,"Leather, Spicy",Aldehyde,Spicy / Leather,"Dry, leathery",150.22,230,Medium,2.1,0.01,4–6,45.0,70.0,Alcohol,Saffron,Dry leathery spice,116-26-7
 NOTE-0463,Evernyl,Methyl atranol,4707-47-5,Base,Medium,"Chypre, Fougere",Aromatic Ether,Mossy / Woody,Oakmoss-like,196.2,275,Low,3.7,0.001,12–24,80.0,115.0,Alcohol,Synthetic,Oakmoss replacer,4707-47-5
 NOTE-0644,Veramoss,Chlorinated phenyl ether,4707-47-5,Base,Medium,Chypre,Aromatic Ether,Mossy / Green,"Green, mossy",280,300,Low,4.0,0.001,24+,85.0,130.0,Alcohol,Synthetic,Modern moss note,68155-66-8
-NOTE-0689,Amber Xtreme,Amber Xtreme,68901-15-5,Base,Strong,"Amber, Woody",Amberoid,Amber / Woody,"Dry, powerful",234.38,295,Very Low,5.4,5e-05,24+,98.0,140.0,Alcohol,Synthetic,Extremely strong amber,68901-15-5
+NOTE-0689,Amber Xtreme,Amber Xtreme,,Base,Strong,"Amber, Woody",Amberoid,Amber / Woody,"Dry, powerful",234.38,295,Very Low,5.4,5e-05,24+,98.0,140.0,Alcohol,Synthetic,Extremely strong amber,68901-15-5
 NOTE-0623,Cypriol (Nagarmotha),Cypriol oil,91771-62-9,Base,Medium,"Woody, Leather",Sesquiterpene,Woody / Smoky,"Dry, smoky, earthy",220+,290,Low,4.3,0.001,24+,88.0,115.0,Alcohol,Cypriol root,Dry smoky woody,91771-62-9
 NOTE-0300,Papyrus,Sesquiterpenes,91722-79-1,Base,Medium,"Woody, Aromatic",Terpenoid,Woody / Dry,"Papery, dry",220+,285,Low,4.1,0.002,12–24,80.0,110.0,Alcohol,Papyrus plant,Dry papery wood,91722-79-1
 NOTE-0023,Amyris,Amyrol,8015-65-4,Base,Medium,"Woody, Amber",Sesquiterpene Alcohol,Woody / Sweet,"Soft, balsamic",222.37,288,Low,4.0,0.002,12–24,78.0,108.0,Alcohol,Amyris wood,Sweet sandalwood-like,8015-65-4
@@ -169,7 +169,7 @@ NOTE-0476,Habanolide,Habanolide,111879-80-2,Base,Medium,"Musky, Clean",Macrocycl
 NOTE-0661,Romandolide,Romandolide,236391-76-7,Base,Medium,"Musky, Floral",Macrocyclic Lactone,Musky / Creamy,"Creamy, soft",270+,340,Very Low,4.6,0.0002,24+,94.0,160.0,Alcohol,Synthetic,Soft creamy musk,236391-76-7
 NOTE-0507,Ambrettolide,Ambrettolide,28645-51-4,Base,Medium,"Musky, Powdery",Macrocyclic Lactone,Musky / Sweet,"Sweet, powdery",268.4,340,Very Low,4.7,0.0002,24+,95.0,165.0,Alcohol,Synthetic / ambrette,Sweet powdery musk,28645-51-4
 NOTE-0700,Velvione,Velvione,3391-83-1,Base,Medium,"Musky, Woody",Polycyclic Musk,Musky / Woody,"Woody, soft",258.4,300,Very Low,5.1,0.0003,24+,88.0,150.0,Alcohol,Synthetic,Woody clean musk,3391-83-1
-NOTE-0617,Muscenone,Muscenone,2550-26-7,Base,Strong,"Musky, Animalic",Macrocyclic Ketone,Musky / Animalic,"Warm, sensual",252.4,335,Very Low,4.4,0.0001,24+,96.0,160.0,Alcohol,Synthetic,Animalic musk tone,2550-26-7
+NOTE-0617,Muscenone,Muscenone,,Base,Strong,"Musky, Animalic",Macrocyclic Ketone,Musky / Animalic,"Warm, sensual",252.4,335,Very Low,4.4,0.0001,24+,96.0,160.0,Alcohol,Synthetic,Animalic musk tone,2550-26-7
 NOTE-0701,Cashmeran (High Purity),Cashmeran,33704-61-9,Base,Medium,"Woody, Musky",Polycyclic Ketone,Woody / Musky,"Warm, velvety",206.33,241,Low,4.4,0.0005,18–24,85.0,96.0,Alcohol,Synthetic,Warm woody musk,33704-61-9
 NOTE-0702,Sylkolide,Sylkolide,,Base,Medium,"Musky, Creamy",Lactone,Musky / Creamy,"Milky, soft",170.25,280,Low,2.9,0.01,6–10,55.0,115.0,Alcohol,Synthetic,Milky soft musk,104-61-0
 NOTE-0703,Fixolide,Fixolide,1506-02-1,Base,Medium,"Musky, Floral",Polycyclic Musk,Musky / Sweet,"Sweet, powdery",258.4,300,Very Low,5.8,0.0005,24+,85.0,150.0,Alcohol,Synthetic,Sweet powdery musk,1222-05-5
@@ -453,7 +453,7 @@ NOTE-0395,Tolu Balsam,Benzyl benzoate rich,9000-64-0,Base,Medium,Amber,Balsamic 
 NOTE-0829,Opoponax Resin,Sesquiterpene resin,8021-36-1,Base,Medium,Amber,Resin,Amber / Smoky,Bitter balsam,240+,300,Low,4.2,0.005,24+,90.0,140.0,Alcohol,Commiphora,Bitter amber,8016-37-3
 NOTE-0830,Myrrh Resin,Furanosesquiterpenes,9000-45-7,Base,Medium,Amber,Resin,Resinous / Bitter,Medicinal resin,230+,300,Low,4.0,0.005,24+,90.0,140.0,Alcohol,Commiphora,Dry resin,9000-45-7
 NOTE-0613,Frankincense Oil,Incensole acetate,8016-36-2,Base,Medium,Resinous,Terpenoid Resin,Resinous / Fresh,Lemon resin,252.4,300,Low,4.1,0.005,18–24,80.0,135.0,Alcohol,Boswellia,Sacred resin,8016-36-2
-NOTE-0689,Amber Xtreme,Amber Xtreme,68901-15-5,Base,Strong,Amber,Aromatic Ketone,Amber / Woody,Dry amber,258.4,280,Low,5.0,0.001,24+,95.0,120.0,Alcohol,Synthetic,Powerful amber,1001252-96-7
+NOTE-0689,Amber Xtreme,Amber Xtreme,,Base,Strong,Amber,Aromatic Ketone,Amber / Woody,Dry amber,258.4,280,Low,5.0,0.001,24+,95.0,120.0,Alcohol,Synthetic,Powerful amber,1001252-96-7
 NOTE-0021,Ambroxan,Ambroxide,6790-58-5,Base,Medium,"Amber, Musk",Ambergris Derivative,Amber / Musky,Salty amber,236.35,300,Low,4.2,0.001,24+,90.0,130.0,Alcohol,Synthetic,Ambergris warmth,6790-58-5
 NOTE-0631,Cetalox,Ambroxide variant,3738-00-9,Base,Medium,Amber,Ambergris Derivative,Amber / Dry,Clean amber,236.35,300,Low,4.1,0.001,24+,90.0,130.0,Alcohol,Synthetic,Clean amber,3738-00-9
 NOTE-0684,Norlimbanol,Norlimbanol,70788-30-6,Base,Strong,"Woody, Amber",Polycyclic Amber,Woody / Amber,Dry woody,252.4,300,Low,5.1,0.001,24+,95.0,135.0,Alcohol,Synthetic,Extreme woody,70788-30-6
