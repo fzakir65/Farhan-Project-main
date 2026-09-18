@@ -39,6 +39,8 @@ FILES = {
     "product_types": "product_types.csv",
     "accord_aliases": "accord_name_aliases.csv",
     "constituents": "constituents.csv",
+    "product_bases": "product_bases.csv",
+    "allergens": "allergens_uk.csv",
 }
 
 REQUIRED_COLUMNS = {
@@ -51,6 +53,8 @@ REQUIRED_COLUMNS = {
     "accord_aliases": ["Dataset1_Term", "Dataset3_Accord", "Confidence", "Tier", "Rule", "Apply", "Decided_By"],
     "constituents": ["Natural_Name", "Natural_CAS", "Grade_Word", "Constituent_Name", "Constituent_CAS", "Typical_Min_Pct",
                      "Typical_Max_Pct", "Fraction_Used", "Basis", "Source", "Note", "Provisional"],
+    "product_bases": ["Component", "INCI", "CAS", "Role", "Default_Pct", "Min_Pct", "Max_Pct", "Phase", "When_To_Use", "Legal_Basis", "Source"],
+    "allergens": ["Allergen", "CAS", "All_CAS", "Jurisdiction", "Leave_On_Threshold_Pct", "Rinse_Off_Threshold_Pct", "Legal_Basis"],
     "accords": ["Accord_ID", "Accord_Name", "Accord_Category", "Note_ID", "Note_Name", "Note_Role", "Layer",
                 "Importance_Weight", "Typical_Presence", "Blend_Compatibility", "Stability_Class"],
     "ifra_limits": ["Material_Name", "CAS", "IFRA_Type", "Category_4_Limit", "Phototoxic", "Notes", "IFRA_Key",
@@ -133,6 +137,8 @@ class Data:
     product_types: pd.DataFrame
     accord_aliases: pd.DataFrame
     constituents: pd.DataFrame
+    product_bases: pd.DataFrame
+    allergens: pd.DataFrame
     issues: list[Issue] = field(default_factory=list)
     # convenience frames produced by cross-validation
     unmatched_accord_notes: pd.DataFrame = field(default_factory=pd.DataFrame)
@@ -747,13 +753,42 @@ def load_constituents(path: Path) -> tuple[pd.DataFrame, list[Issue]]:
     return df, issues
 
 
+def load_product_bases(path: Path) -> tuple[pd.DataFrame, list[Issue]]:
+    """Auxiliaries of the finished product (solvents, antioxidant, UV absorber…), each with a legal basis and source."""
+    df = _read(path, "product_bases")
+    issues: list[Issue] = []
+    for _, r in df.iterrows():
+        if not is_valid_cas(r["CAS"]):
+            issues.append(Issue("ERROR", "product_bases", r["Component"], f"invalid CAS {r['CAS']!r}"))
+        if not r["Source"] or not r["Legal_Basis"]:
+            issues.append(Issue("ERROR", "product_bases", r["Component"], "Source and Legal_Basis are required"))
+        lo, hi = _to_float(r["Min_Pct"]), _to_float(r["Max_Pct"])
+        if not (0 <= lo <= hi <= 100):
+            issues.append(Issue("ERROR", "product_bases", r["Component"], f"Min/Max {lo}-{hi} invalid"))
+    return df, issues
+
+
+def load_allergens(path: Path) -> tuple[pd.DataFrame, list[Issue]]:
+    """UK/EU fragrance allergens that must be declared on the label above the threshold (cosmetics law, not IFRA)."""
+    df = _read(path, "allergens")
+    issues: list[Issue] = []
+    for _, r in df.iterrows():
+        for c in [r["CAS"]] + split_cas_list(r["All_CAS"]):
+            if c and not is_valid_cas(c):
+                issues.append(Issue("ERROR", "allergens", r["Allergen"], f"invalid CAS {c!r}"))
+    df["All_CAS_List"] = df["All_CAS"].map(split_cas_list)
+    issues.append(Issue("INFO", "allergens", "", f"{len(df)} declarable allergens (GB list); the EU 2023/1545 expansion is not yet encoded"))
+    return df, issues
+
+
 def load_all(data_dir: Path | str = DATA_DIR) -> Data:
     data_dir = Path(data_dir)
     loaders = {
         "perfumes": load_perfumes, "notes": load_notes, "accords": load_accords,
         "ifra_limits": load_ifra_limits, "group_rules": load_group_rules, "regulatory": load_regulatory,
         "safety_caps": load_safety_caps, "reaction_rules": load_reaction_rules, "product_types": load_product_types,
-        "accord_aliases": load_accord_aliases, "constituents": load_constituents,
+        "accord_aliases": load_accord_aliases, "constituents": load_constituents, "product_bases": load_product_bases,
+        "allergens": load_allergens,
     }
     frames, issues = {}, []
     for table, fn in loaders.items():

@@ -3,6 +3,7 @@
 
     streamlit run app.py                    # the UI
     python app.py "fresh woody for summer"  # the same flow in the terminal (no Streamlit needed)
+    python app.py --invent "woody, amber" --family Fougere   # invent a new composition instead of matching one
     python app.py --report                  # the data report (Task 1)
 
 The LLM is optional: with no ANTHROPIC_API_KEY the button path and keyword interpretation still work (Rule 9).
@@ -18,7 +19,11 @@ from zone_a_llm.describer import describe
 from zone_a_llm.input_handler import Preferences, interpret, vocabulary
 from zone_a_llm.llm_client import get_client
 from zone_a_llm.matcher import match
+from zone_b_chemistry.invention import invent
 from zone_b_chemistry.pipeline import perfume_to_accords, run_zone_b_for_perfume
+from zone_b_chemistry.product_formulation import formulate_product
+
+DEFAULT_PRODUCT = "Parfum de toilette / Eau de parfum / Esprit de parfum"
 
 
 def formula_table(out) -> pd.DataFrame:
@@ -58,7 +63,22 @@ def run_cli(text: str) -> int:
         print("\nsafety:"); print(out.safety.summary())
     if out.optimized is not None:
         print("\nrebalance trace:"); print("\n".join(f"  {t}" for t in out.optimized.trace))
+    if out.verdict == "PASS":
+        prod = formulate_product(out.formula, data, product_type=DEFAULT_PRODUCT, concentrate_pct=12)
+        print("\n" + prod.summary())
     return 0 if out.verdict == "PASS" else 1
+
+
+def run_invent_cli(terms: list[str], family: str | None) -> int:
+    data = load_all()
+    inv = invent(terms, data, family=family, n_variants=5)
+    print(inv.report())
+    best = inv.best()
+    if best is None:
+        return 1
+    prod = formulate_product(best.formula, data, product_type=DEFAULT_PRODUCT, concentrate_pct=12)
+    print("\nbest candidate as an EdP:\n" + prod.summary())
+    return 0
 
 
 # ----------------------------------------------------------------------------
@@ -81,7 +101,7 @@ def run_streamlit() -> None:
 
     with st.sidebar:
         st.caption(f"LLM: {'connected' if client else 'not configured (button path only)'}")
-        mode = st.radio("Input", ["Buttons", "Free text"])
+        mode = st.radio("Input", ["Buttons", "Free text", "Invent"])
         product = st.selectbox("Product type (dilution)", ["Neat (formula = product)"] + list(data.product_types["Product_Type"]))
         if product == "Neat (formula = product)":
             fraction = 1.0
@@ -91,6 +111,21 @@ def run_streamlit() -> None:
                                  float(r["Concentrate_Fraction_Max"]), 0.01)
         st.caption("Source: RSC Table A2 (product_types.csv). Caps become limit / fraction; bans never relax.")
 
+    if mode == "Invent":
+        terms = st.multiselect("Accords for the new creation (first = strongest)", vocab["accords"], default=["woody", "amber"])
+        fam = st.selectbox("Carles family signature", ["(none)", "Chypre", "Fougere", "Foin", "Trefle"])
+        if st.button("Invent"):
+            inv = invent(terms, data, family=None if fam == "(none)" else fam, n_variants=5)
+            st.text(inv.report())
+            best = inv.best()
+            if best is not None:
+                prod = formulate_product(best.formula, data, product_type=product if product != "Neat (formula = product)" else DEFAULT_PRODUCT,
+                                         concentrate_pct=None if fraction == 1.0 else fraction * 100)
+                st.subheader("Best candidate as a product"); st.dataframe(prod.table, hide_index=True)
+                st.dataframe(prod.allergens, hide_index=True)
+                for w in prod.warnings:
+                    st.warning(w)
+        return
     if mode == "Buttons":
         c1, c2 = st.columns(2)
         accords = c1.multiselect("Accords you like", vocab["accords"])
@@ -143,6 +178,17 @@ def run_streamlit() -> None:
         if len(out.build.unplaced):
             st.warning("Unplaced notes (need a dataset2 row or an alias):")
             st.dataframe(out.build.unplaced, hide_index=True)
+        if out.verdict == "PASS":
+            ptype = product if product != "Neat (formula = product)" else DEFAULT_PRODUCT
+            prod = formulate_product(out.formula, data, product_type=ptype, concentrate_pct=None if fraction == 1.0 else fraction * 100)
+            st.subheader(f"Product formulation — {ptype}")
+            st.dataframe(prod.table, hide_index=True, use_container_width=True)
+            st.caption("Allergen declaration (UK/EU, leave-on > 0.001 %):")
+            st.dataframe(prod.allergens, hide_index=True)
+            with st.expander("Process"):
+                st.write("\n".join(f"{i}. {s}" for i, s in enumerate(prod.process, 1)))
+            for w in prod.warnings:
+                st.warning(w)
 
 
 def _under_streamlit() -> bool:
@@ -156,6 +202,11 @@ def _under_streamlit() -> bool:
 if __name__ == "__main__":
     if _under_streamlit():
         run_streamlit()
+    elif len(sys.argv) > 1 and sys.argv[1] == "--invent":
+        args = sys.argv[2:]
+        fam = args[args.index("--family") + 1] if "--family" in args else None
+        terms = [t.strip() for t in " ".join(a for a in args if a not in ("--family", fam)).split(",") if t.strip()]
+        sys.exit(run_invent_cli(terms, fam))
     elif len(sys.argv) > 1 and sys.argv[1] == "--report":
         data = load_all()
         print(report(data))
