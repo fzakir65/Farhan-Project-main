@@ -12,7 +12,9 @@ Rules (CLAUDE.md step 6 "Normalisation re-check"):
     same layer, then across layers; a material sitting at a ceiling never moves up again;
   - Carles' Heart cap (25 %) is respected while redistributing: overflow goes to Base, then Top;
   - after every rebalance the full safety pass runs again; the loop ends only when it changes nothing;
-  - a normalisation that cannot reach 100 % without pushing a material over a ceiling is itself a REJECT;
+  - when no unpinned odorant can absorb the removed mass, the remainder becomes a DILUENT line (dipropylene glycol
+    by default — an odourless solvent used exactly for this, RSC Ch 9 / product practice), flagged DILUENT_ADDED;
+    nothing is ever pushed over a ceiling. Layer statistics are computed on odorants only;
   - a REJECT from the safety engine is passed through untouched (Zone B never removes a banned note by itself).
 """
 from __future__ import annotations
@@ -27,6 +29,7 @@ from .safety_engine import CONCENTRATE_FRACTION, SafetyResult, check_formula
 ROUND = 3
 TOL = 1e-6
 MAX_ITER = 10
+DILUENT = {"Note_ID": "SOLVENT-DPG", "Note_Name": "Dipropylene glycol (diluent)", "CAS": "25265-71-8", "Layer": "Diluent"}
 
 
 @dataclass
@@ -133,9 +136,22 @@ def optimize(safety: SafetyResult, data, *, layer_targets=LAYER_TARGETS,
     for it in range(1, max_iter + 1):
         f, ok = _rebalance(f, pinned, layer_targets, trace)
         if not ok:
-            flags.append("REJECT: cannot normalise to 100 % — every material that could absorb the removed mass is pinned or the Heart cap binds")
+            # every odorant that could absorb the removed mass is pinned (or the Heart cap binds): fill with diluent
+            residual = round(100.0 - float(f["Pct"].sum()), ROUND)
+            if "Note_ID" not in f.columns:
+                f["Note_ID"] = ""
+            if (f["Note_ID"] == DILUENT["Note_ID"]).any():
+                f.loc[f["Note_ID"] == DILUENT["Note_ID"], "Pct"] += residual
+            else:
+                row = {c: "" for c in f.columns}
+                row.update(DILUENT)
+                row["Pct"] = residual
+                if "Input_Pct" in f.columns:
+                    row["Input_Pct"] = 0.0
+                f = pd.concat([f, pd.DataFrame([row])], ignore_index=True)
             f["Pinned"] = f["CAS"].isin(pinned)
-            return OptimizeResult("REJECT", f, current, it, trace, flags, round(float(f["Pct"].sum()), ROUND), _layers(f, layer_targets))
+            trace.append(f"diluent: {residual:.3f} % dipropylene glycol added — no unpinned odorant could absorb the removed mass")
+            flags.append(f"WARNING DILUENT_ADDED: {residual:.3f} % dipropylene glycol fills the mass removed by safety cuts (all odorants pinned)")
         # exact 100 after rounding: residual on the largest UNPINNED share
         f["Pct"] = f["Pct"].round(ROUND)
         residual = round(100.0 - float(f["Pct"].sum()), ROUND)
@@ -171,7 +187,11 @@ def optimize(safety: SafetyResult, data, *, layer_targets=LAYER_TARGETS,
 
 
 def _layers(f: pd.DataFrame, layer_targets) -> pd.DataFrame:
+    """Carles layer shares of the ODORANTS (the diluent is listed separately)."""
     rows = []
+    dil = float(f.loc[f["Layer"] == "Diluent", "Pct"].sum()) if "Layer" in f.columns else 0.0
+    if dil > 0:
+        rows.append({"Layer": "Diluent", "Pct": round(dil, ROUND), "Min": 0.0, "Max": 100.0, "In_Range": True})
     for L in LAYER_ORDER:
         p = float(f.loc[f["Layer"] == L, "Pct"].sum()) if "Layer" in f.columns else 0.0
         lo, _, hi = layer_targets[L]

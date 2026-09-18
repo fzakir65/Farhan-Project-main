@@ -1,0 +1,87 @@
+Natural_Name,Natural_CAS,Grade_Word,Constituent_Name,Constituent_CAS,Typical_Min_Pct,Typical_Max_Pct,Fraction_Used,Basis,Source,Note,Provisional
+Clove bud oil,8000-34-8,,Eugenol,97-53-0,73,88,0.88,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Syzygium aromaticum bud oil,Yes
+Cinnamon leaf oil,8015-91-6,leaf,Eugenol,97-53-0,70,90,0.9,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Cinnamomum verum leaf oil (same CAS as bark oil — grade word decides),Yes
+Cinnamon leaf oil,8015-91-6,leaf,Cinnamic aldehyde,104-55-2,1,5,0.05,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Cinnamon bark oil,8015-91-6,bark,Cinnamic aldehyde,104-55-2,55,76,0.76,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Cinnamomum verum bark oil,Yes
+Cinnamon bark oil,8015-91-6,bark,Eugenol,97-53-0,2,13,0.13,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Cinnamon bark oil,8015-91-6,bark,Coumarin,91-64-5,0.1,1.0,0.01,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Ceylon bark is low in coumarin; cassia is not,Yes
+Cinnamon bark oil,8015-91-6,bark,Benzyl Benzoate,120-51-4,0.5,1.5,0.015,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Nutmeg oil,8008-45-5,,Safrole,94-59-7,0.5,4.0,0.04,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",East Indian nutmeg; natural contribution capped at 0.01 % finished product,Yes
+Nutmeg oil,8008-45-5,,Methyl eugenol,93-15-2,0.3,2.0,0.02,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Mace oil,8007-12-3,,Safrole,94-59-7,0.5,2.5,0.025,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Mace oil,8007-12-3,,Methyl eugenol,93-15-2,0.3,1.5,0.015,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Saffron extract,84604-17-1,,Safranal,116-26-7,5,12,0.12,upper bound of typical range,safety_caps.csv derivation 2026-09-11 (0.1 % saffron -> 0.012 % safranal),absolute/extract; volatile fraction is mostly safranal,Yes
+Rose otto,8007-01-0,,Citronellol,106-22-9,20,45,0.45,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Rosa damascena distilled oil,Yes
+Rose otto,8007-01-0,,Geraniol,106-24-1,10,25,0.25,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Rose otto,8007-01-0,,Methyl eugenol,93-15-2,1.0,3.5,0.035,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Rose otto,8007-01-0,,Eugenol,97-53-0,0.5,2.0,0.02,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Rose otto,8007-01-0,,Farnesol,4602-84-0,0.5,2.0,0.02,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Rose absolute,90106-38-0,,Citronellol,106-22-9,8,20,0.2,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Rosa damascena absolute (phenylethanol-rich),Yes
+Rose absolute,90106-38-0,,Geraniol,106-24-1,3,10,0.1,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Rose absolute,90106-38-0,,Methyl eugenol,93-15-2,0.5,3.0,0.03,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Rose absolute,90106-38-0,,Eugenol,97-53-0,0.5,2.0,0.02,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Geranium oil,8000-46-2,,Citronellol,106-22-9,25,45,0.45,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Pelargonium graveolens,Yes
+Geranium oil,8000-46-2,,Geraniol,106-24-1,5,20,0.2,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Citronella oil,8000-29-1,,Citronellal,106-23-0,30,45,0.45,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Java type,Yes
+Citronella oil,8000-29-1,,Geraniol,106-24-1,15,25,0.25,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Citronella oil,8000-29-1,,Citronellol,106-22-9,8,15,0.15,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Basil oil,8015-73-4,,Estragole,140-67-0,0.3,6.5,0.065,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles","ASSUMES linalool chemotype (Ocimum basilicum, European); the estragole chemotype is 82-87 % and would be unusable",Yes
+Tarragon oil,8016-88-4,,Estragole,140-67-0,60,85,0.85,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Artemisia dracunculus,Yes
+Lemongrass oil,8007-02-1,,Citral,5392-40-5,70,85,0.85,upper bound of typical range,"Pybus & Sell, Chemistry of Fragrances (RSC 1999) Ch 10 p.185",geranial + neral,Yes
+Litsea cubeba oil,68855-99-2,,Citral,5392-40-5,65,85,0.85,upper bound of typical range,"Pybus & Sell, Chemistry of Fragrances (RSC 1999) Ch 10 p.185",,Yes
+Lemon oil,8008-56-8,,Citral,5392-40-5,1.5,5.0,0.05,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",expressed,Yes
+Lime oil distilled,8008-26-2,distilled,Citral,5392-40-5,1,3,0.03,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Lime oil expressed,8008-26-2,,Citral,5392-40-5,3,6,0.06,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Ylang ylang oil,8006-81-3,,Isoeugenol,97-54-1,0.5,1.5,0.015,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",extra / complete grades,Yes
+Ylang ylang oil,8006-81-3,,Eugenol,97-53-0,0.3,1.0,0.01,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Ylang ylang oil,8006-81-3,,Benzyl Benzoate,120-51-4,4,10,0.1,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Ylang ylang oil,8006-81-3,,Benzyl Salicylate,118-58-1,1,10,0.1,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Ylang ylang oil,8006-81-3,,Farnesol,4602-84-0,1,3,0.03,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Jasmine absolute (grandiflorum),84776-64-7,,Benzyl Benzoate,120-51-4,15,22,0.22,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Jasmine absolute (grandiflorum),84776-64-7,,Benzyl Alcohol,100-51-6,2,6,0.06,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Jasmine absolute (grandiflorum),84776-64-7,,Eugenol,97-53-0,1,3,0.03,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Jasmine absolute (grandiflorum),90045-94-6,,Benzyl Benzoate,120-51-4,15,22,0.22,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",second CAS used in dataset2,Yes
+Jasmine absolute (grandiflorum),90045-94-6,,Benzyl Alcohol,100-51-6,2,6,0.06,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Jasmine absolute (grandiflorum),90045-94-6,,Eugenol,97-53-0,1,3,0.03,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Jasmine sambac absolute,91770-14-8,,Benzyl Benzoate,120-51-4,2,8,0.08,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Jasmine sambac absolute,91770-14-8,,Benzyl Alcohol,100-51-6,2,5,0.05,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Bay oil (Pimenta racemosa),8006-78-8,,Eugenol,97-53-0,45,56,0.56,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",West Indian bay,Yes
+Bay oil (Pimenta racemosa),8006-78-8,,Methyl eugenol,93-15-2,2,4,0.04,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Bay oil (Pimenta racemosa),8006-78-8,,Estragole,140-67-0,1,3,0.03,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Pimento (allspice) oil,8006-77-7,,Eugenol,97-53-0,65,85,0.85,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Pimento (allspice) oil,8006-77-7,,Methyl eugenol,93-15-2,3,10,0.1,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Lavender absolute,8000-28-0,absolute,Coumarin,91-64-5,3,6,0.06,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",absolute only; the oil has <0.3 %,Yes
+Lavender absolute,8000-28-0,absolute,7-Methoxycoumarin,531-59-9,1,3,0.03,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",herniarin — natural contribution capped at 0.01 % finished product (IFRA_STD_158),Yes
+Lavender oil,8000-28-0,oil,Coumarin,91-64-5,0.1,0.3,0.003,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Lavandula angustifolia oil,Yes
+Lavandin oil,91722-69-9,,Coumarin,91-64-5,0.1,0.5,0.005,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Tonka bean absolute,8024-04-2,,Coumarin,91-64-5,30,50,0.5,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Dipteryx odorata,Yes
+Hay absolute,68890-66-4,,Coumarin,91-64-5,20,40,0.4,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles","Foin coupé; CAS as carried by dataset2, unverified",Yes
+Cedarwood oil Virginia,8000-27-9,,Cedrene,11028-42-5,20,35,0.35,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",alpha- + beta-cedrene; Juniperus virginiana,Yes
+Cedarwood oil Texas,68990-83-0,,Cedrene,11028-42-5,15,30,0.3,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Juniperus mexicana,Yes
+Wintergreen oil,68917-75-9,,Methyl salicylate,119-36-8,96,99,0.99,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Gaultheria procumbens,Yes
+Mandarin oil,8008-31-9,,Methyl N-methylanthranilate,85-91-6,0.3,1.0,0.01,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",expressed; phototoxic in its own right,Yes
+Bergamot oil expressed,8007-75-8,,Citral,5392-40-5,0.2,1.0,0.01,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",furocoumarins handled by group_rules,Yes
+Peru balsam extract,8007-00-9,extract,Benzyl Benzoate,120-51-4,20,35,0.35,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",extract/absolute grade only (crude is banned),Yes
+Peru balsam extract,8007-00-9,extract,Benzyl Cinnamate,103-41-3,20,35,0.35,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Tolu balsam,9000-64-0,,Benzyl Benzoate,120-51-4,5,15,0.15,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Myroxylon balsamum resin,Yes
+Tolu balsam,9000-64-0,,Benzyl Cinnamate,103-41-3,3,10,0.1,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Benzoin Siam resinoid,9000-05-9,,Benzyl Benzoate,120-51-4,5,15,0.15,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Styrax tonkinensis,Yes
+Benzoin Siam resinoid,9000-05-9,,Benzyl Alcohol,100-51-6,0.5,2,0.02,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Benzoin Siam resinoid,9000-72-0,,Benzyl Benzoate,120-51-4,5,15,0.15,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",second CAS used in dataset2,Yes
+Benzoin Sumatra resinoid,9000-72-0,sumatra,Benzyl Cinnamate,103-41-3,5,15,0.15,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Styrax benzoin,Yes
+Styrax resinoid,8046-19-3,,Cinnamic alcohol,104-54-1,3,10,0.1,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Liquidambar orientalis,Yes
+Styrax resinoid,8046-19-3,,Benzyl Cinnamate,103-41-3,1,5,0.05,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Styrax resinoid,8046-19-3,,Benzyl Benzoate,120-51-4,1,5,0.05,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Cassia oil,8007-80-5,,Cinnamic aldehyde,104-55-2,75,90,0.9,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Cinnamomum cassia,Yes
+Cassia oil,8007-80-5,,Coumarin,91-64-5,1,8,0.08,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Star anise oil,8007-70-3,,Estragole,140-67-0,0.5,6,0.06,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Illicium verum,Yes
+Fennel oil sweet,8006-84-6,,Estragole,140-67-0,2,5,0.05,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Cumin seed oil,8014-13-9,,Cuminaldehyde,122-03-2,20,40,0.4,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",no IFRA Standard for cuminaldehyde; oil itself restricted 0.4 %,Yes
+Tuberose absolute,8024-05-3,,Benzyl Benzoate,120-51-4,3,10,0.1,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Tuberose absolute,8024-05-3,,Methyl anthranilate,134-20-3,1,5,0.05,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Neroli oil,8016-38-4,,Methyl anthranilate,134-20-3,0.3,1.0,0.01,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Orange blossom absolute,8030-28-2,,Methyl anthranilate,134-20-3,3,10,0.1,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Melissa oil,8014-71-9,,Citral,5392-40-5,30,50,0.5,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",Melissa officinalis; oil itself restricted,Yes
+Verbena absolute,85116-63-8,,Citral,5392-40-5,10,25,0.25,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+May chang / Litsea,68855-99-2,,Citronellal,106-23-0,0.5,2,0.02,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",,Yes
+Eucalyptus citriodora oil,8000-48-4,citriodora,Citronellal,106-23-0,65,85,0.85,upper bound of typical range,"Tisserand & Young, Essential Oil Safety 2e (2014), constituent profiles",only the lemon-scented species; E. globulus has none,Yes

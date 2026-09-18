@@ -56,19 +56,22 @@ def test_loop_pins_newly_capped_materials_until_stable(data):
     assert any("pinning" in t for t in r.trace)
 
 
-def test_everything_pinned_is_a_reject(data):
+def test_everything_pinned_fills_with_diluent_never_raises_a_ceiling(data):
     f = F(("Oakmoss Absolute", "90028-68-5", "Base", 60.0), ("Coumarin", "91-64-5", "Base", 40.0))
     r = op.optimize(se.check_formula(f, data), data)
-    assert r.verdict == "REJECT" and any("cannot normalise" in x for x in r.flags)
+    assert r.verdict == "PASS" and r.total_pct == 100.0 and any("DILUENT_ADDED" in x for x in r.flags)
     assert pct(r, "Oakmoss Absolute") == 0.1 and pct(r, "Coumarin") == 1.5            # never raised above a ceiling
+    assert pct(r, "Dipropylene glycol (diluent)") == pytest.approx(98.4, abs=1e-3)
+    assert r.layers.set_index("Layer")["Pct"]["Diluent"] == pytest.approx(98.4, abs=1e-3)
 
 
 def test_heart_cap_holds_during_redistribution(data):
-    # only Heart notes are free; the removed mass may lift Heart to 25 but not beyond -> REJECT rather than breach
-    f = F(("Oakmoss Absolute", "90028-68-5", "Base", 76.0), ("Rose Absolute", "8007-01-0", "Heart", 24.0))
+    # only Heart notes are free; the removed mass may lift Heart to 25 but not beyond -> the rest becomes diluent
+    f = F(("Oakmoss Absolute", "90028-68-5", "Base", 76.0), ("Hedione", "24851-98-7", "Heart", 24.0))
     r = op.optimize(se.check_formula(f, data), data)
-    assert r.verdict == "REJECT"
-    assert r.layers.set_index("Layer")["Pct"]["Heart"] <= 25.0 + 1e-6
+    assert r.verdict == "PASS" and r.total_pct == 100.0
+    L = r.layers.set_index("Layer")["Pct"]
+    assert L["Heart"] == pytest.approx(25.0, abs=1e-3) and L["Diluent"] > 0
 
 
 def test_deterministic(data):
@@ -135,4 +138,4 @@ def test_pipeline_over_all_accords_never_crashes(data):
         verdicts[out.verdict] = verdicts.get(out.verdict, 0) + 1
         if out.verdict == "PASS":
             assert out.formula["Pct"].sum() == pytest.approx(100.0, abs=1e-6), name
-    assert verdicts.get("PASS", 0) > 150 and "REJECT" in verdicts
+    assert verdicts.get("PASS", 0) > 150 and "REJECT" in verdicts      # REJECTs = banned / unknown-grade materials only

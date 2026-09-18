@@ -38,6 +38,7 @@ FILES = {
     "reaction_rules": "reaction_rules.csv",
     "product_types": "product_types.csv",
     "accord_aliases": "accord_name_aliases.csv",
+    "constituents": "constituents.csv",
 }
 
 REQUIRED_COLUMNS = {
@@ -48,6 +49,8 @@ REQUIRED_COLUMNS = {
               "Accords_Used_In"],
     "product_types": ["Product_Type", "Concentrate_Min_Pct", "Concentrate_Max_Pct", "Alcohol_Pct_Range", "Source"],
     "accord_aliases": ["Dataset1_Term", "Dataset3_Accord", "Confidence", "Tier", "Rule", "Apply", "Decided_By"],
+    "constituents": ["Natural_Name", "Natural_CAS", "Grade_Word", "Constituent_Name", "Constituent_CAS", "Typical_Min_Pct",
+                     "Typical_Max_Pct", "Fraction_Used", "Basis", "Source", "Note", "Provisional"],
     "accords": ["Accord_ID", "Accord_Name", "Accord_Category", "Note_ID", "Note_Name", "Note_Role", "Layer",
                 "Importance_Weight", "Typical_Presence", "Blend_Compatibility", "Stability_Class"],
     "ifra_limits": ["Material_Name", "CAS", "IFRA_Type", "Category_4_Limit", "Phototoxic", "Notes", "IFRA_Key",
@@ -127,6 +130,7 @@ class Data:
     reaction_rules: pd.DataFrame
     product_types: pd.DataFrame
     accord_aliases: pd.DataFrame
+    constituents: pd.DataFrame
     issues: list[Issue] = field(default_factory=list)
     # convenience frames produced by cross-validation
     unmatched_accord_notes: pd.DataFrame = field(default_factory=pd.DataFrame)
@@ -715,13 +719,39 @@ def load_accord_aliases(path: Path) -> tuple[pd.DataFrame, list[Issue]]:
     return df, issues
 
 
+def load_constituents(path: Path) -> tuple[pd.DataFrame, list[Issue]]:
+    """Natural material -> restricted constituent -> fraction (safety step 0). Fraction_Used is the upper bound of the
+    typical range until a supplier CoA replaces it (Provisional=Yes). Both CAS must pass the checksum; the fraction must
+    be in (0, 1]."""
+    df = _read(path, "constituents")
+    issues: list[Issue] = []
+    for col in ("Typical_Min_Pct", "Typical_Max_Pct", "Fraction_Used"):
+        df[col] = df[col].map(_to_float)
+    for i, r in df.iterrows():
+        rid = f"{r['Natural_Name']}->{r['Constituent_Name']}"
+        for c in (r["Natural_CAS"], r["Constituent_CAS"]):
+            if not is_valid_cas(c):
+                issues.append(Issue("ERROR", "constituents", rid, f"invalid CAS {c!r}"))
+        if not (0 < r["Fraction_Used"] <= 1):
+            issues.append(Issue("ERROR", "constituents", rid, f"Fraction_Used {r['Fraction_Used']} not in (0, 1]"))
+        if not r["Source"]:
+            issues.append(Issue("ERROR", "constituents", rid, "no Source"))
+    dup = df.duplicated(["Natural_CAS", "Grade_Word", "Constituent_CAS"])
+    for _, r in df[dup].iterrows():
+        issues.append(Issue("ERROR", "constituents", r["Natural_Name"], f"duplicate row for {r['Constituent_Name']}"))
+    n_prov = int((df["Provisional"].str.strip().str.lower() == "yes").sum())
+    issues.append(Issue("INFO", "constituents", "", f"{len(df)} natural->constituent rows ({df['Natural_CAS'].nunique()} naturals); "
+                                                    f"{n_prov} provisional (literature ranges, replace with supplier CoA)"))
+    return df, issues
+
+
 def load_all(data_dir: Path | str = DATA_DIR) -> Data:
     data_dir = Path(data_dir)
     loaders = {
         "perfumes": load_perfumes, "notes": load_notes, "accords": load_accords,
         "ifra_limits": load_ifra_limits, "group_rules": load_group_rules, "regulatory": load_regulatory,
         "safety_caps": load_safety_caps, "reaction_rules": load_reaction_rules, "product_types": load_product_types,
-        "accord_aliases": load_accord_aliases,
+        "accord_aliases": load_accord_aliases, "constituents": load_constituents,
     }
     frames, issues = {}, []
     for table, fn in loaders.items():

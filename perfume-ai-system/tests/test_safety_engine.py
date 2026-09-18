@@ -74,7 +74,7 @@ def test_ifra_restriction_caps_at_category_4(data):
 def test_within_limit_passes_and_is_not_pinned(data):
     r = se.check_formula(F(("Coumarin", "91-64-5", 1.0), ("Linalool", "78-70-6", 5.0)), data)
     assert r.verdict == "PASS" and r.adjustments.empty and r.rejections.empty and "91-64-5" not in r.pinned
-    assert r.provisional and any(f.code == "STEP0_NOT_IMPLEMENTED" for f in r.flags)
+    assert not r.provisional                     # no natural involved -> no provisional constituent fraction used
 
 
 def test_exactly_at_limit_is_pinned(data):
@@ -174,8 +174,9 @@ def test_isomer_sum_rose_ketones(data):
 
 def test_olfactory_cap_and_provisional_flag(data):
     r = se.check_formula(F(("Vanillin", "121-33-5", 6.0), ("Nutmeg Oil", "8008-45-5", 1.0)), data)
-    assert pct(r, "Vanillin") == 4.0 and pct(r, "Nutmeg Oil") == 0.3
+    assert pct(r, "Vanillin") == 4.0 and pct(r, "Nutmeg Oil") <= 0.3         # olfactory cap 0.3, then step 0 cuts further
     assert any(f.code == "PROVISIONAL_CAP" and f.note == "Nutmeg Oil" for f in r.flags)
+    assert any(a["Step"] == 0 and a["Note_Name"] == "Nutmeg Oil" for _, a in r.adjustments.iterrows())
 
 
 def test_vanillin_ethyl_vanillin_equivalence_rule(data):
@@ -228,7 +229,9 @@ def test_builder_output_goes_straight_into_the_engine(data):
     built = fb.build_formula(rows, data.notes)
     r = se.check_formula(built.formula, data)
     assert r.verdict == "ADJUSTED"
-    assert pct(r, "Coumarin") == 1.5 and pct(r, "Oakmoss Absolute") == 0.1
+    assert pct(r, "Oakmoss Absolute") == 0.1
+    # coumarin: the direct share shrinks because lavender absolute / lavandin bring coumarin of their own (step 0)
+    assert pct(r, "Coumarin") < 1.5 and any(a["Step"] == 0 and a["Note_Name"] == "Coumarin" for _, a in r.adjustments.iterrows())
     assert r.total_pct < 100 and set(r.formula.columns) >= {"Note_Name", "CAS", "Layer", "Input_Pct", "Pct"}
 
 
@@ -241,3 +244,47 @@ def test_every_real_accord_runs_through_the_engine(data):
             verdicts[r.verdict] = verdicts.get(r.verdict, 0) + 1
             assert r.formula["Pct"].le(r.formula["Input_Pct"] + 1e-9).all(), aid     # safety only ever lowers
     assert sum(verdicts.values()) >= 200 and verdicts.get("REJECT", 0) >= 1          # e.g. the Costus accords
+
+
+# ----------------------------------------------------------------------------
+# step 0 — constituent roll-up
+# ----------------------------------------------------------------------------
+
+def test_eugenol_effective_total_is_capped_naturals_first(data):
+    r = se.check_formula(F(("Clove Bud Oil", "8000-34-8", 2.0), ("Eugenol", "97-53-0", 1.5)), data)
+    clove, eug = pct(r, "Clove Bud Oil"), pct(r, "Eugenol")
+    assert clove == 2.0                                            # the natural keeps its share (2.0 x 0.88 = 1.76 <= 2.5)
+    assert eug == pytest.approx(2.5 - 2.0 * 0.88, abs=1e-3)        # the pure molecule takes what is left
+    assert any(a["Step"] == 0 for _, a in r.adjustments.iterrows()) and r.provisional
+
+
+def test_naturals_alone_over_the_ceiling_are_scaled(data):
+    r = se.check_formula(F(("Clove Bud Oil", "8000-34-8", 4.0)), data)   # 4.0 -> cap 2.0 (olfactory) -> 1.76 eugenol OK
+    assert pct(r, "Clove Bud Oil") == 2.0
+    r2 = se.check_formula(F(("Bulgarian Rose Otto", "8007-01-0", 5.0)), data)
+    assert pct(r2, "Bulgarian Rose Otto") == pytest.approx(0.01 / 0.035, abs=1e-3)   # UK methyl eugenol 0.01 % / 3.5 %
+    assert any("Methyl eugenol" in a for a in r2.adjustments["Source"])
+
+
+def test_as_such_prohibited_constituent_uses_the_natural_contribution_ceiling(data):
+    r = se.check_formula(F(("Nutmeg Oil", "8008-45-5", 0.3)), data)
+    assert pct(r, "Nutmeg Oil") <= 0.01 / 0.02 + 1e-6
+    assert r.rejections.empty                                          # natural contribution is tolerated, never REJECT
+    r2 = se.check_formula(F(("Lavender Absolute", "8000-28-0", 1.0)), data)
+    assert pct(r2, "Lavender Absolute") == pytest.approx(0.01 / 0.03, abs=1e-3)    # herniarin 3 % vs 0.01 % (IFRA_STD_158)
+
+
+def test_grade_word_selects_the_profile_and_unknown_grade_takes_worst_case(data):
+    leaf = se.check_formula(F(("Cinnamon Leaf Oil", "8015-91-6", 2.0)), data)
+    assert not any(f.code == "CONSTITUENT_GRADE_ASSUMED" for f in leaf.flags)
+    unknown = se.check_formula(F(("Cinnamon Oil", "8015-91-6", 2.0)), data)
+    assert any(f.code == "CONSTITUENT_GRADE_ASSUMED" for f in unknown.flags)
+    assert pct(unknown, "Cinnamon Oil") <= pct(leaf, "Cinnamon Leaf Oil")
+
+
+def test_missing_constituent_table_is_reported_not_silently_skipped(data):
+    import copy
+    d2 = copy.copy(data)
+    d2.constituents = data.constituents.iloc[0:0]
+    r = se.check_formula(F(("Clove Bud Oil", "8000-34-8", 1.0)), d2)
+    assert r.provisional and any(f.code == "STEP0_NOT_IMPLEMENTED" for f in r.flags)

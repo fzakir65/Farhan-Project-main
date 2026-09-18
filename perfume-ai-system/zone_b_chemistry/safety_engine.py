@@ -10,8 +10,13 @@
     result.log          -> the ordered, human-readable trace (Rule 7: every decision cites its source row)
 
 Order of checks (CLAUDE.md "SAFETY RULES"):
-  0. constituent roll-up            NOT IMPLEMENTED — needs constituents.csv; reported as a flag on every result,
-                                    result.provisional is True until it exists (Provisional=Yes caps stand in)
+  0. constituents.csv               natural -> restricted constituent -> fraction. effective % of a constituent =
+                                    direct % + sum(natural % x fraction); judged against the constituent's own ceiling.
+                                    Naturals keep their share first, the pure molecule takes what is left; if the naturals
+                                    alone exceed the ceiling they are scaled down proportionally. Runs after the
+                                    per-material ceilings (steps 1, 2, 4) so nothing is cut twice; the optimizer loop
+                                    re-runs everything until stable. result.provisional stays True while any fraction
+                                    used is Provisional=Yes (literature range rather than a supplier CoA).
   1. regulatory_uk.csv              BANNED (GB or EU) -> REJECT;  RESTRICTED -> ceiling candidate
   2. ifra_limits.csv                Prohibition (all / as_such) -> REJECT;  grade-scoped prohibition -> REJECT unless the
                                     given grade is an allowed one;  Restriction -> ceiling Cat4 / CONCENTRATE_FRACTION;
@@ -77,7 +82,7 @@ class SafetyResult:
         return self.verdict != "REJECT"
 
     def summary(self) -> str:
-        head = f"verdict: {self.verdict}{'  (PROVISIONAL — constituent roll-up not implemented)' if self.provisional else ''}" \
+        head = f"verdict: {self.verdict}{'  (PROVISIONAL — constituent fractions are literature ranges, not CoA values)' if self.provisional else ''}" \
                f"  total {self.total_pct:.3f} %  concentrate fraction {self.concentrate_fraction:g}"
         lines = [head]
         for r in self.rejections.itertuples(index=False):
@@ -150,12 +155,15 @@ def check_formula(formula: pd.DataFrame, data, *, concentrate_fraction: float = 
     f = f.sort_values(["Note_Name", "CAS"], kind="mergesort").reset_index(drop=True)
     f["Safe_Pct"] = f["Pct"]
 
-    # ---- step 0
-    flags.append(SafetyFlag("STEP0_NOT_IMPLEMENTED", "WARNING",
-                            "constituent roll-up (natural -> restricted constituent, IFRA Guidance s1.4) is not implemented: "
-                            "constituents.csv is missing. Provisional=Yes caps in safety_caps.csv stand in. Result is PROVISIONAL.",
-                            source="CLAUDE.md step 0"))
-    log.append("step 0 constituent roll-up: NOT IMPLEMENTED (constituents.csv missing) — result provisional")
+    # ---- step 0 (data presence; the roll-up itself runs after the per-material ceilings below)
+    constituents = getattr(data, "constituents", None)
+    provisional = True
+    if constituents is None or len(constituents) == 0:
+        flags.append(SafetyFlag("STEP0_NOT_IMPLEMENTED", "WARNING",
+                                "constituent roll-up (natural -> restricted constituent, IFRA Guidance s1.4) has no data: "
+                                "constituents.csv is missing or empty. Provisional=Yes caps in safety_caps.csv stand in.",
+                                source="CLAUDE.md step 0"))
+        log.append("step 0 constituent roll-up: NO DATA (constituents.csv missing) — result provisional")
 
     # ---- lookups by CAS (any CAS an IFRA Standard lists)
     ifra = data.ifra_limits
@@ -275,6 +283,106 @@ def check_formula(formula: pd.DataFrame, data, *, concentrate_fraction: float = 
                 if abs(pct - ceiling) <= TOL:
                     pinned.add(cas)
 
+    # ---- step 0: constituent roll-up (IFRA Guidance s1.4) on the values after the per-material ceilings
+    if constituents is not None and len(constituents):
+        used_provisional = False
+        by_nat: dict[str, pd.DataFrame] = {c: g for c, g in constituents.groupby("Natural_CAS")}
+        contrib: dict[str, list[tuple[int, str, float, float, str]]] = {}     # constituent CAS -> [(idx, natural, fraction, pct_contrib, cname)]
+        for idx, row in f.iterrows():
+            cas = row["CAS"]
+            if cas not in by_nat:
+                continue
+            g = by_nat[cas]
+            words = [w for w in g["Grade_Word"].unique() if w]
+            hit = [w for w in words if re.search(rf"\b{re.escape(w)}\b", str(row["Note_Name"]), re.I)]
+            if hit:
+                sel = g[g["Grade_Word"].isin(hit + [""])]
+                how = f"grade '{hit[0]}' read from the note name"
+            elif words:
+                # grade unknown -> the highest fraction of each constituent across all grades (conservative)
+                sel = g.sort_values("Fraction_Used", ascending=False).drop_duplicates("Constituent_CAS")
+                how = f"grade not stated (options: {', '.join(words)}) -> worst case of every grade assumed"
+                flags.append(SafetyFlag("CONSTITUENT_GRADE_ASSUMED", "WARNING",
+                                        f"constituent profile depends on grade ({', '.join(words)}); none in the note name, worst case used",
+                                        row["Note_Name"], cas, "constituents.csv"))
+            else:
+                sel = g
+                how = "single profile"
+            for c in sel.itertuples(index=False):
+                frac = float(c.Fraction_Used)
+                amount = float(f.loc[idx, "Safe_Pct"]) * frac
+                contrib.setdefault(str(c.Constituent_CAS), []).append((idx, str(row["Note_Name"]), frac, amount, str(c.Constituent_Name)))
+                if str(c.Provisional).strip().lower() == "yes":
+                    used_provisional = True
+            log.append(f"step 0: {row['Note_Name']} ({cas}) contributes " + ", ".join(
+                f"{c.Constituent_Name} x{float(c.Fraction_Used):g}" for c in sel.itertuples(index=False)) + f" — {how}")
+        for ccas in sorted(contrib):
+            entries = contrib[ccas]
+            cname = entries[0][4]
+            direct_idx = [i for i in f.index if f.loc[i, "CAS"] == ccas]
+            direct = float(f.loc[direct_idx, "Safe_Pct"].sum()) if direct_idx else 0.0
+            # the constituent's own ceiling: UK/EU restriction, IFRA Cat 4 (or notebox natural-contribution value), olfactory cap
+            cands: list[tuple[float, str]] = []
+            for i in reg_by_cas.get(ccas, []):
+                r = reg.iloc[i]
+                if r["Status"] == "RESTRICTED" and _isnum(r["Fine_Fragrance_Limit_Pct"]):
+                    cands.append((_effective(_num(r["Fine_Fragrance_Limit_Pct"]), concentrate_fraction), f"regulatory_uk.csv {r['Material_Name']}"))
+            if ccas in ifra_by_cas:
+                r = ifra.iloc[ifra_by_cas[ccas]]
+                if _isnum(r[IFRA_CATEGORY]):
+                    cands.append((_effective(_num(r[IFRA_CATEGORY]), concentrate_fraction), f"ifra_limits.csv {r['Material_Name']} ({r['IFRA_Key']})"))
+            for i in caps_by_cas.get(ccas, []):
+                r = caps.iloc[i]
+                if _isnum(r["Max_Safe_Percent"]):
+                    cands.append((_num(r["Max_Safe_Percent"]), f"safety_caps.csv {r['Material_Name']}"))
+            total_nat = sum(a for _, _, _, a, _ in entries)
+            effective = direct + total_nat
+            detail = " + ".join(f"{n} {a:.4f}" for _, n, _, a, _ in entries) + (f" + direct {direct:.4f}" if direct else "")
+            if not cands:
+                flags.append(SafetyFlag("CONSTITUENT_NO_CEILING", "INFO", f"effective {effective:.4f} % ({detail}) — no limit in any table", cname, ccas, "constituents.csv"))
+                log.append(f"step 0: {cname} ({ccas}) effective {effective:.4f} % — no ceiling to judge against")
+                continue
+            cands.sort(key=lambda t: (t[0], t[1]))
+            ceiling, src = cands[0]
+            ceiling_rows.append({"Note_Name": f"[constituent] {cname}", "CAS": ccas, "Ceiling_Pct": ceiling, "Source": src,
+                                 "Not_Binding": f"effective {effective:.4f} % = {detail}"})
+            if effective <= ceiling + TOL:
+                log.append(f"step 0: {cname} ({ccas}) effective {effective:.4f} % <= {ceiling:g} % OK ({detail})")
+                continue
+            # naturals first: keep them whole if they fit, the pure molecule takes the remainder
+            if total_nat <= ceiling + TOL:
+                new_direct_total = ceiling - total_nat
+                scale = new_direct_total / direct if direct > 0 else 0.0
+                for i in direct_idx:
+                    before = float(f.loc[i, "Safe_Pct"])
+                    f.loc[i, "Safe_Pct"] = before * scale
+                    adjustments.append({"Note_Name": f.loc[i, "Note_Name"], "CAS": ccas, "Step": 0, "From_Pct": before, "To_Pct": before * scale,
+                                        "Ceiling_Pct": ceiling, "Source": f"{src} — effective {cname} {effective:.4f} % > {ceiling:g} % (naturals contribute {total_nat:.4f} %; constituents.csv)"})
+                    pinned.add(ccas)
+                log.append(f"step 0: {cname} ({ccas}) effective {effective:.4f} % > {ceiling:g} % -> direct {cname} cut to {new_direct_total:.4f} % ({src})")
+            else:
+                scale = ceiling / total_nat
+                for i in direct_idx:
+                    before = float(f.loc[i, "Safe_Pct"])
+                    if before > 0:
+                        f.loc[i, "Safe_Pct"] = 0.0
+                        adjustments.append({"Note_Name": f.loc[i, "Note_Name"], "CAS": ccas, "Step": 0, "From_Pct": before, "To_Pct": 0.0,
+                                            "Ceiling_Pct": ceiling, "Source": f"{src} — naturals alone supply {total_nat:.4f} % {cname} > {ceiling:g} % (constituents.csv)"})
+                        pinned.add(ccas)
+                for i, n, frac, a, _ in entries:
+                    before = float(f.loc[i, "Safe_Pct"])
+                    f.loc[i, "Safe_Pct"] = before * scale
+                    adjustments.append({"Note_Name": n, "CAS": f.loc[i, "CAS"], "Step": 0, "From_Pct": before, "To_Pct": before * scale,
+                                        "Ceiling_Pct": ceiling / frac, "Source": f"{src} — {cname} content x{frac:g}: effective {effective:.4f} % > {ceiling:g} %, x{scale:.4f} (constituents.csv)"})
+                    pinned.add(f.loc[i, "CAS"])
+                log.append(f"step 0: {cname} ({ccas}) naturals supply {total_nat:.4f} % > {ceiling:g} % -> contributors scaled x{scale:.4f}, direct removed ({src})")
+        if used_provisional:
+            flags.append(SafetyFlag("CONSTITUENT_PROVISIONAL", "WARNING",
+                                    "constituent fractions are literature upper bounds (constituents.csv Provisional=Yes) — replace with supplier CoA values",
+                                    source="constituents.csv"))
+        else:
+            provisional = False
+
     # ---- step 3: group rules on the capped values
     for g in data.group_rules.sort_values("Group_Name").itertuples(index=False):
         members = [str(c).strip() for c in (getattr(g, "Members_CAS_List", None) or str(g.Members_CAS).split("|")) if str(c).strip()]
@@ -363,13 +471,13 @@ def check_formula(formula: pd.DataFrame, data, *, concentrate_fraction: float = 
     if verdict == "REJECT":
         log.append("VERDICT: REJECT — a banned / prohibited material is present; remove it and rebuild (Zone B never drops a note by itself)")
     else:
-        log.append(f"VERDICT: {verdict} (provisional — step 0 not implemented)")
+        log.append(f"VERDICT: {verdict}" + (" (provisional — constituent data is literature-based or missing)" if provisional else ""))
     order = {"ERROR": 0, "WARNING": 1, "INFO": 2}
     flags = sorted(flags, key=lambda x: (order[x.severity], x.code, x.note, x.cas))
     out = f.drop(columns=["Pct"]).rename(columns={"Safe_Pct": "Pct"})
     out.insert(list(out.columns).index("Pct"), "Input_Pct", f["Pct"])
     return SafetyResult(verdict=verdict, formula=out, rejections=rej, adjustments=adj, flags=flags, pinned=pinned, log=log,
-                        ceilings=ceil, provisional=True, concentrate_fraction=concentrate_fraction,
+                        ceilings=ceil, provisional=provisional, concentrate_fraction=concentrate_fraction,
                         total_pct=round(float(out["Pct"].sum()), 3))
 
 
