@@ -79,4 +79,42 @@ def run_zone_b(accord_names: list[str], data, *, concentrate_fraction: float = C
     return ZoneBResult(optimized.verdict, optimized.formula, build, safety, optimized, lookup_flags)
 
 
-__all__ = ["run_zone_b", "ZoneBResult", "grades_from_formula"]
+ACCORD_WEIGHT_DECAY = 0.85     # Main_Accords is listed strongest-first; the k-th accord weighs 0.85^k (deterministic)
+
+
+def perfume_to_accords(perfume: pd.Series | dict, data) -> tuple[list[str], dict[str, float], list[str]]:
+    """Translate a dataset1 perfume's Main_Accords into dataset3 accord names via accord_name_aliases.csv (Apply=Yes
+    rows only). Returns (accord names in order, {Accord_ID: weight}, unmapped terms). Unmapped terms are returned,
+    never dropped silently — the caller shows them. Position gives the weight: first term 1.0, then 0.85, 0.72…"""
+    import re as _re
+    from load_data import normalize_name
+    al = data.accord_aliases
+    mapping = dict(zip(al.loc[al["Applied"], "Dataset1_Term"], al.loc[al["Applied"], "Dataset3_Accord"]))
+    ids = dict(zip(data.accords["Accord_Name"], data.accords["Accord_ID"]))
+    cell = perfume["Main_Accords"] if isinstance(perfume, (pd.Series, dict)) else str(perfume)
+    names, weights, unmapped = [], {}, []
+    k = 0
+    for raw in _re.split(r"[;,]", str(cell or "")):
+        term = normalize_name(raw)
+        if not term:
+            continue
+        acc = mapping.get(term)
+        if acc is None or acc not in ids:
+            unmapped.append(term)
+            continue
+        if acc not in names:
+            names.append(acc)
+            weights[ids[acc]] = round(ACCORD_WEIGHT_DECAY ** k, 4)
+        k += 1
+    return names, weights, unmapped
+
+
+def run_zone_b_for_perfume(perfume: pd.Series | dict, data, **kwargs) -> tuple["ZoneBResult | None", list[str]]:
+    """Perfume row (dataset1) -> its mapped accords -> Zone B. Returns (result or None when nothing maps, unmapped terms)."""
+    names, weights, unmapped = perfume_to_accords(perfume, data)
+    if not names:
+        return None, unmapped
+    return run_zone_b(names, data, accord_weights=weights, **kwargs), unmapped
+
+
+__all__ = ["run_zone_b", "run_zone_b_for_perfume", "perfume_to_accords", "ZoneBResult", "grades_from_formula"]

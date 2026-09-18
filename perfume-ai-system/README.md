@@ -37,3 +37,18 @@ changes made in the 2026-09-11 IFRA audit.
 - 102 accord note names (245 rows) have no match in the notes catalogue
 - 50 note names appear with conflicting CAS / volatility; 72 exact duplicate rows
 - 10 perfumes have their columns shifted in the source (repaired on load, Gender lost)
+
+## Status (2026-09-18)
+
+All seven build tasks exist and are tested (`python -m pytest -q`, 185 tests). Read **CLAUDE.md → ⏩ RESUME HERE** for
+what is done, what is open, and the next step.
+
+```
+python load_data.py                          # data report (exit 2 while the two decision lists are open)
+python app.py "fresh woody for summer"       # Zone A -> Zone B in the terminal, no API key needed
+streamlit run app.py                         # the UI (pip install streamlit)
+python data/build_datasets.py                # regenerate data after editing a decision CSV
+python data/reconcile_notes.py | python data/verify_cas.py --offline | python data/reconcile_accords.py
+```
+
+Safety results are **provisional** until `constituents.csv` (IFRA natural-constituent contributions) exists.

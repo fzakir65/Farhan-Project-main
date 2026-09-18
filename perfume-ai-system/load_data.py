@@ -37,6 +37,7 @@ FILES = {
     "safety_caps": "safety_caps.csv",
     "reaction_rules": "reaction_rules.csv",
     "product_types": "product_types.csv",
+    "accord_aliases": "accord_name_aliases.csv",
 }
 
 REQUIRED_COLUMNS = {
@@ -46,6 +47,7 @@ REQUIRED_COLUMNS = {
     "notes": ["Note_ID", "Note_Name", "Chemical_Name", "CAS", "Volatility_Class", "Odor_Strength",
               "Accords_Used_In"],
     "product_types": ["Product_Type", "Concentrate_Min_Pct", "Concentrate_Max_Pct", "Alcohol_Pct_Range", "Source"],
+    "accord_aliases": ["Dataset1_Term", "Dataset3_Accord", "Confidence", "Tier", "Rule", "Apply", "Decided_By"],
     "accords": ["Accord_ID", "Accord_Name", "Accord_Category", "Note_ID", "Note_Name", "Note_Role", "Layer",
                 "Importance_Weight", "Typical_Presence", "Blend_Compatibility", "Stability_Class"],
     "ifra_limits": ["Material_Name", "CAS", "IFRA_Type", "Category_4_Limit", "Phototoxic", "Notes", "IFRA_Key",
@@ -124,6 +126,7 @@ class Data:
     safety_caps: pd.DataFrame
     reaction_rules: pd.DataFrame
     product_types: pd.DataFrame
+    accord_aliases: pd.DataFrame
     issues: list[Issue] = field(default_factory=list)
     # convenience frames produced by cross-validation
     unmatched_accord_notes: pd.DataFrame = field(default_factory=pd.DataFrame)
@@ -345,6 +348,11 @@ def load_notes(path: Path) -> tuple[pd.DataFrame, list[Issue]]:
     # '-' etc. mean "no CAS" (accords, bases, captive molecules); a present-but-wrong CAS is
     # an ERROR because every safety lookup keys on it — a wrong CAS can let a banned material through.
     df["CAS"] = df["CAS"].map(lambda c: "" if c.lower() in CAS_PLACEHOLDERS else c)
+    # a CAS never has a leading zero ('0123-11-5' is anisaldehyde 123-11-5); the join key must match the IFRA table
+    lead0 = df["CAS"].str.match(r"^0\d+-\d{2}-\d$")
+    if lead0.any():
+        df.loc[lead0, "CAS"] = df.loc[lead0, "CAS"].str.lstrip("0")
+        issues.append(Issue("INFO", "notes", "", f"{int(lead0.sum())} CAS value(s) had a leading zero — stripped for joining"))
     df["CAS_Valid"] = df["CAS"].map(is_valid_cas)
     bad_cas = df[(df["CAS"] != "") & ~df["CAS_Valid"]]
     for _, r in bad_cas.iterrows():
@@ -585,6 +593,15 @@ def cross_validate(d: Data, data_dir: Path = DATA_DIR) -> list[Issue]:
         issues.append(Issue("ERROR", "accords", "",
                             f"{d.unmatched_accord_notes.shape[0]} distinct note names ({len(miss)} rows) are not in "
                             f"dataset2 — formula builder cannot place them (see data.unmatched_accord_notes)"))
+    applied = d.accord_aliases[d.accord_aliases["Applied"]]
+    bad_alias = applied[~applied["Dataset3_Accord"].isin(set(d.accords["Accord_Name"]))]
+    for _, r in bad_alias.iterrows():
+        issues.append(Issue("ERROR", "accord_aliases", r["Dataset1_Term"], f"Apply=Yes but {r['Dataset3_Accord']!r} is not a dataset3 accord"))
+    terms = [normalize_name(t) for cell in d.perfumes["Main_Accords"] for t in re.split(r"[;,]", str(cell)) if t.strip()]
+    mapped = set(applied["Dataset1_Term"])
+    n_ok = sum(t in mapped for t in terms)
+    issues.append(Issue("INFO", "accord_aliases", "", f"{n_ok}/{len(terms)} perfume accord slots resolve to a dataset3 accord "
+                                                     f"({len(mapped)} terms applied; REVIEW/NO_MATCH rows in accord_name_aliases.csv)"))
     id_miss = int((~d.accords["Note_ID"].isin(set(d.notes["Note_ID"]))).sum())
     if id_miss:
         issues.append(Issue("WARNING", "accords", "", f"{id_miss} accord rows reference a Note_ID absent from dataset2"))
@@ -685,12 +702,26 @@ def load_product_types(path: Path) -> tuple[pd.DataFrame, list[Issue]]:
     return df, issues
 
 
+def load_accord_aliases(path: Path) -> tuple[pd.DataFrame, list[Issue]]:
+    """dataset1 Main_Accords term -> dataset3 accord (data/reconcile_accords.py). Only Apply=Yes rows are used by
+    Zone A/B; an applied row must point at a real dataset3 accord (checked in cross_validate)."""
+    df = _read(path, "accord_aliases")
+    issues: list[Issue] = []
+    df["Dataset1_Term"] = df["Dataset1_Term"].map(normalize_name)
+    df["Applied"] = df["Apply"].str.strip().str.lower() == "yes"
+    dup = df[df["Dataset1_Term"].duplicated()]
+    for t in dup["Dataset1_Term"]:
+        issues.append(Issue("ERROR", "accord_aliases", t, "term listed twice"))
+    return df, issues
+
+
 def load_all(data_dir: Path | str = DATA_DIR) -> Data:
     data_dir = Path(data_dir)
     loaders = {
         "perfumes": load_perfumes, "notes": load_notes, "accords": load_accords,
         "ifra_limits": load_ifra_limits, "group_rules": load_group_rules, "regulatory": load_regulatory,
         "safety_caps": load_safety_caps, "reaction_rules": load_reaction_rules, "product_types": load_product_types,
+        "accord_aliases": load_accord_aliases,
     }
     frames, issues = {}, []
     for table, fn in loaders.items():

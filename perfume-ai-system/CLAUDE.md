@@ -7,6 +7,43 @@ This file is the primary guidance for Claude Code. Read it fully before writing 
 > Changes vs the original spec are marked **[rev]**.
 > Revision 2026-09-16: data-blocker cleanup (name reconciliation, CAS audit) + Task 2 built; Carles' text and
 > Pybus & Sell *The Chemistry of Fragrances* (RSC 1999) read and folded in as cited reference tables — marked **[rev2]**.
+> Revision 2026-09-18: Tasks 3–7 built (safety engine, optimizer, accord bridge, Zone A, app). **[rev3]**
+
+## ⏩ RESUME HERE (read this first in a new session)
+
+**State on 2026-09-18:** all seven build tasks exist and are tested (`python -m pytest -q` → 185 passing, ~1 min).
+The engine is complete end to end: `python app.py "fresh woody for summer"` runs Zone A → Zone B in the terminal
+without any API key; `streamlit run app.py` is the UI (install streamlit first). Every commit is on `main`.
+
+What is DONE: data cleanup tooling (`data/reconcile_notes.py`, `data/verify_cas.py`, `data/reconcile_accords.py`, all
+applied at build time by `data/build_datasets.py`); Task 2 `formula_builder.py` + `accord_study.py`; Task 3
+`safety_engine.py`; Task 4 `optimizer.py`; `pipeline.py` (`run_zone_b`, `run_zone_b_for_perfume`); Tasks 5–6
+`zone_a_llm/{llm_client,input_handler,matcher,describer}.py`; Task 7 `app.py`. Books read and cited: Carles, RSC 1999.
+
+What is NOT done — the honest gaps, in priority order (these are decisions/data, not code):
+1. **Safety step 0 (constituent roll-up) — `constituents.csv` does not exist.** Every safety result is marked
+   PROVISIONAL. Needed before any formula can be called safe for real use.
+2. **Accords that reject as written:** `Earthy` (111 perfumes) and `Animalic` (27) contain *Costus* (UK/EU banned);
+   `Smoky` (89) and `Leather` (36) contain Birch Tar / Cade Oil with no rectified grade in the note name. A perfumer
+   must re-author those accords (or rename the notes to their rectified grade). This is why 261/450 catalogue perfumes
+   currently REJECT — the engine is right, the recipes are not legal as written.
+3. **Decision lists awaiting a human** (set `Apply=Yes`, `Decided_By=human`, then `python data/build_datasets.py`):
+   `note_name_aliases.csv` (44 REVIEW + 25 NO_MATCH notes, e.g. Vanilla Absolute, Cinnamon Bark Oil need new dataset2
+   rows), `cas_corrections.csv` (44 FLAG), `accord_name_aliases.csv` (29 REVIEW incl. musky/spicy/fresh/floral,
+   31 NO_MATCH). 25 checksum-valid CAS are still shared by unrelated notes (`data.shared_cas`).
+4. dataset2 chemistry fields (thresholds, BP…) are unverified and differ between duplicate rows → the builder's odour
+   damping is categorical on purpose; PubChem enrichment would let `threshold_damping` be switched on.
+5. UK/EU allergen-declaration CSV (v2, labelling), Zone C stock solutions / pump mapping.
+6. The ML project (`../Farhan-Project-main/`): Stage 1+2 trained twice (top-1 ~7 %, data-capped); Stage 3/4 untrained;
+   the N=200 real-prompt held-out set unwritten; needs real customer language before another run is worth it.
+
+**Next step when resuming:** pick from the gaps above in order — (1) obtain/author `constituents.csv` and implement
+step 0 in `safety_engine.check_formula`; (2) hand the four accords to a perfumer; (3) work the decision lists.
+Then the ML/data pass. Never build Zone C before step 0 exists.
+
+How to check where things stand: `python load_data.py` (data report; ERRORs = the two decision lists),
+`python app.py --report`, `python data/verify_cas.py --offline`, `python data/reconcile_notes.py`,
+`python data/reconcile_accords.py`. Memory for Claude sessions: `~/.claude/projects/.../memory/`.
 
 ## PROJECT OVERVIEW
 
@@ -93,6 +130,7 @@ perfume-ai-system/
 │   ├── product_types.csv            # fine-fragrance dilution ranges (RSC Table A2) -> CONCENTRATE_FRACTION presets [rev2]
 │   ├── note_name_aliases.csv        # dataset3 -> dataset2 note-name reconciliation (Rule 10); Apply/Decided_By  [rev2]
 │   ├── cas_corrections.csv          # checksum-failing CAS -> verified corrections; Apply/Decided_By            [rev2]
+│   ├── accord_name_aliases.csv      # dataset1 Main_Accords term -> dataset3 accord (the Zone A -> B bridge)     [rev3]
 │   ├── reference/ifra_51st_standards_overview.csv   # official IFRA table (source of truth)
 │   ├── reference/carles_*.csv       # Carles' volatility table, worked chypre, family signatures, 35 base accords [rev2]
 │   ├── reference/rsc_physical_properties.csv        # RSC Table 11.1                                          [rev2]
@@ -100,23 +138,26 @@ perfume-ai-system/
 │   ├── build_datasets.py            # regenerates dataset1/2/3 (+ applies aliases & CAS fixes), ifra_limits, group_rules
 │   ├── reconcile_notes.py           # Step 1 tool: proposes note-name aliases, tiers AUTO / REVIEW / NO_MATCH   [rev2]
 │   ├── verify_cas.py                # Step 2 tool: audits bad CAS against IFRA table / project tables / PubChem [rev2]
+│   ├── reconcile_accords.py         # accord-term bridge tool, same tiers                                        [rev3]
 │   └── DATA_PROVENANCE.md
-├── zone_a_llm/
-│   ├── input_handler.py
-│   ├── matcher.py
-│   └── describer.py
+├── zone_a_llm/                      # Tasks 5-6 — DONE 2026-09-18 [rev3]
+│   ├── llm_client.py                # the ONLY module that talks to an LLM (anthropic SDK, optional; FakeClient for tests)
+│   ├── input_handler.py             # buttons / free text -> Preferences, clamped to the catalogue vocabulary
+│   ├── matcher.py                   # deterministic explainable ranking; LLM may re-rank the shortlist only (grounded)
+│   └── describer.py                 # template prose; LLM prose rejected if it contains numbers / safety words
 ├── zone_b_chemistry/
 │   ├── formula_builder.py           # Task 2 — DONE 2026-09-16
 │   ├── accord_study.py              # Carles' ratio-study method as a deterministic variation generator [rev2]
-│   ├── safety_engine.py
-│   └── optimizer.py
+│   ├── safety_engine.py             # Task 3 — DONE 2026-09-18 (step 0 NOT IMPLEMENTED -> provisional)
+│   ├── optimizer.py                 # Task 4 — DONE 2026-09-18
+│   └── pipeline.py                  # run_zone_b / run_zone_b_for_perfume: build -> safety -> rebalance [rev3]
 ├── zone_c_machine/                  # future
 │   ├── stock_solutions.csv
 │   ├── pump_mapping.csv
 │   └── machine_control.py
 ├── tests/
 ├── load_data.py
-├── app.py
+├── app.py                           # Task 7 — DONE 2026-09-18: streamlit UI + `python app.py "<text>"` CLI
 ├── CLAUDE.md
 ├── README.md
 └── requirements.txt
@@ -160,7 +201,10 @@ by page: `carles_volatility_table` (his Top/Modifier/Base labels, cross-checked 
 foin / trèfle skeletons), `carles_chypre_compatibility`, `carles_student_accords` (35 real oakmoss base accords with parts).
 
 **ifra_limits.csv** **[rev]**
-`Material_Name, CAS, IFRA_Type, Category_4_Limit, Phototoxic(Yes/No), Notes, IFRA_Key, IFRA_Standard_Name, All_CAS, Amendment`
+`Material_Name, CAS, IFRA_Type, Category_4_Limit, Phototoxic(Yes/No), Notes, IFRA_Key, IFRA_Standard_Name, All_CAS, Amendment, Prohibition_Scope, Prohibited_Grades, Allowed_Grades`
+- `Prohibited_Grades` / `Allowed_Grades` (`|`-separated words, from `build_datasets.GRADE_RULES`) resolve grade-scoped
+  prohibitions: the safety engine matches them against the grade text it is given (the pipeline reads the grade from the
+  formula's own note names, e.g. "Birch Tar Rectified"); no grade word → REJECT. **[rev3]**
 - `IFRA_Type` ∈ {Restriction, Prohibition, Specification} or `_`-joined combinations exactly as in the official table.
 - `All_CAS` is `|`-separated: match a note if **any** listed CAS matches (rose ketones cover 16 CAS).
 - Generated by `data/build_datasets.py` from `data/reference/…overview.csv`; **never edit numbers by hand.**
@@ -176,7 +220,13 @@ foin / trèfle skeletons), `carles_chypre_compatibility`, `carles_student_accord
 constituent levels and must be recomputed from supplier CoAs.
 
 **reaction_rules.csv** **[rev]**
-`Material_A, CAS_A, Material_B, CAS_B, Rule_Type(ifra | ifra_spec | olfactory), Issue, Action, Limit_Basis`
+`Material_A, CAS_A, Material_B, CAS_B, Rule_Type(ifra | ifra_spec | olfactory), Issue, Action, Limit_Basis, Equivalence_B, Sum_Limit_Pct`
+- optional numeric pair: `A + Equivalence_B × B ≤ Sum_Limit_Pct` is applied (vanillin + 3 × ethyl vanillin ≤ 4 %, RSC Ch 7 p.141);
+  rows without numbers are flagged, not applied. **[rev3]**
+
+**accord_name_aliases.csv** **[rev3]** — `Dataset1_Term, Dataset3_Accord, Confidence, Tier, Rule, Reason, Candidates, Perfumes_Using,
+Apply, Decided_By, Note`. Generated by `data/reconcile_accords.py`; only `Apply=Yes` rows are used by `pipeline.perfume_to_accords`.
+36 terms auto-applied cover 1908/2593 perfume-accord slots; the k-th accord in `Main_Accords` gets weight 0.85^k.
 
 ## CHEMISTRY ENGINE RULES (Zone B — Jean Carles method)
 
@@ -326,6 +376,16 @@ small skin area). Category 4 = "hydroalcoholic and **non-hydroalcoholic** fine f
    materials; every material at a cap or limit stays pinned. After rebalancing, steps 0–5 run again; the loop ends
    only when nothing changes. A normalisation that would push any material over a ceiling is itself a REJECT.
 
+### How `safety_engine.check_formula()` implements this **[rev3 — Task 3, implemented]**
+`check_formula(formula, data, concentrate_fraction=1.0, grades=None) -> SafetyResult(verdict PASS|ADJUSTED|REJECT, formula,
+rejections, adjustments, flags, pinned, log, ceilings, provisional=True)`. Per material the LOWEST of {UK/EU restriction,
+IFRA Cat 4 / concentrate_fraction, safety cap} binds and the others are listed as not binding; BANNED / Prohibition /
+as-such / unknown-or-prohibited grade → the whole formula is REJECT (Zone B never removes a note by itself — the caller
+rebuilds without it); group rules scale members (sum, sum-of-fractions) and pin them; specifications and provisional caps
+are flags; a note without CAS is UNVERIFIED (warning). `optimizer.optimize()` then redistributes the removed mass across
+unpinned notes (same layer first, Heart ≤ 25), renormalises to 100 and re-runs `check_formula` until nothing changes;
+if nothing unpinned can absorb the mass → REJECT. `pipeline.run_zone_b()` chains build → safety → optimize.
+
 ### Safety principles
 - All safety checks are deterministic (table lookups, never LLM)
 - Every adjustment must be traceable and cite its source row ("Vanillin 6 % → 4 %: safety_caps.csv";
@@ -379,25 +439,19 @@ small skin area). Category 4 = "hydroalcoholic and **non-hydroalcoholic** fine f
   Carles & RSC reference tables, `product_types.csv`).
 - **Task 2 — DONE (2026-09-16)** — `zone_b_chemistry/formula_builder.py` + `accord_study.py`; tests in
   `tests/test_formula_builder.py` (golden Carles chypre, unplaceable-note, conflict, empty-layer, shape, determinism cases).
-- **Task 3** — `zone_b_chemistry/safety_engine.py` (constituent roll-up → regulatory REJECT → IFRA cap/reject/flag → group rules → caps → reactions)
-- **Task 4** — `zone_b_chemistry/optimizer.py` (rebalance after safety cuts with capped materials pinned, normalize to 100 %, re-run safety until stable)
-- **Task 5** — `zone_a_llm/matcher.py` + `input_handler.py` (input → matched perfume, grounded in catalog)
-- **Task 6** — `zone_a_llm/describer.py` (generate notes/accords/description output)
-- **Task 7** — `app.py` integration + Streamlit interface
+- **Task 3 — DONE (2026-09-18)** — `zone_b_chemistry/safety_engine.py`; step 0 emitted as NOT IMPLEMENTED (provisional) until
+  `constituents.csv` exists. 29 deliberate-breach tests.
+- **Task 4 — DONE (2026-09-18)** — `zone_b_chemistry/optimizer.py` + `pipeline.py`.
+- **Accord bridge — DONE (2026-09-18)** — `data/reconcile_accords.py` → `accord_name_aliases.csv`; `pipeline.perfume_to_accords`.
+- **Task 5 — DONE (2026-09-18)** — `zone_a_llm/input_handler.py` + `matcher.py` (+ `llm_client.py`); button path needs no API.
+- **Task 6 — DONE (2026-09-18)** — `zone_a_llm/describer.py`.
+- **Task 7 — DONE (2026-09-18)** — `app.py` (Streamlit UI + terminal CLI).
 
 After each task: show the result and wait for confirmation before proceeding.
 
 ## CURRENT STATUS
 
-Phase 0, **Task 1**, the data cleanup and **Task 2** are complete (`python -m pytest`: 131 tests). `python load_data.py`
-still exits non-zero: 44 checksum-failing CAS and 69 unresolved accord note names remain — both are *decision lists*
-(`cas_corrections.csv`, `note_name_aliases.csv`) waiting for a human, not code defects; the formula builder flags the
-affected notes as `UNPLACEABLE` rather than guessing.
-
-Open data items before Task 3 can be signed off: `constituents.csv` (natural-oil contributions), a `Grade` column on notes
-(crude vs rectified / oil vs absolute), verified CAS for the 25 shared-CAS notes (Cade Oil first — it carries cedarwood's
-CAS, so the IFRA cade Standard would never fire), sources for `Mood_Vibe` / `Occasion`, CAS for six `safety_caps` naturals.
-Open item for Task 5: dataset1 `Main_Accords` uses Fragrantica-style names ("fresh spicy", "musky") — only 30 of 228 exist in
-dataset3, so Zone A needs an accord-name bridge (same alias mechanism as the notes) before a perfume can be turned into a formula.
-**Next: Task 3** (safety engine) — still blocked on `constituents.csv`; build steps 1–5 with step 0 emitted as an explicit
-NOT_IMPLEMENTED flag. Do not build the LLM yet.
+See **⏩ RESUME HERE** at the top: everything is built and tested (185 tests); what remains is data and decisions —
+`constituents.csv` for safety step 0, four accords to re-author (Costus / crude tar), three decision CSVs, the
+verification of dataset2 chemistry fields, then the ML/data pass. `python load_data.py` exits non-zero until the two
+note/CAS decision lists are worked through; that is intended.
