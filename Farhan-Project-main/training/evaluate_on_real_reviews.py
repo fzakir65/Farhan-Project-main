@@ -20,7 +20,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import run_stage12 as rs  # noqa: E402  (model class, config, paths)
 
-LABELLED = rs.PREP_OUT / "09_real_reviews_labelled.csv"
+LABELLED = rs.PREP_OUT / ("09_real_reviews_labelled_by_product.csv" if (rs.PREP_OUT / "09_real_reviews_labelled_by_product.csv").exists() else "09_real_reviews_labelled.csv")
 CKPT = rs.CKPT_DIR / "stage12_best.pt"
 REPORT = HERE / "REAL_REVIEWS_EVAL.md"
 
@@ -69,8 +69,10 @@ def main() -> int:
     maj = pd.Series(y).value_counts().iloc[0] / n
     tmpl = json.load(open(rs.OUT_DIR / "metrics.json", encoding="utf-8")) if (rs.OUT_DIR / "metrics.json").exists() else {}
     tv = tmpl.get("model", {}).get("val", {}); tt = tmpl.get("model", {}).get("test", {})
+    n_perf = df["perfume_id"].nunique()
     lines = [f"# Real-review evaluation of stage12_best.pt ({pd.Timestamp.today().date()})", "",
-             f"- rows: {n} real Amazon reviews naming a catalogue perfume (weak label = that perfume's accords)",
+             f"- rows: {n} real Amazon reviews of {n_perf} catalogue perfumes ({LABELLED.name}; weak label = the perfume's accords)",
+             f"- caveat: the set is skewed ({df['perfume'].value_counts().iloc[0]} rows are one perfume) — the majority baseline below shows how much",
              f"- primary top-1: **{top1:.3f}**   top-3: **{top3:.3f}**   (majority-class baseline {maj:.3f})",
              f"- prediction anywhere in the perfume's accord set: top-1 {any1:.3f}, top-3 {any3:.3f}",
              f"- templated split for comparison: val top-1 {tv.get('primary_top1', float('nan')):.3f} / test {tt.get('primary_top1', float('nan')):.3f}; "
