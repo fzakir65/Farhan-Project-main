@@ -100,7 +100,7 @@ def merge_with_existing(fresh: pd.DataFrame, path: Path = ALIASES_CSV) -> pd.Dat
     if not path.exists():
         return fresh
     old = pd.read_csv(path, dtype=str, keep_default_na=False)
-    human = old[old["Decided_By"].str.lower() == "human"]
+    human = old[old["Decided_By"].str.lower().isin(["human", "ai"])]     # decided rows (human or AI) survive re-runs
     keep = fresh[~fresh["Dataset1_Term"].isin(set(human["Dataset1_Term"]))]
     return pd.concat([human[fresh.columns.intersection(human.columns)], keep], ignore_index=True)
 

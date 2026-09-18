@@ -12,7 +12,7 @@ NOTE-0665,Benzyl Acetate,Benzyl Acetate,0140-11-4,Top/Heart,Medium,Floral; Fruit
 NOTE-0509,Linalool,Linalool,78-70-6,Top / Heart,Medium,"Floral, Citrus, Aromatic",Terpenoid Alcohol,Floral / Fresh,"Fresh, citrusy, clean, floral",154.25,198,Medium,2.9,0.01,2–4,25.0,75.0,Alcohol / Oil,"Lavender, rosewood",Clean fresh-floral note with citrus brightness,78-70-6
 NOTE-0040,Bergamot,Limonene-rich Oil,8007-75-8,Top,High,"Citrus, Aromatic",Terpene Hydrocarbon,Citrus,"Bright, zesty, fresh",136.24,176,High,4.2,0.02,1–2,15.0,50.0,Alcohol / Oil,Bergamot peel,Sparkling citrus top note,8007-75-8
 NOTE-0492,Jasmine Absolute,Benzyl acetate rich,84776-64-7,Heart,High,"Floral, Oriental",Aromatic Ester,White Floral,"Sweet, narcotic, floral",164.2,290,Low,2.3,0.005,6–8,45.0,110.0,Alcohol / Oil,Jasmine flowers,Rich sensual white floral,84776-64-7
-NOTE-0402,Tuberose,Methyl benzoate rich,8007-51-4,Heart,High,"Floral, Gourmand",Aromatic Ester,White Floral,"Creamy, sweet, floral",136.15,199,Medium,2.1,0.003,6–8,50.0,95.0,Alcohol / Oil,Tuberose flower,Creamy intoxicating floral,8007-51-4
+NOTE-0402,Tuberose,Methyl benzoate rich,,Heart,High,"Floral, Gourmand",Aromatic Ester,White Floral,"Creamy, sweet, floral",136.15,199,Medium,2.1,0.003,6–8,50.0,95.0,Alcohol / Oil,Tuberose flower,Creamy intoxicating floral,8007-51-4
 NOTE-0301,Patchouli,Patchoulol,8014-09-3,Base,Strong,"Woody, Oriental",Sesquiterpene Alcohol,Woody / Earthy,"Earthy, woody, dark",222.37,280,Low,4.5,0.001,12–24,80.0,100.0,Oil,Patchouli leaves,Deep earthy woody base,8014-09-3
 NOTE-0021,Ambroxan,Ambroxide,6790-58-5,Base,Strong,"Amber, Woody",Amber Molecule,Amber / Woody,"Warm, musky, amber",236.39,273,Low,4.0,0.0005,24+,90.0,120.0,Oil,Synthetic,Warm long-lasting amber note,6790-58-5
 NOTE-0407,Vanilla,Vanillin,121-33-5,Base,Medium,"Gourmand, Amber",Phenolic Aldehyde,Sweet / Gourmand,"Sweet, creamy, warm",152.15,285,Low,1.2,0.002,8–12,60.0,147.0,Alcohol,Vanilla bean,Sweet creamy gourmand base,121-33-5
@@ -54,19 +54,19 @@ NOTE-0674,Aldehydes (C11),Undecylenic aldehyde,112-44-7,Top,High,"Aldehydic, Fre
 NOTE-0675,Aldehydes (C12 MNA),2-Methylundecanal,110-41-8,Top,Medium,"Aldehydic, Floral",Aliphatic Aldehyde,Aldehydic / Floral,"Clean, powdery, floral",184.32,240,Medium,4.5,0.01,2–3,25.0,83.0,Alcohol,Synthetic,Soft aldehydic floral,110-41-8
 NOTE-0640,Melonal,Melonal,106-72-9,Top,Medium,"Marine, Fresh",Aldehyde,Marine / Green,"Watery, melon, fresh",156.23,190,Medium,2.6,0.02,2–3,28.0,65.0,Alcohol,Synthetic,Fresh watery melon note,106-72-9
 NOTE-0497,Calone,Calone,,Top / Heart,Medium,"Marine, Fresh",Ketone,Marine / Ozonic,"Sea breeze, aquatic",196.29,275,Medium,3.2,0.01,4–6,40.0,98.0,Alcohol,Synthetic,Marine ozonic note,
-NOTE-0475,Seaweed Absolute,Fucus extract,84650-40-6,Base,Medium,"Marine, Amber",Marine Extract,Marine / Salty,"Salty, iodine, oceanic",300+,300,Low,4.0,0.001,12–24,75.0,110.0,Alcohol,Seaweed,Salty oceanic depth,84650-40-6
+NOTE-0475,Seaweed Absolute,Fucus extract,91770-38-6,Base,Medium,"Marine, Amber",Marine Extract,Marine / Salty,"Salty, iodine, oceanic",300+,300,Low,4.0,0.001,12–24,75.0,110.0,Alcohol,Seaweed,Salty oceanic depth,84650-40-6
 NOTE-0158,Fig Leaf,Cis-3-hexenol rich,928-96-1,Top,Medium,"Green, Fruity",Green Alcohol,Green / Fruity,"Green, milky, leafy",100.16,157,High,1.5,0.03,1–2,18.0,54.0,Alcohol,Fig leaf,Green milky leaf,928-96-1
-NOTE-0185,Green Tea,Ionones,8015-73-4,Heart,Medium,"Green, Aromatic",Ketone,Green / Tea,"Soft, dry, leafy",192.3,250,Medium,2.9,0.02,4–6,38.0,82.0,Alcohol,Tea leaves,Soft dry green tea,8015-73-4
-NOTE-0420,Violet Leaf,Ionones,8016-84-8,Heart,Medium,"Green, Floral",Ketone,Green / Floral,"Green, metallic, leafy",192.3,250,Medium,3.1,0.015,4–6,42.0,85.0,Alcohol,Violet leaves,Green metallic leaf,8016-84-8
+NOTE-0185,Green Tea,Ionones,84650-60-2,Heart,Medium,"Green, Aromatic",Ketone,Green / Tea,"Soft, dry, leafy",192.3,250,Medium,2.9,0.02,4–6,38.0,82.0,Alcohol,Tea leaves,Soft dry green tea,8015-73-4
+NOTE-0420,Violet Leaf,Ionones,8024-08-6,Heart,Medium,"Green, Floral",Ketone,Green / Floral,"Green, metallic, leafy",192.3,250,Medium,3.1,0.015,4–6,42.0,85.0,Alcohol,Violet leaves,Green metallic leaf,8016-84-8
 NOTE-0314,Pine,α-Pinene,80-56-8,Top,Medium,"Green, Woody",Terpene,Green / Resinous,"Sharp, resinous",136.23,156,High,4.0,0.03,1–2,20.0,33.0,Alcohol,Pine needles,Sharp resinous green,80-56-8
 NOTE-0676,Fir Balsam,Bornyl acetate,90028-76-5,Heart,Medium,"Green, Balsamic",Terpenoid Ester,Balsamic / Green,"Resinous, fresh",196.29,227,Medium,3.5,0.02,4–6,40.0,78.0,Alcohol,Fir resin,Fresh balsamic resin,90028-76-5
 NOTE-0271,Myrrh,"Furanoeudesma-1,3-diene",9000-45-7,Base,Medium,"Amber, Resinous",Resin,Balsamic / Smoky,"Bitter, resinous",222.37,290,Low,4.4,0.001,12–24,80.0,110.0,Alcohol,Myrrh resin,Bitter smoky resin,9000-45-7
 NOTE-0165,Frankincense,Incensole acetate,8016-36-2,Base,Medium,"Resinous, Amber",Resin / Diterpene,Resinous / Fresh,"Citrus, incense, airy",222.37,280,Low,4.2,0.001,12–24,78.0,105.0,Alcohol,Frankincense resin,Bright incense resin,8016-36-2
 NOTE-0154,Elemi,Limonene rich,8023-89-0,Heart,Medium,"Resinous, Citrus",Terpene,Resinous / Citrus,"Peppery, lemony",136.23,176,Medium,3.8,0.02,4–6,45.0,48.0,Alcohol,Elemi resin,Citrus-peppery resin,8023-89-0
-NOTE-0284,Opoponax,Sesquiterpenes,8016-37-3,Base,Medium,"Amber, Oriental",Resin,Sweet / Balsamic,"Sweet, incense, warm",204.3,285,Low,4.0,0.001,12–24,82.0,110.0,Alcohol,Opoponax resin,Sweet balsamic resin,8016-37-3
+NOTE-0284,Opoponax,Sesquiterpenes,8021-36-1,Base,Medium,"Amber, Oriental",Resin,Sweet / Balsamic,"Sweet, incense, warm",204.3,285,Low,4.0,0.001,12–24,82.0,110.0,Alcohol,Opoponax resin,Sweet balsamic resin,8016-37-3
 NOTE-0123,Cocoa,Cocoa absolute,84649-99-0,Base,Medium,Gourmand,Aromatic Extract,Gourmand,"Bitter, chocolate",300+,300,Low,3.2,0.002,12–24,70.0,120.0,Alcohol,Cocoa beans,Dark chocolate note,84649-99-0
-NOTE-0127,Coffee,Coffee absolute,84649-99-1,Base,Medium,Gourmand,Aromatic Extract,Gourmand / Roasted,"Roasted, bitter",300+,300,Low,3.5,0.002,12–24,75.0,120.0,Alcohol,Coffee beans,Dark roasted coffee,84649-99-1
-NOTE-0197,Honey,Phenylacetic acid rich,8006-66-2,Heart / Base,Medium,"Gourmand, Floral",Aromatic Acid,Sweet / Animalic,"Sweet, waxy",136.15,265,Low,1.6,0.01,6–12,55.0,93.0,Alcohol,Honey,Warm sweet honey,8006-66-2
+NOTE-0127,Coffee,Coffee absolute,,Base,Medium,Gourmand,Aromatic Extract,Gourmand / Roasted,"Roasted, bitter",300+,300,Low,3.5,0.002,12–24,75.0,120.0,Alcohol,Coffee beans,Dark roasted coffee,84649-99-1
+NOTE-0197,Honey,Phenylacetic acid rich,8028-66-8,Heart / Base,Medium,"Gourmand, Floral",Aromatic Acid,Sweet / Animalic,"Sweet, waxy",136.15,265,Low,1.6,0.01,6–12,55.0,93.0,Alcohol,Honey,Warm sweet honey,8006-66-2
 NOTE-0390,Tobacco,Nicotine derivatives,8037-19-2,Base,Medium,"Tobacco, Gourmand",Alkaloid,Tobacco / Sweet,"Dry, smoky, sweet",162.23,247,Low,2.7,0.002,12–24,80.0,95.0,Alcohol,Tobacco leaves,Sweet smoky tobacco,8037-19-2
 NOTE-0445,Ylang-Ylang,Benzyl acetate rich,8006-81-3,Heart,High,"Floral, Oriental",Aromatic Ester,Floral / Exotic,"Creamy, sweet, floral",164.2,290,Low,2.6,0.005,6–8,55.0,110.0,Alcohol / Oil,Ylang flowers,Creamy exotic floral,8006-81-3
 NOTE-0338,Rose,Phenethyl alcohol rich,8007-01-0,Heart,Medium,"Floral, Romantic",Aromatic Alcohol,Floral / Rose,"Fresh, dewy, rosy",122.16,219,Medium,1.4,0.01,4–6,40.0,76.0,Alcohol,Rose petals,Classic fresh rose,8007-01-0
@@ -99,14 +99,14 @@ NOTE-0682,Tea Tree,Terpinen-4-ol,562-74-3,Top,Medium,"Aromatic, Medicinal",Terpe
 NOTE-0291,Oregano,Carvacrol,499-75-2,Heart,Strong,"Spicy, Aromatic",Phenol,Spicy / Herbal,"Pungent, warm",150.22,236,Medium,3.4,0.02,3–5,40.0,90.0,Alcohol,Oregano leaves,Warm pungent herb,499-75-2
 NOTE-0350,Sage,Thujone rich,8016-65-7,Heart,Medium,"Aromatic, Herbal",Ketone,Herbal / Dry,"Dry, earthy",152.23,201,Medium,2.6,0.02,3–5,38.0,70.0,Alcohol,Sage leaves,Dry earthy herb,8016-65-7
 NOTE-0053,Black Pepper,Piperine,94-62-2,Heart,Medium,"Spicy, Woody",Alkaloid,Spicy / Dry,"Dry, hot, woody",285.34,130,Low,2.9,0.01,4–6,45.0,70.0,Alcohol,Peppercorns,Dry woody spice,94-62-2
-NOTE-0319,Pink Pepper,Limonene rich,8015-91-6,Top,Medium,"Spicy, Fresh",Terpene,Spicy / Fresh,"Rosy, peppery",136.24,176,High,4.0,0.02,1–2,20.0,50.0,Alcohol,Pink pepper berries,Fresh spicy sparkle,8015-91-6
+NOTE-0319,Pink Pepper,Limonene rich,68917-52-2,Top,Medium,"Spicy, Fresh",Terpene,Spicy / Fresh,"Rosy, peppery",136.24,176,High,4.0,0.02,1–2,20.0,50.0,Alcohol,Pink pepper berries,Fresh spicy sparkle,8015-91-6
 NOTE-0277,Nutmeg,Sabinene rich,8008-45-5,Heart,Medium,"Spicy, Woody",Terpene,Spicy / Warm,"Warm, nutty",136.24,163,Medium,4.1,0.02,4–6,40.0,49.0,Alcohol,Nutmeg seed,Warm nutty spice,8008-45-5
 NOTE-0104,Cinnamon,Cinnamaldehyde,104-55-2,Heart,Strong,"Spicy, Gourmand",Aldehyde,Spicy / Sweet,"Hot, sweet, spicy",132.16,248,Medium,2.1,0.01,4–6,45.0,71.0,Alcohol,Cinnamon bark,Hot sweet spice,104-55-2
 NOTE-0119,Clove,Eugenol,97-53-0,Heart,Strong,"Spicy, Oriental",Phenylpropene,Spicy / Sweet,"Sweet, clove-like",164.2,254,Medium,2.1,0.01,4–6,50.0,110.0,Alcohol,Clove buds,Sweet spicy clove,97-53-0
 NOTE-0081,Cardamom,"1,8-Cineole rich",8000-66-6,Top,Medium,"Spicy, Aromatic",Oxide,Spicy / Fresh,"Fresh, citrusy",154.25,176,Medium,2.8,0.02,2–3,25.0,49.0,Alcohol,Cardamom pods,Fresh aromatic spice,8000-66-6
 NOTE-0172,Ginger,Zingiberene,8007-08-7,Top / Heart,Medium,"Spicy, Fresh",Sesquiterpene,Spicy / Fresh,"Warm, citrusy",204.35,250,Medium,4.0,0.02,2–4,30.0,95.0,Alcohol,Ginger root,Fresh warm spice,8007-08-7
 NOTE-0683,Safflower,Oleic esters,8001-23-8,Base,Low,Soft Floral,Fatty Ester,Soft / Powdery,"Soft, oily",282.46,300,Low,5.2,0.001,8–12,60.0,150.0,Alcohol,Safflower oil,Soft powdery base,8001-23-8
-NOTE-0670,Iris (Orris),Irone,8015-13-9,Base,Medium,"Floral, Powdery",Ketone,Powdery / Floral,"Powdery, violet",206.33,295,Low,3.5,0.001,24+,90.0,130.0,Alcohol,Iris rhizome,Luxurious powdery,8015-13-9
+NOTE-0670,Iris (Orris),Irone,90045-89-9,Base,Medium,"Floral, Powdery",Ketone,Powdery / Floral,"Powdery, violet",206.33,295,Low,3.5,0.001,24+,90.0,130.0,Alcohol,Iris rhizome,Luxurious powdery,8015-13-9
 NOTE-0262,Mimosa,Anisic aldehyde rich,8016-87-3,Heart,Medium,"Floral, Powdery",Aromatic Aldehyde,Floral / Powdery,"Soft, powdery",136.15,248,Medium,2.3,0.01,4–6,40.0,82.0,Alcohol,Mimosa flowers,Soft floral powder,8016-87-3
 NOTE-0354,Sandalwood,α-Santalol,8006-87-9,Base,Medium,"Woody, Oriental",Sesquiterpene Alcohol,Woody / Creamy,"Creamy, soft, woody",220.35,302,Low,4.3,0.001,24+,92.0,110.0,Alcohol / Oil,Sandalwood heartwood,Creamy woody base,8006-87-9
 NOTE-0094,Cedarwood,Cedrol,77-53-2,Base,Medium,"Woody, Aromatic",Sesquiterpene Alcohol,Woody / Dry,"Dry, pencil-like",222.37,287,Low,4.5,0.002,12–24,80.0,104.0,Alcohol / Oil,Cedarwood,Dry woody backbone,77-53-2
@@ -142,12 +142,12 @@ NOTE-0648,Ionone Beta,β-Ionone,,Heart,Medium,"Floral, Fruity",Ketone,Floral / F
 NOTE-0504,Damascenone,β-Damascenone,23726-91-2,Heart,Strong,"Floral, Fruity",Ketone,Fruity / Floral,"Jammy, rose",190.28,290,Low,3.1,2e-05,8–12,65.0,120.0,Alcohol,Rose distillate,Jammy rose power,23726-91-2
 NOTE-0688,Safranal,Safranal,116-26-7,Heart,Medium,"Leather, Spicy",Aldehyde,Spicy / Leather,"Dry, leathery",150.22,230,Medium,2.1,0.01,4–6,45.0,70.0,Alcohol,Saffron,Dry leathery spice,116-26-7
 NOTE-0463,Evernyl,Methyl atranol,4707-47-5,Base,Medium,"Chypre, Fougere",Aromatic Ether,Mossy / Woody,Oakmoss-like,196.2,275,Low,3.7,0.001,12–24,80.0,115.0,Alcohol,Synthetic,Oakmoss replacer,4707-47-5
-NOTE-0644,Veramoss,Chlorinated phenyl ether,68155-66-8,Base,Medium,Chypre,Aromatic Ether,Mossy / Green,"Green, mossy",280,300,Low,4.0,0.001,24+,85.0,130.0,Alcohol,Synthetic,Modern moss note,68155-66-8
+NOTE-0644,Veramoss,Chlorinated phenyl ether,4707-47-5,Base,Medium,Chypre,Aromatic Ether,Mossy / Green,"Green, mossy",280,300,Low,4.0,0.001,24+,85.0,130.0,Alcohol,Synthetic,Modern moss note,68155-66-8
 NOTE-0689,Amber Xtreme,Amber Xtreme,68901-15-5,Base,Strong,"Amber, Woody",Amberoid,Amber / Woody,"Dry, powerful",234.38,295,Very Low,5.4,5e-05,24+,98.0,140.0,Alcohol,Synthetic,Extremely strong amber,68901-15-5
 NOTE-0623,Cypriol (Nagarmotha),Cypriol oil,91771-62-9,Base,Medium,"Woody, Leather",Sesquiterpene,Woody / Smoky,"Dry, smoky, earthy",220+,290,Low,4.3,0.001,24+,88.0,115.0,Alcohol,Cypriol root,Dry smoky woody,91771-62-9
 NOTE-0300,Papyrus,Sesquiterpenes,91722-79-1,Base,Medium,"Woody, Aromatic",Terpenoid,Woody / Dry,"Papery, dry",220+,285,Low,4.1,0.002,12–24,80.0,110.0,Alcohol,Papyrus plant,Dry papery wood,91722-79-1
 NOTE-0023,Amyris,Amyrol,8015-65-4,Base,Medium,"Woody, Amber",Sesquiterpene Alcohol,Woody / Sweet,"Soft, balsamic",222.37,288,Low,4.0,0.002,12–24,78.0,108.0,Alcohol,Amyris wood,Sweet sandalwood-like,8015-65-4
-NOTE-0690,Palo Santo,Limonene rich,959130-05-6,Heart / Base,Medium,"Woody, Fresh",Terpene,Woody / Citrus,"Citrus, resinous",136.24,176,Medium,4.2,0.02,6–10,55.0,50.0,Alcohol,Palo santo wood,Sacred citrus wood,959130-05-6
+NOTE-0690,Palo Santo,Limonene rich,959130-05-3,Heart / Base,Medium,"Woody, Fresh",Terpene,Woody / Citrus,"Citrus, resinous",136.24,176,Medium,4.2,0.02,6–10,55.0,50.0,Alcohol,Palo santo wood,Sacred citrus wood,959130-05-6
 NOTE-0691,Bois de Rose,Linalool rich,8015-77-8,Heart,Medium,"Woody, Floral",Terpenoid Alcohol,Woody / Floral,"Soft, rosy, woody",154.25,198,Medium,2.9,0.01,4–6,40.0,75.0,Alcohol,Rosewood,Rosy soft wood,8015-77-8
 NOTE-0692,Juniper Berry,α-Pinene,8012-91-7,Top,Medium,"Aromatic, Woody",Terpene,Aromatic / Fresh,"Gin-like, fresh",136.24,156,High,4.0,0.03,1–2,20.0,33.0,Alcohol,Juniper berries,Fresh aromatic bite,8012-91-7
 NOTE-0693,Hinoki,Terpenes,91771-45-8,Base,Medium,"Woody, Fresh",Terpene,Woody / Clean,"Clean, cedar-like",204+,280,Low,4.1,0.001,12–24,82.0,110.0,Alcohol,Hinoki wood,Clean sacred wood,91771-45-8
@@ -161,18 +161,18 @@ NOTE-0468,Hay Absolute,Coumarin rich,8042-47-5,Base,Medium,"Fougere, Gourmand",A
 NOTE-0038,Beeswax,Long-chain esters,8012-89-3,Base,Medium,"Honey, Amber",Ester,Waxy / Honey,"Waxy, warm",300+,300,Very Low,6.0,0.001,24+,90.0,160.0,Alcohol,Beeswax,Warm waxy base,8012-89-3
 NOTE-0698,Civet (Synthetic),Civetone blend,-,Base,Strong,Animalic,Macrocyclic Ketone,Animalic / Musky,"Fecal, warm",—,—,Very Low,4.5,0.0001,24+,95.0,160.0,Alcohol,Synthetic,Animalic warmth,-
 NOTE-0699,Amber Seed,Ambrette seed oil,8015-62-1,Base,Medium,"Musky, Floral",Macrocyclic Alcohol,Musky / Floral,Pear-like musk,222.37,290,Low,3.8,0.001,24+,85.0,115.0,Alcohol,Ambrette seeds,Natural plant musk,8015-62-1
-NOTE-0240,Lotus,Linalool rich,8024-92-6,Heart,Medium,"Floral, Aquatic",Terpenoid,Floral / Aquatic,"Watery, soft",154.25,198,Medium,2.9,0.02,4–6,42.0,75.0,Alcohol,Lotus flower,Watery floral calm,8024-92-6
+NOTE-0240,Lotus,Linalool rich,91770-15-9,Heart,Medium,"Floral, Aquatic",Terpenoid,Floral / Aquatic,"Watery, soft",154.25,198,Medium,2.9,0.02,4–6,42.0,75.0,Alcohol,Lotus flower,Watery floral calm,8024-92-6
 NOTE-0294,Osmanthus,Ionones & lactones,92347-21-2,Heart,Medium,"Floral, Fruity",Ketone / Lactone,Floral / Fruity,"Apricot, leather",192+,280,Low,3.2,0.002,6–10,55.0,115.0,Alcohol,Osmanthus flower,Apricot-leather floral,92347-21-2
-NOTE-0402,Tuberose,Methyl benzoate rich,8014-17-3,Heart,Strong,"Floral, White Floral",Aromatic Ester,Floral / Creamy,"Creamy, narcotic",136.15,200,Medium,2.1,0.01,6–10,55.0,82.0,Alcohol,Tuberose flowers,Intoxicating white floral,8014-17-3
+NOTE-0402,Tuberose,Methyl benzoate rich,,Heart,Strong,"Floral, White Floral",Aromatic Ester,Floral / Creamy,"Creamy, narcotic",136.15,200,Medium,2.1,0.01,6–10,55.0,82.0,Alcohol,Tuberose flowers,Intoxicating white floral,8014-17-3
 NOTE-0506,Helvetolide,Helvetolide,141773-73-1,Base,Medium,"Musky, Fruity",Macrocyclic Ester,Musky / Fruity,"Pear-like, soft",254.37,320,Very Low,4.2,0.0003,24+,90.0,150.0,Alcohol,Synthetic,Fruity clean musk,141773-73-1
-NOTE-0476,Habanolide,Habanolide,1725-17-7,Base,Medium,"Musky, Clean",Macrocyclic Musk,Musky / Metallic,"Clean, metallic",256.4,330,Very Low,4.4,0.0002,24+,92.0,155.0,Alcohol,Synthetic,Bright modern musk,1725-17-7
+NOTE-0476,Habanolide,Habanolide,111879-80-2,Base,Medium,"Musky, Clean",Macrocyclic Musk,Musky / Metallic,"Clean, metallic",256.4,330,Very Low,4.4,0.0002,24+,92.0,155.0,Alcohol,Synthetic,Bright modern musk,1725-17-7
 NOTE-0661,Romandolide,Romandolide,236391-76-7,Base,Medium,"Musky, Floral",Macrocyclic Lactone,Musky / Creamy,"Creamy, soft",270+,340,Very Low,4.6,0.0002,24+,94.0,160.0,Alcohol,Synthetic,Soft creamy musk,236391-76-7
 NOTE-0507,Ambrettolide,Ambrettolide,28645-51-4,Base,Medium,"Musky, Powdery",Macrocyclic Lactone,Musky / Sweet,"Sweet, powdery",268.4,340,Very Low,4.7,0.0002,24+,95.0,165.0,Alcohol,Synthetic / ambrette,Sweet powdery musk,28645-51-4
 NOTE-0700,Velvione,Velvione,3391-83-1,Base,Medium,"Musky, Woody",Polycyclic Musk,Musky / Woody,"Woody, soft",258.4,300,Very Low,5.1,0.0003,24+,88.0,150.0,Alcohol,Synthetic,Woody clean musk,3391-83-1
 NOTE-0617,Muscenone,Muscenone,2550-26-7,Base,Strong,"Musky, Animalic",Macrocyclic Ketone,Musky / Animalic,"Warm, sensual",252.4,335,Very Low,4.4,0.0001,24+,96.0,160.0,Alcohol,Synthetic,Animalic musk tone,2550-26-7
 NOTE-0701,Cashmeran (High Purity),Cashmeran,33704-61-9,Base,Medium,"Woody, Musky",Polycyclic Ketone,Woody / Musky,"Warm, velvety",206.33,241,Low,4.4,0.0005,18–24,85.0,96.0,Alcohol,Synthetic,Warm woody musk,33704-61-9
-NOTE-0702,Sylkolide,Sylkolide,104-61-0,Base,Medium,"Musky, Creamy",Lactone,Musky / Creamy,"Milky, soft",170.25,280,Low,2.9,0.01,6–10,55.0,115.0,Alcohol,Synthetic,Milky soft musk,104-61-0
-NOTE-0703,Fixolide,Fixolide,1222-05-5,Base,Medium,"Musky, Floral",Polycyclic Musk,Musky / Sweet,"Sweet, powdery",258.4,300,Very Low,5.8,0.0005,24+,85.0,150.0,Alcohol,Synthetic,Sweet powdery musk,1222-05-5
+NOTE-0702,Sylkolide,Sylkolide,,Base,Medium,"Musky, Creamy",Lactone,Musky / Creamy,"Milky, soft",170.25,280,Low,2.9,0.01,6–10,55.0,115.0,Alcohol,Synthetic,Milky soft musk,104-61-0
+NOTE-0703,Fixolide,Fixolide,1506-02-1,Base,Medium,"Musky, Floral",Polycyclic Musk,Musky / Sweet,"Sweet, powdery",258.4,300,Very Low,5.8,0.0005,24+,85.0,150.0,Alcohol,Synthetic,Sweet powdery musk,1222-05-5
 NOTE-0704,Z11 Musk,Macrocyclic ketone,-,Base,Medium,Musky,Macrocyclic Ketone,Musky / Clean,"Clean, neutral",—,—,Very Low,4.5,0.0002,24+,90.0,155.0,Alcohol,Synthetic,Neutral clean musk,-
 NOTE-0641,Ambrocenide,Ambrocenide,153898-62-5,Base,Strong,"Amber, Woody",Amberoid,Amber / Woody,Extremely diffusive,234.38,285,Very Low,5.6,5e-05,24+,98.0,140.0,Alcohol,Synthetic,Powerful modern amber,153898-62-5
 NOTE-0633,Georgywood,Georgywood,40366-39-0,Base,Medium,"Woody, Amber",Polycyclic Alcohol,Woody / Amber,"Dry, clean",222.37,282,Very Low,4.9,0.0002,24+,92.0,130.0,Alcohol,Synthetic,Clean dry wood,40366-39-0
@@ -180,9 +180,9 @@ NOTE-0659,Javanol,Javanol,198404-98-7,Base,Medium,"Woody, Amber",Terpene Alcohol
 NOTE-0705,Polysantol,Polysantol,107898-54-4,Base,Medium,"Woody, Oriental",Terpene Alcohol,Woody / Sweet,Sweet sandalwood,238.37,295,Very Low,5.0,0.0003,24+,93.0,135.0,Alcohol,Synthetic,Sweet creamy wood,107898-54-4
 NOTE-0660,Bacdanol,Bacdanol,28219-61-6,Base,Medium,"Woody, Floral",Terpene Alcohol,Woody / Floral,"Soft, rosy wood",224.36,285,Low,4.2,0.001,18–24,85.0,120.0,Alcohol,Synthetic,Soft floral wood,28219-61-6
 NOTE-0461,Sandalore,Sandalore,65113-99-7,Base,Medium,"Woody, Powdery",Terpene Alcohol,Woody / Powdery,Powdery sandalwood,238.37,295,Very Low,5.0,0.0002,24+,94.0,135.0,Alcohol,Synthetic,Powdery sandalwood,65113-99-7
-NOTE-0706,Okoumal,Okoumal,131675-38-0,Base,Medium,Woody,Aromatic Alcohol,Woody / Clean,"Dry, cedar-like",218.33,280,Low,4.3,0.001,18–24,85.0,120.0,Alcohol,Synthetic,Dry modern cedar,131675-38-0
-NOTE-0707,Clearwood,Clearwood,110677-62-4,Base,Medium,"Woody, Earthy",Terpene Alcohol,Woody / Patchouli,"Clean, patchouli",224.36,290,Low,4.4,0.001,18–24,88.0,125.0,Alcohol,Synthetic,Clean patchouli,110677-62-4
-NOTE-0708,Timber Silk,Timber silk,54464-57-2,Base,Medium,"Woody, Amber",Aromatic Ether,Woody / Amber,"Soft, diffusive",234.38,275,Low,4.5,0.0006,24+,88.0,110.0,Alcohol,Synthetic,Soft woody diffusion,54464-57-2
+NOTE-0706,Okoumal,Okoumal,131812-67-4,Base,Medium,Woody,Aromatic Alcohol,Woody / Clean,"Dry, cedar-like",218.33,280,Low,4.3,0.001,18–24,85.0,120.0,Alcohol,Synthetic,Dry modern cedar,131675-38-0
+NOTE-0707,Clearwood,Clearwood,84696-25-3,Base,Medium,"Woody, Earthy",Terpene Alcohol,Woody / Patchouli,"Clean, patchouli",224.36,290,Low,4.4,0.001,18–24,88.0,125.0,Alcohol,Synthetic,Clean patchouli,110677-62-4
+NOTE-0708,Timber Silk,Timber silk,,Base,Medium,"Woody, Amber",Aromatic Ether,Woody / Amber,"Soft, diffusive",234.38,275,Low,4.5,0.0006,24+,88.0,110.0,Alcohol,Synthetic,Soft woody diffusion,54464-57-2
 NOTE-0709,Ebanol,Ebanol,67801-20-1,Base,Medium,"Woody, Amber",Terpene Alcohol,Woody / Creamy,"Creamy, rich wood",238.37,295,Very Low,5.1,0.0002,24+,95.0,135.0,Alcohol,Synthetic,Rich sandalwood tone,67801-20-1
 NOTE-0710,Veratraldehyde,Veratraldehyde,120-14-9,Heart,Medium,"Gourmand, Powdery",Aromatic Aldehyde,Powdery / Sweet,"Almond, vanilla-like",166.17,281,Low,1.4,0.01,4–6,40.0,110.0,Alcohol,Synthetic,Soft sweet powder,120-14-9
 NOTE-0662,Anisaldehyde,p-Anisaldehyde,0123-11-5,Heart,Medium,"Gourmand, Floral",Aromatic Aldehyde,Sweet / Anisic,"Sweet, almond, anise",136.15,248,Medium,2.1,0.01,4–6,38.0,83.0,Alcohol,Anise seeds,Sweet anisic warmth,0123-11-5
@@ -200,9 +200,9 @@ NOTE-0718,Cyclotene,Cyclotene,80-71-7,Heart,Medium,Gourmand,Lactone,Sweet / Cara
 NOTE-0719,Furaneol,Furaneol,3658-77-3,Heart,Strong,"Gourmand, Fruity",Lactone,Sweet / Fruity,Strawberry sugar,128.13,170,Medium,0.3,0.001,4–6,40.0,72.0,Alcohol,Pineapple,Jammy sweetness,3658-77-3
 NOTE-0720,Sotolone,Sotolone,28664-35-9,Base,Strong,"Gourmand, Spicy",Lactone,Sweet / Spicy,"Maple, curry",128.13,260,Low,1.3,0.001,12–24,75.0,110.0,Alcohol,Fenugreek,Curry-maple note,28664-35-9
 NOTE-0721,Coumarin (Refined),Coumarin,91-64-5,Base,Medium,"Fougere, Gourmand",Benzopyrone,Sweet / Hay,"Hay, almond",146.14,302,Low,1.6,0.01,12–24,78.0,151.0,Alcohol,Tonka bean,Sweet hay fixative,91-64-5
-NOTE-0722,Deertongue,Coumarin rich,90063-60-6,Base,Medium,Fougere,Aromatic Extract,Sweet / Hay,Sweet hay,146+,300,Low,1.6,0.01,12–24,80.0,150.0,Alcohol,Deertongue leaf,Natural coumarin,90063-60-6
-NOTE-0723,Hay Lactone,γ-Nonalactone,104-61-0,Base,Medium,Gourmand,Lactone,Sweet / Creamy,Creamy hay,170.25,280,Low,2.9,0.01,8–12,55.0,115.0,Alcohol,Synthetic,Creamy hay note,104-61-0
-NOTE-0658,Maple Lactone,Maple lactone,5471-51-2,Base,Medium,Gourmand,Lactone,Sweet / Maple,Maple sugar,164.2,293,Low,1.6,0.005,12–24,70.0,115.0,Alcohol,Synthetic,Maple sweetness,5471-51-2
+NOTE-0722,Deertongue,Coumarin rich,,Base,Medium,Fougere,Aromatic Extract,Sweet / Hay,Sweet hay,146+,300,Low,1.6,0.01,12–24,80.0,150.0,Alcohol,Deertongue leaf,Natural coumarin,90063-60-6
+NOTE-0723,Hay Lactone,γ-Nonalactone,,Base,Medium,Gourmand,Lactone,Sweet / Creamy,Creamy hay,170.25,280,Low,2.9,0.01,8–12,55.0,115.0,Alcohol,Synthetic,Creamy hay note,104-61-0
+NOTE-0658,Maple Lactone,Maple lactone,,Base,Medium,Gourmand,Lactone,Sweet / Maple,Maple sugar,164.2,293,Low,1.6,0.005,12–24,70.0,115.0,Alcohol,Synthetic,Maple sweetness,5471-51-2
 NOTE-0724,Toasted Sugar,Cyclopentenolone,80-71-7,Base,Medium,Gourmand,Ketone,Sweet / Burnt,Burnt sugar,112.13,187,Medium,0.2,0.01,8–12,60.0,76.0,Alcohol,Synthetic,Toasted sugar,80-71-7
 NOTE-0545,Benzyl Alcohol,Benzyl alcohol,100-51-6,Heart,Low,"Floral, Fruity",Aromatic Alcohol,Floral / Sweet,"Mild, sweet, floral",108.14,205,Medium,1.1,0.02,2–4,30.0,93.0,Alcohol,"Jasmine, fruits",Mild floral solvent note,100-51-6
 NOTE-0665,Benzyl Acetate,Benzyl acetate,0140-11-4,Top / Heart,Medium,"Floral, Fruity",Aromatic Ester,Floral / Fruity,"Sweet, jasmine-like",150.17,213,Medium,1.9,0.02,2–4,32.0,102.0,Alcohol,Jasmine,Sweet jasmine ester,0140-11-4
@@ -217,13 +217,13 @@ NOTE-0729,Methyl Anthranilate,Methyl anthranilate,134-20-3,Heart,Medium,"Floral,
 NOTE-0653,Indole,Indole,120-72-9,Base,Strong,White Floral,Heterocyclic,Animalic / Floral,"Fecal, jasmine",117.15,253,Low,2.1,0.0001,12–24,85.0,121.0,Alcohol,Jasmine,Animalic floral depth,120-72-9
 NOTE-0730,Skatole,Skatole,83-34-1,Base,Strong,Animalic,Heterocyclic,Animalic,"Fecal, leathery",131.18,266,Low,2.6,5e-05,24+,90.0,135.0,Alcohol,Natural,Extreme animalic,83-34-1
 NOTE-0649,Methyl Ionone,Methyl ionone,127-51-5,Heart,Medium,"Floral, Woody",Ketone,Floral / Woody,"Violet, woody",206.33,285,Medium,3.3,0.01,6–8,55.0,110.0,Alcohol,Synthetic,Violet woody note,127-51-5
-NOTE-0731,Damascenol,Damascenol,28664-35-9,Heart,Medium,Floral,Alcohol,Floral / Fruity,"Rose, fruity",154.25,270,Medium,2.7,0.01,4–6,45.0,100.0,Alcohol,Rose,Fruity rose alcohol,28664-35-9
+NOTE-0731,Damascenol,Damascenol,,Heart,Medium,Floral,Alcohol,Floral / Fruity,"Rose, fruity",154.25,270,Medium,2.7,0.01,4–6,45.0,100.0,Alcohol,Rose,Fruity rose alcohol,28664-35-9
 NOTE-0541,Rose Oxide,Rose oxide,16409-43-1,Top,Medium,Floral,Terpene Oxide,Floral / Green,"Metallic, green",156.27,224,Medium,2.8,0.01,2–3,28.0,75.0,Alcohol,Rose,Metallic rose freshness,16409-43-1
 NOTE-0732,Aldehyde C14,γ-Undecalactone,104-67-6,Heart,Medium,"Fruity, Floral",Lactone,Fruity / Peach,"Creamy, peachy",184.28,290,Low,3.0,0.01,6–8,50.0,118.0,Alcohol,Synthetic,Peach aldehydic note,104-67-6
 NOTE-0733,Aldehyde C18,γ-Nonalactone,104-61-0,Heart / Base,Medium,Gourmand,Lactone,Creamy / Coconut,"Milky, coconut",170.25,280,Low,2.9,0.01,6–8,55.0,115.0,Alcohol,Synthetic,Coconut cream note,104-61-0
 NOTE-0734,Cis-3-Hexenyl Acetate,Cis-3-hexenyl acetate,3681-71-8,Top,Medium,"Green, Fruity",Ester,Green / Fruity,Fresh-cut grass,142.2,171,High,2.1,0.03,1–2,18.0,54.0,Alcohol,Leaves,Green fruity freshness,3681-71-8
 NOTE-0532,Cis-3-Hexenol,Cis-3-hexenol,928-96-1,Top,Medium,Green,Alcohol,Green / Fresh,"Leafy, grassy",100.16,157,High,1.5,0.03,1–2,18.0,54.0,Alcohol,Leaves,Fresh green leaf,928-96-1
-NOTE-0735,Galbanol,Galbanol,6812-07-5,Heart,Medium,"Green, Chypre",Terpenoid Alcohol,Green / Resinous,"Bitter, green",222.37,285,Low,4.1,0.01,6–10,60.0,110.0,Alcohol,Galbanum resin,Bitter green resin,6812-07-5
+NOTE-0735,Galbanol,Galbanol,,Heart,Medium,"Green, Chypre",Terpenoid Alcohol,Green / Resinous,"Bitter, green",222.37,285,Low,4.1,0.01,6–10,60.0,110.0,Alcohol,Galbanum resin,Bitter green resin,6812-07-5
 NOTE-0454,Cedarwood Atlas,Cedrol,77-53-2,Base,Medium,"Woody, Fougere",Sesquiterpene Alcohol,Woody / Dry,"Dry, pencil-like",222.37,274,Low,4.4,0.02,24+,85.0,150.0,Alcohol/oil,Atlas cedar,Dry woody fixative,77-53-2
 NOTE-0459,Cedarwood Virginia,Cedrol,77-53-2,Base,Medium,Woody,Sesquiterpene Alcohol,Woody / Clean,"Clean, soft wood",222.37,274,Low,4.4,0.02,24+,85.0,150.0,Alcohol/oil,Juniperus virginiana,Clean cedarwood,77-53-2
 NOTE-0515,Patchouli Heart,Patchoulol,5986-55-0,Base,Medium,"Woody, Oriental",Sesquiterpene Alcohol,Woody / Earthy,"Earthy, damp",222.37,280,Low,4.5,0.01,24+,90.0,150.0,Alcohol/oil,Patchouli leaves,Earthy woody core,5986-55-0
@@ -233,12 +233,12 @@ NOTE-0586,Vetiver Java,Vetiverol,89-81-6,Base,Medium,"Woody, Smoky",Sesquiterpen
 NOTE-0461,Sandalore,Sandalore,65113-99-7,Base,Medium,"Woody, Oriental",Synthetic Sandalwood,Woody / Creamy,"Creamy, smooth",234.38,300,Low,4.8,0.01,24+,90.0,160.0,Alcohol,Synthetic,Creamy sandalwood,65113-99-7
 NOTE-0659,Javanol,Javanol,198404-98-7,Base,Strong,"Woody, Modern",Synthetic Sandalwood,Woody / Radiant,"Powerful, milky",252.4,300,Low,5.2,0.001,24+,95.0,160.0,Alcohol,Synthetic,Radiant sandalwood,198404-98-7
 NOTE-0709,Ebanol,Ebanol,67801-20-1,Base,Medium,Woody,Synthetic Sandalwood,Woody / Dry,"Dry, elegant",250.4,300,Low,5.0,0.005,24+,92.0,160.0,Alcohol,Synthetic,Dry sandalwood,67801-20-1
-NOTE-0650,Kephalis,Kephalis,65505-77-1,Base,Medium,"Amber, Woody",Ketone,Amber / Woody,"Amber, tobacco",260.4,300,Low,4.9,0.005,24+,90.0,160.0,Alcohol,Synthetic,Amber woody note,65505-77-1
+NOTE-0650,Kephalis,Kephalis,36306-87-3,Base,Medium,"Amber, Woody",Ketone,Amber / Woody,"Amber, tobacco",260.4,300,Low,4.9,0.005,24+,90.0,160.0,Alcohol,Synthetic,Amber woody note,65505-77-1
 NOTE-0087,Cashmeran,Cashmeran,33704-61-9,Base,Medium,"Woody, Musk",Polycyclic Ketone,Musky / Woody,Soft musk wood,206.33,300,Low,4.1,0.01,24+,88.0,150.0,Alcohol,Synthetic,Soft musky wood,33704-61-9
-NOTE-0684,Norlimbanol,Norlimbanol,68155-66-8,Base,Strong,"Woody, Amber",Polycyclic Alcohol,Woody / Amber,"Dry, amber",236.4,300,Low,5.1,0.001,48+,95.0,160.0,Alcohol,Synthetic,Extreme woody power,68155-66-8
+NOTE-0684,Norlimbanol,Norlimbanol,70788-30-6,Base,Strong,"Woody, Amber",Polycyclic Alcohol,Woody / Amber,"Dry, amber",236.4,300,Low,5.1,0.001,48+,95.0,160.0,Alcohol,Synthetic,Extreme woody power,68155-66-8
 NOTE-0021,Ambroxan,Ambroxide,6790-58-5,Base,Medium,Amber,Amberoid,Amber / Musky,"Warm, mineral",236.4,300,Low,4.5,0.005,48+,95.0,160.0,Alcohol,Synthetic,Ambergris replacer,6790-58-5
 NOTE-0631,Cetalox,Ambroxide,6790-58-5,Base,Medium,Amber,Amberoid,Amber / Dry,Clean amber,236.4,300,Low,4.5,0.005,48+,95.0,160.0,Alcohol,Synthetic,Dry amber note,6790-58-5
-NOTE-0737,Ambermax,Ambermax,71837-65-9,Base,Strong,"Amber, Woody",Polycyclic,Amber / Woody,Dry amber wood,272.4,300,Low,5.6,0.001,48+,98.0,165.0,Alcohol,Synthetic,Powerful amberwood,71837-65-9
+NOTE-0737,Ambermax,Ambermax,,Base,Strong,"Amber, Woody",Polycyclic,Amber / Woody,Dry amber wood,272.4,300,Low,5.6,0.001,48+,98.0,165.0,Alcohol,Synthetic,Powerful amberwood,71837-65-9
 NOTE-0205,Iso E Super,Iso E Super,54464-57-2,Base,Medium,Woody,Polycyclic Ether,Woody / Smooth,Velvety cedar,234.38,300,Low,4.5,0.01,24+,85.0,150.0,Alcohol,Synthetic,Transparent wood,54464-57-2
 NOTE-0630,Timberol,Timberol,70788-30-6,Base,Medium,Woody,Alcohol,Woody / Dry,Dry cedar,222.37,300,Low,4.7,0.01,24+,85.0,150.0,Alcohol,Synthetic,Dry modern wood,70788-30-6
 NOTE-0738,Vertofix,Methyl cedryl ketone,32388-55-9,Base,Medium,"Woody, Leather",Ketone,Woody / Leather,"Dry, leathery",218.33,290,Low,4.2,0.01,24+,88.0,145.0,Alcohol,Synthetic,Dry leathery wood,32388-55-9
@@ -254,15 +254,15 @@ NOTE-0465,Musk Ketone,Musk ketone,81-14-1,Base,Medium,Musk,Nitro Musk,Musky / Sw
 NOTE-0741,Musk Xylene,Musk xylene,81-15-2,Base,Medium,Musk,Nitro Musk,Musky / Sweet,Powdery,297.3,350,Low,4.4,0.01,48+,92.0,170.0,Alcohol,Synthetic,Vintage musk,81-15-2
 NOTE-0506,Helvetolide,Helvetolide,141773-73-1,Base,Medium,"Musk, Fruity",Macrocyclic Lactone,Musky / Fruity,"Pear, clean",284.4,300,Low,5.0,1e-05,48+,95.0,160.0,Alcohol,Synthetic,Modern fruity musk,141773-73-1
 NOTE-0742,Iso E Super Plus,Iso E Super,54464-57-2,Base,Medium,Woody,Polycyclic Ether,Woody / Smooth,"Soft, velvety",234.38,300,Low,4.5,0.01,24+,85.0,150.0,Alcohol,Synthetic,Enhanced Iso E,54464-57-2
-NOTE-0707,Clearwood,Clearwood,1356815-19-9,Base,Medium,Woody,Biotech Terpene,Woody / Clean,Patchouli-like,224.35,300,Low,4.2,0.01,24+,85.0,150.0,Alcohol,Sugarcane (bio),Clean patchouli,1356815-19-9
+NOTE-0707,Clearwood,Clearwood,84696-25-3,Base,Medium,Woody,Biotech Terpene,Woody / Clean,Patchouli-like,224.35,300,Low,4.2,0.01,24+,85.0,150.0,Alcohol,Sugarcane (bio),Clean patchouli,1356815-19-9
 NOTE-0743,Orcanox,Orcanox,57378-68-4,Base,Medium,"Amber, Musk",Amberoid,Amber / Musky,Soft amber,246.4,300,Low,4.9,0.005,48+,92.0,160.0,Alcohol,Synthetic,Musky amber,57378-68-4
-NOTE-0703,Fixolide,Fixolide,1222-05-5,Base,Medium,"Musk, Woody",Polycyclic Musk,Musky / Woody,Woody musk,258.4,300,Low,5.8,0.01,48+,90.0,160.0,Alcohol,Synthetic,Fixative musk,1222-05-5
+NOTE-0703,Fixolide,Fixolide,1506-02-1,Base,Medium,"Musk, Woody",Polycyclic Musk,Musky / Woody,Woody musk,258.4,300,Low,5.8,0.01,48+,90.0,160.0,Alcohol,Synthetic,Fixative musk,1222-05-5
 NOTE-0700,Velvione,Velvione,300371-33-9,Base,Medium,Musk,Macrocyclic Musk,Musky / Powdery,Soft powdery,282.4,300,Low,5.1,1e-05,48+,95.0,160.0,Alcohol,Synthetic,Powdery musk,300371-33-9
 NOTE-0617,Muscenone,Muscenone,82356-51-2,Base,Strong,Musk,Macrocyclic Ketone,Musky / Animalic,Warm sensual,250.42,330,Low,4.5,1e-05,48+,98.0,165.0,Alcohol,Synthetic,Sensual musk,82356-51-2
-NOTE-0744,Zenolide,Zenolide,2445-80-5,Base,Medium,Musk,Macrocyclic Lactone,Musky / Clean,Clean soft,256.4,300,Low,4.7,5e-05,48+,92.0,155.0,Alcohol,Synthetic,Clean musk,2445-80-5
-NOTE-0745,Nirvanolide,Nirvanolide,37609-25-9,Base,Medium,Musk,Macrocyclic Musk,Musky / Creamy,Creamy musk,270.4,300,Low,5.0,1e-05,48+,95.0,160.0,Alcohol,Synthetic,Creamy musk,37609-25-9
+NOTE-0744,Zenolide,Zenolide,54982-83-1,Base,Medium,Musk,Macrocyclic Lactone,Musky / Clean,Clean soft,256.4,300,Low,4.7,5e-05,48+,92.0,155.0,Alcohol,Synthetic,Clean musk,2445-80-5
+NOTE-0745,Nirvanolide,Nirvanolide,,Base,Medium,Musk,Macrocyclic Musk,Musky / Creamy,Creamy musk,270.4,300,Low,5.0,1e-05,48+,95.0,160.0,Alcohol,Synthetic,Creamy musk,37609-25-9
 NOTE-0661,Romandolide,Romandolide,236391-76-7,Base,Medium,"Musk, Floral",Macrocyclic Musk,Musky / Floral,Elegant musk,282.4,300,Low,5.2,1e-05,48+,95.0,160.0,Alcohol,Synthetic,Floral musk,236391-76-7
-NOTE-0746,Serenolide,Serenolide,144676-02-0,Base,Medium,Musk,Macrocyclic Musk,Musky / Fresh,Fresh clean,268.4,300,Low,5.0,1e-05,48+,95.0,160.0,Alcohol,Synthetic,Fresh musk,144676-02-0
+NOTE-0746,Serenolide,Serenolide,,Base,Medium,Musk,Macrocyclic Musk,Musky / Fresh,Fresh clean,268.4,300,Low,5.0,1e-05,48+,95.0,160.0,Alcohol,Synthetic,Fresh musk,144676-02-0
 NOTE-0747,Aldehyde C10,Decanal,112-31-2,Top,Medium,"Aldehydic, Citrus",Aliphatic Aldehyde,Aldehydic / Citrus,"Waxy, orange peel",156.27,208,High,3.3,0.02,1–2,15.0,70.0,Alcohol,Citrus peel,Bright aldehydic citrus,112-31-2
 NOTE-0748,Aldehyde C11,Undecylenic aldehyde,112-44-7,Top,Medium,Aldehydic,Aliphatic Aldehyde,Aldehydic / Green,"Fatty, green",168.28,231,Medium,4.1,0.02,1–2,18.0,82.0,Alcohol,Synthetic,Green fatty aldehyde,112-44-7
 NOTE-0749,Aldehyde C12 Lauric,Dodecanal,112-54-9,Top,Medium,"Aldehydic, Floral",Aliphatic Aldehyde,Aldehydic / Soapy,"Clean, soapy",184.32,258,Medium,4.8,0.02,1–2,20.0,102.0,Alcohol,Synthetic,Classic aldehydic soap,112-54-9
@@ -273,7 +273,7 @@ NOTE-0753,Aldehyde C16 Strawberry,Ethyl methyl phenylglycidate,77-83-8,Heart,Med
 NOTE-0754,Aldehyde C18 Coconut,γ-Nonalactone,104-61-0,Heart/Base,Medium,Gourmand,Lactone,Creamy / Coconut,Milky coconut,170.25,280,Low,2.9,0.01,6–8,55.0,115.0,Alcohol,Synthetic,Coconut cream,104-61-0
 NOTE-0497,Calone,Calone 1951,,Top,Medium,Marine,Ketone,Marine / Ozone,"Watery, sea breeze",180.25,285,Medium,3.0,0.01,3–5,35.0,98.0,Alcohol,Synthetic,Marine freshness,
 NOTE-0639,Helional,Helional,1205-17-0,Top/Heart,Medium,"Marine, Green",Aromatic Aldehyde,Marine / Green,"Fresh, watery",178.23,269,Medium,2.6,0.01,3–5,35.0,95.0,Alcohol,Synthetic,Clean watery green,1205-17-0
-NOTE-0651,Floralozone,Floralozone,67634-00-8,Top,Medium,"Floral, Ozone",Ketone,Ozone / Floral,"Airy, fresh",184.27,290,Low,3.2,0.01,3–4,30.0,110.0,Alcohol,Synthetic,Airy floral ozone,67634-00-8
+NOTE-0651,Floralozone,Floralozone,,Top,Medium,"Floral, Ozone",Ketone,Ozone / Floral,"Airy, fresh",184.27,290,Low,3.2,0.01,3–4,30.0,110.0,Alcohol,Synthetic,Airy floral ozone,67634-00-8
 NOTE-0640,Melonal,Melonal,106-72-9,Top,Medium,"Green, Marine",Aldehyde,Green / Watery,"Melon, green",170.25,250,Medium,2.9,0.02,2–3,25.0,90.0,Alcohol,Synthetic,Fresh melon green,106-72-9
 NOTE-0652,Aquozone,Aquozone,68555-66-8,Top,Medium,Marine,Ketone,Marine / Fresh,"Ozone, mineral",214.3,300,Low,3.5,0.01,3–4,30.0,120.0,Alcohol,Synthetic,Mineral marine,68555-66-8
 NOTE-0498,Dihydromyrcenol,Dihydromyrcenol,18479-58-8,Top,Medium,"Fresh, Citrus",Terpenoid Alcohol,Fresh / Citrus,"Clean, laundry",156.27,211,High,3.3,0.02,2–3,25.0,77.0,Alcohol,Synthetic,Fresh citrus clean,18479-58-8
@@ -283,7 +283,7 @@ NOTE-0686,Lilial,Butylphenyl methylpropional,80-54-6,Heart,Medium,Floral,Aldehyd
 NOTE-0756,Florhydral,Florhydral,125109-85-5,Heart,Medium,Floral,Aldehyde,Floral / Fresh,Clean muguet,212.33,300,Low,3.2,0.01,4–6,40.0,120.0,Alcohol,Synthetic,Modern floral,125109-85-5
 NOTE-0757,Bourgeonal,Bourgeonal,18127-01-0,Heart,Medium,"Floral, Green",Aldehyde,Floral / Green,Green muguet,196.29,285,Low,3.1,0.01,4–6,40.0,110.0,Alcohol,Synthetic,Green floral,18127-01-0
 NOTE-0758,Florol,Florol,63500-71-0,Heart,Medium,Floral,Alcohol,Floral / Watery,"Clean, fresh",188.3,280,Low,3.0,0.01,4–6,40.0,110.0,Alcohol,Synthetic,Fresh floral body,63500-71-0
-NOTE-0634,Pink Pepper Oil,Limonene-rich oil,8016-20-4,Top,Medium,"Spicy, Fresh",Terpenoid,Spicy / Fresh,"Rosy, peppery",136.24,176,High,4.5,0.02,1–2,18.0,50.0,Alcohol/oil,Pink peppercorn,Fresh spicy lift,8016-20-4
+NOTE-0634,Pink Pepper Oil,Limonene-rich oil,68917-52-2,Top,Medium,"Spicy, Fresh",Terpenoid,Spicy / Fresh,"Rosy, peppery",136.24,176,High,4.5,0.02,1–2,18.0,50.0,Alcohol/oil,Pink peppercorn,Fresh spicy lift,8016-20-4
 NOTE-0554,Black Pepper Oil,β-Caryophyllene,8006-82-4,Top,Medium,"Spicy, Woody",Sesquiterpene,Spicy / Dry,"Dry, peppery",204.36,262,Medium,4.3,0.02,2–3,22.0,87.0,Alcohol/oil,Black pepper,Dry spice bite,8006-82-4
 NOTE-0550,Cardamom Oil,"1,8-Cineole rich",8000-66-6,Top/Heart,Medium,"Spicy, Fresh",Terpenoid,Spicy / Fresh,"Cool, citrusy",154.25,176,Medium,2.8,0.01,3–4,28.0,65.0,Alcohol,Cardamom pods,Cool aromatic spice,8000-66-6
 NOTE-0560,Coriander Seed Oil,Linalool rich,8008-52-4,Top/Heart,Medium,"Spicy, Citrus",Terpenoid,Spicy / Citrus,"Warm, citrus spice",154.25,198,Medium,2.9,0.02,3–4,28.0,78.0,Alcohol,Coriander seeds,Soft citrus spice,8008-52-4
@@ -301,13 +301,13 @@ NOTE-0457,Benzoin Siam,Benzoic esters,9000-05-9,Base,Medium,"Amber, Gourmand",Re
 NOTE-0376,Styrax,Styrene derivatives,8046-19-3,Base,Medium,"Leather, Amber",Resin,Balsamic / Smoky,Smoky balsam,300+,300,Low,4.6,0.005,24+,85.0,150.0,Alcohol,Styrax resin,Smoky balsam,9000-19-6
 NOTE-0309,Peru Balsam,Benzyl cinnamate,8007-00-9,Base,Medium,Amber,Resin,Sweet / Resinous,Warm vanilla,300+,300,Low,4.9,0.005,24+,90.0,150.0,Alcohol,Myroxylon tree,Sweet balsam,8007-00-9
 NOTE-0395,Tolu Balsam,Benzoic esters,9000-64-0,Base,Medium,Amber,Resin,Sweet / Resinous,Cinnamon vanilla,300+,300,Low,4.8,0.005,24+,90.0,150.0,Alcohol,Myroxylon balsamum,Warm balsam,9000-64-2
-NOTE-0284,Opoponax,Sesquiterpene resin,8016-37-3,Base,Medium,Amber,Resin,Sweet / Spicy,Sweet myrrh,300+,300,Low,4.7,0.005,24+,90.0,150.0,Alcohol,Commiphora resin,Sweet resin,8016-37-3
+NOTE-0284,Opoponax,Sesquiterpene resin,8021-36-1,Base,Medium,Amber,Resin,Sweet / Spicy,Sweet myrrh,300+,300,Low,4.7,0.005,24+,90.0,150.0,Alcohol,Commiphora resin,Sweet resin,8016-37-3
 NOTE-0075,Cade Oil,Phenolic tar,8013-10-3,Base,Strong,"Leather, Smoke",Phenolic Tar,Smoky / Leathery,"Burnt, tarry",300+,300,Low,4.3,0.005,24+,95.0,160.0,Alcohol,Juniper wood,Smoky leather tar,8000-27-9
-NOTE-0762,Fir Balsam Absolute,Bornyl acetate rich,8021-27-2,Heart/Base,Medium,"Green, Woody",Terpenoid Resin,Green / Balsamic,"Pine, resin",196.29,230,Medium,4.1,0.02,8–12,55.0,75.0,Alcohol,Abies balsamea,Green balsamic pine,8021-27-2
+NOTE-0762,Fir Balsam Absolute,Bornyl acetate rich,90028-76-5,Heart/Base,Medium,"Green, Woody",Terpenoid Resin,Green / Balsamic,"Pine, resin",196.29,230,Medium,4.1,0.02,8–12,55.0,75.0,Alcohol,Abies balsamea,Green balsamic pine,8021-27-2
 NOTE-0763,Pine Needle Oil,α-Pinene rich,8002-09-3,Top,Medium,"Green, Fresh",Monoterpene,Green / Fresh,Sharp pine,136.24,156,High,2.8,0.02,1–2,18.0,45.0,Alcohol,Pine needles,Crisp pine freshness,8002-09-3
 NOTE-0764,Cypress Oil,α-Pinene rich,8013-86-3,Top/Heart,Medium,"Woody, Green",Monoterpene,Woody / Green,Dry conifer,136.24,156,Medium,3.0,0.02,2–3,22.0,45.0,Alcohol,Cypress,Dry green wood,8013-86-3
 NOTE-0765,Juniper Berry Oil,α-Pinene rich,8012-91-7,Top,Medium,"Aromatic, Fresh",Monoterpene,Aromatic / Gin,"Fresh, resinous",136.24,156,High,2.7,0.02,1–2,18.0,45.0,Alcohol,Juniper berries,Gin-like freshness,8012-91-7
-NOTE-0766,Spruce Oil,Bornyl acetate rich,8021-29-4,Top/Heart,Medium,"Green, Woody",Terpenoid,Green / Resinous,"Fir, resin",196.29,230,Medium,4.0,0.02,2–4,28.0,75.0,Alcohol,Spruce needles,Resinous green,8021-29-4
+NOTE-0766,Spruce Oil,Bornyl acetate rich,,Top/Heart,Medium,"Green, Woody",Terpenoid,Green / Resinous,"Fir, resin",196.29,230,Medium,4.0,0.02,2–4,28.0,75.0,Alcohol,Spruce needles,Resinous green,8021-29-4
 NOTE-0535,Rosemary Oil,"1,8-Cineole rich",8000-25-7,Top,Medium,Aromatic,Terpenoid,Herbal / Fresh,Camphoraceous,154.25,176,High,2.8,0.02,1–2,18.0,49.0,Alcohol,Rosemary leaves,Fresh herbal,8000-25-7
 NOTE-0636,Sage Oil,Thujone rich,8016-65-7,Top,Medium,Aromatic,Terpenoid,Herbal / Dry,Dry herbal,152.23,200,Medium,2.7,0.02,1–2,18.0,65.0,Alcohol,Sage leaves,Dry herbal,8016-65-7
 NOTE-0451,Clary Sage Oil,Linalyl acetate rich,8016-63-5,Top/Heart,Medium,"Aromatic, Amber",Terpenoid,Herbal / Sweet,Musky herbal,196.29,220,Medium,3.0,0.02,3–4,28.0,74.0,Alcohol,Clary sage,Sweet herbal,8016-63-5
@@ -315,7 +315,7 @@ NOTE-0558,Thyme Oil,Thymol rich,8007-46-3,Top,Medium,Aromatic,Phenolic,Herbal / 
 NOTE-0557,Basil Oil,Estragole rich,8015-73-4,Top,Medium,Aromatic,Phenylpropene,Herbal / Sweet,Sweet green,148.2,216,Medium,2.7,0.02,1–2,18.0,87.0,Alcohol,Basil,Sweet herb,8015-73-4
 NOTE-0447,Lavender Absolute,Linalool rich,8000-28-0,Heart,Medium,"Aromatic, Floral",Terpenoid,Floral / Herbal,Soft floral,154.25,198,Medium,2.9,0.02,4–6,40.0,78.0,Alcohol,Lavender,Soft aromatic floral,8000-28-0
 NOTE-0767,Hyssop Oil,Pinocamphone rich,8006-83-5,Top,Medium,Aromatic,Terpenoid,Herbal / Green,Sharp herb,152.23,200,Medium,2.6,0.02,1–2,18.0,65.0,Alcohol,Hyssop,Sharp green herb,8006-83-5
-NOTE-0768,Artemisia Oil,Thujone rich,8007-43-2,Top,Medium,Aromatic,Terpenoid,Herbal / Bitter,Bitter green,152.23,200,Medium,2.7,0.02,1–2,18.0,65.0,Alcohol,Wormwood,Bitter herb,8007-43-2
+NOTE-0768,Artemisia Oil,Thujone rich,8008-93-3,Top,Medium,Aromatic,Terpenoid,Herbal / Bitter,Bitter green,152.23,200,Medium,2.7,0.02,1–2,18.0,65.0,Alcohol,Wormwood,Bitter herb,8007-43-2
 NOTE-0769,Tarragon Oil,Estragole rich,8016-88-4,Top,Medium,Aromatic,Phenylpropene,Herbal / Anise,Sweet anise,148.2,216,Medium,2.7,0.02,1–2,18.0,87.0,Alcohol,Tarragon,Sweet anise herb,8016-88-4
 NOTE-0770,Bay Leaf Oil,Eugenol rich,8006-78-8,Top,Medium,"Spicy, Aromatic",Phenolic,Spicy / Herbal,Warm clove,164.2,254,Medium,2.4,0.01,2–3,22.0,93.0,Alcohol,Bay leaves,Warm herbal spice,8006-78-8
 NOTE-0771,Mint Oil,Menthol rich,8006-90-4,Top,Strong,Fresh,Terpenoid,Fresh / Cooling,Icy mint,156.27,212,High,3.4,0.02,1–2,18.0,75.0,Alcohol,Mint leaves,Cooling freshness,8006-90-4
@@ -324,45 +324,45 @@ NOTE-0773,Eucalyptus Oil,"1,8-Cineole",8000-48-4,Top,Strong,Fresh,Terpenoid,Fres
 NOTE-0774,Camphor,Camphor,76-22-2,Top,Strong,Medicinal,Terpenoid Ketone,Medicinal / Fresh,Cooling,152.23,204,High,2.4,0.02,1–2,18.0,65.0,Alcohol,Camphor tree,Cooling camphor,76-22-2
 NOTE-0775,Wintergreen Oil,Methyl salicylate,68917-75-9,Top,Medium,Medicinal,Aromatic Ester,Medicinal / Sweet,Sweet mint,152.15,220,Medium,2.5,0.02,1–2,18.0,96.0,Alcohol,Wintergreen,Sweet medicinal,68917-75-9
 NOTE-0776,Orange Oil Sweet,Limonene rich,8008-57-9,Top,Medium,Citrus,Monoterpene,Citrus / Sweet,Juicy orange peel,136.24,176,High,4.5,0.02,1–2,15.0,48.0,Alcohol,Sweet orange peel,Bright sweet citrus,8008-57-9
-NOTE-0777,Bitter Orange Oil,Limonene rich,8006-90-4,Top,Medium,Citrus,Monoterpene,Citrus / Bitter,Dry orange peel,136.24,176,High,4.4,0.02,1–2,15.0,48.0,Alcohol,Bitter orange peel,Dry citrus bite,8006-90-4
+NOTE-0777,Bitter Orange Oil,Limonene rich,68916-04-1,Top,Medium,Citrus,Monoterpene,Citrus / Bitter,Dry orange peel,136.24,176,High,4.4,0.02,1–2,15.0,48.0,Alcohol,Bitter orange peel,Dry citrus bite,8006-90-4
 NOTE-0491,Petitgrain Oil,Linalyl acetate rich,8014-17-3,Top,Medium,"Citrus, Aromatic",Terpenoid,Citrus / Green,Green woody citrus,196.29,220,Medium,3.0,0.02,2–3,22.0,74.0,Alcohol,Orange leaves,Green citrus,8014-17-3
 NOTE-0530,Neroli Oil,Linalool rich,8016-38-4,Top/Heart,Medium,"Floral, Citrus",Terpenoid,Floral / Citrus,Fresh orange blossom,154.25,198,Medium,2.9,0.01,3–4,28.0,78.0,Alcohol,Orange blossom,Bright floral citrus,8016-38-4
 NOTE-0654,Mandarin Oil,Limonene rich,8008-31-9,Top,Medium,Citrus,Monoterpene,Citrus / Sweet,Soft juicy citrus,136.24,176,High,4.2,0.02,1–2,15.0,48.0,Alcohol,Mandarin peel,Gentle citrus,8008-31-9
-NOTE-0778,Clementine Oil,Limonene rich,8008-56-8,Top,Medium,Citrus,Monoterpene,Citrus / Sweet,Candy-like citrus,136.24,176,High,4.2,0.02,1–2,15.0,48.0,Alcohol,Clementine peel,Sweet citrus,8008-56-8
+NOTE-0778,Clementine Oil,Limonene rich,,Top,Medium,Citrus,Monoterpene,Citrus / Sweet,Candy-like citrus,136.24,176,High,4.2,0.02,1–2,15.0,48.0,Alcohol,Clementine peel,Sweet citrus,8008-56-8
 NOTE-0526,Grapefruit Oil,Nootkatone rich,8016-20-4,Top,Medium,Citrus,Sesquiterpene,Citrus / Bitter,Dry grapefruit zest,218.33,279,Medium,3.6,0.01,1–2,15.0,110.0,Alcohol,Grapefruit peel,Bitter citrus freshness,8016-20-4
-NOTE-0779,Pomelo Oil,Limonene rich,8016-95-1,Top,Medium,Citrus,Monoterpene,Citrus / Fresh,Light citrus peel,136.24,176,High,4.3,0.02,1–2,15.0,48.0,Alcohol,Pomelo peel,Light citrus,8016-95-1
+NOTE-0779,Pomelo Oil,Limonene rich,,Top,Medium,Citrus,Monoterpene,Citrus / Fresh,Light citrus peel,136.24,176,High,4.3,0.02,1–2,15.0,48.0,Alcohol,Pomelo peel,Light citrus,8016-95-1
 NOTE-0780,Bergamot Oil FCF,Linalyl acetate rich,8007-75-8,Top,Medium,Citrus,Terpenoid,Citrus / Fresh,Bright clean citrus,196.29,220,Medium,3.0,0.01,2–3,22.0,74.0,Alcohol,Bergamot peel,Classic fresh citrus,8007-75-8
 NOTE-0781,Lime Oil Distilled,Limonene rich,8008-26-2,Top,Medium,Citrus,Monoterpene,Citrus / Sharp,Sharp green citrus,136.24,176,High,4.4,0.02,1–2,15.0,48.0,Alcohol,Lime peel,Sharp citrus,8008-26-2
 NOTE-0782,Lemon Oil Expressed,Limonene rich,8008-56-8,Top,Medium,Citrus,Monoterpene,Citrus / Fresh,Zesty lemon peel,136.24,176,High,4.5,0.02,1–2,15.0,48.0,Alcohol,Lemon peel,Zesty citrus,8008-56-8
 NOTE-0669,Citral,Geranial / Neral,5392-40-5,Top,Strong,Citrus,Aldehyde,Citrus / Lemongrass,Sharp lemon,152.23,229,Medium,3.5,0.02,1–2,18.0,90.0,Alcohol,Lemongrass,Sharp lemon aldehyde,5392-40-5
 NOTE-0783,Lemongrass Oil,Citral rich,8007-02-1,Top,Strong,"Citrus, Herbal",Terpenoid,Citrus / Herbal,Green lemon,152.23,229,Medium,3.4,0.02,1–2,18.0,77.0,Alcohol,Lemongrass,Green citrus,8007-02-1
 NOTE-0784,Litsea Cubeba Oil,Citral rich,68855-99-2,Top,Medium,Citrus,Terpenoid,Citrus / Fresh,Sweet lemon,152.23,229,Medium,3.4,0.02,1–2,18.0,77.0,Alcohol,Litsea fruit,Sweet lemon,68855-99-2
-NOTE-0785,Yuzu Oil,Limonene rich,233673-17-7,Top,Medium,Citrus,Monoterpene,Citrus / Aromatic,Dry aromatic citrus,136.24,176,High,4.3,0.02,1–2,15.0,48.0,Alcohol,Yuzu peel,Aromatic citrus,233673-17-7
-NOTE-0786,Kaffir Lime Leaf Oil,Citronellal rich,8007-02-1,Top,Medium,"Citrus, Green",Aldehyde,Citrus / Green,Green citrus leaf,154.25,206,Medium,3.1,0.02,1–2,18.0,80.0,Alcohol,Kaffir lime leaves,Green citrus,8007-02-1
-NOTE-0787,Sudachi Oil,Limonene rich,223748-40-9,Top,Medium,Citrus,Monoterpene,Citrus / Fresh,Dry citrus,136.24,176,High,4.2,0.02,1–2,15.0,48.0,Alcohol,Sudachi peel,Dry citrus,223748-40-9
-NOTE-0788,Calamansi Oil,Limonene rich,68917-75-9,Top,Medium,Citrus,Monoterpene,Citrus / Sweet,Sweet-tart citrus,136.24,176,High,4.3,0.02,1–2,15.0,48.0,Alcohol,Calamansi peel,Sweet tart citrus,68917-75-9
+NOTE-0785,Yuzu Oil,Limonene rich,233683-84-6,Top,Medium,Citrus,Monoterpene,Citrus / Aromatic,Dry aromatic citrus,136.24,176,High,4.3,0.02,1–2,15.0,48.0,Alcohol,Yuzu peel,Aromatic citrus,233673-17-7
+NOTE-0786,Kaffir Lime Leaf Oil,Citronellal rich,,Top,Medium,"Citrus, Green",Aldehyde,Citrus / Green,Green citrus leaf,154.25,206,Medium,3.1,0.02,1–2,18.0,80.0,Alcohol,Kaffir lime leaves,Green citrus,8007-02-1
+NOTE-0787,Sudachi Oil,Limonene rich,,Top,Medium,Citrus,Monoterpene,Citrus / Fresh,Dry citrus,136.24,176,High,4.2,0.02,1–2,15.0,48.0,Alcohol,Sudachi peel,Dry citrus,223748-40-9
+NOTE-0788,Calamansi Oil,Limonene rich,,Top,Medium,Citrus,Monoterpene,Citrus / Sweet,Sweet-tart citrus,136.24,176,High,4.3,0.02,1–2,15.0,48.0,Alcohol,Calamansi peel,Sweet tart citrus,68917-75-9
 NOTE-0789,Finger Lime Oil,Limonene rich,-,Top,Medium,Citrus,Monoterpene,Citrus / Green,Crisp citrus,136.24,176,High,4.4,0.02,1–2,15.0,48.0,Alcohol,Finger lime peel,Crisp citrus,-
 NOTE-0790,Citron Oil,Citronellal rich,8000-29-1,Top,Medium,Citrus,Aldehyde,Citrus / Fresh,Fresh citron peel,154.25,206,Medium,3.1,0.02,1–2,18.0,80.0,Alcohol,Citron peel,Fresh citrus,8000-29-1
 NOTE-0492,Jasmine Absolute,Benzyl acetate rich,90045-94-6,Heart,Strong,Floral,Aromatic Extract,Floral / Indolic,"Rich, narcotic",200+,300,Low,3.0,0.001,6–10,55.0,110.0,Alcohol,Jasmine flowers,Rich white floral,90045-94-6
 NOTE-0791,Sambac Jasmine,Indole rich,91770-14-8,Heart,Strong,Floral,Aromatic Extract,Floral / Animalic,"Green, indolic",200+,300,Low,3.1,0.001,6–10,55.0,110.0,Alcohol,Jasmine sambac,Green animalic floral,91770-14-8
-NOTE-0645,Tuberose Absolute,Methyl benzoate rich,84776-65-6,Heart,Strong,Floral,Aromatic Extract,Floral / Creamy,"Creamy, narcotic",220+,300,Low,3.2,0.001,8–12,60.0,115.0,Alcohol,Tuberose flowers,Creamy white floral,84776-65-6
-NOTE-0493,Orange Blossom Absolute,Linalool rich,8016-38-4,Heart,Medium,"Floral, Citrus",Aromatic Extract,Floral / Citrus,Honeyed floral,200+,300,Low,2.9,0.002,6–10,55.0,110.0,Alcohol,Orange blossom,Soft floral sweetness,8016-38-4
+NOTE-0645,Tuberose Absolute,Methyl benzoate rich,,Heart,Strong,Floral,Aromatic Extract,Floral / Creamy,"Creamy, narcotic",220+,300,Low,3.2,0.001,8–12,60.0,115.0,Alcohol,Tuberose flowers,Creamy white floral,84776-65-6
+NOTE-0493,Orange Blossom Absolute,Linalool rich,,Heart,Medium,"Floral, Citrus",Aromatic Extract,Floral / Citrus,Honeyed floral,200+,300,Low,2.9,0.002,6–10,55.0,110.0,Alcohol,Orange blossom,Soft floral sweetness,8016-38-4
 NOTE-0501,Rose Absolute,Phenethyl alcohol rich,8007-01-0,Heart,Medium,Floral,Aromatic Extract,Floral / Rosy,Deep rose,200+,300,Low,3.0,0.002,6–10,55.0,110.0,Alcohol,Rose petals,Classic rose depth,8007-01-0
 NOTE-0792,Bulgarian Rose Otto,Citronellol rich,8007-01-0,Heart,Medium,Floral,Terpenoid,Floral / Rosy,Fresh dewy rose,154.25,206,Medium,3.0,0.002,4–6,45.0,80.0,Alcohol,Rosa damascena,Fresh rose,8007-01-0
 NOTE-0494,Ylang Ylang Extra,Linalool rich,8006-81-3,Heart,Medium,"Floral, Exotic",Terpenoid,Floral / Sweet,"Banana, creamy",154.25,198,Medium,3.1,0.002,6–10,55.0,85.0,Alcohol,Ylang flowers,Creamy exotic floral,8006-81-3
-NOTE-0793,Magnolia Absolute,Linalool rich,91722-69-9,Heart,Medium,Floral,Aromatic Extract,Floral / Lemon,Soft citrus floral,180+,300,Low,2.8,0.002,6–10,55.0,110.0,Alcohol,Magnolia flowers,Lemon-floral softness,91722-69-9
-NOTE-0794,Champaca Absolute,Linalool rich,8006-71-5,Heart,Medium,Floral,Aromatic Extract,Floral / Spicy,Tea-like floral,200+,300,Low,3.0,0.002,6–10,55.0,110.0,Alcohol,Michelia champaca,Warm floral tea,8006-71-5
+NOTE-0793,Magnolia Absolute,Linalool rich,,Heart,Medium,Floral,Aromatic Extract,Floral / Lemon,Soft citrus floral,180+,300,Low,2.8,0.002,6–10,55.0,110.0,Alcohol,Magnolia flowers,Lemon-floral softness,91722-69-9
+NOTE-0794,Champaca Absolute,Linalool rich,,Heart,Medium,Floral,Aromatic Extract,Floral / Spicy,Tea-like floral,200+,300,Low,3.0,0.002,6–10,55.0,110.0,Alcohol,Michelia champaca,Warm floral tea,8006-71-5
 NOTE-0795,Osmanthus Absolute,β-Ionone rich,92347-21-2,Heart,Medium,"Floral, Fruity",Aromatic Extract,Floral / Fruity,Apricot leather,200+,300,Low,3.1,0.001,8–12,60.0,115.0,Alcohol,Osmanthus flowers,Apricot floral leather,92347-21-2
 NOTE-0480,Violet Leaf Absolute,Ionone rich,8024-08-6,Heart,Medium,"Green, Floral",Aromatic Extract,Green / Floral,Green violet,180+,300,Low,3.0,0.002,6–10,55.0,110.0,Alcohol,Violet leaves,Green leafy floral,8024-08-6
-NOTE-0581,Iris Butter,Irone rich,8001-82-7,Base,Medium,Powdery,Aromatic Ketone,Powdery / Floral,Soft powder,300+,300,Low,4.0,0.001,24+,85.0,150.0,Alcohol,Iris rhizome,Luxurious powder,8001-82-7
-NOTE-0796,Orris Absolute,Irone rich,8001-82-7,Base,Medium,Powdery,Aromatic Extract,Powdery / Floral,Violet powder,300+,300,Low,4.0,0.001,24+,85.0,150.0,Alcohol,Iris root,Powdery elegance,8001-82-7
+NOTE-0581,Iris Butter,Irone rich,8002-73-1,Base,Medium,Powdery,Aromatic Ketone,Powdery / Floral,Soft powder,300+,300,Low,4.0,0.001,24+,85.0,150.0,Alcohol,Iris rhizome,Luxurious powder,8001-82-7
+NOTE-0796,Orris Absolute,Irone rich,90045-89-9,Base,Medium,Powdery,Aromatic Extract,Powdery / Floral,Violet powder,300+,300,Low,4.0,0.001,24+,85.0,150.0,Alcohol,Iris root,Powdery elegance,8001-82-7
 NOTE-0483,Mimosa Absolute,Anisic rich,8006-67-5,Heart,Medium,Floral,Aromatic Extract,Floral / Powdery,Soft hay floral,200+,300,Low,2.8,0.002,6–10,55.0,110.0,Alcohol,Mimosa flowers,Soft powder floral,8006-67-5
 NOTE-0797,Heliotrope Absolute,Piperonal rich,120-57-0,Heart,Medium,Powdery,Aromatic Aldehyde,Powdery / Sweet,Almond vanilla,150.13,263,Medium,1.6,0.01,4–6,40.0,110.0,Alcohol,Synthetic,Almond powder,120-57-0
-NOTE-0798,Narcissus Absolute,Indole rich,90064-26-3,Heart,Medium,Floral,Aromatic Extract,Floral / Green,Green indolic,200+,300,Low,3.1,0.001,6–10,55.0,110.0,Alcohol,Narcissus flowers,Green floral,90064-26-3
-NOTE-0799,Frangipani Absolute,Benzyl salicylate rich,8016-38-4,Heart,Medium,Floral,Aromatic Extract,Floral / Creamy,Creamy solar,200+,300,Low,3.0,0.002,6–10,55.0,110.0,Alcohol,Plumeria flowers,Solar floral,8016-38-4
+NOTE-0798,Narcissus Absolute,Indole rich,,Heart,Medium,Floral,Aromatic Extract,Floral / Green,Green indolic,200+,300,Low,3.1,0.001,6–10,55.0,110.0,Alcohol,Narcissus flowers,Green floral,90064-26-3
+NOTE-0799,Frangipani Absolute,Benzyl salicylate rich,,Heart,Medium,Floral,Aromatic Extract,Floral / Creamy,Creamy solar,200+,300,Low,3.0,0.002,6–10,55.0,110.0,Alcohol,Plumeria flowers,Solar floral,8016-38-4
 NOTE-0800,Lotus Absolute,Linalool rich,91770-15-9,Heart,Medium,"Floral, Aquatic",Aromatic Extract,Floral / Watery,Clean aquatic floral,180+,300,Low,2.7,0.002,4–6,45.0,105.0,Alcohol,Lotus flowers,Watery floral,91770-15-9
 NOTE-0801,Water Lily Absolute,Aldehyde rich,-,Heart,Medium,"Floral, Aquatic",Aromatic Extract,Floral / Watery,Fresh watery,180+,300,Low,2.7,0.002,4–6,45.0,105.0,Alcohol,Water lily,Clean aquatic floral,-
-NOTE-0802,Gardenia Absolute,Benzyl acetate rich,8006-71-5,Heart,Strong,Floral,Aromatic Extract,Floral / Creamy,Rich creamy,200+,300,Low,3.1,0.001,8–12,60.0,115.0,Alcohol,Gardenia flowers,Creamy white floral,8006-71-5
+NOTE-0802,Gardenia Absolute,Benzyl acetate rich,,Heart,Strong,Floral,Aromatic Extract,Floral / Creamy,Rich creamy,200+,300,Low,3.1,0.001,8–12,60.0,115.0,Alcohol,Gardenia flowers,Creamy white floral,8006-71-5
 NOTE-0656,Apple Lactone,δ-Decalactone,705-86-2,Heart,Medium,Fruity,Lactone,Fruity / Creamy,"Apple, creamy",170.25,282,Low,2.9,0.01,4–6,45.0,115.0,Alcohol,Synthetic,Creamy apple,705-86-2
 NOTE-0495,Ethyl Maltol,Ethyl maltol,4940-11-8,Heart,Strong,Gourmand,Pyranone,Sweet / Caramel,Cotton candy,140.14,161,Medium,1.3,0.001,4–6,45.0,77.0,Alcohol,Synthetic,Candy sweetness,4940-11-8
 NOTE-0657,Maltol,Maltol,118-71-8,Heart,Medium,Gourmand,Pyranone,Sweet / Caramel,Toasted sugar,126.11,161,Medium,0.9,0.01,3–5,40.0,77.0,Alcohol,Larch bark,Caramel sugar,118-71-8
@@ -370,7 +370,7 @@ NOTE-0599,Raspberry Ketone,4-(4-Hydroxyphenyl)-2-butanone,5471-51-2,Heart,Medium
 NOTE-0504,Damascenone,β-Damascenone,23696-85-7,Heart,Strong,"Floral, Fruity",Norisoprenoid,Fruity / Floral,"Apple, rose",190.28,285,Low,3.2,1e-05,6–8,55.0,110.0,Alcohol,Rose,Powerful fruity rose,23696-85-7
 NOTE-0588,Blackcurrant Bud,Cassis base,68648-86-2,Top/Heart,Strong,"Fruity, Green",Sulfurous,Fruity / Green,Catty cassis,200+,300,Low,3.0,0.001,3–5,35.0,120.0,Alcohol,Blackcurrant buds,Green cassis,68648-86-2
 NOTE-0803,Undecavertol,Undecavertol,81782-77-6,Top,Medium,Green,Alcohol,Green / Fruity,Green apple,170.29,240,Medium,3.4,0.01,2–3,22.0,90.0,Alcohol,Synthetic,Crisp green apple,81782-77-6
-NOTE-0804,Allyl Amyl Glycolate,Allyl amyl glycolate,67634-15-5,Top,Medium,Fruity,Ester,Fruity / Green,Pineapple,200.28,270,Medium,3.2,0.02,2–3,22.0,96.0,Alcohol,Synthetic,Juicy pineapple,67634-15-5
+NOTE-0804,Allyl Amyl Glycolate,Allyl amyl glycolate,67634-00-8,Top,Medium,Fruity,Ester,Fruity / Green,Pineapple,200.28,270,Medium,3.2,0.02,2–3,22.0,96.0,Alcohol,Synthetic,Juicy pineapple,67634-15-5
 NOTE-0805,Isoamyl Acetate,Isoamyl acetate,123-92-2,Top,Medium,Fruity,Ester,Fruity / Banana,Banana candy,130.18,142,High,2.3,0.02,1–2,18.0,33.0,Alcohol,Synthetic,Banana ester,123-92-2
 NOTE-0551,Ethyl Butyrate,Ethyl butyrate,105-54-4,Top,Medium,Fruity,Ester,Fruity / Pineapple,Juicy,116.16,121,High,1.9,0.02,1–2,18.0,25.0,Alcohol,Pineapple,Fresh fruit ester,105-54-4
 NOTE-0806,Methyl Anthranilate (Natural),Methyl anthranilate,134-20-3,Heart,Medium,"Fruity, Floral",Aromatic Ester,Fruity / Grape,Grape soda,151.16,256,Medium,2.1,0.01,4–6,40.0,98.0,Alcohol,Orange blossom,Grape floral,134-20-3
@@ -397,7 +397,7 @@ NOTE-0489,Aldehyde C-10,Decanal,112-31-2,Top,Strong,Aldehydic,Aliphatic Aldehyde
 NOTE-0474,Aldehyde C-11,Undecylenic aldehyde,112-44-7,Top,Strong,Aldehydic,Aldehyde,Aldehydic / Green,Metallic green,168.28,223,Medium,4.1,0.01,1–2,18.0,85.0,Alcohol,Synthetic,Soapy freshness,112-44-7
 NOTE-0464,Aldehyde C-12 MNA,Lauric aldehyde,110-41-8,Top,Strong,Aldehydic,Aldehyde,Aldehydic / Soapy,Clean waxy,184.32,254,Medium,4.5,0.01,1–2,18.0,92.0,Alcohol,Synthetic,Classic aldehyde,110-41-8
 NOTE-0560,Coriander Seed Oil,Linalool rich,8008-52-4,Top/Heart,Medium,"Spicy, Aromatic",Terpenoid Alcohol,Spicy / Fresh,Citrus spice,154.25,198,Medium,2.9,0.01,3–4,28.0,75.0,Alcohol,Coriander seed,Fresh spice,8008-52-4
-NOTE-0634,Pink Pepper Oil,Limonene rich,949495-38-5,Top,Medium,Spicy,Terpenoid,Spicy / Rosy,Fresh pepper,136.24,176,High,2.8,0.02,1–2,15.0,48.0,Alcohol,Pink peppercorn,Bright spice,949495-38-5
+NOTE-0634,Pink Pepper Oil,Limonene rich,68917-52-2,Top,Medium,Spicy,Terpenoid,Spicy / Rosy,Fresh pepper,136.24,176,High,2.8,0.02,1–2,15.0,48.0,Alcohol,Pink peppercorn,Bright spice,949495-38-5
 NOTE-0554,Black Pepper Oil,Caryophyllene rich,8006-82-4,Heart,Medium,Spicy,Sesquiterpene,Spicy / Dry,Sharp pepper,204.36,260,Low,4.3,0.01,4–6,35.0,110.0,Alcohol,Peppercorn,Dry spicy heat,8006-82-4
 NOTE-0550,Cardamom Oil,Cineole rich,8000-66-6,Top/Heart,Medium,Spicy,Monoterpene Oxide,Spicy / Fresh,Cool spice,154.25,176,Medium,2.8,0.01,3–4,28.0,65.0,Alcohol,Cardamom pods,Cool aromatic spice,8000-66-6
 NOTE-0635,Ginger Oil,Zingiberene rich,8007-08-7,Top/Heart,Medium,Spicy,Sesquiterpene,Spicy / Warm,Fresh ginger,204.36,250,Low,4.2,0.01,3–4,28.0,110.0,Alcohol,Ginger root,Warm spicy freshness,8007-08-7
@@ -419,7 +419,7 @@ NOTE-0467,Mate Absolute,Caffeine rich,91770-32-0,Heart/Base,Medium,Green,Alkaloi
 NOTE-0815,Tea Absolute,Polyphenol rich,84650-60-2,Heart,Medium,Aromatic,Polyphenolic,Green / Dry,Dry tea,180+,300,Low,1.8,0.01,6–10,45.0,110.0,Alcohol,Tea leaves,Dry tea,84650-60-2
 NOTE-0466,Black Tea Absolute,Polyphenol rich,-,Heart/Base,Medium,Smoky,Polyphenolic,Smoky / Dry,Smoky tea,180+,300,Low,1.9,0.01,8–12,55.0,120.0,Alcohol,Black tea,Smoky tea,-
 NOTE-0816,Oolong Tea Absolute,Polyphenol rich,-,Heart,Medium,Aromatic,Polyphenolic,Green / Floral,Light tea,180+,300,Low,1.8,0.01,6–10,45.0,110.0,Alcohol,Oolong tea,Light tea,-
-NOTE-0542,Coffee Absolute,Caffeine rich,84649-99-0,Base,Medium,Gourmand,Alkaloid Extract,Roasted / Bitter,Dark roast,200+,300,Low,1.5,0.005,12–24,65.0,130.0,Alcohol,Coffee beans,Roasted coffee,84649-99-0
+NOTE-0542,Coffee Absolute,Caffeine rich,,Base,Medium,Gourmand,Alkaloid Extract,Roasted / Bitter,Dark roast,200+,300,Low,1.5,0.005,12–24,65.0,130.0,Alcohol,Coffee beans,Roasted coffee,84649-99-0
 NOTE-0544,Cocoa Absolute,Theobromine rich,8002-31-1,Base,Medium,Gourmand,Alkaloid Extract,Gourmand / Bitter,Dark chocolate,200+,300,Low,1.8,0.005,12–24,65.0,130.0,Alcohol,Cocoa beans,Dark cocoa,8002-31-1
 NOTE-0817,Roasted Barley,Maltol rich,-,Base,Medium,Gourmand,Aromatic Lactone,Grain / Toasted,Toasty grain,150+,280,Low,1.4,0.01,8–12,55.0,120.0,Alcohol,Barley,Toasted grain,-
 NOTE-0818,Rice Steam Note,Aldehyde blend,-,Heart,Light,Soft Gourmand,Aldehyde Blend,Starchy / Soft,Steamed rice,140+,240,Medium,1.6,0.02,,,,,,,-
@@ -429,13 +429,13 @@ NOTE-0820,Java Vetiver,Vetiverone rich,8016-96-4,Base,Medium,Woody,Sesquiterpene
 NOTE-0454,Cedarwood Atlas,Cedrol rich,92201-55-3,Base,Medium,Woody,Sesquiterpene Alcohol,Woody / Dry,Pencil wood,222.37,260,Low,4.4,0.01,18–24,80.0,115.0,Alcohol,Cedarwood,Dry woody,92201-55-3
 NOTE-0459,Cedarwood Virginia,Cedrene rich,8000-27-9,Base,Medium,Woody,Sesquiterpene,Woody / Sweet,Soft wood,204.36,250,Low,4.3,0.01,18–24,80.0,110.0,Alcohol,Cedarwood,Sweet wood,8000-27-9
 NOTE-0632,Sandalwood Oil,Santalol rich,8006-87-9,Base,Medium,Woody,Sesquiterpene Alcohol,Woody / Creamy,Milky wood,222.37,300,Low,4.5,0.005,24+,90.0,140.0,Alcohol,Sandalwood,Creamy wood,8006-87-9
-NOTE-0821,Australian Sandalwood,Santalol rich,90106-38-0,Base,Medium,Woody,Sesquiterpene Alcohol,Woody / Dry,Dry sandal,222.37,300,Low,4.5,0.005,24+,90.0,140.0,Alcohol,Sandalwood,Dry sandalwood,90106-38-0
+NOTE-0821,Australian Sandalwood,Santalol rich,,Base,Medium,Woody,Sesquiterpene Alcohol,Woody / Dry,Dry sandal,222.37,300,Low,4.5,0.005,24+,90.0,140.0,Alcohol,Sandalwood,Dry sandalwood,90106-38-0
 NOTE-0822,Amyris Oil,Valerianol rich,8015-65-4,Base,Medium,Woody,Sesquiterpene Alcohol,Woody / Balsamic,Sweet wood,222+,300,Low,4.2,0.01,18–24,80.0,120.0,Alcohol,Amyris wood,Soft sandalwood,8015-65-4
 NOTE-0604,Patchouli Oil,Patchoulol rich,8014-09-3,Base,Strong,Woody,Sesquiterpene Alcohol,Woody / Earthy,Damp soil,222.37,280,Low,4.5,0.005,24+,90.0,120.0,Alcohol,Patchouli leaf,Earthy wood,8014-09-3
 NOTE-0515,Patchouli Heart,Patchoulol fraction,-,Base,Medium,Woody,Sesquiterpene Alcohol,Woody / Clean,Clean patchouli,222.37,280,Low,4.5,0.005,24+,90.0,120.0,Alcohol,Patchouli leaf,Refined patchouli,-
 NOTE-0823,Oakwood Absolute,Whiskey lactone rich,91770-28-4,Base,Medium,Woody,Lactone,Woody / Toasted,Toasted barrel,200+,300,Low,3.8,0.01,18–24,80.0,130.0,Alcohol,Oak wood,Barrel wood,91770-28-4
 NOTE-0472,Guaiac Wood Oil,Guaiol rich,8016-23-7,Base,Medium,Smoky,Sesquiterpene Alcohol,Woody / Smoky,"Tar, smoke",222.37,285,Low,4.4,0.005,18–24,85.0,125.0,Alcohol,Guaiac wood,Smoky wood,8016-23-7
-NOTE-0824,Palo Santo Oil,Limonene rich,959130-05-5,Base,Medium,Woody,Terpenoid,Woody / Citrus,Citrus wood,136.24,176,Medium,2.8,0.01,12–18,70.0,65.0,Alcohol,Palo santo,Sacred wood,959130-05-5
+NOTE-0824,Palo Santo Oil,Limonene rich,959130-05-3,Base,Medium,Woody,Terpenoid,Woody / Citrus,Citrus wood,136.24,176,Medium,2.8,0.01,12–18,70.0,65.0,Alcohol,Palo santo,Sacred wood,959130-05-5
 NOTE-0471,Birch Tar Rectified,Phenolic blend,8001-88-5,Base,Strong,"Leather, Smoky",Phenolic,Smoky / Leather,"Tar, smoke",200+,300,Low,4.0,0.0005,24+,90.0,140.0,Alcohol,Birch bark,Smoky leather,8001-88-5
 NOTE-0075,Cade Oil,Phenolic rich,8013-10-3,Base,Strong,Leather,Phenolic,Smoky / Tar,Burnt wood,200+,300,Low,4.2,0.0005,24+,90.0,140.0,Alcohol,Juniper wood,Burnt tar,8000-27-9
 NOTE-0825,Cypriol Oil (Nagarmotha),Cypriol rich,91745-46-9,Base,Medium,Woody,Sesquiterpene,Woody / Earthy,Dark root,220+,300,Low,4.4,0.005,24+,85.0,130.0,Alcohol,Cypriol root,Dark woody,91745-46-9
@@ -450,15 +450,15 @@ NOTE-0828,Benzoin Sumatra,Benzoic resin,9000-72-0,Base,Medium,Amber,Balsamic Res
 NOTE-0573,Styrax Resin,Cinnamic esters,8046-19-3,Base,Medium,"Amber, Leather",Balsamic Resin,Amber / Leather,Sweet leather,220+,300,Low,3.2,0.005,24+,90.0,140.0,Alcohol,Styrax bark,Sweet leather resin,8046-19-3
 NOTE-0309,Peru Balsam,Benzyl cinnamate,8007-00-9,Base,Medium,Amber,Balsamic Ester,Amber / Sweet,Vanilla spice,252.31,300,Low,3.1,0.005,24+,90.0,140.0,Alcohol,Myroxylon tree,Sweet balsam,8007-00-9
 NOTE-0395,Tolu Balsam,Benzyl benzoate rich,9000-64-0,Base,Medium,Amber,Balsamic Ester,Amber / Sweet,Warm resin,212.2,300,Low,3.0,0.005,24+,90.0,140.0,Alcohol,Myroxylon,Warm balsam,9000-64-0
-NOTE-0829,Opoponax Resin,Sesquiterpene resin,8016-37-3,Base,Medium,Amber,Resin,Amber / Smoky,Bitter balsam,240+,300,Low,4.2,0.005,24+,90.0,140.0,Alcohol,Commiphora,Bitter amber,8016-37-3
+NOTE-0829,Opoponax Resin,Sesquiterpene resin,8021-36-1,Base,Medium,Amber,Resin,Amber / Smoky,Bitter balsam,240+,300,Low,4.2,0.005,24+,90.0,140.0,Alcohol,Commiphora,Bitter amber,8016-37-3
 NOTE-0830,Myrrh Resin,Furanosesquiterpenes,9000-45-7,Base,Medium,Amber,Resin,Resinous / Bitter,Medicinal resin,230+,300,Low,4.0,0.005,24+,90.0,140.0,Alcohol,Commiphora,Dry resin,9000-45-7
 NOTE-0613,Frankincense Oil,Incensole acetate,8016-36-2,Base,Medium,Resinous,Terpenoid Resin,Resinous / Fresh,Lemon resin,252.4,300,Low,4.1,0.005,18–24,80.0,135.0,Alcohol,Boswellia,Sacred resin,8016-36-2
-NOTE-0689,Amber Xtreme,Amber Xtreme,1001252-96-7,Base,Strong,Amber,Aromatic Ketone,Amber / Woody,Dry amber,258.4,280,Low,5.0,0.001,24+,95.0,120.0,Alcohol,Synthetic,Powerful amber,1001252-96-7
+NOTE-0689,Amber Xtreme,Amber Xtreme,68901-15-5,Base,Strong,Amber,Aromatic Ketone,Amber / Woody,Dry amber,258.4,280,Low,5.0,0.001,24+,95.0,120.0,Alcohol,Synthetic,Powerful amber,1001252-96-7
 NOTE-0021,Ambroxan,Ambroxide,6790-58-5,Base,Medium,"Amber, Musk",Ambergris Derivative,Amber / Musky,Salty amber,236.35,300,Low,4.2,0.001,24+,90.0,130.0,Alcohol,Synthetic,Ambergris warmth,6790-58-5
 NOTE-0631,Cetalox,Ambroxide variant,3738-00-9,Base,Medium,Amber,Ambergris Derivative,Amber / Dry,Clean amber,236.35,300,Low,4.1,0.001,24+,90.0,130.0,Alcohol,Synthetic,Clean amber,3738-00-9
 NOTE-0684,Norlimbanol,Norlimbanol,70788-30-6,Base,Strong,"Woody, Amber",Polycyclic Amber,Woody / Amber,Dry woody,252.4,300,Low,5.1,0.001,24+,95.0,135.0,Alcohol,Synthetic,Extreme woody,70788-30-6
 NOTE-0650,Kephalis,Kephalis,,Base,Medium,Amber,Aromatic Ketone,Amber / Tobacco,Warm tobacco,252.4,280,Low,4.7,0.001,24+,90.0,120.0,Alcohol,Synthetic,Tobacco amber,
-NOTE-0556,Suederal,Suederal,1001252-96-7,Base,Medium,Leather,Aromatic Ketone,Leather / Suede,Soft leather,258.4,280,Low,4.6,0.001,24+,95.0,120.0,Alcohol,Synthetic,Suede softness,1001252-96-7
+NOTE-0556,Suederal,Suederal,61788-89-4,Base,Medium,Leather,Aromatic Ketone,Leather / Suede,Soft leather,258.4,280,Low,4.6,0.001,24+,95.0,120.0,Alcohol,Synthetic,Suede softness,1001252-96-7
 NOTE-0485,Isobutyl Quinoline,Isobutyl quinoline,65442-31-1,Base,Strong,Leather,Nitrogen Heterocycle,Leather / Bitter,Green leather,201.26,270,Low,3.5,0.0005,18–24,85.0,120.0,Alcohol,Synthetic,Bitter leather,65442-31-1
 NOTE-0605,Safraleine,Safraleine,54440-17-4,Base,Medium,Leather,Aromatic Aldehyde,Leather / Spicy,Warm leather,250+,280,Low,4.4,0.001,18–24,85.0,125.0,Alcohol,Synthetic,Modern leather,102353-43-9
 NOTE-0516,Castoreum Replacer,Phenolic blend,-,Base,Medium,Leather,Animalic Base,Leather / Animalic,Musky leather,250+,300,Low,4.3,0.001,24+,90.0,140.0,Alcohol,Synthetic,Animalic leather,-
@@ -480,8 +480,8 @@ NOTE-0713,Safrole,Safrole,94-59-7,Heart,Medium,Spicy,Phenylpropene,Spicy / Sweet
 NOTE-0836,Myristicin,Myristicin,607-91-0,Heart/Base,Medium,Spicy,Phenylpropene,Spicy / Warm,Nutmeg,192.21,276,Low,2.7,0.005,12–18,70.0,120.0,Alcohol,Nutmeg,Warm spice,607-91-0
 NOTE-0514,Nutmeg Oil,Sabinene rich,8008-45-5,Heart,Medium,Spicy,Terpenoid,Spicy / Warm,Nutty spice,136.24,176,Medium,2.8,0.01,6–10,55.0,80.0,Alcohol,Nutmeg seed,Warm nutty,8008-45-5
 NOTE-0837,Allspice Oil,Eugenol rich,8006-77-7,Heart,Medium,Spicy,Phenolic Terpene,Spicy / Sweet,Clove-cinnamon,164.2,254,Low,2.3,0.005,12–18,70.0,120.0,Alcohol,Pimento berry,Warm spice,8006-77-7
-NOTE-0838,Fenugreek Absolute,Sotolone rich,8016-87-9,Base,Strong,Gourmand,Lactone,Sweet / Maple,Maple syrup,128.17,180,Medium,1.3,0.001,18–24,80.0,120.0,Alcohol,Fenugreek seed,Maple sweetness,8016-87-9
-NOTE-0658,Maple Lactone,Sotolone,28664-35-9,Base,Strong,Gourmand,Lactone,Sweet / Gourmand,Burnt sugar,128.17,180,Medium,1.3,0.001,18–24,,,,,,28664-35-9
+NOTE-0838,Fenugreek Absolute,Sotolone rich,,Base,Strong,Gourmand,Lactone,Sweet / Maple,Maple syrup,128.17,180,Medium,1.3,0.001,18–24,80.0,120.0,Alcohol,Fenugreek seed,Maple sweetness,8016-87-9
+NOTE-0658,Maple Lactone,Sotolone,,Base,Strong,Gourmand,Lactone,Sweet / Gourmand,Burnt sugar,128.17,180,Medium,1.3,0.001,18–24,,,,,,28664-35-9
 NOTE-0465,Musk Ketone,Musk ketone,81-14-1,Base,Medium,Musk,Nitro Musk,Musky / Sweet,Powdery musk,294.3,300,Low,4.3,0.001,24+,90.0,135.0,Alcohol,Synthetic,Classic powdery musk,81-14-1
 NOTE-0741,Musk Xylene,Musk xylene,81-15-2,Base,Medium,Musk,Nitro Musk,Musky / Sweet,Sweet clean musk,297.3,300,Low,4.5,0.001,24+,90.0,140.0,Alcohol,Synthetic,Warm musk,81-15-2
 NOTE-0505,Galaxolide,HHCB,1222-05-5,Base,Medium,Musk,Polycyclic Musk,Musky / Clean,Laundry musk,258.4,300,Low,5.3,0.001,24+,90.0,120.0,Alcohol,Synthetic,Clean modern musk,1222-05-5
@@ -491,15 +491,15 @@ NOTE-0666,Exaltolide,Exaltolide,0106-02-5,Base,Medium,Musk,Macrocyclic Musk,Musk
 NOTE-0609,Muscone,Muscone,541-91-3,Base,Strong,Musk,Macrocyclic Ketone,Musky / Animalic,Warm animalic,238.4,300,Low,4.8,0.0005,24+,95.0,140.0,Alcohol,Synthetic,Animalic musk,541-91-3
 NOTE-0610,Civetone,Civetone,542-46-1,Base,Strong,Animalic,Macrocyclic Ketone,Animalic / Musky,Warm skin,250.4,300,Low,4.9,0.0005,24+,95.0,145.0,Alcohol,Synthetic,Civet musk,542-46-1
 NOTE-0507,Ambrettolide,Ambrettolide,28645-51-4,Base,Medium,Musk,Macrocyclic Lactone,Musky / Sweet,Pear musk,268.4,300,Low,4.7,0.001,24+,90.0,140.0,Alcohol,Synthetic,Sweet macro musk,28645-51-4
-NOTE-0476,Habanolide,Habanolide,33704-61-9,Base,Medium,Musk,Macrocyclic Musk,Musky / Metallic,Clean metallic,272.4,300,Low,4.6,0.001,24+,90.0,135.0,Alcohol,Synthetic,Clean modern musk,33704-61-9
+NOTE-0476,Habanolide,Habanolide,111879-80-2,Base,Medium,Musk,Macrocyclic Musk,Musky / Metallic,Clean metallic,272.4,300,Low,4.6,0.001,24+,90.0,135.0,Alcohol,Synthetic,Clean modern musk,33704-61-9
 NOTE-0663,Aldehyde C-18,γ-Nonalactone,104-61-0,Heart/Base,Medium,Gourmand,Lactone,Creamy / Coconut,Milky coconut,170.25,280,Low,2.9,0.01,6–8,55.0,115.0,Alcohol,Synthetic,Coconut cream,104-61-0
 NOTE-0841,Lactonic Aldehyde,γ-Dodecalactone,2305-05-7,Heart/Base,Medium,Fruity,Lactone,Creamy / Peach,Creamy peach,198.3,290,Low,3.2,0.01,6–8,55.0,120.0,Alcohol,Synthetic,Peach cream,2305-05-7
 NOTE-0655,Aldehyde C-14,γ-Undecalactone,104-67-6,Heart,Medium,Fruity,Lactone,Fruity / Peach,Juicy peach,184.3,290,Low,3.0,0.01,4–6,45.0,118.0,Alcohol,Synthetic,Peach note,104-67-6
 NOTE-0497,Calone,Calone 1951,,Heart,Strong,Marine,Ketone,Marine / Watery,Sea breeze,198.3,290,Low,3.1,0.0005,6–10,55.0,120.0,Alcohol,Synthetic,Oceanic freshness,
 NOTE-0639,Helional,Helional,1205-17-0,Heart,Medium,Aquatic,Aldehyde,Watery / Floral,Fresh water,180.2,285,Low,2.7,0.005,6–10,55.0,115.0,Alcohol,Synthetic,Clean aquatic,1205-17-0
-NOTE-0651,Floralozone,Floralozone,67634-14-4,Top/Heart,Strong,Ozonic,Ketone,Ozonic / Floral,Airy ozone,208.3,280,Low,3.0,0.001,4–6,45.0,110.0,Alcohol,Synthetic,Airy ozone,67634-14-4
+NOTE-0651,Floralozone,Floralozone,,Top/Heart,Strong,Ozonic,Ketone,Ozonic / Floral,Airy ozone,208.3,280,Low,3.0,0.001,4–6,45.0,110.0,Alcohol,Synthetic,Airy ozone,67634-14-4
 NOTE-0640,Melonal,Melonal,106-72-9,Top,Medium,Aquatic,Aldehyde,Watery / Green,Melon water,170.2,260,Medium,2.4,0.01,2–3,22.0,95.0,Alcohol,Synthetic,Watery melon,106-72-9
-NOTE-0652,Aquozone,Aquozone,4176-36-9,Heart,Strong,Marine,Ketone,Marine / Fresh,Ocean air,210.3,290,Low,3.2,0.001,6–10,55.0,120.0,Alcohol,Synthetic,Marine breeze,4176-36-9
+NOTE-0652,Aquozone,Aquozone,68555-66-8,Heart,Strong,Marine,Ketone,Marine / Fresh,Ocean air,210.3,290,Low,3.2,0.001,6–10,55.0,120.0,Alcohol,Synthetic,Marine breeze,4176-36-9
 NOTE-0475,Seaweed Absolute,Algal compounds,91770-38-6,Base,Medium,Marine,Marine Extract,Marine / Salty,"Iodine, sea",200+,300,Low,3.8,0.001,18–24,80.0,140.0,Alcohol,Seaweed,Oceanic depth,91770-38-6
 NOTE-0842,Ambermarine Base,Ambroxide blend,-,Base,Medium,"Marine, Amber",Ambergris Base,Marine / Amber,Salty amber,240+,300,Low,4.2,0.001,24+,90.0,140.0,Alcohol,Synthetic,Marine amber,-
 NOTE-0193,Hedione,Methyl dihydrojasmonate,24851-98-7,Heart,Medium,Floral,Ester,Floral / Radiant,"Jasmine, airy",226.31,290,Low,3.1,0.01,6–10,55.0,110.0,Alcohol,Synthetic,Radiant jasmine lift,24851-98-7
@@ -555,13 +555,13 @@ NOTE-0839,Tonalide,AHTN,21145-77-7,Base,Medium,Musk,Polycyclic Musk,Musky / Swee
 NOTE-0508,Ethylene Brassylate,Ethylene brassylate,105-95-3,Base,Medium,Musk,Macrocyclic Musk,Musky / Sweet,Warm musk,270.4,300,Low,4.3,0.001,24+,95.0,145.0,Alcohol,Synthetic,Warm musk,105-95-3
 NOTE-0609,Muscone,Muscone,541-91-3,Base,Strong,Musk,Macrocyclic Musk,Musky / Animalic,Animalic musk,238.4,300,Low,4.1,0.0001,24+,95.0,145.0,Alcohol,Musk deer,Natural musk,541-91-3
 NOTE-0666,Exaltolide,Exaltolide,0106-02-5,Base,Medium,Musk,Macrocyclic Musk,Musky / Clean,Soft powder,254.4,300,Low,4.2,0.0005,24+,95.0,145.0,Alcohol,Synthetic,Elegant musk,0106-02-5
-NOTE-0476,Habanolide,Habanolide,34368-70-8,Base,Medium,Musk,Macrocyclic Musk,Musky / Metallic,Metallic clean,252.4,300,Low,4.4,0.0005,24+,95.0,145.0,Alcohol,Synthetic,Metallic musk,34368-70-8
-NOTE-0700,Velvione,Velvione,37609-25-9,Base,Medium,Musk,Macrocyclic Musk,Musky / Powdery,Soft velvet,270.4,300,Low,4.6,0.0005,24+,95.0,145.0,Alcohol,Synthetic,Powdery musk,37609-25-9
+NOTE-0476,Habanolide,Habanolide,111879-80-2,Base,Medium,Musk,Macrocyclic Musk,Musky / Metallic,Metallic clean,252.4,300,Low,4.4,0.0005,24+,95.0,145.0,Alcohol,Synthetic,Metallic musk,34368-70-8
+NOTE-0700,Velvione,Velvione,21944-95-6,Base,Medium,Musk,Macrocyclic Musk,Musky / Powdery,Soft velvet,270.4,300,Low,4.6,0.0005,24+,95.0,145.0,Alcohol,Synthetic,Powdery musk,37609-25-9
 NOTE-0610,Civetone,Civetone,542-46-1,Base,Strong,Animalic,Macrocyclic Ketone,Animalic / Musky,Warm animal,252.4,300,Low,4.2,0.0001,24+,95.0,145.0,Alcohol,Civet,Animalic musk,542-46-1
 NOTE-0516,Castoreum Replacer,Synthetic castoreum,-,Base,Medium,Leather,Animalic Base,Animalic / Leather,Leathery,260+,300,Low,4.8,0.001,24+,95.0,145.0,Alcohol,Synthetic,Leather base,-
 NOTE-0556,Suederal,Suederal,61788-89-4,Base,Medium,Leather,Leather Molecule,Leather / Soft,Suede leather,244.4,290,Low,4.3,0.001,24+,90.0,140.0,Alcohol,Synthetic,Soft suede,61788-89-4
 NOTE-0485,Isobutyl Quinoline,IBQ,93-19-6,Base,Strong,Leather,Quinoline,Leather / Smoky,Bitter leather,171.2,270,Low,3.3,0.001,18–24,85.0,130.0,Alcohol,Synthetic,Harsh leather,93-19-6
-NOTE-0605,Safraleine,Safraleine,54464-57-2,Base,Medium,Leather,Aromatic Aldehyde,Leather / Spicy,Saffron leather,230+,280,Low,4.4,0.001,24+,90.0,135.0,Alcohol,Synthetic,Modern leather,54464-57-2
+NOTE-0605,Safraleine,Safraleine,54440-17-4,Base,Medium,Leather,Aromatic Aldehyde,Leather / Spicy,Saffron leather,230+,280,Low,4.4,0.001,24+,90.0,135.0,Alcohol,Synthetic,Modern leather,54464-57-2
 NOTE-0452,Oakmoss Absolute,Evernia prunastri extract,90028-68-5,Base,Medium,"Chypre, Fougere",Lichen Extract,Mossy / Woody,Damp forest,300+,300,Low,4.5,0.001,24+,90.0,140.0,Alcohol,Oakmoss,Classic chypre base,90028-68-5
 NOTE-0857,Tree Moss,Evernia furfuracea,90028-67-4,Base,Medium,Chypre,Lichen Extract,Mossy / Dry,Dry moss,300+,300,Low,4.3,0.001,24+,90.0,140.0,Alcohol,Tree moss,Dry moss base,90028-67-4
 NOTE-0644,Veramoss,Synthetic oakmoss,-,Base,Medium,Fougere,Moss Base,Mossy / Woody,Clean moss,260+,300,Low,4.4,0.001,24+,90.0,140.0,Alcohol,Synthetic,Clean oakmoss,-
@@ -584,7 +584,7 @@ NOTE-0860,Cistus Oil,Cistus ladaniferus,89997-74-0,Base,Medium,Amber,Resin Oil,A
 NOTE-0021,Ambroxan,Ambroxide,6790-58-5,Base,Medium,"Amber, Woody",Amber Molecule,Amber / Woody,Dry amber,236.4,300,Low,4.2,0.001,48+,98.0,140.0,Alcohol,Synthetic,Modern amber fixative,6790-58-5
 NOTE-0631,Cetalox,Ambroxide,3738-00-9,Base,Medium,Amber,Amber Molecule,Amber / Clean,Clean amber,236.4,300,Low,4.1,0.001,48+,98.0,140.0,Alcohol,Synthetic,Smooth amber,3738-00-9
 NOTE-0737,Ambermax,Amber molecule,-,Base,Strong,Amber,Polycyclic,Amber / Woody,Dry woody amber,270+,300,Low,4.6,0.001,48+,98.0,150.0,Alcohol,Synthetic,Powerful amber,-
-NOTE-0684,Norlimbanol,Tetramethyl tetralin,54464-57-2,Base,Strong,Woody,Polycyclic,Woody / Amber,Dry wood,232.4,300,Low,4.8,0.001,48+,98.0,145.0,Alcohol,Synthetic,Strong woody base,54464-57-2
+NOTE-0684,Norlimbanol,Tetramethyl tetralin,70788-30-6,Base,Strong,Woody,Polycyclic,Woody / Amber,Dry wood,232.4,300,Low,4.8,0.001,48+,98.0,145.0,Alcohol,Synthetic,Strong woody base,54464-57-2
 NOTE-0630,Timberol,Woody alcohol,70788-30-6,Base,Medium,Woody,Terpene Alcohol,Woody / Dry,Dry cedar,222.4,280,Low,4.5,0.001,36+,95.0,140.0,Alcohol,Synthetic,Cedarwood note,70788-30-6
 NOTE-0650,Kephalis,Amber ketone,105102-19-0,Base,Medium,Amber,Ketone,Amber / Woody,Tobacco amber,258.4,300,Low,4.4,0.001,36+,92.0,145.0,Alcohol,Synthetic,Tobacco amber,105102-19-0
 NOTE-0087,Cashmeran,Tetramethyl acetyloctahydronaphthalene,33704-61-9,Base,Medium,"Woody, Musk",Polycyclic,Musky / Woody,Soft musk,206.3,300,Low,4.0,0.001,36+,90.0,135.0,Alcohol,Synthetic,Musky wood,33704-61-9
@@ -604,19 +604,19 @@ NOTE-0863,Boisiris,Orris wood base,-,Base,Medium,Woody,Aromatic Base,Woody / Pow
 NOTE-0457,Benzoin Siam,Styrax tonkinensis resin,9000-05-9,Base,Medium,"Amber, Oriental",Resin,Balsamic / Sweet,Vanilla-like resin,300+,300,Low,4.2,0.001,24+,90.0,135.0,Alcohol,Benzoin,Sweet balsamic fixative,9000-05-9
 NOTE-0828,Benzoin Sumatra,Styrax benzoin resin,9000-72-0,Base,Medium,Amber,Resin,Balsamic / Warm,Warm resin,300+,300,Low,4.3,0.001,24+,90.0,135.0,Alcohol,Benzoin,Warm resin base,9000-72-0
 NOTE-0606,Styrax Resinoid,Liquidambar orientalis,8046-19-3,Base,Medium,"Leather, Amber",Resin,Balsamic / Leathery,Smoky balsam,300+,300,Low,4.5,0.001,24+,92.0,145.0,Alcohol,Styrax,Smoky resin,8046-19-3
-NOTE-0284,Opoponax,Commiphora erythraea,8016-37-3,Base,Medium,"Amber, Oriental",Resin,Amber / Sweet,Sweet myrrh,300+,300,Low,4.4,0.001,24+,92.0,145.0,Alcohol,Opoponax,Sweet resin,8016-37-3
+NOTE-0284,Opoponax,Commiphora erythraea,8021-36-1,Base,Medium,"Amber, Oriental",Resin,Amber / Sweet,Sweet myrrh,300+,300,Low,4.4,0.001,24+,92.0,145.0,Alcohol,Opoponax,Sweet resin,8016-37-3
 NOTE-0614,Myrrh Resinoid,Commiphora myrrha,9000-45-7,Base,Medium,Incense,Resin,Balsamic / Bitter,Bitter resin,300+,300,Low,4.6,0.001,24+,95.0,145.0,Alcohol,Myrrh,Bitter incense,9000-45-7
 NOTE-0469,Frankincense CO2,Boswellia sacra,89957-98-2,Heart/Base,Medium,Incense,Resin Extract,Resinous / Citrus,Citrus resin,300+,300,Low,4.1,0.001,18–24,88.0,135.0,Alcohol,Frankincense,Bright incense,89957-98-2
 NOTE-0478,Elemi Resin,Canarium luzonicum,8023-89-0,Heart,Medium,Incense,Resin,Resinous / Fresh,Lemon-pepper,300+,280,Low,3.8,0.005,12–18,80.0,130.0,Alcohol,Elemi,Fresh resin,8023-89-0
 NOTE-0309,Peru Balsam,Myroxylon balsamum,8007-00-9,Base,Medium,Amber,Resin,Balsamic / Sweet,Vanilla balsam,300+,300,Low,4.5,0.001,24+,92.0,145.0,Alcohol,Peru balsam,Sweet balsam,8007-00-9
 NOTE-0395,Tolu Balsam,Myroxylon balsamum,8007-80-5,Base,Medium,Amber,Resin,Balsamic / Warm,Cinnamon balsam,300+,300,Low,4.4,0.001,24+,92.0,145.0,Alcohol,Tolu balsam,Warm balsam,8007-80-5
-NOTE-0676,Fir Balsam,Abies balsamea,8021-27-5,Heart,Medium,Woody,Balsam,Resinous / Green,Pine resin,204.3,250,Medium,3.2,0.01,12–18,70.0,110.0,Alcohol,Fir,Green resin,8021-27-5
-NOTE-0477,Galbanum Resin,Ferula galbaniflua,9000-88-6,Top/Heart,Strong,Green,Resin,Green / Bitter,Sharp green,300+,280,Medium,3.0,0.01,8–12,65.0,105.0,Alcohol,Galbanum,Bitter green,9000-88-6
+NOTE-0676,Fir Balsam,Abies balsamea,90028-76-5,Heart,Medium,Woody,Balsam,Resinous / Green,Pine resin,204.3,250,Medium,3.2,0.01,12–18,70.0,110.0,Alcohol,Fir,Green resin,8021-27-5
+NOTE-0477,Galbanum Resin,Ferula galbaniflua,8023-91-4,Top/Heart,Strong,Green,Resin,Green / Bitter,Sharp green,300+,280,Medium,3.0,0.01,8–12,65.0,105.0,Alcohol,Galbanum,Bitter green,9000-88-6
 NOTE-0637,Galbanum Oil,Ferula galbaniflua,8023-91-4,Top,Strong,Green,Resin Oil,Green / Sharp,Cut stems,204.3,220,High,2.9,0.02,4–8,55.0,95.0,Alcohol,Galbanum,Sharp green,8023-91-4
 NOTE-0864,Olibanum Resinoid,Boswellia carterii,89957-98-2,Base,Medium,Incense,Resin,Resinous / Dry,Dry incense,300+,300,Low,4.3,0.001,24+,92.0,145.0,Alcohol,Frankincense,Dry incense,89957-98-2
-NOTE-0865,Fir Needle Oil,Abies sibirica,8021-29-7,Top,Medium,Aromatic,Needle Oil,Green / Pine,Fresh pine,154.2,155,High,2.5,0.05,2–4,45.0,85.0,Alcohol,Fir,Pine freshness,8021-29-7
+NOTE-0865,Fir Needle Oil,Abies sibirica,,Top,Medium,Aromatic,Needle Oil,Green / Pine,Fresh pine,154.2,155,High,2.5,0.05,2–4,45.0,85.0,Alcohol,Fir,Pine freshness,8021-29-7
 NOTE-0763,Pine Needle Oil,Pinus sylvestris,8002-09-3,Top,Medium,Aromatic,Needle Oil,Green / Terpene,Forest pine,136.2,155,High,2.4,0.05,2–4,45.0,85.0,Alcohol,Pine,Crisp pine,8002-09-3
-NOTE-0766,Spruce Oil,Picea abies,8021-48-1,Top,Medium,Aromatic,Needle Oil,Green / Resinous,Resin pine,136.2,155,High,2.6,0.05,2–4,45.0,85.0,Alcohol,Spruce,Fresh forest,8021-48-1
+NOTE-0766,Spruce Oil,Picea abies,,Top,Medium,Aromatic,Needle Oil,Green / Resinous,Resin pine,136.2,155,High,2.6,0.05,2–4,45.0,85.0,Alcohol,Spruce,Fresh forest,8021-48-1
 NOTE-0765,Juniper Berry Oil,Juniperus communis,8002-68-4,Top,Medium,Aromatic,Berry Oil,Aromatic / Fresh,Gin-like,136.2,175,High,2.8,0.05,3–5,50.0,90.0,Alcohol,Juniper,Crisp aromatic,8002-68-4
 NOTE-0866,Juniper Tar,Juniperus oxycedrus,8013-10-3,Base,Strong,Smoky,Tar Oil,Smoky / Woody,Dry smoke,300+,300,Low,4.6,0.001,24+,95.0,145.0,Alcohol,Juniper,Smoky wood,8000-27-9
 NOTE-0867,Pine Tar,Pinus species,8002-09-3,Base,Strong,Leather,Tar Distillate,Smoky / Resinous,Burnt pine,300+,300,Low,4.7,0.001,24+,95.0,145.0,Alcohol,Pine,Tar leather,8002-09-3
@@ -632,7 +632,7 @@ NOTE-0771,Mint Oil,Mentha piperita,8006-90-4,Top,Strong,Aromatic,Herb Oil,Aromat
 NOTE-0768,Artemisia Oil,Artemisia absinthium,8008-93-3,Top,Medium,Fougere,Herb Oil,Aromatic / Bitter,Bitter green,152.2,215,Medium,3.0,0.02,3–5,45.0,70.0,Alcohol,Wormwood,Bitter fougère,8008-93-3
 NOTE-0134,Coumarin,Coumarin,91-64-5,Base,Medium,Fougere,Lactone,Sweet / Hay,Sweet hay,146.1,302,Low,1.5,0.01,12–24,80.0,150.0,Alcohol,Tonka,Classic fougère,91-64-5
 NOTE-0496,Tonka Bean Absolute,Dipteryx odorata,8024-04-2,Base,Medium,Fougere,Seed Absolute,Sweet / Almond,Sweet hay,300+,300,Low,3.8,0.005,24+,90.0,145.0,Alcohol,Tonka,Sweet base,8024-04-2
-NOTE-0476,Habanolide,Macrocyclic musk,54816-69-6,Base,Medium,Fougere,Musk,Musky / Clean,Clean musk,252.4,300,Low,4.1,0.001,36+,95.0,140.0,Alcohol,Synthetic,Clean fixative,54816-69-6
+NOTE-0476,Habanolide,Macrocyclic musk,111879-80-2,Base,Medium,Fougere,Musk,Musky / Clean,Clean musk,252.4,300,Low,4.1,0.001,36+,95.0,140.0,Alcohol,Synthetic,Clean fixative,54816-69-6
 NOTE-0666,Exaltolide,Macrocyclic musk,0106-02-5,Base,Medium,Fougere,Musk,Musky / Sweet,Soft musk,240.4,300,Low,4.0,0.001,36+,95.0,140.0,Alcohol,Synthetic,Soft musk,0106-02-5
 NOTE-0505,Galaxolide,Polycyclic musk,1222-05-5,Base,Medium,Fougere,Musk,Musky / Clean,Laundry musk,258.4,300,Low,4.3,0.001,36+,95.0,140.0,Alcohol,Synthetic,Clean musk,1222-05-5
 NOTE-0507,Ambrettolide,Macrocyclic musk,28645-51-4,Base,Medium,Fougere,Musk,Musky / Fruity,Musky fruit,254.4,300,Low,4.2,0.001,36+,95.0,140.0,Alcohol,Synthetic,Fruity musk,28645-51-4
@@ -654,7 +654,7 @@ NOTE-0835,Isoeugenol,Isoeugenol,97-54-1,Heart,Medium,Spicy,Phenol,Spicy / Sweet,
 NOTE-0514,Nutmeg Oil,Myristica fragrans,8008-45-5,Heart,Medium,Spicy,Spice Oil,Spicy / Warm,Nutty spice,164.2,288,Medium,3.2,0.02,8–12,65.0,95.0,Alcohol,Nutmeg,Warm spice,8008-45-5
 NOTE-0550,Cardamom Oil,Elettaria cardamomum,8000-66-6,Top,Medium,Spicy,Spice Oil,Spicy / Fresh,Fresh spice,154.2,220,High,2.8,0.03,3–5,45.0,75.0,Alcohol,Cardamom,Fresh spice,8000-66-6
 NOTE-0560,Coriander Seed Oil,Coriandrum sativum,8008-52-4,Top,Medium,Aromatic,Spice Oil,Spicy / Citrus,Citrus spice,154.2,176,High,2.9,0.03,3–5,45.0,75.0,Alcohol,Coriander,Bright spice,8008-52-4
-NOTE-0634,Pink Pepper Oil,Schinus molle,90082-63-6,Top,Medium,Spicy,Berry Oil,Spicy / Fresh,Rosy pepper,154.2,176,High,2.7,0.03,3–5,45.0,75.0,Alcohol,Pink pepper,Fresh spice,90082-63-6
+NOTE-0634,Pink Pepper Oil,Schinus molle,68917-52-2,Top,Medium,Spicy,Berry Oil,Spicy / Fresh,Rosy pepper,154.2,176,High,2.7,0.03,3–5,45.0,75.0,Alcohol,Pink pepper,Fresh spice,90082-63-6
 NOTE-0554,Black Pepper Oil,Piper nigrum,8006-82-4,Top,Medium,Spicy,Spice Oil,Spicy / Dry,Dry pepper,136.2,175,High,2.6,0.03,3–5,45.0,75.0,Alcohol,Black pepper,Dry spice,8006-82-4
 NOTE-0635,Ginger Oil,Zingiber officinale,8007-08-7,Top,Medium,Spicy,Root Oil,Spicy / Fresh,Zesty spice,154.2,255,Medium,3.0,0.02,4–6,50.0,80.0,Alcohol,Ginger,Fresh spice,8007-08-7
 NOTE-0837,Allspice Oil,Pimenta dioica,8006-77-7,Heart,Medium,Spicy,Spice Oil,Spicy / Warm,Clove-like,164.2,280,Medium,3.1,0.02,6–10,55.0,90.0,Alcohol,Allspice,Warm spice,8006-77-7
@@ -665,10 +665,10 @@ NOTE-0526,Grapefruit Oil,Citrus paradisi,8016-20-4,Top,Medium,Citrus,Citrus Oil,
 NOTE-0869,Sweet Orange Oil,Citrus sinensis,8008-57-9,Top,Medium,Citrus,Citrus Oil,Citrus / Sweet,Juicy orange,136.2,176,High,2.4,0.05,1–3,25.0,50.0,Alcohol,Orange peel,Sweet citrus,8008-57-9
 NOTE-0491,Petitgrain Oil,Citrus aurantium,8014-17-3,Top,Medium,Fougere,Leaf Oil,Citrus / Green,Green citrus,154.2,176,High,2.7,0.03,2–4,35.0,55.0,Alcohol,Bitter orange leaf,Green citrus,8014-17-3
 NOTE-0530,Neroli Oil,Citrus aurantium flower,8016-38-4,Top/Heart,Medium,Floral,Floral Oil,Floral / Citrus,Bright floral citrus,154.2,175,Medium,2.9,0.02,4–6,45.0,65.0,Alcohol,Orange blossom,Floral citrus,8016-38-4
-NOTE-0493,Orange Blossom Absolute,Citrus aurantium,8016-38-4,Heart,Medium,Floral,Floral Absolute,Floral / Sweet,Honeyed floral,300+,300,Low,3.8,0.005,12–18,70.0,95.0,Alcohol,Orange blossom,Sweet white floral,8016-38-4
+NOTE-0493,Orange Blossom Absolute,Citrus aurantium,,Heart,Medium,Floral,Floral Absolute,Floral / Sweet,Honeyed floral,300+,300,Low,3.8,0.005,12–18,70.0,95.0,Alcohol,Orange blossom,Sweet white floral,8016-38-4
 NOTE-0654,Mandarin Oil,Citrus reticulata,8008-31-9,Top,Medium,Citrus,Citrus Oil,Citrus / Sweet,Soft citrus,136.2,176,High,2.4,0.05,1–3,25.0,50.0,Alcohol,Mandarin peel,Soft citrus,8008-31-9
-NOTE-0870,Blood Orange Oil,Citrus sinensis,8621-34-7,Top,Medium,Citrus,Citrus Oil,Citrus / Tart,Tart orange,136.2,176,High,2.5,0.05,1–3,25.0,50.0,Alcohol,Blood orange,Tart citrus,8621-34-7
-NOTE-0785,Yuzu Oil,Citrus junos,233412-07-3,Top,Medium,Citrus,Citrus Oil,Citrus / Green,Green citrus,136.2,176,High,2.6,0.05,1–3,25.0,50.0,Alcohol,Yuzu peel,Fresh green citrus,233412-07-3
+NOTE-0870,Blood Orange Oil,Citrus sinensis,,Top,Medium,Citrus,Citrus Oil,Citrus / Tart,Tart orange,136.2,176,High,2.5,0.05,1–3,25.0,50.0,Alcohol,Blood orange,Tart citrus,8621-34-7
+NOTE-0785,Yuzu Oil,Citrus junos,233683-84-6,Top,Medium,Citrus,Citrus Oil,Citrus / Green,Green citrus,136.2,176,High,2.6,0.05,1–3,25.0,50.0,Alcohol,Yuzu peel,Fresh green citrus,233412-07-3
 NOTE-0784,Litsea Cubeba Oil,Litsea cubeba,68855-99-2,Top,Medium,Citrus,Fruit Oil,Citrus / Lemongrass,Lemon-grass,154.2,176,High,2.6,0.05,2–4,35.0,55.0,Alcohol,Litsea,Lemongrass citrus,68855-99-2
 NOTE-0783,Lemongrass Oil,Cymbopogon citratus,8007-02-1,Top,Medium,Citrus,Grass Oil,Citrus / Green,Sharp lemon,152.2,225,Medium,2.8,0.03,2–4,35.0,65.0,Alcohol,Lemongrass,Sharp citrus,8007-02-1
 NOTE-0669,Citral,Geranial/Neral,5392-40-5,Top,Strong,Citrus,Aldehyde,Citrus / Lemon,Intense lemon,152.2,228,Medium,2.8,0.02,2–4,35.0,65.0,Alcohol,Lemongrass,Lemon aldehyde,5392-40-5
@@ -694,7 +694,7 @@ NOTE-0874,Damask Rose Oil,Rosa damascena,8007-01-0,Heart,Medium,Floral,Floral Oi
 NOTE-0875,Turkish Rose Absolute,Rosa damascena,90106-38-0,Heart,Medium,Floral,Floral Absolute,Floral / Honey,Honeyed rose,300+,300,Low,4.0,0.001,24+,85.0,145.0,Alcohol,Rose,Deep rose,90106-38-0
 NOTE-0527,Orris Butter,Iris pallida,8002-73-1,Base,Strong,Floral,Rhizome Butter,Powdery / Floral,Violet powder,300+,300,Low,4.5,0.0001,48+,95.0,150.0,Alcohol,Orris,Luxury powder,8002-73-1
 NOTE-0876,Irone Alpha,α-Irone,583-61-9,Base,Strong,Floral,Ketone,Powdery / Floral,Orris root,206.3,300,Low,3.5,0.0001,48+,95.0,145.0,Alcohol,Orris,Orris core,583-61-9
-NOTE-0877,Irone Beta,β-Irone,79-77-6,Base,Strong,Floral,Ketone,Powdery / Floral,Dry orris,206.3,300,Low,3.6,0.0001,48+,95.0,145.0,Alcohol,Orris,Dry powder,79-77-6
+NOTE-0877,Irone Beta,β-Irone,,Base,Strong,Floral,Ketone,Powdery / Floral,Dry orris,206.3,300,Low,3.6,0.0001,48+,95.0,145.0,Alcohol,Orris,Dry powder,79-77-6
 NOTE-0480,Violet Leaf Absolute,Viola odorata,8024-08-6,Heart,Medium,Green,Leaf Absolute,Green / Floral,Green violet,300+,300,Low,3.9,0.001,18–24,75.0,140.0,Alcohol,Violet,Green floral,8024-08-6
 NOTE-0878,Cassis Absolute,Ribes nigrum,91722-40-6,Top/Heart,Strong,Fruity,Fruit Absolute,Green / Fruity,Catty green,300+,300,Low,3.6,0.001,8–12,70.0,130.0,Alcohol,Blackcurrant,Green fruity,91722-40-6
 NOTE-0588,Blackcurrant Bud,Ribes nigrum,68606-83-7,Heart,Strong,Fruity,Bud Absolute,Green / Sulfurous,Catty green,300+,300,Low,3.7,0.0005,12–18,75.0,140.0,Alcohol,Blackcurrant,Powerful green,68606-83-7
@@ -712,10 +712,17 @@ NOTE-0840,Phantolide,Phantolide,15323-35-0,Base,Medium,Musk,Polycyclic Musk,Musk
 NOTE-0661,Romandolide,Romandolide,236391-76-7,Base,Medium,Musk,Macrocyclic Musk,Musky / Woody,Warm musk,280.4,300,Low,4.5,0.001,48+,98.0,145.0,Alcohol,Synthetic,Warm musk,236391-76-7
 NOTE-0700,Velvione,Velvione,3391-83-1,Base,Medium,Musk,Macrocyclic Musk,Musky / Creamy,Creamy musk,254.4,300,Low,4.3,0.001,48+,98.0,145.0,Alcohol,Synthetic,Soft musk,3391-83-1
 NOTE-0609,Muscone,Muscone,541-91-3,Base,Strong,Animalic,Macrocyclic Ketone,Musky / Animalic,Warm animal,238.4,300,Low,4.6,0.0005,72+,99.0,150.0,Alcohol,Synthetic,Classic musk,541-91-3
-NOTE-0881,Ambergris Tincture,Ambrein,6790-58-5,Base,Medium,Amber,Triterpene,Amber / Animalic,Salty amber,236.4,300,Low,4.8,0.0005,72+,99.0,150.0,Alcohol,Ambergris,Oceanic amber,6790-58-5
-NOTE-0882,Ambrein,Ambrein,6790-58-5,Base,Medium,Amber,Triterpene,Amber / Sweet,Warm amber,236.4,300,Low,4.8,0.0005,72+,99.0,150.0,Alcohol,Ambergris,Core amber,6790-58-5
+NOTE-0881,Ambergris Tincture,Ambrein,,Base,Medium,Amber,Triterpene,Amber / Animalic,Salty amber,236.4,300,Low,4.8,0.0005,72+,99.0,150.0,Alcohol,Ambergris,Oceanic amber,6790-58-5
+NOTE-0882,Ambrein,Ambrein,473-03-0,Base,Medium,Amber,Triterpene,Amber / Sweet,Warm amber,236.4,300,Low,4.8,0.0005,72+,99.0,150.0,Alcohol,Ambergris,Core amber,6790-58-5
 NOTE-0611,Castoreum Absolute,Castoreum,8023-83-4,Base,Strong,Leather,Animalic Absolute,Animalic / Leathery,Warm leather,300+,300,Low,4.9,0.0001,72+,99.0,150.0,Alcohol,Beaver castor,Animalic leather,8023-83-4
 NOTE-0883,Civet Absolute,Civetone,0126-11-4,Base,Strong,Animalic,Macrocyclic Ketone,Animalic / Musky,Warm civet,250.4,300,Low,4.7,0.0001,72+,99.0,150.0,Alcohol,Civet,Animalic depth,0126-11-4
 NOTE-0575,Beeswax Absolute,Beeswax extract,8012-89-3,Base,Medium,Amber,Wax Absolute,Honey / Waxy,Warm wax,300+,300,Low,4.6,0.001,48+,98.0,145.0,Alcohol,Beeswax,Honeyed wax,8012-89-3
 NOTE-0574,Honey Absolute,Honey extract,8028-66-8,Base,Medium,Gourmand,Animalic Absolute,Sweet / Animalic,Warm honey,300+,300,Low,4.5,0.001,36+,95.0,145.0,Alcohol,Honey,Sweet animalic,8028-66-8
 NOTE-0519,Tobacco Absolute,Nicotiana tabacum,8037-19-2,Base,Strong,Tobacco,Leaf Absolute,Sweet / Smoky,Honey tobacco,300+,300,Low,4.7,0.0005,48+,98.0,150.0,Alcohol,Tobacco leaf,Rich tobacco,8037-19-2
+NOTE-9001,Cade Oil Rectified,"Juniperus oxycedrus wood tar, rectified",8013-10-3,Base,Strong,,Phenolic Tar,Smoky / Leather,"Ashy, smoky, tar",,,Low,,,24,,,Oil soluble,Juniperus oxycedrus,Rectified cade oil — the only grade IFRA allows (IFRA_STD_119); PAH <= 1 ppb per supplier CoA,8013-10-3
+NOTE-9002,Vanilla Absolute,Vanilla planifolia bean extract,8024-06-4,Base,Strong,,Natural Extract,Sweet / Balsamic,"Sweet, creamy, balsamic, boozy",,,Very Low,,,24,,,Alcohol soluble,Vanilla planifolia,"Natural vanilla absolute (distinct from vanillin, the molecule dataset2 'Vanilla' stands for)",8024-06-4
+NOTE-9003,Cinnamon Bark Oil,Cinnamomum verum bark oil,8015-91-6,Heart,Strong,,Aromatic Aldehyde,Spicy / Warm,"Hot, sweet, cinnamon, cinnamic aldehyde",,,Low,,,6,,,Oil soluble,Cinnamomum verum bark,Bark oil (55-76 % cinnamic aldehyde) — capped 0.3 % by safety_caps.csv; NOT interchangeable with leaf oil,8015-91-6
+NOTE-9004,Geosmin,Geosmin,19700-21-1,Base,Strong,,Bicyclic Alcohol,Earthy / Wet,"Wet earth, petrichor, beetroot",182.30,270,Low,3.6,0.00001,12,,,Oil soluble,Synthetic (nature-identical),Extremely potent earthy molecule; used in traces (ppm),19700-21-1
+NOTE-9005,Davana Oil,Artemisia pallens oil,8016-03-3,Heart,Strong,,Terpenoid Ketone,Fruity / Herbal,"Fruity, apricot-tea, herbal, boozy",,,Low,,,6,,,Oil soluble,Artemisia pallens,Davana oil (davanone-rich),8016-03-3
+NOTE-9006,Mace Oil,Myristica fragrans aril oil,8007-12-3,Top/Heart,Medium,,Terpenoid,Spicy / Warm,"Warm nutmeg-like spice, fresher than nutmeg",,,Medium,,,4,,,Oil soluble,Myristica fragrans (mace),Carries safrole and methyl eugenol like nutmeg — constituents.csv covers it,8007-12-3
+NOTE-9007,Lentisque Absolute,Pistacia lentiscus absolute (mastic),61789-92-2,Heart,Medium,,Resin Extract,Green / Resinous,"Green, resinous, mastic, slightly floral",,,Low,,,10,,,Alcohol soluble,Pistacia lentiscus,Mastic / lentisque absolute,61789-92-2

@@ -152,8 +152,9 @@ def test_same_material_heuristic():
 
 def test_shared_cas_conflicts_on_real_data(data):
     shared = data.shared_cas
-    assert "54464-57-2" in shared                                           # Iso E Super's CAS on Safraleine etc.
+    assert "54464-57-2" not in shared                                       # Iso E Super's CAS removed from Safraleine etc. (2026-09-18)
     assert "8000-27-9" not in shared                                        # cade / juniper tar fixed to 8013-10-3 (2026-09-16)
+    assert len(shared) <= 10                                                # what remains is listed in data.shared_cas
     assert set(data.notes.loc[data.notes["Note_Name"].isin(["Cade Oil", "Juniper Tar"]), "CAS"]) == {"8013-10-3"}
     assert "8007-75-8" not in shared and "8016-36-2" not in shared          # bergamot variants; frankincense/olibanum
     assert any("shared by unrelated notes" in i.message for i in data.warnings())

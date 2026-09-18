@@ -7,47 +7,83 @@ NOTE-0605,Safraleine,Safraleine,102353-43-9,54440-17-4,54440-17-4,FIX,0.95,"proj
 NOTE-0376,Styrax,Styrene derivatives,9000-19-6,8046-19-3,8046-19-3,FIX,0.95,"official,project:ifra,same_note,sibling","8046-19-3 <- official,project:ifra,same_note,sibling; 101227-15-0 <- official,project:ifra; 8024-01-9 <- official,project:ifra; 94891-27-7 <- official,project:ifra",Yes,auto,
 NOTE-0395,Tolu Balsam,Benzoic esters,9000-64-2,9000-64-0,9000-64-0,FIX,0.90,"same_note,typo","9000-64-0 <- same_note,typo; 8007-80-5 <- same_note",Yes,auto,
 NOTE-0738,Vertofix,Woody ketone,55213-82-4,32388-55-9,32388-55-9,FIX,0.90,"pubchem,same_note","32388-55-9 <- pubchem,same_note | PubChem: Vertofix: 32388-55-9",Yes,auto,
-NOTE-0689,Amber Xtreme,Amber Xtreme,1001252-96-7,,68901-15-5,FLAG,0.60,same_note,68901-15-5 <- same_note,No,auto,1001252-96-7 is pasted on both Suederal and Amber Xtreme — wrong for at least one; PubChem has no entry
-NOTE-0737,Ambermax,Ambermax,71837-65-9,,,FLAG,0.00,,only suspect candidates (CAS also pasted on unrelated notes): 68155-66-8 <- same_note?,No,auto,
-NOTE-0652,Aquozone,Aquozone,4176-36-9,,68555-66-8,FLAG,0.60,same_note,68555-66-8 <- same_note,No,auto,
-NOTE-0768,Artemisia Oil,Thujone rich,8007-43-2,,8008-93-3,FLAG,0.60,same_note,8008-93-3 <- same_note,No,auto,
-NOTE-0870,Blood Orange Oil,Citrus sinensis,8621-34-7,,,FLAG,0.00,,no candidate from any source,No,auto,
-NOTE-0794,Champaca Absolute,Linalool rich,8006-71-5,,,FLAG,0.00,,no candidate from any source,No,auto,8006-71-5 is pasted on both Champaca and Gardenia — wrong for at least one; no verified CAS found
-NOTE-0707,Clearwood,Clearwood,110677-62-4,,84696-25-3,FLAG,0.60,same_note,84696-25-3 <- same_note,No,auto,
-NOTE-0707,Clearwood,Clearwood,1356815-19-9,,84696-25-3,FLAG,0.60,same_note,84696-25-3 <- same_note,No,auto,
-NOTE-0127,Coffee,Coffee absolute,84649-99-1,,84649-99-0,FLAG,0.60,"sibling?,typo","84649-99-0 <- sibling?,typo",No,auto,coffee (Coffea arabica) extract is usually 84650-00-0 — verify (ECHA/supplier CoA)
-NOTE-0722,Deertongue,Coumarin rich,90063-60-6,,,FLAG,0.00,,no candidate from any source,No,auto,
-NOTE-0838,Fenugreek Absolute,Sotolone rich,8016-87-9,,,FLAG,0.00,,only suspect candidates (CAS also pasted on unrelated notes): 28664-35-9 <- sibling?,No,auto,
-NOTE-0676,Fir Balsam,Abies balsamea,8021-27-5,,8021-27-0,FLAG,0.75,checkdigit,8021-27-0 <- checkdigit; 90028-76-5 <- same_note,No,auto,
-NOTE-0762,Fir Balsam Absolute,Bornyl acetate rich,8021-27-2,,8021-27-0,FLAG,0.75,checkdigit,8021-27-0 <- checkdigit; 90028-76-5 <- sibling,No,auto,
-NOTE-0865,Fir Needle Oil,Abies sibirica,8021-29-7,,,FLAG,0.00,,no candidate from any source,No,auto,Siberian fir needle oil (Abies sibirica) is usually 8021-29-2 (one digit from the bad value) — verify
-NOTE-0735,Galbanol,Galbanol,6812-07-5,,,FLAG,0.00,,no candidate from any source,No,auto,
-NOTE-0477,Galbanum Resin,Ferula galbaniflua,9000-88-6,,8023-91-4,FLAG,0.60,sibling,8023-91-4 <- sibling,No,auto,galbanum gum/resin is usually 9000-24-2 — verify
-NOTE-0802,Gardenia Absolute,Benzyl acetate rich,8006-71-5,,,FLAG,0.00,,no candidate from any source,No,auto,8006-71-5 is pasted on both Champaca and Gardenia — wrong for at least one; no verified CAS found
-NOTE-0476,Habanolide,Habanolide,1725-17-7,,111879-80-2,FLAG,0.60,pubchem,"111879-80-2 <- pubchem; 423773-57-3 <- pubchem; 34902-57-3 <- same_note; 33704-61-9 <- same_note? | PubChem: Habanolide: 111879-80-2,423773-57-3",No,auto,111879-80-2 is PubChem's (E)-isomer; 34902-57-3 (already on the note) is the unspecified-isomer CAS. 33704-61-9 on this note is CASHMERAN's CAS — remove it
-NOTE-0476,Habanolide,Habanolide,34368-70-8,,111879-80-2,FLAG,0.60,pubchem,"111879-80-2 <- pubchem; 423773-57-3 <- pubchem; 34902-57-3 <- same_note; 33704-61-9 <- same_note? | PubChem: Habanolide: 111879-80-2,423773-57-3",No,auto,111879-80-2 is PubChem's (E)-isomer; 34902-57-3 (already on the note) is the unspecified-isomer CAS. 33704-61-9 on this note is CASHMERAN's CAS — remove it
-NOTE-0476,Habanolide,Macrocyclic musk,54816-69-6,,111879-80-2,FLAG,0.60,pubchem,"111879-80-2 <- pubchem; 423773-57-3 <- pubchem; 34902-57-3 <- same_note; 33704-61-9 <- same_note? | PubChem: Habanolide: 111879-80-2,423773-57-3",No,auto,111879-80-2 is PubChem's (E)-isomer; 34902-57-3 (already on the note) is the unspecified-isomer CAS. 33704-61-9 on this note is CASHMERAN's CAS — remove it
-NOTE-0197,Honey,Phenylacetic acid rich,8006-66-2,,8028-66-8,FLAG,0.60,sibling,8028-66-8 <- sibling,No,auto,honey is usually 8028-66-8 — verify
-NOTE-0670,Iris (Orris),Irone,8015-13-9,,8002-73-1,FLAG,0.60,sibling,8002-73-1 <- sibling; 90045-89-9 <- same_note,No,auto,
-NOTE-0581,Iris Butter,Irone rich,8001-82-7,,8002-73-1,FLAG,0.60,sibling,8002-73-1 <- sibling; 90045-89-9 <- sibling,No,auto,iris butter == orris butter; dataset2 'Orris Butter' carries 8002-73-1
-NOTE-0650,Kephalis,Kephalis,65505-77-1,,36306-87-3,FLAG,0.60,pubchem,36306-87-3 <- pubchem; 105102-19-0 <- same_note | PubChem: Kephalis: 36306-87-3,No,auto,
-NOTE-0240,Lotus,Linalool rich,8024-92-6,,91770-15-9,FLAG,0.60,sibling,91770-15-9 <- sibling,No,auto,
-NOTE-0798,Narcissus Absolute,Indole rich,90064-26-3,,,FLAG,0.00,,no candidate from any source,No,auto,
-NOTE-0706,Okoumal,Okoumal,131675-38-0,,131812-51-6,FLAG,0.60,pubchem,"131812-51-6 <- pubchem; 131812-52-7 <- pubchem; 131812-67-4 <- pubchem | PubChem: Okoumal: 131812-67-4,131812-52-7,131812-51-6",No,auto,PubChem lists three isomer CAS; suppliers usually cite 131812-67-4
-NOTE-0796,Orris Absolute,Irone rich,8001-82-7,,8002-73-1,FLAG,0.60,sibling,8002-73-1 <- sibling; 90045-89-9 <- sibling,No,auto,orris absolute is usually 90045-89-9 (already on 'Iris (Orris)') — verify
-NOTE-0690,Palo Santo,Limonene rich,959130-05-6,,959130-05-3,FLAG,0.75,checkdigit,959130-05-3 <- checkdigit,No,auto,both Palo Santo rows share body 959130-05 with different check digits; the only valid check digit gives 959130-05-3 — verify
-NOTE-0824,Palo Santo Oil,Limonene rich,959130-05-5,,959130-05-3,FLAG,0.75,checkdigit,959130-05-3 <- checkdigit,No,auto,both Palo Santo rows share body 959130-05 with different check digits; the only valid check digit gives 959130-05-3 — verify
-NOTE-0634,Pink Pepper Oil,Limonene rich,949495-38-5,,68917-52-2,FLAG,0.60,project:safety,68917-52-2 <- project:safety; 90082-63-6 <- same_note; 8015-91-6 <- sibling?; 8016-20-4 <- same_note?,No,auto,safety_caps.csv already uses 68917-52-2 (Schinus molle oil) for this material
-NOTE-0779,Pomelo Oil,Limonene rich,8016-95-1,,,FLAG,0.00,,no candidate from any source,No,auto,
-NOTE-0475,Seaweed Absolute,Fucus extract,84650-40-6,,91770-38-6,FLAG,0.60,same_note,91770-38-6 <- same_note,No,auto,
-NOTE-0746,Serenolide,Serenolide,144676-02-0,,,FLAG,0.00,,no candidate from any source,No,auto,
-NOTE-0766,Spruce Oil,Bornyl acetate rich,8021-29-4,,,FLAG,0.00,,no candidate from any source,No,auto,
-NOTE-0766,Spruce Oil,Picea abies,8021-48-1,,,FLAG,0.00,,no candidate from any source,No,auto,
-NOTE-0787,Sudachi Oil,Limonene rich,223748-40-9,,,FLAG,0.00,,no candidate from any source,No,auto,
-NOTE-0556,Suederal,Suederal,1001252-96-7,,61788-89-4,FLAG,0.60,same_note,61788-89-4 <- same_note,No,auto,1001252-96-7 is pasted on both Suederal and Amber Xtreme — wrong for at least one; PubChem has no entry
-NOTE-0402,Tuberose,Methyl benzoate rich,8007-51-4,,,FLAG,0.00,,only suspect candidates (CAS also pasted on unrelated notes): 8014-17-3 <- same_note?,No,auto,
-NOTE-0645,Tuberose Absolute,Methyl benzoate rich,84776-65-6,,,FLAG,0.00,,only suspect candidates (CAS also pasted on unrelated notes): 8014-17-3 <- sibling?,No,auto,
-NOTE-0420,Violet Leaf,Ionones,8016-84-8,,8024-08-6,FLAG,0.60,sibling,8024-08-6 <- sibling,No,auto,violet leaf absolute is usually 8024-08-6 — verify; the row's Chemical_Name 'Ionones' is also wrong for a leaf absolute
-NOTE-0785,Yuzu Oil,Citrus junos,233412-07-3,,233683-84-6,FLAG,0.60,same_note,233683-84-6 <- same_note,No,auto,
-NOTE-0785,Yuzu Oil,Limonene rich,233673-17-7,,233683-84-6,FLAG,0.60,same_note,233683-84-6 <- same_note,No,auto,
-NOTE-0744,Zenolide,Zenolide,2445-80-5,,54982-83-1,FLAG,0.60,pubchem,"54982-83-1 <- pubchem; 5840-71-1 <- pubchem | PubChem: Zenolide: 54982-83-1,5840-71-1",No,auto,
+NOTE-0689,Amber Xtreme,Amber Xtreme,1001252-96-7,68901-15-5,68901-15-5,FIX,0.60,same_note,68901-15-5 <- same_note,Yes,ai,AI-decided 2026-09-18: same note's valid CAS
+NOTE-0737,Ambermax,Ambermax,71837-65-9,,,BLANK,0.00,,only suspect candidates (CAS also pasted on unrelated notes): 68155-66-8 <- same_note?,Yes,ai,AI-decided 2026-09-18: no verifiable CAS — removed (a missing CAS is safer than a wrong one; note becomes UNVERIFIED in safety)
+NOTE-0652,Aquozone,Aquozone,4176-36-9,68555-66-8,68555-66-8,FIX,0.60,same_note,68555-66-8 <- same_note,Yes,ai,AI-decided 2026-09-18: same note's valid CAS
+NOTE-0768,Artemisia Oil,Thujone rich,8007-43-2,8008-93-3,8008-93-3,FIX,0.60,same_note,8008-93-3 <- same_note,Yes,ai,AI-decided 2026-09-18: same note's valid CAS (Artemisia absinthium oil)
+NOTE-0870,Blood Orange Oil,Citrus sinensis,8621-34-7,,,BLANK,0.00,,no candidate from any source,Yes,ai,AI-decided 2026-09-18: no verifiable CAS — removed (a missing CAS is safer than a wrong one; note becomes UNVERIFIED in safety)
+NOTE-0794,Champaca Absolute,Linalool rich,8006-71-5,,,BLANK,0.00,,no candidate from any source,Yes,ai,AI-decided 2026-09-18: no verifiable CAS — removed (a missing CAS is safer than a wrong one; note becomes UNVERIFIED in safety)
+NOTE-0707,Clearwood,Clearwood,110677-62-4,84696-25-3,84696-25-3,FIX,0.60,same_note,84696-25-3 <- same_note,Yes,ai,AI-decided 2026-09-18: same note's valid CAS
+NOTE-0707,Clearwood,Clearwood,1356815-19-9,84696-25-3,84696-25-3,FIX,0.60,same_note,84696-25-3 <- same_note,Yes,ai,AI-decided 2026-09-18: same note's valid CAS
+NOTE-0127,Coffee,Coffee absolute,84649-99-1,,84649-99-0,BLANK,0.60,"sibling?,typo","84649-99-0 <- sibling?,typo",Yes,ai,AI-decided 2026-09-18: no verifiable CAS — removed (a missing CAS is safer than a wrong one; note becomes UNVERIFIED in safety)
+NOTE-0722,Deertongue,Coumarin rich,90063-60-6,,,BLANK,0.00,,no candidate from any source,Yes,ai,AI-decided 2026-09-18: no verifiable CAS — removed (a missing CAS is safer than a wrong one; note becomes UNVERIFIED in safety)
+NOTE-0838,Fenugreek Absolute,Sotolone rich,8016-87-9,,,BLANK,0.00,,only suspect candidates (CAS also pasted on unrelated notes): 28664-35-9 <- sibling?,Yes,ai,AI-decided 2026-09-18: no verifiable CAS — removed (a missing CAS is safer than a wrong one; note becomes UNVERIFIED in safety)
+NOTE-0676,Fir Balsam,Abies balsamea,8021-27-5,90028-76-5,8021-27-0,FIX,0.75,checkdigit,8021-27-0 <- checkdigit; 90028-76-5 <- same_note,Yes,ai,AI-decided 2026-09-18: same note's valid CAS (Abies balsamea extract)
+NOTE-0762,Fir Balsam Absolute,Bornyl acetate rich,8021-27-2,90028-76-5,8021-27-0,FIX,0.75,checkdigit,8021-27-0 <- checkdigit; 90028-76-5 <- sibling,Yes,ai,AI-decided 2026-09-18: sibling Fir Balsam (Abies balsamea extract)
+NOTE-0865,Fir Needle Oil,Abies sibirica,8021-29-7,,,BLANK,0.00,,no candidate from any source,Yes,ai,AI-decided 2026-09-18: no verifiable CAS — removed (a missing CAS is safer than a wrong one; note becomes UNVERIFIED in safety)
+NOTE-0735,Galbanol,Galbanol,6812-07-5,,,BLANK,0.00,,no candidate from any source,Yes,ai,AI-decided 2026-09-18: no verifiable CAS — removed (a missing CAS is safer than a wrong one; note becomes UNVERIFIED in safety)
+NOTE-0477,Galbanum Resin,Ferula galbaniflua,9000-88-6,8023-91-4,8023-91-4,FIX,0.60,sibling,8023-91-4 <- sibling,Yes,ai,AI-decided 2026-09-18: sibling Galbanum Oil (Ferula galbaniflua)
+NOTE-0802,Gardenia Absolute,Benzyl acetate rich,8006-71-5,,,BLANK,0.00,,no candidate from any source,Yes,ai,AI-decided 2026-09-18: no verifiable CAS — removed (a missing CAS is safer than a wrong one; note becomes UNVERIFIED in safety)
+NOTE-0476,Habanolide,Habanolide,1725-17-7,111879-80-2,111879-80-2,FIX,0.60,pubchem,"111879-80-2 <- pubchem; 423773-57-3 <- pubchem; 34902-57-3 <- same_note; 33704-61-9 <- same_note? | PubChem: Habanolide: 111879-80-2,423773-57-3",Yes,ai,AI-decided 2026-09-18: PubChem (E)-isomer CAS for Habanolide
+NOTE-0476,Habanolide,Habanolide,34368-70-8,111879-80-2,111879-80-2,FIX,0.60,pubchem,"111879-80-2 <- pubchem; 423773-57-3 <- pubchem; 34902-57-3 <- same_note; 33704-61-9 <- same_note? | PubChem: Habanolide: 111879-80-2,423773-57-3",Yes,ai,AI-decided 2026-09-18: PubChem
+NOTE-0476,Habanolide,Macrocyclic musk,54816-69-6,111879-80-2,111879-80-2,FIX,0.60,pubchem,"111879-80-2 <- pubchem; 423773-57-3 <- pubchem; 34902-57-3 <- same_note; 33704-61-9 <- same_note? | PubChem: Habanolide: 111879-80-2,423773-57-3",Yes,ai,AI-decided 2026-09-18: PubChem
+NOTE-0197,Honey,Phenylacetic acid rich,8006-66-2,8028-66-8,8028-66-8,FIX,0.60,sibling,8028-66-8 <- sibling,Yes,ai,AI-decided 2026-09-18: sibling Honey Absolute
+NOTE-0670,Iris (Orris),Irone,8015-13-9,90045-89-9,8002-73-1,FIX,0.60,sibling,8002-73-1 <- sibling; 90045-89-9 <- same_note,Yes,ai,AI-decided 2026-09-18: same note's valid CAS (Iris pallida extract)
+NOTE-0581,Iris Butter,Irone rich,8001-82-7,8002-73-1,8002-73-1,FIX,0.60,sibling,8002-73-1 <- sibling; 90045-89-9 <- sibling,Yes,ai,AI-decided 2026-09-18: sibling Orris Butter (same material)
+NOTE-0650,Kephalis,Kephalis,65505-77-1,36306-87-3,36306-87-3,FIX,0.60,pubchem,36306-87-3 <- pubchem; 105102-19-0 <- same_note | PubChem: Kephalis: 36306-87-3,Yes,ai,AI-decided 2026-09-18: PubChem
+NOTE-0240,Lotus,Linalool rich,8024-92-6,91770-15-9,91770-15-9,FIX,0.60,sibling,91770-15-9 <- sibling,Yes,ai,AI-decided 2026-09-18: sibling Lotus Absolute
+NOTE-0798,Narcissus Absolute,Indole rich,90064-26-3,,,BLANK,0.00,,no candidate from any source,Yes,ai,AI-decided 2026-09-18: no verifiable CAS — removed (a missing CAS is safer than a wrong one; note becomes UNVERIFIED in safety)
+NOTE-0706,Okoumal,Okoumal,131675-38-0,131812-67-4,131812-51-6,FIX,0.60,pubchem,"131812-51-6 <- pubchem; 131812-52-7 <- pubchem; 131812-67-4 <- pubchem | PubChem: Okoumal: 131812-67-4,131812-52-7,131812-51-6",Yes,ai,AI-decided 2026-09-18: PubChem isomer set; supplier-cited member
+NOTE-0796,Orris Absolute,Irone rich,8001-82-7,90045-89-9,8002-73-1,FIX,0.60,sibling,8002-73-1 <- sibling; 90045-89-9 <- sibling,Yes,ai,AI-decided 2026-09-18: sibling Iris (Orris) extract CAS
+NOTE-0690,Palo Santo,Limonene rich,959130-05-6,959130-05-3,959130-05-3,FIX,0.75,checkdigit,959130-05-3 <- checkdigit,Yes,ai,AI-decided 2026-09-18: check-digit repair corroborated by the Palo Santo Oil row
+NOTE-0824,Palo Santo Oil,Limonene rich,959130-05-5,959130-05-3,959130-05-3,FIX,0.75,checkdigit,959130-05-3 <- checkdigit,Yes,ai,AI-decided 2026-09-18: check-digit repair corroborated by the Palo Santo row
+NOTE-0634,Pink Pepper Oil,Limonene rich,949495-38-5,68917-52-2,68917-52-2,FIX,0.60,project:safety,68917-52-2 <- project:safety; 90082-63-6 <- same_note; 8015-91-6 <- sibling?; 8016-20-4 <- same_note?,Yes,ai,AI-decided 2026-09-18: safety_caps.csv (Schinus molle oil)
+NOTE-0779,Pomelo Oil,Limonene rich,8016-95-1,,,BLANK,0.00,,no candidate from any source,Yes,ai,AI-decided 2026-09-18: no verifiable CAS — removed (a missing CAS is safer than a wrong one; note becomes UNVERIFIED in safety)
+NOTE-0475,Seaweed Absolute,Fucus extract,84650-40-6,91770-38-6,91770-38-6,FIX,0.60,same_note,91770-38-6 <- same_note,Yes,ai,AI-decided 2026-09-18: same note's valid CAS (Fucus extract)
+NOTE-0746,Serenolide,Serenolide,144676-02-0,,,BLANK,0.00,,no candidate from any source,Yes,ai,AI-decided 2026-09-18: no verifiable CAS — removed (a missing CAS is safer than a wrong one; note becomes UNVERIFIED in safety)
+NOTE-0766,Spruce Oil,Bornyl acetate rich,8021-29-4,,,BLANK,0.00,,no candidate from any source,Yes,ai,AI-decided 2026-09-18: no verifiable CAS — removed (a missing CAS is safer than a wrong one; note becomes UNVERIFIED in safety)
+NOTE-0766,Spruce Oil,Picea abies,8021-48-1,,,BLANK,0.00,,no candidate from any source,Yes,ai,AI-decided 2026-09-18: no verifiable CAS — removed (a missing CAS is safer than a wrong one; note becomes UNVERIFIED in safety)
+NOTE-0787,Sudachi Oil,Limonene rich,223748-40-9,,,BLANK,0.00,,no candidate from any source,Yes,ai,AI-decided 2026-09-18: no verifiable CAS — removed (a missing CAS is safer than a wrong one; note becomes UNVERIFIED in safety)
+NOTE-0556,Suederal,Suederal,1001252-96-7,61788-89-4,61788-89-4,FIX,0.60,same_note,61788-89-4 <- same_note,Yes,ai,AI-decided 2026-09-18: same note's valid CAS
+NOTE-0402,Tuberose,Methyl benzoate rich,8007-51-4,,,BLANK,0.00,,only suspect candidates (CAS also pasted on unrelated notes): 8014-17-3 <- same_note?,Yes,ai,AI-decided 2026-09-18: no verifiable CAS — removed (a missing CAS is safer than a wrong one; note becomes UNVERIFIED in safety)
+NOTE-0645,Tuberose Absolute,Methyl benzoate rich,84776-65-6,,,BLANK,0.00,,only suspect candidates (CAS also pasted on unrelated notes): 8014-17-3 <- sibling?,Yes,ai,AI-decided 2026-09-18: no verifiable CAS — removed (a missing CAS is safer than a wrong one; note becomes UNVERIFIED in safety)
+NOTE-0420,Violet Leaf,Ionones,8016-84-8,8024-08-6,8024-08-6,FIX,0.60,sibling,8024-08-6 <- sibling,Yes,ai,AI-decided 2026-09-18: sibling Violet Leaf Absolute
+NOTE-0785,Yuzu Oil,Citrus junos,233412-07-3,233683-84-6,233683-84-6,FIX,0.60,same_note,233683-84-6 <- same_note,Yes,ai,AI-decided 2026-09-18: same note's valid CAS (Citrus junos)
+NOTE-0785,Yuzu Oil,Limonene rich,233673-17-7,233683-84-6,233683-84-6,FIX,0.60,same_note,233683-84-6 <- same_note,Yes,ai,AI-decided 2026-09-18: same note's valid CAS (Citrus junos)
+NOTE-0744,Zenolide,Zenolide,2445-80-5,54982-83-1,54982-83-1,FIX,0.60,pubchem,"54982-83-1 <- pubchem; 5840-71-1 <- pubchem | PubChem: Zenolide: 54982-83-1,5840-71-1",Yes,ai,AI-decided 2026-09-18: PubChem
+NOTE-0777,Bitter Orange Oil,,8006-90-4,68916-04-1,68916-04-1,FIX,0.85,shared-CAS audit,official IFRA table: Bitter orange peel oil (IFRA_STD); 8006-90-4 is peppermint oil,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0284,Opoponax,,8016-37-3,8021-36-1,8021-36-1,FIX,0.85,shared-CAS audit,official IFRA table: Opoponax (IFRA_STD_070); 8016-37-3 is myrrh oil,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0829,Opoponax Resin,,8016-37-3,8021-36-1,8021-36-1,FIX,0.85,shared-CAS audit,official IFRA table: Opoponax,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0185,Green Tea,,8015-73-4,84650-60-2,84650-60-2,FIX,0.85,shared-CAS audit,official IFRA table: Tea leaf absolute (Camellia sinensis); 8015-73-4 is basil oil,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0319,Pink Pepper,,8015-91-6,68917-52-2,68917-52-2,FIX,0.85,shared-CAS audit,safety_caps.csv Pink Pepper Oil (Schinus molle); 8015-91-6 is cinnamon oil,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0634,Pink Pepper Oil,,8016-20-4,68917-52-2,68917-52-2,FIX,0.85,shared-CAS audit,safety_caps.csv; 8016-20-4 is grapefruit oil,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0634,Pink Pepper Oil,,90082-63-6,68917-52-2,68917-52-2,FIX,0.85,shared-CAS audit,safety_caps.csv; unify on the Schinus molle oil CAS,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0684,Norlimbanol,,54464-57-2,70788-30-6,70788-30-6,FIX,0.85,shared-CAS audit,PubChem + IFRA; 54464-57-2 is Iso E Super,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0684,Norlimbanol,,68155-66-8,70788-30-6,70788-30-6,FIX,0.85,shared-CAS audit,PubChem + IFRA,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0605,Safraleine,,54464-57-2,54440-17-4,54440-17-4,FIX,0.85,shared-CAS audit,PubChem + safety_caps; 54464-57-2 is Iso E Super,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0476,Habanolide,,33704-61-9,111879-80-2,111879-80-2,FIX,0.85,shared-CAS audit,PubChem; 33704-61-9 is Cashmeran,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0644,Veramoss,,68155-66-8,4707-47-5,4707-47-5,FIX,0.85,shared-CAS audit,same molecule as Evernyl (methyl atrarate) — PubChem 4707-47-5,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0703,Fixolide,,1222-05-5,1506-02-1,1506-02-1,FIX,0.85,shared-CAS audit,PubChem resolves Fixolide to Tonalide (AHTN) 1506-02-1; 1222-05-5 is Galaxolide,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0804,Allyl Amyl Glycolate,,67634-15-5,67634-00-8,67634-00-8,FIX,0.85,shared-CAS audit,PubChem; 67634-15-5 is Floralozone,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0882,Ambrein,,6790-58-5,473-03-0,473-03-0,FIX,0.85,shared-CAS audit,PubChem; 6790-58-5 is Ambroxan,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0700,Velvione,,37609-25-9,21944-95-6,21944-95-6,FIX,0.85,shared-CAS audit,PubChem (cyclohexadec-5-en-1-one),Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0708,Timber Silk,,54464-57-2,,,BLANK,,shared-CAS audit,Iso E Super's CAS pasted; Timber Silk's own CAS unverified -> removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0881,Ambergris Tincture,,6790-58-5,,,BLANK,,shared-CAS audit,Ambroxan's CAS pasted; natural tincture has no single verified CAS -> removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0745,Nirvanolide,,37609-25-9,,,BLANK,,shared-CAS audit,not in PubChem; removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0877,Irone Beta,,79-77-6,,,BLANK,,shared-CAS audit,beta-ionone's CAS pasted; removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0731,Damascenol,,28664-35-9,,,BLANK,,shared-CAS audit,sotolone's CAS pasted; removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0658,Maple Lactone,,28664-35-9,,,BLANK,,shared-CAS audit,sotolone's CAS pasted; Maple Lactone keeps cyclotene 80-71-7,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0658,Maple Lactone,,5471-51-2,,,BLANK,,shared-CAS audit,raspberry ketone's CAS pasted; Maple Lactone keeps cyclotene 80-71-7,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0723,Hay Lactone,,104-61-0,,,BLANK,,shared-CAS audit,gamma-nonalactone's CAS pasted; removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0702,Sylkolide,,104-61-0,,,BLANK,,shared-CAS audit,gamma-nonalactone's CAS pasted; removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0799,Frangipani Absolute,,8016-38-4,,,BLANK,,shared-CAS audit,neroli oil's CAS pasted; removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0493,Orange Blossom Absolute,,8016-38-4,,,BLANK,,shared-CAS audit,neroli oil's CAS pasted; absolute CAS unverified -> removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0542,Coffee Absolute,,84649-99-0,,,BLANK,,shared-CAS audit,cocoa extract's CAS pasted; removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0778,Clementine Oil,,8008-56-8,,,BLANK,,shared-CAS audit,lemon oil's CAS pasted; removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0786,Kaffir Lime Leaf Oil,,8007-02-1,,,BLANK,,shared-CAS audit,lemongrass oil's CAS pasted; removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0788,Calamansi Oil,,68917-75-9,,,BLANK,,shared-CAS audit,wintergreen oil's CAS pasted; removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0793,Magnolia Absolute,,91722-69-9,,,BLANK,,shared-CAS audit,lavandin oil's CAS pasted; removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0821,Australian Sandalwood,,90106-38-0,,,BLANK,,shared-CAS audit,rose absolute's CAS pasted; removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0651,Floralozone,,67634-00-8,,,BLANK,,shared-CAS audit,allyl amyl glycolate's CAS pasted onto a Floralozone row; Floralozone keeps 67634-15-5,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0651,Floralozone,,67634-14-4,,,BLANK,,shared-CAS audit,unverified third CAS on Floralozone; removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)
+NOTE-0402,Tuberose,,8014-17-3,,,BLANK,,shared-CAS audit,petitgrain oil's CAS pasted; removed,Yes,ai,AI-decided 2026-09-18 (shared-CAS hazard)

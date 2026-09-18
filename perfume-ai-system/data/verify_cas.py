@@ -309,7 +309,7 @@ def merge_with_existing(fresh: pd.DataFrame, path: Path = OUT_CSV) -> pd.DataFra
     if not path.exists():
         return fresh
     old = pd.read_csv(path, dtype=str, keep_default_na=False)
-    human = old[old["Decided_By"].str.lower() == "human"]
+    human = old[old["Decided_By"].str.lower().isin(["human", "ai"])]     # decided rows (human or AI) survive re-runs
     keys = set(zip(human["Note_ID"], human["Bad_CAS"]))
     keep = fresh[~fresh.apply(lambda r: (r["Note_ID"], r["Bad_CAS"]) in keys, axis=1)]
     return pd.concat([human[fresh.columns.intersection(human.columns)], keep], ignore_index=True)

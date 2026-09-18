@@ -44,12 +44,12 @@ def test_every_table_loads_with_required_columns(data):
 
 def test_expected_row_counts(data):
     assert len(data.perfumes) == 450
-    assert len(data.notes) == 720          # exact duplicates are only *reported* at this stage
+    assert len(data.notes) == 727          # 720 workbook rows + 7 note_additions.csv rows (exact duplicates only *reported*)
     assert len(data.accords) == 1518
     assert len(data.ifra_limits) == 81
     assert len(data.group_rules) == 8
     assert len(data.regulatory) >= 50
-    assert len(data.safety_caps) == 30
+    assert len(data.safety_caps) == 32          # 30 + Skatole + Geosmin (2026-09-18)
     assert len(data.reaction_rules) == 5
 
 
@@ -192,8 +192,10 @@ def test_safety_caps_never_contradict_ifra_or_uk_law(data):
 # ----------------------------------------------------------------------------
 
 def test_known_catalogue_gaps_are_reported(data):
-    assert any("fails the CAS checksum" in i.message for i in _errors(data, "notes"))
-    assert len(data.unmatched_accord_notes) > 0
+    # 2026-09-18: every checksum-failing CAS was corrected or removed (cas_corrections.csv); none may remain
+    assert not any("fails the CAS checksum" in i.message for i in _errors(data, "notes"))
+    assert any("corrected via cas_corrections.csv" in i.message for i in data.issues)
+    assert 0 < len(data.unmatched_accord_notes) <= 15          # the honest floor: names with no dataset2 equivalent
     assert any("not in dataset2" in i.message for i in _errors(data, "accords"))
     shifted = [i for i in data.warnings() if i.table == "perfumes" and "shifted" in i.message]
     assert len(shifted) == 10

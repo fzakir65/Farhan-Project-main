@@ -97,20 +97,26 @@ def test_auto_matches(table, d3, d2, rule):
     assert (r["Tier"], r["Dataset2_Name"], r["Rule"]) == ("AUTO", d2, rule)
 
 
-def test_cinnamon_bark_is_never_mapped_to_leaf(table):
-    """Bark oil is ~70 % cinnamic aldehyde (cap 0.3 %); leaf oil is eugenol-rich (cap 2 %)."""
+def test_cinnamon_bark_is_never_mapped_to_leaf(table, frames):
+    """Bark oil is ~70 % cinnamic aldehyde (cap 0.3 %); leaf oil is eugenol-rich (cap 2 %). Since 2026-09-18 a
+    'Cinnamon Bark Oil' row exists (note_additions.csv) so the name resolves exactly and leaves the unmatched table;
+    the guard itself is checked by hiding that row: the reconciler must then NOT offer the leaf oil."""
+    notes, accords = frames
+    assert "Cinnamon Bark Oil" not in set(table["Dataset3_Name"])
+    t2 = rn.reconcile(notes[notes["Note_Name"] != "Cinnamon Bark Oil"], accords)
     for name in ("Cinnamon Bark Oil", "Cinnamon Bark"):
-        r = _row(table, name)
-        assert r["Tier"] == "NO_MATCH"
-        assert r["Apply"] == "No"
-        assert r["Dataset2_Name"] == ""
+        r = _row(t2, name)
+        assert r["Apply"] == "No" and r["Dataset2_Name"] != "Cinnamon Leaf Oil"
 
 
-def test_natural_grade_does_not_auto_collapse_onto_a_molecule_standin(table):
-    """dataset2 'Vanilla' is vanillin (121-33-5) — 'Vanilla Absolute' must not be auto-mapped onto it."""
-    r = _row(table, "Vanilla Absolute")
-    assert r["Tier"] == "REVIEW" and r["Apply"] == "No"
-    assert "stand-in" in r["Reason"]
+def test_natural_grade_does_not_auto_collapse_onto_a_molecule_standin(table, frames):
+    """dataset2 'Vanilla' is vanillin (121-33-5) — 'Vanilla Absolute' must not be auto-mapped onto it. A real
+    'Vanilla Absolute' row now exists, so the name resolves; hide it and the guard must still hold."""
+    notes, accords = frames
+    assert "Vanilla Absolute" not in set(table["Dataset3_Name"])
+    t2 = rn.reconcile(notes[notes["Note_Name"] != "Vanilla Absolute"], accords)
+    r2 = _row(t2, "Vanilla Absolute")
+    assert r2["Tier"] == "REVIEW" and "stand-in" in r2["Reason"]
 
 
 def test_ambiguous_grades_go_to_review(table):
@@ -177,6 +183,8 @@ def test_dataset3_on_disk_reflects_the_alias_file(frames, aliases):
     notes, accords = frames
     applied = aliases[aliases["Apply"] == "Yes"]
     renamed = accords[accords["Source_Note_Name"] != accords["Note_Name"]]
-    assert set(renamed["Source_Note_Name"]) == set(applied["Dataset3_Name"])
+    edits = pd.read_csv(ROOT / "data" / "accord_edits.csv", dtype=str, keep_default_na=False)
+    real_renames = set(applied.loc[applied["Dataset3_Name"] != applied["Dataset2_Name"], "Dataset3_Name"])   # self-maps are not renames
+    assert set(renamed["Source_Note_Name"]) == real_renames | set(edits["Note_Name_From"])
     assert renamed["Note_Name"].isin(set(notes["Note_Name"])).all()
     assert renamed["Note_ID"].isin(set(notes["Note_ID"])).all()

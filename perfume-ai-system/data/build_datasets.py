@@ -6,8 +6,10 @@ Sources (all local, see DATA_PROVENANCE.md):
   dataset1_perfumes.csv  <- ../Farhan-Project-main/perfume_system_master_with_recipes.xlsx :: perfumes
   dataset2_notes.csv     <- ../Farhan-Project-main/notes_dataset_normalized.xlsx           :: notes_raw
                             + cas_corrections.csv (Apply=Yes rows replace checksum-failing CAS; Source_CAS kept)
+                            + note_additions.csv (new rows the accords need, e.g. Vanilla Absolute)
   dataset3_accords.csv   <- ../Farhan-Project-main/accord_dataset_normalized_v2.xlsx       :: accord_raw
                             + note_name_aliases.csv (Apply=Yes rows rename accord notes to dataset2 names)
+                            + accord_edits.csv (substitutions for banned / wrong-grade notes)
   ifra_limits.csv        <- reference/ifra_51st_standards_overview.csv (official IFRA table)
                             + the material selection in IFRA_MATERIALS below
 
@@ -26,6 +28,8 @@ HERE = Path(__file__).resolve().parent
 ML_PROJECT = HERE.parents[1] / "Farhan-Project-main"
 OFFICIAL = HERE / "reference" / "ifra_51st_standards_overview.csv"
 CAS_FIXES = HERE / "cas_corrections.csv"     # written by verify_cas.py; humans edit Apply / Decided_By
+NOTE_ADDITIONS = HERE / "note_additions.csv"  # hand-maintained new dataset2 rows (materials the accords need)
+ACCORD_EDITS = HERE / "accord_edits.csv"     # hand-maintained substitutions in dataset3 (banned / wrong-grade notes)
 
 sys.path.insert(0, str(HERE.parent))
 from load_data import is_valid_cas  # noqa: E402  (single definition of the CAS checksum)
@@ -93,7 +97,55 @@ def build_notes() -> pd.DataFrame:
         "Natural_Source": src["Natural Source"],
         "Short_Description": src["Short Description"],
     })
-    return apply_cas_corrections(out)
+    out = apply_cas_corrections(out)
+    return append_note_additions(out)
+
+
+def append_note_additions(notes: pd.DataFrame) -> pd.DataFrame:
+    """Append the hand-maintained rows of note_additions.csv (same columns as dataset2 + Source/Decided_By).
+    A new note must have a fresh Note_ID and name and a checksum-valid CAS (or none); it is never allowed to
+    shadow an existing name."""
+    if not NOTE_ADDITIONS.exists():
+        return notes
+    add = pd.read_csv(NOTE_ADDITIONS, dtype=str, keep_default_na=False)
+    for r in add.itertuples(index=False):
+        if r.Note_Name in set(notes["Note_Name"]):
+            raise ValueError(f"note_additions.csv: {r.Note_Name!r} already exists in dataset2")
+        if r.Note_ID in set(notes["Note_ID"]):
+            raise ValueError(f"note_additions.csv: Note_ID {r.Note_ID} already used")
+        if r.CAS and not is_valid_cas(r.CAS):
+            raise ValueError(f"note_additions.csv: {r.Note_Name!r} CAS {r.CAS!r} fails the checksum")
+    keep = [c for c in add.columns if c in notes.columns]
+    extra = add[keep].copy()
+    extra["Source_CAS"] = extra["CAS"]
+    return pd.concat([notes, extra], ignore_index=True)
+
+
+def apply_accord_edits(accords: pd.DataFrame, notes: pd.DataFrame) -> pd.DataFrame:
+    """Substitute notes inside accords per accord_edits.csv (Accord_Name '*' = every accord). The target must exist
+    in dataset2; role/weight may be re-set. The workbook's original stays in Source_Note_Name for traceability."""
+    if not ACCORD_EDITS.exists():
+        return accords
+    ed = pd.read_csv(ACCORD_EDITS, dtype=str, keep_default_na=False)
+    name_to_id = dict(zip(notes["Note_Name"], notes["Note_ID"]))
+    out = accords.copy()
+    for r in ed.itertuples(index=False):
+        if r.Note_Name_To not in name_to_id:
+            raise ValueError(f"accord_edits.csv: target {r.Note_Name_To!r} is not in dataset2")
+        mask = (out["Note_Name"] == r.Note_Name_From)
+        if "Source_Note_Name" in out.columns:
+            mask |= (out["Source_Note_Name"] == r.Note_Name_From)     # the alias step may already have renamed it
+        if r.Accord_Name != "*":
+            mask &= out["Accord_Name"] == r.Accord_Name
+        if not mask.any():
+            raise ValueError(f"accord_edits.csv: no row {r.Accord_Name}/{r.Note_Name_From} to edit (stale)")
+        out.loc[mask, "Note_Name"] = r.Note_Name_To
+        out.loc[mask, "Note_ID"] = name_to_id[r.Note_Name_To]
+        if r.New_Role:
+            out.loc[mask, "Note_Role"] = r.New_Role
+        if r.New_Weight:
+            out.loc[mask, "Importance_Weight"] = float(r.New_Weight)
+    return out
 
 
 def apply_cas_corrections(notes: pd.DataFrame) -> pd.DataFrame:
@@ -108,7 +160,7 @@ def apply_cas_corrections(notes: pd.DataFrame) -> pd.DataFrame:
     fx = pd.read_csv(CAS_FIXES, dtype=str, keep_default_na=False)
     fx = fx[fx["Apply"].str.strip().str.lower() == "yes"]
     for r in fx.itertuples(index=False):
-        if not is_valid_cas(r.Corrected_CAS):
+        if r.Corrected_CAS and not is_valid_cas(r.Corrected_CAS):        # empty = remove a wrong CAS (missing beats wrong)
             raise ValueError(f"cas_corrections.csv: {r.Note_Name} -> {r.Corrected_CAS!r} fails the CAS checksum")
         mask = (out["Note_ID"] == r.Note_ID) & (out["CAS"] == r.Bad_CAS)
         if not mask.any():
@@ -165,7 +217,8 @@ def build_accords(notes: pd.DataFrame | None = None) -> pd.DataFrame:
         "Blend_Compatibility": src["Blend Compatibility"],
         "Stability_Class": src["Stability Class"].astype(str).str.strip(),
     })
-    return apply_note_aliases(out, build_notes() if notes is None else notes)
+    notes = build_notes() if notes is None else notes
+    return apply_accord_edits(apply_note_aliases(out, notes), notes)
 
 
 # ----------------------------------------------------------------------------

@@ -169,7 +169,11 @@ def optimize(safety: SafetyResult, data, *, layer_targets=LAYER_TARGETS,
             g["Pinned"] = g["CAS"].isin(again.pinned)
             return OptimizeResult("REJECT", g, again, it, trace, flags, round(float(g["Pct"].sum()), ROUND), _layers(g, layer_targets))
         new_pins = again.pinned - pinned
-        if again.adjustments.empty and not new_pins:
+        # a cut smaller than the rounding unit is rounding noise (a pinned note sitting exactly on its ceiling), not a change
+        significant = again.adjustments[(again.adjustments["From_Pct"] - again.adjustments["To_Pct"]).abs() > 10 ** -ROUND / 2]
+        if significant.empty and not new_pins:
+            f = again.formula.copy()                                     # keep the (sub-rounding) trimmed values
+            f["Pct"] = f["Pct"].round(ROUND)
             trace.append(f"round {it}: stable — safety pass changed nothing")
             f["Pinned"] = f["CAS"].isin(pinned)
             layers = _layers(f, layer_targets)
@@ -177,7 +181,7 @@ def optimize(safety: SafetyResult, data, *, layer_targets=LAYER_TARGETS,
                 if not r.In_Range and r.Pct > 0:
                     flags.append(f"WARNING: {r.Layer} {r.Pct:.3f} % is outside the Carles range {r.Min:g}-{r.Max:g} % after rebalancing")
             return OptimizeResult("PASS", f, again, it, trace, flags, round(float(f["Pct"].sum()), ROUND), layers)
-        trace.append(f"round {it}: safety pass capped {len(again.adjustments)} note(s) again ({', '.join(sorted(set(again.adjustments['Note_Name'])))}); "
+        trace.append(f"round {it}: safety pass capped {len(significant)} note(s) again ({', '.join(sorted(set(significant['Note_Name'])))}); "
                      f"pinning {len(new_pins)} more and rebalancing")
         pinned |= again.pinned
         f = again.formula.copy()            # check_formula carries Layer through and adds Input_Pct

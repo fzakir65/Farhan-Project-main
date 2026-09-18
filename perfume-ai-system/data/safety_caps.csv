@@ -29,3 +29,5 @@ Frankincense Oil,8016-36-2,4,Resinous incense,,No
 Myrrh Resinoid,8016-37-3,3,Bitter medicinal resin,,No
 Styrax Resinoid,8046-19-3,0.6,Smoky balsamic resin. Cap lowered from 3 on 2026-09-11: IFRA Cat 4 limit for styrax extracts is 0.64%,Crude gum is IFRA-prohibited; pyrolysis oil must be rectified (PAH <=1 ppb),No
 Labdanum Absolute,8016-26-0,5,Resinous amber base,,No
+Skatole,83-34-1,0.2,"Fecal animalic, detectable at ppb - overwhelms above traces (costus substitute, accord_edits.csv)",,Yes
+Geosmin,19700-21-1,0.01,Odour threshold ~10 ng/L - trace material,,Yes

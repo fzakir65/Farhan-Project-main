@@ -9,7 +9,7 @@ import load_data as ld
 from zone_b_chemistry import formula_builder as fb
 from zone_b_chemistry import optimizer as op
 from zone_b_chemistry import safety_engine as se
-from zone_b_chemistry.pipeline import run_zone_b
+from zone_b_chemistry.pipeline import grades_from_formula, run_zone_b
 
 
 @pytest.fixture(scope="module")
@@ -97,9 +97,12 @@ def test_pipeline_pass(data):
 
 
 def test_pipeline_reject_on_banned_material(data):
-    costus = data.accords[data.accords["Note_Name"] == "Costus"]["Accord_Name"].iloc[0]
-    out = run_zone_b([costus], data, require_complete=False)
-    assert out.verdict == "REJECT" and "Costus" in set(out.safety.rejections["Note_Name"])
+    # Costus was substituted out of every accord (accord_edits.csv); a hand-built formula still rejects it
+    assert not (data.accords["Note_Name"] == "Costus").any()
+    r = se.check_formula(F(("Costus", "8023-88-9", "Base", 1.0), ("Vetiver", "8016-96-4", "Base", 99.0)), data)
+    assert r.verdict == "REJECT" and "Costus" in set(r.rejections["Note_Name"])
+    fixed = run_zone_b(["Animalic"], data, require_complete=False)             # ...and the edited accord now passes
+    assert fixed.verdict == "PASS" and "Skatole" in set(fixed.formula["Note_Name"])
 
 
 def test_pipeline_incomplete_when_a_note_cannot_be_placed(data):
@@ -126,9 +129,10 @@ def test_grades_come_from_the_formula_notes_never_from_a_sibling(data):
     acc = data.accords[data.accords["Note_Name"] == "Styrax Resinoid"]["Accord_Name"].iloc[0]
     out = run_zone_b([acc], data, require_complete=False)
     assert out.safety is None or "Styrax Resinoid" not in set(out.safety.rejections["Note_Name"])
-    plain_acc = data.accords[data.accords["Note_Name"] == "Birch Tar"]["Accord_Name"].iloc[0]
-    out2 = run_zone_b([plain_acc], data, require_complete=False)
-    assert out2.verdict == "REJECT" and "Birch Tar" in set(out2.safety.rejections["Note_Name"])
+    assert not (data.accords["Note_Name"] == "Birch Tar").any()             # accord_edits.csv: all birch tar is now Rectified
+    r = se.check_formula(pd.DataFrame({"Note_Name": ["Birch Tar"], "CAS": ["8001-88-5"], "Pct": [1.0]}), data,
+                         grades=grades_from_formula(pd.DataFrame({"Note_Name": ["Birch Tar"], "CAS": ["8001-88-5"]})))
+    assert r.verdict == "REJECT" and "grade unknown" in r.rejections.iloc[0]["Reason"]
 
 
 def test_pipeline_over_all_accords_never_crashes(data):

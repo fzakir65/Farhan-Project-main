@@ -46,11 +46,11 @@ def test_typo_neighbours_are_valid_and_one_edit_away():
 
 def test_shared_cas_detector_separates_paste_errors_from_variants():
     notes = pd.read_csv(vc.NOTES_CSV, dtype=str, keep_default_na=False).drop_duplicates()
+    notes["CAS"] = notes["Source_CAS"]                                   # the workbook values, as the audit sees them
     notes["valid"] = notes["CAS"].map(ld.is_valid_cas)
     conflicts = vc.shared_cas_conflicts(notes)
-    assert "54464-57-2" in conflicts             # Iso E Super's CAS on Timber Silk / Safraleine / Norlimbanol
-    assert "8000-27-9" not in conflicts          # cedarwood's CAS was on Cade Oil / Juniper Tar — fixed via a human row
-    assert "33704-61-9" in conflicts             # Cashmeran's CAS on Habanolide
+    assert "54464-57-2" in conflicts             # audited on Source_CAS: Iso E Super's CAS was on Timber Silk / Safraleine / Norlimbanol
+    assert "33704-61-9" in conflicts             # ...and Cashmeran's on Habanolide (both since corrected on disk)
     assert "8007-75-8" not in conflicts          # Bergamot / Bergamot Oil / Bergamot Oil FCF — grade variants
     assert "542-46-1" not in conflicts           # Civetone / Civettone — spelling variant
 

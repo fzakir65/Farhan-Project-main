@@ -1,0 +1,13 @@
+Accord_Name,Note_Name_From,Note_Name_To,New_Role,New_Weight,Reason,Decided_By
+*,Birch Tar,Birch Tar Rectified,,,crude birch tar is IFRA-prohibited (IFRA_STD_114); the rectified grade is the only legal one and dataset2 already has it,"ai (2026-09-18) — provisional, perfumer sign-off required"
+*,Cade Oil,Cade Oil Rectified,,,crude cade oil is IFRA-prohibited (IFRA_STD_119); rectified grade added to dataset2 (note_additions.csv),"ai (2026-09-18) — provisional, perfumer sign-off required"
+*,Styrax Resin,Styrax Resinoid,,,crude styrax gum is IFRA-prohibited (IFRA_STD_078); resinoid is an allowed grade with the same CAS,"ai (2026-09-18) — provisional, perfumer sign-off required"
+*,Peru Balsam,Tolu Balsam,,,"crude Peru balsam is UK/EU-banned and IFRA-prohibited (IFRA_STD_071); Tolu balsam (same genus Myroxylon, benzoic/cinnamic balsamic profile) is unrestricted","ai (2026-09-18) — provisional, perfumer sign-off required"
+Earthy,Costus Oil,Carrot Seed,,,costus is UK/EU-banned (Annex II) and IFRA-prohibited; carrot seed supplies the rooty-earthy facet (dataset2 Odor_Family Earthy / Powdery),"ai (2026-09-18) — provisional, perfumer sign-off required"
+Dark Soil Musk,Costus Root,Carrot Seed,,,as Earthy — rooty-earthy facet in an earthy/soil accord,"ai (2026-09-18) — provisional, perfumer sign-off required"
+Ganja Barnyard,Costus Root,Carrot Seed,,,"as Earthy — earthy/animalic accord; carrot seed keeps the rooty facet, skatole would tip it fecal","ai (2026-09-18) — provisional, perfumer sign-off required"
+Animalic,Costus Oil,Skatole,Modifier,1,"costus banned; skatole gives the hairy/fecal animalic facet — extremely potent, so role Modifier weight 1 (trace) and a 0.2 % olfactory cap","ai (2026-09-18) — provisional, perfumer sign-off required"
+Animalic Musk,Costus Root,Skatole,Modifier,1,as Animalic,"ai (2026-09-18) — provisional, perfumer sign-off required"
+Feral Animal Skin,Costus Root,Skatole,Modifier,1,as Animalic,"ai (2026-09-18) — provisional, perfumer sign-off required"
+Feral Skin,Costus Root,Skatole,Modifier,1,as Animalic,"ai (2026-09-18) — provisional, perfumer sign-off required"
+Shadowy Rose Fur,Costus Root,Skatole,Modifier,1,as Animalic,"ai (2026-09-18) — provisional, perfumer sign-off required"

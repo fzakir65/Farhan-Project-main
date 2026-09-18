@@ -88,7 +88,8 @@ CARLES_AGREES = {"Top": {"Top", "Top/Heart"}, "Modifier": {"Heart", "Top/Heart",
 _GRADE_WORDS = {"oil", "essential", "absolute", "abs", "co2", "extract", "resin", "resinoid", "concrete", "butter",
                 "tincture", "crystals", "rectified", "expressed", "distilled", "extra", "high", "purity", "plus", "rich"}
 _GREEK = {"α": "alpha", "β": "beta", "γ": "gamma", "δ": "delta", "ε": "epsilon"}
-_NAME_SYNONYMS = {"olibanum": "frankincense", "iris": "orris", "jasmin": "jasmine"}   # trade synonyms (Boswellia; orris root)
+_NAME_SYNONYMS = {"olibanum": "frankincense", "iris": "orris", "jasmin": "jasmine",     # trade synonyms (Boswellia; orris root)
+                  "fixolide": "tonalide", "tonalid": "tonalide", "veramoss": "evernyl", "timberol": "norlimbanol"}   # same molecule, different supplier names
 OFFICIAL_IFRA = "reference/ifra_51st_standards_overview.csv"
 
 # Source text -> 1..5 (CLAUDE.md schema: Longevity(1-5), Sillage(1-5))
@@ -199,9 +200,8 @@ def _material_words(name) -> set[str]:
     t = str(name or "")
     for g, latin in _GREEK.items():
         t = t.replace(g, latin)
-    words = set(re.findall(r"[a-z0-9]+", t.lower()))
-    words = {w[:-1] if w.endswith("s") and len(w) > 3 else w for w in words} - _GRADE_WORDS
-    return {_NAME_SYNONYMS.get(w, w) for w in words}
+    words = {_NAME_SYNONYMS.get(w, w) for w in re.findall(r"[a-z0-9]+", t.lower())}      # synonyms first ('iris' -> 'orris')
+    return {w[:-1] if w.endswith("s") and len(w) > 3 else w for w in words} - _GRADE_WORDS
 
 
 def same_material(name_a, chem_a, name_b, chem_b) -> bool:
