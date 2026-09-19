@@ -339,6 +339,15 @@ def check_formula(formula: pd.DataFrame, data, *, concentrate_fraction: float = 
             effective = direct + total_nat
             detail = " + ".join(f"{n} {a:.4f}" for _, n, _, a, _ in entries) + (f" + direct {direct:.4f}" if direct else "")
             if not cands:
+                banned = [reg.iloc[i]["Material_Name"] for i in reg_by_cas.get(ccas, []) if reg.iloc[i]["Status"] == "BANNED"]
+                if banned:
+                    # Annex II bans the substance as an *ingredient*; its natural content (benzyl cyanide in tuberose /
+                    # orange flower, atranol in mosses) has no numeric ceiling in any table -> visible warning, not silent INFO
+                    flags.append(SafetyFlag("CONSTITUENT_BANNED_AS_SUCH", "WARNING",
+                                            f"{cname} is BANNED as an ingredient (regulatory_uk.csv: {banned[0]}); {effective:.4f} % arrives as natural content ({detail}) — "
+                                            "no numeric ceiling exists for that contribution: confirm with the supplier CoA", cname, ccas, "constituents.csv"))
+                    log.append(f"step 0: {cname} ({ccas}) effective {effective:.4f} % — banned as such, natural content has no numeric ceiling")
+                    continue
                 flags.append(SafetyFlag("CONSTITUENT_NO_CEILING", "INFO", f"effective {effective:.4f} % ({detail}) — no limit in any table", cname, ccas, "constituents.csv"))
                 log.append(f"step 0: {cname} ({ccas}) effective {effective:.4f} % — no ceiling to judge against")
                 continue

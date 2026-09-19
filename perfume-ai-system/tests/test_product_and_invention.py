@@ -41,12 +41,14 @@ def test_materials_are_expressed_at_product_level_and_safety_rerun_there(data, c
 
 
 def test_allergen_declaration_includes_direct_and_constituent_sources(data):
-    f = pd.DataFrame([("Coumarin", "91-64-5", 1.0), ("Clove Bud Oil", "8000-34-8", 2.0), ("Vetiver", "8016-96-4", 97.0)],
+    from tests.test_safety_engine import frac
+    f_eug = frac(data, "8000-34-8", "97-53-0")                        # clove bud eugenol fraction as constituents.csv states it
+    f = pd.DataFrame([("Coumarin", "91-64-5", 1.0), ("Clove Bud Oil", "8000-34-8", 2.0), ("Sandalwood Oil", "8006-87-9", 97.0)],
                      columns=["Note_Name", "CAS", "Pct"])
     p = formulate_product(f, data, product_type=EDP, concentrate_pct=10)
     a = p.allergens.set_index("Allergen")
     assert a.loc["Coumarin", "Product_Pct"] == pytest.approx(0.1, abs=1e-6) and "direct" in a.loc["Coumarin", "Sources"]
-    assert a.loc["Eugenol", "Product_Pct"] == pytest.approx(2.0 * 0.10 * 0.88, abs=1e-4) and "Clove Bud Oil" in a.loc["Eugenol", "Sources"]
+    assert a.loc["Eugenol", "Product_Pct"] == pytest.approx(2.0 * 0.10 * f_eug, abs=1e-4) and "Clove Bud Oil" in a.loc["Eugenol", "Sources"]
     assert "Linalool" not in a.index                                   # nothing supplies it here
 
 
@@ -100,3 +102,18 @@ def test_invention_variants_differ_in_the_base_pair_only(data):
     a, b = v9.formula.set_index("Note_Name")["Pct"], v8.formula.set_index("Note_Name")["Pct"]
     changed = [n for n in a.index if n in b.index and abs(a[n] - b[n]) > 1e-6]
     assert 2 <= len(changed) <= len(a)                                 # the pair moves, the rest only through rebalancing
+
+
+def test_aftershave_lotion_follows_poucher_formula_vi(data):
+    # Poucher 9/10e Ch 12 Formula VI (PDF p.373): ethanol 50-65 %, propylene glycol 4-6 %, fragrance 1-2 %, water to 100
+    f = pd.DataFrame([("Bergamot Oil FCF", "8007-75-8", 40.0), ("Lavandin Oil", "91722-69-9", 30.0), ("Sandalwood Oil", "8006-87-9", 30.0)],
+                     columns=["Note_Name", "CAS", "Pct"])
+    p = formulate_product(f, data, product_type="After-shave lotion (Poucher Formula VI)", concentrate_pct=1.5, antioxidant=None, uv_absorber=False)
+    t = p.table.set_index("Component")
+    assert 4.0 <= t.loc["Propylene glycol", "Pct"] <= 6.0 and "Poucher" in t.loc["Propylene glycol", "Source"]
+    assert 50.0 <= t.loc["Ethanol (denatured, DEB 100)", "Pct"] <= 65.0 + 1e-9
+    assert t.loc["Fragrance concentrate", "Pct"] == 1.5 and abs(p.table["Pct"].sum() - 100.0) < 1e-6
+    assert any("propylene glycol" in step for step in p.process)
+    # an EdT never gets the humectant by default
+    e = formulate_product(f, data, product_type="Eau de toilette", concentrate_pct=10)
+    assert "Propylene glycol" not in set(e.table["Component"])

@@ -58,8 +58,10 @@ def _rng(s: str) -> tuple[float, float]:
 def formulate_product(concentrate: pd.DataFrame, data, *, product_type: str = "Eau de toilette",
                       concentrate_pct: float | None = None, water_pct: float | None = None,
                       antioxidant: str | None = "BHT", uv_absorber: bool = True, fixative: bool = False,
-                      diluent_pct: float = 0.0, batch_g: float = 100.0, grades: dict[str, str] | None = None) -> ProductResult:
-    """Wrap a concentrate (Note_Name, CAS, Pct summing to 100) into a product. Percentages are w/w of the bottle."""
+                      diluent_pct: float = 0.0, humectant: bool | None = None,
+                      batch_g: float = 100.0, grades: dict[str, str] | None = None) -> ProductResult:
+    """Wrap a concentrate (Note_Name, CAS, Pct summing to 100) into a product. Percentages are w/w of the bottle.
+    `humectant=None` adds propylene glycol only for after-shave product types (Poucher Formula VI: 4-6 %)."""
     pt = data.product_types.set_index("Product_Type")
     if product_type not in pt.index:
         raise ValueError(f"unknown product type {product_type!r}; choose one of {list(pt.index)}")
@@ -100,6 +102,10 @@ def formulate_product(concentrate: pd.DataFrame, data, *, product_type: str = "E
         add("PPG-20 methyl glucose ether", float(bases.loc["PPG-20 methyl glucose ether", "Default_Pct"]))
     if diluent_pct > 0:
         add("Dipropylene glycol", float(diluent_pct))
+    if humectant is None:
+        humectant = "after" in product_type.lower() and "shave" in product_type.lower()
+    if humectant:
+        add("Propylene glycol", float(bases.loc["Propylene glycol", "Default_Pct"]))
     ethanol = round(100.0 - sum(c["Pct"] for c in comps), ROUND)
     if ethanol < 50:
         warnings.append(f"ethanol only {ethanol:g} % — below the 50 % floor of any RSC Table A2 product; check the solvent split")
@@ -128,10 +134,11 @@ def formulate_product(concentrate: pd.DataFrame, data, *, product_type: str = "E
 
     process = [
         "weigh the fragrance materials into the concentrate; pre-dilute powerful materials (musks 1 %, geosmin/skatole 0.1 %)",
-        "blend the concentrate into the ethanol",
+        ("mix the concentrate into the propylene glycol, then dissolve in the ethanol (Poucher Formula VI, p.373)" if humectant
+         else "blend the concentrate into the ethanol"),
         "add the water and the auxiliaries slowly with mixing (antioxidant dissolved in ethanol first)",
         f"mature {'4-6 weeks' if natural_load > 20 else '10-14 days'} at room temperature in the dark",
-        "chill to +1 °C for 24 h; filter (0.2 % magnesium carbonate as filter aid if precipitates are stubborn)",
+        "chill to +1 °C for 24 h (Poucher: 'cool to about 4 °C', p.373); filter through a fine filter (0.2 % magnesium carbonate as filter aid if precipitates are stubborn)",
         "fill into clean glass; label with the allergen declaration; light-stability and solubility checks at 5 °C / 40 °C",
     ]
     return ProductResult(product_type, conc, table, mats, safety, allergens, process, warnings, batch_g)

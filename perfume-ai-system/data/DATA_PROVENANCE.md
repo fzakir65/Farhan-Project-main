@@ -21,7 +21,7 @@ python load_data.py          # validation report; exit 2 while ERROR-level defec
 | `note_name_aliases.csv` | hand-maintained (auto-seeded) | `reconcile_notes.py` | 2026-09-15. dataset3 → dataset2 note-name reconciliation. Tiers: AUTO (exact after normalisation, or chemical identity confirmed by dataset2's own Chemical_Name/CAS) → `Apply=Yes`; REVIEW / NO_MATCH → `Apply=No` until a human decides (`Decided_By=human` rows survive re-runs). 35/44/25 today. |
 | `cas_corrections.csv` | hand-maintained (auto-seeded) | `verify_cas.py` (+ `reference/pubchem_cas_cache.json`) | 2026-09-15. FIX only when two independent sources agree (official IFRA table / project tables / PubChem / same-note / check-digit / sibling). 6 FIX, 44 FLAG. PubChem is queried only for synthetics and defined molecules. |
 | `accord_name_aliases.csv` | hand-maintained (auto-seeded) | `reconcile_accords.py` | 2026-09-18. dataset1 `Main_Accords` term → dataset3 accord. 36 AUTO / 29 REVIEW / 31 NO_MATCH. |
-| `constituents.csv` | hand-maintained | Tisserand & Young, *Essential Oil Safety* 2e (2014); ISO oil standards; RSC Ch 10 p.185 | 2026-09-18. 86 rows, 45 naturals; upper bound of the typical range; ALL Provisional=Yes until supplier CoA values replace them. |
+| `constituents.csv` | **generated** by `data/mine_tisserand.py` from the Tisserand & Young 2e PDF | Tisserand & Young, *Essential Oil Safety* 2e (2014), "Key constituents" of 122 mapped profiles, every row cites the PDF page | 2026-09-19. 256 rows, 87 natural CAS; highest published upper bound across a profile's variants (isomers of one CAS summed); only constituents the safety tables know are written; ALL Provisional=Yes until supplier CoA values replace them. The 86 recalled rows of 2026-09-18 are gone. |
 | `note_additions.csv` | hand-maintained (AI 2026-09-18) | CAS cited per row (PubChem for geosmin) | 7 new dataset2 rows the accords need. |
 | `accord_edits.csv` | hand-maintained (AI 2026-09-18, perfumer sign-off required) | IFRA_STD_071/078/114/119, UK Annex II | Costus / Peru balsam / crude tars replaced by legal materials of the same olfactive role. |
 | `product_bases.csv` | hand-maintained | RSC Fig 9.1 p.160; SCCS/1636/21 (BHT); UK/EU Annex VI entry 4 (benzophenone-3); perfumery_chat_transcript.pdf | bottle auxiliaries with legal basis. |
@@ -81,8 +81,32 @@ python load_data.py          # validation report; exit 2 while ERROR-level defec
   (Bitter Orange Oil → 68916-04-1, Opoponax → 8021-36-1, Green Tea → 84650-60-2, Pink Pepper → 68917-52-2, Fixolide → 1506-02-1 …).
 - Accords re-authored (`accord_edits.csv`), 7 notes added, aliases decided → 444/450 perfumes PASS Zone B.
 
+## Changes made 2026-09-19: two more books mined, numbers page-cited
+
+- `constituents.csv` regenerated from **Tisserand & Young 2e** by `data/mine_tisserand.py` (text cache and parsed profiles are
+  gitignored — copyright; the tool re-extracts them from the PDF with pypdf). 400 profiles parsed, 122 mapped to dataset2
+  CAS (hand-maintained map `M` in the tool, grade words for bark/leaf, expressed/distilled/FCF, oil/absolute, otto/absolute,
+  linalool/estragole chemotypes, rectified/unrectified, Virginian/Texan). Consequences worth knowing: vetiver oil lists
+  isoeugenol 0–1.3 % (p.1740) → with the UK 0.02 % isoeugenol limit vetiver is capped at ~1.5 % until a CoA says otherwise;
+  saffron's safranal 47–60 % (p.1552) reproduces the book's own 0.02 % maximum; lavender *absolute* carries coumarin 4.3 % and
+  herniarin 2.3 % (p.1249-50) that the oil does not; basil linalool CT vs estragole CT differ by 40× in estragole.
+  Deliberately NOT rolled up: atranol / chloroatranol in treemoss (p.1704) — the legal control is the IFRA CoA specification
+  (`group_rules.csv`), not a percentage; combined GC peaks ("safrole + p-cymen-8-ol") are booked whole to the regulated member.
+- `safety_engine` step 0: a constituent that is BANNED as an ingredient (benzyl cyanide in tuberose / orange flower absolute,
+  T&Y p.1706 / p.1416) now raises `CONSTITUENT_BANNED_AS_SUCH` (WARNING, CoA check) instead of a silent INFO.
+- `optimizer`: pinned notes round *down* to 3 dp so a ceiling such as 0.01 / 0.023 = 0.4348 % never rounds up and re-triggers a
+  cut — the one accord that used to REJECT on instability now PASSes (236/236).
+- **Poucher's Perfumes, Cosmetics and Soaps** (Butler ed., 9th/10th edn): `product_types.csv` gained a `Cross_Check` column
+  (eau de cologne 2–4 %, eau de toilette up to 10 %, after-shave ~1 %, PDF p.362) and the row *After-shave lotion (Poucher
+  Formula VI)* (1–2 % fragrance, ethanol 50–65 %, PDF p.373); `product_bases.csv` gained propylene glycol (4–6 % after-shave
+  humectant, p.373), menthol (0.10 % cooling, Formula VII p.374) and diisopropyl adipate (emollient ester, 1.10 % Formula
+  VIII p.374), plus Poucher corroboration on the UV-absorber, DPG-diluent and chill-filter rows (Ch 24 p.732; p.373).
+  `formulate_product` adds the humectant automatically for after-shave product types and cites the Poucher procedure.
+  The rest of Poucher is cosmetics (antiperspirants, hair, soap, emulsions) — outside this system's scope.
+
 ## Still open
-- `constituents.csv` (natural → constituent → typical %) from the IFRA *Annex on contributions from other sources*
+- `constituents.csv`: supplier CoA values to replace the literature upper bounds (Provisional=Yes); the IFRA *Annex on
+  contributions from other sources* would be the official cross-check
 - `Grade` field on notes (crude vs rectified; oil vs absolute) so combined IFRA types can be resolved
 - 44 bad CAS (flagged in `cas_corrections.csv`) and 69 unmatched accord notes (`note_name_aliases.csv` REVIEW/NO_MATCH) await human decisions; 25 shared-CAS hazards need verified CAS (Cade Oil first)
 - Sources for `Mood_Vibe` and `Occasion`

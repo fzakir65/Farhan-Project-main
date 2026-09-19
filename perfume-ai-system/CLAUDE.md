@@ -8,19 +8,27 @@ This file is the primary guidance for Claude Code. Read it fully before writing 
 > Revision 2026-09-16: data-blocker cleanup (name reconciliation, CAS audit) + Task 2 built; Carles' text and
 > Pybus & Sell *The Chemistry of Fragrances* (RSC 1999) read and folded in as cited reference tables — marked **[rev2]**.
 > Revision 2026-09-18: Tasks 3–7 built (safety engine, optimizer, accord bridge, Zone A, app). **[rev3]**
+> Revision 2026-09-19: Tisserand & Young 2e mined into `constituents.csv` (page-cited, tool `data/mine_tisserand.py`); Poucher's
+> after-shave / product-base figures added; optimizer rounds pinned notes down. **[rev5]**
 
 ## ⏩ RESUME HERE (read this first in a new session)
 
-**State on 2026-09-18 (evening):** everything requested is built and tested — `python -m pytest -q` → 199 passing (~70 s).
+**State on 2026-09-19:** everything requested is built and tested — `python -m pytest -q` → 204 passing (~3-7 min, the
+all-accord and all-perfume sweeps dominate).
 `python app.py "fresh woody for summer"` runs match → formula → safety → rebalance → **product formulation**
 (ethanol / water / additives / allergen label); `python app.py --invent "citrus, mossy, rose" --family Chypre` **invents**
 a new composition the Carles way; `streamlit run app.py` is the UI (Buttons / Free text / Invent). All on `main`.
 
 Numbers that describe the data state (`python load_data.py`): 1 ERROR (13 accord note names with no dataset2
 equivalent — Cannabis/Hemp/Egg/Mushroom accords etc., an honest floor), 0 checksum-failing CAS (fixed or blanked),
-3 legitimately shared CAS, 2582/2593 perfume-accord slots resolve, **444/450 catalogue perfumes PASS Zone B**,
-235/236 accords PASS. Safety step 0 (constituent roll-up) IS implemented on `constituents.csv` (86 literature rows) and
-every verdict stays **PROVISIONAL** until those fractions are replaced by supplier CoA values.
+3 legitimately shared CAS, 2582/2593 perfume-accord slots resolve, **450/450 catalogue perfumes PASS Zone B** (415 fully
+complete; 35 are built without one accord note that has no dataset2 material — `require_complete=False`, as the app runs it;
+the six REJECTs of 2026-09-18 were optimizer rounding instability, now fixed), **236/236 accords PASS**. Safety step 0
+(constituent roll-up) runs on `constituents.csv` — **256 rows, 87 naturals, every fraction a page-cited Tisserand & Young 2e
+upper bound** (`python data/mine_tisserand.py` regenerates it from the PDF) — and every verdict stays **PROVISIONAL** until
+those fractions are replaced by supplier CoA values. Two consequences a perfumer must know: vetiver oil is capped near
+1.5 % (isoeugenol 0–1.3 %, T&Y p.1740, vs the UK 0.02 % limit) and basil / tarragon / estragole-type materials near
+0.02 % (IFRA estragole 0.014 %) — both are exactly what the books say; a CoA showing less lifts them.
 
 What was decided by AI, not a human (all traceable, `Decided_By=ai` in the CSV, sign-off needed before shipping):
 - `accord_edits.csv`: Costus → Carrot Seed (earthy accords) / Skatole trace (animalic accords); Birch Tar → Birch Tar
@@ -28,7 +36,11 @@ What was decided by AI, not a human (all traceable, `Decided_By=ai` in the CSV, 
 - `note_additions.csv`: 7 new dataset2 rows (Vanilla Absolute, Cinnamon Bark Oil, Cade Oil Rectified, Geosmin, Davana,
   Mace, Lentisque). `note_name_aliases.csv` 91/104 applied; `accord_name_aliases.csv` 88/96 applied.
 - `cas_corrections.csv`: 90 rows — 6 auto + 2 human + AI single-source fixes; 36 hopeless CAS **blanked** (missing beats wrong).
-- `constituents.csv`: upper-bound literature fractions (Tisserand & Young 2e; ISO; RSC Ch 10).
+- `constituents.csv`: no longer AI-recalled — generated from the T&Y 2e text by `data/mine_tisserand.py`; what IS a decision
+  there is the hand-maintained map dataset2 CAS → profile / grade word (`M` in the tool) and the choice to use the highest
+  upper bound across a profile's variants (Bulgarian vs Turkish rose, six Boswellia species…). Treemoss atranol is deliberately
+  not rolled up (IFRA CoA spec governs); Turkish rose absolute uses the Provence (R. centifolia) absolute profile as the closest
+  published one — flagged in the row's Note.
 
 What is still open, in order:
 1. **Supplier CoA values** for constituents.csv (turns PROVISIONAL into real), and a perfumer's smell-test of the
@@ -41,7 +53,13 @@ What is still open, in order:
    measures the real-world gap of the trained checkpoint; retraining with those rows (plan F.5) is the next ML step.
 
 How to check where things stand: `python load_data.py`, `python app.py --report`, the three reconcile/verify scripts
-(`data/reconcile_notes.py`, `data/verify_cas.py --offline`, `data/reconcile_accords.py`), `data/enrich_pubchem.py --offline`.
+(`data/reconcile_notes.py`, `data/verify_cas.py --offline`, `data/reconcile_accords.py`), `data/enrich_pubchem.py --offline`,
+`python data/mine_tisserand.py --dry-run` (re-parses the book and reports unmapped constituent names).
+
+Books read and where they landed (all page-cited in the CSVs; see `data/DATA_PROVENANCE.md`): Carles → `reference/carles_*.csv`
++ builder rules; IFRA 51st → `ifra_limits` / `group_rules`; RSC *Chemistry of Fragrances* → layer physics, Fig 9.1 product base,
+Table A2 product types, vanillin rule; **Tisserand & Young 2e** → `constituents.csv`; **Poucher 9/10e** → after-shave product
+type + auxiliaries (`product_types.csv` Cross_Check column, `product_bases.csv`). The perfumery chat transcript → DPG as diluent.
 
 ## PROJECT OVERVIEW
 
@@ -129,7 +147,7 @@ perfume-ai-system/
 │   ├── note_name_aliases.csv        # dataset3 -> dataset2 note-name reconciliation (Rule 10); Apply/Decided_By  [rev2]
 │   ├── cas_corrections.csv          # checksum-failing CAS -> verified corrections; Apply/Decided_By            [rev2]
 │   ├── accord_name_aliases.csv      # dataset1 Main_Accords term -> dataset3 accord (the Zone A -> B bridge)     [rev3]
-│   ├── constituents.csv             # natural -> restricted constituent -> fraction (safety step 0), provisional    [rev4]
+│   ├── constituents.csv             # natural -> restricted constituent -> fraction (safety step 0); GENERATED by mine_tisserand.py [rev5]
 │   ├── note_additions.csv           # new dataset2 rows the accords need (Vanilla Absolute, Cade Oil Rectified…)   [rev4]
 │   ├── accord_edits.csv             # substitutions for banned / wrong-grade notes inside accords (AI, sign-off)    [rev4]
 │   ├── note_field_overrides.csv     # coarse relabels, e.g. Odor_Strength potency class (Very strong/Strong/Low), AI  [rev4]
@@ -141,6 +159,7 @@ perfume-ai-system/
 │   ├── reference/pubchem_cas_cache.json             # cached PubChem answers so the CAS audit reproduces offline [rev2]
 │   ├── reference/pubchem_properties.csv             # PubChem MW / XLogP / IUPAC for 137 defined molecules      [rev4]
 │   ├── enrich_pubchem.py            # fetches the above; load_data WARNs on MW/logP disagreement                  [rev4]
+│   ├── mine_tisserand.py            # Tisserand & Young 2e PDF -> constituents.csv (page-cited); text cache gitignored [rev5]
 │   ├── build_datasets.py            # regenerates dataset1/2/3 (+ applies aliases & CAS fixes), ifra_limits, group_rules
 │   ├── reconcile_notes.py           # Step 1 tool: proposes note-name aliases, tiers AUTO / REVIEW / NO_MATCH   [rev2]
 │   ├── verify_cas.py                # Step 2 tool: audits bad CAS against IFRA table / project tables / PubChem [rev2]
@@ -199,20 +218,26 @@ duplicate (accord, note) pairs exist; the formula builder de-duplicates and flag
 `Decided_By=human` to make a decision permanent (re-runs never overwrite human rows). Auto-application requires exact
 match after normalisation (names) or two independent sources agreeing (CAS) — never a guess.
 
-**product_types.csv** **[rev2]** — `Product_Type, Concentrate_Min_Pct, Concentrate_Max_Pct, Alcohol_Pct_Range, Source`
-(RSC Appendix Table A2: extrait 15–30 %, EdP 8–15, EdT 4–15, cologne 3–5, splash 2–3). Zone C picks one; `CONCENTRATE_FRACTION`
-must lie in that range.
+**product_types.csv** **[rev2/rev5]** — `Product_Type, Concentrate_Min_Pct, Concentrate_Max_Pct, Alcohol_Pct_Range, Source, Cross_Check`
+(RSC Appendix Table A2: extrait 15–30 %, EdP 8–15, EdT 4–15, cologne 3–5, after shave 2–8, splash 2–3; Poucher's independent
+figures in `Cross_Check` — cologne 2–4 %, EdT ≤ 10 %, after-shave ~1 % p.362 — and his Formula VI after-shave lotion as its own
+row: 1–2 % fragrance, 50–65 % ethanol, p.373). Zone C picks one; `CONCENTRATE_FRACTION` must lie in that range.
 
-**constituents.csv** **[rev4]** — `Natural_Name, Natural_CAS, Grade_Word, Constituent_Name, Constituent_CAS, Typical_Min_Pct,
-Typical_Max_Pct, Fraction_Used, Basis, Source, Note, Provisional`. `Grade_Word` (leaf/bark/absolute/oil…) picks the profile
-from the note name; no grade word → worst case of every grade. `Fraction_Used` = upper bound of the literature range.
+**constituents.csv** **[rev4/rev5]** — `Natural_Name, Natural_CAS, Grade_Word, Constituent_Name, Constituent_CAS, Typical_Min_Pct,
+Typical_Max_Pct, Fraction_Used, Basis, Source, Note, Provisional`. Generated by `data/mine_tisserand.py` — edit the map `M` or
+`CANON` in the tool, never the numbers. `Grade_Word` (bark/leaf, expressed/distilled/FCF, absolute/oil/otto, linalool/estragole,
+rectified/unrectified, virginia/texas, globulus/citriodora) picks the profile from the note name; when a CAS has several
+grades every row carries a grade word (blank rows would double-count) and no grade word in the note name → worst case of every
+grade. `Fraction_Used` = highest upper bound across the profile's variants, isomers of one CAS summed, capped at 1.0.
 
 **note_additions.csv / accord_edits.csv** **[rev4]** — hand-maintained; applied by `build_datasets.py` (additions appended to
 dataset2 after CAS corrections; edits applied to dataset3 after the aliases, matched on the workbook or current note name).
 
 **product_bases.csv** **[rev4]** — `Component, INCI, CAS, Role, Default_Pct, Min_Pct, Max_Pct, Phase, When_To_Use, Legal_Basis,
 Source, Note`: ethanol (DEB), water, DPG, BHT (SCCS ≤ 0.8 %), tocopherol, benzophenone-3 (Annex VI ≤ 0.5 % product protection),
-PPG-20 methyl glucose ether, polysorbate 20, magnesium carbonate (filter aid). Baseline = RSC Fig 9.1 EdP.
+PPG-20 methyl glucose ether, polysorbate 20, magnesium carbonate (filter aid); **[rev5]** propylene glycol (after-shave humectant
+4–6 %, Poucher p.373 — added automatically for after-shave product types), menthol (0.1 % cooling, optional), diisopropyl adipate
+(emollient ester, optional). Baseline = RSC Fig 9.1 EdP; after-shave = Poucher Formula VI.
 
 **allergens_uk.csv** **[rev4]** — the 26 Annex III allergens with `All_CAS`; leave-on 0.001 % / rinse-off 0.01 %.
 
@@ -473,8 +498,8 @@ fixative (perfumery_chat_transcript.pdf, RSC Ch 9).
   Carles & RSC reference tables, `product_types.csv`).
 - **Task 2 — DONE (2026-09-16)** — `zone_b_chemistry/formula_builder.py` + `accord_study.py`; tests in
   `tests/test_formula_builder.py` (golden Carles chypre, unplaceable-note, conflict, empty-layer, shape, determinism cases).
-- **Task 3 — DONE (2026-09-18)** — `zone_b_chemistry/safety_engine.py`; step 0 emitted as NOT IMPLEMENTED (provisional) until
-  `constituents.csv` exists. 29 deliberate-breach tests.
+- **Task 3 — DONE (2026-09-18)** — `zone_b_chemistry/safety_engine.py`; 36 deliberate-breach tests. Step 0 runs on the T&Y-derived
+  `constituents.csv` since 2026-09-19 (`CONSTITUENT_BANNED_AS_SUCH` warns when a banned-as-ingredient molecule arrives as natural content).
 - **Task 4 — DONE (2026-09-18)** — `zone_b_chemistry/optimizer.py` + `pipeline.py`.
 - **Accord bridge — DONE (2026-09-18)** — `data/reconcile_accords.py` → `accord_name_aliases.csv`; `pipeline.perfume_to_accords`.
 - **Task 5 — DONE (2026-09-18)** — `zone_a_llm/input_handler.py` + `matcher.py` (+ `llm_client.py`); button path needs no API.
@@ -485,7 +510,8 @@ After each task: show the result and wait for confirmation before proceeding.
 
 ## CURRENT STATUS
 
-See **⏩ RESUME HERE** at the top: everything is built and tested (185 tests); what remains is data and decisions —
-`constituents.csv` for safety step 0, four accords to re-author (Costus / crude tar), three decision CSVs, the
-verification of dataset2 chemistry fields, then the ML/data pass. `python load_data.py` exits non-zero until the two
-note/CAS decision lists are worked through; that is intended.
+See **⏩ RESUME HERE** at the top: everything is built and tested (204 tests); the data blockers of September are closed
+(constituents from Tisserand & Young, accords re-authored, decision CSVs worked, PubChem check run). What remains needs a
+human or a supplier: CoA values for `constituents.csv`, sign-off of the `Decided_By=ai` rows, the 13 material-less accord
+notes, the 53 PubChem MW/logP disagreements, the EU allergen list, Zone C, and the ML retrain (`../Farhan-Project-main/
+training/NEXT_STEPS_ML.md`). `python load_data.py` exits non-zero on that one ERROR (13 notes) by design.

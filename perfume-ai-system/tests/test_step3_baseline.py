@@ -92,7 +92,7 @@ def test_fig_leaf_absolute_and_methylcoumarins_are_in_ifra_limits(data):
 
 def test_product_types_table(data):
     p = data.product_types
-    assert len(p) == 6 and not [i for i in data.errors() if i.table == "product_types"]
+    assert len(p) == 7 and not [i for i in data.errors() if i.table == "product_types"]      # 6 RSC Table A2 rows + Poucher Formula VI after-shave
     assert (p["Concentrate_Fraction_Min"] <= p["Concentrate_Fraction_Max"]).all()
     assert p["Concentrate_Fraction_Max"].max() == pytest.approx(0.30)     # extrait 15-30 %
     assert p.set_index("Product_Type").loc["Eau de toilette", "Concentrate_Fraction_Min"] == pytest.approx(0.04)

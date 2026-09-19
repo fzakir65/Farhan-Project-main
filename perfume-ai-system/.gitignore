@@ -26,3 +26,7 @@ Thumbs.db
 output/
 *.log
 data_report.txt
+
+# Book text extracts (copyright) - regenerated from the PDFs in Downloads/ by data/mine_tisserand.py
+data/reference/tisserand_young_2e_text.txt
+data/reference/tisserand_young_2e_profiles.json

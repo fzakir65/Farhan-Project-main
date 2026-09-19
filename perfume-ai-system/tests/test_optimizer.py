@@ -27,14 +27,15 @@ def pct(res, name):
 
 def test_rebalances_to_100_with_pins_fixed(data):
     f = F(("Bergamot Oil", "8007-75-8", "Top", 25.0), ("Rose Absolute", "8007-01-0", "Heart", 20.0),
-          ("Oakmoss Absolute", "90028-68-5", "Base", 10.0), ("Vetiver", "8016-96-4", "Base", 25.0), ("Iso E Super", "54464-57-2", "Base", 20.0))
+          ("Oakmoss Absolute", "90028-68-5", "Base", 10.0), ("Sandalwood Oil", "8006-87-9", "Base", 25.0), ("Iso E Super", "54464-57-2", "Base", 20.0))
+    # (Sandalwood, not Vetiver, as the free Base absorber: vetiver oil carries up to 1.3 % isoeugenol (T&Y p.1740) and is itself capped)
     s = se.check_formula(f, data)
     r = op.optimize(s, data)
     assert r.verdict == "PASS" and r.total_pct == 100.0
     assert pct(r, "Oakmoss Absolute") == 0.1 and pct(r, "Bergamot Oil") == 0.4        # pinned at their ceilings
     assert r.formula.set_index("Note_Name")["Pinned"].to_dict()["Oakmoss Absolute"]
-    # the removed Base mass went back into Base (Vetiver / Iso E Super), the removed Top mass has nowhere to go in Top
-    assert pct(r, "Vetiver") + pct(r, "Iso E Super") == pytest.approx(55 - 0.1, abs=0.01) or \
+    # the removed Base mass went back into Base (Sandalwood / Iso E Super), the removed Top mass has nowhere to go in Top
+    assert pct(r, "Sandalwood Oil") + pct(r, "Iso E Super") == pytest.approx(55 - 0.1, abs=0.01) or \
         r.layers.set_index("Layer")["Pct"]["Base"] > 55
     assert r.safety.verdict == "PASS" and r.iterations == 1
 
@@ -46,14 +47,30 @@ def test_reject_from_safety_passes_through(data):
 
 
 def test_loop_pins_newly_capped_materials_until_stable(data):
-    # Oakmoss is cut 9.9 %; redistribution pushes Coumarin over 1.5 -> round 2 caps and pins it; Vetiver absorbs the rest
+    # Oakmoss is cut 9.9 %; redistribution pushes Coumarin over 1.5 -> round 2 caps and pins it; Sandalwood absorbs the rest
     f = F(("Oakmoss Absolute", "90028-68-5", "Base", 10.0), ("Coumarin", "91-64-5", "Base", 1.4),
-          ("Vetiver", "8016-96-4", "Base", 88.6))
+          ("Sandalwood Oil", "8006-87-9", "Base", 88.6))
     r = op.optimize(se.check_formula(f, data), data)
     assert r.verdict == "PASS" and r.total_pct == 100.0 and r.iterations >= 2
     assert pct(r, "Coumarin") == 1.5 and pct(r, "Oakmoss Absolute") == 0.1
-    assert pct(r, "Vetiver") == pytest.approx(98.4, abs=1e-3)
+    assert pct(r, "Sandalwood Oil") == pytest.approx(98.4, abs=1e-3)
     assert any("pinning" in t for t in r.trace)
+
+
+def test_vetiver_is_capped_through_its_isoeugenol_content(data):
+    # constituents.csv (T&Y p.1740): isoeugenol 0-1.3 % of vetiver oil; UK/EU Annex III isoeugenol 0.02 % -> vetiver <= 0.02 / 0.013
+    from tests.test_safety_engine import frac
+    f_iso = frac(data, "8016-96-4", "97-54-1")
+    r = op.optimize(se.check_formula(F(("Vetiver", "8016-96-4", "Base", 30.0), ("Sandalwood Oil", "8006-87-9", "Base", 70.0)), data), data)
+    assert r.verdict == "PASS" and pct(r, "Vetiver") <= 0.02 / f_iso + 1e-6 and r.formula.set_index("Note_Name")["Pinned"]["Vetiver"]
+    assert pct(r, "Vetiver") == pytest.approx(0.02 / f_iso, abs=1e-3)
+
+
+def test_pinned_notes_round_down_so_the_final_safety_pass_is_clean(data):
+    # Lavender Absolute ceiling = 0.01 / herniarin fraction (an unround number): rounding 0.4348 up to 0.435 must not re-trigger a cut
+    f = F(("Lavender Absolute", "8000-28-0", "Heart", 20.0), ("Sandalwood Oil", "8006-87-9", "Base", 80.0))
+    r = op.optimize(se.check_formula(f, data), data)
+    assert r.verdict == "PASS" and r.safety.verdict == "PASS" and r.total_pct == 100.0
 
 
 def test_everything_pinned_fills_with_diluent_never_raises_a_ceiling(data):
@@ -142,4 +159,9 @@ def test_pipeline_over_all_accords_never_crashes(data):
         verdicts[out.verdict] = verdicts.get(out.verdict, 0) + 1
         if out.verdict == "PASS":
             assert out.formula["Pct"].sum() == pytest.approx(100.0, abs=1e-6), name
-    assert verdicts.get("PASS", 0) > 150 and "REJECT" in verdicts      # REJECTs = banned / unknown-grade materials only
+    assert verdicts.get("PASS", 0) > 150
+    # a REJECT may only come from the safety layer (banned / prohibited / unknown grade), never from optimizer instability
+    for name in sorted(set(data.accords["Accord_Name"])):
+        out = run_zone_b([name], data, require_complete=False)
+        if out.verdict == "REJECT":
+            assert not out.safety.rejections.empty or (out.optimized and not any("not stable" in fl for fl in out.optimized.flags)), name

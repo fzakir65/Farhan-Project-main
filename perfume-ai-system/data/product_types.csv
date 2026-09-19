@@ -1,7 +1,8 @@
-Product_Type,Concentrate_Min_Pct,Concentrate_Max_Pct,Alcohol_Pct_Range,Source
-Extrait / parfum,15,30,96-99,"Pybus & Sell (eds), The Chemistry of Fragrances, RSC 1999, Appendix I Table A2 p.260"
-Parfum de toilette / Eau de parfum / Esprit de parfum,8,15,85-90,"Pybus & Sell (eds), The Chemistry of Fragrances, RSC 1999, Appendix I Table A2 p.260"
-Eau de toilette,4,15,80-90,"Pybus & Sell (eds), The Chemistry of Fragrances, RSC 1999, Appendix I Table A2 p.260"
-Eau de cologne,3,5,60-80,"Pybus & Sell (eds), The Chemistry of Fragrances, RSC 1999, Appendix I Table A2 p.260"
-After shave,2,8,50-70,"Pybus & Sell (eds), The Chemistry of Fragrances, RSC 1999, Appendix I Table A2 p.260"
-Splash cologne,2,3,50-70,"Pybus & Sell (eds), The Chemistry of Fragrances, RSC 1999, Appendix I Table A2 p.260"
+Product_Type,Concentrate_Min_Pct,Concentrate_Max_Pct,Alcohol_Pct_Range,Source,Cross_Check
+Extrait / parfum,15,30,96-99,"Pybus & Sell (eds), The Chemistry of Fragrances, RSC 1999, Appendix I Table A2 p.260",
+Parfum de toilette / Eau de parfum / Esprit de parfum,8,15,85-90,"Pybus & Sell (eds), The Chemistry of Fragrances, RSC 1999, Appendix I Table A2 p.260",
+Eau de toilette,4,15,80-90,"Pybus & Sell (eds), The Chemistry of Fragrances, RSC 1999, Appendix I Table A2 p.260","Butler (ed.), Poucher's Perfumes, Cosmetics and Soaps, 9th/10th edn (Kluwer) Ch 12 §12.2 PDF p.362: eau de toilette fragrance compound 'possibly up to 10 %'"
+Eau de cologne,3,5,60-80,"Pybus & Sell (eds), The Chemistry of Fragrances, RSC 1999, Appendix I Table A2 p.260","Butler (ed.), Poucher's Perfumes, Cosmetics and Soaps, 9th/10th edn (Kluwer) Ch 12 §12.2 PDF p.362: eau de cologne 2-4 % fragrance compound"
+After shave,2,8,50-70,"Pybus & Sell (eds), The Chemistry of Fragrances, RSC 1999, Appendix I Table A2 p.260","Butler (ed.), Poucher's Perfumes, Cosmetics and Soaps, 9th/10th edn (Kluwer) Ch 12 §12.2 PDF p.362: after-shaves 'around 1 %'; §12.4 Formula VI PDF p.373: 1-2 % fragrance, 50-65 % ethanol"
+Splash cologne,2,3,50-70,"Pybus & Sell (eds), The Chemistry of Fragrances, RSC 1999, Appendix I Table A2 p.260",
+After-shave lotion (Poucher Formula VI),1,2,50-65,"Butler (ed.), Poucher's Perfumes, Cosmetics and Soaps, 9th/10th edn (Kluwer) Ch 12 §12.4 Formula VI, PDF p.373: ethanol 50-65 %, propylene glycol 4-6 %, fragrance 1-2 %, water to 100",Pybus & Sell RSC 1999 Table A2 p.260 gives after shave 2-8 % / 50-70 % alcohol — the RSC row above

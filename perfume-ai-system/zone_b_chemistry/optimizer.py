@@ -21,6 +21,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
+import numpy as np
 import pandas as pd
 
 from .formula_builder import LAYER_ORDER, LAYER_TARGETS
@@ -152,8 +153,10 @@ def optimize(safety: SafetyResult, data, *, layer_targets=LAYER_TARGETS,
             f["Pinned"] = f["CAS"].isin(pinned)
             trace.append(f"diluent: {residual:.3f} % dipropylene glycol added — no unpinned odorant could absorb the removed mass")
             flags.append(f"WARNING DILUENT_ADDED: {residual:.3f} % dipropylene glycol fills the mass removed by safety cuts (all odorants pinned)")
-        # exact 100 after rounding: residual on the largest UNPINNED share
-        f["Pct"] = f["Pct"].round(ROUND)
+        # exact 100 after rounding: pinned notes round DOWN (a ceiling such as 0.01 / 0.023 = 0.4348 must never round up to
+        # 0.435 and re-trigger the cut), everything else rounds normally; the residual lands on the largest UNPINNED share
+        unit = 10 ** ROUND
+        f["Pct"] = np.where(f["Pinned"], np.floor(f["Pct"].astype(float) * unit + 1e-9) / unit, f["Pct"].astype(float).round(ROUND))
         residual = round(100.0 - float(f["Pct"].sum()), ROUND)
         if abs(residual) > 0:
             free = f[~f["Pinned"]]

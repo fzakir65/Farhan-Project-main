@@ -173,10 +173,11 @@ def test_isomer_sum_rose_ketones(data):
 # ----------------------------------------------------------------------------
 
 def test_olfactory_cap_and_provisional_flag(data):
-    r = se.check_formula(F(("Vanillin", "121-33-5", 6.0), ("Nutmeg Oil", "8008-45-5", 1.0)), data)
-    assert pct(r, "Vanillin") == 4.0 and pct(r, "Nutmeg Oil") <= 0.3         # olfactory cap 0.3, then step 0 cuts further
+    r = se.check_formula(F(("Vanillin", "121-33-5", 6.0), ("Nutmeg Oil", "8008-45-5", 1.0), ("Tarragon Oil", "8016-88-4", 1.0)), data)
+    assert pct(r, "Vanillin") == 4.0 and pct(r, "Nutmeg Oil") <= 0.3         # olfactory cap 0.3 (safrole 0.01 % sits just above it)
     assert any(f.code == "PROVISIONAL_CAP" and f.note == "Nutmeg Oil" for f in r.flags)
-    assert any(a["Step"] == 0 and a["Note_Name"] == "Nutmeg Oil" for _, a in r.adjustments.iterrows())
+    assert pct(r, "Tarragon Oil") <= 0.014 / frac(data, "8016-88-4", "140-67-0") + 1e-6      # estragole: step 0 cuts a natural with no cap of its own
+    assert any(a["Step"] == 0 and a["Note_Name"] == "Tarragon Oil" for _, a in r.adjustments.iterrows())
 
 
 def test_vanillin_ethyl_vanillin_equivalence_rule(data):
@@ -250,28 +251,57 @@ def test_every_real_accord_runs_through_the_engine(data):
 # step 0 — constituent roll-up
 # ----------------------------------------------------------------------------
 
+def frac(data, natural_cas: str, constituent_cas: str, grade: str = "") -> float:
+    """The fraction the engine will use — read from constituents.csv so the tests survive a CoA replacement."""
+    c = data.constituents
+    d = c[(c["Natural_CAS"] == natural_cas) & (c["Constituent_CAS"] == constituent_cas)]
+    if grade:
+        d = d[d["Grade_Word"] == grade]
+    assert len(d), f"no constituents.csv row for {natural_cas} -> {constituent_cas} ({grade!r})"
+    return float(d["Fraction_Used"].max())
+
+
+def test_constituent_fractions_are_page_cited_and_within_bounds(data):
+    c = data.constituents
+    assert c["Source"].str.contains(r"PDF p\.\d+|p\.\d+", regex=True).all(), "every literature fraction must cite a page"
+    assert ((c["Fraction_Used"] > 0) & (c["Fraction_Used"] <= 1)).all()
+    assert (c["Typical_Max_Pct"] >= c["Typical_Min_Pct"]).all()
+    assert frac(data, "8000-34-8", "97-53-0") > 0.6                  # clove bud is mostly eugenol (T&Y: 68.6-96.9 %)
+    assert frac(data, "8015-91-6", "104-55-2", "bark") > frac(data, "8015-91-6", "104-55-2", "leaf")   # bark oil is the cinnamaldehyde one
+
+
 def test_eugenol_effective_total_is_capped_naturals_first(data):
+    f_eug = frac(data, "8000-34-8", "97-53-0")
     r = se.check_formula(F(("Clove Bud Oil", "8000-34-8", 2.0), ("Eugenol", "97-53-0", 1.5)), data)
     clove, eug = pct(r, "Clove Bud Oil"), pct(r, "Eugenol")
-    assert clove == 2.0                                            # the natural keeps its share (2.0 x 0.88 = 1.76 <= 2.5)
-    assert eug == pytest.approx(2.5 - 2.0 * 0.88, abs=1e-3)        # the pure molecule takes what is left
+    assert clove == 2.0                                            # the natural keeps its share (2.0 x f_eug <= 2.5)
+    assert eug == pytest.approx(2.5 - 2.0 * f_eug, abs=1e-3)       # the pure molecule takes what is left
     assert any(a["Step"] == 0 for _, a in r.adjustments.iterrows()) and r.provisional
 
 
 def test_naturals_alone_over_the_ceiling_are_scaled(data):
-    r = se.check_formula(F(("Clove Bud Oil", "8000-34-8", 4.0)), data)   # 4.0 -> cap 2.0 (olfactory) -> 1.76 eugenol OK
+    r = se.check_formula(F(("Clove Bud Oil", "8000-34-8", 4.0)), data)   # 4.0 -> cap 2.0 (olfactory) -> eugenol under 2.5
     assert pct(r, "Clove Bud Oil") == 2.0
+    f_me = frac(data, "8007-01-0", "93-15-2", "otto")
     r2 = se.check_formula(F(("Bulgarian Rose Otto", "8007-01-0", 5.0)), data)
-    assert pct(r2, "Bulgarian Rose Otto") == pytest.approx(0.01 / 0.035, abs=1e-3)   # UK methyl eugenol 0.01 % / 3.5 %
+    assert pct(r2, "Bulgarian Rose Otto") == pytest.approx(0.01 / f_me, abs=1e-3)   # UK methyl eugenol 0.01 % / content
     assert any("Methyl eugenol" in a for a in r2.adjustments["Source"])
 
 
 def test_as_such_prohibited_constituent_uses_the_natural_contribution_ceiling(data):
-    r = se.check_formula(F(("Nutmeg Oil", "8008-45-5", 0.3)), data)
-    assert pct(r, "Nutmeg Oil") <= 0.01 / 0.02 + 1e-6
+    f_saf = frac(data, "8008-45-5", "94-59-7")
+    r = se.check_formula(F(("Nutmeg Oil", "8008-45-5", 1.0)), data)
+    assert pct(r, "Nutmeg Oil") == pytest.approx(min(0.3, 0.01 / f_saf), abs=1e-3)   # olfactory cap 0.3 vs safrole 0.01 % natural ceiling
     assert r.rejections.empty                                          # natural contribution is tolerated, never REJECT
+    f_her = frac(data, "8000-28-0", "531-59-9", "absolute")
     r2 = se.check_formula(F(("Lavender Absolute", "8000-28-0", 1.0)), data)
-    assert pct(r2, "Lavender Absolute") == pytest.approx(0.01 / 0.03, abs=1e-3)    # herniarin 3 % vs 0.01 % (IFRA_STD_158)
+    assert pct(r2, "Lavender Absolute") == pytest.approx(0.01 / f_her, abs=1e-3)    # herniarin vs 0.01 % (IFRA_STD_158)
+
+
+def test_banned_as_such_constituent_in_a_natural_is_a_visible_warning_not_a_reject(data):
+    r = se.check_formula(F(("Tuberose Absolute", "8024-05-3", 2.0)), data)        # benzyl cyanide ~1 % (T&Y p.1706), Annex II as an ingredient
+    assert r.rejections.empty
+    assert any(f.code == "CONSTITUENT_BANNED_AS_SUCH" and f.severity == "WARNING" for f in r.flags)
 
 
 def test_grade_word_selects_the_profile_and_unknown_grade_takes_worst_case(data):
