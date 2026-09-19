@@ -36,6 +36,7 @@ class ProductResult:
     process: list[str]
     warnings: list[str] = field(default_factory=list)
     batch_g: float = 100.0
+    stability: list = field(default_factory=list)          # stability.StabilityFlag — colour / hydrolysis / solubility advisories (Curtis 1994)
 
     def summary(self) -> str:
         lines = [f"PRODUCT: {self.product_type} — concentrate {self.concentrate_pct:g} % — batch {self.batch_g:g} g — "
@@ -46,6 +47,8 @@ class ProductResult:
             lines.append("  ALLERGEN DECLARATION (leave-on, > 0.001 %): " + ", ".join(f"{r.Allergen} {r.Product_Pct:.4f} %" for r in self.allergens.itertuples(index=False)))
         for w in self.warnings:
             lines.append(f"  WARNING {w}")
+        for fl in self.stability:
+            lines.append(f"  STABILITY {fl}")
         lines.append("  PROCESS: " + " -> ".join(self.process))
         return "\n".join(lines)
 
@@ -132,16 +135,23 @@ def formulate_product(concentrate: pd.DataFrame, data, *, product_type: str = "E
     # allergen declaration (direct materials + constituent contributions from constituents.csv)
     allergens = _allergen_declaration(mats, data, conc)
 
+    # appearance / odour stability in this bottle (Curtis 1994): colour from Schiff bases and light, hydrolysis by the water,
+    # terpene haze below 75 % alcohol — advice, never a cap
+    from .stability import assess
+    stability = assess(concentrate[["Note_Name", "CAS", "Pct"]], data, water_pct=water, alcohol_pct=ethanol,
+                       antioxidant=bool(antioxidant), uv_absorber=bool(uv_absorber))
+
     process = [
         "weigh the fragrance materials into the concentrate; pre-dilute powerful materials (musks 1 %, geosmin/skatole 0.1 %)",
         ("mix the concentrate into the propylene glycol, then dissolve in the ethanol (Poucher Formula VI, p.373)" if humectant
          else "blend the concentrate into the ethanol"),
         "add the water and the auxiliaries slowly with mixing (antioxidant dissolved in ethanol first)",
-        f"mature {'4-6 weeks' if natural_load > 20 else '10-14 days'} at room temperature in the dark",
+        f"mature {'4-6 weeks' if natural_load > 20 else '10-14 days'} at room temperature in the dark (Curtis p.458: a compound is about fully aged after a month; "
+        "once diluted it needs a further, longer maturation)",
         "chill to +1 °C for 24 h (Poucher: 'cool to about 4 °C', p.373); filter through a fine filter (0.2 % magnesium carbonate as filter aid if precipitates are stubborn)",
         "fill into clean glass; label with the allergen declaration; light-stability and solubility checks at 5 °C / 40 °C",
     ]
-    return ProductResult(product_type, conc, table, mats, safety, allergens, process, warnings, batch_g)
+    return ProductResult(product_type, conc, table, mats, safety, allergens, process, warnings, batch_g, stability)
 
 
 def _allergen_declaration(mats: pd.DataFrame, data, conc: float) -> pd.DataFrame:

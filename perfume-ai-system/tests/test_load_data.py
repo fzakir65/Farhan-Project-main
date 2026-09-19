@@ -44,7 +44,7 @@ def test_every_table_loads_with_required_columns(data):
 
 def test_expected_row_counts(data):
     assert len(data.perfumes) == 450
-    assert len(data.notes) == 727          # 720 workbook rows + 7 note_additions.csv rows (exact duplicates only *reported*)
+    assert len(data.notes) == 754          # 720 workbook rows + 34 note_additions.csv rows (7 of 2026-09-18 + 27 Curtis 1994 aroma chemicals, 2026-09-19)
     assert len(data.accords) == 1518
     assert len(data.ifra_limits) == 81
     assert len(data.group_rules) == 8

@@ -83,6 +83,7 @@ REG_JURISDICTIONS = {"GB+EU", "GB", "EU"}
 SEASON_WORDS = re.compile(r"\b(?:spring|summer|fall|autumn|winter|all seasons|day|evening|night)\b", re.I)
 CAS_PLACEHOLDERS = {"-", "n/a", "na", "none", "nan", "unknown", "tbd", "?"}
 CARLES_TABLE = "reference/carles_volatility_table.csv"
+OHLOFF_USAGE = "reference/ohloff_usage_levels.csv"      # data/mine_ohloff.py — dosages quoted for landmark perfumes
 PUBCHEM_TABLE = "reference/pubchem_properties.csv"      # data/enrich_pubchem.py
 # Physical plausibility of Volatility_Class (Pybus & Sell, Chemistry of Fragrances: Ch 7 p.141 gives top ~15 min,
 # heart 3-4 h, base 5-8 h+; Ch 11 p.190 boiling point / RMM as the first approximation to volatility).
@@ -145,6 +146,7 @@ class Data:
     regulatory_overrides: pd.DataFrame = field(default_factory=pd.DataFrame)
     notes_regulated: pd.DataFrame = field(default_factory=pd.DataFrame)
     carles_disagreements: pd.DataFrame = field(default_factory=pd.DataFrame)
+    ohloff_potency_check: pd.DataFrame = field(default_factory=pd.DataFrame)
     pubchem_mismatches: pd.DataFrame = field(default_factory=pd.DataFrame)
     shared_cas: dict = field(default_factory=dict)
 
@@ -798,6 +800,7 @@ def load_all(data_dir: Path | str = DATA_DIR) -> Data:
     data.shared_cas = shared_cas_conflicts(data.notes)
     data.issues += cross_validate(data, data_dir)
     data.issues += carles_cross_check(data, data_dir)
+    data.issues += ohloff_usage_cross_check(data, data_dir)
     data.issues += pubchem_cross_check(data, data_dir)
     return data
 
@@ -859,6 +862,48 @@ def carles_cross_check(d: Data, data_dir: Path) -> list[Issue]:
     if rows:
         issues.append(Issue("WARNING", "notes", "", f"{len(rows)} notes contradict Carles' volatility classification "
                                                     "(see data.carles_disagreements)"))
+    return issues
+
+
+OHLOFF_NAME_MAP = {  # Ohloff's material -> dataset2 Note_Name (only where the catalogue has the material)
+    "Hydroxycitronellal": "Hydroxycitronellal", "Rose oxide": "Rose Oxide", "Florol / Florosa": "Florol", "Sandalwood oil": "Sandalwood Oil",
+    "Isoraldeine (gamma-methyl ionone)": "Methyl Ionone", "Galbanum oil": "Galbanum Oil", "Patchouli oil": "Patchouli Oil", "Vanillin": "Vanillin",
+    "Coumarin": "Coumarin", "Ambroxan": "Ambroxan", "Evernyl": "Evernyl", "Ethyl maltol": "Ethyl Maltol", "Calone 1951": "Calone",
+    "Benzyl salicylate": "Benzyl Salicylate", "Iso E Super": "Iso E Super", "Cedrene": "Cedrene", "Lyral (HICC)": "Lyral",
+}
+POTENCY_EXPECT = [  # (max % in a real concentrate, classes that fit that dosage): a landmark perfume's dose is evidence of potency
+    (0.5, {"Very strong", "Strong"}), (3.0, {"Strong", "Medium", "Very strong"}), (10.0, {"Strong", "Medium", "Low"}), (100.0, {"Medium", "Low"}),
+]
+
+
+def ohloff_usage_cross_check(d: Data, data_dir: Path) -> list[Issue]:
+    """Ohloff 2e quotes the dose of key materials in landmark perfumes (Ch 9.6, e.g. Iso E Super ca. 50 % in Terre d'Hermes,
+    Calone ca. 0.2 % in Kenzo pour Homme). Those doses are evidence for the coarse Odor_Strength potency class the builder
+    damps with: a material dosed at 50 % cannot be 'Very strong', one dosed at 0.2 % cannot be 'Low'. Disagreements are
+    WARNINGs (data.ohloff_potency_check) — the class is olfactory balance only, never a safety input."""
+    path = Path(data_dir) / OHLOFF_USAGE
+    issues: list[Issue] = []
+    if not path.exists():
+        return issues
+    use = pd.read_csv(path, dtype=str, keep_default_na=False)
+    rows = []
+    for _, u in use.iterrows():
+        name = OHLOFF_NAME_MAP.get(u["Material"])
+        if not name or name not in set(d.notes["Note_Name"]):
+            continue
+        pct = float(u["Approx_Pct_Of_Concentrate"])
+        classes = sorted(set(d.notes.loc[d.notes["Note_Name"] == name, "Odor_Strength"]) - {""})
+        fit = next(ok for lim, ok in POTENCY_EXPECT if pct <= lim)
+        agree = bool(set(classes) & fit) if classes else True
+        rows.append({"Material": u["Material"], "Dataset2_Name": name, "Ohloff_Pct": pct, "Perfume": u["Perfume"], "Odor_Strength": "/".join(classes),
+                     "Agrees": agree, "Source": u["Source"]})
+        if not agree:
+            issues.append(Issue("WARNING", "notes", name, f"Odor_Strength {'/'.join(classes)} vs Ohloff: ca. {pct:g} % of the concentrate in {u['Perfume']} — {u['Source']}"))
+    d.ohloff_potency_check = pd.DataFrame(rows)
+    if rows:
+        n_bad = sum(1 for r in rows if not r["Agrees"])
+        issues.append(Issue("INFO", "notes", "", f"Ohloff usage-level check: {len(rows)} materials with a landmark-perfume dose, {n_bad} potency classes contradicted "
+                                                 "(see data.ohloff_potency_check)"))
     return issues
 
 

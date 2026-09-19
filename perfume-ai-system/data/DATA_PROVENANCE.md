@@ -21,6 +21,7 @@ python load_data.py          # validation report; exit 2 while ERROR-level defec
 | `note_name_aliases.csv` | hand-maintained (auto-seeded) | `reconcile_notes.py` | 2026-09-15. dataset3 → dataset2 note-name reconciliation. Tiers: AUTO (exact after normalisation, or chemical identity confirmed by dataset2's own Chemical_Name/CAS) → `Apply=Yes`; REVIEW / NO_MATCH → `Apply=No` until a human decides (`Decided_By=human` rows survive re-runs). 35/44/25 today. |
 | `cas_corrections.csv` | hand-maintained (auto-seeded) | `verify_cas.py` (+ `reference/pubchem_cas_cache.json`) | 2026-09-15. FIX only when two independent sources agree (official IFRA table / project tables / PubChem / same-note / check-digit / sibling). 6 FIX, 44 FLAG. PubChem is queried only for synthetics and defined molecules. |
 | `accord_name_aliases.csv` | hand-maintained (auto-seeded) | `reconcile_accords.py` | 2026-09-18. dataset1 `Main_Accords` term → dataset3 accord. 36 AUTO / 29 REVIEW / 31 NO_MATCH. |
+| `reference/curtis_*.csv`, `reference/ohloff_*.csv` | transcribed / parsed by `data/mine_curtis.py`, `data/mine_ohloff.py` | Curtis & Williams 1994 (OCR + page images); Ohloff 2e 2022 | 2026-09-19. Every row cites its PDF page. |
 | `constituents.csv` | **generated** by `data/mine_tisserand.py` from the Tisserand & Young 2e PDF | Tisserand & Young, *Essential Oil Safety* 2e (2014), "Key constituents" of 122 mapped profiles, every row cites the PDF page | 2026-09-19. 256 rows, 87 natural CAS; highest published upper bound across a profile's variants (isomers of one CAS summed); only constituents the safety tables know are written; ALL Provisional=Yes until supplier CoA values replace them. The 86 recalled rows of 2026-09-18 are gone. |
 | `note_additions.csv` | hand-maintained (AI 2026-09-18) | CAS cited per row (PubChem for geosmin) | 7 new dataset2 rows the accords need. |
 | `accord_edits.csv` | hand-maintained (AI 2026-09-18, perfumer sign-off required) | IFRA_STD_071/078/114/119, UK Annex II | Costus / Peru balsam / crude tars replaced by legal materials of the same olfactive role. |
@@ -103,6 +104,31 @@ python load_data.py          # validation report; exit 2 while ERROR-level defec
   VIII p.374), plus Poucher corroboration on the UV-absorber, DPG-diluent and chill-filter rows (Ch 24 p.732; p.373).
   `formulate_product` adds the humectant automatically for after-shave product types and cites the Poucher procedure.
   The rest of Poucher is cosmetics (antiperspirants, hair, soap, emulsions) — outside this system's scope.
+
+## Changes made 2026-09-19 (later): Curtis & Williams 1994 and Ohloff 2e
+
+- **Curtis & Williams, *An Introduction to Perfumery* (1994)** — the Downloads scan has no text layer; pages were OCR'd with the
+  Windows OCR engine (`data/winocr.ps1`, text cache gitignored) and the tables transcribed from the page images inside
+  `data/mine_curtis.py`: `reference/curtis_floral_bases.csv` (Rose, Jasmin, Lily-of-the-Valley, Carnation, Orange Blossom, Violet,
+  Tuberose: material, recommended upper limit, T/M/B function, skeletons 1-3, enhancers — PDF p.461-473),
+  `reference/curtis_formulas.csv` (aldehydic p.482, chypre p.484, lavender water p.485, fougère p.487, traditional cologne p.488,
+  experiment 11.22 cologne p.548, oriental complexes p.483), `reference/curtis_stability.csv` (36 statements: light, air, iron,
+  alkali, Schiff bases, ester hydrolysis p.525-526, water / alcohol solubility p.561, extrait practice p.560, maturation p.458).
+  `product_types.csv` Cross_Check += Curtis' toilet-water table (p.560); `product_bases.csv` += glycerin (p.561) and Curtis
+  corroboration on water / BHT / UV rows. NOT taken: the 1994 IFRA lines of the monographs (superseded).
+- `note_additions.csv` += 27 aroma chemicals the Curtis bases need; every CAS confirmed on PubChem (CID recorded) or taken from
+  the project's own IFRA / regulatory tables; `Volatility_Class` = Curtis' function on the cited page. Book 'Benzaldehyde' maps to
+  the existing `Almond` note (same CAS 100-52-7) rather than a duplicate.
+- `cas_corrections.csv`: **Lyral** (NOTE-0685) carried no CAS in the workbook, so the UK/EU ban on HICC could never join — now
+  31906-04-4 (from regulatory_uk.csv / IFRA_STD_044); a Lyral formula is REJECT, as it must be.
+- **Ohloff, Pickenhagen & Kraft, *Scent and Chemistry* 2e (2022)** — `data/mine_ohloff.py` parses the nine olfactory families of
+  Ch 9.3 (155 materials, PDF p.609-616) and carries transcriptions of the Ch 9.4 accords (p.619-620), the rose trials and the
+  'Eternity' scheme (Tables 9.2-9.4, p.621/627), the landmark-perfume dosages of Ch 9.6 (p.626-628) and the working practice
+  (85 % ethanol, 10 % evaluation dilutions, halve/double trials, 1000-part sheets). `load_data.ohloff_usage_cross_check` turns the
+  dosages into a check on the potency classes (18 materials, all agree after Patchouli Strong → Medium). Odour thresholds were NOT
+  mined: the book quotes them for numbered structures in mixed units (ng/l air vs water) — not reliable by regex.
+- New engine pieces: `zone_b_chemistry/stability.py` (advisories only), `zone_b_chemistry/book_accords.py` (book accords / sketches
+  as builder rows; `invention` falls back to them and drops banned book materials with a `removed_banned` note).
 
 ## Still open
 - `constituents.csv`: supplier CoA values to replace the literature upper bounds (Provisional=Yes); the IFRA *Annex on

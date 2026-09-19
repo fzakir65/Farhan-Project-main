@@ -10,10 +10,13 @@ This file is the primary guidance for Claude Code. Read it fully before writing 
 > Revision 2026-09-18: Tasks 3–7 built (safety engine, optimizer, accord bridge, Zone A, app). **[rev3]**
 > Revision 2026-09-19: Tisserand & Young 2e mined into `constituents.csv` (page-cited, tool `data/mine_tisserand.py`); Poucher's
 > after-shave / product-base figures added; optimizer rounds pinned notes down. **[rev5]**
+> Revision 2026-09-19 (later): Curtis & Williams *An Introduction to Perfumery* (OCR'd scan) and Ohloff *Scent and Chemistry* 2e
+> mined — floral bases, type formulas, stability table, olfactory families, usage levels; `stability.py`, `book_accords.py`;
+> 27 Curtis aroma chemicals added to dataset2; Lyral given its HICC CAS (it could not be rejected before). **[rev6]**
 
 ## ⏩ RESUME HERE (read this first in a new session)
 
-**State on 2026-09-19:** everything requested is built and tested — `python -m pytest -q` → 204 passing (~3-7 min, the
+**State on 2026-09-19 (late):** everything requested is built and tested — `python -m pytest -q` → 216 passing (~2-7 min, the
 all-accord and all-perfume sweeps dominate).
 `python app.py "fresh woody for summer"` runs match → formula → safety → rebalance → **product formulation**
 (ethanol / water / additives / allergen label); `python app.py --invent "citrus, mossy, rose" --family Chypre` **invents**
@@ -36,6 +39,11 @@ What was decided by AI, not a human (all traceable, `Decided_By=ai` in the CSV, 
 - `note_additions.csv`: 7 new dataset2 rows (Vanilla Absolute, Cinnamon Bark Oil, Cade Oil Rectified, Geosmin, Davana,
   Mace, Lentisque). `note_name_aliases.csv` 91/104 applied; `accord_name_aliases.csv` 88/96 applied.
 - `cas_corrections.csv`: 90 rows — 6 auto + 2 human + AI single-source fixes; 36 hopeless CAS **blanked** (missing beats wrong).
+- `note_additions.csv`: +27 aroma chemicals the Curtis floral bases need (alpha-terpineol, amyl/hexyl cinnamal, methyl benzoate,
+  methyl salicylate, aurantiol, benzyl/methyl isoeugenol, p-cresyl esters …) — CAS verified on PubChem (CID in the row), layer =
+  Curtis' T/M/B, potency class coarse. `cas_corrections.csv`: Lyral (NOTE-0685) had no CAS at all → 31906-04-4 from
+  regulatory_uk / IFRA_STD_044, so the ban now fires. `note_field_overrides.csv`: Patchouli / Patchouli Oil Strong → Medium
+  (Ohloff p.627: ca. 20 % in Angel).
 - `constituents.csv`: no longer AI-recalled — generated from the T&Y 2e text by `data/mine_tisserand.py`; what IS a decision
   there is the hand-maintained map dataset2 CAS → profile / grade word (`M` in the tool) and the choice to use the highest
   upper bound across a profile's variants (Bulgarian vs Turkish rose, six Boswellia species…). Treemoss atranol is deliberately
@@ -54,12 +62,28 @@ What is still open, in order:
 
 How to check where things stand: `python load_data.py`, `python app.py --report`, the three reconcile/verify scripts
 (`data/reconcile_notes.py`, `data/verify_cas.py --offline`, `data/reconcile_accords.py`), `data/enrich_pubchem.py --offline`,
-`python data/mine_tisserand.py --dry-run` (re-parses the book and reports unmapped constituent names).
+`python data/mine_tisserand.py --dry-run` (re-parses the book and reports unmapped constituent names), `python data/mine_ohloff.py`,
+`python data/mine_curtis.py` (rewrite the Ohloff / Curtis reference tables from the transcriptions inside the scripts).
 
 Books read and where they landed (all page-cited in the CSVs; see `data/DATA_PROVENANCE.md`): Carles → `reference/carles_*.csv`
 + builder rules; IFRA 51st → `ifra_limits` / `group_rules`; RSC *Chemistry of Fragrances* → layer physics, Fig 9.1 product base,
 Table A2 product types, vanillin rule; **Tisserand & Young 2e** → `constituents.csv`; **Poucher 9/10e** → after-shave product
-type + auxiliaries (`product_types.csv` Cross_Check column, `product_bases.csv`). The perfumery chat transcript → DPG as diluent.
+type + auxiliaries (`product_types.csv` Cross_Check column, `product_bases.csv`); **Curtis & Williams 1994** → `reference/curtis_*.csv`
+(7 floral bases with parts and Curtis' T/M/B, 5 type formulas + the Exp. 11.22 cologne, 36 stability statements) →
+`zone_b_chemistry/stability.py` (colour / hydrolysis / haze advisories in every product) and `book_accords.py` (book accords for
+invention, Curtis sketches as families); **Ohloff/Pickenhagen/Kraft 2e** → `reference/ohloff_*.csv` (nine olfactory families with
+155 materials, 12 basic accords, rose trials + Eternity scheme with parts, 20 landmark-perfume dosages that now cross-check the
+potency classes in `load_data`). The perfumery chat transcript → DPG as diluent.
+
+**Water, colour and smell (the user's question, answered by the books and now by the engine):** water itself is inert; what it
+does is (1) hydrolyse esters back to alcohol + acid — vinegar / butyric off-notes, autocatalytic (Curtis p.525-526), so the
+product layer flags `ESTER_HYDROLYSIS` above 10 % water; (2) drop the alcohol strength — below 75 % terpene-rich citrus oils
+come out of solution as haze (Curtis p.561) → `TERPENE_SOLUBILITY`; (3) it must be distilled / deionised — salts and iron
+discolour eugenol, vanillin, clove, cassia (Curtis p.195, 230, 263, 270) → `IRON_SENSITIVE`. Colour change is mostly NOT the
+water: it is light and air on citral, musk ketone, indole, vanillin (p.183, 206, 219, 230, 554) → `LIGHT_SENSITIVE` /
+`OXIDATION_PRONE`, and Schiff-base browning when an amine (indole, anthranilates, orange-flower / jasmin absolutes) meets an
+aldehyde (p.146, 183, 213, 554) → `SCHIFF_BASE_COLOUR`. The bottle therefore carries BHT + benzophenone-3 by default, uses
+purified water, keeps water ≤ 12 % for EdP/EdT, and every product printout lists these advisories with their pages.
 
 ## PROJECT OVERVIEW
 
@@ -160,6 +184,8 @@ perfume-ai-system/
 │   ├── reference/pubchem_properties.csv             # PubChem MW / XLogP / IUPAC for 137 defined molecules      [rev4]
 │   ├── enrich_pubchem.py            # fetches the above; load_data WARNs on MW/logP disagreement                  [rev4]
 │   ├── mine_tisserand.py            # Tisserand & Young 2e PDF -> constituents.csv (page-cited); text cache gitignored [rev5]
+│   ├── mine_ohloff.py               # Ohloff 2e -> reference/ohloff_{families,accords,formulas,usage_levels,practice}.csv [rev6]
+│   ├── mine_curtis.py               # Curtis 1994 -> reference/curtis_{floral_bases,formulas,stability}.csv (+ winocr.ps1 OCR) [rev6]
 │   ├── build_datasets.py            # regenerates dataset1/2/3 (+ applies aliases & CAS fixes), ifra_limits, group_rules
 │   ├── reconcile_notes.py           # Step 1 tool: proposes note-name aliases, tiers AUTO / REVIEW / NO_MATCH   [rev2]
 │   ├── verify_cas.py                # Step 2 tool: audits bad CAS against IFRA table / project tables / PubChem [rev2]
@@ -177,7 +203,9 @@ perfume-ai-system/
 │   ├── optimizer.py                 # Task 4 — DONE 2026-09-18 (fills an all-pinned remainder with DPG diluent)
 │   ├── pipeline.py                  # run_zone_b / run_zone_b_for_perfume: build -> safety -> rebalance [rev3]
 │   ├── product_formulation.py       # concentrate -> bottle (RSC Fig 9.1), safety at product %, allergen label [rev4]
-│   └── invention.py                 # new compositions from terms: family signature + Carles ratio series      [rev4]
+│   ├── invention.py                 # new compositions from terms: family signature + Carles ratio series      [rev4]
+│   ├── book_accords.py              # Curtis floral bases / Ohloff accords / Curtis sketches as builder rows      [rev6]
+│   └── stability.py                 # colour / hydrolysis / haze advisories per bottle (curtis_stability.csv)  [rev6]
 ├── zone_c_machine/                  # future
 │   ├── stock_solutions.csv
 │   ├── pump_mapping.csv
@@ -440,9 +468,15 @@ if nothing unpinned can absorb the mass → REJECT. `pipeline.run_zone_b()` chai
 bottle: alcohol share of the solvent from `product_types.csv` (RSC Table A2, upper bound), water the rest, auxiliaries from
 `product_bases.csv`; re-runs `check_formula` with `concentrate_fraction = concentrate %`; emits the allergen declaration
 (direct materials + constituent contributions) and the maturation / chill / filter process (RSC Fig 9.1).
-`invention.invent(terms, data, family=…)` maps terms → accords, enforces a Carles family signature, varies the two
-strongest base materials through 9:1 … 5:5, runs every variant through safety + rebalance and ranks them — Zone A or the
-user chooses. Odour-active "fixatives" (musks, Ambroxan, resinoids) live inside the concentrate; DPG is a diluent, not a
+`invention.invent(terms, data, family=…, book_accords="fallback")` maps terms → accords (a term dataset3 cannot cover falls back
+to a Curtis floral base or an Ohloff basic accord; `"always"` adds them next to the dataset3 accord), enforces a family signature
+(Carles chypre / fougère / foin / trèfle, or a Curtis sketch: `chypre (curtis)`, `fougere (curtis)`, `lavender water`, `eau de
+cologne`, `floral-aldehydic` — floral bases inside a sketch reduced to their three largest materials), varies the two strongest
+base materials through 9:1 … 5:5, runs every variant through safety + rebalance and ranks them — Zone A or the user chooses.
+A banned material a book accord brings in (Lyral in every 1994 muguet base) is dropped by the INVENTOR, reported as
+`removed_banned`, and the structure rebuilt — Zone B itself never removes a note. Known limit: the builder's 25/20/55 pyramid
+inflates the few base-class materials of a floral base (phenylacetic acid at 10 % dilution can end up at several %); pair book
+bases with a family sketch that supplies a real base, and read the trace of the candidate. Odour-active "fixatives" (musks, Ambroxan, resinoids) live inside the concentrate; DPG is a diluent, not a
 fixative (perfumery_chat_transcript.pdf, RSC Ch 9).
 
 ### Safety principles
@@ -510,7 +544,7 @@ After each task: show the result and wait for confirmation before proceeding.
 
 ## CURRENT STATUS
 
-See **⏩ RESUME HERE** at the top: everything is built and tested (204 tests); the data blockers of September are closed
+See **⏩ RESUME HERE** at the top: everything is built and tested (216 tests); the data blockers of September are closed
 (constituents from Tisserand & Young, accords re-authored, decision CSVs worked, PubChem check run). What remains needs a
 human or a supplier: CoA values for `constituents.csv`, sign-off of the `Decided_By=ai` rows, the 13 material-less accord
 notes, the 53 PubChem MW/logP disagreements, the EU allergen list, Zone C, and the ML retrain (`../Farhan-Project-main/

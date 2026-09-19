@@ -113,7 +113,8 @@ def run_streamlit() -> None:
 
     if mode == "Invent":
         terms = st.multiselect("Accords for the new creation (first = strongest)", vocab["accords"], default=["woody", "amber"])
-        fam = st.selectbox("Carles family signature", ["(none)", "Chypre", "Fougere", "Foin", "Trefle"])
+        fam = st.selectbox("Family signature (Carles, or a Curtis 1994 sketch)",
+                           ["(none)", "Chypre", "Fougere", "Foin", "Trefle", "chypre (curtis)", "fougere (curtis)", "lavender water", "eau de cologne", "floral-aldehydic"])
         if st.button("Invent"):
             inv = invent(terms, data, family=None if fam == "(none)" else fam, n_variants=5)
             st.text(inv.report())
@@ -125,6 +126,8 @@ def run_streamlit() -> None:
                 st.dataframe(prod.allergens, hide_index=True)
                 for w in prod.warnings:
                     st.warning(w)
+                for fl in prod.stability:
+                    (st.warning if fl.severity == "WARNING" else st.info)(str(fl))
         return
     if mode == "Buttons":
         c1, c2 = st.columns(2)
@@ -189,6 +192,10 @@ def run_streamlit() -> None:
                 st.write("\n".join(f"{i}. {s}" for i, s in enumerate(prod.process, 1)))
             for w in prod.warnings:
                 st.warning(w)
+            if prod.stability:
+                st.caption("Stability in this bottle (colour, hydrolysis, haze — Curtis 1994; advice, not caps):")
+                for fl in prod.stability:
+                    (st.warning if fl.severity == "WARNING" else st.info)(str(fl))
 
 
 def _under_streamlit() -> bool:
