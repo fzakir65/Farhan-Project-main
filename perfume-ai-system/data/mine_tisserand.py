@@ -124,7 +124,7 @@ def parse_profiles(text: str) -> list[dict]:
             for c in cons: c["variant"] = (lab + (" / " + c["variant"] if c["variant"] else ""))
             profiles[-1]["constituents"].extend(cons); profiles[-1]["blocks"] += blocks; profiles[-1]["botanical"] += " | " + bot
             continue
-        profiles.append({"title": title, "page": page_at(lines, i), "botanical": bot, "constituents": cons, "blocks": blocks})
+        profiles.append({"title": title, "page": page_at(lines, i), "line": i, "botanical": bot, "constituents": cons, "blocks": blocks})
     return profiles
 
 
@@ -369,6 +369,132 @@ def build_rows(profiles: list[dict]) -> tuple[list[dict], dict, list]:
     return out, unmapped, no_profile
 
 
+# ---------------------------------------------------------------------------------------------------------------
+# 3. the book's own dermal maxima (Ch 13 profiles) and Chapter 14 'Sources' lists — second-source cross-checks
+# ---------------------------------------------------------------------------------------------------------------
+MAXIMA_CSV = HERE / "reference" / "tisserand_dermal_maxima.csv"
+CH14_CSV = HERE / "reference" / "tisserand_ch14_sources.csv"
+PCT = re.compile(r"(\d+(?:\.\d+)?)\s*%")
+
+
+def _pct_or_text(s: str) -> str:
+    m = PCT.search(s)
+    return m.group(1) if m else ("no limit" if re.search(r"no (legal )?limit", s, re.I) else s.strip())
+
+
+def parse_dermal_maxima(text: str, profiles: list[dict]) -> list[dict]:
+    """Every 'Maximum dermal use level' statement of the oil profiles: the single T&Y figure, or the EU / IFRA / T&Y triplet,
+    with the constituent the limit is based on ('based on eugenol content') and the owning profile."""
+    lines = text.split("\n")
+    starts = sorted(pr["line"] for pr in profiles)
+    by_line = {pr["line"]: pr for pr in profiles}
+    rows = []
+    for i, ln in enumerate(lines):
+        if not ln.startswith("Maximum dermal use level"):
+            continue
+        owner = None
+        for st in reversed(starts):
+            if st < i:
+                owner = by_line[st]
+                break
+        if owner is None or not owner["title"]:
+            continue
+        basis = ""
+        m = re.search(r"\(based on (.+?) content\)", ln)
+        if m:
+            basis = m.group(1)
+        head = ln.split(":", 1)[1] if ":" in ln else ""
+        form = ""
+        for j in range(owner["line"] - 14, i):                    # the form (Essential oil / Absolute ...) the statement belongs to
+            if j >= 0 and FORM.match(lines[j].strip()):
+                form = lines[j].strip()
+        row = {"Profile": owner["title"], "Form": form, "Basis_Constituent": basis, "EU_Pct": "", "IFRA_Pct": "", "TY_Pct": "", "Single_Pct": "", "Qualifier": "",
+               "Source": SRC.format(title=owner["title"], pages=page_at(lines, i))}
+        if PCT.search(head):
+            row["Single_Pct"] = PCT.search(head).group(1)
+            row["Qualifier"] = re.sub(r"^[^%]*%\s*", "", head).strip(" .()")
+        else:
+            k, seen = i + 1, 0
+            while k < len(lines) and k < i + 8 and seen < 3:
+                s = lines[k].strip(); k += 1
+                if not s or PAGE.match(s):
+                    continue
+                if s.startswith("EU"):
+                    row["EU_Pct"] = _pct_or_text(s[2:]); seen += 1
+                elif s.startswith("IFRA"):
+                    row["IFRA_Pct"] = _pct_or_text(s[4:]); seen += 1
+                elif s.startswith("Tisserand & Young"):
+                    row["TY_Pct"] = _pct_or_text(s[len("Tisserand & Young"):]); seen += 1
+                else:
+                    break
+            if not seen:
+                continue
+        rows.append(row)
+    return rows
+
+
+CH14_HEAD = re.compile(r"^(Synonyms?|Systematic name|Chemical class):")
+CH14_SRC = re.compile(r"^(.+?)\s+(?:(?:~|<)\s*)?((?:tr|[\d.]+))(?:\s*[–\-]\s*(<?\s*[\d.]+))?\s*%(?:\s*\(.*\))?\*?\s*$")
+
+
+def parse_ch14_sources(text: str) -> list[dict]:
+    """Chapter 14 constituent profiles: 'CAS number' + the 'Sources > x %' list (natural -> range) — the inverse index of the
+    oil profiles, used to cross-check constituents.csv against the same book."""
+    k = text.find("\nConstituent profiles\nCHAPTER CONTENTS")
+    lines = text[k:].split("\n") if k > 0 else []
+    rows, name, cas, in_src = [], "", "", False
+    for i, ln in enumerate(lines):
+        s = ln.strip()
+        if CH14_HEAD.match(s):
+            for j in range(i - 1, max(i - 4, -1), -1):
+                h = lines[j].strip()
+                if h and not PAGE.match(h) and not CH14_HEAD.match(h) and not h.startswith("Notes"):
+                    if h != name:
+                        name, cas, in_src = h, "", False
+                    break
+            continue
+        m = re.match(r"^CAS number:\s*([\d\-]+)", s)
+        if m:
+            cas = m.group(1); continue
+        if re.match(r"^Sources\s*>", s):
+            in_src = True; continue
+        if in_src:
+            if not s or PAGE.match(s):
+                continue
+            m = CH14_SRC.match(s)
+            if m and name:
+                lo, hi = m.group(2), m.group(3)
+                hi = hi if hi else lo
+                try:
+                    lo_f = 0.0 if lo == "tr" else float(lo.replace("<", "").strip()); hi_f = float(hi.replace("<", "").strip())
+                except ValueError:
+                    continue
+                rows.append({"Constituent": name, "Constituent_CAS": cas, "Natural": m.group(1).strip(), "Min_Pct": lo_f, "Max_Pct": hi_f,
+                             "Source": f"Tisserand & Young, Essential Oil Safety 2e (2014), Ch 14 profile '{name}', PDF p.{page_at(lines, i)}"})
+            else:
+                in_src = False
+    return rows
+
+
+def cross_check_ch14(rows: list[dict], ch14: list[dict]) -> list[dict]:
+    """constituents.csv rows vs the Chapter 14 'Sources' lists: same book, two places — a disagreement is a parse error to look at."""
+    idx: dict[tuple[str, str], float] = {}
+    for r in ch14:
+        key = (r["Constituent_CAS"], re.sub(r"[^a-z]", "", r["Natural"].casefold()))
+        idx[key] = max(idx.get(key, 0.0), float(r["Max_Pct"]))
+    out = []
+    for r in rows:
+        title = re.search(r"profile '(.+?)'", r["Source"])
+        if not title:
+            continue
+        key = (r["Constituent_CAS"], re.sub(r"[^a-z]", "", title.group(1).casefold()))
+        if key in idx:
+            ours, theirs = float(r["Fraction_Used"]) * 100, idx[key]
+            out.append({"Natural": r["Natural_Name"], "Constituent": r["Constituent_Name"], "Profile_Max_Pct": ours, "Ch14_Max_Pct": theirs,
+                        "Agrees": abs(ours - theirs) <= max(0.5, 0.05 * theirs) or ours >= theirs})
+    return out
+
+
 def main(argv: list[str]) -> int:
     text = extract_text()
     profiles = parse_profiles(text)
@@ -390,6 +516,35 @@ def main(argv: list[str]) -> int:
         w.writerows(out)
     print(f"{len(out)} rows for {len({r['Natural_CAS'] for r in out})} natural CAS -> {OUT_CSV.name}")
     print(collections.Counter(r["Constituent_Name"] for r in out).most_common(12))
+    # second-source tables from the same book
+    maxima = parse_dermal_maxima(text, profiles)
+    title_cas: dict[str, list[str]] = {}
+    title_entries: dict[str, list[dict]] = {}
+    for m in M:                                                   # the same profile -> dataset2 CAS map (and grade word) the constituents use
+        title_cas.setdefault(m["title"], [])
+        if m["cas"] not in title_cas[m["title"]]:
+            title_cas[m["title"]].append(m["cas"])
+        title_entries.setdefault(m["title"], []).append(m)
+    for r in maxima:
+        r["Dataset2_CAS"] = "|".join(title_cas.get(r["Profile"], []))
+        ents = title_entries.get(r["Profile"], [])
+        by_form = [e for e in ents if e.get("form") and e["form"] == r["Form"]]     # lavender: 'absolute' rows vs 'oil' rows
+        grades = sorted({e["grade"] for e in (by_form or ents) if e["grade"]})
+        r["Grade_Word"] = grades[0] if len(grades) == 1 else ""
+    with open(MAXIMA_CSV, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=["Profile", "Dataset2_CAS", "Grade_Word", "Form", "Basis_Constituent", "EU_Pct", "IFRA_Pct", "TY_Pct", "Single_Pct", "Qualifier", "Source"])
+        w.writeheader(); w.writerows(maxima)
+    print(f"{len(maxima)} dermal-maximum statements -> {MAXIMA_CSV.name}")
+    ch14 = parse_ch14_sources(text)
+    with open(CH14_CSV, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=["Constituent", "Constituent_CAS", "Natural", "Min_Pct", "Max_Pct", "Source"])
+        w.writeheader(); w.writerows(ch14)
+    print(f"{len(ch14)} Chapter-14 source lines -> {CH14_CSV.name}")
+    chk = cross_check_ch14(out, ch14)
+    bad = [c for c in chk if not c["Agrees"]]
+    print(f"Ch 13 vs Ch 14 cross-check: {len(chk)} comparable rows, {len(bad)} where the profile upper bound is BELOW the Ch 14 figure:")
+    for c in bad[:40]:
+        print(f"   {c['Natural'][:34]:34s} {c['Constituent']:22s} profile {c['Profile_Max_Pct']:6.2f}  ch14 {c['Ch14_Max_Pct']:6.2f}")
     return 0
 
 

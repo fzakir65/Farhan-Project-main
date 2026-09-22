@@ -130,6 +130,23 @@ python load_data.py          # validation report; exit 2 while ERROR-level defec
 - New engine pieces: `zone_b_chemistry/stability.py` (advisories only), `zone_b_chemistry/book_accords.py` (book accords / sketches
   as builder rows; `invention` falls back to them and drops banned book materials with a `removed_banned` note).
 
+## Changes made 2026-09-22: second-source checks (the 'final touches')
+
+- **Tisserand & Young Ch 13 dermal maxima** → `reference/tisserand_dermal_maxima.csv` (174 statements: the single T&Y figure or the
+  EU / IFRA / T&Y triplet, the constituent it is based on, the form — essential oil / absolute / resinoid — and the grade word of the
+  profile). `load_data.load_tisserand_maxima` maps 72 of them to dataset2 CAS; `safety_engine` raises **`TY_ADVISORY`** (WARNING) when
+  a natural sits above the book's recommendation *for its own form and grade* — advisory only, IFRA / UK law remain the ceilings.
+- **Tisserand & Young Ch 14 'Sources' lists** → `reference/tisserand_ch14_sources.csv` (1,893 constituent → natural → range lines); the
+  Ch 13 profile parse agrees with them in 86 of 90 comparable rows (the 4 others are grade / form differences, listed in the review).
+- **Curtis Ch 5-6 monographs** → `reference/curtis_monographs.csv` (127 aroma chemicals, 80 naturals): parsed from word-boxed Windows OCR
+  (`data/winocr_boxes.ps1`, JSON cache gitignored); the bold odour-strength digit is found by its box height in the page image (36-37 px
+  vs 30 for the plain digits) and was checked by eye on p.174, 178, 183, 263. `load_data.curtis_cross_check`: 154 materials matched —
+  37 disagree with dataset2 on the layer, 0 on the (extremes-only) odour-strength comparison.
+- **Curtis floral bases**: the remaining 7 (Acacia, Gardenia, Honeysuckle, Hyacinth, Lilac, Narcissus, Sweet Pea) transcribed from the
+  page images; 9 more aroma chemicals added to `note_additions.csv` (PubChem-verified CAS) so 13 of 14 bases resolve completely
+  (Rosacene / trichloromethylphenylcarbinyl acetate has no verified CAS and stays unresolved by design).
+- `data/review_book_checks.py` → `reference/book_review.md` (+ `book_review_layers.csv`, `book_review_ty_maxima.csv`): the human review list.
+
 ## Still open
 - `constituents.csv`: supplier CoA values to replace the literature upper bounds (Provisional=Yes); the IFRA *Annex on
   contributions from other sources* would be the official cross-check

@@ -84,6 +84,8 @@ SEASON_WORDS = re.compile(r"\b(?:spring|summer|fall|autumn|winter|all seasons|da
 CAS_PLACEHOLDERS = {"-", "n/a", "na", "none", "nan", "unknown", "tbd", "?"}
 CARLES_TABLE = "reference/carles_volatility_table.csv"
 OHLOFF_USAGE = "reference/ohloff_usage_levels.csv"      # data/mine_ohloff.py — dosages quoted for landmark perfumes
+TY_MAXIMA = "reference/tisserand_dermal_maxima.csv"     # data/mine_tisserand.py — the book's own dermal maxima per oil profile
+CURTIS_MONO = "reference/curtis_monographs.csv"          # data/mine_curtis.py — Curtis' note class and 1-6 intensity per material
 PUBCHEM_TABLE = "reference/pubchem_properties.csv"      # data/enrich_pubchem.py
 # Physical plausibility of Volatility_Class (Pybus & Sell, Chemistry of Fragrances: Ch 7 p.141 gives top ~15 min,
 # heart 3-4 h, base 5-8 h+; Ch 11 p.190 boiling point / RMM as the first approximation to volatility).
@@ -147,6 +149,8 @@ class Data:
     notes_regulated: pd.DataFrame = field(default_factory=pd.DataFrame)
     carles_disagreements: pd.DataFrame = field(default_factory=pd.DataFrame)
     ohloff_potency_check: pd.DataFrame = field(default_factory=pd.DataFrame)
+    tisserand_maxima: pd.DataFrame = field(default_factory=pd.DataFrame)     # advisory second source for the safety engine
+    curtis_check: pd.DataFrame = field(default_factory=pd.DataFrame)         # Curtis 1994 note class / intensity vs dataset2
     pubchem_mismatches: pd.DataFrame = field(default_factory=pd.DataFrame)
     shared_cas: dict = field(default_factory=dict)
 
@@ -801,6 +805,8 @@ def load_all(data_dir: Path | str = DATA_DIR) -> Data:
     data.issues += cross_validate(data, data_dir)
     data.issues += carles_cross_check(data, data_dir)
     data.issues += ohloff_usage_cross_check(data, data_dir)
+    data.issues += load_tisserand_maxima(data, data_dir)
+    data.issues += curtis_cross_check(data, data_dir)
     data.issues += pubchem_cross_check(data, data_dir)
     return data
 
@@ -904,6 +910,76 @@ def ohloff_usage_cross_check(d: Data, data_dir: Path) -> list[Issue]:
         n_bad = sum(1 for r in rows if not r["Agrees"])
         issues.append(Issue("INFO", "notes", "", f"Ohloff usage-level check: {len(rows)} materials with a landmark-perfume dose, {n_bad} potency classes contradicted "
                                                  "(see data.ohloff_potency_check)"))
+    return issues
+
+
+def load_tisserand_maxima(d: Data, data_dir: Path) -> list[Issue]:
+    """Tisserand & Young's 'Maximum dermal use level' per oil profile (their own figure, or the T&Y column of the EU/IFRA/T&Y
+    triplet), one row per dataset2 CAS. The safety engine reports a TY_ADVISORY when a natural sits above it — a second
+    opinion from a recognised text, never a ceiling: IFRA / UK law stay the authorities."""
+    path = Path(data_dir) / TY_MAXIMA
+    issues: list[Issue] = []
+    if not path.exists():
+        return issues
+    t = pd.read_csv(path, dtype=str, keep_default_na=False)
+    rows = []
+    for _, r in t.iterrows():
+        fig = r["TY_Pct"] or r["Single_Pct"]
+        try:
+            pct = float(fig)
+        except ValueError:
+            continue                                      # 'no limit' or prose
+        for cas in str(r["Dataset2_CAS"]).split("|"):
+            if cas.strip():
+                rows.append({"CAS": cas.strip(), "Profile": r["Profile"], "Grade_Word": r.get("Grade_Word", ""), "Form": r["Form"], "Basis_Constituent": r["Basis_Constituent"],
+                             "TY_Max_Pct": pct, "Qualifier": r["Qualifier"], "Source": r["Source"]})
+    d.tisserand_maxima = pd.DataFrame(rows)
+    if rows:
+        issues.append(Issue("INFO", "notes", "", f"Tisserand & Young dermal maxima: {len(rows)} figures for {d.tisserand_maxima['CAS'].nunique()} natural CAS "
+                                                 "(advisory second source; see data.tisserand_maxima)"))
+    return issues
+
+
+CURTIS_LAYER = {"Top": {"Top"}, "Middle": {"Heart"}, "Basic": {"Base"}}
+# Curtis' bold figure is the ODOUR STRENGTH of the neat material (6 extremely high … 1 faint; naturals 5-2). dataset2's
+# Odor_Strength is a DOSING class (Very strong = trace material … Low = bulk material) — the two agree only at the extremes:
+# a faint material cannot be a trace-dosed one, an extremely strong one cannot be a bulk one. Middle values are not comparable
+# (linalool: Curtis 4 'high', yet dosed at 5-20 %; oakmoss: Curtis 3, yet a trace material).
+CURTIS_INTENSITY = {"6": {"Very strong", "Strong"}, "5": {"Very strong", "Strong", "Medium"}, "4": None, "3": None, "2": {"Medium", "Low"}, "1": {"Low"}}
+
+
+def curtis_cross_check(d: Data, data_dir: Path) -> list[Issue]:
+    """Curtis & Williams 1994 monographs (reference/curtis_monographs.csv): every material carries the authors' Top / Middle /
+    Basic note class ('usual function in a perfume') and a bold odour-strength rating. The class is compared with dataset2's
+    Volatility_Class; the rating only at its extremes (see CURTIS_INTENSITY). Disagreements are WARNINGs for the human
+    review (data.curtis_check) — the book is a second, cited opinion, not an override."""
+    path = Path(data_dir) / CURTIS_MONO
+    issues: list[Issue] = []
+    if not path.exists():
+        return issues
+    from zone_b_chemistry.book_accords import resolve
+    mono = pd.read_csv(path, dtype=str, keep_default_na=False)
+    rows = []
+    for _, m in mono.iterrows():
+        name = resolve(m["Material"], d)
+        if not name or name.startswith("__BASE__") or name not in set(d.notes["Note_Name"]):
+            continue
+        sub = d.notes[d.notes["Note_Name"] == name]
+        vols = sorted(set(v for v in sub["Volatility_Class"] if v))
+        strengths = sorted(set(v for v in sub["Odor_Strength"] if v))
+        layer_ok = any(any(part.strip() in CURTIS_LAYER[m["Curtis_Note_Class"]] for part in v.replace(" ", "").split("/")) for v in vols) if vols else True
+        allowed = CURTIS_INTENSITY.get(m["Intensity_1_6"])
+        int_ok = (allowed is None) or (not strengths) or bool(set(strengths) & allowed)
+        rows.append({"Material": m["Material"], "Dataset2_Name": name, "Curtis_Class": m["Curtis_Note_Class"], "Volatility_Class": "/".join(vols), "Layer_Agrees": layer_ok,
+                     "Curtis_Intensity": m["Intensity_1_6"], "Odor_Strength": "/".join(strengths), "Intensity_Agrees": int_ok, "Source": m["Source"]})
+        if not layer_ok:
+            issues.append(Issue("WARNING", "notes", name, f"Volatility_Class {'/'.join(vols)} vs Curtis '{m['Curtis_Note_Class']} note' — {m['Source']}"))
+        if not int_ok:
+            issues.append(Issue("WARNING", "notes", name, f"Odor_Strength {'/'.join(strengths)} vs Curtis intensity {m['Intensity_1_6']}/6 — {m['Source']}"))
+    d.curtis_check = pd.DataFrame(rows)
+    if rows:
+        nl = sum(1 for r in rows if not r["Layer_Agrees"]); ni = sum(1 for r in rows if not r["Intensity_Agrees"])
+        issues.append(Issue("INFO", "notes", "", f"Curtis 1994 monograph check: {len(rows)} materials matched; {nl} layer and {ni} intensity disagreements (data.curtis_check)"))
     return issues
 
 

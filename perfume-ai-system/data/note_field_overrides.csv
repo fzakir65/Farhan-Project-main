@@ -83,7 +83,7 @@ Oud Synthetic,Odor_Strength,Strong,Medium,"general perfumery usage-level knowled
 Timberol,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Cetalox,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Anisaldehyde,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Heliotropin,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Heliotropin,Odor_Strength,Medium,Medium,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 5 monograph, PDF p.201: odour strength 2/6 in the monograph contradicts the AI dosing label; set to Medium 2026-09-22",ai (book-corroborated)
 Piperonal,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Methyl Anthranilate,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Nutmeg Oil,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
@@ -208,7 +208,7 @@ Frankincense Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowled
 Olibanum Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Myrrh Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Labdanum,Odor_Strength,Low,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Cistus Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Cistus Oil,Odor_Strength,Medium,Medium,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 6 monograph, PDF p.267: odour strength 5/6 in the monograph contradicts the AI dosing label; set to Medium 2026-09-22",ai (book-corroborated)
 Fir Balsam,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Pine Needle Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Cypress Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai

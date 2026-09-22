@@ -392,6 +392,34 @@ def check_formula(formula: pd.DataFrame, data, *, concentrate_fraction: float = 
         else:
             provisional = False
 
+    # ---- advisory: Tisserand & Young's own dermal maximum for a natural (second source; reported, never applied)
+    ty = getattr(data, "tisserand_maxima", None)
+    if ty is not None and len(ty):
+        by_cas = {c: g for c, g in ty.groupby("CAS")}
+        for idx, row in f.iterrows():
+            g = by_cas.get(str(row["CAS"]))
+            if g is None:
+                continue
+            name = str(row["Note_Name"]).casefold()
+            note_form = "Absolute" if "absolute" in name else ("Resinoid" if re.search(r"resin|balsam", name) else "Essential oil")
+            g = g[(g["Form"] == note_form) | (g["Form"] == "")]            # an absolute's figure never judges an oil, and vice versa
+            if "Grade_Word" in g.columns and len(g):
+                # a CAS shared by grades (cinnamon bark / leaf, lime expressed / distilled): only the grade the note names may judge it
+                hit = g["Grade_Word"].map(lambda w: bool(w) and re.search(rf"\b{re.escape(str(w))}\b", name, re.I) is not None)
+                g = g[hit | (g["Grade_Word"] == "")]
+            if not len(g):
+                continue
+            best = g.sort_values("TY_Max_Pct").iloc[0]
+            on_skin = float(f.loc[idx, "Safe_Pct"]) * concentrate_fraction
+            if on_skin > float(best["TY_Max_Pct"]) + TOL:
+                flags.append(SafetyFlag("TY_ADVISORY", "WARNING",
+                                        f"{on_skin:.3f} % on skin vs Tisserand & Young's recommended maximum {float(best['TY_Max_Pct']):g} % for "
+                                        f"'{best['Profile']}'{' (' + best['Form'].lower() + ')' if best['Form'] else ''}"
+                                        f"{' — basis: ' + best['Basis_Constituent'] + ' content' if best['Basis_Constituent'] else ''}"
+                                        f"{' — ' + best['Qualifier'] if best['Qualifier'] else ''}; IFRA / UK law remain the ceilings applied here",
+                                        row["Note_Name"], str(row["CAS"]), best["Source"]))
+                log.append(f"advisory: {row['Note_Name']} {on_skin:.3f} % > T&Y maximum {float(best['TY_Max_Pct']):g} % ({best['Source']}) — not applied")
+
     # ---- step 3: group rules on the capped values
     for g in data.group_rules.sort_values("Group_Name").itertuples(index=False):
         members = [str(c).strip() for c in (getattr(g, "Members_CAS_List", None) or str(g.Members_CAS).split("|")) if str(c).strip()]

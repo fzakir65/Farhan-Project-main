@@ -49,7 +49,36 @@ ALIASES = {  # normalised book name -> dataset2 Note_Name
     "geranyl acetate": "Geranyl Acetate", "raspberry ketone": "Raspberry Ketone", "vanillin": "Vanillin", "coumarin": "Coumarin", "nerol": "Nerol", "geraniol": "Geraniol",
     "citral": "Citral", "linalyl acetate": "Linalyl Acetate", "benzyl alcohol": "Benzyl Alcohol", "alpha terpineol": "Alpha-Terpineol",
     "methyl eugenol": "Methyleugenol", "civet tincture": "Civet Absolute", "civet tincture 3": "Civet Absolute",
+    "orange blossom base": "__BASE__Orange Blossom", "tuberose base": "__BASE__Tuberose", "violet base": "__BASE__Violet", "carnation base": "__BASE__Carnation",
+    "methyl naphthyl ketone": "Methyl Naphthyl Ketone", "para methyl acetophenone": "Para-Methyl Acetophenone",
+    "phenylacetaldehyde dimethylacetal": "Phenylacetaldehyde Dimethyl Acetal", "phenylacetaldehyde dimethyl acetal": "Phenylacetaldehyde Dimethyl Acetal",
+    "methyl phenyl carbinyl acetate": "Styrallyl Acetate", "acetyl iso eugenol": "Isoeugenyl Acetate", "phenylethyl phenylacetate": "Phenylethyl Phenylacetate",
+    "nonane 1 3 diol diacetate": "Nonanediol Diacetate", "cinnamyl acetate": "Cinnamyl Acetate", "hydrocinnamic aldehyde": "Hydrocinnamic Aldehyde",
+    "benzophenone": "Benzophenone", "aldehyde c18 coconut": "Aldehyde C-18", "aldehyde c16 strawberry": "Aldehyde C-16", "lilial": "Lilial",
+    "methyl salicylate": "Methyl Salicylate", "eugenyl acetate": "Eugenyl Acetate", "anisyl alcohol": "Anisyl Alcohol", "anisaldehyde": "Anisaldehyde",
+    # Curtis Ch 5 / Ch 6 monograph titles (brand suffixes such as '(IFF)' are stripped before lookup)
+    "l citronellol": "Citronellol", "exaltolide": "Exaltolide", "lyral": "Lyral", "hedione": "Hedione", "musk t takasago": "Ethylene Brassylate",
+    "methyl beta naphthyl ketone": "Methyl Naphthyl Ketone", "para methylacetophenone": "Para-Methyl Acetophenone", "para hydroxyphenylbutanone": "Raspberry Ketone",
+    "phenylpropyl aldehyde": "Hydrocinnamic Aldehyde", "laevo rose oxide": "Rose Oxide", "civettone": "Civetone", "nonane 1 3 diol diacetate": "Nonanediol Diacetate",
+    "aldehyde c12 lauric": "Aldehyde C12 Lauric", "aldehyde c11 enic": "Aldehyde C-11", "aldehyde c11 ylic": "Aldehyde C-11", "aldehyde c14 peach so called": "Aldehyde C-14",
+    "aldehyde c16 strawberry so called": "Aldehyde C-16", "aldehyde c18 coconut so called": "Aldehyde C-18", "cis 3 hexenyl salicylate": "Cis-3-Hexenyl Salicylate",
+    "iso bornyl acetate": "Isobornyl Acetate", "iso butyl quinoline": "Isobutyl Quinoline", "phenylethyl iso butyrate": "Phenylethyl Isobutyrate",
+    "methyl phenylacetate": "Methyl Phenylacetate", "hydroxycitronellal dimethylacetal": "Hydroxycitronellal Dimethyl Acetal",
+    "lemon oil cold pressed": "Lemon Oil Expressed", "lime oil distilled": "Lime Oil Distilled", "orange oil sweet": "Sweet Orange Oil", "neroli oil bigarade": "Neroli Oil",
+    "petitgrain oil paraguay": "Petitgrain Oil", "rose de mai absolute": "Rose Absolute", "rose otto": "Damask Rose Oil", "jasmin absolute": "Jasmine Absolute",
+    "vetivert oil": "Vetiver Oil", "cedarwood oil virginian rectified": "Cedarwood Virginia", "eucalyptus globulus oil rectified": "Eucalyptus Oil",
+    "citronella oil java": "Citronella", "citronella oil ceylon": "Citronella", "styrax resinoid": "Styrax Resinoid", "tolu balsam resinoid": "Tolu Balsam",
+    "peru balsam oil": "Peru Balsam", "olibanum resinoid": "Olibanum Resinoid", "galbanum resinoid prepared": "Galbanum Resin", "elemi resinoid prepared": "Elemi Resin",
+    "myrrh resinoid": "Myrrh Resinoid", "labdanum resinoid": "Labdanum Resin", "sandalwood oil east indian": "Sandalwood Oil", "sandalwood oil west indian amyris oil": "Amyris Oil",
+    "thyme oil rectified white thyme oil": "Thyme Oil", "tarragon oil estragon oil": "Tarragon Oil", "orris oil orris concrete": "Orris Butter",
+    "birch tar oil rectified": "Birch Tar Rectified", "castoreum tincture": "Castoreum Absolute", "ambergris tincture": "Ambergris Tincture", "tonka absolute": "Tonka Bean Absolute",
+    "treemoss absolute": "Tree Moss", "opopanax resinoid": "Opoponax Resin", "orange flower absolute": "Orange Blossom Absolute", "guaiacwood oil": "Guaiac Wood Oil",
+    "lemongrass oil rectified": "Lemongrass Oil", "coriander oil": "Coriander Seed Oil", "carrot seed oil": "Carrot Seed", "basil oil sweet": "Basil Oil",
+    "lavender oil spike": "Spike Lavender Oil", "juniper berry oil": "Juniper Berry Oil", "vetiveryl acetate": "Vetiveryl Acetate",
 }
+
+
+BRAND = re.compile(r"\s*\((IFF|IFE|Firmenich|Takasago|Givaudan-Roure|Givaudan|Henkel)\)", re.I)
 TERM_KEYS = {  # user term -> (source, book accord) ; the first hit wins, Curtis (quantified) before Ohloff
     "rose": [("curtis", "Rose"), ("ohloff", "Rose")], "jasmine": [("curtis", "Jasmin"), ("ohloff", "Jasmine")], "jasmin": [("curtis", "Jasmin"), ("ohloff", "Jasmine")],
     "muguet": [("curtis", "Lily-of-the-Valley"), ("ohloff", "Lily of the valley")], "lily of the valley": [("curtis", "Lily-of-the-Valley"), ("ohloff", "Lily of the valley")],
@@ -57,6 +86,9 @@ TERM_KEYS = {  # user term -> (source, book accord) ; the first hit wins, Curtis
     "orange flower": [("curtis", "Orange Blossom"), ("ohloff", "Orange flower")], "neroli": [("curtis", "Orange Blossom")], "violet": [("curtis", "Violet"), ("ohloff", "Violet")],
     "tuberose": [("curtis", "Tuberose"), ("ohloff", "Tuberose")], "strawberry": [("ohloff", "Strawberry")], "peach": [("ohloff", "Peach")], "apple": [("ohloff", "Apple")],
     "raspberry": [("ohloff", "Raspberry")], "pear": [("ohloff", "Pear")], "cherry": [("ohloff", "Cherry")],
+    "acacia": [("curtis", "Acacia")], "mimosa": [("curtis", "Acacia")], "cassie": [("curtis", "Acacia")], "gardenia": [("curtis", "Gardenia")],
+    "honeysuckle": [("curtis", "Honeysuckle")], "hyacinth": [("curtis", "Hyacinth")], "lilac": [("curtis", "Lilac")], "narcissus": [("curtis", "Narcissus")],
+    "sweet pea": [("curtis", "Sweet Pea")],
 }
 FAMILY_KEYS = {  # invent(family=...) names that resolve to a Curtis type formula
     "chypre (curtis)": "Basic Chypre-type perfume", "fougere (curtis)": "Basic Fougere-type perfume", "fougère (curtis)": "Basic Fougere-type perfume",
@@ -87,6 +119,7 @@ def resolve(name: str, data) -> str | None:
             data._note_name_index = names
         except Exception:  # noqa: BLE001
             pass
+    name = BRAND.sub("", name)
     if name.casefold() in names:
         return names[name.casefold()]
     key = _norm(name)

@@ -136,3 +136,58 @@ def test_lyral_now_carries_the_hicc_cas_and_is_rejected(data):
 def test_ohloff_usage_levels_agree_with_the_potency_classes(data):
     chk = data.ohloff_potency_check
     assert len(chk) >= 15 and chk["Agrees"].all(), chk[~chk["Agrees"]]
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# Tisserand & Young second-source tables (dermal maxima advisory, Chapter 14 sources)
+# ---------------------------------------------------------------------------------------------------------------
+
+def test_tisserand_advisory_reports_but_never_caps(data):
+    assert len(data.tisserand_maxima) >= 60 and (data.tisserand_maxima["TY_Max_Pct"] > 0).all()
+    r = se.check_formula(F(("Clove Bud Oil", "8000-34-8", 1.5), ("Sandalwood Oil", "8006-87-9", 98.5)), data)
+    adv = [x for x in r.flags if x.code == "TY_ADVISORY" and x.note == "Clove Bud Oil"]
+    assert adv and adv[0].severity == "WARNING" and "0.5 %" in adv[0].message and "PDF p." in adv[0].source
+    assert float(r.formula.set_index("Note_Name").loc["Clove Bud Oil", "Pct"]) == 1.5      # the advisory changed nothing
+    r10 = se.check_formula(F(("Clove Bud Oil", "8000-34-8", 1.5), ("Sandalwood Oil", "8006-87-9", 98.5)), data, concentrate_fraction=0.10)
+    assert not [x for x in r10.flags if x.code == "TY_ADVISORY" and x.note == "Clove Bud Oil"]   # 0.15 % on skin is under 0.5 %
+
+
+def test_tisserand_advisory_matches_the_form_of_the_note(data):
+    # the Lavandin profile only states a maximum for the ABSOLUTE (0.03 %): it must not judge Lavandin Oil
+    r = se.check_formula(F(("Lavandin Oil", "91722-69-9", 5.0), ("Sandalwood Oil", "8006-87-9", 95.0)), data)
+    assert not [x for x in r.flags if x.code == "TY_ADVISORY" and x.note == "Lavandin Oil"]
+    r2 = se.check_formula(F(("Lavender Absolute", "8000-28-0", 1.0), ("Sandalwood Oil", "8006-87-9", 99.0)), data)
+    assert [x for x in r2.flags if x.code == "TY_ADVISORY" and x.note == "Lavender Absolute"]
+
+
+def test_chapter14_sources_agree_with_the_profile_parse():
+    import pandas as pd
+    from pathlib import Path
+    ch14 = pd.read_csv(Path("data/reference/tisserand_ch14_sources.csv"), dtype=str, keep_default_na=False)
+    cons = pd.read_csv(Path("data/constituents.csv"), dtype=str, keep_default_na=False)
+    assert len(ch14) > 1500
+    eug = ch14[(ch14["Constituent_CAS"] == "97-53-0") & (ch14["Natural"] == "Clove bud")]
+    assert len(eug) == 1 and float(eug["Max_Pct"].iloc[0]) == float(cons[(cons["Natural_CAS"] == "8000-34-8") & (cons["Constituent_CAS"] == "97-53-0")]["Typical_Max_Pct"].iloc[0])
+
+
+def test_curtis_monographs_parsed_and_cross_checked(data):
+    import pandas as pd
+    from pathlib import Path
+    mono = pd.read_csv(Path("data/reference/curtis_monographs.csv"), dtype=str, keep_default_na=False)
+    assert len(mono) >= 200 and set(mono["Curtis_Note_Class"]) <= {"Top", "Middle", "Basic"}
+    assert (mono["Intensity_1_6"] != "").mean() > 0.95                                  # the bold digit was found on nearly every monograph
+    aur = mono[mono["Material"] == "Aurantiol"].iloc[0]
+    assert aur["Curtis_Note_Class"] == "Basic" and aur["Intensity_1_6"] == "3" and "Schiff base" in aur["Chemical_Name"]      # PDF p.174, checked by eye
+    cas = mono[mono["Material"] == "Cassia Oil, Rectified"].iloc[0]
+    assert cas["Curtis_Note_Class"] == "Middle" and cas["Intensity_1_6"] == "3" and "iron" in cas["Stability"]                 # PDF p.263
+    chk = data.curtis_check
+    assert len(chk) >= 140 and chk["Intensity_Agrees"].all()                             # dosing classes agree with the book at the extremes
+    assert (~chk["Layer_Agrees"]).sum() > 0                                              # the layer disagreements are real and reported, not hidden
+
+
+def test_tisserand_advisory_never_uses_another_grade_of_a_shared_cas(data):
+    # cinnamon bark and leaf share 8015-91-6: the bark figure (0.07 %) must not judge the leaf oil, and vice versa
+    leaf = se.check_formula(F(("Cinnamon Leaf Oil", "8015-91-6", 0.29), ("Sandalwood Oil", "8006-87-9", 99.71)), data)
+    assert not [x for x in leaf.flags if x.code == "TY_ADVISORY" and x.note == "Cinnamon Leaf Oil"]
+    bark = se.check_formula(F(("Cinnamon Bark Oil", "8015-91-6", 0.29), ("Sandalwood Oil", "8006-87-9", 99.71)), data)
+    assert [x for x in bark.flags if x.code == "TY_ADVISORY" and x.note == "Cinnamon Bark Oil" and "0.07" in x.message]
