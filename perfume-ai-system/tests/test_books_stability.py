@@ -191,3 +191,20 @@ def test_tisserand_advisory_never_uses_another_grade_of_a_shared_cas(data):
     assert not [x for x in leaf.flags if x.code == "TY_ADVISORY" and x.note == "Cinnamon Leaf Oil"]
     bark = se.check_formula(F(("Cinnamon Bark Oil", "8015-91-6", 0.29), ("Sandalwood Oil", "8006-87-9", 99.71)), data)
     assert [x for x in bark.flags if x.code == "TY_ADVISORY" and x.note == "Cinnamon Bark Oil" and "0.07" in x.message]
+
+
+def test_book_decisions_are_applied_and_documented(data):
+    import pandas as pd
+    from pathlib import Path
+    dec = pd.read_csv(Path("data/reference/book_review_decisions.csv"), dtype=str, keep_default_na=False)
+    assert len(dec) >= 40 and set(dec["Decision"]) >= {"changed", "kept", "provisional cap"}
+    n = data.notes
+    assert set(n.loc[n["Note_Name"] == "Aldehyde C-14", "Volatility_Class"]) == {"Base"}          # changed: Curtis + BP 286-290 C
+    assert set(n.loc[n["Note_Name"] == "Galbanum Resin", "Volatility_Class"]) == {"Base"}         # changed: the resinoid is a base note
+    assert set(n.loc[n["Note_Name"] == "Benzyl Salicylate", "Volatility_Class"]) == {"Base"}      # kept: Carles beats Curtis
+    assert set(n.loc[n["Note_Name"] == "Citral", "Volatility_Class"]) == {"Top"}                  # kept: consensus beats Curtis
+    assert (data.curtis_check.loc[~data.curtis_check["Layer_Agrees"], "Decided"] != "").all()      # nothing left open
+    caps = data.safety_caps.set_index("CAS")
+    assert float(caps.loc["8022-56-8", "Max_Safe_Percent"]) == 0.4 and caps.loc["8022-56-8", "Provisional"] == "Yes"   # Dalmatian sage: thujone
+    r = se.check_formula(F(("Sage", "8022-56-8", 5.0), ("Sandalwood Oil", "8006-87-9", 95.0)), data)
+    assert float(r.formula.set_index("Note_Name").loc["Sage", "Pct"]) == 0.4                       # the cap acts; before it the oil was allowed at 100 %

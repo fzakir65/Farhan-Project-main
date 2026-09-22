@@ -31,3 +31,8 @@ Styrax Resinoid,8046-19-3,0.6,Smoky balsamic resin. Cap lowered from 3 on 2026-0
 Labdanum Absolute,8016-26-0,5,Resinous amber base,,No
 Skatole,83-34-1,0.2,"Fecal animalic, detectable at ppb - overwhelms above traces (costus substitute, accord_edits.csv)",,Yes
 Geosmin,19700-21-1,0.01,Odour threshold ~10 ng/L - trace material,,Yes
+Sage Oil (Dalmatian),8022-56-8,0.4,"Tisserand & Young, Essential Oil Safety 2e (2014) p.1558-1559: 60 % thujone, dermal thujone limit 0.25 % (neurotoxicity) — no IFRA / Annex III limit exists, so without this cap the oil was allowed at 100 %",Salvia officinalis (Dalmatian); Spanish sage 8016-65-7 is capped separately,Yes
+Sage Oil (Spanish),8016-65-7,12.5,"Tisserand & Young, Essential Oil Safety 2e (2014) p.1564: 12.5 % dermal maximum (camphor / sabinyl acetate content)",Salvia lavandulifolia,Yes
+Hyssop Oil,8006-83-5,0.3,"Tisserand & Young, Essential Oil Safety 2e (2014) p.1188-1189: 82 % pinocamphone / isopinocamphone / thujone, dermal limit 0.25 % (neurotoxicity) — no IFRA / Annex III limit",pinocamphone CT,Yes
+Peppermint Oil,8006-90-4,5.4,"Tisserand & Young, Essential Oil Safety 2e (2014) p.1467: 8 % menthofuran (limit 0.5 %) and 3 % pulegone (limit 1.2 %) — hepatotoxicity; no IFRA / Annex III limit",Mentha x piperita,Yes
+Palo Santo Oil,959130-05-3,3.4,"Tisserand & Young, Essential Oil Safety 2e (2014) p.1439: 11.8 % menthofuran / 1.2 % pulegone, same limits as peppermint; no IFRA / Annex III limit",Bursera graveolens,Yes

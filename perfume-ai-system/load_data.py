@@ -959,6 +959,11 @@ def curtis_cross_check(d: Data, data_dir: Path) -> list[Issue]:
         return issues
     from zone_b_chemistry.book_accords import resolve
     mono = pd.read_csv(path, dtype=str, keep_default_na=False)
+    dec_path = Path(data_dir) / "reference" / "book_review_decisions.csv"
+    decided: dict[str, str] = {}
+    if dec_path.exists():
+        dec = pd.read_csv(dec_path, dtype=str, keep_default_na=False)
+        decided = {r.Dataset2_Name: f"{r.Decision}: {r.Basis}" for r in dec.itertuples() if r.Section.startswith("1")}
     rows = []
     for _, m in mono.iterrows():
         name = resolve(m["Material"], d)
@@ -971,15 +976,21 @@ def curtis_cross_check(d: Data, data_dir: Path) -> list[Issue]:
         allowed = CURTIS_INTENSITY.get(m["Intensity_1_6"])
         int_ok = (allowed is None) or (not strengths) or bool(set(strengths) & allowed)
         rows.append({"Material": m["Material"], "Dataset2_Name": name, "Curtis_Class": m["Curtis_Note_Class"], "Volatility_Class": "/".join(vols), "Layer_Agrees": layer_ok,
-                     "Curtis_Intensity": m["Intensity_1_6"], "Odor_Strength": "/".join(strengths), "Intensity_Agrees": int_ok, "Source": m["Source"]})
+                     "Curtis_Intensity": m["Intensity_1_6"], "Odor_Strength": "/".join(strengths), "Intensity_Agrees": int_ok, "Source": m["Source"],
+                     "Decided": decided.get(name, "")})
         if not layer_ok:
-            issues.append(Issue("WARNING", "notes", name, f"Volatility_Class {'/'.join(vols)} vs Curtis '{m['Curtis_Note_Class']} note' — {m['Source']}"))
+            if name in decided:          # reviewed 2026-09-22 (reference/book_review_decisions.csv): a documented disagreement, not an open one
+                issues.append(Issue("INFO", "notes", name, f"Volatility_Class {'/'.join(vols)} vs Curtis '{m['Curtis_Note_Class']} note' — decided, {decided[name][:90]}"))
+            else:
+                issues.append(Issue("WARNING", "notes", name, f"Volatility_Class {'/'.join(vols)} vs Curtis '{m['Curtis_Note_Class']} note' — {m['Source']}"))
         if not int_ok:
             issues.append(Issue("WARNING", "notes", name, f"Odor_Strength {'/'.join(strengths)} vs Curtis intensity {m['Intensity_1_6']}/6 — {m['Source']}"))
     d.curtis_check = pd.DataFrame(rows)
     if rows:
         nl = sum(1 for r in rows if not r["Layer_Agrees"]); ni = sum(1 for r in rows if not r["Intensity_Agrees"])
-        issues.append(Issue("INFO", "notes", "", f"Curtis 1994 monograph check: {len(rows)} materials matched; {nl} layer and {ni} intensity disagreements (data.curtis_check)"))
+        nd = sum(1 for r in rows if not r["Layer_Agrees"] and r["Decided"])
+        issues.append(Issue("INFO", "notes", "", f"Curtis 1994 monograph check: {len(rows)} materials matched; {nl} layer disagreements ({nd} reviewed and decided, "
+                                                 f"{nl - nd} open) and {ni} intensity disagreements (data.curtis_check)"))
     return issues
 
 

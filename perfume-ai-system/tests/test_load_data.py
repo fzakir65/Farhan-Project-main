@@ -49,7 +49,7 @@ def test_expected_row_counts(data):
     assert len(data.ifra_limits) == 81
     assert len(data.group_rules) == 8
     assert len(data.regulatory) >= 50
-    assert len(data.safety_caps) == 32          # 30 + Skatole + Geosmin (2026-09-18)
+    assert len(data.safety_caps) == 37          # 30 + Skatole + Geosmin (2026-09-18) + 5 provisional T&Y-based caps for unregulated toxic constituents (2026-09-22)
     assert len(data.reaction_rules) == 5
 
 

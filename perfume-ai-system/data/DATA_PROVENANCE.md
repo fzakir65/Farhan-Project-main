@@ -147,6 +147,19 @@ python load_data.py          # validation report; exit 2 while ERROR-level defec
   (Rosacene / trichloromethylphenylcarbinyl acetate has no verified CAS and stays unresolved by design).
 - `data/review_book_checks.py` → `reference/book_review.md` (+ `book_review_layers.csv`, `book_review_ty_maxima.csv`): the human review list.
 
+## Decisions taken 2026-09-22 on the book review (`reference/book_review_decisions.csv`, `data/apply_book_decisions_2026-09-22.py`)
+
+- Layer (37 Curtis disagreements): rule = Carles' class where he lists the material (the field's teaching standard, Ohloff 2e p.607);
+  else Curtis when the boiling point agrees with him (RSC Ch 11: BP as first approximation, < ~200 °C top / 200-270 heart / > 270 base);
+  one author against practice and physics moves nothing. 14 changed via `note_field_overrides.csv`, 23 kept with the reason recorded.
+- Potency: 0 open (extremes rule); 26 overrides now cite the Curtis / Ohloff figure that corroborates them.
+- T&Y maxima (17 stricter): IFRA Cat 4 + Annex III stay the ceilings — the fine-fragrance consensus. Exception: oils whose toxic
+  constituents NO fine-fragrance standard limits (thujone, pinocamphone, pulegone, menthofuran) were allowed at 100 %; they now carry
+  provisional caps at T&Y's figure in `safety_caps.csv` (Sage Dalmatian 0.4, Spanish 12.5, Hyssop 0.3, Peppermint 5.4, Palo Santo 3.4).
+  Thyme (irritation) and sandalwood (weak sensitisation evidence, Ohloff records 25 % in Samsara) stay advisory (`TY_ADVISORY`).
+- Ch 13 vs Ch 14 (4 rows): grade- and form-specific parse kept.
+- Sign-off: evidence attached; the perfumer's smell-test remains the last human step.
+
 ## Still open
 - `constituents.csv`: supplier CoA values to replace the literature upper bounds (Provisional=Yes); the IFRA *Annex on
   contributions from other sources* would be the official cross-check

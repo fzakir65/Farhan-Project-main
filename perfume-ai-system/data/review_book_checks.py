@@ -44,9 +44,17 @@ def main() -> int:
     lay = c[~c["Layer_Agrees"]].copy()
     lay["Carles"] = lay["Dataset2_Name"].map(lambda n: carles_of.get(n, ""))
     lay["Page"] = lay["Source"].str.extract(r"(PDF p\.\d+)")
-    parts.append(f"## 1. Volatility_Class vs Curtis' 'usual function' ({len(lay)} of {len(c)} matched materials disagree)\n\n"
-                 "Edit `note_field_overrides.csv` (Field = Volatility_Class) if you side with Curtis. Where Carles is listed he is the third opinion.\n\n"
-                 + md_table(lay, ["Dataset2_Name", "Volatility_Class", "Curtis_Class", "Carles", "Page"]))
+    open_ = lay[lay["Decided"] == ""]
+    done = lay[lay["Decided"] != ""].drop_duplicates("Dataset2_Name")
+    dec_path = HERE / "reference" / "book_review_decisions.csv"
+    dec = pd.read_csv(dec_path, dtype=str, keep_default_na=False) if dec_path.exists() else pd.DataFrame(columns=["Section", "Dataset2_Name", "Decision", "Value", "Basis"])
+    changed = dec[(dec["Section"].str.startswith("1")) & (dec["Decision"] == "changed")]
+    parts.append(f"## 1. Volatility_Class vs Curtis' 'usual function' ({len(lay)} of {len(c)} matched rows disagree; {len(open_)} open, the rest decided 2026-09-22)\n\n"
+                 "Rule applied: Carles' class stands where he lists the material; Curtis is followed when the boiling point agrees with him; one author against practice "
+                 "and physics does not move a class. Decisions live in `reference/book_review_decisions.csv`.\n\n"
+                 f"**Changed ({len(changed)}):**\n\n" + md_table(changed, ["Dataset2_Name", "Value", "Basis"]) +
+                 f"\n**Kept against Curtis ({len(done)}):**\n\n" + md_table(done, ["Dataset2_Name", "Volatility_Class", "Curtis_Class", "Carles", "Decided"]) +
+                 f"\n**Still open ({len(open_)}):**\n\n" + md_table(open_, ["Dataset2_Name", "Volatility_Class", "Curtis_Class", "Carles", "Page"]))
     lay.to_csv(HERE / "reference" / "book_review_layers.csv", index=False)
 
     # 2. potency
@@ -80,9 +88,12 @@ def main() -> int:
                              "Source": best["Source"]})
     tym = pd.DataFrame(rows)
     above = tym[tym["Engine_Above_TY"]] if len(tym) else tym
+    dec3 = dec[dec["Section"].str.startswith("3")] if len(dec) else dec
     parts.append(f"## 3. Tisserand & Young dermal maxima vs the engine ({len(above)} of {len(tym)} naturals: the engine allows more than T&Y recommend)\n\n"
                  "The engine applies IFRA Cat 4 + UK law + the constituent roll-up; T&Y's figure is an aromatherapy (whole-body) recommendation, usually stricter. "
-                 "The safety engine already raises `TY_ADVISORY` for these; decide whether any should become a cap in `safety_caps.csv`.\n\n"
+                 "The safety engine raises `TY_ADVISORY` for these. Decided 2026-09-22: IFRA / Annex III stay the ceilings (fine-fragrance consensus); the oils whose "
+                 "toxic constituents (thujone, pinocamphone, pulegone, menthofuran) NO fine-fragrance standard limits got provisional caps in `safety_caps.csv`.\n\n"
+                 + md_table(dec3, ["Dataset2_Name", "Decision", "Value", "Basis"]) + "\nRemaining advisories:\n\n"
                  + md_table(above.sort_values("Note") if len(above) else above, ["Note", "Engine_Max_Pct_Neat", "TY_Max_Pct", "TY_Profile", "Form", "Basis", "Source"]))
     tym.to_csv(HERE / "reference" / "book_review_ty_maxima.csv", index=False)
 

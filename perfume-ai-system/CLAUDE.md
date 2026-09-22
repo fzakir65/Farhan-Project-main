@@ -19,10 +19,13 @@ This file is the primary guidance for Claude Code. Read it fully before writing 
 
 ## ⏩ RESUME HERE (read this first in a new session)
 
-**State on 2026-09-22:** everything requested is built and tested — `python -m pytest -q` → 221 passing (~4 min, the
-all-accord and all-perfume sweeps dominate). The book work is finished; **`data/reference/book_review.md` is the list to
-decide on next** (37 layer disagreements with Curtis, 17 naturals where T&Y recommend less than the engine allows, 4 Tisserand
-Ch 13/14 mismatches, and the AI-decided rows per file). Then the ML retrain (`../Farhan-Project-main/training/NEXT_STEPS_ML.md`).
+**State on 2026-09-22 (evening):** everything requested is built and tested — `python -m pytest -q` → 222 passing (~2-4 min).
+**Zone B is closed.** The book review was decided on the user's instruction ("decide what the world and scholars agree on"):
+`data/reference/book_review_decisions.csv` + `data/apply_book_decisions_2026-09-22.py` record every decision — 14 layer classes
+changed (Carles > Curtis+physics > workbook), 23 kept against Curtis with the reason, 5 provisional caps added for oils whose toxic
+constituents no fine-fragrance standard limits (Dalmatian sage, hyssop, peppermint, palo santo, Spanish sage — Tisserand & Young
+figures), IFRA / Annex III kept as the ceilings everywhere else. `book_review.md` regenerates with 0 open items.
+**Next: Zone A / the ML datasheets** — `../Farhan-Project-main/training/NEXT_STEPS_ML.md` (real-review corpus retrain), then Zone C.
 `python app.py "fresh woody for summer"` runs match → formula → safety → rebalance → **product formulation**
 (ethanol / water / additives / allergen label); `python app.py --invent "citrus, mossy, rose" --family Chypre` **invents**
 a new composition the Carles way; `streamlit run app.py` is the UI (Buttons / Free text / Invent). All on `main`.
@@ -51,6 +54,10 @@ What was decided by AI, not a human (all traceable, `Decided_By=ai` in the CSV, 
   (Ohloff p.627: ca. 20 % in Angel); Heliotropin and Cistus Oil back to Medium, p-cresyl phenylacetate Medium (Curtis odour
   strength 2/6 or 5/6 contradicted the AI dosing label). **Curtis' 1-6 figure is odour strength of the neat material; dataset2's
   `Odor_Strength` is a dosing class — they are compared only at the extremes (`load_data.CURTIS_INTENSITY`).**
+- 2026-09-22 decisions (`book_review_decisions.csv`): Volatility_Class changed for Aldehyde C-9/C10/C-11/C12 Lauric/C-12 MNA → Heart,
+  Aldehyde C-14 / C-16 → Base, Benzyl Butyrate / Para-Methyl Acetophenone / Alpha-Terpineol → Heart, Isoeugenyl Acetate / Lyral /
+  Galbanum Resin → Base, Phenylacetaldehyde → Top; `safety_caps.csv` +5 provisional caps (Sage Dalmatian 0.4, Sage Spanish 12.5,
+  Hyssop 0.3, Peppermint 5.4, Palo Santo 3.4 — T&Y pages in Reason). 26 potency overrides gained a Curtis / Ohloff corroboration line.
 - `constituents.csv`: no longer AI-recalled — generated from the T&Y 2e text by `data/mine_tisserand.py`; what IS a decision
   there is the hand-maintained map dataset2 CAS → profile / grade word (`M` in the tool) and the choice to use the highest
   upper bound across a profile's variants (Bulgarian vs Turkish rose, six Boswellia species…). Treemoss atranol is deliberately
@@ -199,6 +206,7 @@ perfume-ai-system/
 │   ├── mine_ohloff.py               # Ohloff 2e -> reference/ohloff_{families,accords,formulas,usage_levels,practice}.csv [rev6]
 │   ├── mine_curtis.py               # Curtis 1994 -> reference/curtis_{floral_bases,formulas,stability,monographs}.csv (+ winocr*.ps1) [rev6/7]
 │   ├── review_book_checks.py        # -> reference/book_review.md: every disagreement between the books and the data, for a human [rev7]
+│   ├── apply_book_decisions_2026-09-22.py  # the decisions taken on that review (re-runnable; writes overrides, caps, decisions.csv) [rev7]
 │   ├── build_datasets.py            # regenerates dataset1/2/3 (+ applies aliases & CAS fixes), ifra_limits, group_rules
 │   ├── reconcile_notes.py           # Step 1 tool: proposes note-name aliases, tiers AUTO / REVIEW / NO_MATCH   [rev2]
 │   ├── verify_cas.py                # Step 2 tool: audits bad CAS against IFRA table / project tables / PubChem [rev2]
@@ -557,7 +565,7 @@ After each task: show the result and wait for confirmation before proceeding.
 
 ## CURRENT STATUS
 
-See **⏩ RESUME HERE** at the top: everything is built and tested (221 tests); the data blockers of September are closed
+See **⏩ RESUME HERE** at the top: everything is built and tested (222 tests); the data blockers of September are closed
 (constituents from Tisserand & Young, accords re-authored, decision CSVs worked, PubChem check run). What remains needs a
 human or a supplier: CoA values for `constituents.csv`, sign-off of the `Decided_By=ai` rows, the 13 material-less accord
 notes, the 53 PubChem MW/logP disagreements, the EU allergen list, Zone C, and the ML retrain (`../Farhan-Project-main/

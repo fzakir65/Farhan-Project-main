@@ -1,6 +1,6 @@
 Note_Name,Field,Value,Was,Basis,Decided_By
-Isobutyl Quinoline,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Indole,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Isobutyl Quinoline,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Curtis 1994 odour strength 5/6 (PDF p.180)",ai
+Indole,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Curtis 1994 odour strength 5/6 (PDF p.206)",ai
 Skatole,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Geosmin,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Damascenone,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
@@ -16,17 +16,17 @@ Castoreum,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowle
 Castoreum Absolute,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Castoreum Replacer,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Aldehyde C-10,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Aldehyde C10,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Aldehyde C10,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Curtis 1994 odour strength 5/6 (PDF p.166)",ai
 Aldehydes (C10),Odor_Strength,Very strong,High,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Aldehyde C-11,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Aldehyde C-11,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Curtis 1994 odour strength 5/6 (PDF p.167)",ai
 Aldehyde C11,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Aldehydes (C11),Odor_Strength,Very strong,High,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Aldehyde C-12 MNA,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Aldehyde C-12 MNA,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Curtis 1994 odour strength 5/6 (PDF p.168)",ai
 Aldehyde C12 MNA,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Aldehydes (C12 MNA),Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Aldehyde C12 Lauric,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Aldehyde C-8,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Aldehyde C-9,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Aldehyde C-8,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Curtis 1994 odour strength 5/6 (PDF p.165)",ai
+Aldehyde C-9,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Curtis 1994 odour strength 5/6 (PDF p.166)",ai
 Cumin Seed Oil,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Sotolone,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Furaneol,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
@@ -37,26 +37,26 @@ Safranal,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowled
 Blackcurrant Bud,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Cassis Absolute,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Galbanum,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Galbanum Oil,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Galbanum Oil,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Curtis 1994 odour strength 5/6 (PDF p.273); consistent with Ohloff 2e dose ca. 0.7 % in Vent Vert (Balmain)",ai
 Galbanum Resin,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Galbanol,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Calone,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Calone,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Ohloff 2e dose ca. 0.2 % in Kenzo pour Homme",ai
 Melonal,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Floralozone,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Aquozone,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Oakmoss Absolute,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Oakmoss,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Tree Moss,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Cis-3-Hexenol,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Cis-3-Hexenyl Acetate,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Violet Leaf Absolute,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Cis-3-Hexenol,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Curtis 1994 odour strength 5/6 (PDF p.201)",ai
+Cis-3-Hexenyl Acetate,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Curtis 1994 odour strength 5/6 (PDF p.202)",ai
+Violet Leaf Absolute,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Curtis 1994 odour strength 5/6 (PDF p.299)",ai
 Violet Leaf,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Phenylacetic Acid,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Costus,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Fenugreek Absolute,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Fenugreek,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Maltol,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Ethyl Maltol,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Ethyl Maltol,Odor_Strength,Very strong,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Ohloff 2e dose ca. 3 % in Baccarat Rouge 540 (MFK)",ai
 Cyclotene,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Toasted Sugar,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Musk Ketone,Odor_Strength,Very strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
@@ -83,7 +83,7 @@ Oud Synthetic,Odor_Strength,Strong,Medium,"general perfumery usage-level knowled
 Timberol,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Cetalox,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Anisaldehyde,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Heliotropin,Odor_Strength,Medium,Medium,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 5 monograph, PDF p.201: odour strength 2/6 in the monograph contradicts the AI dosing label; set to Medium 2026-09-22",ai (book-corroborated)
+Heliotropin,Odor_Strength,Medium,Medium,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 5 monograph, PDF p.201: odour strength 2/6 in the monograph contradicts the AI dosing label; set to Medium 2026-09-22; consistent with Curtis 1994 odour strength 2/6 (PDF p.201)",ai (book-corroborated)
 Piperonal,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Methyl Anthranilate,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Nutmeg Oil,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
@@ -103,7 +103,7 @@ Bay Leaf Oil,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledg
 Allspice Oil,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Patchouli Alcohol,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Wintergreen Oil,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Rose Oxide,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Rose Oxide,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Ohloff 2e dose ca. 0.3 % in Chloé Eau de Parfum",ai
 Apple,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Ethyl Butyrate,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Pineapple,Odor_Strength,Strong,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
@@ -133,9 +133,9 @@ Limonene,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trac
 Linalyl Acetate,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Benzyl Acetate,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Benzyl Benzoate,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Benzyl Salicylate,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Benzyl Salicylate,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Curtis 1994 odour strength 2/6 (PDF p.178); consistent with Ohloff 2e dose ca. 30 % in Kenzo pour Homme",ai
 Sandalwood,Odor_Strength,Low,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Sandalwood Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Sandalwood Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Curtis 1994 odour strength 2/6 (PDF p.291); consistent with Ohloff 2e dose ca. 25 % in Samsara (Guerlain)",ai
 Australian Sandalwood,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Sandalore,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Javanol,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
@@ -144,7 +144,7 @@ Cedarwood Atlas,Odor_Strength,Low,Medium,"general perfumery usage-level knowledg
 Cedarwood Virginia,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Texas Cedarwood,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Cedramber,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Iso E Super,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Iso E Super,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Ohloff 2e dose ca. 50 % in Terre d'Hermes",ai
 Iso E Super Plus,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Timber Silk,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Hedione,Odor_Strength,Low,Soft,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
@@ -178,12 +178,12 @@ Geraniol,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trac
 Linalool,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Dihydromyrcenol,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Benzoin,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Benzoin Siam,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Benzoin Siam,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Curtis 1994 odour strength 2/6 (PDF p.260)",ai
 Benzoin Sumatra,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Tolu Balsam,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Amberlyn,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Boisambrene Forte,Odor_Strength,Low,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Coumarin,Odor_Strength,Low,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Coumarin,Odor_Strength,Low,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Ohloff 2e dose ca. 4 % in Angel (Mugler)",ai
 Tonka Bean,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Tonka Bean Absolute,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Lavender,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
@@ -193,14 +193,14 @@ Petitgrain,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (tr
 Petitgrain Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Bois de Rose,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Geranyl Acetate,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Hydroxycitronellal,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Hydroxycitronellal,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Ohloff 2e dose ca. 15 % in Diorissimo (Dior)",ai
 Lilial,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Bourgeonal,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Florol,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Florol,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Ohloff 2e dose ca. 10 % in Chloé Eau de Parfum",ai
 Amyris,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Amyris Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Amyris Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Curtis 1994 odour strength 2/6 (PDF p.292)",ai
 Guaiacwood,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Guaiac Wood Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
+Guaiac Wood Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file; consistent with Curtis 1994 odour strength 2/6 (PDF p.275)",ai
 Elemi,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Elemi Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Frankincense,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
@@ -208,7 +208,7 @@ Frankincense Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowled
 Olibanum Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Myrrh Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Labdanum,Odor_Strength,Low,Strong,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
-Cistus Oil,Odor_Strength,Medium,Medium,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 6 monograph, PDF p.267: odour strength 5/6 in the monograph contradicts the AI dosing label; set to Medium 2026-09-22",ai (book-corroborated)
+Cistus Oil,Odor_Strength,Medium,Medium,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 6 monograph, PDF p.267: odour strength 5/6 in the monograph contradicts the AI dosing label; set to Medium 2026-09-22; consistent with Curtis 1994 odour strength 5/6 (PDF p.267)",ai (book-corroborated)
 Fir Balsam,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Pine Needle Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Cypress Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
@@ -216,4 +216,18 @@ Juniper Berry Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowle
 Clary Sage,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Clary Sage Oil,Odor_Strength,Low,Medium,"general perfumery usage-level knowledge (trace / powerful / normal / bulk material) — AI-labelled 2026-09-18, veto by editing this file",ai
 Patchouli,Odor_Strength,Medium,Strong,"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (2022) Ch 9.6 PDF p.627: patchouli oil ca. 20 % of the concentrate in Angel (Mugler 1992) — a 20 % dose is not a 'Strong' (0.5-3 %) material; workbook label corrected 2026-09-19",ai (book-corroborated)
-Patchouli Oil,Odor_Strength,Medium,Strong,"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (2022) Ch 9.6 PDF p.627: patchouli oil ca. 20 % of the concentrate in Angel (Mugler 1992) — a 20 % dose is not a 'Strong' (0.5-3 %) material; workbook label corrected 2026-09-19",ai (book-corroborated)
+Patchouli Oil,Odor_Strength,Medium,Strong,"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (2022) Ch 9.6 PDF p.627: patchouli oil ca. 20 % of the concentrate in Angel (Mugler 1992) — a 20 % dose is not a 'Strong' (0.5-3 %) material; workbook label corrected 2026-09-19; consistent with Curtis 1994 odour strength 5/6 (PDF p.287); consistent with Ohloff 2e dose ca. 20 % in Angel (Mugler)",ai (book-corroborated)
+Aldehyde C-9,Volatility_Class,Heart,Top,"Carles, A Method of Creation in Perfumery, volatility table (reference/carles_volatility_table.csv): modifier; Curtis & Williams, An Introduction to Perfumery (1994) PDF p.166: middle note; BP 191 C borderline — two authorities against the workbook's Top",ai (book-decided 2026-09-22: Carles > Curtis+physics > dataset2)
+Aldehyde C10,Volatility_Class,Heart,Top,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.166: not a top note (basic); Carles treats the C-9 / C-11 homologues as modifiers; BP 208 C = RSC heart window",ai (book-decided 2026-09-22: Carles > Curtis+physics > dataset2)
+Aldehyde C-11,Volatility_Class,Heart,Top,"Carles, A Method of Creation in Perfumery, volatility table (reference/carles_volatility_table.csv): modifier; Curtis & Williams, An Introduction to Perfumery (1994) PDF p.167: basic note; BP 223-238 C",ai (book-decided 2026-09-22: Carles > Curtis+physics > dataset2)
+Aldehyde C12 Lauric,Volatility_Class,Heart,Top,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.168: middle note; BP 258 C (RSC Ch 11: 200-270 C evaporates in the heart window)",ai (book-decided 2026-09-22: Carles > Curtis+physics > dataset2)
+Aldehyde C-12 MNA,Volatility_Class,Heart,Top,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.168: basic note; BP 254 C — physics puts it in the heart window, Curtis below it; neither is Top",ai (book-decided 2026-09-22: Carles > Curtis+physics > dataset2)
+Aldehyde C-14,Volatility_Class,Base,Heart,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.169: basic note; BP 286-290 C, tenacity 4-10 h (dataset2) — gamma-undecalactone is a base material",ai (book-decided 2026-09-22: Carles > Curtis+physics > dataset2)
+Aldehyde C-16,Volatility_Class,Base,Top,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.169: basic note; ethyl methylphenylglycidate boils above 270 C — a Top class was a workbook error",ai (book-decided 2026-09-22: Carles > Curtis+physics > dataset2)
+Benzyl Butyrate,Volatility_Class,Heart,Top,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.176: middle note; BP ~240 C",ai (book-decided 2026-09-22: Carles > Curtis+physics > dataset2)
+Isoeugenyl Acetate,Volatility_Class,Base,Heart,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.197: basic note; BP > 280 C",ai (book-decided 2026-09-22: Carles > Curtis+physics > dataset2)
+Lyral,Volatility_Class,Base,Heart,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.210: basic note; BP 280-290 C, tenacity 4-10 h (dataset2); banned in the UK/EU in any case",ai (book-decided 2026-09-22: Carles > Curtis+physics > dataset2)
+Para-Methyl Acetophenone,Volatility_Class,Heart,Top,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.212: middle note; BP ~226 C",ai (book-decided 2026-09-22: Carles > Curtis+physics > dataset2)
+Phenylacetaldehyde,Volatility_Class,Top,Base,"BP ~195 C (RSC Ch 11 first approximation) — Curtis & Williams, An Introduction to Perfumery (1994) PDF p.223 says middle; the workbook's Base is contradicted by both",ai (book-decided 2026-09-22: Carles > Curtis+physics > dataset2)
+Alpha-Terpineol,Volatility_Class,Heart,Top,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.228: middle note; BP 219 C; the lilac heart material of every Curtis base",ai (book-decided 2026-09-22: Carles > Curtis+physics > dataset2)
+Galbanum Resin,Volatility_Class,Base,Top/Heart,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.274: the resinoid is a basic note (the oil is the top note); BP 280 C, tenacity 8-12 h (dataset2)",ai (book-decided 2026-09-22: Carles > Curtis+physics > dataset2)

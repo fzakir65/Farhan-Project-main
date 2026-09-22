@@ -1,0 +1,48 @@
+Section,Dataset2_Name,Decision,Value,Basis
+1 layer,Aldehyde C-9,changed,Heart,"Carles, A Method of Creation in Perfumery, volatility table (reference/carles_volatility_table.csv): modifier; Curtis & Williams, An Introduction to Perfumery (1994) PDF p.166: middle note; BP 191 C borderline — two authorities against the workbook's Top"
+1 layer,Aldehyde C10,changed,Heart,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.166: not a top note (basic); Carles treats the C-9 / C-11 homologues as modifiers; BP 208 C = RSC heart window"
+1 layer,Aldehyde C-11,changed,Heart,"Carles, A Method of Creation in Perfumery, volatility table (reference/carles_volatility_table.csv): modifier; Curtis & Williams, An Introduction to Perfumery (1994) PDF p.167: basic note; BP 223-238 C"
+1 layer,Aldehyde C12 Lauric,changed,Heart,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.168: middle note; BP 258 C (RSC Ch 11: 200-270 C evaporates in the heart window)"
+1 layer,Aldehyde C-12 MNA,changed,Heart,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.168: basic note; BP 254 C — physics puts it in the heart window, Curtis below it; neither is Top"
+1 layer,Aldehyde C-14,changed,Base,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.169: basic note; BP 286-290 C, tenacity 4-10 h (dataset2) — gamma-undecalactone is a base material"
+1 layer,Aldehyde C-16,changed,Base,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.169: basic note; ethyl methylphenylglycidate boils above 270 C — a Top class was a workbook error"
+1 layer,Benzyl Butyrate,changed,Heart,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.176: middle note; BP ~240 C"
+1 layer,Isoeugenyl Acetate,changed,Base,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.197: basic note; BP > 280 C"
+1 layer,Lyral,changed,Base,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.210: basic note; BP 280-290 C, tenacity 4-10 h (dataset2); banned in the UK/EU in any case"
+1 layer,Para-Methyl Acetophenone,changed,Heart,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.212: middle note; BP ~226 C"
+1 layer,Phenylacetaldehyde,changed,Top,"BP ~195 C (RSC Ch 11 first approximation) — Curtis & Williams, An Introduction to Perfumery (1994) PDF p.223 says middle; the workbook's Base is contradicted by both"
+1 layer,Alpha-Terpineol,changed,Heart,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.228: middle note; BP 219 C; the lilac heart material of every Curtis base"
+1 layer,Galbanum Resin,changed,Base,"Curtis & Williams, An Introduction to Perfumery (1994) PDF p.274: the resinoid is a basic note (the oil is the top note); BP 280 C, tenacity 8-12 h (dataset2)"
+1 layer,Benzyl Salicylate,kept,Base,"Carles, A Method of Creation in Perfumery, volatility table (reference/carles_volatility_table.csv): base; BP 300 C, tenacity 12-24 h — Curtis p.178 'top' stands alone"
+1 layer,Citral,kept,Top,"industry consensus (citrus top note; Poucher, Calkin & Jellinek); VP medium, BP 228 C — Curtis p.183 'middle' stands alone"
+1 layer,Citronellol,kept,Heart,"rose alcohol, heart by consensus; BP 225 C — Curtis p.184 'top' stands alone"
+1 layer,Dihydromyrcenol,kept,Top,"BP 211-215 C, VP high, tenacity 2-3 h — Curtis p.191 'middle' stands alone"
+1 layer,Isobutyl Quinoline,kept,Base,"leather base material by consensus, BP > 270 C — Curtis p.180 'middle' stands alone"
+1 layer,Hydroxycitronellal,kept,Heart,muguet heart material by consensus (Ohloff p.626 Diorissimo heart); BP 241 C — Curtis p.205 'basic' stands alone
+1 layer,Methyl Isoeugenol,kept,Heart,BP 263 C in the heart window — Curtis p.215 'basic' stands alone
+1 layer,Phenethyl Alcohol,kept,Heart,"Carles, A Method of Creation in Perfumery, volatility table (reference/carles_volatility_table.csv): modifier; BP 219 C — Curtis p.225 'top' stands alone"
+1 layer,Tarragon Oil,kept,Top,"Carles, A Method of Creation in Perfumery, volatility table (reference/carles_volatility_table.csv): top — Curtis p.294 'basic' stands alone"
+1 layer,Artemisia Oil,kept,Top,herbaceous top note by consensus — Curtis p.259 'middle' alone
+1 layer,Basil Oil,kept,Top,linalool / estragole top note by consensus — Curtis p.260 'middle' alone
+1 layer,Carrot Seed,kept,Heart,tenacious earthy heart by consensus — Curtis p.262 'top' alone
+1 layer,Cedarwood Virginia,kept,Base,woody base by every classification — Curtis p.264 'top' alone
+1 layer,Citronella,kept,Top,citronellal-rich top note — Curtis p.268 'middle' alone
+1 layer,Guaiac Wood Oil,kept,Base,woody base by consensus — Curtis p.275 'middle' alone
+1 layer,Juniper Berry Oil,kept,Top,terpenic top note — Curtis p.276 'middle' alone
+1 layer,Lemongrass Oil,kept,Top,citral-rich top note — Curtis p.279 'middle' alone
+1 layer,Litsea Cubeba Oil,kept,Top,citral-rich top note — Curtis p.281 'middle' alone
+1 layer,Mimosa Absolute,kept,Heart,"floral absolute, heart by consensus — Curtis p.282 'top' alone"
+1 layer,Orris Butter,kept,Base,irone-rich base / fixative by consensus — Curtis p.286 'top' alone
+1 layer,Rosemary Oil,kept,Top,cineole / camphor top note — Curtis p.290 'middle' alone
+3 T&Y maxima,Sage Oil (Dalmatian),provisional cap,0.4,"Tisserand & Young, Essential Oil Safety 2e (2014) p.1558-1559: 60 % thujone, dermal thujone limit 0.25 % (neurotoxicity) — no IFRA / Annex III limit exists, so without this cap the oil was allowed at 100 %"
+3 T&Y maxima,Sage Oil (Spanish),provisional cap,12.5,"Tisserand & Young, Essential Oil Safety 2e (2014) p.1564: 12.5 % dermal maximum (camphor / sabinyl acetate content)"
+3 T&Y maxima,Hyssop Oil,provisional cap,0.3,"Tisserand & Young, Essential Oil Safety 2e (2014) p.1188-1189: 82 % pinocamphone / isopinocamphone / thujone, dermal limit 0.25 % (neurotoxicity) — no IFRA / Annex III limit"
+3 T&Y maxima,Peppermint Oil,provisional cap,5.4,"Tisserand & Young, Essential Oil Safety 2e (2014) p.1467: 8 % menthofuran (limit 0.5 %) and 3 % pulegone (limit 1.2 %) — hepatotoxicity; no IFRA / Annex III limit"
+3 T&Y maxima,Palo Santo Oil,provisional cap,3.4,"Tisserand & Young, Essential Oil Safety 2e (2014) p.1439: 11.8 % menthofuran / 1.2 % pulegone, same limits as peppermint; no IFRA / Annex III limit"
+3 T&Y maxima,Cinnamon Bark Oil,kept (IFRA Cat 4 / Annex III are the fine-fragrance consensus; TY_ADVISORY stays visible),,engine 0.3 % = IFRA 51st cinnamaldehyde 0.25 % / 0.757 content; T&Y 0.07 % is their aromatherapy figure from the older IFRA 0.05 %
+3 T&Y maxima,Clove Bud Oil,kept (IFRA Cat 4 / Annex III are the fine-fragrance consensus; TY_ADVISORY stays visible),,engine 2.0 % (olfactory cap; IFRA 51st eugenol 2.5 % Cat 4); T&Y 0.5 % is the IFRA body-lotion category figure
+3 T&Y maxima,Sandalwood Oil,kept (IFRA Cat 4 / Annex III are the fine-fragrance consensus; TY_ADVISORY stays visible),,"IFRA 51st has no sandalwood Standard; T&Y 2 % rests on 0.34 % patch-test reactions and photoallergy in one population; Ohloff p.626 records 25 % in Samsara — kept, advisory only"
+3 T&Y maxima,Thyme Oil,kept (IFRA Cat 4 / Annex III are the fine-fragrance consensus; TY_ADVISORY stays visible),,irritation-based 1.3 % (T&Y); no IFRA / Annex III limit; the engine flags TY_ADVISORY — a cap needs a perfumer's judgement on the chemotype (thymol vs linalool CT share one CAS)
+3 T&Y maxima,Litsea Cubeba Oil / Tea Absolute,kept (IFRA Cat 4 / Annex III are the fine-fragrance consensus; TY_ADVISORY stays visible),,engine and T&Y agree within rounding (citral 0.6 % / 0.744; tea 0.21 vs 0.20)
+4 Ch13 vs Ch14,Benzoin Siam / Blackcurrant bud,kept,,grade- and form-specific parse is the correct one; Ch 14 quotes the Sumatra grade and the oil
+5 sign-off,(all AI rows),"evidence attached, sign-off still human",,potency overrides now cite Curtis / Ohloff where the books agree; a perfumer's smell-test remains the last step
