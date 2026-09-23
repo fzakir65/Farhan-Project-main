@@ -1,0 +1,461 @@
+review_id,split,perfume,n_pred,primary_ok,primary_top3,any_ok,any_top3,covered,perfume_top1,perfume_top5
+572853,val_seen,Ajmal Amber Wood,1,False,False,True,True,True,False,False
+383552,train,Ajmal Amber Wood,3,False,False,False,False,True,False,False
+85187,val_seen,Azzaro Pour Homme,5,False,False,False,False,True,False,False
+410902,val_seen,Azzaro Pour Homme,3,False,False,True,True,True,False,False
+564310,val_seen,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+416892,val_seen,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+330928,val_seen,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+28864,val_seen,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+2503,val_seen,Azzaro Pour Homme,2,False,False,False,False,True,False,False
+439838,val_seen,Azzaro Pour Homme,3,False,False,False,False,True,False,False
+455824,val_seen,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+670992,val_seen,Azzaro Pour Homme,1,False,False,False,False,True,False,False
+351805,val_seen,Azzaro Pour Homme,3,False,False,False,False,True,False,False
+363390,val_seen,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+270260,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+539720,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+164931,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+258653,train,Azzaro Pour Homme,5,False,False,False,False,True,False,False
+573827,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+256849,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+653306,train,Azzaro Pour Homme,4,False,False,False,True,True,False,False
+455670,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+61852,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+152342,train,Azzaro Pour Homme,1,False,False,False,False,True,False,False
+185183,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+227822,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+677878,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+377002,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+62119,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+169106,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+261708,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+501157,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+157933,train,Azzaro Pour Homme,3,False,False,False,False,True,False,False
+679074,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+522369,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+540028,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+233755,train,Azzaro Pour Homme,1,False,False,False,False,True,False,False
+609590,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+661608,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+207892,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+659381,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+663191,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+263303,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+236158,train,Azzaro Pour Homme,1,False,False,False,False,True,False,False
+455710,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+167640,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+511943,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+237013,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+269900,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+433362,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+473742,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+535855,train,Azzaro Pour Homme,0,False,False,False,False,False,False,False
+85981,val_unseen,Bvlgari Man Wood Essence,0,False,False,False,False,False,False,False
+417582,val_unseen,Bvlgari Rose Goldea,0,False,False,False,False,False,False,False
+339318,val_unseen,Bvlgari Rose Goldea,0,False,False,False,False,False,False,False
+94436,val_unseen,Bvlgari Rose Goldea,0,False,False,False,False,False,False,False
+326633,val_unseen,Bvlgari Rose Goldea,0,False,False,False,False,False,False,False
+431032,val_unseen,Bvlgari Rose Goldea,0,False,False,False,False,False,False,False
+520301,val_unseen,Bvlgari Rose Goldea,0,False,False,False,False,False,False,False
+527637,val_seen,Calvin Klein CK One,9,False,False,False,False,True,False,False
+87137,train,Calvin Klein CK One,0,False,False,False,False,False,False,False
+28303,train,Calvin Klein CK One,0,False,False,False,False,False,False,False
+599758,train,Calvin Klein CK One,0,False,False,False,False,False,False,False
+534884,train,Calvin Klein CK One,0,False,False,False,False,False,False,False
+203627,val_seen,Carolina Herrera Bad Boy,0,False,False,False,False,False,False,False
+243078,train,Carolina Herrera Bad Boy,0,False,False,False,False,False,False,False
+597615,val_unseen,Carolina Herrera Good Girl,0,False,False,False,False,False,False,False
+529868,val_unseen,Carolina Herrera Good Girl,1,False,False,False,False,True,False,True
+678999,val_unseen,Carolina Herrera Good Girl,0,False,False,False,False,False,False,False
+564339,val_unseen,Carolina Herrera Good Girl,0,False,False,False,False,False,False,False
+252531,val_unseen,Carolina Herrera Good Girl,0,False,False,False,False,False,False,False
+237762,val_unseen,Carolina Herrera Good Girl,0,False,False,False,False,False,False,False
+79596,val_unseen,Carolina Herrera Good Girl,0,False,False,False,False,False,False,False
+236778,val_unseen,Carolina Herrera Good Girl,0,False,False,False,False,False,False,False
+416311,val_unseen,Carolina Herrera Good Girl,0,False,False,False,False,False,False,False
+354422,val_unseen,Carolina Herrera Good Girl,0,False,False,False,False,False,False,False
+387322,val_unseen,Carolina Herrera Good Girl,0,False,False,False,False,False,False,False
+333840,val_seen,Chanel Bleu de Chanel,0,False,False,False,False,False,False,False
+453285,train,Chanel Bleu de Chanel,1,False,False,False,False,True,False,False
+665706,val_unseen,Chanel Coco Mademoiselle,0,False,False,False,False,False,False,False
+362999,val_unseen,Chanel Coco Mademoiselle,3,False,False,False,False,True,False,False
+67906,val_unseen,Chanel Coco Mademoiselle,0,False,False,False,False,False,False,False
+578717,val_unseen,Chanel Coco Mademoiselle,0,False,False,False,False,False,False,False
+98463,val_unseen,Chanel Coco Mademoiselle,0,False,False,False,False,False,False,False
+68926,val_unseen,Chanel Coco Mademoiselle,0,False,False,False,False,False,False,False
+4416,val_seen,Coach for Men,7,False,False,False,False,True,False,False
+154758,val_seen,Coach for Men,10,False,False,False,False,True,False,False
+102555,val_seen,Coach for Men,5,False,False,False,False,True,False,False
+377108,val_seen,Coach for Men,1,False,False,False,False,True,False,False
+2654,val_seen,Coach for Men,8,False,False,False,False,True,False,False
+27234,val_seen,Coach for Men,9,False,False,False,False,True,False,False
+198179,val_seen,Coach for Men,6,False,False,False,False,True,False,False
+414957,val_seen,Coach for Men,12,False,True,False,True,True,False,False
+478641,val_seen,Coach for Men,0,False,False,False,False,False,False,False
+359102,val_seen,Coach for Men,0,False,False,False,False,False,False,False
+334163,val_seen,Coach for Men,3,False,False,False,True,True,False,False
+578494,val_seen,Coach for Men,3,False,False,False,False,True,False,False
+109208,val_seen,Coach for Men,0,False,False,False,False,False,False,False
+227745,val_seen,Coach for Men,13,False,False,False,False,True,False,False
+64294,val_seen,Coach for Men,6,False,False,False,True,True,False,False
+799,train,Coach for Men,6,False,False,False,False,True,False,False
+106408,train,Coach for Men,3,False,False,False,False,True,False,False
+128496,train,Coach for Men,5,False,False,False,False,True,False,False
+196079,train,Coach for Men,6,False,False,False,False,True,False,False
+244477,train,Coach for Men,2,False,False,False,False,True,False,False
+102878,train,Coach for Men,2,False,False,False,False,True,False,False
+204779,train,Coach for Men,13,False,False,True,True,True,False,False
+509325,train,Coach for Men,9,False,False,False,False,True,False,False
+96639,train,Coach for Men,8,False,False,False,True,True,False,False
+290801,train,Coach for Men,5,False,False,False,True,True,False,False
+435139,train,Coach for Men,6,False,False,False,False,True,False,False
+156051,train,Coach for Men,10,True,True,True,True,True,False,False
+568375,train,Coach for Men,2,False,False,False,False,True,False,False
+143915,train,Coach for Men,9,False,False,True,True,True,False,False
+230391,train,Coach for Men,5,False,False,False,False,True,False,False
+333591,train,Coach for Men,2,True,True,True,True,True,False,False
+369105,train,Coach for Men,12,False,False,False,False,True,False,False
+23396,train,Coach for Men,2,False,False,False,True,True,False,False
+6031,train,Coach for Men,15,True,True,True,True,True,False,True
+249439,train,Coach for Men,7,False,False,False,False,True,False,False
+509579,train,Coach for Men,6,False,False,False,False,True,False,False
+625576,train,Coach for Men,1,False,False,False,False,True,False,False
+270927,train,Coach for Men,4,False,False,False,False,True,False,False
+280266,train,Coach for Men,8,False,False,False,False,True,False,False
+541389,train,Coach for Men,8,False,True,False,True,True,False,False
+209899,train,Coach for Men,5,False,True,False,True,True,False,False
+510171,train,Coach for Men,5,False,False,False,False,True,False,False
+127982,train,Coach for Men,15,False,False,False,False,True,False,False
+111079,train,Coach for Men,2,False,False,False,False,True,False,False
+90170,train,Coach for Men,8,False,False,False,True,True,False,False
+4417,train,Coach for Men,2,False,False,False,False,True,False,False
+218475,train,Coach for Men,11,False,False,False,False,True,False,False
+310196,train,Coach for Men,5,False,True,False,True,True,False,False
+325243,train,Coach for Men,7,False,False,False,True,True,False,False
+4418,train,Coach for Men,2,False,False,False,False,True,False,False
+378344,train,Coach for Men,3,False,False,False,False,True,False,False
+24824,train,Coach for Men,14,False,False,False,False,True,False,False
+4849,train,Coach for Men,1,False,False,False,False,True,False,False
+559674,train,Coach for Men,8,False,False,False,False,True,False,False
+377998,train,Coach for Men,8,False,False,True,True,True,False,False
+130430,train,Coach for Men,5,False,False,False,False,True,False,False
+447694,train,Coach for Men,9,False,False,False,False,True,False,False
+199269,train,Coach for Men,23,False,True,True,True,True,False,True
+230927,train,Coach for Men,6,False,False,False,False,True,False,False
+26162,train,Coach for Men,7,False,False,False,False,True,False,False
+632612,val_seen,Creed Green Irish Tweed,0,False,False,False,False,False,False,False
+508802,val_seen,Creed Royal Oud,2,False,False,False,True,True,False,False
+278685,val_seen,Creed Silver Mountain Water,1,False,False,False,False,True,False,False
+481510,val_seen,Creed Silver Mountain Water,1,False,False,False,False,True,False,False
+74776,val_seen,Creed Silver Mountain Water,0,False,False,False,False,False,False,False
+574388,train,Creed Silver Mountain Water,0,False,False,False,False,False,False,False
+681505,train,Creed Silver Mountain Water,2,True,True,True,True,True,True,True
+562169,train,Creed Silver Mountain Water,0,False,False,False,False,False,False,False
+548962,train,Creed Silver Mountain Water,0,False,False,False,False,False,False,False
+33203,train,Creed Silver Mountain Water,0,False,False,False,False,False,False,False
+316716,train,Creed Silver Mountain Water,0,False,False,False,False,False,False,False
+542008,train,Creed Silver Mountain Water,0,False,False,False,False,False,False,False
+567641,train,Creed Silver Mountain Water,0,False,False,False,False,False,False,False
+105916,train,Creed Silver Mountain Water,0,False,False,False,False,False,False,False
+169972,train,Creed Silver Mountain Water,0,False,False,False,False,False,False,False
+159174,val_seen,Dior Addict,0,False,False,False,False,False,False,False
+390831,val_seen,Dior Homme,0,False,False,False,False,False,False,False
+255154,val_unseen,Dior Poison,0,False,False,False,False,False,False,False
+157071,val_unseen,Dior Poison,0,False,False,False,False,False,False,False
+403977,val_seen,Dior Sauvage,0,False,False,False,False,False,False,False
+656148,val_seen,Diptyque Eau Rose,0,False,False,False,False,False,False,False
+285027,train,Diptyque Eau Rose,0,False,False,False,False,False,False,False
+406469,val_seen,Diptyque Eau des Sens,0,False,False,False,False,False,False,False
+456770,val_seen,Diptyque Philosykos,0,False,False,False,False,False,False,False
+599574,val_unseen,Diptyque Tam Dao,0,False,False,False,False,False,False,False
+127510,val_seen,Elizabeth Arden Green Tea,2,False,False,False,False,True,False,False
+343135,val_seen,Elizabeth Arden Green Tea,9,False,False,False,False,True,False,False
+49206,val_seen,Elizabeth Arden Green Tea,6,False,False,False,False,True,False,False
+265397,val_seen,Elizabeth Arden Green Tea,4,False,False,False,True,True,False,False
+169767,val_seen,Elizabeth Arden Green Tea,5,False,False,False,True,True,False,False
+228835,val_seen,Elizabeth Arden Green Tea,7,False,False,False,True,True,False,False
+633028,val_seen,Elizabeth Arden Green Tea,9,False,False,False,False,True,False,False
+56011,val_seen,Elizabeth Arden Green Tea,6,False,False,True,True,True,False,False
+11931,val_seen,Elizabeth Arden Green Tea,4,False,False,False,False,True,False,False
+113151,val_seen,Elizabeth Arden Green Tea,4,False,False,False,False,True,False,False
+289812,val_seen,Elizabeth Arden Green Tea,2,False,False,False,False,True,False,False
+498455,val_seen,Elizabeth Arden Green Tea,3,False,False,False,False,True,False,False
+125669,val_seen,Elizabeth Arden Green Tea,9,False,False,False,False,True,False,False
+104282,val_seen,Elizabeth Arden Green Tea,3,False,False,False,False,True,False,False
+276456,val_seen,Elizabeth Arden Green Tea,10,False,False,False,False,True,False,False
+147790,train,Elizabeth Arden Green Tea,1,False,False,False,False,True,False,False
+172998,train,Elizabeth Arden Green Tea,7,False,False,False,True,True,False,False
+157577,train,Elizabeth Arden Green Tea,4,False,False,False,False,True,False,False
+363234,train,Elizabeth Arden Green Tea,7,False,False,False,False,True,False,False
+363512,train,Elizabeth Arden Green Tea,5,False,False,False,False,True,False,False
+1073,train,Elizabeth Arden Green Tea,6,False,False,False,False,True,False,False
+220747,train,Elizabeth Arden Green Tea,3,False,False,False,False,True,False,False
+541210,train,Elizabeth Arden Green Tea,2,False,False,False,False,True,False,False
+208690,train,Elizabeth Arden Green Tea,5,False,False,False,True,True,False,False
+249072,train,Elizabeth Arden Green Tea,3,False,False,False,False,True,False,False
+356164,train,Elizabeth Arden Green Tea,2,False,False,False,False,True,False,False
+80641,train,Elizabeth Arden Green Tea,7,False,False,False,False,True,False,False
+222248,train,Elizabeth Arden Green Tea,6,False,False,False,True,True,False,False
+128499,train,Elizabeth Arden Green Tea,2,False,False,True,True,True,False,False
+612252,train,Elizabeth Arden Green Tea,5,False,False,False,False,True,False,False
+639664,train,Elizabeth Arden Green Tea,5,False,False,False,False,True,False,False
+202426,train,Elizabeth Arden Green Tea,10,False,False,False,True,True,False,False
+289026,train,Elizabeth Arden Green Tea,8,False,False,False,False,True,False,False
+23859,train,Elizabeth Arden Green Tea,4,False,False,False,False,True,False,False
+277027,train,Elizabeth Arden Green Tea,4,False,False,False,False,True,False,False
+5504,train,Elizabeth Arden Green Tea,2,False,False,False,False,True,False,False
+26289,train,Elizabeth Arden Green Tea,8,False,False,False,False,True,False,False
+61509,train,Elizabeth Arden Green Tea,6,False,False,False,False,True,False,False
+397361,train,Elizabeth Arden Green Tea,6,False,False,False,False,True,False,False
+102488,train,Elizabeth Arden Green Tea,6,False,False,False,True,True,False,False
+20621,train,Elizabeth Arden Green Tea,7,False,False,False,False,True,False,False
+93563,train,Elizabeth Arden Green Tea,10,False,False,False,False,True,False,False
+576309,train,Elizabeth Arden Green Tea,3,False,False,False,False,True,False,False
+933,train,Elizabeth Arden Green Tea,4,False,False,False,False,True,False,False
+480395,train,Elizabeth Arden Green Tea,0,False,False,False,False,False,False,False
+122010,train,Elizabeth Arden Green Tea,6,False,False,False,False,True,False,False
+2708,train,Elizabeth Arden Green Tea,8,False,False,False,True,True,False,False
+602064,train,Elizabeth Arden Green Tea,4,False,False,False,True,True,False,False
+282484,train,Elizabeth Arden Green Tea,9,False,False,False,False,True,False,False
+392612,train,Elizabeth Arden Green Tea,3,False,False,False,False,True,False,False
+27876,train,Elizabeth Arden Green Tea,3,False,False,False,False,True,False,False
+2207,train,Elizabeth Arden Green Tea,3,False,False,False,False,True,False,False
+463235,train,Elizabeth Arden Green Tea,4,False,False,False,True,True,False,False
+68014,train,Elizabeth Arden Green Tea,7,False,False,True,True,True,False,False
+368291,train,Elizabeth Arden Green Tea,4,False,False,False,False,True,False,False
+521405,train,Elizabeth Arden Green Tea,3,False,False,False,False,True,False,False
+503311,train,Elizabeth Arden Green Tea,3,False,False,False,False,True,False,False
+301072,train,Elizabeth Arden Green Tea,0,False,False,False,False,False,False,False
+357177,train,Elizabeth Arden Green Tea,5,False,False,False,False,True,False,False
+133425,train,Elizabeth Arden Green Tea,4,False,False,False,True,True,False,False
+254374,val_seen,Givenchy Gentleman,0,False,False,False,False,False,False,False
+663550,val_seen,Gucci Bloom,0,False,False,False,False,False,False,False
+478038,train,Gucci Bloom,1,False,False,False,False,True,False,False
+434796,train,Gucci Bloom,0,False,False,False,False,False,False,False
+361202,val_seen,Gucci Flora Gorgeous Gardenia,0,False,False,False,False,False,False,False
+115026,train,Gucci Flora Gorgeous Gardenia,0,False,False,False,False,False,False,False
+481970,val_seen,Gucci Guilty Absolute,0,False,False,False,False,False,False,False
+626933,train,Gucci Guilty Absolute,1,False,False,False,False,True,False,False
+203670,val_seen,Hermès Un Jardin sur le Nil,10,False,False,False,False,True,False,False
+422108,val_seen,Hugo Boss Bottled Oud,2,False,False,False,True,True,False,False
+276936,val_seen,Jean Paul Gaultier La Belle,3,False,False,False,False,True,False,False
+608614,val_seen,Jean Paul Gaultier La Belle,2,False,False,False,False,True,False,False
+326486,train,Jean Paul Gaultier La Belle,0,False,False,False,False,False,False,False
+283256,train,Jean Paul Gaultier La Belle,0,False,False,False,False,False,False,False
+374226,train,Jean Paul Gaultier La Belle,0,False,False,False,False,False,False,False
+455030,train,Jean Paul Gaultier La Belle,0,False,False,False,False,False,False,False
+599211,val_seen,Jean Paul Gaultier Ultra Male,0,False,False,False,False,False,False,False
+59626,train,Jean Paul Gaultier Ultra Male,3,False,False,False,False,True,False,False
+633883,train,Jean Paul Gaultier Ultra Male,0,False,False,False,False,False,False,False
+138529,val_seen,John Varvatos Artisan Pure,8,False,False,False,True,True,False,False
+98979,train,John Varvatos Artisan Pure,4,False,False,False,False,True,False,False
+431457,train,John Varvatos Artisan Pure,1,False,False,False,False,True,False,False
+437489,val_seen,Juliette Has a Gun Vanilla Vibes,6,False,False,False,False,True,False,False
+614980,val_seen,Juliette Has a Gun Vanilla Vibes,2,False,True,False,True,True,False,True
+509040,val_seen,Juliette Has a Gun Vanilla Vibes,5,False,False,False,False,True,True,True
+44781,val_seen,Juliette Has a Gun Vanilla Vibes,2,False,True,False,True,True,False,False
+66651,val_seen,Juliette Has a Gun Vanilla Vibes,4,False,False,False,False,True,False,False
+1054,val_seen,Juliette Has a Gun Vanilla Vibes,3,False,False,False,False,True,False,False
+350711,val_seen,Juliette Has a Gun Vanilla Vibes,4,False,False,False,False,True,False,False
+44730,val_seen,Juliette Has a Gun Vanilla Vibes,4,False,False,False,False,True,False,False
+622038,train,Juliette Has a Gun Vanilla Vibes,1,False,False,False,False,True,False,False
+68271,train,Juliette Has a Gun Vanilla Vibes,5,False,False,False,False,True,False,True
+281229,train,Juliette Has a Gun Vanilla Vibes,1,False,False,False,False,True,False,False
+637219,train,Juliette Has a Gun Vanilla Vibes,7,False,False,False,False,True,False,False
+398576,train,Juliette Has a Gun Vanilla Vibes,1,False,False,False,False,True,False,False
+25510,train,Juliette Has a Gun Vanilla Vibes,4,False,True,False,True,True,False,False
+622034,train,Juliette Has a Gun Vanilla Vibes,1,True,True,True,True,True,False,False
+16262,train,Juliette Has a Gun Vanilla Vibes,0,False,False,False,False,False,False,False
+663474,train,Juliette Has a Gun Vanilla Vibes,3,False,False,False,False,True,False,False
+343861,train,Juliette Has a Gun Vanilla Vibes,2,False,True,False,True,True,False,False
+350800,train,Juliette Has a Gun Vanilla Vibes,3,False,True,False,True,True,False,True
+49024,train,Juliette Has a Gun Vanilla Vibes,4,False,False,False,False,True,False,False
+276969,train,Juliette Has a Gun Vanilla Vibes,2,False,False,False,False,True,False,False
+321418,train,Juliette Has a Gun Vanilla Vibes,0,False,False,False,False,False,False,False
+163954,train,Juliette Has a Gun Vanilla Vibes,0,False,False,False,False,False,False,False
+171990,train,Juliette Has a Gun Vanilla Vibes,1,False,False,False,False,True,False,False
+232023,train,Juliette Has a Gun Vanilla Vibes,0,False,False,False,False,False,False,False
+117130,train,Juliette Has a Gun Vanilla Vibes,3,False,True,False,True,True,False,False
+26712,train,Juliette Has a Gun Vanilla Vibes,1,False,False,False,False,True,False,False
+23533,train,Juliette Has a Gun Vanilla Vibes,0,False,False,False,False,False,False,False
+325698,train,Juliette Has a Gun Vanilla Vibes,2,False,False,False,False,True,False,False
+453889,train,Juliette Has a Gun Vanilla Vibes,2,False,False,False,False,True,False,False
+129604,train,Juliette Has a Gun Vanilla Vibes,1,True,True,True,True,True,False,True
+427665,train,Juliette Has a Gun Vanilla Vibes,0,False,False,False,False,False,False,False
+430694,train,Juliette Has a Gun Vanilla Vibes,1,False,False,False,False,True,False,False
+408883,val_seen,Lattafa Raghba Wood,3,False,False,False,False,True,False,False
+699742,val_unseen,Le Labo e Labo Rose 31,1,False,False,False,False,True,False,False
+444135,val_unseen,Le Labo e Labo Rose 31,0,False,False,False,False,False,False,False
+401132,val_unseen,Le Labo e Labo Rose 31,0,False,False,False,False,False,False,False
+405864,val_seen,Lorenzo Pazzaglia Black Sea,5,False,False,False,False,True,False,False
+79947,val_seen,MFK Maison Francis Kurkdjian Aqua Celestia,0,False,False,False,False,False,False,False
+195156,val_unseen,Mancera Roses Vanille,0,False,False,False,False,False,False,False
+128764,val_seen,Mugler Alien,1,False,False,False,False,True,False,False
+260526,val_seen,Mugler Alien,2,False,False,False,False,True,False,False
+676881,train,Mugler Alien,0,False,False,False,False,False,False,False
+169421,train,Mugler Alien,0,False,False,False,False,False,False,False
+329287,train,Mugler Alien,0,False,False,False,False,False,False,False
+218690,train,Mugler Alien,0,False,False,False,False,False,False,False
+269102,val_seen,Mugler Angel,6,False,False,False,False,True,False,False
+155056,val_seen,Mugler Angel,5,False,False,False,True,True,False,False
+564543,val_seen,Mugler Angel,3,False,False,False,True,True,False,False
+228105,val_seen,Mugler Angel,0,False,False,False,False,False,False,False
+225717,val_seen,Mugler Angel,0,False,False,False,False,False,False,False
+181439,val_seen,Mugler Angel,3,False,False,False,False,True,False,False
+640917,val_seen,Mugler Angel,0,False,False,False,False,False,False,False
+4334,val_seen,Mugler Angel,3,False,False,False,False,True,False,False
+114917,val_seen,Mugler Angel,3,False,False,False,False,True,False,False
+194793,train,Mugler Angel,3,False,False,False,False,True,False,False
+610338,train,Mugler Angel,2,False,False,False,False,True,False,False
+77233,train,Mugler Angel,2,False,False,False,False,True,False,False
+207590,train,Mugler Angel,4,False,False,False,False,True,False,False
+590075,train,Mugler Angel,3,False,False,False,False,True,False,False
+272574,train,Mugler Angel,3,False,False,False,False,True,False,False
+21183,train,Mugler Angel,0,False,False,False,False,False,False,False
+496686,train,Mugler Angel,0,False,False,False,False,False,False,False
+277414,train,Mugler Angel,0,False,False,False,False,False,False,False
+275954,train,Mugler Angel,1,False,False,False,False,True,False,False
+659110,train,Mugler Angel,0,False,False,False,False,False,False,False
+263313,train,Mugler Angel,3,False,False,False,False,True,False,False
+450003,train,Mugler Angel,0,False,False,False,False,False,False,False
+337911,train,Mugler Angel,0,False,False,False,False,False,False,False
+143096,train,Mugler Angel,1,False,False,False,False,True,False,False
+374607,train,Mugler Angel,3,False,False,False,False,True,False,False
+402882,train,Mugler Angel,0,False,False,False,False,False,False,False
+666035,train,Mugler Angel,0,False,False,False,False,False,False,False
+376653,train,Mugler Angel,0,False,False,False,False,False,False,False
+230598,train,Mugler Angel,0,False,False,False,False,False,False,False
+666034,train,Mugler Angel,3,False,False,False,False,True,False,False
+66790,train,Mugler Angel,0,False,False,False,False,False,False,False
+193238,train,Mugler Angel,1,False,False,False,False,True,False,False
+581839,train,Mugler Angel,3,False,False,False,False,True,False,False
+102616,train,Mugler Angel,0,False,False,False,False,False,False,False
+327748,train,Mugler Angel,0,False,False,False,False,False,False,False
+230448,val_seen,Narciso Rodriguez For Her,8,False,False,False,False,True,False,True
+205,val_seen,Narciso Rodriguez For Her,3,False,False,False,True,True,False,False
+758,val_seen,Narciso Rodriguez For Her,9,False,False,False,False,True,False,False
+437354,val_seen,Narciso Rodriguez For Her,11,False,False,False,False,True,False,False
+54116,val_seen,Narciso Rodriguez For Her,5,False,False,False,True,True,False,False
+477016,val_seen,Narciso Rodriguez For Her,8,False,False,False,False,True,False,False
+936,val_seen,Narciso Rodriguez For Her,3,False,False,False,False,True,False,True
+134674,val_seen,Narciso Rodriguez For Her,2,False,False,False,True,True,False,False
+304603,val_seen,Narciso Rodriguez For Her,6,False,False,False,False,True,False,False
+13459,val_seen,Narciso Rodriguez For Her,9,False,False,False,False,True,False,False
+554338,val_seen,Narciso Rodriguez For Her,2,False,False,False,False,True,False,False
+125430,val_seen,Narciso Rodriguez For Her,4,False,False,False,True,True,False,False
+130474,val_seen,Narciso Rodriguez For Her,2,False,False,False,True,True,False,False
+286481,val_seen,Narciso Rodriguez For Her,4,False,False,False,False,True,False,False
+575842,val_seen,Narciso Rodriguez For Her,4,False,False,False,False,True,False,False
+461671,train,Narciso Rodriguez For Her,5,False,False,False,True,True,False,False
+174880,train,Narciso Rodriguez For Her,3,False,False,True,True,True,False,False
+370806,train,Narciso Rodriguez For Her,1,False,False,False,False,True,False,True
+28678,train,Narciso Rodriguez For Her,10,False,False,False,False,True,False,False
+11236,train,Narciso Rodriguez For Her,11,False,False,False,False,True,False,False
+612771,train,Narciso Rodriguez For Her,0,False,False,False,False,False,False,False
+568910,train,Narciso Rodriguez For Her,3,False,False,False,True,True,False,False
+253191,train,Narciso Rodriguez For Her,1,False,False,False,False,True,False,False
+122703,train,Narciso Rodriguez For Her,3,False,False,True,True,True,False,False
+487740,train,Narciso Rodriguez For Her,1,False,False,False,False,True,False,False
+484596,train,Narciso Rodriguez For Her,0,False,False,False,False,False,False,False
+10072,train,Narciso Rodriguez For Her,4,False,False,False,False,True,False,False
+175428,train,Narciso Rodriguez For Her,3,False,False,True,True,True,False,False
+229366,train,Narciso Rodriguez For Her,5,False,False,False,False,True,False,False
+405321,train,Narciso Rodriguez For Her,8,False,False,False,False,True,False,False
+382209,train,Narciso Rodriguez For Her,0,False,False,False,False,False,False,False
+123988,train,Narciso Rodriguez For Her,3,False,False,False,False,True,False,False
+9228,train,Narciso Rodriguez For Her,4,False,False,True,True,True,False,False
+130863,train,Narciso Rodriguez For Her,5,False,False,False,False,True,False,False
+283119,train,Narciso Rodriguez For Her,5,False,False,True,True,True,False,False
+125776,train,Narciso Rodriguez For Her,1,False,False,False,False,True,False,False
+133552,train,Narciso Rodriguez For Her,0,False,False,False,False,False,False,False
+2930,train,Narciso Rodriguez For Her,0,False,False,False,False,False,False,False
+605613,train,Narciso Rodriguez For Her,0,False,False,False,False,False,False,False
+425301,train,Narciso Rodriguez For Her,4,False,False,False,False,True,False,False
+13995,train,Narciso Rodriguez For Her,6,False,False,False,True,True,False,True
+170259,train,Narciso Rodriguez For Her,0,False,False,False,False,False,False,False
+367095,train,Narciso Rodriguez For Her,0,False,False,False,False,False,False,False
+624684,train,Narciso Rodriguez For Her,3,False,False,False,False,True,False,False
+300312,train,Narciso Rodriguez For Her,0,False,False,False,False,False,False,False
+316235,train,Narciso Rodriguez For Her,1,False,False,False,False,True,False,True
+520122,train,Narciso Rodriguez For Her,0,False,False,False,False,False,False,False
+150847,train,Narciso Rodriguez For Her,1,False,False,False,False,True,False,True
+410378,train,Narciso Rodriguez For Her,0,False,False,False,False,False,False,False
+698990,train,Narciso Rodriguez For Her,5,False,False,False,False,True,False,False
+26262,train,Narciso Rodriguez For Her,3,False,False,False,True,True,False,True
+602471,train,Narciso Rodriguez For Her,0,False,False,False,False,False,False,False
+58549,train,Narciso Rodriguez For Her,0,False,False,False,False,False,False,False
+66409,train,Narciso Rodriguez For Her,2,False,False,False,False,True,False,False
+152646,train,Narciso Rodriguez For Her,3,False,False,False,False,True,False,False
+174151,train,Narciso Rodriguez For Her,2,False,False,False,False,True,False,False
+391540,train,Narciso Rodriguez For Her,0,False,False,False,False,False,False,False
+679652,train,Narciso Rodriguez For Her,0,False,False,False,False,False,False,False
+343946,train,Narciso Rodriguez For Her,1,False,False,True,True,True,False,False
+14103,train,Narciso Rodriguez For Her,1,False,False,False,False,True,False,False
+543155,val_seen,Paco Rabanne Pure XS,0,False,False,False,False,False,False,False
+619978,val_seen,Parfums de Marly Delina,0,False,False,False,False,False,False,False
+686188,val_seen,Parfums de Marly Delina,7,False,True,False,True,True,False,True
+239160,val_seen,Parfums de Marly Delina,0,False,False,False,False,False,False,False
+262323,val_seen,Parfums de Marly Delina,2,False,False,True,True,True,False,False
+658198,train,Parfums de Marly Delina,7,False,False,False,False,True,False,False
+293626,train,Parfums de Marly Delina,0,False,False,False,False,False,False,False
+325927,train,Parfums de Marly Delina,0,False,False,False,False,False,False,False
+144275,train,Parfums de Marly Delina,5,False,False,False,False,True,False,False
+189292,train,Parfums de Marly Delina,0,False,False,False,False,False,False,False
+626206,train,Parfums de Marly Delina,3,False,False,False,True,True,False,True
+113331,train,Parfums de Marly Delina,0,False,False,False,False,False,False,False
+177007,train,Parfums de Marly Delina,3,False,False,False,True,True,False,False
+145681,train,Parfums de Marly Delina,0,False,False,False,False,False,False,False
+492692,train,Parfums de Marly Delina,0,False,False,False,False,False,False,False
+413849,val_seen,Prada Candy,3,False,False,False,False,True,False,False
+373437,val_seen,Prada Candy,0,False,False,False,False,False,False,False
+51582,train,Prada Candy,0,False,False,False,False,False,False,False
+551350,train,Prada Candy,2,False,False,False,False,True,False,False
+352457,train,Prada Candy,2,False,False,False,False,True,False,False
+543063,train,Prada Candy,0,False,False,False,False,False,False,False
+151876,train,Prada Candy,0,False,False,False,False,False,False,False
+420998,train,Prada Candy,4,False,False,False,False,True,False,True
+29629,val_unseen,Tom Ford Amber Absolute,0,False,False,False,False,False,False,False
+692980,val_seen,Tom Ford Black Orchid,7,False,False,False,False,True,False,False
+220597,val_seen,Tom Ford Black Orchid,2,False,False,False,False,True,False,False
+436686,val_seen,Tom Ford Black Orchid,1,False,False,False,False,True,False,False
+200063,train,Tom Ford Black Orchid,7,False,False,False,False,True,False,False
+658066,train,Tom Ford Black Orchid,3,False,False,False,False,True,False,False
+290998,train,Tom Ford Black Orchid,1,False,False,False,False,True,False,False
+236545,train,Tom Ford Black Orchid,1,False,False,False,False,True,False,False
+311064,train,Tom Ford Black Orchid,8,False,False,False,False,True,False,False
+452713,train,Tom Ford Black Orchid,1,False,False,False,False,True,False,False
+126220,train,Tom Ford Black Orchid,1,False,False,False,False,True,False,False
+112743,train,Tom Ford Black Orchid,0,False,False,False,False,False,False,False
+327545,train,Tom Ford Black Orchid,0,False,False,False,False,False,False,False
+434235,val_seen,Tom Ford Oud Wood,0,False,False,False,False,False,False,False
+279707,val_seen,Tom Ford Oud Wood,6,False,False,False,False,True,False,False
+12715,val_seen,Tom Ford Oud Wood,3,False,False,False,False,True,False,False
+558873,train,Tom Ford Oud Wood,1,False,False,False,False,True,False,False
+470823,train,Tom Ford Oud Wood,0,False,False,False,False,False,False,False
+295936,train,Tom Ford Oud Wood,0,False,False,False,False,False,False,False
+545819,train,Tom Ford Oud Wood,0,False,False,False,False,False,False,False
+495154,train,Tom Ford Oud Wood,0,False,False,False,False,False,False,False
+119772,train,Tom Ford Oud Wood,1,False,False,False,False,True,False,False
+311822,train,Tom Ford Oud Wood,0,False,False,False,False,False,False,False
+534355,train,Tom Ford Oud Wood,0,False,False,False,False,False,False,False
+261920,val_seen,Tom Ford Tobacco Vanille,1,False,False,False,False,True,False,False
+521713,val_seen,Tom Ford Tobacco Vanille,1,False,False,False,False,True,False,False
+346107,val_seen,Tom Ford Tobacco Vanille,0,False,False,False,False,False,False,False
+679062,train,Tom Ford Tobacco Vanille,0,False,False,False,False,False,False,False
+380966,train,Tom Ford Tobacco Vanille,0,False,False,False,False,False,False,False
+173422,train,Tom Ford Tobacco Vanille,0,False,False,False,False,False,False,False
+10502,train,Tom Ford Tobacco Vanille,0,False,False,False,False,False,False,False
+123599,train,Tom Ford Tobacco Vanille,1,False,False,False,False,True,False,False
+268234,train,Tom Ford Tobacco Vanille,0,False,False,False,False,False,False,False
+116066,train,Tom Ford Tobacco Vanille,4,False,False,False,False,True,False,False
+279712,train,Tom Ford Tobacco Vanille,1,False,False,True,True,True,False,False
+628658,train,Tom Ford Tobacco Vanille,0,False,False,False,False,False,False,False
+638301,train,Tom Ford Tobacco Vanille,0,False,False,False,False,False,False,False
+491732,val_seen,Versace Dylan Blue,0,False,False,False,False,False,False,False
+610877,train,Versace Dylan Blue,1,False,False,False,False,True,False,False
+445739,val_unseen,Viktor & Rolf Bonbon,0,False,False,False,False,False,False,False
+5396,val_unseen,Viktor & Rolf Bonbon,3,False,False,False,False,True,False,False
+142801,val_seen,Viktor & Rolf Flowerbomb,0,False,False,False,False,False,False,False
+380729,train,Viktor & Rolf Flowerbomb,1,False,False,False,False,True,False,False
+298191,train,Viktor & Rolf Flowerbomb,0,False,False,False,False,False,False,False

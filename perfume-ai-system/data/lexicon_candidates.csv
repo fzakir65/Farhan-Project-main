@@ -1,3 +1,241 @@
 Phrase,Suggested_Terms,Accord_Terms,Seen,Example,Origin,Apply,Decided_By
 vibe,,,1,beachy salty ocean vibe,unmatched word,,
 hate,,,1,"clean laundry and a bit of musk, I hate patchouli",unmatched word,,
+this,clean:1;fresh:0.8;sweet:0.6,,2172,This fragrance is neither offensive nor enticing,"review corpus pattern (clean x94, fresh x93, sweet x46)",,
+pleasant,musky:1;clean:0.8;fresh:0.6,,875,It has a pleasant scent,"review corpus pattern (musky x67, clean x65, fresh x49)",,
+they,clean:1;musky:0.8;fresh:0.6,,622,They smell good,"review corpus pattern (clean x49, musky x48, fresh x32)",,
+doesn't,clean:1;fresh:0.8;sweet:0.6,,589,"So I definitely think it was worth the trouble stuffing all my hair in there and letting it sit plus it doesn't smell the greatest, nor does","review corpus pattern (clean x51, fresh x40, sweet x28)",,
+lovely,musky:1;clean:0.8;soapy:0.6,,391,Such a lovely scent but not overpowering,"review corpus pattern (musky x22, clean x20, soapy x13)",,
+weird,clean:1;fresh:0.8;musky:0.6,,301,The two creams have a weird smell but seem to get the job done,"review corpus pattern (clean x16, fresh x15, musky x5)",,
+that,clean:1;soapy:0.8;fruity:0.6,,297,"Also, even though there are three wonderful fragrances (lavender & aloe, bergamot & ylang ylang, and jasmine & patchouli) that smell great a","review corpus pattern (clean x26, soapy x19, fruity x14)",,
+does,clean:1;fresh:0.8;musky:0.6,,254,but it does smell really good and the scent isn't too overwhelming or powerful,"review corpus pattern (clean x20, fresh x18, musky x13)",,
+beautiful,clean:1;amber:0.8;musky:0.6,,234,BEautiful scent and texture,"review corpus pattern (clean x8, amber x7, musky x6)",,
+horrible,fresh:1;clean:0.8;milky:0.6,,222,Horrible smell,"review corpus pattern (fresh x8, clean x8, milky x3)",,
+perfume,clean:1;musky:0.8;soapy:0.6,,210,"The scent is strong, like cucumber with an underlying perfume smell","review corpus pattern (clean x15, musky x8, soapy x7)",,
+mild,clean:1;musky:0.8;fresh:0.6,,201,The cream itself has a pleasant but mild fragrance,"review corpus pattern (clean x31, musky x20, fresh x15)",,
+could,clean:1;soapy:0.8;fresh:0.6,,190,<br />The main ingredient of this product is pine resin and I could smell the pine in the beans as soon as they began melting,"review corpus pattern (clean x14, soapy x11, fresh x9)",,
+still,clean:1;fresh:0.8;soapy:0.6,,173,I actually went and grabbed my Leap bar soap to make sure I could still smell that,"review corpus pattern (clean x32, fresh x29, soapy x15)",,
+slight,clean:1;musky:0.8;fresh:0.6,,158,It does have a slight scent but it is not overpowering at all,"review corpus pattern (clean x6, musky x5, fresh x5)",,
+lasting,clean:1;fresh:0.8;musky:0.6,,152,I was disappointed that the Egyptian Musk that I remember loving was tin and weak in lasting scent,"review corpus pattern (clean x9, fresh x6, musky x5)",,
+didn't,clean:1;fresh:0.8;sweet:0.6,,143,"Worked fine, just didn't smell any better than plain Epsom salt","review corpus pattern (clean x12, fresh x11, sweet x8)",,
+don't,clean:1;fresh:0.8;citrus:0.6,,134,"It doesn't bother me that I might sweat underarm a little, as long as I don't smell","review corpus pattern (clean x15, fresh x13, citrus x7)",,
+these,fresh:1;clean:0.8;musky:0.6,,133,"These smell really nice, are well foaming and silky smooth","review corpus pattern (fresh x13, clean x11, musky x7)",,
+unpleasant,fresh:1;clean:0.8;fruity:0.6,,127,"Unpleasant scent, dye lasts a while","review corpus pattern (fresh x7, clean x7, fruity x2)",,
+really,clean:1;fresh:0.8;aromatic:0.6,,109,I opened it up and it looks like whipped mashed potatoes which is a little odd and didn't really smell like anything (it's unscented which i,"review corpus pattern (clean x11, fresh x10, aromatic x6)",,
+like,clean:1;fresh:0.8;woody:0.6,,106,"I happen to like fragrance, so I do like this linen spray","review corpus pattern (clean x9, fresh x9, woody x6)",,
+would,citrus:1;clean:0.8;fresh:0.6,,106,"I thought this would smell better but after using it a few days, a bad chemical odor began to annoy me","review corpus pattern (citrus x8, clean x7, fresh x7)",,
+awesome,fresh:1;clean:0.8;woody:0.6,,100,The awesome scent is a big favorite of mine,"review corpus pattern (fresh x7, clean x6, woody x3)",,
+overpowering,clean:1;fresh:0.8;soapy:0.6,,96,Holds hair well in all weather not sticky and does not have overpowering scent,"review corpus pattern (clean x9, fresh x9, soapy x4)",,
+faint,musky:1;clean:0.8;woody:0.6,,95,"smell I mean, there was a faint scent, but I would have liked a little more","review corpus pattern (musky x9, clean x7, woody x6)",,
+funny,musky:1;clean:0.8;fresh:0.6,,95,"Also, it had a funny smell","review corpus pattern (musky x3, clean x2, fresh x1)",,
+strange,clean:1;fresh:0.8;powdery:0.6,,93,"<br />4/5<br />Bath pillow: Very comfortable, had a bit of a strange smell at first I wiped it down with a cleansing wipe","review corpus pattern (clean x6, fresh x3, powdery x2)",,
+even,clean:1;soapy:0.8;musky:0.6,,78,<br /><br />This contains a sandalwood and jasmine oil blend that’s so light I don’t even smell it when I apply the product to my face,"review corpus pattern (clean x5, soapy x4, musky x4)",,
+will,clean:1;fresh:0.8;aromatic:0.6,,71,You will note that most all have a very GOOD rating of 1 or 2,"review corpus pattern (clean x7, fresh x7, aromatic x4)",,
+it's,musky:1;sweet:0.8;fresh:0.6,,70,It's fragrance-free in case you have allergies or just prefer the unscented option,"review corpus pattern (musky x9, sweet x4, fresh x4)",,
+cologne,clean:1;fresh:0.8;iris:0.6,,67,Nice quality but the cologne scent is not my favorite,"review corpus pattern (clean x5, fresh x5, iris x3)",,
+heavenly,clean:1;soapy:0.8;citrus:0.6,,57,"<br /><br />First when you use it, you will notice this heavenly smell of coconut","review corpus pattern (clean x4, soapy x3, citrus x2)",,
+overwhelming,clean:1;fruity:0.8;fresh:0.6,,54,"it is a cloying and overwhelming smell (not scent), rather than a complex ""caramel"", and this one is no different","review corpus pattern (clean x9, fruity x4, fresh x3)",,
+fantastic,iris:1;lavender:0.8;aromatic:0.6,,48,It has a fantastic fragrance of lavender that I am a huge fan of,"review corpus pattern (iris x2, lavender x1, aromatic x1)",,
+can't,citrus:1;fruity:0.8;aromatic:0.6,,45,Even when I can't smell it people still comment on how good I smell,"review corpus pattern (citrus x4, fruity x3, aromatic x3)",,
+also,fruity:1;sweet:0.8;floral:0.6,,44,They also smell like moth balls,"review corpus pattern (fruity x4, sweet x4, floral x3)",,
+delightful,clean:1;musky:0.8;soapy:0.6,,38,But it does feel nice on the skin and has a delightful fragrance,"review corpus pattern (clean x3, musky x2, soapy x2)",,
+should,aromatic:1;herbal:0.8;clean:0.6,,38,For the higher cost it really should smell great too,"review corpus pattern (aromatic x5, herbal x3, clean x3)",,
+couldn't,soapy:1;clean:0.8;fresh:0.6,,37,<br /><br />My one complaint is the toxic smell when you first open them up however they arrived while I was home on my lunch break so I lef,"review corpus pattern (soapy x5, clean x5, fresh x4)",,
+just,clean:1;fresh:0.8;soapy:0.6,,35,"Oftentimes men’s products have a tendency to smell overpoweringly chemically, but these just smell fresh and clean, while still imparting a ","review corpus pattern (clean x4, fresh x3, soapy x3)",,
+them,fresh:1;clean:0.8;minty:0.6,,34,All of them smell great and it's an excellent lotion,"review corpus pattern (fresh x4, clean x2, minty x1)",,
+nasty,fresh:1;clean:0.8;milky:0.6,,33,Easy to use - no nasty smell and works,"review corpus pattern (fresh x3, clean x3, milky x1)",,
+have,musky:1;clean:0.8;milky:0.6,,33,They don't have smell at all,"review corpus pattern (musky x2, clean x2, milky x1)",,
+their,clean:1;fresh:0.8;minty:0.6,,28,<br /><br />Other than that the smell is a little overbearing (and I typically like their scented lines),"review corpus pattern (clean x2, fresh x1, minty x1)",,
+incredible,musky:1;clean:0.8;soapy:0.6,,27,"Next you will notice the incredible fragrance it has that I absolutely love, especially for facial products fragrances are very important to","review corpus pattern (musky x3, clean x3, soapy x2)",,
+pretty,iris:1;amber:0.8;oud:0.6,,27,This dries fairly quickly on your hands it’s a nice gel consistency however I’m not so  fond of the smell it’s not bad it’s just not a prett,"review corpus pattern (iris x1, amber x1, oud x1)",,
+your,fresh:1;clean:0.8;sweet:0.6,,27,"Works perfect in my bedroom, uses essential oil so pick your scent it fills your room up perfectly","review corpus pattern (fresh x2, clean x2, sweet x2)",,
+disgusting,amber:1;sweet:0.8;oud:0.6,,26,It also has a very disgusting smell that I am still trying to get out,"review corpus pattern (amber x2, sweet x2, oud x2)",,
+fabulous,aromatic:1;herbal:0.8;soapy:0.6,,25,Fabulous scent my absolute favorite body wash,"review corpus pattern (aromatic x2, herbal x2, soapy x1)",,
+love,soapy:1;clean:0.8;musky:0.6,,20,Love fragrance but doesn't last long,"review corpus pattern (soapy x1, clean x1, musky x1)",,
+gorgeous,,,20,Gorgeous scent,review corpus pattern (no context terms),,
+fragrance,warm spicy:1;woody:0.8;earthy:0.6,,19,I really like the smell of this fragrance,"review corpus pattern (warm spicy x1, woody x1, earthy x1)",,
+intense,woody:1;musky:0.8;fruity:0.6,,19,"The oil isn't long lasting and just doesn't have that intense smell of Patchouli or Nag Champa or Orange Oil or whatever, that the original ","review corpus pattern (woody x2, musky x2, fruity x1)",,
+scent,vanilla:1;fruity:0.8;citrus:0.6,,16,Perfect for a spritz of freshness and just a little hint of scent,"review corpus pattern (vanilla x3, fruity x2, citrus x2)",,
+chemical,,metallic:1;inky:0.6,547,"I need oxygen with my Bipap, but every time I breathe in at night I get a nose full of some nasty chemical smell",review corpus pattern (no distinctive context term),Yes,ai (review-corpus evidence 2026-09-23)
+natural,warm:1;lactonic:0.8;milky:0.6,,174,"There is a very light, natural scent - it kind of reminds me of a mild olive oil","review corpus pattern (warm lift 3.32 on 3, lactonic lift 3.15 on 8, milky lift 3.09 on 8)",No,"ai — a claim about the product, not a note"
+plastic,iris:1,metallic:1;inky:0.6,148,But mostly it has a strong chemical/plastic smell and taste that has not faded at all with use,review corpus pattern (iris lift 4.42 on 3),Yes,ai (review-corpus evidence 2026-09-23)
+refreshing,aquatic:1;clean:0.8,,138,Cucumber and aloe gives you such a refreshing smell,"review corpus pattern (aquatic lift 3.09 on 3, clean lift 2.7 on 31)",,
+alcohol,,alcohol:1;fresh:0.5,108,"While you can detect the smell of the alcohol, it's not too strong or overpowering like some can be",review corpus pattern (no distinctive context term),Yes,ai (review-corpus evidence 2026-09-23)
+signature,woody:1,,82,/ 85 ml - Inspired By Pink Friday By Nicki Minaj Perfume]]<br /><br />I have been trying several different parfums and body sprays to help m,review corpus pattern (woody lift 2.2 on 4),No,ai — not a smell — 'signature scent' means a personal favourite
+unique,sandalwood:1;camphor:0.8;patchouli:0.6,,79,"It works very well, has an enjoyable, unique scent, is packaged well, and since so little is needed per use, the value is pretty good","review corpus pattern (sandalwood lift 15.05 on 4, camphor lift 10.95 on 3, patchouli lift 7.03 on 3)",No,"ai — a judgement, not a smell"
+particular,green:1;woody:0.8;powdery:0.6,,76,"I liked this particular scent much more than others that I've tried, from both Michel Design and other brands","review corpus pattern (green lift 4.55 on 3, woody lift 2.38 on 4, powdery lift 2.07 on 4)",No,ai — a determiner
+funky,,animalic:1;earthy:0.6,74,No funky smell either,review corpus pattern (no distinctive context term),Yes,ai (review-corpus evidence 2026-09-23)
+powder,powdery:1;musky:0.8,powdery:1,66,I chose the Baby Powder Scent which brings back memories of babies and childhood,"review corpus pattern (powdery lift 22.68 on 38, musky lift 16.07 on 41)",Yes,ai (review-corpus evidence 2026-09-23)
+delicious,,,65,The base adds sandalwood and vanilla for a woodsy delicious scent,review corpus pattern (no distinctive context term),No,"ai — a judgement (gourmand is already covered by 'edible', 'foodie')"
+stronger,aromatic:1;herbal:0.8,,55,"I am used to their super scented bar soaps, and I was expecting a stronger scent to come through","review corpus pattern (aromatic lift 4.57 on 4, herbal lift 3.82 on 3)",No,ai — a strength word — already handled by the strength phrases
+with,musky:1;fresh:0.8;clean:0.6,,55,Small with Fragrance,"review corpus pattern (musky lift 2.35 on 5, fresh lift 2.28 on 7, clean lift 2.19 on 10)",No,ai — function word
+lotion,,,55,"I watched a YouTuber (name in headline), and she recommended these and I fell in love I love applying these when I get out of the shower, an",review corpus pattern (no distinctive context term),No,ai — a product category
+barely,herbal:1;aromatic:0.8,,50,Then it softens and you can barely smell the scent,"review corpus pattern (herbal lift 4.2 on 3, aromatic lift 3.77 on 3)",No,ai — a strength word
+lingering,lactonic:1;milky:0.8,,50,I feel clean after in that I notice less residue or lingering scent than most body washes leave,"review corpus pattern (lactonic lift 5.49 on 4, milky lift 5.37 on 4)",No,"ai — longevity, not a smell"
+harsh,fresh:1;musky:0.8,,50,"Easy install, light weight, and no harsh smell","review corpus pattern (fresh lift 2.15 on 6, musky lift 2.07 on 4)",No,ai — a judgement
+minty,,minty:1,49,It feels great on my skin and the minty smell to it really wakes me up in the mornings,review corpus pattern (no distinctive context term),Yes,ai (review-corpus evidence 2026-09-23)
+cucumber,lactonic:1;milky:0.8;fresh:0.6,green:1;aquatic:0.8;fresh:0.6,48,"It has a nice, light, refreshing  cucumber scent","review corpus pattern (lactonic lift 5.72 on 4, milky lift 5.6 on 4, fresh lift 2.99 on 8)",Yes,ai (review-corpus evidence 2026-09-23)
+added,musky:1;soapy:0.8,,48,"It keeps my hair looking nice, there's no added fragrance, and it's non-aerosol, which is better for the environment","review corpus pattern (musky lift 2.7 on 5, soapy lift 2.04 on 4)",No,ai — not a smell
+tree,tea:1;coniferous:0.8;aromatic:0.6,,47,"While I don’t readily detect a heady scent of lavender oil, I will say that an earthy tea tree scent is freshly omnipresent","review corpus pattern (tea lift 86.94 on 35, coniferous lift 16.05 on 3, aromatic lift 8.03 on 6)",No,ai — fragment of 'tea tree' / 'pine tree'
+burning,,smoky:1,46,<br />I don't like candle makes fuse and burning smell afterward,review corpus pattern (no distinctive context term),Yes,ai (review-corpus evidence 2026-09-23)
+relaxing,lavender:1;herbal:0.8;aromatic:0.6,,45,"<br /><br />Except for that, this scrub has a pleasant, relaxing scent","review corpus pattern (lavender lift 10.06 on 3, herbal lift 4.67 on 3, aromatic lift 4.19 on 3)",No,"ai — a mood, ambiguous across lavender / clean / herbal"
+chemicals,,,44,Not real happy had to put in the garage to air it out smells like chemicals,review corpus pattern (no distinctive context term),No,ai — duplicate of 'chemical'
+neutral,,,44,It’s a neutral scent that seems good for anyone,review corpus pattern (no distinctive context term),No,ai — absence of smell
+woodsy,fresh spicy:1;woody:0.8;aromatic:0.6,woody:1,42,"All together, you get a spicy, warm, woodsy scent with a distinctive freshness to it","review corpus pattern (fresh spicy lift 21.89 on 3, woody lift 6.46 on 6, aromatic lift 4.49 on 3)",Yes,ai (review-corpus evidence 2026-09-23)
+heaven,,,41,Heaven SCENT,review corpus pattern (no distinctive context term),No,ai — a judgement
+zero,,,41,"Second one I was sent as a replacement from Brooklyn Botany is a white-pink and smells blah: ZERO scent of watermelon, not sweet or fruity a",review corpus pattern (no distinctive context term),No,ai — a quantity
+doesnt,leather:1;incense:0.8;smoky:0.6,,40,I used the safari perfume a few years ago and it doesnt smell at all the same,"review corpus pattern (leather lift 24.52 on 3, incense lift 18.86 on 3, smoky lift 17.51 on 3)",No,ai — function word
+initial,,,36,Initial smell was what I hoped for,review corpus pattern (no distinctive context term),No,"ai — position in the evaporation, not a smell"
+yummy,musky:1,,36,Yummy scent - this one is definitely a unisex fragrance,review corpus pattern (musky lift 5.03 on 7),,
+soaps,soapy:1;clean:0.8,,36,"The soaps smell amazing, but a little pricey for everyday use","review corpus pattern (soapy lift 24.52 on 36, clean lift 12.03 on 36)",,
+artificial,,,35,"It's very lightweight, no artificial scent, and soaks right in",review corpus pattern (no distinctive context term),,
+pleasing,musky:1,,35,has a pleasing scent and is a pleasure to use,review corpus pattern (musky lift 3.7 on 5),,
+weak,,,35,"Weak fragrance, does not last long at all and a waste of money",review corpus pattern (no distinctive context term),,
+products,,,34,The scent is nice but more fruity-rose like you might find in products scented for children,review corpus pattern (no distinctive context term),,
+fishy,,,34,Yucky fishy smell dissipates quickly,review corpus pattern (no distinctive context term),,
+glue,,,34,<br /><br />The  case seemed to be the source of a pungent melted plastic/glue smell,review corpus pattern (no distinctive context term),,
+lemongrass,,,33,"I do not like scent and the first time i used this, I thought the lemongrass scent was going to be too much for me (aka lemon furniture poli",review corpus pattern (no distinctive context term),,
+spice,woody:1;balsamic:0.8;vanilla:0.6,,32,"It has a nice sweet scent, with a hint of spice","review corpus pattern (woody lift 9.89 on 7, balsamic lift 6.57 on 3, vanilla lift 6.01 on 3)",,
+rubber,,,32,There is also no rubber smell as reported by other reviewers,review corpus pattern (no distinctive context term),,
+rancid,soapy:1,,31,"<br /><br />I found the oils to be fresh, no sign of a rancid smell",review corpus pattern (soapy lift 2.37 on 3),,
+anything,musky:1,,30,I opened it up and it looks like whipped mashed potatoes which is a little odd and didn't really smell like anything (it's unscented which i,review corpus pattern (musky lift 4.31 on 5),,
+mildew,,,30,I basically have to throw these I'm the dryer after every use so they don't get a mildew smell,review corpus pattern (no distinctive context term),,
+smelling,citrus:1;sweet:0.8,,29,Best Rose smelling fragrance,"review corpus pattern (citrus lift 3.72 on 3, sweet lift 2.94 on 3)",,
+powering,,,28,No over powering scent,review corpus pattern (no distinctive context term),,
+room,,,28,Makes the whole room smell good,review corpus pattern (no distinctive context term),,
+foul,,,28,"Despite other reviews, this product has no foul scent",review corpus pattern (no distinctive context term),,
+sour,,,28,It drys super fast so I’m not too worried about the sour smell u get on some I’ve tried,review corpus pattern (no distinctive context term),,
+synthetic,,,27,"As well as Alpha-Isomethyl Ionone, another synthetic fragrance ingredient",review corpus pattern (no distinctive context term),,
+bathroom,soapy:1;clean:0.8,clean:1;soapy:0.7,27,"Nice smell, makes the whole bathroom smell like licorice","review corpus pattern (soapy lift 6.36 on 7, clean lift 3.12 on 7)",Yes,ai (review-corpus evidence 2026-09-23)
+baby,powdery:1;sweet:0.8;fresh:0.6,,26,"Sounds crazy, but it smells like a baby’s head, when it needs to be washed","review corpus pattern (powdery lift 4.54 on 3, sweet lift 3.28 on 3, fresh lift 2.76 on 4)",,
+minimal,,,25,This eye cream has minimal smell to it,review corpus pattern (no distinctive context term),,
+both,musky:1,,25,Lavender and peppermint both smell great,review corpus pattern (musky lift 3.11 on 3),,
+flower,powdery:1;sweet:0.8;fresh:0.6,,25,"<br />They are pretty close to being without any scent, but I did detect a faint fragrance reminiscent of cornflower, which does not smell l","review corpus pattern (powdery lift 6.3 on 4, sweet lift 3.41 on 3, fresh lift 2.87 on 4)",,
+distinct,,,25,"It has a distinct smell, albeit not bad",review corpus pattern (no distinctive context term),,
+without,clean:1;fresh:0.8,,24,"It was almost completely without scent, it may have had some very mild scent but I couldn't describe what it smelled like","review corpus pattern (clean lift 2.51 on 5, fresh lift 2.24 on 3)",,
+stinky,,,24,Not a stinky smell but by no means not a designer perfume,review corpus pattern (no distinctive context term),,
+factory,,,24,People said the product smells like factory,review corpus pattern (no distinctive context term),,
+deodorant,fresh:1,,24,Not so keen on the smell of deodorant,review corpus pattern (fresh lift 2.24 on 3),,
+fish,,,24,Smells like Fish,review corpus pattern (no distinctive context term),,
+interesting,,,23,This one has a very interesting smell,review corpus pattern (no distinctive context term),,
+offensive,,,23,The lotion is such a strong offensive scent that I cannot wear it,review corpus pattern (no distinctive context term),,
+side,fresh:1,,23,On a side note: I could do without the tint personally but it doesn't sway my opinion on how well it works,review corpus pattern (fresh lift 2.34 on 3),,
+didnt,,,23,"Really good chality, it didnt smell and stayed on my face",review corpus pattern (no distinctive context term),,
+medicine,,camphor:1;herbal:0.6,23,It’s like an alcohol type medicine smell,review corpus pattern (no distinctive context term),Yes,ai (review-corpus evidence 2026-09-23)
+musty,,,23,Make sure that you hang the glove up after using it otherwise it will get a musty smell that is hard to get rid of,review corpus pattern (no distinctive context term),,
+lightly,,,22,This one is a medium weight oil that initially smells very lightly scented,review corpus pattern (no distinctive context term),,
+garlic,,,22,"They are really both nice at covering up any garlic smell and I dont think it causes any garlic smell to come off of me,",review corpus pattern (no distinctive context term),,
+cinnamon,,,22,Not a super strong cinnamon smell but works still for a diffuser,review corpus pattern (no distinctive context term),,
+decent,,,22,"not too watery, doesn't leave any residue, decent smell and great quantity for the price",review corpus pattern (no distinctive context term),,
+nothing,,,22,The mini smelled like delicious coconut and this smells like nothing,review corpus pattern (no distinctive context term),,
+sweat,fresh:1,animalic:1,22,"It has a fresh, sweat scent and leaves your face feeling clean and softer than most cleansers without sulfates and ingredients that should n",review corpus pattern (fresh lift 2.44 on 3),Yes,ai (review-corpus evidence 2026-09-23)
+lavendar,,,22,"This is an excellent product, which I highly recommend, if you love lavendar scent, as I do and if you want a deodorant that will last all d",review corpus pattern (no distinctive context term),,
+intoxicating,,,21,Love the intoxicating smell of this perfume,review corpus pattern (no distinctive context term),,
+enough,,,21,"<br /><br />And honestly, this is completely middle-of-the-road: It foams about average, it has a pleasant enough scent that doesn't linger,",review corpus pattern (no distinctive context term),,
+soothing,,,20,Warm Soothing Scent,review corpus pattern (no distinctive context term),,
+please,,,20,Please note that this castor oil is for EXTERNAL use only and not to be taken internally,review corpus pattern (no distinctive context term),,
+right,,,20,Not the right fragrance at all,review corpus pattern (no distinctive context term),,
+paint,,metallic:1;inky:0.7,20,The brushes smell like paint,review corpus pattern (no distinctive context term),Yes,ai (review-corpus evidence 2026-09-23)
+perfumey,,,20,Doesn't leave a perfumey smell,review corpus pattern (no distinctive context term),,
+butter,cacao:1;chocolate:0.8;sweet:0.6,,20,"Not crazy about the shea butter smell, but once I added essential oils of my choice, I can't really smell the shea butter","review corpus pattern (cacao lift 98.07 on 3, chocolate lift 49.03 on 3, sweet lift 4.26 on 3)",,
+vinegar,,animalic:0.7;metallic:0.6,19,"I love the natural ingredients, and the scent, happily, didn’t smell like vinegar",review corpus pattern (no distinctive context term),Yes,ai (review-corpus evidence 2026-09-23)
+scents,,,19,It's super difficult to explain how scents smell but all I can say is it really does smell fantastic and it does stay on for a pretty good w,review corpus pattern (no distinctive context term),,
+dont,,,19,I dont smell,review corpus pattern (no distinctive context term),,
+fragrant,musky:1,,19,Con's<br />It doesn't have a fragrant smell<br />It doesn't bother your skin<br />Your skin is left smooth<br />Skin feels awake<br />Waitin,review corpus pattern (musky lift 4.09 on 3),,
+about,,,19,"Those artisan soaps often come in a variety of delightful fragrances, but I don't care that much about fragrance",review corpus pattern (no distinctive context term),,
+lighter,,,19,"I would like a lighter fragrance, if possible",review corpus pattern (no distinctive context term),,
+wrong,,,19,"However, the company sent wrong scent",review corpus pattern (no distinctive context term),,
+always,fresh:1;clean:0.8,,18,My goal is to always smell amazing and I'm glad I added this to my arsenal of smell goods,"review corpus pattern (fresh lift 3.98 on 4, clean lift 2.67 on 4)",,
+house,clean:1,,18,"In my opinion, it smells just like the flower, makes my house smell wonderful, and it didn't take much so this bottle should last a long tim",review corpus pattern (clean lift 2.01 on 3),,
+exotic,,,18,Exotic scent,review corpus pattern (no distinctive context term),,
+fruit,fruity:1;sweet:0.8,,17,It has a wonderful light fruit smell and smears easily over the face,"review corpus pattern (fruity lift 7.23 on 4, sweet lift 5.02 on 3)",,
+lady,,,17,It's smells like a powdery old lady scent,review corpus pattern (no distinctive context term),,
+actual,,,17,The actual scent is great and smells very like a real lemon,review corpus pattern (no distinctive context term),,
+distinctive,,,16,The peony has a distinctive smell to it but unfortunately it doesn't last long enough after taking a shower,review corpus pattern (no distinctive context term),,
+lite,fresh:1,,16,"I really like the lite scent, I have only used this for just a few days and am excited about how well this is going to work",review corpus pattern (fresh lift 3.36 on 3),,
+calming,,,16,"<br />But I'm sensitive to the lavender, which sucks because I love the calming scent",review corpus pattern (no distinctive context term),,
+water,rose:1;floral:0.8;fresh:0.6,,16,) It has a very light golden rose water scent to it that is enjoyable,"review corpus pattern (rose lift 26.88 on 5, floral lift 12.07 on 5, fresh lift 5.6 on 5)",,
+grandma,,powdery:1;aldehydic:0.8;floral:0.6,16,Don't Smell Like Your Grandma,review corpus pattern (no distinctive context term),Yes,ai (review-corpus evidence 2026-09-23)
+oil,,,16,I really love the smell of this oil,review corpus pattern (no distinctive context term),,
+burnt,,,16,If you use to much you may get a slight burnt smell,review corpus pattern (no distinctive context term),,
+monomer,,,16,"This stuff smells good, but whether it actually reduces the harshness of the monomer smell or not",review corpus pattern (no distinctive context term),,
+spray,,,15,It has a standard hair spray smell,review corpus pattern (no distinctive context term),,
+overall,sweet:1,,15,"The blend of royal jelly, botanical, and floral extracts gives this Korean beauty essence a nice ingredient profile, and the overall scent i",review corpus pattern (sweet lift 5.69 on 3),,
+similar,,,15,I burn incense with a similar scent,review corpus pattern (no distinctive context term),,
+discernible,,,15,"<br />No discernible fragrance, either",review corpus pattern (no distinctive context term),,
+bombs,,,15,Bath bombs smell alright definitely cheap artificial smell,review corpus pattern (no distinctive context term),,
+specific,,,15,I borrowed my husbands Citrus and herbal musk and that specific scent type did break me out slightly,review corpus pattern (no distinctive context term),,
+gross,,,15,And it helps with the gross smell of the plugs,review corpus pattern (no distinctive context term),,
+unusual,,,15,"It has an unusual scent, but it seems to go away quickly",review corpus pattern (no distinctive context term),,
+hardly,,,15,"However I really wanted the scent of fresh, tart lemon to linger on my skin for a while after my shower and you could hardly smell it at all",review corpus pattern (no distinctive context term),,
+urine,,animalic:1,15,We had a real problem with dog urine smell right off the patio,review corpus pattern (no distinctive context term),Yes,ai (review-corpus evidence 2026-09-23)
+bug spray,,camphor:1;herbal:0.6,15,Smells like bug spray,review corpus pattern (no distinctive context term),Yes,ai (review-corpus evidence 2026-09-23)
+attractive,,,14,Not an attractive scent at all,review corpus pattern (no distinctive context term),,
+onion,,,14,"After using this product consistently for 3 months, the sweating decreased and the onion smell has disappeared",review corpus pattern (no distinctive context term),,
+sugar,balsamic:1;vanilla:0.8;powdery:0.6,,14,This has a subtle burnt brown sugar scent with a strong vanilla overtone,"review corpus pattern (balsamic lift 20.01 on 4, vanilla lift 18.31 on 4, powdery lift 11.25 on 4)",,
+chlorine,clean:1;fresh:0.8;musky:0.6,,14,No More Chlorine Smell,"review corpus pattern (clean lift 6.88 on 8, fresh lift 6.4 on 5, musky lift 5.54 on 3)",,
+cannot,,,14,"Even though you cannot smell anything, this Vitamin E formula is loaded with added fragrance (CITRONELLOL, COUMARIN, GERANIOL, LIMONENE & LI",review corpus pattern (no distinctive context term),,
+hands,clean:1,,14,"I LOVE taking showers with this soap for many reasons: the smell is the best soap I've ever smelled and has my fave scent, I love how the so",review corpus pattern (clean lift 2.58 on 3),,
+greatest,,,13,Perhaps the greatest scent of all time,review corpus pattern (no distinctive context term),,
+never,,,13,I don't seem to sweat as much and I never smell,review corpus pattern (no distinctive context term),,
+truly,,,13,This product works really well and is truly fragrance free,review corpus pattern (no distinctive context term),,
+beard,,,13,Made my beard smell like mint,review corpus pattern (no distinctive context term),,
+ammonia,,,13,Ammonia smell,review corpus pattern (no distinctive context term),,
+mold,,,13,Very Sensitive to Mold Smell,review corpus pattern (no distinctive context term),,
+base,,,13,"It has an abstract quality and has become widely used as a base note, in more complex perfumes",review corpus pattern (no distinctive context term),,
+discontinued,,,13,Love that I could get a discontinued scent here,review corpus pattern (no distinctive context term),,
+okay,,,13,has an okay fragrance and dies an okay job at cleaning hair,review corpus pattern (no distinctive context term),,
+authentic,,,13,Really nice authentic scent,review corpus pattern (no distinctive context term),,
+regular,fresh:1;clean:0.8,,12,"regular scent,&#34","review corpus pattern (fresh lift 4.48 on 3, clean lift 3.01 on 3)",,
+toxic,,,12,<br /><br />My one complaint is the toxic smell when you first open them up however they arrived while I was home on my lunch break so I lef,review corpus pattern (no distinctive context term),,
+sulfur,,,12,)  Some users complained of a strong sulfur smell and I think the smell goes away after you rinse it off,review corpus pattern (no distinctive context term),,
+it too,,,12,I enjoy the smell of it too,review corpus pattern (no distinctive context term),,
+loud,,,12,"I was looking for something for my TEEN DAUGHTER, that has the same obsession of smelling delicious, I bought this product originally to tes",review corpus pattern (no distinctive context term),,
+mellow,,,12,Nice and mellow scent,review corpus pattern (no distinctive context term),,
+oily,,,12,Even soaking in boiling water didn't rid of the oily smell,review corpus pattern (no distinctive context term),,
+poop,clean:1,,12,Twisted Lime smells like poop,review corpus pattern (clean lift 3.01 on 3),,
+everyday,,,12,<br />This is my everyday scent,review corpus pattern (no distinctive context term),,
+oils,,,12,I have worn patchouli oil since then and never did my oils smell this strong or musky,review corpus pattern (no distinctive context term),,
+pungent,,,12,there is a pungent smell that takes over the room,review corpus pattern (no distinctive context term),,
+longer,,,12,"A little CAN last well, too, even if you become accustomed and no longer smell it so strongly on you",review corpus pattern (no distinctive context term),,
+overbearing,clean:1,,12,It's not an overbearing scent,review corpus pattern (clean lift 3.01 on 3),,
+rubbing alcohol,,alcohol:1;camphor:0.6,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+powdery scent,,powdery:1,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+smoke,,smoky:1,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+bubble gum,,sweet:1;fruity:0.9,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+bubblegum,,sweet:1;fruity:0.9,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+baby powder,,powdery:1;musky:0.5,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+play doh,,powdery:1;sweet:0.5,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+cough syrup,,camphor:1;sweet:0.6,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+band aid,,smoky:1;leather:0.6,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+bandaid,,smoky:1;leather:0.6,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+cleaning product,,clean:1;soapy:0.9,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+cleaner,,clean:1;soapy:0.9,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+detergent,,clean:1;soapy:0.9,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+dish soap,,soapy:1;clean:0.9,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+hand soap,,soapy:1;clean:0.9,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+old lady,,powdery:1;aldehydic:0.8;floral:0.6,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+grandmother,,powdery:1;aldehydic:0.8;floral:0.6,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+cat pee,,animalic:1,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+bleach,,clean:1;metallic:0.7,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+gasoline,,smoky:1;metallic:0.7,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+pine sol,,coniferous:1;clean:0.8,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+play dough,,powdery:1;sweet:0.5,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+sunscreen,,coconut:1;tropical:0.7;powdery:0.4,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+suntan lotion,,coconut:1;tropical:0.8,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+insect repellent,,camphor:1;herbal:0.6,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+cinnamon candy,,cinnamon:1;sweet:0.8,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+cough drops,,camphor:1;minty:0.8,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+rose water,,rose:1;fresh:0.5,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+baby wipes,,clean:1;powdery:0.7;soapy:0.6,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+fabric softener,,clean:1;soapy:0.8;musky:0.6,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+dryer sheet,,clean:1;soapy:0.8;musky:0.6,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+dryer sheets,,clean:1;soapy:0.8;musky:0.6,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+air freshener,,clean:1;fresh:0.7,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+hairspray,,aldehydic:1;powdery:0.6,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+nail polish,,metallic:1;inky:0.7,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+nail polish remover,,metallic:1;inky:0.7,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+furniture polish,,woody:1;clean:0.6,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+wood polish,,woody:1;clean:0.6,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+moth balls,,camphor:1;powdery:0.6,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)
+mothballs,,camphor:1;powdery:0.6,0,(not surfaced this run; common review phrase),curated from the review corpus,Yes,ai (review-corpus evidence 2026-09-23)

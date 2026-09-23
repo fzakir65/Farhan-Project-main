@@ -577,3 +577,56 @@ strong,,,,,4,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
 subtle,,,,,2,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
 very strong,,,,,5,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
 whisper,,,,,1,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+chemical,metallic:1;inky:0.6,,,,,input log,"input log — seen 547x, e.g. 'I need oxygen with my Bipap, but every time I breathe in at night I get a nose full of some nasty chemical smell'",ai (review-corpus evidence 2026-09-23),Yes
+plastic,metallic:1;inky:0.6,,,,,input log,"input log — seen 148x, e.g. 'But mostly it has a strong chemical/plastic smell and taste that has not faded at all with use'",ai (review-corpus evidence 2026-09-23),Yes
+alcohol,alcohol:1;fresh:0.5,,,,,input log,"input log — seen 108x, e.g. 'While you can detect the smell of the alcohol, it's not too strong or overpowering like some can be'",ai (review-corpus evidence 2026-09-23),Yes
+funky,animalic:1;earthy:0.6,,,,,input log,"input log — seen 74x, e.g. 'No funky smell either'",ai (review-corpus evidence 2026-09-23),Yes
+powder,powdery:1,,,,,input log,"input log — seen 66x, e.g. 'I chose the Baby Powder Scent which brings back memories of babies and childhood'",ai (review-corpus evidence 2026-09-23),Yes
+minty,minty:1,,,,,input log,"input log — seen 49x, e.g. 'It feels great on my skin and the minty smell to it really wakes me up in the mornings'",ai (review-corpus evidence 2026-09-23),Yes
+cucumber,green:1;aquatic:0.8;fresh:0.6,,,,,input log,"input log — seen 48x, e.g. 'It has a nice, light, refreshing  cucumber scent'",ai (review-corpus evidence 2026-09-23),Yes
+burning,smoky:1,,,,,input log,"input log — seen 46x, e.g. '<br />I don't like candle makes fuse and burning smell afterward'",ai (review-corpus evidence 2026-09-23),Yes
+woodsy,woody:1,,,,,input log,"input log — seen 42x, e.g. 'All together, you get a spicy, warm, woodsy scent with a distinctive freshness to it'",ai (review-corpus evidence 2026-09-23),Yes
+bathroom,clean:1;soapy:0.7,,,,,input log,"input log — seen 27x, e.g. 'Nice smell, makes the whole bathroom smell like licorice'",ai (review-corpus evidence 2026-09-23),Yes
+medicine,camphor:1;herbal:0.6,,,,,input log,"input log — seen 23x, e.g. 'It’s like an alcohol type medicine smell'",ai (review-corpus evidence 2026-09-23),Yes
+sweat,animalic:1,,,,,input log,"input log — seen 22x, e.g. 'It has a fresh, sweat scent and leaves your face feeling clean and softer than most cleansers without sulfates and ingredients that should n'",ai (review-corpus evidence 2026-09-23),Yes
+paint,metallic:1;inky:0.7,,,,,input log,"input log — seen 20x, e.g. 'The brushes smell like paint'",ai (review-corpus evidence 2026-09-23),Yes
+vinegar,animalic:0.7;metallic:0.6,,,,,input log,"input log — seen 19x, e.g. 'I love the natural ingredients, and the scent, happily, didn’t smell like vinegar'",ai (review-corpus evidence 2026-09-23),Yes
+grandma,powdery:1;aldehydic:0.8;floral:0.6,,,,,input log,"input log — seen 16x, e.g. 'Don't Smell Like Your Grandma'",ai (review-corpus evidence 2026-09-23),Yes
+urine,animalic:1,,,,,input log,"input log — seen 15x, e.g. 'We had a real problem with dog urine smell right off the patio'",ai (review-corpus evidence 2026-09-23),Yes
+bug spray,camphor:1;herbal:0.6,,,,,input log,"input log — seen 15x, e.g. 'Smells like bug spray'",ai (review-corpus evidence 2026-09-23),Yes
+rubbing alcohol,alcohol:1;camphor:0.6,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+powdery scent,powdery:1,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+bubble gum,sweet:1;fruity:0.9,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+bubblegum,sweet:1;fruity:0.9,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+play doh,powdery:1;sweet:0.5,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+cough syrup,camphor:1;sweet:0.6,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+band aid,smoky:1;leather:0.6,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+bandaid,smoky:1;leather:0.6,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+cleaning product,clean:1;soapy:0.9,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+cleaner,clean:1;soapy:0.9,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+detergent,clean:1;soapy:0.9,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+dish soap,soapy:1;clean:0.9,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+hand soap,soapy:1;clean:0.9,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+old lady,powdery:1;aldehydic:0.8;floral:0.6,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+grandmother,powdery:1;aldehydic:0.8;floral:0.6,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+cat pee,animalic:1,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+bleach,clean:1;metallic:0.7,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+gasoline,smoky:1;metallic:0.7,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+pine sol,coniferous:1;clean:0.8,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+play dough,powdery:1;sweet:0.5,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+insect repellent,camphor:1;herbal:0.6,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+cinnamon candy,cinnamon:1;sweet:0.8,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+cough drops,camphor:1;minty:0.8,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+rose water,rose:1;fresh:0.5,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+baby wipes,clean:1;powdery:0.7;soapy:0.6,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+fabric softener,clean:1;soapy:0.8;musky:0.6,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+dryer sheet,clean:1;soapy:0.8;musky:0.6,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+dryer sheets,clean:1;soapy:0.8;musky:0.6,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+air freshener,clean:1;fresh:0.7,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+hairspray,aldehydic:1;powdery:0.6,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+nail polish,metallic:1;inky:0.7,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+nail polish remover,metallic:1;inky:0.7,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+furniture polish,woody:1;clean:0.6,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+wood polish,woody:1;clean:0.6,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+moth balls,camphor:1;powdery:0.6,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes
+mothballs,camphor:1;powdery:0.6,,,,,input log,"input log — seen 0x, e.g. '(not surfaced this run; common review phrase)'",ai (review-corpus evidence 2026-09-23),Yes

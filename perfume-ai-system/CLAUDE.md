@@ -28,8 +28,14 @@ figures), IFRA / Annex III kept as the ceilings everywhere else. `book_review.md
 **Zone A now has its own datasheets** (2026-09-23): `data/user_lexicon.csv` (578 phrases: Curtis Ch 3 odour vocabulary,
 Ohloff's nine families, everyday language) and `data/questionnaire.csv` (8 questions, 66 options). Free text runs
 keywords → lexicon → (only if those find nothing, and only with a key) the LLM; every call is logged to `data/logs/`
-for the review loop that grows the lexicon and will train the model. **Next: the ML datasheets** —
-`../Farhan-Project-main/training/NEXT_STEPS_ML.md` (real-review corpus retrain), then Zone C.
+for the review loop that grows the lexicon and will train the model.
+
+**The ML datasheets were audited 2026-09-23 and the retrain is suspended** (`../Farhan-Project-main/training/NEXT_STEPS_ML.md`):
+the 5,078 'labelled' reviews are labelled by the product page, and the text supports that label only **5.4 %** of the time —
+both the trained checkpoint and the untrained lexicon score ~0 on it while "always answer citrus" scores 0.335. What the
+65k reviews *are* good for is language: `preprocessing/mine_review_vocabulary.py` harvested "smells like ___" slots and
+53 phrases were promoted into `user_lexicon.csv` (578 → 631). **Next: N≈200 real wishes labelled by a perfumer** — the
+only dataset that matches what the app is asked to do — then a model, then Zone C.
 `python app.py "fresh woody for summer"` runs match → formula → safety → rebalance → **product formulation**
 (ethanol / water / additives / allergen label); `python app.py --invent "citrus, mossy, rose" --family Chypre` **invents**
 a new composition the Carles way; `streamlit run app.py` is the UI (Buttons / Free text / Invent). All on `main`.
@@ -74,9 +80,8 @@ What is still open, in order:
    (`data.pubchem_mismatches`) — replace from `reference/pubchem_properties.csv` when a human confirms the identities.
 3. The 13 accord notes with no material (author them or drop the accords). 4. EU allergen list expansion
    (Reg 2023/1545) in `allergens_uk.csv`. 5. Zone C (stock solutions, pumps) — only after 1.
-6. ML: `../Farhan-Project-main/preprocessing/build_real_reviews.py` builds a REAL customer-language corpus (Amazon
-   Reviews 2023, research licence) weak-labelled by catalogue perfume mentions; `training/evaluate_on_real_reviews.py`
-   measures the real-world gap of the trained checkpoint; retraining with those rows (plan F.5) is the next ML step.
+6. ML: the corpus audit (2026-09-23) showed the weak labels are only 5.4 % supported by the text, so the retrain is
+   suspended; the blocker is N≈200 real wishes labelled by a perfumer. See `../Farhan-Project-main/training/NEXT_STEPS_ML.md`.
 
 How to check where things stand: `python load_data.py`, `python app.py --report`, the three reconcile/verify scripts
 (`data/reconcile_notes.py`, `data/verify_cas.py --offline`, `data/reconcile_accords.py`), `data/enrich_pubchem.py --offline`,
