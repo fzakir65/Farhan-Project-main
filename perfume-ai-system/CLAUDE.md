@@ -19,13 +19,17 @@ This file is the primary guidance for Claude Code. Read it fully before writing 
 
 ## ⏩ RESUME HERE (read this first in a new session)
 
-**State on 2026-09-22 (evening):** everything requested is built and tested — `python -m pytest -q` → 222 passing (~2-4 min).
+**State on 2026-09-23:** everything requested is built and tested — `python -m pytest -q` → 235 passing (~2-4 min).
 **Zone B is closed.** The book review was decided on the user's instruction ("decide what the world and scholars agree on"):
 `data/reference/book_review_decisions.csv` + `data/apply_book_decisions_2026-09-22.py` record every decision — 14 layer classes
 changed (Carles > Curtis+physics > workbook), 23 kept against Curtis with the reason, 5 provisional caps added for oils whose toxic
 constituents no fine-fragrance standard limits (Dalmatian sage, hyssop, peppermint, palo santo, Spanish sage — Tisserand & Young
 figures), IFRA / Annex III kept as the ceilings everywhere else. `book_review.md` regenerates with 0 open items.
-**Next: Zone A / the ML datasheets** — `../Farhan-Project-main/training/NEXT_STEPS_ML.md` (real-review corpus retrain), then Zone C.
+**Zone A now has its own datasheets** (2026-09-23): `data/user_lexicon.csv` (578 phrases: Curtis Ch 3 odour vocabulary,
+Ohloff's nine families, everyday language) and `data/questionnaire.csv` (8 questions, 66 options). Free text runs
+keywords → lexicon → (only if those find nothing, and only with a key) the LLM; every call is logged to `data/logs/`
+for the review loop that grows the lexicon and will train the model. **Next: the ML datasheets** —
+`../Farhan-Project-main/training/NEXT_STEPS_ML.md` (real-review corpus retrain), then Zone C.
 `python app.py "fresh woody for summer"` runs match → formula → safety → rebalance → **product formulation**
 (ethanol / water / additives / allergen label); `python app.py --invent "citrus, mossy, rose" --family Chypre` **invents**
 a new composition the Carles way; `streamlit run app.py` is the UI (Buttons / Free text / Invent). All on `main`.
@@ -196,6 +200,11 @@ perfume-ai-system/
 │   ├── note_field_overrides.csv     # coarse relabels, e.g. Odor_Strength potency class (Very strong/Strong/Low), AI  [rev4]
 │   ├── product_bases.csv            # bottle auxiliaries: ethanol, water, DPG, BHT, UV absorber… with legal basis  [rev4]
 │   ├── allergens_uk.csv             # the 26 declarable allergens (UK/EU), leave-on threshold 0.001 %              [rev4]
+│   ├── user_lexicon.csv             # HUMAN INPUT datasheet: everyday phrase -> catalogue terms + weights          [rev8]
+│   ├── questionnaire.csv            # HUMAN INPUT datasheet: questions / options -> catalogue terms + weights      [rev8]
+│   ├── build_user_lexicon.py        # regenerates user_lexicon.csv (Curtis Ch 3, Ohloff families, everyday rows)   [rev8]
+│   ├── build_questionnaire.py       # regenerates questionnaire.csv                                                [rev8]
+│   ├── review_input_log.py          # logs -> lexicon_candidates.csv; --promote writes approved rows into the lexicon [rev8]
 │   ├── reference/ifra_51st_standards_overview.csv   # official IFRA table (source of truth)
 │   ├── reference/carles_*.csv       # Carles' volatility table, worked chypre, family signatures, 35 base accords [rev2]
 │   ├── reference/rsc_physical_properties.csv        # RSC Table 11.1                                          [rev2]
@@ -212,9 +221,12 @@ perfume-ai-system/
 │   ├── verify_cas.py                # Step 2 tool: audits bad CAS against IFRA table / project tables / PubChem [rev2]
 │   ├── reconcile_accords.py         # accord-term bridge tool, same tiers                                        [rev3]
 │   └── DATA_PROVENANCE.md
-├── zone_a_llm/                      # Tasks 5-6 — DONE 2026-09-18 [rev3]
+├── zone_a_llm/                      # Tasks 5-6 — DONE 2026-09-18 [rev3]; human-input datasheets added 2026-09-23 [rev8]
 │   ├── llm_client.py                # the ONLY module that talks to an LLM (anthropic SDK, optional; FakeClient for tests)
-│   ├── input_handler.py             # buttons / free text -> Preferences, clamped to the catalogue vocabulary
+│   ├── input_handler.py             # buttons / free text -> Preferences: keywords -> lexicon -> LLM fallback, all clamped
+│   ├── lexicon.py                   # data/user_lexicon.csv applied to text: everyday words, negation, strength    [rev8]
+│   ├── questionnaire.py             # data/questionnaire.csv: picks accumulate into the same Preferences           [rev8]
+│   ├── input_log.py                 # every interpretation -> data/logs/input_log.csv (the review / training queue)[rev8]
 │   ├── matcher.py                   # deterministic explainable ranking; LLM may re-rank the shortlist only (grounded)
 │   └── describer.py                 # template prose; LLM prose rejected if it contains numbers / safety words
 ├── zone_b_chemistry/
@@ -512,6 +524,25 @@ fixative (perfumery_chat_transcript.pdf, RSC Ch 9).
   Northern Ireland) expanded the list to ~80 substances via Reg (EU) 2023/1545 (new products from 31 Jul 2026 —
   verify). Keep the list in a CSV with a `Jurisdiction` column like `regulatory_uk.csv`; never hard-code "26". **[rev]**
 
+## HUMAN INPUT (Zone A) **[rev8]**
+
+Three paths, all producing the same `Preferences` (accords with weights, avoid, family, gender, season, strength):
+1. **Questionnaire** (`data/questionnaire.csv`, `zone_a_llm/questionnaire.py`) — 8 questions, 66 options, each option
+   carrying `term:weight` pairs; picks accumulate, the explicit strength question overrides what an occasion implies,
+   Q5 sets the avoid list. No text, no API, fully deterministic; `python app.py --quiz` or the Streamlit mode.
+2. **Buttons** — unchanged: the catalogue's own vocabulary.
+3. **Free text** — `interpret()` runs the catalogue keyword pass, then the **lexicon** (`data/user_lexicon.csv`, 578 rows:
+   Curtis 1994 Ch 3 odour vocabulary p.66-91, Ohloff 2e family lists p.609-616, and everyday language rows marked
+   `Decided_By=ai`), which handles negation ('no florals' → avoid) and strength qualifiers ('not too strong' → 2).
+   The LLM is called only when those two find no accord at all (`llm="fallback"`, the default) or on `llm="always"`,
+   and its terms enter at weight 0.5 — below anything the customer typed. With no API key nothing changes except that
+   unknown sentences return empty rather than guessed (Rule 9).
+
+Every interpretation and every questionnaire is appended to `data/logs/` (gitignored). `python data/review_input_log.py`
+turns unmatched words and LLM additions into `data/lexicon_candidates.csv`; a human sets `Apply=Yes` and `--promote`
+writes them into the lexicon. That log is also the labelled corpus the future model trains on — the ML path grows out of
+the hybrid rather than being invented separately.
+
 ## LLM RULES (Zone A only)
 - LLM is used ONLY for: input interpretation, perfume matching, description generation
 - LLM must NEVER determine quantities, safety limits, IFRA values, regulatory status, or reactions
@@ -557,7 +588,8 @@ fixative (perfumery_chat_transcript.pdf, RSC Ch 9).
   `constituents.csv` since 2026-09-19 (`CONSTITUENT_BANNED_AS_SUCH` warns when a banned-as-ingredient molecule arrives as natural content).
 - **Task 4 — DONE (2026-09-18)** — `zone_b_chemistry/optimizer.py` + `pipeline.py`.
 - **Accord bridge — DONE (2026-09-18)** — `data/reconcile_accords.py` → `accord_name_aliases.csv`; `pipeline.perfume_to_accords`.
-- **Task 5 — DONE (2026-09-18)** — `zone_a_llm/input_handler.py` + `matcher.py` (+ `llm_client.py`); button path needs no API.
+- **Task 5 — DONE (2026-09-18; human-input datasheets 2026-09-23)** — `zone_a_llm/input_handler.py` + `matcher.py`
+  (+ `llm_client.py`, `lexicon.py`, `questionnaire.py`, `input_log.py`); button, questionnaire and lexicon paths need no API.
 - **Task 6 — DONE (2026-09-18)** — `zone_a_llm/describer.py`.
 - **Task 7 — DONE (2026-09-18)** — `app.py` (Streamlit UI + terminal CLI).
 
@@ -565,7 +597,7 @@ After each task: show the result and wait for confirmation before proceeding.
 
 ## CURRENT STATUS
 
-See **⏩ RESUME HERE** at the top: everything is built and tested (222 tests); the data blockers of September are closed
+See **⏩ RESUME HERE** at the top: everything is built and tested (235 tests); the data blockers of September are closed
 (constituents from Tisserand & Young, accords re-authored, decision CSVs worked, PubChem check run). What remains needs a
 human or a supplier: CoA values for `constituents.csv`, sign-off of the `Decided_By=ai` rows, the 13 material-less accord
 notes, the 53 PubChem MW/logP disagreements, the EU allergen list, Zone C, and the ML retrain (`../Farhan-Project-main/

@@ -4,9 +4,12 @@
     streamlit run app.py                    # the UI
     python app.py "fresh woody for summer"  # the same flow in the terminal (no Streamlit needed)
     python app.py --invent "woody, amber" --family Fougere   # invent a new composition instead of matching one
+    python app.py --quiz                    # the questionnaire in the terminal (interactive)
+    python app.py --quiz "Q1=b;Q4=i,r,y;Q6=c"   # the questionnaire with the answers given
     python app.py --report                  # the data report (Task 1)
 
-The LLM is optional: with no ANTHROPIC_API_KEY the button path and keyword interpretation still work (Rule 9).
+The LLM is optional: with no ANTHROPIC_API_KEY (see .env.example) the button path, the questionnaire and the
+keyword + lexicon interpretation still work (Rule 9); the LLM only fills gaps the lexicon cannot.
 """
 from __future__ import annotations
 
@@ -19,6 +22,7 @@ from zone_a_llm.describer import describe
 from zone_a_llm.input_handler import Preferences, interpret, vocabulary
 from zone_a_llm.llm_client import get_client
 from zone_a_llm.matcher import match
+from zone_a_llm.questionnaire import answer, load_questionnaire, parse_answers
 from zone_b_chemistry.invention import invent
 from zone_b_chemistry.pipeline import perfume_to_accords, run_zone_b_for_perfume
 from zone_b_chemistry.product_formulation import formulate_product
@@ -37,12 +41,17 @@ def formula_table(out) -> pd.DataFrame:
 # terminal flow
 # ----------------------------------------------------------------------------
 
-def run_cli(text: str) -> int:
+def run_cli(text: str, prefs: Preferences | None = None) -> int:
     data = load_all()
     client = get_client()
-    print(f"LLM: {'available' if client else 'not configured — keyword + deterministic path'}")
-    prefs = interpret(text, data, client=client)
-    print(f"\npreferences: {prefs}")
+    print(f"LLM: {'available' if client else 'not configured — keyword + lexicon path (see .env.example)'}")
+    if prefs is None:
+        prefs = interpret(text, data, client=client)
+    print(f"\npreferences: accords={prefs.accords} avoid={prefs.avoid} family={prefs.family} gender={prefs.gender} season={prefs.season} strength={prefs.strength} [{prefs.source}]")
+    for line in prefs.trace[:12]:
+        print(f"   {line}")
+    for n in prefs.notes:
+        print(f"   note: {n}")
     matches = match(prefs, data, top_k=5, client=client)
     if not matches:
         print("no match"); return 1
@@ -101,7 +110,7 @@ def run_streamlit() -> None:
 
     with st.sidebar:
         st.caption(f"LLM: {'connected' if client else 'not configured (button path only)'}")
-        mode = st.radio("Input", ["Buttons", "Free text", "Invent"])
+        mode = st.radio("Input", ["Questionnaire", "Buttons", "Free text", "Invent"])
         product = st.selectbox("Product type (dilution)", ["Neat (formula = product)"] + list(data.product_types["Product_Type"]))
         if product == "Neat (formula = product)":
             fraction = 1.0
@@ -129,7 +138,25 @@ def run_streamlit() -> None:
                 for fl in prod.stability:
                     (st.warning if fl.severity == "WARNING" else st.info)(str(fl))
         return
-    if mode == "Buttons":
+    if mode == "Questionnaire":
+        qs = load_questionnaire()
+        picks: dict[str, list[str]] = {}
+        for q in qs:
+            labels = [f"{o.id}) {o.text}" for o in q.options]
+            if q.type == "single":
+                choice = st.radio(q.text, ["(skip)"] + labels, index=0, key=q.id, horizontal=len(labels) <= 5)
+                if choice != "(skip)":
+                    picks[q.id] = [choice.split(")")[0]]
+            else:
+                chosen = st.multiselect(f"{q.text} (up to {q.max_picks})", labels, key=q.id, max_selections=q.max_picks)
+                if chosen:
+                    picks[q.id] = [c.split(")")[0] for c in chosen]
+        prefs = answer(picks, qs)
+        with st.expander("What your answers mean"):
+            for line in prefs.trace:
+                st.write(line)
+            st.json({"accords": prefs.weights, "avoid": prefs.avoid, "strength": prefs.strength, "gender": prefs.gender, "season": prefs.season})
+    elif mode == "Buttons":
         c1, c2 = st.columns(2)
         accords = c1.multiselect("Accords you like", vocab["accords"])
         avoid = c2.multiselect("Accords to avoid", vocab["accords"])
@@ -142,7 +169,12 @@ def run_streamlit() -> None:
     else:
         text = st.text_area("Describe what you want", "something fresh and woody for summer evenings, not too sweet")
         prefs = interpret(text, data, client=client)
-        st.json({k: v for k, v in prefs.__dict__.items() if v})
+        st.json({"accords": prefs.weights, "avoid": prefs.avoid, "family": prefs.family, "gender": prefs.gender, "season": prefs.season, "strength": prefs.strength, "source": prefs.source})
+        with st.expander("How the words were read"):
+            for line in prefs.trace:
+                st.write(line)
+            for n in prefs.notes:
+                st.caption(n)
 
     if prefs.is_empty():
         st.info("Pick at least one preference."); return
@@ -198,6 +230,24 @@ def run_streamlit() -> None:
                     (st.warning if fl.severity == "WARNING" else st.info)(str(fl))
 
 
+def run_quiz_cli(spec: str | None) -> int:
+    """The questionnaire in the terminal: interactive when no answers are given."""
+    qs = load_questionnaire()
+    if spec:
+        picks = parse_answers(spec)
+    else:
+        picks = {}
+        for q in qs:
+            print(f"\n{q.id}. {q.text}" + (f"  (up to {q.max_picks}, comma-separated)" if q.type == "multi" else ""))
+            for o in q.options:
+                print(f"   {o.id}) {o.text}")
+            raw = input("   > ").strip().lower()
+            if raw:
+                picks[q.id] = [x.strip() for x in raw.split(",") if x.strip()]
+    prefs = answer(picks, qs)
+    return run_cli("", prefs=prefs)
+
+
 def _under_streamlit() -> bool:
     try:
         from streamlit.runtime.scriptrunner import get_script_run_ctx
@@ -214,6 +264,8 @@ if __name__ == "__main__":
         fam = args[args.index("--family") + 1] if "--family" in args else None
         terms = [t.strip() for t in " ".join(a for a in args if a not in ("--family", fam)).split(",") if t.strip()]
         sys.exit(run_invent_cli(terms, fam))
+    elif len(sys.argv) > 1 and sys.argv[1] == "--quiz":
+        sys.exit(run_quiz_cli(" ".join(sys.argv[2:]) or None))
     elif len(sys.argv) > 1 and sys.argv[1] == "--report":
         data = load_all()
         print(report(data))

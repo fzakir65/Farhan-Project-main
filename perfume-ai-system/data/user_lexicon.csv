@@ -1,0 +1,579 @@
+Phrase,Accord_Terms,Family,Gender,Season,Strength,Kind,Source,Decided_By,Apply
+after the rain,earthy:1;damp:0.8;green:0.7;ozonic:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+agarwood,oud:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+airy,ozonic:1;fresh:0.8;clean:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+aldehydes,aldehydic:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+almond,almond:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+almonds,almond:1;nutty:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+amber,amber:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+ambery,amber:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+animalic,animalic:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+aniseed,anis:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+apple,fruity:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+aquatic,aquatic:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+aromatic,aromatic:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+autumn,woody:0.9;warm spicy:0.7;earthy:0.5,,,Fall,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+baby powder,powdery:1;musky:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+baked,gourmand:1;sweet:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+bakery,gourmand:1;sweet:0.9;vanilla:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+balsam,balsamic:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+balsamic,balsamic:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+banana,tropical:1;fruity:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+beach,aquatic:1;salty:0.8;coconut:0.5;tropical:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+beachy,aquatic:1;salty:0.8;coconut:0.5;tropical:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+berries,fruity:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+berry,fruity:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+blossom,floral:1;white floral:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+bonfire,smoky:1;woody:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+booze,boozy:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+boozy,boozy:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+bouquet,floral:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+bourbon,boozy:1;bourbon:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+breezy,ozonic:1;fresh:0.8;aquatic:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+bride,white floral:1;floral:0.9,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+butterscotch,caramel:1;sweet:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cake,gourmand:1;sweet:0.9;vanilla:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+campfire,smoky:1;woody:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+camphor,camphor:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+candy,sweet:1;fruity:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+candyfloss,sweet:1;caramel:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+caramel,caramel:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cashmere,musky:1;powdery:0.6;warm:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cedar,woody:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+chai,warm spicy:1;tea:0.8;cardamom:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cherry,almond:0.8;fruity:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cherry blossom,floral:1;powdery:0.5;almond:0.4,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+chocolate,chocolate:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+christmas tree,coniferous:1;resinous:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+church,incense:1;resinous:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+chypre,chypre:1;mossy:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cigar,tobacco:1;woody:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cigarettes,tobacco:1;smoky:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cinnamon roll,cinnamon:1;sweet:0.8;gourmand:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+citrus,citrus:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+citrusy,citrus:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+classic,chypre:0.8;aldehydic:0.7;floral:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+clean,clean:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+clean laundry,clean:1;soapy:0.8;musky:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+clove,warm spicy:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+club,sweet:1;amber:0.8;oud:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cocoa,chocolate:1;cacao:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+coconut,coconut:1;tropical:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+coffee,coffee:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cognac,boozy:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+comforting,warm:1;vanilla:0.7;musky:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+coniferous,coniferous:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cookie,gourmand:1;sweet:0.9;vanilla:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cookies,gourmand:1;sweet:0.9;vanilla:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cool,fresh:1;minty:0.5;aquatic:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cosmetic,powdery:1;iris:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cosy,warm:1;amber:0.8;vanilla:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cotton,clean:1;soapy:0.6;powdery:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cotton candy,sweet:1;caramel:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cozy,warm:1;amber:0.8;vanilla:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cream,milky:1;lactonic:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+creamy,milky:1;lactonic:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+crisp,fresh:1;green:0.6;citrus:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+curry,warm spicy:1;spicy:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+custard,vanilla:1;milky:0.8;sweet:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+cut grass,grassy:1;green:0.9,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+dark,smoky:0.8;oud:0.7;leather:0.7;incense:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+date night,sensual:1;amber:0.8;sweet:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+dessert,gourmand:1;sweet:0.9,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+dirt,earthy:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+earthy,earthy:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+edible,gourmand:1;sweet:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+elegant,iris:0.8;aldehydic:0.7;floral:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+energetic,citrus:1;fresh:0.9,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+espresso,coffee:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+evening,amber:0.8;warm spicy:0.6;sweet:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+expensive,oud:0.8;amber:0.7;iris:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+fall,woody:0.9;warm spicy:0.7;earthy:0.5,,,Fall,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+feminine,floral:1;sweet:0.6;powdery:0.5,,Women,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+fennel,anis:1;herbal:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+fir,coniferous:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+fireplace,smoky:1;woody:0.8;warm:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+floral,floral:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+flowers,floral:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+flowery,floral:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+foodie,gourmand:1;sweet:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+forest,coniferous:1;green:0.8;woody:0.7;mossy:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+fougere,aromatic:1;lavender:0.8;mossy:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+fougère,aromatic:1;lavender:0.8;mossy:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+freesia,floral:1;fresh:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+fresh linen,clean:1;soapy:0.7;musky:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+fresh sheets,clean:1;soapy:0.7;musky:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+freshly cut grass,grassy:1;green:0.9,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+fruity,fruity:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+garden,floral:1;green:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+gin,boozy:0.9;coniferous:0.7;citrus:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+gingerbread,warm spicy:1;cinnamon:0.8;sweet:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+girly,sweet:1;fruity:0.8;floral:0.7,,Women,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+gothic,incense:1;smoky:0.8;leather:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+gourmand,gourmand:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+grapefruit,citrus:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+grass,grassy:1;green:0.9,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+green,green:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+green apple,fruity:1;green:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+green tea,tea:1;green:0.7;fresh:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+gym,fresh:1;aquatic:0.8;citrus:0.7;clean:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+hazelnut,nutty:1;gourmand:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+herbal,herbal:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+herbs,herbal:1;aromatic:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+herby,herbal:1;aromatic:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+hippie,patchouli:1;earthy:0.7;incense:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+holiday,tropical:0.8;coconut:0.6;citrus:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+honeyed,honey:1;honeyed:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+hot chocolate,chocolate:1;milky:0.6;sweet:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+ice cream,milky:1;sweet:0.8;vanilla:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+icy,minty:1;fresh:0.8;aquatic:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+incense,incense:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+ink,inky:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+iris,iris:1;powdery:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+jam,fruity:1;sweet:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+jasmine,jasmine:1;white floral:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+juicy,fruity:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+just showered,clean:1;soapy:0.8;fresh:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+lactonic,lactonic:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+latte,coffee:1;milky:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+laundry,clean:1;soapy:0.8;musky:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+lawn,grassy:1;green:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+leather,leather:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+leather jacket,leather:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+lemonade,citrus:1;sweet:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+lemony,citrus:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+library,woody:0.9;powdery:0.6;inky:0.6;leather:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+licorice,anis:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+lily of the valley,floral:1;green:0.6;fresh:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+linen,clean:1;soapy:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+lipstick,powdery:1;iris:0.7;violet:0.6;rose:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+liquor,boozy:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+liquorice,anis:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+luxurious,oud:0.8;amber:0.7;iris:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+magnolia,white floral:1;citrus:0.4,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+makeup,powdery:1;iris:0.6;violet:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+mango,tropical:1;fruity:0.9,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+manly,woody:1;aromatic:0.8;fresh spicy:0.6,,Men,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+marine,marine:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+marzipan,almond:1;sweet:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+masculine,woody:1;aromatic:0.8;fresh spicy:0.6,,Men,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+meadow,green:1;grassy:0.8;floral:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+medicinal,camphor:1;herbal:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+melon,fruity:1;aquatic:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+menthol,minty:1;camphor:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+milk,milky:1;lactonic:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+milky,milky:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+mineral,mineral:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+mint,minty:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+mocha,coffee:1;chocolate:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+mossy,mossy:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+mud,earthy:1;damp:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+muguet,floral:1;green:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+musk,musky:1;musk:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+musky,musky:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+mysterious,incense:0.9;oud:0.7;smoky:0.6;amber:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+new car,leather:1;metallic:0.4,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+night,amber:0.8;oud:0.7;sweet:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+nuts,nutty:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+nutty,nutty:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+ocean,aquatic:1;marine:0.9;salty:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+office,clean:1;fresh:0.7;soft spicy:0.4,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+old books,powdery:0.8;woody:0.7;inky:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+old-fashioned,aldehydic:0.9;powdery:0.8;floral:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+opulent,amber:0.9;oud:0.7;white floral:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+orange blossom,white floral:1;citrus:0.4,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+oriental,oriental:1;amber:0.8;warm spicy:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+orris,iris:1;powdery:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+paper,inky:1;powdery:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+party,sweet:1;fruity:0.7;amber:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+passion fruit,tropical:1;fruity:0.9,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+pastry,gourmand:1;sweet:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+pencil shavings,woody:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+peony,rose:0.9;floral:0.9;fresh:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+pepper,spicy:1;fresh spicy:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+peppery,spicy:1;fresh spicy:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+petals,floral:1;rose:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+petrichor,earthy:1;damp:0.9;mineral:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+pina colada,coconut:1;tropical:0.9;rum:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+pine forest,coniferous:1;green:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+pipe tobacco,tobacco:1;sweet:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+plum,fruity:1;sweet:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+praline,nutty:1;caramel:0.8;sweet:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+professional,clean:1;woody:0.6;fresh:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+pudding,gourmand:1;sweet:0.8;milky:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+rain,ozonic:1;green:0.6;damp:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+resin,resinous:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+rich,amber:0.9;warm spicy:0.6;resinous:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+romantic,rose:1;floral:0.8;sweet:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+roses,rose:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+rum,boozy:1;rum:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+saddle,leather:1;animalic:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+sage,herbal:1;aromatic:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+salty,salty:1;marine:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+sawdust,woody:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+sea,aquatic:1;marine:0.9;salty:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+sea breeze,marine:1;aquatic:0.9;fresh:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+seaside,marine:1;salty:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+seawater,marine:1;salty:0.9,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+second skin,musky:1;clean:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+seductive,sensual:1;musky:0.8;amber:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+sensual,sensual:1;musky:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+sexy,sensual:1;musky:0.8;amber:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+shampoo,soapy:1;clean:0.8;fruity:0.4,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+shower,clean:1;soapy:0.8;fresh:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+skin,musky:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+skin scent,musky:1;clean:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+skin-like,musky:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+smoke,smoky:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+smokey,smoky:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+smoky,smoky:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+smoky incense,incense:1;smoky:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+soap,soapy:1;clean:0.9,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+soapy,soapy:1;clean:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+soil,earthy:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+spice market,warm spicy:1;spicy:0.9,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+spice rack,warm spicy:1;spicy:0.9,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+spiced,spicy:1;warm spicy:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+spices,spicy:1;warm spicy:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+spicy,spicy:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+sporty,fresh:1;aquatic:0.8;citrus:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+spring,green:0.9;floral:0.9;fresh:0.7,,,Spring,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+suede,suede:1;leather:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+sugary,sweet:1;caramel:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+summer,citrus:0.9;aquatic:0.8;fresh:0.8,,,Summer,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+sunscreen,coconut:0.9;tropical:0.7;powdery:0.4,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+suntan lotion,coconut:1;tropical:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+surf,aquatic:1;ozonic:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+talc,powdery:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+talcum,powdery:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+tangy,citrus:0.9;fruity:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+tea,tea:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+temple,incense:1;resinous:0.7;sandalwood:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+tobacco,tobacco:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+toffee,caramel:1;sweet:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+toothpaste,minty:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+unisex,woody:0.7;citrus:0.6;musky:0.6,,Unisex,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+uplifting,citrus:1;fresh:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+vetiver,vetiver:1;earthy:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+vicks,camphor:1;minty:0.8,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+vintage,chypre:0.9;aldehydic:0.8;mossy:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+warm and cozy,warm:1;amber:0.8;vanilla:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+watery,aquatic:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+waves,aquatic:1;ozonic:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+wedding,white floral:1;floral:0.9;musky:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+wet earth,earthy:1;damp:0.9,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+wet soil,earthy:1;damp:0.9,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+whiskey,boozy:1;whisky:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+whisky,boozy:1;whisky:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+wine,boozy:1;fruity:0.5,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+winter,amber:0.9;warm spicy:0.8;vanilla:0.6,,,Winter,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+wood,woody:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+woods,woody:1;coniferous:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+woody,woody:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+work,clean:1;fresh:0.7,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+ylang,white floral:1,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+zesty,citrus:1;fresh:0.6,,,,,everyday language,everyday usage — AI-authored 2026-09-22 (veto by editing this file),ai,Yes
+--carvone,minty:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+-ambrox/ambroxan,amber:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+-menthol,minty:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+1h-indole,animalic:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+2-phenylethanol,rose:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+6-isobutylquinoleine,leather:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+agrumex,fruity:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+agrunitril,fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+aldehyde c-10,aldehydic:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+aldehyde c-11,aldehydic:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+aldehyde c-12 lauric,aldehydic:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+aldehyde c-12 mna,aldehydic:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+aldehyde c-16,aldehydic:1;fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+aldehyde c-18,aldehydic:1;fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+amarocit,fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+ambrocenide,amber:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+ambrocenide cryst.,amber:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+amyl acetate,fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+anethol,anis:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+anisaldehyde,anis:1;aldehydic:1;balsamic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.616",book (Ohloff 2e family lists),Yes
+anise seed,anis:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+anise seed oil,anis:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+artemisia,herbal:1;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+artemisia oil,herbal:1;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+basil,anis:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+basil oil,anis:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+beeswax,beeswax:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+beeswax absolute,beeswax:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+benzaldehyde,aldehydic:1;fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+benzoin,resinous:1;balsamic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.616",book (Ohloff 2e family lists),Yes
+benzoin resinoid,resinous:1;balsamic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.616",book (Ohloff 2e family lists),Yes
+benzyl acetate,jasmine:1;fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+benzyl salicylate,floral:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+bergamot,citrus:1;fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+bergamot oil,citrus:1;fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+black pepper,spicy:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+black pepper oil,spicy:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+cade,smoky:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+cade oil,smoky:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+calone 1951,marine:1;aquatic:0.7;ozonic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+cardamom,cardamom:1;spicy:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+cardamom oil,cardamom:1;spicy:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+carrot seed,floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+carrot seed oil,floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+cashmeran,woody:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+cassis base 345,fruity:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+cassis bud,fruity:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+cassis bud absolute,fruity:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+castoreum,leather:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+cedar leaf,woody:1;herbal:1;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+cedar leaf oil,woody:1;herbal:1;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+cedarwood atlas,woody:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+cedarwood atlas oil,woody:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+cedarwood virginia,woody:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+cedarwood virginia oil,woody:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+cinnamaldehyde,cinnamon:1;aldehydic:1;spicy:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+cinnamic alcohol,cinnamon:1;spicy:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+cinnamon bark,cinnamon:1;spicy:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+cinnamon bark oil,cinnamon:1;spicy:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+cis-3-hexenyl salicylate,green:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+cis-jasmone,jasmine:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+cistus oil,amber:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+citral,citrus:1;fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+citronellol,rose:1;citrus:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+citronellyl acetate,citrus:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+civet base,animalic:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+clary sage,herbal:1;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+clary sage oil,herbal:1;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+clove bud,warm spicy:1;spicy:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+clove bud oil,warm spicy:1;spicy:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+coriander,herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+coriander oil,herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+coumarin,sweet:1;balsamic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.616",book (Ohloff 2e family lists),Yes
+cumin oil,spicy:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+cyclal c,herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+cyclamen aldehyde,aldehydic:1;floral:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+cypriol,woody:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+cypriol oil,woody:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+davana,fruity:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+davana oil,fruity:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+elemi,resinous:1;woody:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+elemi oil,resinous:1;woody:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+estragol,anis:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+ethyl linalool,floral:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+ethyl maltol,caramel:1;fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+ethyl methyl butyrate,fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+ethyl vanillin,vanilla:1;balsamic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.616",book (Ohloff 2e family lists),Yes
+ethylene brassylate,musky:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+eucalyptus,camphor:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+eucalyptus oil,camphor:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+eugenol,warm spicy:1;spicy:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+evernyl,mossy:1;woody:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+florhydral,floral:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+florol/florosa,floral:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+galaxolide,musky:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+galbanum oil,green:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+geraniol,rose:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+geranium oil,rose:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+geranyl acetate,floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+guaiac wood,woody:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+guaiac wood oil,woody:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+habanolide/globalide,musky:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+hedione,jasmine:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+hedione hc,jasmine:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+helional,marine:1;aquatic:0.7;ozonic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+heliotropin,powdery:1;balsamic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.616",book (Ohloff 2e family lists),Yes
+helvetolide,musky:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+"hexenol, 3-cis",green:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+"hexenyl acetate, 3-cis",green:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+hexyl acetate,fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+iso e super,woody:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+isoraldeine,floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+jasmin ind.,jasmine:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+jasmin ind. absolute,jasmine:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+jasmin sambac,jasmine:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+jasmin sambac absolute,jasmine:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+javanol,sandalwood:1;woody:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+juniper berry,coniferous:1;spicy:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+juniper berry oil,coniferous:1;spicy:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+labdanum resinoid,amber:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+laurel leaf,herbal:1;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+laurel leaf oil,herbal:1;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+lavandin,lavender:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+lavandin oil,lavender:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+lavender,lavender:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+lavender oil,lavender:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+lemon,citrus:1;fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+lemon oil,citrus:1;fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+lime,citrus:1;fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+lime oil,citrus:1;fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.609",book (Ohloff 2e family lists),Yes
+linalool,floral:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+linalyl acetate,fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+magnolan,herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+mandarin,citrus:1;fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+mandarin oil,citrus:1;fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+muscenone,musky:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+narcisse,white floral:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+narcisse absolute,white floral:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+neroli,white floral:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+neroli oil,white floral:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+nutmeg oil,spicy:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+oak moss,mossy:1;woody:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+oak moss absolute,mossy:1;woody:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+olibanum,incense:1;woody:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+olibanum oil,incense:1;woody:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+orange,citrus:1;fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+orange flower,white floral:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+orange flower absolute,white floral:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+orange oil,citrus:1;fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+orris butter,iris:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+osmanthus,white floral:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+osmanthus absolute,white floral:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+oud,oud:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+oud oil,oud:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+oxane,fruity:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+palmarosa,rose:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+palmarosa oil,rose:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+patchouli,patchouli:1;woody:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+patchouli oil,patchouli:1;woody:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+peppermint,spicy:1;minty:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+peppermint oil,spicy:1;minty:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+petitgrain bigaradier,floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+petitgrain bigaradier oil,floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+phenoxanol,floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+phenylacetaldehyde,aldehydic:1;green:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+pink pepper,spicy:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+pink pepper oil,spicy:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+polysantol,sandalwood:1;woody:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+raldeine,floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+raspberry ketone,fruity:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+rose,rose:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+rose absolute,rose:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+rose oil,rose:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+rose oxide,rose:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+rosemary,rose:1;herbal:1;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+rosemary oil,rose:1;herbal:1;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+saffron,spicy:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+saffron oil,spicy:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+sandalwood,sandalwood:1;woody:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+sandalwood oil,sandalwood:1;woody:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+sandranol,sandalwood:1;woody:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.614",book (Ohloff 2e family lists),Yes
+seaweed,marine:1;aquatic:0.7;ozonic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+seaweed absolute,marine:1;aquatic:0.7;ozonic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+spearmint,minty:1;pear:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+spearmint oil,minty:1;pear:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+styralyl acetate,green:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+styrax oil,smoky:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+tarragon,anis:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+tarragon oil,anis:1;herbal:0.7;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+thyme,herbal:1;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+thyme oil,herbal:1;aromatic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.611",book (Ohloff 2e family lists),Yes
+tonalide/fixolide,musky:1;animalic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+tonka bean,sweet:1;balsamic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.616",book (Ohloff 2e family lists),Yes
+tonka bean absolute,sweet:1;balsamic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.616",book (Ohloff 2e family lists),Yes
+tuberose,rose:1;tuberose:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+tuberose absolute,rose:1;tuberose:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+undecavertol,violet:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+vanilla absolute bourbon,vanilla:1;balsamic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.616",book (Ohloff 2e family lists),Yes
+vanillin,vanilla:1;balsamic:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.616",book (Ohloff 2e family lists),Yes
+vetiver haiti,vetiver:1;woody:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+vetiver haiti oil,vetiver:1;woody:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+vetiveryl acetate,vetiver:1;woody:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.615",book (Ohloff 2e family lists),Yes
+violet leaf,violet:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+violet leaf absolute,violet:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+ylang–ylang,white floral:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+ylang–ylang oil,white floral:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.613",book (Ohloff 2e family lists),Yes
+α-damascone,floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+α-ionone,violet:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+α-irone,iris:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+β-damascenone,rose:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+β-damascone,floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+β-ionone,violet:1;floral:0.7,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.612",book (Ohloff 2e family lists),Yes
+γ-octalactone,lactonic:1;fruity:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+γ-undecalactone,lactonic:1;fruity:1,,,,,material (Ohloff family),"Ohloff, Pickenhagen & Kraft, Scent and Chemistry 2e (Wiley-VCH 2022) Ch 9.3, PDF p.610",book (Ohloff 2e family lists),Yes
+camphorous or camphoraceous,camphor:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.79",book (Curtis 1994 odour vocabulary),Yes
+carnation,warm spicy:1;floral:0.85,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.67",book (Curtis 1994 odour vocabulary),Yes
+cassie,floral:1;white floral:0.85;violet:0.72,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.67",book (Curtis 1994 odour vocabulary),Yes
+cedarwood,woody:1;earthy:0.85,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.69",book (Curtis 1994 odour vocabulary),Yes
+cineolic,camphor:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.79",book (Curtis 1994 odour vocabulary),Yes
+cistus,amber:1;herbal:0.85,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.73",book (Curtis 1994 odour vocabulary),Yes
+civet,animalic:1;warm:0.85;musky:0.72,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.71",book (Curtis 1994 odour vocabulary),Yes
+clover,honey:1;sweet:0.85;floral:0.72,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.67",book (Curtis 1994 odour vocabulary),Yes
+cumin,spicy:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.83",book (Curtis 1994 odour vocabulary),Yes
+cyclamen,floral:1;violet:0.85;green:0.72,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.67",book (Curtis 1994 odour vocabulary),Yes
+equine,animalic:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.71",book (Curtis 1994 odour vocabulary),Yes
+ethereal,fresh:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.79",book (Curtis 1994 odour vocabulary),Yes
+faecal,animalic:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.71",book (Curtis 1994 odour vocabulary),Yes
+fenugreek,warm spicy:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.83",book (Curtis 1994 odour vocabulary),Yes
+fresh,fresh:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.89",book (Curtis 1994 odour vocabulary),Yes
+galbanum,green:1;aromatic:0.85;earthy:0.72;coniferous:0.61,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.75",book (Curtis 1994 odour vocabulary),Yes
+gardenia,white floral:1;floral:0.85;tuberose:0.72;jasmine:0.61;green:0.52,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.67",book (Curtis 1994 odour vocabulary),Yes
+geranium,rose:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.85",book (Curtis 1994 odour vocabulary),Yes
+ginger,warm spicy:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.83",book (Curtis 1994 odour vocabulary),Yes
+hawthorn,almond:1;floral:0.85,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.67",book (Curtis 1994 odour vocabulary),Yes
+hay,herbal:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.75",book (Curtis 1994 odour vocabulary),Yes
+heliotrope,powdery:1;floral:0.85;almond:0.72;balsamic:0.61;fruity:0.52,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.67",book (Curtis 1994 odour vocabulary),Yes
+hibawood,woody:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.69",book (Curtis 1994 odour vocabulary),Yes
+honey,honey:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.85",book (Curtis 1994 odour vocabulary),Yes
+honeysuckle,floral:1;sweet:0.85;white floral:0.72;tuberose:0.61;honey:0.52;rose:0.44,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.67",book (Curtis 1994 odour vocabulary),Yes
+hyacinth,green:1;fresh:0.85;floral:0.72;jasmine:0.61;balsamic:0.52,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.67",book (Curtis 1994 odour vocabulary),Yes
+indolic,animalic:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.71",book (Curtis 1994 odour vocabulary),Yes
+jargonelle pear,pear:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.81",book (Curtis 1994 odour vocabulary),Yes
+jasmin,jasmine:1;sweet:0.85;floral:0.72;fruity:0.61;herbal:0.52,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.67",book (Curtis 1994 odour vocabulary),Yes
+jonquil,floral:1;fresh:0.85;sweet:0.72;honey:0.61;green:0.52,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.67",book (Curtis 1994 odour vocabulary),Yes
+labdanum,amber:1;balsamic:0.85,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.73",book (Curtis 1994 odour vocabulary),Yes
+lilac,floral:1;fresh:0.85;jasmine:0.72;green:0.61,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.67",book (Curtis 1994 odour vocabulary),Yes
+lily,floral:1;sweet:0.85,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.67",book (Curtis 1994 odour vocabulary),Yes
+mentholic,minty:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.79",book (Curtis 1994 odour vocabulary),Yes
+metallic,metallic:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.85",book (Curtis 1994 odour vocabulary),Yes
+myrrh,resinous:1;warm:0.85;balsamic:0.72,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.73",book (Curtis 1994 odour vocabulary),Yes
+nutmeg,warm spicy:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.83",book (Curtis 1994 odour vocabulary),Yes
+opopanax,resinous:1;warm:0.85;balsamic:0.72;green:0.61,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.73",book (Curtis 1994 odour vocabulary),Yes
+peach,fruity:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.81",book (Curtis 1994 odour vocabulary),Yes
+peru balsam,balsamic:1;sweet:0.85;vanilla:0.72,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.73",book (Curtis 1994 odour vocabulary),Yes
+pine,coniferous:1;woody:0.85;resinous:0.72;balsamic:0.61,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.77",book (Curtis 1994 odour vocabulary),Yes
+pineapple,tropical:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.81",book (Curtis 1994 odour vocabulary),Yes
+powdery,powdery:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.91",book (Curtis 1994 odour vocabulary),Yes
+prune,fruity:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.81",book (Curtis 1994 odour vocabulary),Yes
+raspberry,fruity:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.81",book (Curtis 1994 odour vocabulary),Yes
+resinous,resinous:1;coniferous:0.85;woody:0.72;balsamic:0.61,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.77",book (Curtis 1994 odour vocabulary),Yes
+rosewood,woody:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.69",book (Curtis 1994 odour vocabulary),Yes
+strawberry,fruity:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.81",book (Curtis 1994 odour vocabulary),Yes
+styrax,balsamic:1;sweet:0.85,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.73",book (Curtis 1994 odour vocabulary),Yes
+sweet,sweet:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.89",book (Curtis 1994 odour vocabulary),Yes
+tolu balsam,balsamic:1;sweet:0.85;vanilla:0.72,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.73",book (Curtis 1994 odour vocabulary),Yes
+tropical,tropical:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.91",book (Curtis 1994 odour vocabulary),Yes
+umbelliferous,herbal:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.81",book (Curtis 1994 odour vocabulary),Yes
+vanilla,vanilla:1;sweet:0.85;powdery:0.72;balsamic:0.61,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.73",book (Curtis 1994 odour vocabulary),Yes
+vegetable,green:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.75",book (Curtis 1994 odour vocabulary),Yes
+vinous,boozy:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.81",book (Curtis 1994 odour vocabulary),Yes
+violet,violet:1;floral:0.85;powdery:0.72;green:0.61,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.69",book (Curtis 1994 odour vocabulary),Yes
+wallflower,floral:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.69",book (Curtis 1994 odour vocabulary),Yes
+warm,warm:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.89",book (Curtis 1994 odour vocabulary),Yes
+watermelon,fruity:1,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.81",book (Curtis 1994 odour vocabulary),Yes
+ylang-ylang,white floral:1;sweet:0.85;minty:0.72;balsamic:0.61;floral:0.52;fruity:0.44;warm spicy:0.38,,,,,perfumery descriptor,"Curtis & Williams, An Introduction to Perfumery (1994) Ch 3 odour vocabulary, PDF p.69",book (Curtis 1994 odour vocabulary),Yes
+all day,,,,,5,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+barely there,,,,,1,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+beast mode,,,,,5,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+close to skin,,,,,1,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+close to the skin,,,,,1,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+delicate,,,,,2,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+fill the room,,,,,5,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+fills the room,,,,,5,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+gentle,,,,,2,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+intimate,,,,,1,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+lasts all day,,,,,5,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+light,,,,,2,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+long lasting,,,,,5,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+long-lasting,,,,,5,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+medium,,,,,3,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+moderate,,,,,3,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+not overpowering,,,,,2,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+not too heavy,,,,,2,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+not too loud,,,,,2,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+not too strong,,,,,2,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+noticeable,,,,,3,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+powerful,,,,,5,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+projection,,,,,5,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+projects,,,,,5,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+soft,,,,,2,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+strong,,,,,4,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+subtle,,,,,2,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+very strong,,,,,5,strength,everyday usage — AI-authored 2026-09-22,ai,Yes
+whisper,,,,,1,strength,everyday usage — AI-authored 2026-09-22,ai,Yes

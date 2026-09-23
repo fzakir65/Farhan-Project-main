@@ -160,6 +160,20 @@ python load_data.py          # validation report; exit 2 while ERROR-level defec
 - Ch 13 vs Ch 14 (4 rows): grade- and form-specific parse kept.
 - Sign-off: evidence attached; the perfumer's smell-test remains the last human step.
 
+## Added 2026-09-23: the human-input datasheets (Zone A)
+
+| File | Rows | Where it comes from |
+|---|---|---|
+| `user_lexicon.csv` | 578 | 61 perfumery descriptors from **Curtis 1994 Ch 3** 'Tables of odour descriptive words' (PDF p.66-91, parsed by
+`data/mine_curtis.py` into `reference/curtis_odour_vocabulary.csv`); 214 materials from **Ohloff 2e Ch 9.3** family lists; 274 everyday phrases
+and 29 strength phrases authored here (`Decided_By=ai`, every row vetoable). Each row maps a phrase to catalogue terms with weights. |
+| `questionnaire.csv` | 8 questions / 66 options | scene → accord mapping authored here after the same two sources; every term validated
+against the catalogue vocabulary at build time. |
+
+Both are generated (`build_user_lexicon.py`, `build_questionnaire.py`) and both fail the build if a term is not in the catalogue.
+`data/logs/input_log.csv` and `questionnaire_log.csv` (gitignored) record what users type and pick; `review_input_log.py` turns that into
+`lexicon_candidates.csv` for human promotion — and, later, the training set for the model that replaces the LLM fallback.
+
 ## Still open
 - `constituents.csv`: supplier CoA values to replace the literature upper bounds (Provisional=Yes); the IFRA *Annex on
   contributions from other sources* would be the official cross-check

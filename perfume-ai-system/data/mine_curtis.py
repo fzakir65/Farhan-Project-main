@@ -22,6 +22,8 @@ What is taken (numbers and material lists, every row page-cited):
                                          Curtis' Top / Middle / Basic note class, the bold intensity digit on the 1-6 scale (found by the
                                          digit's box height in the page image), odour codes, and every text field (appearance, storage,
                                          stability, applications, occurrence, natural source, production, chief constituents)
+  * reference/curtis_odour_vocabulary.csv  Ch 3 'Tables of odour descriptive words' (PDF p.66-91): code, word, origin and the
+                                         related descriptors — the seed of data/user_lexicon.csv
   * product_types.csv Cross_Check       Curtis' table of toilet-water strengths (p.560) and the extrait range (p.560)
   * product_bases.csv                   glycerin as the alternative toilet-water humectant (p.561); source notes on water,
                                          antioxidant and sunscreen (p.560-561)
@@ -479,6 +481,37 @@ TITLE_FIX = {"Aldehyde cg": "Aldehyde C8", "Aldehyde CIO": "Aldehyde C10", "Alde
              "Vertenex (IFE)": "Vertenex (IFF)", "Trichloromethylphenylcarbinyl": "Trichloromethylphenylcarbinyl acetate"}
 
 
+# ---------------------------------------------------------------------------------------------------------------
+# 6. Chapter 3 odour vocabulary (PDF p.66-91): three-letter code | descriptor word | origin | related descriptors
+# ---------------------------------------------------------------------------------------------------------------
+VOCAB_PAGES = range(66, 92)
+CODE_ITEM = re.compile(r"([A-Z][A-Za-z\-' ]+?)(?:-re1?lated|, coloured,|, white,)?\s*\(([A-Z]{2,3})\)")
+
+
+def parse_vocabulary() -> list[dict]:
+    rows = []
+    for page in VOCAB_PAGES:
+        lines = _lines(page)
+        codes = [l for l in lines if l["x"] < 440 and re.fullmatch(r"[A-Z]{2,3}", l["text"]) and l["y"] > 240]
+        codes.sort(key=lambda l: l["y"])
+        for k, c in enumerate(codes):
+            y_end = codes[k + 1]["y"] - 20 if k + 1 < len(codes) else 10 ** 6
+            word = [l for l in lines if abs(l["y"] - c["y"]) < 25 and 440 <= l["x"] < 560]
+            origin = [l for l in lines if abs(l["y"] - c["y"]) < 25 and l["x"] > 1300]
+            body = [l for l in lines if c["y"] + 25 < l["y"] < y_end and 440 <= l["x"] < 560]
+            text = " ".join(l["text"] for l in body)
+            descs = [(m.group(1).strip(), m.group(2)) for m in CODE_ITEM.finditer(text)]
+            if not word:
+                continue
+            rows.append({"Code": c["text"], "Word": word[0]["text"], "Origin": origin[0]["text"] if origin else "",
+                         "Related": "|".join(f"{n} ({cd})" for n, cd in descs), "Related_Codes": "|".join(cd for _, cd in descs),
+                         "Text": text if not descs else "", "Source": src(page, "Ch 3 odour vocabulary")})
+    return rows
+
+
+VOCAB_COLS = ["Code", "Word", "Origin", "Related", "Related_Codes", "Text", "Source"]
+
+
 MONO_COLS = ["Material", "Kind", "Chemical_Name", "Curtis_Note_Class", "Intensity_1_6", "Code_P_or_T", "Code_S_or_B", "Code_B_or_D", "Code_C", "Appearance", "Storage",
              "Stability", "IFRA_1994_superseded", "Applications", "Occurrence", "Natural_Source", "Geographical_Source", "Production", "Chief_Constituents", "Experiment", "Source"]
 
@@ -515,6 +548,8 @@ def main() -> int:
     write(REF / "curtis_stability.csv", rows, ["Material", "CAS", "Classes", "Statement", "Source"])
 
     if BOXES.exists():
+        vocab = parse_vocabulary()
+        write(REF / "curtis_odour_vocabulary.csv", vocab, VOCAB_COLS)
         mono = parse_monographs()
         write(REF / "curtis_monographs.csv", mono, MONO_COLS)
         n_int = sum(1 for r in mono if r["Intensity_1_6"])

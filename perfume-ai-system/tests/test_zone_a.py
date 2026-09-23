@@ -28,11 +28,13 @@ def data() -> ld.Data:
 # ----------------------------------------------------------------------------
 
 def test_keyword_interpretation_uses_only_catalogue_vocabulary(data):
-    p = interpret("I want something fresh and woody for summer, not too sweet, for him — long lasting", data)
-    assert p.source == "keywords" and p.accords == ["fresh", "woody"] and p.avoid == ["sweet"]
+    # the deterministic path is now keywords + the lexicon datasheet (see tests/test_zone_a_input.py); both stay inside the vocabulary
+    p = interpret("I want something fresh and woody for summer, not too sweet, for him — long lasting", data, log=False)
+    assert p.source.startswith("keywords") and {"fresh", "woody"} <= set(p.accords) and p.avoid == ["sweet"]
     assert p.gender == "Men" and p.season == "Summer" and p.strength == 5
     v = vocabulary(data)
     assert set(p.accords) <= set(v["accords"])
+    assert p.weights["fresh"] == p.weights["woody"] == 1.0          # words the customer actually typed outrank lexicon expansions
 
 
 def test_longer_term_beats_its_prefix(data):
@@ -47,16 +49,16 @@ def test_empty_text_is_reported_not_guessed(data):
 
 def test_llm_answer_is_clamped_to_the_catalogue(data):
     fc = FakeClient(['{"accords": ["woody", "unicorn dust"], "family": "Nope", "gender": "Men", "season": "Summer", "strength": 9}'])
-    p = interpret("woody please", data, client=fc)
-    assert p.source == "llm" and p.accords == ["woody"] and p.family in (None, "Woody") and p.strength is None
+    p = interpret("woody please", data, client=fc, llm="always", log=False)     # llm="always": the deterministic pass already answered
+    assert p.source.endswith("llm") and p.accords == ["woody"] and p.family in (None, "Woody") and p.strength is None
     assert any("unicorn dust" in n for n in p.notes) and any("Nope" in n for n in p.notes)
 
 
 def test_llm_failure_falls_back_to_keywords(data):
     fc = FakeClient(["not json at all"])
-    p = interpret("citrus and amber", data, client=fc)
-    assert p.accords == ["amber", "citrus"] or p.accords == ["citrus", "amber"]
-    assert any("keyword interpretation used" in n for n in p.notes)
+    p = interpret("citrus and amber", data, client=fc, llm="always", log=False)
+    assert set(p.accords[:2]) == {"amber", "citrus"}
+    assert any("deterministic interpretation used" in n for n in p.notes)
 
 
 def test_complete_never_raises():

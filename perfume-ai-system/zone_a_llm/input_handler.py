@@ -2,11 +2,17 @@
 
     prefs = Preferences(accords=["woody", "citrus"], gender="Men", season="Summer")     # the button path
     prefs = interpret("something fresh and woody for summer evenings", data)            # free text, no LLM needed
-    prefs = interpret(text, data, client=get_client())                                  # LLM helps, result validated
+    prefs = interpret(text, data, client=get_client())                                  # LLM fills the gaps, result validated
 
-The vocabulary is always the catalogue's own (dataset1 accord terms / families / genders / seasons): free text is
-reduced to those values, by keyword matching (deterministic) and optionally by the LLM — whose JSON answer is
-validated against the same vocabulary and clamped. The LLM can never introduce a term the catalogue lacks.
+Three deterministic passes, then (optionally) the LLM:
+  1. catalogue keywords — the 96 accord terms / families / genders / seasons the catalogue itself uses;
+  2. the lexicon (data/user_lexicon.csv, zone_a_llm/lexicon.py) — everyday words and perfumery descriptors mapped to
+     those terms with weights, with negation ('no florals') and strength qualifiers ('not too strong');
+  3. clamping — nothing leaves this module that is not a catalogue value.
+The LLM runs only when a client exists AND `llm="fallback"` finds the passes empty (or `llm="always"`); its JSON is clamped
+to the same vocabulary and the passes are unioned in, so an explicit word the customer used is never lost. Every call is
+appended to data/logs/input_log.csv (text -> what each pass found -> the result) — the raw material of the lexicon review
+(data/review_input_log.py) and of the future model's training set. Same text -> same result without an LLM.
 """
 from __future__ import annotations
 
@@ -38,6 +44,8 @@ class Preferences:
     season: str | None = None                             # Spring / Summer / Fall / Winter
     avoid: list[str] = field(default_factory=list)
     strength: int | None = None                           # 1..5 (Longevity_Score / Sillage_Score scale)
+    weights: dict = field(default_factory=dict)           # accord term -> weight (the order of `accords` follows it)
+    trace: list = field(default_factory=list)             # phrase -> terms, one line per match (explainability)
     source: str = "buttons"                               # buttons | keywords | llm
     notes: list[str] = field(default_factory=list)        # what the interpreter did / could not do
 
@@ -124,35 +132,93 @@ def _clamp(raw: dict, vocab: dict[str, list[str]], notes: list[str]) -> Preferen
     return p
 
 
-def interpret(text: str, data, client: LLMClient | None = None) -> Preferences:
-    """Free text -> Preferences. Keyword matching always runs (Rule 9); the LLM, when available, may add to it —
-    its answer is parsed as JSON and clamped to the catalogue vocabulary. Same text -> same result without an LLM."""
+_LEXICON = None
+
+
+def _lexicon():
+    global _LEXICON
+    if _LEXICON is None:
+        from .lexicon import Lexicon
+        _LEXICON = Lexicon.load()
+    return _LEXICON
+
+
+def _merge_lexicon(kw: Preferences, text: str) -> Preferences:
+    """Keyword pass + lexicon pass -> one Preferences with weights (explicit catalogue words weigh 1.0). The terms the
+    keyword pass matched are blanked out for the lexicon, so a multi-word term ('fresh spicy') is never re-read as its parts."""
+    hit = _lexicon().apply(text, already=kw.accords + kw.avoid)
+    weights: dict[str, float] = {a: 1.0 for a in kw.accords}
+    for term, w in hit.weights.items():
+        weights[term] = max(weights.get(term, 0.0), round(w, 3))
+    avoid = set(kw.avoid) | hit.avoid
+    for a in avoid:
+        weights.pop(a, None)
+    p = Preferences(source="keywords+lexicon" if hit.weights or hit.avoid else "keywords")
+    p.weights = dict(sorted(weights.items(), key=lambda kv: (-kv[1], kv[0])))
+    p.accords = list(p.weights)
+    p.avoid = sorted(avoid)
+    p.family = kw.family or hit.family
+    p.gender = kw.gender or hit.gender
+    p.season = kw.season or hit.season
+    p.strength = hit.strength if hit.strength is not None else kw.strength
+    p.trace = list(hit.trace)
+    p.notes = [n for n in kw.notes if "no catalogue vocabulary" not in n]
+    if hit.unmatched:
+        p.notes.append("unmatched words: " + ", ".join(hit.unmatched))
+    if p.is_empty():
+        p.notes.append("no catalogue vocabulary found in the text")
+    return p
+
+
+def interpret(text: str, data, client: LLMClient | None = None, llm: str = "fallback", log: bool = True) -> Preferences:
+    """Free text -> Preferences. The keyword and lexicon passes always run (Rule 9). The LLM, when a client exists, runs
+    for `llm="always"` or, with `llm="fallback"`, only when the passes found no accord at all; its answer is parsed as
+    JSON, clamped to the catalogue vocabulary and unioned with the passes. Same text -> same result without an LLM."""
     vocab = vocabulary(data)
     kw = _keyword_prefs(text, vocab)
-    if client is None:
-        return kw
-    user = (f"ACCORD_TERMS: {', '.join(vocab['accords'])}\nFAMILIES: {', '.join(vocab['families'])}\n\nCustomer: {text}")
-    answer = complete(client, SYSTEM_PROMPT, user, max_tokens=400)
-    m = re.search(r"\{.*\}", answer, re.S)
-    if not m:
-        kw.notes.append("LLM unavailable or returned no JSON — keyword interpretation used")
-        return kw
-    try:
-        raw = json.loads(m.group(0))
-    except json.JSONDecodeError:
-        kw.notes.append("LLM JSON could not be parsed — keyword interpretation used")
-        return kw
-    notes = list(kw.notes)
-    llm = _clamp(raw if isinstance(raw, dict) else {}, vocab, notes)
-    # union with the keyword pass so an LLM omission never loses an explicit word the customer used
-    llm.accords = sorted(set(llm.accords) | set(kw.accords))
-    llm.avoid = sorted(set(llm.avoid) | set(kw.avoid))
-    llm.accords = [a for a in llm.accords if a not in llm.avoid]
-    llm.family = llm.family or kw.family
-    llm.gender = llm.gender or kw.gender
-    llm.season = llm.season or kw.season
-    llm.strength = llm.strength or kw.strength
-    return llm
+    base = _merge_lexicon(kw, text)
+    result = base
+    llm_terms: list[str] = []
+    if client is not None and (llm == "always" or (llm == "fallback" and not base.accords)):
+        user = (f"ACCORD_TERMS: {', '.join(vocab['accords'])}\nFAMILIES: {', '.join(vocab['families'])}\n\nCustomer: {text}")
+        answer = complete(client, SYSTEM_PROMPT, user, max_tokens=400)
+        m = re.search(r"\{.*\}", answer, re.S)
+        raw = None
+        if m:
+            try:
+                raw = json.loads(m.group(0))
+            except json.JSONDecodeError:
+                base.notes.append("LLM JSON could not be parsed — deterministic interpretation used")
+        else:
+            base.notes.append("LLM unavailable or returned no JSON — deterministic interpretation used")
+        if isinstance(raw, dict):
+            notes = list(base.notes)
+            out = _clamp(raw, vocab, notes)
+            llm_terms = list(out.accords)
+            weights = dict(base.weights)
+            for a in out.accords:                                   # LLM additions come in below the explicit words
+                weights.setdefault(a, 0.5)
+            avoid = set(base.avoid) | set(out.avoid)
+            for a in avoid:
+                weights.pop(a, None)
+            out.weights = dict(sorted(weights.items(), key=lambda kv: (-kv[1], kv[0])))
+            out.accords = list(out.weights)
+            out.avoid = sorted(avoid)
+            out.family = base.family or out.family
+            out.gender = base.gender or out.gender
+            out.season = base.season or out.season
+            out.strength = base.strength if base.strength is not None else out.strength
+            out.trace = base.trace + [f"LLM -> {', '.join(llm_terms) or '(nothing)'}"]
+            out.notes = notes
+            out.source = "keywords+lexicon+llm"
+            result = out
+    if log:
+        try:
+            from .input_log import append as _log
+            _log(text, kw, base, llm_terms, result)
+        except Exception:  # noqa: BLE001 — logging must never break interpretation
+            pass
+    return result
 
 
 __all__ = ["Preferences", "interpret", "vocabulary"]
