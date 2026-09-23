@@ -21,16 +21,16 @@ from .llm_client import LLMClient, complete
 WEIGHTS = {"accord": 3.0, "position": 1.0, "family": 2.0, "gender": 1.5, "season": 1.0, "strength": 0.5, "avoid": -4.0}
 
 SYSTEM_PROMPT = """You are a perfume consultant. You will be given a customer's preferences and a numbered SHORTLIST
-of perfumes from our catalogue. Rank the shortlist for this customer. Only recommend from this list — never
-name a perfume that is not on it. Answer with JSON: {"ranking": [<Perfume_ID>, ...], "why": "<one sentence>"}.
+of scent PROFILES from our own library (they are compositions, not branded products). Rank the shortlist for this
+customer. Only recommend from this list — never name a profile, perfume or brand that is not on it. Answer with JSON: {"ranking": [<Perfume_ID>, ...], "why": "<one sentence>"}.
 Do not mention ingredients quantities, safety or regulations."""
 
 
 @dataclass
 class Match:
     perfume_id: str
-    name: str
-    brand: str
+    name: str                              # Profile_Name — the library is de-branded (data/build_profiles.py)
+    family: str
     score: float
     reasons: list[str] = field(default_factory=list)
     accords: list[str] = field(default_factory=list)
@@ -89,7 +89,7 @@ def shortlist(prefs: Preferences, data, top_k: int = 5) -> list[Match]:
     rows.sort(key=lambda t: (-t[0], t[1]))
     out = []
     for s, pid, r, why in rows[:top_k]:
-        out.append(Match(pid, str(r["Perfume_Name"]), str(r["Brand"]), s, why, _terms(r["Main_Accords"])))
+        out.append(Match(pid, str(r["Profile_Name"]), str(r.get("Fragrance_Family", "")), s, why, _terms(r["Main_Accords"])))
     return out
 
 
@@ -99,7 +99,7 @@ def match(prefs: Preferences, data, top_k: int = 5, client: LLMClient | None = N
     cands = shortlist(prefs, data, top_k=max(top_k, shortlist_size))
     if client is None or not cands:
         return cands[:top_k]
-    listing = "\n".join(f"{i + 1}. {m.perfume_id} — {m.name} by {m.brand}: {', '.join(m.accords)}" for i, m in enumerate(cands))
+    listing = "\n".join(f"{i + 1}. {m.perfume_id} — {m.name} ({m.family}): {', '.join(m.accords)}" for i, m in enumerate(cands))
     user = (f"Customer preferences: accords={prefs.accords}, avoid={prefs.avoid}, family={prefs.family}, "
             f"gender={prefs.gender}, season={prefs.season}, strength={prefs.strength}\n\nSHORTLIST:\n{listing}")
     answer = complete(client, SYSTEM_PROMPT, user, max_tokens=300)

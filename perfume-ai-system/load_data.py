@@ -44,9 +44,9 @@ FILES = {
 }
 
 REQUIRED_COLUMNS = {
-    "perfumes": ["Perfume_ID", "Perfume_Name", "Brand", "Fragrance_Family", "Main_Accords", "Top_Notes",
-                 "Middle_Notes", "Base_Notes", "Gender", "Season", "Longevity", "Sillage", "Description",
-                 "Mood_Vibe", "Occasion"],
+    "perfumes": ["Perfume_ID", "Profile_Name", "Fragrance_Family", "Main_Accords", "Top_Notes", "Middle_Notes",
+                 "Base_Notes", "Gender", "Season", "Time_Of_Day", "Climate", "Longevity", "Sillage", "Mood_Vibe",
+                 "Occasion", "Description"],
     "notes": ["Note_ID", "Note_Name", "Chemical_Name", "CAS", "Volatility_Class", "Odor_Strength",
               "Accords_Used_In"],
     "product_types": ["Product_Type", "Concentrate_Min_Pct", "Concentrate_Max_Pct", "Alcohol_Pct_Range", "Source"],

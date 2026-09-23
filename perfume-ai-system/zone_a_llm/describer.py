@@ -26,7 +26,7 @@ def _list(cell) -> list[str]:
 
 def facts(perfume: pd.Series | dict) -> dict:
     return {
-        "name": str(perfume.get("Perfume_Name", "")), "brand": str(perfume.get("Brand", "")),
+        "name": str(perfume.get("Profile_Name", "")), "brand": "",
         "family": str(perfume.get("Fragrance_Family", "")), "accords": _list(perfume.get("Main_Accords", "")),
         "top": _list(perfume.get("Top_Notes", "")), "heart": _list(perfume.get("Middle_Notes", "")),
         "base": _list(perfume.get("Base_Notes", "")), "gender": str(perfume.get("Gender", "")),

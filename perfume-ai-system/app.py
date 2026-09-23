@@ -56,7 +56,7 @@ def run_cli(text: str, prefs: Preferences | None = None) -> int:
     if not matches:
         print("no match"); return 1
     for i, m in enumerate(matches, 1):
-        print(f"{i}. {m.name} by {m.brand}  score {m.score:.1f}  [{m.rank_source}]")
+        print(f"{i}. {m.name} ({m.family})  score {m.score:.1f}  [{m.rank_source}]")
         for r in m.reasons[:4]:
             print(f"     {r}")
     row = data.perfumes[data.perfumes["Perfume_ID"] == matches[0].perfume_id].iloc[0]
@@ -180,7 +180,7 @@ def run_streamlit() -> None:
         st.info("Pick at least one preference."); return
     matches = match(prefs, data, top_k=5, client=client)
     st.subheader("Matches")
-    labels = [f"{m.name} — {m.brand} (score {m.score:.1f}, {m.rank_source})" for m in matches]
+    labels = [f"{m.name} — {m.family} (score {m.score:.1f}, {m.rank_source})" for m in matches]
     pick = st.radio("Choose a perfume", labels, index=0)
     m = matches[labels.index(pick)]
     with st.expander("Why these matches"):
@@ -200,7 +200,7 @@ def run_streamlit() -> None:
         if out.optimized is not None:
             st.dataframe(out.optimized.layers, hide_index=True)
         st.dataframe(formula_table(out), hide_index=True, use_container_width=True)
-        st.download_button("Download formula CSV", formula_table(out).to_csv(index=False), f"{row['Perfume_Name']}_formula.csv")
+        st.download_button("Download formula CSV", formula_table(out).to_csv(index=False), f"{row['Profile_Name']}_formula.csv")
         if out.safety is not None:
             with st.expander("Safety: rejections, caps and flags (every line cites its source row)"):
                 st.text(out.safety.summary())

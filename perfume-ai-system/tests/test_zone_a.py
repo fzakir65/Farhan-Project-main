@@ -106,15 +106,15 @@ def test_llm_rerank_is_grounded(data):
 def test_template_has_no_numbers_or_safety_words(data):
     for _, row in data.perfumes.head(50).iterrows():
         t = template(row)
-        assert row["Perfume_Name"] in t and not FORBIDDEN.search(t)
+        assert row["Profile_Name"] in t and not FORBIDDEN.search(t)
 
 
 def test_llm_prose_with_quantities_is_replaced(data):
     row = data.perfumes.iloc[0]
-    bad = FakeClient([f"{row['Perfume_Name']} opens with 12% bergamot and is IFRA compliant."])
+    bad = FakeClient([f"{row['Profile_Name']} opens with 12% bergamot and is IFRA compliant."])
     assert describe(row, data, client=bad) == template(row)
-    good = FakeClient([f"{row['Perfume_Name']} is a bright, breezy scent that feels like a coastal morning. It settles into warm woods."])
-    assert describe(row, data, client=good).startswith(row["Perfume_Name"])
+    good = FakeClient([f"{row['Profile_Name']} is a bright, breezy scent that feels like a coastal morning. It settles into warm woods."])
+    assert describe(row, data, client=good).startswith(row["Profile_Name"])
 
 
 # ----------------------------------------------------------------------------

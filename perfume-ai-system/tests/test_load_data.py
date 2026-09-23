@@ -43,7 +43,7 @@ def test_every_table_loads_with_required_columns(data):
 
 
 def test_expected_row_counts(data):
-    assert len(data.perfumes) == 450
+    assert len(data.perfumes) == 455          # 450 workbook profiles + 5 book archetypes (data/build_profiles.py)
     assert len(data.notes) == 763          # 720 workbook rows + 43 note_additions.csv rows (7 of 2026-09-18 + 36 Curtis 1994 aroma chemicals, 2026-09-19/22)
     assert len(data.accords) == 1518
     assert len(data.ifra_limits) == 81
@@ -197,16 +197,40 @@ def test_known_catalogue_gaps_are_reported(data):
     assert any("corrected via cas_corrections.csv" in i.message for i in data.issues)
     assert 0 < len(data.unmatched_accord_notes) <= 15          # the honest floor: names with no dataset2 equivalent
     assert any("not in dataset2" in i.message for i in _errors(data, "accords"))
+    # the 10 column-shifted source rows are now repaired at BUILD time (data/build_profiles.py reads the season words
+    # out of Gender), so the loader no longer has anything to repair — the data reaching it is already clean
     shifted = [i for i in data.warnings() if i.table == "perfumes" and "shifted" in i.message]
-    assert len(shifted) == 10
+    assert len(shifted) == 0
 
 
 def test_perfume_column_shift_was_repaired(data):
+    # P000291 is one of the 10 rows whose columns were shifted in the source workbook: the season words sat in Gender.
+    # build_profiles.py now reads them out at build time; Gender falls back to Unisex and is flagged as a default.
     r = data.perfumes.set_index("Perfume_ID").loc["P000291"]
-    assert r["Gender"] == ""
-    assert r["Season"].startswith("Spring")
-    assert r["Description"].startswith("Clean powdery iris")
-    assert r["Sillage_Score"] == ld.SILLAGE_SCORE["moderate"]
+    assert r["Gender"] == "Unisex"
+    assert r["Season"].startswith("Spring") and r["Time_Of_Day"] == "Day"
+    assert r["Description"] == ""                       # the source cell was empty; it must not read "nan"
+    assert r["Sillage_Score"] == ld.SILLAGE_SCORE["soft"]
+
+
+def test_profile_library_is_debranded_and_normalised(data):
+    p = data.perfumes
+    assert "Brand" not in p.columns and "Perfume_Name" not in p.columns      # the library is compositions, not products
+    assert (p["Profile_Name"] != "").all()
+    assert set(p["Gender"]) <= {"Men", "Women", "Unisex"}
+    seasons = {s.strip() for cell in p["Season"] for s in cell.split(";")}
+    assert seasons <= {"Spring", "Summer", "Fall", "Winter"} and seasons
+    times = {t.strip() for cell in p["Time_Of_Day"] for t in cell.split(";")}
+    assert times <= {"Day", "Night"} and times
+    assert {c.strip() for cell in p["Climate"] for c in cell.split(";")} <= {"Hot", "Cold", "Temperate"}
+    # the columns that were 100 % empty before the rebuild
+    assert (p["Mood_Vibe"] != "").mean() > 0.95 and (p["Occasion"] != "").mean() > 0.95
+    # Main_Accords is now split on commas too, so every term is a catalogue term
+    from zone_a_llm.input_handler import vocabulary
+    terms = set(vocabulary(data)["accords"])
+    used = {a.strip() for cell in p["Main_Accords"] for a in cell.split(";") if a.strip()}
+    assert used <= terms, sorted(used - terms)[:10]
+    assert (p["Description"].astype(str).str.lower() == "nan").sum() == 0
 
 
 def test_perfume_scores_and_lists(data):

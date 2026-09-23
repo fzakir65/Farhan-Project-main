@@ -46,25 +46,14 @@ def _lines(cell) -> str:
     return "; ".join(p for p in parts if p)
 
 
-def build_perfumes() -> pd.DataFrame:
+def build_perfumes(notes: pd.DataFrame | None = None) -> pd.DataFrame:
+    """The DE-BRANDED profile library — see data/build_profiles.py for what is normalised and why."""
+    from build_profiles import book_profiles, build as build_profile_rows
     src = pd.read_excel(ML_PROJECT / "perfume_system_master_with_recipes.xlsx", sheet_name="perfumes")
-    out = pd.DataFrame({
-        "Perfume_ID": src["perfume_id"],
-        "Perfume_Name": src["perfume_name"].astype(str).str.strip(),
-        "Brand": src["brand"].astype(str).str.strip(),
-        "Fragrance_Family": src["fragrance_family"].astype(str).str.strip(),
-        "Main_Accords": src["main_accords_raw"].map(_lines),
-        "Top_Notes": src["top_notes_raw"].map(_lines),
-        "Middle_Notes": src["middle_notes_raw"].map(_lines),
-        "Base_Notes": src["base_notes_raw"].map(_lines),
-        "Gender": src["gender"].astype(str).str.strip(),
-        "Season": src["season_raw"].map(_lines),
-        "Longevity": src["longevity"].astype(str).str.strip(),   # text in source; loader maps to 1-5
-        "Sillage": src["sillage"].astype(str).str.strip(),       # text in source; loader maps to 1-5
-        "Description": src["description"].fillna("").astype(str).str.strip(),
-        "Mood_Vibe": "",                                          # no source column yet
-        "Occasion": "",                                           # no source column yet
-    })
+    out = build_profile_rows(src, notes)
+    extra = book_profiles(HERE / "reference" / "curtis_formulas.csv")
+    if len(extra):
+        out = pd.concat([out, extra[out.columns]], ignore_index=True)
     return out
 
 
@@ -496,7 +485,7 @@ def build_group_rules() -> pd.DataFrame:
 
 def main() -> None:
     notes = build_notes()
-    for fn, builder in [("dataset1_perfumes.csv", build_perfumes), ("dataset2_notes.csv", lambda: notes),
+    for fn, builder in [("dataset1_perfumes.csv", lambda: build_perfumes(notes)), ("dataset2_notes.csv", lambda: notes),
                         ("dataset3_accords.csv", lambda: build_accords(notes)), ("ifra_limits.csv", build_ifra_limits),
                         ("group_rules.csv", build_group_rules)]:
         df = builder()
