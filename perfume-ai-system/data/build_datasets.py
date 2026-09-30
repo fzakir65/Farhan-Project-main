@@ -51,7 +51,7 @@ def build_perfumes(notes: pd.DataFrame | None = None) -> pd.DataFrame:
     from build_profiles import book_profiles, build as build_profile_rows
     src = pd.read_excel(ML_PROJECT / "perfume_system_master_with_recipes.xlsx", sheet_name="perfumes")
     out = build_profile_rows(src, notes)
-    extra = book_profiles(HERE / "reference" / "curtis_formulas.csv")
+    extra = book_profiles(HERE / "reference" / "curtis_formulas.csv", notes)
     if len(extra):
         out = pd.concat([out, extra[out.columns]], ignore_index=True)
     return out

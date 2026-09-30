@@ -1,0 +1,530 @@
+<title>The Three Datasheets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap">
+
+<style>
+  :root {
+    --paper:      #EDEEEC;
+    --raised:     #FFFFFF;
+    --ink:        #1B1E1D;
+    --ink-soft:   #565B58;
+    --ink-faint:  #868B87;
+    --rule:       #D3D6D1;
+    --rule-soft:  #E2E4E0;
+    --zone-a:     #3D6493;
+    --zone-a-bg:  #E5EAF1;
+    --zone-b:     #8C2F2A;
+    --zone-b-bg:  #F3E4E2;
+    --code-bg:    #E4E6E2;
+
+    --serif:  "Spectral", Georgia, "Times New Roman", serif;
+    --sans:   "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono:   "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+    --col: 68ch;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:     #15181A;
+      --raised:    #1E2225;
+      --ink:       #E3E6E2;
+      --ink-soft:  #A5ABA6;
+      --ink-faint: #767C78;
+      --rule:      #333937;
+      --rule-soft: #262B2A;
+      --zone-a:    #85A9D8;
+      --zone-a-bg: #1E2A38;
+      --zone-b:    #D8817A;
+      --zone-b-bg: #33211F;
+      --code-bg:   #222726;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:     #15181A;
+    --raised:    #1E2225;
+    --ink:       #E3E6E2;
+    --ink-soft:  #A5ABA6;
+    --ink-faint: #767C78;
+    --rule:      #333937;
+    --rule-soft: #262B2A;
+    --zone-a:    #85A9D8;
+    --zone-a-bg: #1E2A38;
+    --zone-b:    #D8817A;
+    --zone-b-bg: #33211F;
+    --code-bg:   #222726;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding-inline: 20px;
+    padding-block: 0 96px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: var(--col); margin-inline: auto; }
+  .wide { max-width: 860px; margin-inline: auto; }
+
+  /* ---------- masthead ---------- */
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding-block: 56px 28px;
+    margin-bottom: 44px;
+  }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 20px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.3rem, 6vw, 3.4rem);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    margin: 0 0 20px;
+  }
+  .standfirst {
+    font-family: var(--serif);
+    font-size: 1.18rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: 58ch;
+  }
+
+  /* ---------- prose ---------- */
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.62rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0 0 16px;
+  }
+  h3 {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    margin: 0 0 8px;
+  }
+  p { margin: 0 0 18px; }
+  p:last-child { margin-bottom: 0; }
+  a { color: var(--zone-a); }
+  strong { font-weight: 600; }
+  em { font-style: italic; }
+
+  section { margin-bottom: 60px; }
+
+  code, .m {
+    font-family: var(--mono);
+    font-size: 0.86em;
+    background: var(--code-bg);
+    padding: 0.12em 0.36em;
+    border-radius: 2px;
+  }
+
+  /* ---------- numbered stages ---------- */
+  .stage-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .stage-num {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--ink-faint);
+    letter-spacing: 0.05em;
+    flex: none;
+    padding-top: 2px;
+  }
+  .stage-head h2 { margin: 0; }
+
+  /* ---------- datasheet panels ---------- */
+  .sheet {
+    background: var(--raised);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent, var(--rule));
+    padding: 22px 24px;
+    margin-bottom: 18px;
+  }
+  .sheet.a { --accent: var(--zone-a); }
+  .sheet.b { --accent: var(--zone-b); }
+
+  .sheet-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px 14px;
+    margin-bottom: 14px;
+  }
+  .sheet-file {
+    font-family: var(--mono);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .count {
+    font-family: var(--mono);
+    font-size: 0.76rem;
+    color: var(--ink-faint);
+    font-variant-numeric: tabular-nums;
+  }
+  .tag {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+    margin-left: auto;
+  }
+  .tag.a { background: var(--zone-a-bg); color: var(--zone-a); }
+  .tag.b { background: var(--zone-b-bg); color: var(--zone-b); }
+
+  .cols {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    line-height: 1.85;
+    color: var(--ink-soft);
+    background: var(--code-bg);
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    overflow-x: auto;
+    word-break: break-word;
+  }
+  .cols b { color: var(--ink); font-weight: 600; }
+
+  dl.facts { margin: 0; display: grid; gap: 12px; }
+  dl.facts > div { display: grid; grid-template-columns: 7.5rem 1fr; gap: 4px 16px; }
+  dl.facts dt {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding-top: 3px;
+  }
+  dl.facts dd { margin: 0; font-size: 0.93rem; line-height: 1.55; }
+  dl.facts dd.never { color: var(--zone-b); }
+
+  @media (max-width: 560px) {
+    dl.facts > div { grid-template-columns: 1fr; gap: 2px; }
+  }
+
+  /* ---------- the prompt block ---------- */
+  .prompt-shell {
+    border: 1px solid var(--rule);
+    background: var(--raised);
+    margin-bottom: 20px;
+  }
+  .prompt-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 16px;
+    border-bottom: 1px solid var(--rule-soft);
+    background: var(--code-bg);
+  }
+  .prompt-bar span {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  button.copy {
+    margin-left: auto;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--raised);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 5px 11px;
+    cursor: pointer;
+  }
+  button.copy:hover { border-color: var(--ink-faint); }
+  button.copy:focus-visible { outline: 2px solid var(--zone-a); outline-offset: 2px; }
+
+  pre.prompt {
+    margin: 0;
+    padding: 20px 18px;
+    font-family: var(--mono);
+    font-size: 0.775rem;
+    line-height: 1.72;
+    color: var(--ink);
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 30rem;
+    overflow-y: auto;
+  }
+
+  /* ---------- flow diagram ---------- */
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    align-items: stretch;
+    margin-bottom: 18px;
+  }
+  .step {
+    font-family: var(--mono);
+    font-size: 0.73rem;
+    line-height: 1.35;
+    padding: 8px 11px;
+    border: 1px solid var(--rule);
+    background: var(--raised);
+    display: flex;
+    align-items: center;
+  }
+  .step.a { border-color: var(--zone-a); color: var(--zone-a); background: var(--zone-a-bg); }
+  .step.b { border-color: var(--zone-b); color: var(--zone-b); background: var(--zone-b-bg); }
+  .arrow { align-self: center; color: var(--ink-faint); font-family: var(--mono); font-size: 0.8rem; }
+
+  /* ---------- rules list ---------- */
+  ol.rules { margin: 0; padding: 0; list-style: none; counter-reset: r; display: grid; gap: 14px; }
+  ol.rules li {
+    counter-increment: r;
+    display: grid;
+    grid-template-columns: 2.1rem 1fr;
+    gap: 14px;
+    align-items: baseline;
+  }
+  ol.rules li::before {
+    content: counter(r, decimal-leading-zero);
+    font-family: var(--mono);
+    font-size: 0.73rem;
+    font-weight: 600;
+    color: var(--zone-b);
+    padding-top: 3px;
+  }
+  ol.rules p { margin: 0; font-size: 0.95rem; }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 22px;
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+  }
+  footer p { margin: 0 0 6px; }
+</style>
+
+<header>
+  <div class="wide">
+    <p class="eyebrow">perfume-ai-system · composition layer</p>
+    <h1>The Three Datasheets</h1>
+    <p class="standfirst">How a sentence like “something warm for winter evenings” becomes a weighed, IFRA-legal formula — and which of the three sheets is allowed to decide what.</p>
+  </div>
+</header>
+
+<main class="wide">
+
+  <section>
+    <p>The system keeps one strict boundary: the sheets that hold <em>human language</em> and the sheets that hold <em>chemistry and law</em> are not the same sheets, and they are not read by the same code. Everything below follows from that.</p>
+    <div class="flow" role="img" aria-label="Pipeline: user input, then dataset1 match, dataset3 accords, dataset2 materials, layer placement and weights, then the safety engine, rebalance, and the final formula.">
+      <div class="step a">user text / quiz</div><div class="arrow">→</div>
+      <div class="step a">dataset1 · profile match</div><div class="arrow">→</div>
+      <div class="step a">dataset3 · accords</div><div class="arrow">→</div>
+      <div class="step b">dataset2 · materials</div><div class="arrow">→</div>
+      <div class="step b">layers + weights</div><div class="arrow">→</div>
+      <div class="step b">safety · rebalance</div><div class="arrow">→</div>
+      <div class="step b">formula</div>
+    </div>
+    <p>Blue stages interpret and may be wrong by a little. Red stages are deterministic table lookups where being wrong means an unsafe or illegal product on skin — no language model touches them.</p>
+  </section>
+
+  <section>
+    <div class="stage-head"><span class="stage-num">01</span><h2>What a person wants</h2></div>
+    <div class="sheet a">
+      <div class="sheet-top">
+        <span class="sheet-file">dataset1_perfumes.csv</span>
+        <span class="count">455 profiles</span>
+        <span class="tag a">Zone A · soft</span>
+      </div>
+      <div class="cols"><b>Perfume_ID</b> · Profile_Name · Fragrance_Family · <b>Main_Accords</b> · Top_Notes · Middle_Notes · Base_Notes · <b>Gender</b> · <b>Season</b> · Time_Of_Day · Climate · Longevity · Sillage · <b>Mood_Vibe</b> · <b>Occasion</b> · Description</div>
+      <dl class="facts">
+        <div><dt>Holds</dt><dd>The only human-facing vocabulary in the system: who it’s for, when it’s worn, how it feels, how long it lasts.</dd></div>
+        <div><dt>Used for</dt><dd>Matching a request to a profile. <span class="m">Main_Accords</span> is the single column that crosses into chemistry.</dd></div>
+        <div><dt>Never</dt><dd class="never">Formulate from its note columns. They are descriptive prose, kept for the reader — the materials come from stage 02.</dd></div>
+      </dl>
+    </div>
+    <p>It is de-branded on purpose. The system composes perfumes; it does not sell someone else’s, and shipping a formula under a trademark is a liability.</p>
+  </section>
+
+  <section>
+    <div class="stage-head"><span class="stage-num">02</span><h2>What that actually means in materials</h2></div>
+    <div class="sheet a">
+      <div class="sheet-top">
+        <span class="sheet-file">dataset3_accords.csv</span>
+        <span class="count">1,518 rows</span>
+        <span class="tag a">Zone A → B · the bridge</span>
+      </div>
+      <div class="cols">Accord_ID · <b>Accord_Name</b> · Accord_Category · Note_ID · <b>Note_Name</b> · <b>Note_Role</b> (Driver/Support/Modifier) · Layer · <b>Importance_Weight</b> 1–5 · <b>Typical_Presence</b> 0–1 · Blend_Compatibility 0–1 · Stability_Class</div>
+      <dl class="facts">
+        <div><dt>Holds</dt><dd>The recipe for an <em>idea</em>. “Smoky” is not a material — here it becomes birch tar, guaiacwood and cade, each with a role and a weight.</dd></div>
+        <div><dt>Used for</dt><dd>Turning each term in <span class="m">Main_Accords</span> into real note names, then into a proportion.</dd></div>
+        <div><dt>Never</dt><dd class="never">Let this sheet’s <span class="m">Layer</span> column place a note. Stage 03 decides the layer; a disagreement is logged, not obeyed.</dd></div>
+      </dl>
+    </div>
+    <p>This is the sheet that makes the system composable rather than a lookup table of finished perfumes. Weight inside an accord is <span class="m">Importance_Weight × Typical_Presence</span>, scaled by where the accord ranked in the request.</p>
+  </section>
+
+  <section>
+    <div class="stage-head"><span class="stage-num">03</span><h2>What the material physically is</h2></div>
+    <div class="sheet b">
+      <div class="sheet-top">
+        <span class="sheet-file">dataset2_notes.csv</span>
+        <span class="count">803 materials</span>
+        <span class="tag b">Zone B · hard</span>
+      </div>
+      <div class="cols">Note_ID · <b>Note_Name</b> · Chemical_Name · <b>CAS</b> · <b>Volatility_Class</b> (Top/Heart/Base) · <b>Odor_Strength</b> · Chemical_Family · Odor_Family · Key_Nuances · Molecular_Weight · Boiling_Point_C · Vapor_Pressure · LogP · Odor_Threshold_mg_L · Tenacity_hrs · Solubility · Natural_Source</div>
+      <dl class="facts">
+        <div><dt>Holds</dt><dd>Identity and physics. <span class="m">CAS</span> is the join key to every safety table — IFRA limits, UK/EU bans, usage caps, reaction rules.</dd></div>
+        <div><dt>Decides</dt><dd><span class="m">Volatility_Class</span> sets the layer. <span class="m">Odor_Strength</span> damps the share, so indole and the damascones arrive as traces rather than percentages.</dd></div>
+        <div><dt>Never</dt><dd class="never">Join a safety lookup on a name. Names drift between sheets; CAS does not.</dd></div>
+      </dl>
+    </div>
+    <p>Two materials can share a name and differ completely in law — cade oil versus rectified cade oil, verbena oil (banned in the UK/EU) versus verbena absolute (allowed). The CAS and the grade word carry that distinction; the name alone cannot.</p>
+  </section>
+
+  <section>
+    <h2>The master prompt</h2>
+    <p>This is the system prompt for the composition layer — the part that reads a person and writes back catalogue vocabulary. It is deliberately written to <em>refuse</em> the chemistry.</p>
+    <div class="prompt-shell">
+      <div class="prompt-bar">
+        <span>master prompt</span>
+        <button class="copy" id="copy-btn" type="button">Copy</button>
+      </div>
+      <pre class="prompt" id="prompt-text">ROLE
+You are the composition layer of a perfume formulation system. Your job is to turn
+what a person says into catalogue vocabulary. You never decide a quantity, a limit,
+or a safety verdict — a deterministic engine does that after you.
+
+THE THREE DATASHEETS
+
+1. dataset1_perfumes.csv — 455 de-branded scent profiles.
+   Perfume_ID, Profile_Name, Fragrance_Family, Main_Accords, Top/Middle/Base_Notes,
+   Gender, Season, Time_Of_Day, Climate, Longevity, Sillage, Mood_Vibe, Occasion,
+   Description.
+   This is the ONLY sheet holding human language. Match the request against
+   Mood_Vibe, Occasion, Season, Time_Of_Day, Climate, Gender and Fragrance_Family.
+   Main_Accords is the one column that crosses into chemistry.
+   The note columns are descriptive. Never formulate from them.
+
+2. dataset3_accords.csv — 1,518 rows. The bridge from idea to material.
+   Accord_Name -> Note_Name, with Note_Role (Driver/Support/Modifier), Layer,
+   Importance_Weight (1-5), Typical_Presence (0-1), Blend_Compatibility (0-1).
+   Look up every term of Main_Accords here to get real materials.
+   Weight inside an accord = Importance_Weight x Typical_Presence.
+   The k-th accord in the request is scaled by 0.85^k.
+
+3. dataset2_notes.csv — 803 materials. Identity, physics and law.
+   Note_Name, Chemical_Name, CAS, Volatility_Class, Odor_Strength, Chemical_Family,
+   Odor_Family, Key_Nuances, Molecular_Weight, Boiling_Point_C, LogP,
+   Odor_Threshold_mg_L, Tenacity_hrs, Solubility, Natural_Source.
+   CAS is the join key to IFRA limits, UK/EU bans, usage caps and reaction rules.
+   Volatility_Class decides the layer. Odor_Strength damps the share:
+   Very strong x0.25, Strong x0.5, Medium and Low x1.
+
+ORDER OF WORK — never reorder
+   user text or questionnaire
+   -> dataset1: rank profiles, explain why each matched
+   -> dataset3: expand Main_Accords into note names and weights
+   -> dataset2: resolve each note, take its Volatility_Class and Odor_Strength
+   -> place into layers, compute proportions
+   -> SAFETY ENGINE (not you): constituent roll-up, regulatory bans, IFRA single
+      and group rules, usage caps, reaction rules
+   -> rebalance to 100% with capped materials pinned, re-run safety until stable
+   -> formula
+
+STRUCTURE (Jean Carles)
+   Top 25%, Heart 20%, Base 55%. Heart never above 25%. Base always the largest.
+   Top is roughly the first 15 minutes, Heart the next 3-4 hours, Base the final
+   5-8. Layer comes from dataset2's Volatility_Class ONLY — never from dataset3's
+   Layer column, and never from your own judgement. Log a disagreement; do not act
+   on it.
+
+WHAT YOU MUST NOT DO
+   - Do not output a percentage, an IFRA limit, a cap, or a safety verdict.
+   - Do not join anything safety-related on a name. Join on CAS.
+   - Do not invent a perfume, an accord, or a material. If a term has no accord,
+     say so plainly and ask or fall back — never substitute silently.
+   - Do not drop a note because it looks unsafe. Report it; the engine rejects.
+   - Do not treat a grade as interchangeable: cade oil and rectified cade oil,
+     verbena oil and verbena absolute, cinnamon bark and cinnamon leaf are
+     different materials with different law.
+
+WHEN YOU ANSWER
+   Name the profiles you matched and the evidence for each. List the accords you
+   derived and the terms they came from. State anything you could not resolve.
+   Then hand over to the engine and report its output verbatim — its numbers are
+   the product, and yours would be a liability.</pre>
+    </div>
+    <p id="copy-note" style="font-size:.85rem;color:var(--ink-faint);margin:0" aria-live="polite"></p>
+  </section>
+
+  <section>
+    <h2>The rules underneath</h2>
+    <p>These hold whether the request came through the questionnaire, the buttons, or free text, and whether or not an API key is present.</p>
+    <ol class="rules">
+      <li><p>A language model never touches chemistry, safety, IFRA status, regulatory status, or a quantity.</p></li>
+      <li><p>Every safety check is a deterministic table lookup. Same input, same formula, always.</p></li>
+      <li><p>UK/EU cosmetics bans override IFRA. A banned material is rejected even where IFRA would allow it.</p></li>
+      <li><p>Where both apply, the effective cap is the <em>lower</em> of the two. Neither list ever raises the other’s ceiling.</p></li>
+      <li><p>Every adjustment cites the row that caused it — the trace is part of the output, not a debug log.</p></li>
+      <li><p>If a formula cannot be made safe, it is rejected. There is no “close enough”.</p></li>
+      <li><p>The button and questionnaire paths work with no API key at all. Degradation is graceful by design.</p></li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>perfume-ai-system · composition layer reference</p>
+    <p>Sources behind the numbers: Jean Carles, <em>A Method of Creation in Perfumery</em>; IFRA 51st Amendment; Pybus &amp; Sell, <em>The Chemistry of Fragrances</em> (RSC); Tisserand &amp; Young, <em>Essential Oil Safety</em> 2e; Curtis &amp; Williams, <em>An Introduction to Perfumery</em>; Ohloff, Pickenhagen &amp; Kraft, <em>Scent and Chemistry</em> 2e.</p>
+  </footer>
+
+</main>
+
+<script>
+  (function () {
+    var btn = document.getElementById('copy-btn');
+    var src = document.getElementById('prompt-text');
+    var note = document.getElementById('copy-note');
+    btn.addEventListener('click', function () {
+      var text = src.textContent;
+      var done = function () {
+        btn.textContent = 'Copied';
+        note.textContent = 'Master prompt copied to the clipboard.';
+        setTimeout(function () { btn.textContent = 'Copy'; note.textContent = ''; }, 2400);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () {
+          note.textContent = 'Could not reach the clipboard — select the text above and copy it.';
+        });
+      } else {
+        note.textContent = 'Clipboard unavailable here — select the text above and copy it.';
+      }
+    });
+  })();
+</script>

@@ -1,0 +1,546 @@
+<title>Datasheet Handover Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Libre+Franklin:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
+
+<style>
+  :root {
+    --paper:     #EAE8E3;
+    --raised:    #FBFAF8;
+    --sunk:      #DEDCD5;
+    --ink:       #1D1B18;
+    --ink-soft:  #55514A;
+    --ink-faint: #8A857C;
+    --rule:      #C9C6BE;
+    --rule-soft: #DCD9D2;
+    --gap:       #A8431F;
+    --gap-bg:    #F3E3DA;
+    --have:      #3A5A40;
+    --have-bg:   #E1E9E1;
+
+    --head: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+    --body: "Newsreader", Georgia, "Times New Roman", serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:     #171614;
+      --raised:    #201F1C;
+      --sunk:      #262522;
+      --ink:       #E9E7E2;
+      --ink-soft:  #ABA79F;
+      --ink-faint: #7C7870;
+      --rule:      #383630;
+      --rule-soft: #2A2926;
+      --gap:       #DD8258;
+      --gap-bg:    #2E1D14;
+      --have:      #7FAE86;
+      --have-bg:   #1A241B;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:     #171614;
+    --raised:    #201F1C;
+    --sunk:      #262522;
+    --ink:       #E9E7E2;
+    --ink-soft:  #ABA79F;
+    --ink-faint: #7C7870;
+    --rule:      #383630;
+    --rule-soft: #2A2926;
+    --gap:       #DD8258;
+    --gap-bg:    #2E1D14;
+    --have:      #7FAE86;
+    --have-bg:   #1A241B;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0;
+    padding-inline: 20px;
+    padding-block: 0 88px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .col  { max-width: 68ch; margin-inline: auto; }
+  .full { max-width: 900px; margin-inline: auto; }
+
+  header { padding-block: 54px 0; margin-bottom: 40px; }
+  .stamp {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+    padding-block: 9px;
+    margin: 0 0 26px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 22px;
+  }
+  h1 {
+    font-family: var(--head);
+    font-size: clamp(2rem, 5.4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+    margin: 0 0 18px;
+  }
+  .lede {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: 58ch;
+  }
+
+  h2 {
+    font-family: var(--head);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.016em;
+    line-height: 1.18;
+    text-wrap: balance;
+    margin: 0 0 16px;
+  }
+  h3 { font-family: var(--head); font-size: 1rem; font-weight: 600; margin: 0 0 8px; }
+  p { margin: 0 0 17px; }
+  p:last-child { margin-bottom: 0; }
+  section { margin-bottom: 56px; }
+  .ruled { border-top: 1px solid var(--rule); padding-top: 32px; }
+
+  code {
+    font-family: var(--mono);
+    font-size: 0.8em;
+    background: var(--sunk);
+    padding: 0.1em 0.34em;
+    border-radius: 2px;
+  }
+
+  /* ---- sheet cards ---- */
+  .sheets { display: grid; gap: 14px; margin: 26px 0; }
+  .sheetcard {
+    background: var(--raised);
+    border: 1px solid var(--rule);
+    padding: 20px 22px;
+  }
+  .sc-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px; margin-bottom: 12px; }
+  .sc-n {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--ink-faint);
+    letter-spacing: 0.08em;
+  }
+  .sc-top h3 { margin: 0; }
+  .sc-state {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+    margin-left: auto;
+  }
+  .sc-state.ok  { background: var(--have-bg); color: var(--have); }
+  .sc-state.no  { background: var(--gap-bg);  color: var(--gap); }
+  .sc-job { font-size: 0.97rem; margin-bottom: 12px; }
+  .sc-line {
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    color: var(--ink-soft);
+    background: var(--sunk);
+    padding: 9px 12px;
+    line-height: 1.7;
+    overflow-x: auto;
+  }
+
+  /* ---- cause list ---- */
+  ul.causes { margin: 22px 0; padding: 0; list-style: none; display: grid; gap: 16px; }
+  ul.causes li { display: grid; grid-template-columns: 1fr; gap: 4px; }
+  ul.causes b { font-family: var(--head); font-size: 0.95rem; font-weight: 600; }
+  ul.causes span { font-size: 0.96rem; color: var(--ink-soft); line-height: 1.52; }
+
+  /* ---- tables ---- */
+  .tw { overflow-x: auto; margin: 24px 0; border: 1px solid var(--rule); background: var(--raised); }
+  table { border-collapse: collapse; width: 100%; min-width: 520px; font-family: var(--head); }
+  th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--rule-soft); font-size: 0.88rem; line-height: 1.45; }
+  thead th {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    background: var(--sunk);
+    border-bottom: 1px solid var(--rule);
+    white-space: nowrap;
+  }
+  tbody tr:last-child td { border-bottom: 0; }
+  td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 500; white-space: nowrap; }
+  td.tgt { color: var(--gap); font-weight: 600; }
+  tr.now td { background: var(--gap-bg); }
+
+  /* ---- callout ---- */
+  .callout {
+    border-left: 3px solid var(--gap);
+    background: var(--gap-bg);
+    padding: 20px 22px;
+    margin: 26px 0;
+  }
+  .callout h3 { color: var(--gap); }
+  .callout p { font-size: 0.97rem; }
+
+  .note {
+    border-left: 3px solid var(--have);
+    background: var(--have-bg);
+    padding: 20px 22px;
+    margin: 26px 0;
+  }
+  .note h3 { color: var(--have); }
+  .note p { font-size: 0.97rem; }
+
+  /* ---- copy block ---- */
+  .brief { border: 1px solid var(--rule); background: var(--raised); margin: 24px 0 16px; }
+  .brief-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 11px 15px; background: var(--sunk); border-bottom: 1px solid var(--rule-soft);
+  }
+  .brief-bar span {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-faint);
+  }
+  button.copy {
+    margin-left: auto;
+    font-family: var(--mono); font-size: 10.5px; font-weight: 600;
+    letter-spacing: 0.07em; text-transform: uppercase;
+    color: var(--ink); background: var(--raised);
+    border: 1px solid var(--rule); border-radius: 2px;
+    padding: 5px 11px; cursor: pointer;
+  }
+  button.copy:hover { border-color: var(--ink-faint); }
+  button.copy:focus-visible { outline: 2px solid var(--gap); outline-offset: 2px; }
+  pre.brief-text {
+    margin: 0; padding: 18px 16px;
+    font-family: var(--mono); font-size: 0.755rem; line-height: 1.7;
+    color: var(--ink); white-space: pre-wrap; word-break: break-word;
+    max-height: 32rem; overflow-y: auto;
+  }
+
+  footer { border-top: 1px solid var(--rule); padding-top: 20px; font-size: 0.87rem; color: var(--ink-faint); }
+</style>
+
+<header>
+  <div class="full">
+    <p class="stamp"><span>Handover brief</span><span>perfume-ai-system</span><span>24 Sep 2026</span></p>
+    <h1>Datasheet Handover Brief</h1>
+    <p class="lede">Context for anyone — or anything — picking this project up cold: what each sheet is for, why the current ones drifted, what replacements must contain, and how much data a trained model actually needs.</p>
+  </div>
+</header>
+
+<main class="full">
+
+  <section class="col">
+    <h2>What the system does</h2>
+    <p>Someone says what they want a perfume to smell like. The system picks a scent profile, works out which materials make that smell, weighs them into a balanced formula, checks it against safety and cosmetics law, and outputs something that could legally be mixed and worn.</p>
+    <p>That job splits in half, and the split is the most important thing to understand about the data. One half deals in <strong>words</strong> — mood, season, “something cosy”. Wrong answers here are disappointing. The other half deals in <strong>chemistry and law</strong> — how much of a restricted substance is allowed on skin. Wrong answers here are dangerous or illegal.</p>
+    <p>So the sheets are deliberately separated by which half they serve, and nothing that guesses is allowed anywhere near the second half.</p>
+  </section>
+
+  <section class="col ruled">
+    <h2>What each sheet is for</h2>
+    <p>Four sheets. Three exist and have been cleaned; the fourth has never existed.</p>
+
+    <div class="sheets">
+      <div class="sheetcard">
+        <div class="sc-top"><span class="sc-n">SHEET 1</span><h3>Perfume profiles</h3><span class="sc-state ok">455 rows · cleaned</span></div>
+        <p class="sc-job">The catalogue of scents, described the way a customer would describe them. This is the only sheet with human language in it.</p>
+        <p class="sc-line">Profile name · family · <b>accords</b> · top/middle/base notes · gender · season · time of day · climate · longevity · sillage · mood · occasion · description</p>
+        <p style="font-size:.93rem;color:var(--ink-soft);margin-top:12px">Its job is <strong>matching</strong>: turn “warm, for winter evenings” into a shortlist of profiles. Only one column — the accord list — crosses over into chemistry. The note columns here are for reading, not for building.</p>
+      </div>
+
+      <div class="sheetcard">
+        <div class="sc-top"><span class="sc-n">SHEET 2</span><h3>Accords</h3><span class="sc-state ok">1,518 rows · 236 accords</span></div>
+        <p class="sc-job">The translation layer. An accord is a word like “smoky” — not a substance, but a small recipe of substances that together give that impression.</p>
+        <p class="sc-line">Accord name · category · <b>note name</b> · role (lead / support / trace) · layer · importance 1–5 · how often present · how well it blends</p>
+        <p style="font-size:.93rem;color:var(--ink-soft);margin-top:12px">This is the <strong>only bridge</strong> between language and materials. Everything a customer says has to pass through here to become something you can pour. If an accord is wrong, nothing downstream can save it.</p>
+      </div>
+
+      <div class="sheetcard">
+        <div class="sc-top"><span class="sc-n">SHEET 3</span><h3>Materials</h3><span class="sc-state ok">803 rows · cleaned</span></div>
+        <p class="sc-job">The actual substances, with their physical properties and their legal identity.</p>
+        <p class="sc-line">Note name · chemical name · <b>CAS number</b> · <b>layer</b> (top/heart/base) · strength · boiling point · molecular weight · solubility · natural source</p>
+        <p style="font-size:.93rem;color:var(--ink-soft);margin-top:12px">Two jobs. The <strong>layer</strong> decides where a material sits in the perfume — top notes last 15 minutes, hearts 3–4 hours, bases 5–8, and the base is always the biggest share. The <strong>CAS number</strong> is the key every safety check runs on. Names are never used for safety lookups; they drift, numbers don’t.</p>
+      </div>
+
+      <div class="sheetcard">
+        <div class="sc-top"><span class="sc-n">SHEET 4</span><h3>Requests and outcomes</h3><span class="sc-state no">0 rows · does not exist</span></div>
+        <p class="sc-job">A record of real people asking for things, what a perfumer decided the answer was, and whether they liked it.</p>
+        <p class="sc-line">What they said · context · <b>accords chosen</b> · why · <b>did they like it</b> · who decided · when</p>
+        <p style="font-size:.93rem;color:var(--ink-soft);margin-top:12px">This is the only sheet that records a <strong>decision</strong> rather than a description — and therefore the only one a model can learn the job from. Nothing else in the project substitutes for it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="col ruled">
+    <h2>Why the current sheets drifted</h2>
+    <p>Worth being precise about this, because the causes tell you what the replacement has to prevent. None of it was carelessness — it’s what happens to any spreadsheet that survives long enough.</p>
+
+    <ul class="causes">
+      <li><b>It accumulated; nobody designed it.</b><span>Rows arrived from different sources at different times with no agreed format. Nothing was ever wrong at the moment it was typed — it only became wrong next to the row above it.</span></li>
+      <li><b>Free text where there should have been a dropdown.</b><span>Any column that accepts any text will eventually contain everything. “Long lasting” arrived in four different capitalisations plus “Eternal”, and a computer counts those as four unrelated facts.</span></li>
+      <li><b>Names were used to link the sheets instead of IDs.</b><span>Sheet 1 says “Cedar”, Sheet 3 says “Cedarwood”, and nothing forces them to agree. About four-fifths of the ingredient names in Sheet 1 led nowhere before we built a translation table by hand.</span></li>
+      <li><b>Spreadsheets get copied, and columns slide.</b><span>In ten rows the season had ended up inside the gender column. Nobody noticed, because nobody read those rows — the program did, and it read “Spring” as a gender.</span></li>
+      <li><b>It was written to be read, not used.</b><span>“Aldehydes, Bergamot, Pink Pepper” in one cell is perfect for a person and useless to a program. Worse are the cells with no separator at all: <code>Rose Sea Salt Seaweed Musk Pink Pepper</code> is six ingredients that the computer read as one.</span></li>
+      <li><b>Two questions sharing one column.</b><span>“Season” contained seasons, times of day and climates all mixed together. Three different facts, one box, no way to ask about any of them separately.</span></li>
+      <li><b>No source on any row.</b><span>When two rows disagree — and 30 pairs in Sheet 2 do — there’s no way to tell which is right. A row with no provenance can’t be corrected, only deleted.</span></li>
+      <li><b>Some of it was simply true a long time ago.</b><span>Materials that were standard in 1994 are banned now. One banned material had no ID number at all, so the ban never matched it and it passed every check until we found it by hand.</span></li>
+    </ul>
+
+    <div class="note">
+      <h3>The one-line takeaway for a rebuild</h3>
+      <p>Almost every problem above is prevented by the same two rules: <strong>fixed lists instead of free text</strong>, and <strong>IDs instead of names</strong> for anything that links two sheets. Get those right and most of this cannot recur.</p>
+    </div>
+  </section>
+
+  <section class="col ruled">
+    <h2>What a completely new set must contain</h2>
+
+    <h3 style="margin-top:22px">Applies to all four sheets</h3>
+    <p>Every column is one fact. Every linking column uses an ID, not a name. Every column that isn’t free prose has a fixed list of allowed values, enforced at entry. One separator throughout. Every row carries who decided it, when, and from what source. No row is ever silently edited — a change means a new version with a reason.</p>
+
+    <h3 style="margin-top:26px">Sheet 1 — profiles</h3>
+    <p>Keep the existing columns; they’re right. Split season, time of day and climate into three columns. Gender is one of three words. Season is one of four. Longevity and sillage are numbers, 1 to 5, with the word as a label. Ingredient names must be spelled exactly as Sheet 3 spells them, ideally stored as IDs. Mood and occasion must be filled, from the same word list the customer picks from. No brand names anywhere.</p>
+
+    <h3 style="margin-top:26px">Sheet 2 — accords</h3>
+    <p>Build each accord upward from materials that genuinely smell right together, then name the result — not the other way round. Every ingredient must exist in Sheet 3; an accord pointing at a material we don’t have is unbuildable. Each accord needs one or two leads and a supporting cast, with real proportions and a workable range, not only a 1–5 importance score. One row per accord-and-ingredient pair, no duplicates. A source on every row: a book and page, a perfumer’s name, or a tasting date. And it must cover the words customers actually use — “clean”, “cosy”, “smells expensive” — several of which currently lead nowhere.</p>
+
+    <h3 style="margin-top:26px">Sheet 3 — materials</h3>
+    <p>A verified CAS number on every row, or a deliberate blank that says why — never a guess. One row per material <em>and grade</em>: cinnamon bark and cinnamon leaf are two different materials with two different legal limits. Boiling point on every row, so the layer can be checked against physics rather than believed. Strength recorded, so a trace material doesn’t swamp a formula. And for natural oils, supplier certificates giving the real percentage of restricted chemicals inside them — without those, every safety verdict stays provisional.</p>
+
+    <h3 style="margin-top:26px">Sheet 4 — requests</h3>
+    <p>The person’s own words, untidied. Enough context to make sense of them — rough age, who it’s for, the occasion. The accords a perfumer chose, and their reasoning. Whether the person actually liked the result. And a name and date on every row. That last pair is what separates training data from a wish list.</p>
+  </section>
+
+  <section class="ruled">
+    <div class="col">
+      <h2>How much data training actually needs</h2>
+      <p>This is the question that decides the timeline, so it’s worth answering with real arithmetic rather than a vague “lots”.</p>
+      <p>The model’s job is to read a request and pick out which accords apply. There are <strong>96 accord terms</strong> it can choose from, and a typical request uses four or five of them. That number — 96 — is what sets everything below.</p>
+    </div>
+
+    <div class="tw">
+      <table>
+        <thead>
+          <tr><th>Stage</th><th>Rows</th><th>What it buys you</th><th>Accuracy you can claim</th></tr>
+        </thead>
+        <tbody>
+          <tr class="now"><td>Where we are</td><td class="num">0</td><td>Nothing can be measured or trained</td><td>None</td></tr>
+          <tr><td><strong>Measure</strong></td><td class="num tgt">200</td><td>Find out whether the current rule-based system is any good. <em>Not for training</em> — for knowing.</td><td>±7 points</td></tr>
+          <tr><td><strong>Compare</strong></td><td class="num tgt">500</td><td>Tell two versions apart reliably; decide whether a change helped</td><td>±4 points</td></tr>
+          <tr><td><strong>Train — common terms</strong></td><td class="num tgt">800–1,000</td><td>A model that handles the ~30 accords people actually ask for; rules cover the rest</td><td>±3 points</td></tr>
+          <tr><td><strong>Train — full vocabulary</strong></td><td class="num tgt">1,500–2,000</td><td>All 96 accord terms predictable, including the rare ones</td><td>±2 points</td></tr>
+          <tr><td><strong>Self-improving</strong></td><td class="num tgt">5,000+</td><td>Learns continuously from what people accept and reject</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col">
+      <p>The arithmetic behind the training rows: a model needs roughly <strong>15–20 examples of a term</strong> before it will reliably predict it. 96 terms × 20 ≈ 1,900 mentions. At four or five accords per request, that’s about 450 requests <em>if every term appeared equally often</em>. They don’t — a handful of terms appear constantly and the rest are rare — so you need roughly three to four times that to cover the tail. Hence 1,500–2,000.</p>
+      <p>You can shortcut it. Cover the 30 terms people actually ask for, let the existing rule-based system handle the rest, and 800 rows is enough to be useful.</p>
+    </div>
+
+    <div class="col">
+      <h3 style="margin-top:32px">Range matters more than volume</h3>
+      <p>Two hundred well-spread rows are worth more than two thousand that are all “a fresh scent for summer”. The spread has to be deliberate, so here is what the first 200 should contain:</p>
+    </div>
+
+    <div class="tw">
+      <table>
+        <thead>
+          <tr><th>Must cover</th><th>Minimum</th><th>Why</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Each of the 4 seasons</td><td class="num">30 each</td><td>Otherwise the model quietly assumes one season</td></tr>
+          <tr><td>Each of the 3 genders</td><td class="num">40 each</td><td>Men’s and unisex requests are worded differently</td></tr>
+          <tr><td>The 25 most-asked accords</td><td class="num">8 each</td><td>Below this a term is never predicted at all</td></tr>
+          <tr><td>Negatives — “no patchouli”, “not sweet”</td><td class="num">25</td><td>Easy to get backwards, and very visible when you do</td></tr>
+          <tr><td>Strength — “subtle”, “I want projection”</td><td class="num">20</td><td>Changes the formula, not just the ingredients</td></tr>
+          <tr><td>Vague — “something nice”, “surprise me”</td><td class="num">15</td><td>Real people say this constantly</td></tr>
+          <tr><td>Very specific — names a material outright</td><td class="num">15</td><td>Must not be over-interpreted</td></tr>
+          <tr><td>Gift requests — buying for someone else</td><td class="num">20</td><td>Different language, different constraints</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col">
+      <div class="callout">
+        <h3>Do this before collecting anything else</h3>
+        <p>Have <strong>two different perfumers label the same 50 requests</strong>, separately, and measure how often they agree.</p>
+        <p>That number is the ceiling. If two experts agree only 45% of the time, no model will ever beat 45% — and chasing higher just means overfitting one person’s taste. It also tells you whether the task is even well posed: if agreement is low, the answer is usually to score a <em>top-three</em> match rather than demand an exact one, which typically lifts agreement well above 80%.</p>
+        <p>Fifty rows of this costs almost nothing and prevents the single most expensive mistake available here — building a large dataset around a question that doesn’t have one right answer.</p>
+      </div>
+      <p>For context on why this matters: two earlier attempts to shortcut Sheet 4 both failed. Labelling 5,078 customer reviews by their product page gave labels the review text supported <strong>5.4%</strong> of the time — the trained model scored worse than always answering “citrus”. And a file of 505 ready-made “training examples” turned out to be generated, not collected: all 505 share eleven timestamps and the rating column is entirely empty.</p>
+      <p>A label nobody checked isn’t a label. It just hides the guess somewhere harder to see.</p>
+    </div>
+  </section>
+
+  <section class="col ruled">
+    <h2>The brief, as plain text</h2>
+    <p>Everything above, condensed for pasting into another tool as background context.</p>
+
+    <div class="brief">
+      <div class="brief-bar">
+        <span>context brief</span>
+        <button class="copy" id="copy-btn" type="button">Copy</button>
+      </div>
+      <pre class="brief-text" id="brief-text">PROJECT CONTEXT — AI perfume formulation system
+
+WHAT IT DOES
+A person describes what they want a perfume to smell like. The system picks a scent
+profile, works out which materials produce that smell, weighs them into a balanced
+formula, checks it against safety and cosmetics law, and outputs a formula that
+could legally be mixed and worn.
+
+The work splits in two, and the split governs everything:
+  - Language half (mood, season, "something cosy"). Errors are disappointing.
+  - Chemistry-and-law half (how much of a restricted substance may touch skin).
+    Errors are dangerous or illegal. Nothing that guesses may go near this half.
+
+THE FOUR DATASHEETS
+
+Sheet 1 — PERFUME PROFILES (455 rows, cleaned)
+  Profile name, family, accords, top/middle/base notes, gender, season, time of day,
+  climate, longevity, sillage, mood, occasion, description.
+  Job: matching a request to a shortlist of profiles.
+  The accord list is the ONLY column that crosses into chemistry. The note columns
+  are descriptive — never formulate from them.
+
+Sheet 2 — ACCORDS (1,518 rows, 236 accords)
+  Accord name, category, note name, role (lead/support/trace), layer, importance
+  1-5, typical presence, blend compatibility.
+  Job: translating a word into materials. "Smoky" is not a substance — it is a small
+  recipe of substances. This is the only bridge between language and chemistry.
+
+Sheet 3 — MATERIALS (803 rows, cleaned)
+  Note name, chemical name, CAS number, layer (top/heart/base), strength, boiling
+  point, molecular weight, solubility, natural source.
+  Two jobs. Layer decides position in the perfume: top notes last ~15 minutes,
+  hearts 3-4 hours, bases 5-8 hours, and base is always the largest share
+  (roughly 25% top / 20% heart / 55% base). CAS number is the key every safety
+  lookup uses — never match on a name, names drift and numbers do not.
+
+Sheet 4 — REQUESTS AND OUTCOMES (0 rows — does not exist)
+  What the person said, context, accords chosen, reasoning, whether they liked it,
+  who decided, when.
+  The only sheet that records a DECISION rather than a description, and therefore
+  the only one a model can learn the actual job from.
+
+WHY THE OLD SHEETS DRIFTED
+  - Accumulated from many sources over time; never designed.
+  - Free text where there should have been fixed lists ("Long lasting", "long
+    lasting", "LONG LASTING", "Eternal" = four unrelated facts to a computer).
+  - Sheets linked by NAME instead of ID, so "Cedar" and "Cedarwood" never met.
+  - Copied between spreadsheets until columns slid — season ended up inside the
+    gender column in 10 rows.
+  - Written to be read, not used: several ingredients per cell, sometimes with no
+    separator at all.
+  - Two questions sharing one column (season + time of day + climate).
+  - No source on any row, so disagreements cannot be resolved.
+  - Some entries were simply true a long time ago; materials normal in 1994 are
+    banned now.
+
+WHAT NEW SHEETS MUST DO
+  All sheets: one fact per column; IDs not names for every link; fixed lists of
+  allowed values enforced at entry; one separator throughout; who decided, when,
+  and from what source on every row; changes are new versions with a reason.
+  Sheet 1: keep the columns; split season / time of day / climate; fixed word lists
+  for gender and season; 1-5 numbers for longevity and sillage; ingredient names
+  spelled exactly as Sheet 3 spells them; mood and occasion filled in; no brands.
+  Sheet 2: build each accord UP from materials that genuinely work together, then
+  name it. Every ingredient must exist in Sheet 3. Leads and supporting cast, real
+  proportions with a range. One row per accord-ingredient pair. A source per row.
+  Cover the words customers use, including "clean", "cosy", "smells expensive".
+  Sheet 3: verified CAS or a deliberate blank explaining why — never a guess. One
+  row per material AND grade (cinnamon bark and cinnamon leaf are different, with
+  different legal limits). Boiling point on every row so layers can be checked
+  against physics. Strength recorded. Supplier certificates for natural oils.
+  Sheet 4: the person's own words untidied; context; the accords a perfumer chose
+  and why; whether the person liked it; a name and date.
+
+HOW MUCH DATA TRAINING NEEDS
+The model picks accords from a vocabulary of 96 terms; a typical request uses 4-5.
+    200 rows   measure whether the current system works (+/-7 points). Not training.
+    500 rows   tell two versions apart reliably (+/-4 points)
+  800-1,000    train for the ~30 accords people actually ask for
+  1,500-2,000  train for all 96 terms including rare ones
+  5,000+       learns continuously from acceptances and rejections
+
+Arithmetic: a term needs 15-20 examples before a model predicts it reliably.
+96 x 20 = ~1,900 mentions; at 4-5 accords per request that is ~450 requests IF the
+terms were evenly spread. They are not — a few dominate — so 3-4x that is needed to
+cover the tail.
+
+RANGE MATTERS MORE THAN VOLUME. In the first 200 rows:
+  30 per season (all 4)          25 with a negative ("no patchouli", "not sweet")
+  40 per gender (all 3)          20 with a strength qualifier
+  8 per top-25 accord            15 vague ("something nice")
+  20 gift requests               15 very specific (names a material)
+
+DO THIS FIRST
+Have two perfumers label the SAME 50 requests separately and measure agreement.
+That number is the ceiling — no model beats the experts' agreement rate. If it is
+low, score a top-three match instead of an exact one, which usually lifts agreement
+above 80%. Fifty rows prevents the most expensive mistake available: building a
+large dataset around a question with no single right answer.
+
+TWO FAILED SHORTCUTS — do not repeat them
+  - 5,078 customer reviews labelled by their product page: the text supported the
+    label 5.4% of the time. The trained model scored worse than always answering
+    "citrus". Retrain suspended.
+  - 505 ready-made "training examples": all share 11 timestamps, the rating column
+    is entirely empty, the sentences collapse into a few templates. Generated, not
+    collected.
+A label nobody checked is not a label — it hides the guess somewhere harder to see.</pre>
+    </div>
+    <p id="copy-note" style="font-size:.88rem;color:var(--ink-faint);margin:0" aria-live="polite"></p>
+  </section>
+
+  <footer>
+    <p>All figures measured from the current build. Reference sources behind the chemistry: Jean Carles; IFRA 51st Amendment; Royal Society of Chemistry, <em>The Chemistry of Fragrances</em>; Tisserand &amp; Young, <em>Essential Oil Safety</em>; Curtis &amp; Williams; Ohloff, Pickenhagen &amp; Kraft.</p>
+  </footer>
+
+</main>
+
+<script>
+  (function () {
+    var btn = document.getElementById('copy-btn');
+    var src = document.getElementById('brief-text');
+    var note = document.getElementById('copy-note');
+    btn.addEventListener('click', function () {
+      var done = function () {
+        btn.textContent = 'Copied';
+        note.textContent = 'Context brief copied to the clipboard.';
+        setTimeout(function () { btn.textContent = 'Copy'; note.textContent = ''; }, 2400);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(src.textContent).then(done, function () {
+          note.textContent = 'Could not reach the clipboard — select the text above and copy it.';
+        });
+      } else {
+        note.textContent = 'Clipboard unavailable here — select the text above and copy it.';
+      }
+    });
+  })();
+</script>

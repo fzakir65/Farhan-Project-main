@@ -17,9 +17,13 @@ This file is the primary guidance for Claude Code. Read it fully before writing 
 > checks (`TY_ADVISORY` in the safety engine), all 207 Curtis monographs parsed (note class, odour strength, stability) and all 14
 > floral bases; `data/review_book_checks.py` writes `reference/book_review.md` — the list of what the data may need changing. **[rev7]**
 
+> Revision 2026-09-24: dataset2 expanded from the books — `data/build_note_expansion.py` adds 40 rows (27 Curtis monographs,
+> 9 Ohloff, 6 Tisserand & Young Ch 14 naturals) and writes `data/note_display_aliases.csv`, the everyday-name table the profile
+> library reads; note-atom resolution 63 % -> 93 %. Five dataset2 CAS defects surfaced and REPORTED, not patched. **[rev10]**
+
 ## ⏩ RESUME HERE (read this first in a new session)
 
-**State on 2026-09-23:** everything requested is built and tested — `python -m pytest -q` → 235 passing (~2-4 min).
+**State on 2026-09-24:** everything requested is built and tested — `python -m pytest -q` → **246 passing** (~4-5 min).
 **Zone B is closed.** The book review was decided on the user's instruction ("decide what the world and scholars agree on"):
 `data/reference/book_review_decisions.csv` + `data/apply_book_decisions_2026-09-22.py` record every decision — 14 layer classes
 changed (Carles > Curtis+physics > workbook), 23 kept against Curtis with the reason, 5 provisional caps added for oils whose toxic
@@ -42,7 +46,7 @@ a new composition the Carles way; `streamlit run app.py` is the UI (Buttons / Fr
 
 Numbers that describe the data state (`python load_data.py`): 1 ERROR (13 accord note names with no dataset2
 equivalent — Cannabis/Hemp/Egg/Mushroom accords etc., an honest floor), 0 checksum-failing CAS (fixed or blanked),
-3 legitimately shared CAS, 2582/2593 perfume-accord slots resolve, **455/455 library profiles PASS Zone B** (the library is de-branded since 2026-09-24; 415 fully
+3 legitimately shared CAS, 2607/2618 perfume-accord slots resolve, **455/455 library profiles PASS Zone B** (the library is de-branded and its notes resolve 93 % since 2026-09-24; 415 fully
 complete; 35 are built without one accord note that has no dataset2 material — `require_complete=False`, as the app runs it;
 the six REJECTs of 2026-09-18 were optimizer rounding instability, now fixed), **236/236 accords PASS**. Safety step 0
 (constituent roll-up) runs on `constituents.csv` — **256 rows, 87 naturals, every fraction a page-cited Tisserand & Young 2e
@@ -64,6 +68,15 @@ What was decided by AI, not a human (all traceable, `Decided_By=ai` in the CSV, 
   (Ohloff p.627: ca. 20 % in Angel); Heliotropin and Cistus Oil back to Medium, p-cresyl phenylacetate Medium (Curtis odour
   strength 2/6 or 5/6 contradicted the AI dosing label). **Curtis' 1-6 figure is odour strength of the neat material; dataset2's
   `Odor_Strength` is a dosing class — they are compared only at the extremes (`load_data.CURTIS_INTENSITY`).**
+- 2026-09-24 (`build_note_expansion.py`, all `Decided_By` = 'ai (2026-09-23) - book expansion'): 40 dataset2 rows — 27 Curtis
+  monographs (layer = his note class, `Odor_Strength` = his bold 1-6 figure, `Odor_Family`/`Key_Nuances` decoded from his
+  three-letter odour codes by longest-match against Ch 3 plus a documented `CODE_SUPPLEMENT`), 9 Ohloff materials (layer by the
+  RSC Ch 11 p.190 BP rule), 6 T&Y Ch 14 naturals. CAS from PubChem or from `constituents.csv`; **6 naturals ship with a BLANK
+  CAS** because no project source verifies one (essential oils are not in PubChem) — each says 'supplier CoA required'.
+  `note_display_aliases.csv`: 102 editorial name mappings + 16 recorded gaps (Freesia/Peony/Rum are accords, not materials).
+  A candidate whose CAS dataset2 already holds became an alias, never a second row, so the shared-CAS hazard did not grow.
+  `build_profiles._layer_map` now uses the most-common-class tie-break, matching `formula_builder`, so a profile and the
+  formula built from it can never disagree about a material's layer.
 - 2026-09-22 decisions (`book_review_decisions.csv`): Volatility_Class changed for Aldehyde C-9/C10/C-11/C12 Lauric/C-12 MNA → Heart,
   Aldehyde C-14 / C-16 → Base, Benzyl Butyrate / Para-Methyl Acetophenone / Alpha-Terpineol → Heart, Isoeugenyl Acetate / Lyral /
   Galbanum Resin → Base, Phenylacetaldehyde → Top; `safety_caps.csv` +5 provisional caps (Sage Dalmatian 0.4, Sage Spanish 12.5,
@@ -76,9 +89,13 @@ What was decided by AI, not a human (all traceable, `Decided_By=ai` in the CSV, 
 
 What is still open, in order:
 1. **Supplier CoA values** for constituents.csv (turns PROVISIONAL into real), and a perfumer's smell-test of the
-   AI substitutions above. 2. dataset2 chemistry columns: 53 MW/logP disagreements with PubChem
+   AI substitutions above. 2. dataset2 chemistry columns: 54 MW/logP disagreements with PubChem
    (`data.pubchem_mismatches`) — replace from `reference/pubchem_properties.csv` when a human confirms the identities.
-3. The 13 accord notes with no material (author them or drop the accords). 4. EU allergen list expansion
+3. The 13 accord notes with no material (author them or drop the accords). **3b. The 5 CAS defects in
+   `reference/note_expansion_cas_conflicts.csv`** — Cinnamon holds cinnamaldehyde's 104-55-2, Eucalyptus holds eucalyptol's,
+   Apple hexyl acetate's, Fig Leaf cis-3-hexenol's, Cedarwood cedrol's. Each natural was given its CHIEF CONSTITUENT's number.
+   The error runs STRICT (the engine caps the oil as if it were the pure molecule), so it cannot make a formula unsafe — but a
+   human must decide each one; the book material was deliberately NOT added on a contested CAS. 4. EU allergen list expansion
    (Reg 2023/1545) in `allergens_uk.csv`. 5. Zone C (stock solutions, pumps) — only after 1.
 6. ML: the corpus audit (2026-09-23) showed the weak labels are only 5.4 % supported by the text, so the retrain is
    suspended; the blocker is N≈200 real wishes labelled by a perfumer. See `../Farhan-Project-main/training/NEXT_STEPS_ML.md`.
@@ -87,6 +104,8 @@ How to check where things stand: `python load_data.py`, `python app.py --report`
 (`data/reconcile_notes.py`, `data/verify_cas.py --offline`, `data/reconcile_accords.py`), `data/enrich_pubchem.py --offline`,
 `python data/mine_tisserand.py --dry-run` (re-parses the book and reports unmapped constituent names), `python data/mine_ohloff.py`,
 `python data/mine_curtis.py` (rewrite the Ohloff / Curtis reference tables from the transcriptions inside the scripts),
+`python data/build_note_expansion.py [--dry-run]` (rebuild the generated block of note_additions.csv and the display-alias
+table; it is idempotent — it subtracts its own rows from dataset2 before asking what is missing),
 `python data/review_book_checks.py` (regenerates `reference/book_review.md` after any data edit).
 
 Books read and where they landed (all page-cited in the CSVs; see `data/DATA_PROVENANCE.md`): Carles → `reference/carles_*.csv`
@@ -188,7 +207,7 @@ OUTPUT: safe formula (+ flags + traceability log)
 perfume-ai-system/
 ├── data/
 │   ├── dataset1_perfumes.csv        # de-branded profile library (455) — built by build_profiles.py [rev9]
-│   ├── dataset2_notes.csv           # notes + chemistry, CAS is the join key (720 notes)
+│   ├── dataset2_notes.csv           # notes + chemistry, CAS is the join key (803 notes) [rev10]
 │   ├── dataset3_accords.csv         # accord composition + weights (1518 rows)
 │   ├── ifra_limits.csv              # IFRA 51st Amd Category 4 limits (81 materials)  [rev][rev2]
 │   ├── group_rules.csv              # IFRA combination rules (furocoumarins, isomer sums…) [rev]
@@ -200,7 +219,9 @@ perfume-ai-system/
 │   ├── cas_corrections.csv          # checksum-failing CAS -> verified corrections; Apply/Decided_By            [rev2]
 │   ├── accord_name_aliases.csv      # dataset1 Main_Accords term -> dataset3 accord (the Zone A -> B bridge)     [rev3]
 │   ├── constituents.csv             # natural -> restricted constituent -> fraction (safety step 0); GENERATED by mine_tisserand.py [rev5]
-│   ├── note_additions.csv           # new dataset2 rows the accords need (Vanilla Absolute, Cade Oil Rectified…)   [rev4]
+│   ├── note_additions.csv           # new dataset2 rows: 43 hand-written + 40 GENERATED by build_note_expansion.py [rev4/rev10]
+│   ├── build_note_expansion.py      # books -> the generated block of note_additions.csv + note_display_aliases.csv [rev10]
+│   ├── note_display_aliases.csv     # everyday name -> dataset2 note, read ONLY by build_profiles.py (never dataset3) [rev10]
 │   ├── accord_edits.csv             # substitutions for banned / wrong-grade notes inside accords (AI, sign-off)    [rev4]
 │   ├── note_field_overrides.csv     # coarse relabels, e.g. Odor_Strength potency class (Very strong/Strong/Low), AI  [rev4]
 │   ├── product_bases.csv            # bottle auxiliaries: ethanol, water, DPG, BHT, UV absorber… with legal basis  [rev4]
@@ -214,7 +235,8 @@ perfume-ai-system/
 │   ├── reference/carles_*.csv       # Carles' volatility table, worked chypre, family signatures, 35 base accords [rev2]
 │   ├── reference/rsc_physical_properties.csv        # RSC Table 11.1                                          [rev2]
 │   ├── reference/pubchem_cas_cache.json             # cached PubChem answers so the CAS audit reproduces offline [rev2]
-│   ├── reference/pubchem_properties.csv             # PubChem MW / XLogP / IUPAC for 137 defined molecules      [rev4]
+│   ├── reference/pubchem_properties.csv             # PubChem MW / XLogP / IUPAC for 180 defined molecules      [rev4]
+│   ├── reference/note_expansion_cas_conflicts.csv   # 5 naturals holding their chief constituent's CAS (report)  [rev10]
 │   ├── enrich_pubchem.py            # fetches the above; load_data WARNs on MW/logP disagreement                  [rev4]
 │   ├── mine_tisserand.py            # Tisserand & Young 2e PDF -> constituents.csv (page-cited); text cache gitignored [rev5]
 │   ├── mine_ohloff.py               # Ohloff 2e -> reference/ohloff_{families,accords,formulas,usage_levels,practice}.csv [rev6]
@@ -249,6 +271,7 @@ perfume-ai-system/
 │   ├── pump_mapping.csv
 │   └── machine_control.py
 ├── tests/
+├── docs/                            # WHY_NEW_DATASHEETS.html, DATA_BRIEF_FOR_AI.html, MASTER_PROMPT.html [rev10]
 ├── load_data.py
 ├── app.py                           # Task 7 — DONE 2026-09-18: streamlit UI + `python app.py "<text>"` CLI
 ├── CLAUDE.md
@@ -273,8 +296,11 @@ What the rebuild fixed (all of it silent before, because Zone B only ever read `
 - `Longevity`/`Sillage` came in four casings plus "Eternal"/"Enormous" → normalised to spellings `load_data` scores;
   the 1–5 scores stay derived there (one source of truth).
 - `Top/Middle/Base_Notes` packed lists into one cell ("Aldehydes, Bergamot, Pink Pepper") → split into atoms and resolved
-  against dataset2 via `note_name_aliases.csv` + the book alias table; the raw cell is kept in `Source_*_Notes`.
-  **Resolution is only ~22 % — expanding dataset2 is what raises it** (these columns are descriptive; Zone B never reads them).
+  against dataset2 via `note_name_aliases.csv`, the book alias table and `note_display_aliases.csv`; the raw cell is kept in
+  `Source_*_Notes`. **Resolution is 93 %** (2026-09-24, up from 63 %): the books added 40 materials and the everyday-name table
+  taught the resolver that 'Cedar' is Cedarwood and 'Oud' is Agarwood. These columns are descriptive; Zone B never reads them.
+  Cells that packed several notes with NO delimiter ('Rose Sea Salt Seaweed Musk Pink Pepper') are now cut against the
+  catalogue vocabulary, and the cut is only accepted when it finds a real list (`build_profiles._split_run`).
 - `Mood_Vibe`/`Occasion` were 100 % empty and now cover >95 %, derived from each profile's own accords by inverting
   `questionnaire.csv` (Q3 mood / Q1 occasion) — so a profile is described in the exact words a customer picks from.
 - 5 archetype profiles appended from Curtis' type formulas (chypre, fougère, cologne, lavender water, floral-aldehydic).

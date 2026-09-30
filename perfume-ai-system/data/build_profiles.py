@@ -132,6 +132,16 @@ def _note_resolver(known: set[str]):
                 alias.setdefault(k, v)
     except Exception:  # noqa: BLE001 — the alias table is a bonus, never a requirement
         pass
+    # everyday names for materials dataset2 already holds ('Cedar' -> Cedarwood, 'Oud' -> Agarwood). This table is
+    # read HERE and nowhere else: renaming a note inside an accord would be a chemistry change, so it never reaches
+    # note_name_aliases.csv. Rows with Apply=No are recorded gaps and deliberately stay unresolved.
+    dp = HERE / "note_display_aliases.csv"
+    if dp.exists():
+        d = pd.read_csv(dp, dtype=str, keep_default_na=False)
+        for r in d[d["Apply"].str.strip().str.lower() == "yes"].itertuples():
+            tgt = _text(getattr(r, "Dataset2_Name", ""))
+            if tgt in known:
+                alias.setdefault(_text(r.Everyday_Name).casefold(), tgt)
 
     def resolve(name: str) -> str:
         n = re.sub(r"\s+", " ", name).strip()
@@ -161,7 +171,37 @@ def _note_resolver(known: set[str]):
                 if tail in alias:
                     return alias[tail]
         return n
+
+    # every phrase the resolver can answer, longest first — used to cut a run of words that carries no delimiter
+    resolve.phrases = sorted(set(low) | set(alias), key=len, reverse=True)      # type: ignore[attr-defined]
     return resolve
+
+
+def _split_run(text: str, resolve) -> list[str]:
+    """Some source cells list several notes with NO delimiter at all — 'Rose Sea Salt Seaweed Musk Pink Pepper' is
+    one cell. Cut it by matching the longest known note phrase at each position; a word that starts no known phrase
+    is emitted on its own so nothing is silently dropped."""
+    words = text.split()
+    phrases = getattr(resolve, "phrases", None)
+    if not phrases or len(words) < 3:
+        return [text]
+    known = set(phrases)
+    out, i, matched, loose = [], 0, 0, 0
+    while i < len(words):
+        for take in range(min(4, len(words) - i), 0, -1):
+            cand = " ".join(words[i:i + take])
+            if cand.casefold() in known:
+                out.append(cand)
+                matched += 1
+                i += take
+                break
+        else:
+            out.append(words[i])
+            loose += 1
+            i += 1
+    # Only accept the cut if it really found a list. 'Olive Tree Sandalwood' matching one word is not evidence that
+    # the cell is a list — shredding an unknown two-word name into single words would be worse than leaving it.
+    return out if matched >= 2 and loose <= matched else [text]
 
 
 def build(src: pd.DataFrame, notes: pd.DataFrame | None = None) -> pd.DataFrame:
@@ -199,7 +239,14 @@ def build(src: pd.DataFrame, notes: pd.DataFrame | None = None) -> pd.DataFrame:
         sil_txt, _ = _pick(SILLAGE, getattr(r, "sillage", ""), ("Moderate", 3))
         note_cols = {}
         for col, key in (("Top_Notes", "top_notes_raw"), ("Middle_Notes", "middle_notes_raw"), ("Base_Notes", "base_notes_raw")):
-            atoms = _atoms(getattr(r, key, ""))
+            atoms = []
+            for a in _atoms(getattr(r, key, "")):
+                if a == map_note(a) and len(a.split()) >= 3:     # unresolved AND long -> probably several notes
+                    atoms.extend(_split_run(a, map_note))
+                else:
+                    atoms.append(a)
+            # a stray em dash or bullet left in a workbook cell is punctuation, not a note
+            atoms = [a for a in atoms if re.search(r"[A-Za-z]", a)]
             note_cols[col] = "; ".join(dict.fromkeys(map_note(a) for a in atoms))
             note_cols["Source_" + col] = "; ".join(atoms)
 
@@ -225,11 +272,36 @@ def build(src: pd.DataFrame, notes: pd.DataFrame | None = None) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def book_profiles(formulas: Path, resolve_family: dict[str, str] | None = None) -> pd.DataFrame:
-    """Curtis' type formulas as archetype profiles — the classical structures, each cited to its page."""
+def _layer_map(notes: pd.DataFrame | None) -> dict[str, str]:
+    """note name -> layer. dataset2 has several rows for some names and they do not always agree, so take the
+    note's MOST COMMON class — the same tie-break formula_builder.build_formula() uses, so a profile and the
+    formula built from it never disagree about where a material sits."""
+    if notes is None:
+        return {}
+    counts: dict[str, dict[str, int]] = {}
+    for r in notes.itertuples():
+        name = _text(r.Note_Name)
+        layer = _text(r.Volatility_Class).split("/")[0].strip()
+        if name and layer:
+            counts.setdefault(name, {})
+            counts[name][layer] = counts[name].get(layer, 0) + 1
+    # ties break on the fixed order below, so the answer never depends on row order in the CSV
+    order = {"Top": 0, "Heart": 1, "Base": 2}
+    return {n: max(c, key=lambda l: (c[l], -order.get(l, 9))) for n, c in counts.items()}
+
+
+def book_profiles(formulas: Path, notes: pd.DataFrame | None = None) -> pd.DataFrame:
+    """Curtis' type formulas as archetype profiles — the classical structures, each cited to its page.
+
+    `notes` is dataset2: it resolves the book's own spellings ('Musk ketone', 'Vetivert Oil Reunion') to catalogue
+    names and, more importantly, says which LAYER each material belongs to. Placing them by Curtis' part sizes put
+    the biggest materials in the top note, which is the opposite of how these formulas actually smell."""
     if not formulas.exists():
         return pd.DataFrame()
     f = pd.read_csv(formulas, dtype=str, keep_default_na=False)
+    known = set(notes["Note_Name"]) if notes is not None else set()
+    map_note = _note_resolver(known) if known else (lambda x: x)
+    layer_of = _layer_map(notes)
     fam_name = {"chypre": "Chypre", "fougere": "Aromatic Fougère", "eau de cologne": "Citrus Aromatic",
                 "lavender water": "Aromatic", "floral-aldehydic": "Floral Aldehyde"}      # 'oriental' lists accord
                                                                                           # placeholders, not materials
@@ -245,14 +317,22 @@ def book_profiles(formulas: Path, resolve_family: dict[str, str] | None = None) 
         if fam_key not in fam_name or fam_key in seen:
             continue
         seen.add(fam_key)
-        mats = g.sort_values("Parts", key=lambda s: pd.to_numeric(s, errors="coerce"), ascending=False)["Material"].tolist()
+        raw = g.sort_values("Parts", key=lambda s: pd.to_numeric(s, errors="coerce"), ascending=False)["Material"].tolist()
+        mats = list(dict.fromkeys(map_note(m) for m in raw))
+        # place by dataset2's Volatility_Class; a material dataset2 does not know keeps Curtis' own order and goes
+        # to the heart, the layer that makes the weakest claim about it
+        placed: dict[str, list[str]] = {"Top": [], "Heart": [], "Base": []}
+        for m in mats:
+            placed.get(layer_of.get(m, "Heart") or "Heart", placed["Heart"]).append(m)
         rows.append({
             "Perfume_ID": f"A{len(rows) + 1:05d}",
             "Profile_Name": f"{fam_name[fam_key]} archetype (Curtis 1994)",
             "Fragrance_Family": fam_name[fam_key],
             "Main_Accords": acc_of[fam_key],
-            "Top_Notes": "; ".join(mats[:4]), "Middle_Notes": "; ".join(mats[4:8]), "Base_Notes": "; ".join(mats[8:12]),
-            "Source_Top_Notes": "", "Source_Middle_Notes": "", "Source_Base_Notes": "",
+            "Top_Notes": "; ".join(placed["Top"][:5]), "Middle_Notes": "; ".join(placed["Heart"][:5]),
+            "Base_Notes": "; ".join(placed["Base"][:5]),
+            # the book's own material names, kept exactly as Curtis prints them
+            "Source_Top_Notes": "; ".join(raw), "Source_Middle_Notes": "", "Source_Base_Notes": "",
             "Gender": "Unisex", "Season": "Spring; Summer; Fall; Winter", "Time_Of_Day": "Day; Night",
             "Climate": "Temperate; Hot; Cold", "Longevity": "Long lasting", "Longevity_Score": 4,
             "Sillage": "Moderate", "Sillage_Score": 3,
@@ -265,4 +345,4 @@ def book_profiles(formulas: Path, resolve_family: dict[str, str] | None = None) 
     return pd.DataFrame(rows)
 
 
-__all__ = ["build", "book_profiles"]
+__all__ = ["build", "book_profiles", "_layer_map"]

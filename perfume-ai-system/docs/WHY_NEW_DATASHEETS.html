@@ -1,0 +1,584 @@
+<title>Why We Need New Datasheets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+
+<style>
+  :root {
+    --paper:     #EDEFF1;
+    --raised:    #FCFCFC;
+    --sunk:      #E3E6E9;
+    --ink:       #171C21;
+    --ink-soft:  #4E585F;
+    --ink-faint: #838D94;
+    --rule:      #CFD5DA;
+    --rule-soft: #E0E4E7;
+    --fault:     #9C5B3F;
+    --fault-bg:  #F3E7E1;
+    --need:      #1C6460;
+    --need-bg:   #DEEBE9;
+
+    --head: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:     #14181B;
+      --raised:    #1D2226;
+      --sunk:      #22282C;
+      --ink:       #E6E9EB;
+      --ink-soft:  #A6AFB5;
+      --ink-faint: #78828A;
+      --rule:      #333B41;
+      --rule-soft: #262D32;
+      --fault:     #D69072;
+      --fault-bg:  #2E211B;
+      --need:      #63B5AE;
+      --need-bg:   #162C2A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:     #14181B;
+    --raised:    #1D2226;
+    --sunk:      #22282C;
+    --ink:       #E6E9EB;
+    --ink-soft:  #A6AFB5;
+    --ink-faint: #78828A;
+    --rule:      #333B41;
+    --rule-soft: #262D32;
+    --fault:     #D69072;
+    --fault-bg:  #2E211B;
+    --need:      #63B5AE;
+    --need-bg:   #162C2A;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.62;
+    margin: 0;
+    padding-inline: 20px;
+    padding-block: 0 88px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .col  { max-width: 66ch; margin-inline: auto; }
+  .full { max-width: 880px; margin-inline: auto; }
+
+  header {
+    border-bottom: 3px solid var(--ink);
+    padding-block: 60px 26px;
+    margin-bottom: 14px;
+  }
+  .kicker {
+    font-family: var(--head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--fault);
+    margin: 0 0 18px;
+  }
+  h1 {
+    font-family: var(--head);
+    font-size: clamp(2.1rem, 5.6vw, 3.15rem);
+    font-weight: 700;
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    margin: 0 0 18px;
+  }
+  .lede {
+    font-size: 1.16rem;
+    line-height: 1.52;
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: 56ch;
+  }
+  .byline {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-faint);
+    margin: 0 0 52px;
+    padding-top: 12px;
+  }
+
+  h2 {
+    font-family: var(--head);
+    font-size: 1.55rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+    text-wrap: balance;
+    margin: 0 0 6px;
+  }
+  .h2-note {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 20px;
+  }
+  h3 {
+    font-family: var(--head);
+    font-size: 1.02rem;
+    font-weight: 600;
+    margin: 0 0 8px;
+  }
+  p { margin: 0 0 18px; }
+  p:last-child { margin-bottom: 0; }
+  em { font-style: italic; }
+  strong { font-weight: 600; }
+
+  section { margin-bottom: 58px; }
+  .sheet-section { border-top: 1px solid var(--rule); padding-top: 34px; }
+
+  code {
+    font-family: var(--mono);
+    font-size: 0.82em;
+    background: var(--sunk);
+    padding: 0.1em 0.34em;
+    border-radius: 2px;
+  }
+
+  /* ---- evidence strip: real broken data ---- */
+  .evidence {
+    background: var(--raised);
+    border: 1px solid var(--rule);
+    margin: 26px 0;
+    overflow: hidden;
+  }
+  .ev-label {
+    font-family: var(--head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--rule-soft);
+    background: var(--sunk);
+  }
+  .ev-rows { display: grid; }
+  .ev-row {
+    display: grid;
+    grid-template-columns: 13rem 1fr;
+    gap: 6px 18px;
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--rule-soft);
+    align-items: start;
+  }
+  .ev-row:last-child { border-bottom: 0; }
+  .ev-what {
+    font-family: var(--head);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--fault);
+    line-height: 1.4;
+    padding-top: 2px;
+  }
+  .ev-detail { font-size: 0.93rem; line-height: 1.5; color: var(--ink-soft); }
+  .ev-detail .raw {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--ink);
+    background: var(--fault-bg);
+    padding: 0.12em 0.4em;
+    border-radius: 2px;
+    word-break: break-word;
+  }
+  @media (max-width: 620px) {
+    .ev-row { grid-template-columns: 1fr; }
+  }
+
+  /* ---- what's needed ---- */
+  .need-box {
+    background: var(--need-bg);
+    border-left: 3px solid var(--need);
+    padding: 20px 22px;
+    margin: 26px 0;
+  }
+  .need-box h3 { color: var(--need); margin-bottom: 12px; }
+  .need-box ul { margin: 0; padding-left: 1.15em; display: grid; gap: 9px; }
+  .need-box li { font-size: 0.96rem; line-height: 1.5; }
+  .need-box li::marker { color: var(--need); }
+
+  /* ---- three-approach comparison ---- */
+  .approaches { display: grid; gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 26px 0; }
+  .appr { background: var(--raised); padding: 20px 22px; }
+  .appr-top { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+  .appr h3 { margin: 0; }
+  .verdict {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+    margin-left: auto;
+  }
+  .verdict.now  { background: var(--need-bg);  color: var(--need); }
+  .verdict.soon { background: var(--sunk);     color: var(--ink-soft); }
+  .verdict.not  { background: var(--fault-bg); color: var(--fault); }
+  .appr dl { margin: 0; display: grid; gap: 10px; }
+  .appr dl > div { display: grid; grid-template-columns: 5.5rem 1fr; gap: 4px 14px; }
+  .appr dt {
+    font-family: var(--head);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding-top: 3px;
+  }
+  .appr dd { margin: 0; font-size: 0.93rem; line-height: 1.5; }
+  @media (max-width: 560px) { .appr dl > div { grid-template-columns: 1fr; gap: 2px; } }
+
+  /* ---- pull quote ---- */
+  .pull {
+    font-family: var(--head);
+    font-size: 1.32rem;
+    font-weight: 600;
+    line-height: 1.32;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    border-top: 2px solid var(--fault);
+    border-bottom: 2px solid var(--fault);
+    padding-block: 20px;
+    margin-block: 34px;
+    text-wrap: balance;
+  }
+
+  /* ---- scoreboard ---- */
+  .score { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 26px 0; }
+  .score div { background: var(--raised); padding: 16px 18px; }
+  .score dt {
+    font-family: var(--head);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 7px;
+  }
+  .score dd {
+    margin: 0;
+    font-family: var(--head);
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+  }
+  .score .sub { font-family: var(--body); font-size: 0.83rem; font-weight: 400; color: var(--ink-soft); margin-top: 5px; line-height: 1.4; }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 22px;
+    font-size: 0.88rem;
+    color: var(--ink-faint);
+    font-family: var(--body);
+  }
+</style>
+
+<header>
+  <div class="full">
+    <p class="kicker">Data brief · perfume-ai-system</p>
+    <h1>Why We Need New Datasheets</h1>
+    <p class="lede">The sheets we have describe perfumes that already exist. To build one, and to teach a machine to build one, we need different data — written down differently.</p>
+  </div>
+</header>
+
+<div class="full">
+  <p class="byline">Written 24 September 2026 · every example below is a real row from the current data</p>
+</div>
+
+<main class="full">
+
+  <section class="col">
+    <h2>The short version</h2>
+    <p class="h2-note">read this bit if you read nothing else</p>
+    <p>There are three separate problems, and people tend to mash them together. They need different fixes, so it’s worth keeping them apart.</p>
+    <p><strong>One — the data is inconsistent.</strong> The same fact is written five different ways. A person reads “Long lasting”, “long lasting”, “LONG LASTING” and “Eternal” and understands all four instantly. A computer sees four unrelated things and can count none of them.</p>
+    <p><strong>Two — the data is outdated.</strong> Some of it was true once and isn’t now. Materials that were normal in 1994 are banned today. Some ID numbers point at the wrong chemical entirely.</p>
+    <p><strong>Three — and this is the real one — the data is the wrong <em>shape</em>.</strong> Everything we have describes a <em>finished</em> perfume: here is Aventus, here are its notes. Nothing we have records a <em>decision</em>: someone asked for X, a perfumer chose Y, and the person was happy. You cannot learn to make choices from a list of finished objects, any more than you could learn to cook from a restaurant menu.</p>
+    <p>Problems one and two we can mostly fix by cleaning. Problem three cannot be cleaned — that data simply doesn’t exist yet, and it has to be created.</p>
+  </section>
+
+  <section class="col sheet-section">
+    <h2>Sheet 1 — the perfumes</h2>
+    <p class="h2-note">keep the template · fix the contents</p>
+    <p>This sheet is the one that holds human language: who a scent is for, what season it suits, what mood it gives off. The columns are right. The stuff inside them is a mess, and almost all of it was invisible until we actually tried to use it.</p>
+
+    <div class="evidence">
+      <p class="ev-label">What we found in the 450 original rows</p>
+      <div class="ev-rows">
+        <div class="ev-row">
+          <div class="ev-what">Lists that weren’t lists</div>
+          <div class="ev-detail">Four notes crammed into one box with no separator at all: <span class="raw">Rose Sea Salt Seaweed Musk Pink Pepper</span>. The computer read that as <em>one</em> ingredient, and found no such thing.</div>
+        </div>
+        <div class="ev-row">
+          <div class="ev-what">Columns shifted sideways</div>
+          <div class="ev-detail">In 10 rows the season had fallen into the <em>gender</em> column. The perfume’s gender was literally the word “Spring”.</div>
+        </div>
+        <div class="ev-row">
+          <div class="ev-what">Two facts in one column</div>
+          <div class="ev-detail">“Season” contained seasons <em>and</em> times of day <em>and</em> climate, mixed together. Three questions, one box.</div>
+        </div>
+        <div class="ev-row">
+          <div class="ev-what">Empty columns</div>
+          <div class="ev-detail">Mood and Occasion — the two things a customer actually says out loud — were <strong>100% blank</strong> across all 450 rows.</div>
+        </div>
+        <div class="ev-row">
+          <div class="ev-what">Notes nobody could look up</div>
+          <div class="ev-detail">Only about a fifth of the ingredients named here matched anything in our materials list. The rest were dead ends — “Cedar” when the materials list says “Cedarwood”, and so on.</div>
+        </div>
+        <div class="ev-row">
+          <div class="ev-what">Brand names</div>
+          <div class="ev-detail">Real, trademarked perfumes. We can’t sell a formula under someone else’s name, so that column had to go entirely.</div>
+        </div>
+      </div>
+    </div>
+
+    <p>Most of this has now been repaired in place, and the improvement is measurable: the share of ingredients that actually resolve to a real material went from roughly a fifth, to 63%, to <strong>93%</strong> over the course of the clean-up.</p>
+
+    <div class="need-box">
+      <h3>What a new Sheet 1 needs</h3>
+      <ul>
+        <li><strong>The same columns.</strong> The template is fine. Don’t redesign it.</li>
+        <li><strong>One fact per column.</strong> Season means season. Time of day gets its own column. Climate gets its own.</li>
+        <li><strong>A fixed list of allowed answers per column</strong> — gender is one of three words, season one of four, and nothing else is accepted. This is the single highest-value change.</li>
+        <li><strong>One separator, used everywhere.</strong> Semicolons between notes, always, no exceptions.</li>
+        <li><strong>Ingredient names spelled exactly as the materials sheet spells them.</strong> Not “Cedar” — “Cedarwood”.</li>
+        <li><strong>Mood and occasion filled in</strong>, from the same word list the customer picks from.</li>
+        <li><strong>No brands.</strong> Describe the scent, not the product.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="col sheet-section">
+    <h2>Sheet 2 — the accords</h2>
+    <p class="h2-note">built up from real materials, not labelled from above</p>
+    <p>An accord is a word like “smoky” or “powdery”. It isn’t a thing you can pour — it’s a small recipe of several materials that, together, give that impression. This sheet is the bridge: it’s the only place where a word turns into ingredients.</p>
+    <p>Which makes it the most important sheet we have, and the one most likely to be written backwards.</p>
+
+    <p class="pull">The wrong way is to pick the word first and find materials that sort of fit. The right way is to start from materials that genuinely smell like that together, and let the word describe the result.</p>
+
+    <div class="evidence">
+      <p class="ev-label">Where the current accord sheet breaks down</p>
+      <div class="ev-rows">
+        <div class="ev-row">
+          <div class="ev-what">Accords pointing at nothing</div>
+          <div class="ev-detail">13 ingredient names appear in accords but don’t exist in the materials sheet. Those accords can never be built — they’re a word with a hole under it.</div>
+        </div>
+        <div class="ev-row">
+          <div class="ev-what">Duplicate rows that disagree</div>
+          <div class="ev-detail">87 rows repeated exactly, plus 30 repeats that give the <em>same</em> ingredient a <em>different</em> importance. Which one is true? Nobody wrote it down.</div>
+        </div>
+        <div class="ev-row">
+          <div class="ev-what">A rival recipe sheet with the wrong proportions</div>
+          <div class="ev-detail">Another workbook contains 1,656 auto-generated accord recipes built on a top&nbsp;25 / heart&nbsp;45 / base&nbsp;30 split. The method we follow says 25&nbsp;/&nbsp;20&nbsp;/&nbsp;55. Using those recipes would quietly break every formula.</div>
+        </div>
+        <div class="ev-row">
+          <div class="ev-what">Weights with no reasoning attached</div>
+          <div class="ev-detail">Every ingredient carries an importance score from 1 to 5, and nowhere does it say who chose it or why. So it can’t be checked, and it can’t be corrected.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="need-box">
+      <h3>What a new Sheet 2 needs</h3>
+      <ul>
+        <li><strong>Every ingredient must exist in Sheet 3.</strong> Non-negotiable — if the material isn’t in the materials list, the accord can’t be made.</li>
+        <li><strong>Build from the bottom up.</strong> Choose the materials that actually produce the effect, then name the accord. Not the reverse.</li>
+        <li><strong>Each accord needs a lead and a supporting cast</strong> — one or two materials that carry it, and the rest adjusting around them.</li>
+        <li><strong>Real proportions,</strong> with a sensible range, not just a 1-to-5 importance score.</li>
+        <li><strong>A source on every row.</strong> A book and page, a perfumer’s name, or “tested on this date”. If nobody will put their name to it, it isn’t data.</li>
+        <li><strong>One row per accord-and-ingredient pair.</strong> No duplicates, ever.</li>
+        <li><strong>Coverage of the words customers actually use.</strong> “Clean”, “cosy”, “expensive-smelling” — those are real requests, and right now several of them lead nowhere.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="col sheet-section">
+    <h2>Sheet 3 — the materials</h2>
+    <p class="h2-note">where it sits in the pyramid · and what it physically is</p>
+    <p>This is the bottom of the stack: the actual substances. Two things matter here, and they do completely different jobs.</p>
+
+    <p><strong>First, where it sits in the pyramid.</strong> A perfume is built in three layers. The <em>top</em> is what you smell in the first fifteen minutes and it’s gone by the time you’ve left the house. The <em>heart</em> carries the next three or four hours. The <em>base</em> is the last five to eight, and it’s always the biggest share — roughly a quarter top, a fifth heart, and over half base. Put a material in the wrong layer and the perfume falls apart on the skin regardless of how good the ingredients were.</p>
+    <p>The good news is that this isn’t a matter of opinion. It follows from physics: roughly, how hot the substance has to get before it boils. Under 200°C it’s a top note; over 270°C it’s a base note. So we can check every single row against its own physical properties — and when we did, the sheet argued with itself.</p>
+
+    <p><strong>Second, its identity number.</strong> Every chemical has a unique ID called a CAS number. Every safety check in the system — what’s banned, what’s capped, what reacts with what — is looked up by that number and never by name. Which means a wrong CAS number isn’t a typo. It’s the safety system checking the wrong substance.</p>
+
+    <div class="evidence">
+      <p class="ev-label">What the materials sheet actually contained</p>
+      <div class="ev-rows">
+        <div class="ev-row">
+          <div class="ev-what">Invalid ID numbers</div>
+          <div class="ev-detail">44 CAS numbers failed their own built-in checksum — they can’t be any real chemical. 36 were so unfixable we deleted them, because a blank is safer than a wrong one.</div>
+        </div>
+        <div class="ev-row">
+          <div class="ev-what">Natural oils wearing a chemical’s ID</div>
+          <div class="ev-detail">“Cinnamon” carried the ID for pure cinnamaldehyde. “Eucalyptus” carried pure eucalyptol; “Apple” carried hexyl acetate; “Fig Leaf” carried cis-3-hexenol. Each of these is an <em>ingredient of</em> the oil, not the oil. Five cases found so far.</div>
+        </div>
+        <div class="ev-row">
+          <div class="ev-what">One number, several unrelated materials</div>
+          <div class="ev-detail">25 valid CAS numbers were shared by materials that have nothing to do with each other. At least one of each pair is wrong, and we can’t tell which from the sheet alone.</div>
+        </div>
+        <div class="ev-row">
+          <div class="ev-what">Layers contradicting physics</div>
+          <div class="ev-detail">Grapefruit was filed as a top note with a boiling point of 279°C — which makes it a base note. A dozen more like it.</div>
+        </div>
+        <div class="ev-row">
+          <div class="ev-what">Chemistry figures that don’t match reality</div>
+          <div class="ev-detail">54 materials disagree with the public chemical database on their own molecular weight or oil-solubility figure.</div>
+        </div>
+        <div class="ev-row">
+          <div class="ev-what">Grades treated as interchangeable</div>
+          <div class="ev-detail">Verbena <em>oil</em> is banned in the UK and EU. Verbena <em>absolute</em> is legal. Same plant, different material, different law — and the sheet had one entry for “Verbena”.</div>
+        </div>
+        <div class="ev-row">
+          <div class="ev-what">A missing number that switched off a ban</div>
+          <div class="ev-detail">Lyral is banned outright. Its row had no CAS number at all, so the ban never matched it and it sailed through every check until we caught it.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="need-box">
+      <h3>What a new Sheet 3 needs</h3>
+      <ul>
+        <li><strong>A verified CAS number on every row,</strong> or a deliberate blank with a note saying why. Never a guess.</li>
+        <li><strong>One row per material <em>and grade</em>.</strong> Cinnamon bark and cinnamon leaf are two rows. Cade oil and rectified cade oil are two rows.</li>
+        <li><strong>Boiling point on every row,</strong> so the layer can be checked rather than believed.</li>
+        <li><strong>Layer stated explicitly</strong> — top, heart or base — and made to agree with the physics, or the disagreement written down and explained.</li>
+        <li><strong>Strength.</strong> Some materials are so powerful they’re used at a tenth of a percent. Without this, formulas come out overwhelmed by one ingredient.</li>
+        <li><strong>Supplier certificates</strong> for the natural oils, giving the real percentage of the restricted chemicals inside them. This is the single biggest thing standing between us and a formula we could legally sell — right now every safety verdict is marked <em>provisional</em> because of it.</li>
+      </ul>
+    </div>
+
+    <p>Worth saying plainly: the errors we’ve found all lean the <em>safe</em> way. Treating cinnamon oil as if it were pure cinnamaldehyde makes the system far stricter than it needs to be, not more dangerous. That’s lucky rather than designed, and it’s still wrong.</p>
+  </section>
+
+  <section class="col sheet-section">
+    <h2>Sheet 4 — what people ask for</h2>
+    <p class="h2-note">the sheet that doesn’t exist yet</p>
+    <p>Here’s the part that can’t be fixed by cleaning. Every sheet above describes <em>perfumes</em>. Not one of them records a person asking for something and getting an answer they liked. That is the only data that teaches the system its actual job.</p>
+    <p>We’ve tried twice to substitute for it, and both attempts failed in an instructive way.</p>
+
+    <div class="evidence">
+      <p class="ev-label">Two near-misses</p>
+      <div class="ev-rows">
+        <div class="ev-row">
+          <div class="ev-what">65,000 customer reviews</div>
+          <div class="ev-detail">We labelled 5,078 of them by what the product page said. Then we checked whether the review text actually supported that label. It did <strong>5.4%</strong> of the time. A model that ignores the text and always answers “citrus” scores 33%. So the trained model was worse than a constant guess, and we suspended the retrain.</div>
+        </div>
+        <div class="ev-row">
+          <div class="ev-what">505 “training examples”</div>
+          <div class="ev-detail">Found in one of the workbooks and very convincing at a glance. But all 505 share 11 timestamps, the rating and approval columns are entirely empty, and the sentences collapse into a handful of templates. They were generated, not collected. No human ever said any of them.</div>
+        </div>
+      </div>
+    </div>
+
+    <p>Both failures have the same cause: <strong>a label that nobody checked is not a label.</strong> It just moves the guessing earlier in the process where it’s harder to see.</p>
+
+    <div class="need-box">
+      <h3>What Sheet 4 needs to contain</h3>
+      <ul>
+        <li><strong>What the person actually said</strong> — their words, not tidied up.</li>
+        <li><strong>A bit of context</strong> — rough age, who it’s for, the occasion.</li>
+        <li><strong>What a perfumer said the answer was:</strong> the accords, and why.</li>
+        <li><strong>Whether the person liked it.</strong> This is the column that makes it training data rather than a wish list. Without it we’re learning from opinions nobody confirmed.</li>
+        <li><strong>Who decided, and when.</strong> A name and a date on every row.</li>
+      </ul>
+      <p style="margin-top:14px;font-size:.93rem;color:var(--ink-soft)"><strong>Roughly 200 rows is the target.</strong> That sounds small next to 65,000 reviews. It is worth more than all of them, because every row is true.</p>
+    </div>
+  </section>
+
+  <section class="col sheet-section">
+    <h2>How we handle what people say</h2>
+    <p class="h2-note">three routes · we need all three, in this order</p>
+    <p>Somebody types “something warm for winter evenings, not too sweet”. There are three ways to turn that into ingredients, and the temptation is to argue about which one is <em>right</em>. They’re actually a sequence — each one covers what the previous one misses, and each one feeds the next.</p>
+
+    <div class="approaches">
+      <div class="appr">
+        <div class="appr-top">
+          <h3>1 · Buttons and a questionnaire</h3>
+          <span class="verdict now">Built · works today</span>
+        </div>
+        <dl>
+          <div><dt>How</dt><dd>Eight questions, 66 options. Each option is wired to specific accords. Picks add up.</dd></div>
+          <div><dt>Good</dt><dd>Free to run, instant, works with no internet and no AI at all, and gives the identical answer every time. Somebody can always point at exactly why an option led where it led.</dd></div>
+          <div><dt>Limit</dt><dd>It can only offer what we thought of in advance. Nobody ever picks a button that says what they really meant.</dd></div>
+          <div><dt>Role</dt><dd>The floor. This must never stop working, whatever else breaks.</dd></div>
+        </dl>
+      </div>
+
+      <div class="appr">
+        <div class="appr-top">
+          <h3>2 · A word list for free text</h3>
+          <span class="verdict now">Built · 631 phrases</span>
+        </div>
+        <dl>
+          <div><dt>How</dt><dd>A dictionary mapping everyday phrases to accords — “cosy”, “office-safe”, “smells expensive”. It also handles <em>“no patchouli”</em> and <em>“not too strong”</em>, which matter more than people expect.</dd></div>
+          <div><dt>Good</dt><dd>Still completely predictable and still free. It grows every time we read the logs.</dd></div>
+          <div><dt>Limit</dt><dd>Somebody has to add each phrase by hand. It will never catch everything.</dd></div>
+          <div><dt>Role</dt><dd>Covers most real sentences without ever calling out to anything.</dd></div>
+        </dl>
+      </div>
+
+      <div class="appr">
+        <div class="appr-top">
+          <h3>3 · The AI, as a last resort</h3>
+          <span class="verdict soon">Built · deliberately restrained</span>
+        </div>
+        <dl>
+          <div><dt>How</dt><dd>Only called when the two routes above find nothing at all. It may only choose from our existing accord list, and whatever it suggests is trusted <em>less</em> than anything the customer typed themselves.</dd></div>
+          <div><dt>Good</dt><dd>Handles the sentence nobody anticipated.</dd></div>
+          <div><dt>Limit</dt><dd>Costs money per request, can give different answers to the same question, and will confidently invent a perfume that doesn’t exist if you let it. It is never allowed near a quantity or a safety decision — not as a precaution, as a hard rule.</dd></div>
+          <div><dt>Role</dt><dd>A safety net, not the engine. And every time it fires, that’s a phrase missing from route 2.</dd></div>
+        </dl>
+      </div>
+
+      <div class="appr">
+        <div class="appr-top">
+          <h3>4 · Trial and error, learning as it goes</h3>
+          <span class="verdict not">Blocked · needs Sheet 4</span>
+        </div>
+        <dl>
+          <div><dt>How</dt><dd>Log every request and every outcome. When somebody rejects a suggestion, record what they picked instead. After enough real rounds, the system learns the pattern.</dd></div>
+          <div><dt>Good</dt><dd>It’s the only route that improves on its own, and the only one that captures taste nobody can write down as a rule.</dd></div>
+          <div><dt>Limit</dt><dd>It cannot start from nothing. It needs real people giving real verdicts — which is exactly the 200 rows above.</dd></div>
+          <div><dt>Role</dt><dd>Where this ends up. We’re already logging everything for it; we just have nothing to learn from yet.</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <p>The important bit is that these <em>stack</em>. Every AI call reveals a gap in the word list. Every rejected suggestion becomes a row of training data. The system gets less dependent on the AI over time, not more — which is the opposite of how these things usually go, and it’s on purpose.</p>
+  </section>
+
+  <section class="col sheet-section">
+    <h2>Where it stands</h2>
+    <p class="h2-note">measured, not estimated</p>
+    <dl class="score">
+      <div><dt>Notes resolved</dt><dd>93%</dd><p class="sub">Up from about 20% before the clean-up</p></div>
+      <div><dt>Materials</dt><dd>803</dd><p class="sub">Up from 720, expanded from the reference books</p></div>
+      <div><dt>Profiles passing safety</dt><dd>455 / 455</dd><p class="sub">Every profile can be built legally</p></div>
+      <div><dt>Real labelled wishes</dt><dd>0</dd><p class="sub">Target is ~200. This is the blocker</p></div>
+    </dl>
+    <p>The chemistry engine is finished and it works. Three of the four sheets are cleaned, checked against six reference books, and every decision in them is traceable to a source. What’s missing isn’t code.</p>
+    <p>It’s two things, both of which need a person rather than a program: <strong>supplier certificates</strong> for the natural oils, which is what turns every safety verdict from “provisional” into real; and <strong>around 200 genuine requests answered by a perfumer</strong>, which is the only thing that will ever teach the system to choose well.</p>
+    <p>Everything else is ready and waiting for those two.</p>
+  </section>
+
+  <footer>
+    <p>Figures from the current build. Reference sources: Jean Carles; the IFRA 51st Amendment; the Royal Society of Chemistry’s <em>Chemistry of Fragrances</em>; Tisserand &amp; Young’s <em>Essential Oil Safety</em>; Curtis &amp; Williams; Ohloff, Pickenhagen &amp; Kraft.</p>
+  </footer>
+
+</main>
